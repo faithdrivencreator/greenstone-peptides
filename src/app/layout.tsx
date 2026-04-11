@@ -7,6 +7,7 @@ import { DisclaimerBanner } from '@/components/DisclaimerBanner';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { CartProvider } from '@/context/CartContext';
 import { CartDrawer } from '@/components/CartDrawer';
+import { ExitIntentPopup } from '@/components/ExitIntentPopup';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -96,6 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CartProvider>
           <Navigation />
           <CartDrawer />
+          <ExitIntentPopup />
           <main className="relative z-10 pt-24">{children}</main>
           <Footer />
           <DisclaimerBanner />

@@ -9,6 +9,8 @@ export function CartDrawer() {
   const { items, isOpen, closeCart, removeItem, updateQty, subtotal, totalItems } = useCart();
   const [checking, setChecking] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [coupon, setCoupon] = useState('');
+  const [couponApplied, setCouponApplied] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
 
   // Trap focus and close on Escape
@@ -34,7 +36,7 @@ export function CartDrawer() {
       const res = await fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ items }),
+        body: JSON.stringify({ items, couponCode: coupon.trim() || undefined }),
       });
       const data = await res.json();
       if (data.url) {
@@ -171,6 +173,29 @@ export function CartDrawer() {
               <span className="font-jetbrains text-xs tracking-widest uppercase text-cream-dim">Subtotal</span>
               <span className="font-cormorant text-3xl text-gold">${subtotal.toFixed(0)}</span>
             </div>
+
+            {/* Coupon code input */}
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={coupon}
+                onChange={(e) => { setCoupon(e.target.value.toUpperCase()); setCouponApplied(false); }}
+                placeholder="Discount code (e.g. FIRST15)"
+                className="flex-1 bg-obsidian-light border border-gold/20 focus:border-emerald/50 px-3 py-2 text-xs text-cream font-jetbrains tracking-wider outline-none transition-colors uppercase placeholder:normal-case placeholder:tracking-normal"
+              />
+              <button
+                type="button"
+                onClick={() => { if (coupon.trim()) setCouponApplied(true); }}
+                className="px-3 py-2 border border-emerald/30 text-emerald font-jetbrains text-[0.6rem] tracking-widest uppercase hover:border-emerald/60 transition-colors"
+              >
+                {couponApplied ? '✓' : 'Apply'}
+              </button>
+            </div>
+            {couponApplied && (
+              <p className="text-[0.65rem] text-emerald font-jetbrains">
+                Code &ldquo;{coupon}&rdquo; will be applied at checkout.
+              </p>
+            )}
 
             {error && (
               <p className="text-xs text-error font-jetbrains">{error}</p>

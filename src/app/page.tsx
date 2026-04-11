@@ -438,25 +438,33 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ---------- NEWSLETTER ---------- */}
-      <section className="section-py border-t border-emerald/15">
+      {/* ---------- EMAIL CAPTURE / DISCOUNT ---------- */}
+      <section className="section-py border-t border-emerald/15 bg-obsidian-mid/40">
         <div className="container-gr max-w-2xl text-center">
-          <p className="eyebrow">Stay Informed</p>
-          <h2>Peptide research, delivered.</h2>
+          <div className="inline-block bg-emerald/10 border border-emerald/30 px-4 py-1.5 mb-6">
+            <span className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald">
+              Subscriber Exclusive
+            </span>
+          </div>
+          <h2 className="font-cormorant">Get 15% off your first order.</h2>
           <p className="text-cream-dim mt-4 mx-auto">
-            One email a month. New protocols, clinical studies, and physician insights.
+            Join the Greenstone clinical newsletter. Receive your discount code instantly,
+            plus new protocol alerts and clinical research — one email a month.
           </p>
           <form className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
               type="email"
               required
               placeholder="your@email.com"
-              className="flex-1 bg-obsidian-light border border-gold/20 px-4 py-3 text-cream rounded focus:border-emerald/60 outline-none transition-colors"
+              className="flex-1 bg-obsidian-light border border-gold/20 px-4 py-3 text-cream focus:border-emerald/60 outline-none transition-colors"
             />
-            <button type="submit" className="btn btn-primary">
-              Subscribe
+            <button type="submit" className="btn btn-primary whitespace-nowrap">
+              Get 15% Off
             </button>
           </form>
+          <p className="mt-4 text-[0.65rem] text-cream-dim/40 font-jetbrains tracking-wide">
+            Code delivered instantly · One use per customer · No spam, ever
+          </p>
         </div>
       </section>
     </>

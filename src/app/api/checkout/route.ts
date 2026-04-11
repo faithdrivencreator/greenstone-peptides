@@ -6,7 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2024-04
 
 export async function POST(req: NextRequest) {
   try {
-    const { items }: { items: CartItem[] } = await req.json();
+    const { items, couponCode }: { items: CartItem[]; couponCode?: string } = await req.json();
 
     if (!items?.length) {
       return NextResponse.json({ error: 'Cart is empty' }, { status: 400 });
@@ -14,8 +14,21 @@ export async function POST(req: NextRequest) {
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonepeptides.com';
 
+    // Resolve coupon — validate it exists in Stripe before passing
+    let discounts: Stripe.Checkout.SessionCreateParams['discounts'] | undefined;
+    if (couponCode) {
+      try {
+        await stripe.coupons.retrieve(couponCode.toUpperCase());
+        discounts = [{ coupon: couponCode.toUpperCase() }];
+      } catch {
+        // Invalid coupon — proceed without it (don't block checkout)
+      }
+    }
+
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
+      allow_promotion_codes: !discounts, // show promo code field if no code pre-applied
+      ...(discounts ? { discounts } : {}),
       line_items: items.map((item) => ({
         quantity: item.qty,
         price_data: {
