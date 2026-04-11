@@ -24,6 +24,12 @@ const config: Config = {
           DEFAULT: '#7A9E87',
           light: '#A8C4B0',
         },
+        emerald: {
+          DEFAULT: '#1A9E6E',
+          light: '#26C98A',
+          dim: '#0F6647',
+          glow: 'rgba(26, 158, 110, 0.2)',
+        },
         cream: {
           DEFAULT: '#F5F1EB',
           dim: '#B8B2A8',
@@ -79,7 +85,7 @@ const config: Config = {
       },
       backgroundImage: {
         'obsidian-gradient':
-          'radial-gradient(ellipse 80% 50% at 20% 100%, rgba(201, 169, 110, 0.08), transparent 60%), radial-gradient(ellipse 60% 40% at 80% 0%, rgba(122, 158, 135, 0.05), transparent 60%)',
+          'radial-gradient(ellipse 80% 50% at 20% 100%, rgba(201, 169, 110, 0.08), transparent 60%), radial-gradient(ellipse 60% 40% at 80% 0%, rgba(26, 158, 110, 0.07), transparent 60%), radial-gradient(ellipse 40% 30% at 50% 50%, rgba(26, 158, 110, 0.03), transparent 70%)',
         'gold-shimmer':
           'linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.15), transparent)',
       },
