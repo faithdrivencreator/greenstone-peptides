@@ -42,19 +42,22 @@ export default async function HomePage() {
 
       {/* ---------- HERO ---------- */}
       <section className="relative overflow-hidden section-py min-h-[80vh] flex items-center">
-        {/* Background: deep emerald glow layers */}
+        {/* Full-bleed lab background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/images/hero-lab.png)' }}
+          aria-hidden
+        />
+        {/* Dark overlay — keeps text readable, adds brand depth */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(105deg, rgba(13,17,23,0.92) 0%, rgba(13,17,23,0.75) 50%, rgba(13,17,23,0.55) 100%)' }}
+          aria-hidden
+        />
+        {/* Emerald glow over image */}
         <div
           className="absolute -bottom-40 -right-40 w-[700px] h-[700px] rounded-full pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(26,158,110,0.22) 0%, transparent 70%)' }}
-          aria-hidden
-        />
-        <div
-          className="absolute -top-20 -left-20 w-[500px] h-[500px] rounded-full pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(26,158,110,0.10) 0%, transparent 70%)' }}
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 bg-molecular bg-[length:50px_50px] opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_80%)]"
+          style={{ background: 'radial-gradient(circle, rgba(26,158,110,0.20) 0%, transparent 70%)' }}
           aria-hidden
         />
 
