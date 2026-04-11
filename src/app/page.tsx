@@ -38,6 +38,12 @@ export default async function HomePage() {
           className="absolute inset-0 bg-hero-glow pointer-events-none"
           aria-hidden
         />
+        {/* Emerald glow — bottom right */}
+        <div
+          className="absolute -bottom-32 -right-32 w-[600px] h-[600px] rounded-full pointer-events-none"
+          style={{ background: 'radial-gradient(circle, rgba(26,158,110,0.18) 0%, transparent 70%)' }}
+          aria-hidden
+        />
         <div
           className="absolute inset-0 bg-molecular bg-[length:50px_50px] opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_80%)]"
           aria-hidden
@@ -87,7 +93,7 @@ export default async function HomePage() {
 
       {/* ---------- FEATURED CATEGORIES ---------- */}
       {categories.length > 0 && (
-        <section className="section-py">
+        <section className="section-py bg-emerald/[0.06] border-y border-emerald/20">
           <div className="container-gr">
             <header className="text-center mb-16">
               <p className="eyebrow">Browse by Need</p>
@@ -113,10 +119,15 @@ export default async function HomePage() {
       )}
 
       {/* ---------- QUALITY PROMISE ---------- */}
-      <section className="section-py bg-obsidian-mid/40 border-y border-gold/10">
-        <div className="container-gr">
+      <section className="section-py bg-emerald/[0.09] border-y border-emerald/25 relative overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(26,158,110,0.08), transparent 80%)' }}
+          aria-hidden
+        />
+        <div className="container-gr relative z-10">
           <header className="text-center mb-16">
-            <p className="eyebrow">Quality Commitment</p>
+            <p className="eyebrow text-emerald">Quality Commitment</p>
             <h2>Built on precision</h2>
           </header>
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
@@ -127,7 +138,7 @@ export default async function HomePage() {
               { icon: Clock, title: '25 Years', body: 'Deep pharmaceutical expertise.' },
             ].map(({ icon: Icon, title, body }) => (
               <div key={title} className="text-center">
-                <Icon size={32} className="text-gold mx-auto mb-4" aria-hidden />
+                <Icon size={32} className="text-emerald mx-auto mb-4" aria-hidden />
                 <h4 className="font-cormorant text-xl text-white mb-2">{title}</h4>
                 <p className="text-sm text-cream-dim mx-auto">{body}</p>
               </div>
@@ -137,7 +148,7 @@ export default async function HomePage() {
       </section>
 
       {/* ---------- WHY SOURCE MATTERS ---------- */}
-      <section className="section-py bg-obsidian border-y border-emerald/20 relative overflow-hidden">
+      <section className="section-py bg-emerald/[0.07] border-y border-emerald/30 relative overflow-hidden">
         <div
           className="absolute inset-0 bg-molecular bg-[length:60px_60px] opacity-[0.07] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)]"
           aria-hidden
@@ -250,10 +261,10 @@ export default async function HomePage() {
       </section>
 
       {/* ---------- HOW IT WORKS ---------- */}
-      <section className="section-py">
+      <section className="section-py bg-emerald/[0.05] border-y border-emerald/15">
         <div className="container-gr">
           <header className="text-center mb-16">
-            <p className="eyebrow">Process</p>
+            <p className="eyebrow text-emerald">Process</p>
             <h2>How it works</h2>
           </header>
           <ol className="grid gap-8 md:grid-cols-3">
@@ -262,8 +273,8 @@ export default async function HomePage() {
               { n: '02', t: 'Prescribe', b: 'Your provider writes a prescription routed to our pharmacy partner.' },
               { n: '03', t: 'Deliver', b: 'Your compounded medication ships cold-chain to your door.' },
             ].map((s) => (
-              <li key={s.n} className="card-glass">
-                <span className="mono">{s.n}</span>
+              <li key={s.n} className="card-glass border-emerald/20 hover:border-emerald/40">
+                <span className="mono !text-emerald">{s.n}</span>
                 <h4 className="font-cormorant text-2xl text-white mt-3 mb-2">{s.t}</h4>
                 <p className="text-sm text-cream-dim">{s.b}</p>
               </li>
@@ -296,7 +307,7 @@ export default async function HomePage() {
 
       {/* ---------- RECENT BLOG ---------- */}
       {recentPosts.length > 0 && (
-        <section className="section-py bg-obsidian-mid/40 border-y border-gold/10">
+        <section className="section-py bg-emerald/[0.06] border-y border-emerald/20">
           <div className="container-gr">
             <header className="text-center mb-16">
               <p className="eyebrow">Learn</p>
@@ -312,9 +323,9 @@ export default async function HomePage() {
       )}
 
       {/* ---------- GLP-1 QUIZ CTA ---------- */}
-      <section className="section-py">
+      <section className="section-py bg-emerald/[0.08] border-y border-emerald/25">
         <div className="container-gr">
-          <div className="card-glass text-center max-w-3xl mx-auto">
+          <div className="card-glass border-emerald/30 text-center max-w-3xl mx-auto">
             <p className="eyebrow">Candidacy Check</p>
             <h2 className="font-cormorant">Is GLP-1 therapy right for you?</h2>
             <p className="text-cream-dim mt-4 mx-auto">
@@ -328,7 +339,7 @@ export default async function HomePage() {
       </section>
 
       {/* ---------- NEWSLETTER ---------- */}
-      <section className="section-py">
+      <section className="section-py border-t border-emerald/15">
         <div className="container-gr max-w-2xl text-center">
           <p className="eyebrow">Stay Informed</p>
           <h2>Peptide research, delivered.</h2>
