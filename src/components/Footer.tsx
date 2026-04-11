@@ -39,11 +39,10 @@ export function Footer() {
             through licensed compounding pharmacy partners. 25 years of pharmaceutical experience.
           </p>
           <div className="text-sm text-cream-dim space-y-1 pt-2">
-            <p>861 SW 8th Street, Suite 101</p>
-            <p>Miami, Florida 33130</p>
+            <p>Miami, Florida</p>
             <p className="pt-2">
-              <a href="tel:+18556257588" className="hover:text-gold transition-colors">
-                (855) 625-7588
+              <a href="/contact" className="hover:text-gold transition-colors">
+                Contact Us →
               </a>
             </p>
           </div>
