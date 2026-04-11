@@ -29,18 +29,18 @@ const RECOMMENDATION_MAP: Record<
   },
   'build-recover': {
     'under-100': ['bpc-157-5mg'],
-    '100-200': ['bpc-157-5mg', 'tb-500-thymosin-beta-4-5mg'],
+    '100-200': ['bpc-157-5mg', 'tb-500-5mg'],
     '200-plus': ['bpc-157-10mg-ml', 'tb-500-10mg-ml'],
   },
   'anti-aging': {
     'under-100': ['sermorelin-4mg'],
-    '100-200': ['nad-50mg', 'sermorelin-4mg'],
-    '200-plus': ['nad-200mg-ml', 'mots-c-20mg'],
+    '100-200': ['nad-plus-50mg', 'sermorelin-4mg'],
+    '200-plus': ['nad-plus-200mg-ml', 'mots-c-20mg'],
   },
   'energy-metabolism': {
-    'under-100': ['nad-50mg'],
-    '100-200': ['nad-200mg-ml'],
-    '200-plus': ['nad-200mg-ml', 'mots-c-20mg'],
+    'under-100': ['nad-plus-50mg'],
+    '100-200': ['nad-plus-200mg-ml'],
+    '200-plus': ['nad-plus-200mg-ml', 'mots-c-20mg'],
   },
   'mens-health': {
     'under-100': ['sildenafil-tadalafil-55-22mg-odt'],
