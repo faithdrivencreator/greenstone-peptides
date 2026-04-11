@@ -1,9 +1,13 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Check } from 'lucide-react';
 import type { Product } from '@/types';
 import { urlFor } from '@/lib/sanity';
+import { useCart } from '@/context/CartContext';
 
 interface ProductCardProps {
   product: Product;
@@ -19,6 +23,14 @@ const FORMAT_LABEL: Record<string, string> = {
 
 export function ProductCard({ product }: ProductCardProps) {
   const imageUrl = product.image ? urlFor(product.image).width(640).height(480).url() : null;
+  const { addItem } = useCart();
+  const [added, setAdded] = useState(false);
+
+  function handleAdd() {
+    addItem(product);
+    setAdded(true);
+    setTimeout(() => setAdded(false), 1500);
+  }
 
   return (
     <article className="card-glass group flex flex-col !p-0 overflow-hidden">
@@ -39,19 +51,21 @@ export function ProductCard({ product }: ProductCardProps) {
         )}
 
         {/* Badges overlay */}
-        <div className="absolute left-4 top-4 flex flex-wrap gap-2">
-          {product.prescriptionRequired && <span className="badge badge-rx">Rx Required</span>}
-          {product.format && (
-            <span
-              className={clsx('badge', product.format === 'injectable' ? 'badge-injectable' : 'badge-odt')}
-            >
-              {FORMAT_LABEL[product.format] || product.format}
-            </span>
+        <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
+          <div className="flex flex-wrap gap-1.5">
+            {product.prescriptionRequired && <span className="badge badge-rx">Rx Required</span>}
+            {product.format && (
+              <span
+                className={clsx('badge', product.format === 'injectable' ? 'badge-injectable' : 'badge-odt')}
+              >
+                {FORMAT_LABEL[product.format] || product.format}
+              </span>
+            )}
+          </div>
+          {product.usaCompounded && (
+            <span className="badge badge-usa flex-shrink-0">USA Compounded</span>
           )}
         </div>
-        {product.usaCompounded && (
-          <span className="badge badge-usa absolute right-4 top-4">USA Compounded</span>
-        )}
       </div>
 
       {/* Body */}
@@ -85,16 +99,20 @@ export function ProductCard({ product }: ProductCardProps) {
             >
               Details <ArrowUpRight size={12} />
             </Link>
-            {product.stripePaymentLink && (
-              <a
-                href={product.stripePaymentLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary !py-2 !px-4 !text-xs"
-              >
-                Order Now
-              </a>
-            )}
+            <button
+              onClick={handleAdd}
+              className={`btn !py-2 !px-4 !text-xs transition-all ${
+                added
+                  ? 'btn-ghost !border-emerald/50 !text-emerald'
+                  : 'btn-primary'
+              }`}
+            >
+              {added ? (
+                <span className="flex items-center gap-1.5"><Check size={11} /> Added</span>
+              ) : (
+                'Add to Cart'
+              )}
+            </button>
           </div>
         </div>
       </div>

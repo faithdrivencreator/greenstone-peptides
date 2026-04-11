@@ -5,6 +5,8 @@ import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { DisclaimerBanner } from '@/components/DisclaimerBanner';
 import { SchemaOrg } from '@/components/SchemaOrg';
+import { CartProvider } from '@/context/CartContext';
+import { CartDrawer } from '@/components/CartDrawer';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -74,15 +76,12 @@ const organizationSchema = {
     'Managed services organization facilitating physician-prescribed peptide therapy through licensed compounding pharmacy partners.',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '861 SW 8th Street, Suite 101',
     addressLocality: 'Miami',
     addressRegion: 'FL',
-    postalCode: '33130',
     addressCountry: 'US',
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+1-855-625-7588',
     contactType: 'customer service',
     areaServed: 'US',
     availableLanguage: ['English', 'Spanish'],
@@ -94,10 +93,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${jetbrains.variable}`}>
       <body className="bg-obsidian text-cream min-h-screen antialiased">
         <SchemaOrg schema={organizationSchema} />
-        <Navigation />
-        <main className="relative z-10 pt-24">{children}</main>
-        <Footer />
-        <DisclaimerBanner />
+        <CartProvider>
+          <Navigation />
+          <CartDrawer />
+          <main className="relative z-10 pt-24">{children}</main>
+          <Footer />
+          <DisclaimerBanner />
+        </CartProvider>
       </body>
     </html>
   );

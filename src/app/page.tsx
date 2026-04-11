@@ -98,9 +98,9 @@ export default async function HomePage() {
                 <Link
                   key={cat._id}
                   href={`/shop?category=${cat.slug.current}`}
-                  className="card-glass text-center"
+                  className="card-glass text-center group/cat"
                 >
-                  {cat.icon && <div className="text-4xl mb-4">{cat.icon}</div>}
+                  <div className="w-8 h-px bg-emerald mx-auto mb-5 group-hover/cat:w-16 transition-all duration-500" />
                   <h3 className="font-cormorant text-2xl text-white mb-2">{cat.title}</h3>
                   {cat.description && (
                     <p className="text-sm text-cream-dim">{cat.description}</p>
