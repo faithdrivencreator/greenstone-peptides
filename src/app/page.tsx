@@ -136,6 +136,119 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ---------- WHY SOURCE MATTERS ---------- */}
+      <section className="section-py bg-obsidian border-y border-emerald/20 relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-molecular bg-[length:60px_60px] opacity-[0.07] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)]"
+          aria-hidden
+        />
+        <div className="container-gr relative z-10">
+          <header className="text-center mb-16 max-w-3xl mx-auto">
+            <p className="eyebrow text-emerald">Source Integrity</p>
+            <h2 className="font-cormorant">Why source matters</h2>
+            <p className="mt-6 text-cream-dim leading-relaxed">
+              The peptide market has a quality problem. Most of what is sold online is not what
+              the label says it is. The chemistry is unregulated, the supply chain is opaque, and
+              the consequences land on the person doing the injecting.
+            </p>
+          </header>
+
+          <div className="grid gap-6 md:grid-cols-3 mb-16">
+            {[
+              {
+                stat: '70–90%',
+                label: 'Of peptides sold online originate from bulk Chinese synthesis facilities with zero independent oversight.',
+              },
+              {
+                stat: '1% – 100%',
+                label: 'Purity range found in independent lab testing of research-grade peptides. The vial may contain almost none of the listed compound.',
+              },
+              {
+                stat: 'March 2026',
+                label: 'FDA issued formal warning letters to research peptide companies. The “research use only” loophole is effectively dead.',
+              },
+            ].map((item) => (
+              <div
+                key={item.stat}
+                className="card-glass border-emerald/20 hover:border-emerald/40 transition-colors"
+              >
+                <p className="font-cormorant text-5xl text-emerald mb-3">{item.stat}</p>
+                <p className="text-sm text-cream-dim leading-relaxed">{item.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid gap-12 lg:grid-cols-2 items-start">
+            {/* The problem */}
+            <div>
+              <p className="mono text-emerald mb-3">// the problem</p>
+              <h3 className="font-cormorant text-3xl text-white mb-6">
+                The overseas supply chain is a black box
+              </h3>
+              <ul className="space-y-4 text-cream-dim text-sm leading-relaxed">
+                <li className="pl-4 border-l border-emerald/30">
+                  <strong className="text-cream block mb-1">Heavy metal contamination</strong>
+                  Lead, cadmium, and mercury have been documented in overseas peptide imports.
+                  These are injected directly into the bloodstream.
+                </li>
+                <li className="pl-4 border-l border-emerald/30">
+                  <strong className="text-cream block mb-1">Counterfeit compounds</strong>
+                  Illicit semaglutide seized by European regulators tested as an entirely
+                  different substance. The vial said one thing, the contents said another.
+                </li>
+                <li className="pl-4 border-l border-emerald/30">
+                  <strong className="text-cream block mb-1">Fabricated certificates</strong>
+                  A Certificate of Analysis from an unaccredited source is a PDF, not a
+                  guarantee. Many online sellers recycle the same fake document across batches.
+                </li>
+                <li className="pl-4 border-l border-emerald/30">
+                  <strong className="text-cream block mb-1">Regulatory collapse</strong>
+                  The FDA&rsquo;s March 2026 enforcement action gave non-compliant research
+                  peptide sellers 15 days to cease shipments. Buyers lose their supplier
+                  overnight — with no recourse.
+                </li>
+              </ul>
+            </div>
+
+            {/* The Greenstone difference */}
+            <div>
+              <p className="mono text-gold mb-3">// the greenstone standard</p>
+              <h3 className="font-cormorant text-3xl text-white mb-6">
+                Every compound traceable to a licensed pharmacy
+              </h3>
+              <ul className="space-y-4 text-cream-dim text-sm leading-relaxed">
+                <li className="pl-4 border-l border-gold/30">
+                  <strong className="text-cream block mb-1">USA compounding pharmacies only</strong>
+                  Every formulation is produced inside a state-licensed compounding pharmacy,
+                  not a chemical supplier. Pharmacists, not traders.
+                </li>
+                <li className="pl-4 border-l border-gold/30">
+                  <strong className="text-cream block mb-1">USP 797 sterile compounding</strong>
+                  ISO Class 5 clean room environment. 14-day sterility testing. Bacterial
+                  endotoxin testing on every sterile lot.
+                </li>
+                <li className="pl-4 border-l border-gold/30">
+                  <strong className="text-cream block mb-1">Batch-specific Certificate of Analysis</strong>
+                  Real CoA from accredited labs, tied to the lot number on your vial. Potency,
+                  purity, and contaminant testing — verifiable, not theatrical.
+                </li>
+                <li className="pl-4 border-l border-gold/30">
+                  <strong className="text-cream block mb-1">Prescription-based dispensing</strong>
+                  A licensed provider writes the script. A licensed pharmacist fills it. The
+                  chain of custody is documented at every step.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link href="/learn/why-source-matters" className="btn btn-ghost">
+              Read the full quality protocol →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ---------- HOW IT WORKS ---------- */}
       <section className="section-py">
         <div className="container-gr">
