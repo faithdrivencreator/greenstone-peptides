@@ -446,10 +446,10 @@ export default async function HomePage() {
               Subscriber Exclusive
             </span>
           </div>
-          <h2 className="font-cormorant">Get 15% off your first order.</h2>
+          <h2 className="font-cormorant">$30 off your first order.</h2>
           <p className="text-cream-dim mt-4 mx-auto">
-            Join the Greenstone clinical newsletter. Receive your discount code instantly,
-            plus new protocol alerts and clinical research — one email a month.
+            Join the Greenstone clinical community. Receive code <strong className="text-cream">CLINICAL30</strong> instantly —
+            plus new protocol alerts and clinical research, one email a month.
           </p>
           <form className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
@@ -459,11 +459,11 @@ export default async function HomePage() {
               className="flex-1 bg-obsidian-light border border-gold/20 px-4 py-3 text-cream focus:border-emerald/60 outline-none transition-colors"
             />
             <button type="submit" className="btn btn-primary whitespace-nowrap">
-              Get 15% Off
+              Claim $30 Off
             </button>
           </form>
           <p className="mt-4 text-[0.65rem] text-cream-dim/40 font-jetbrains tracking-wide">
-            Code delivered instantly · One use per customer · No spam, ever
+            Code delivered instantly · Valid 14 days · One use per customer · No spam
           </p>
         </div>
       </section>

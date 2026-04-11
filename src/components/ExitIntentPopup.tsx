@@ -127,10 +127,10 @@ export function ExitIntentPopup() {
                 <h3 className="font-cormorant text-3xl text-white">Your code is ready.</h3>
                 <p className="text-cream-dim text-sm">Use code below at checkout:</p>
                 <div className="bg-obsidian border border-emerald/40 px-6 py-4 text-center my-4">
-                  <span className="font-jetbrains text-2xl tracking-[0.3em] text-emerald font-bold">FIRST15</span>
+                  <span className="font-jetbrains text-2xl tracking-[0.3em] text-emerald font-bold">CLINICAL30</span>
                 </div>
                 <p className="text-xs text-cream-dim/60 font-jetbrains">
-                  15% off your first order · Valid for 30 days · One use per customer
+                  $30 off your first order · Valid for 14 days · One use per customer
                 </p>
                 <button
                   onClick={dismiss}
@@ -143,19 +143,19 @@ export function ExitIntentPopup() {
               <>
                 {/* Eyebrow */}
                 <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-3">
-                  Exclusive First-Order Offer
+                  New Patient Welcome
                 </p>
 
                 <h2 className="font-cormorant text-3xl md:text-4xl text-white leading-tight">
-                  15% off your
+                  $30 off your
                   <br />
                   <em className="italic text-gold">first order.</em>
                 </h2>
 
                 <p className="mt-4 text-sm text-cream-dim leading-relaxed">
-                  Enter your email and receive a discount code instantly.
-                  Plus clinical protocol updates and new formulation alerts —
-                  one email a month, never more.
+                  Join the Greenstone clinical community. Receive your discount code
+                  instantly — plus new protocol alerts and clinical research updates,
+                  one email a month.
                 </p>
 
                 <form onSubmit={handleSubmit} className="mt-6 space-y-3">
@@ -178,7 +178,7 @@ export function ExitIntentPopup() {
                         Sending code...
                       </span>
                     ) : (
-                      'Get My 15% Discount Code'
+                      'Claim $30 Off My First Order'
                     )}
                   </button>
                 </form>
