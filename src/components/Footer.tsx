@@ -12,6 +12,7 @@ const RESOURCE_LINKS = [
   { href: '/learn', label: 'Learn Center' },
   { href: '/about', label: 'About Greenstone Peptides' },
   { href: '/provider', label: 'Provider Portal' },
+  { href: '/wholesale', label: 'Wholesale & Distribution' },
   { href: '/contact', label: 'Contact' },
 ];
 

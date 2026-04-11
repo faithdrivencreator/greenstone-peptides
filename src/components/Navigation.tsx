@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-import { Menu, X, ShoppingCart } from 'lucide-react';
+import { Menu, X, ShoppingCart, Lock } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 
 const NAV_LINKS = [
@@ -101,6 +101,15 @@ export function Navigation() {
             )}
           </button>
 
+          {/* Wholesale login — desktop */}
+          <Link
+            href="/wholesale/login"
+            className="hidden lg:inline-flex items-center gap-1.5 font-jetbrains text-[0.65rem] tracking-widest uppercase text-emerald hover:text-emerald-light border border-emerald/30 hover:border-emerald/60 px-3 py-2 transition-colors"
+          >
+            <Lock size={10} />
+            Distributor Login
+          </Link>
+
           {/* Desktop CTA */}
           <Link href="/contact" className="hidden lg:inline-flex btn btn-primary">
             Get Started
@@ -152,6 +161,13 @@ export function Navigation() {
         ))}
         <Link href="/contact" className="btn btn-primary mt-4">
           Get Started
+        </Link>
+        <Link
+          href="/wholesale/login"
+          className="inline-flex items-center gap-2 font-jetbrains text-xs tracking-widest uppercase text-emerald hover:text-emerald-light transition-colors"
+        >
+          <Lock size={11} />
+          Distributor Login
         </Link>
       </div>
     </>
