@@ -122,6 +122,24 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ---------- NEW TO PEPTIDES CTA ---------- */}
+      <section className="py-12 px-4 bg-[#1A9E6E]/5 border-y border-[#1A9E6E]/20">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="text-2xl font-bold text-white">New to peptides?</h2>
+            <p className="text-white/60 mt-1">
+              Answer 3 quick questions. We&apos;ll build your personalized protocol.
+            </p>
+          </div>
+          <Link
+            href="/guide"
+            className="shrink-0 px-8 py-3 bg-[#1A9E6E] text-white font-semibold rounded-full hover:bg-[#1A9E6E]/90 transition-colors whitespace-nowrap"
+          >
+            Find My Protocol →
+          </Link>
+        </div>
+      </section>
+
       {/* ---------- TRUST BAR ---------- */}
       <section className="bg-obsidian-mid/90 border-y border-emerald/25 py-5">
         <div className="container-gr">
