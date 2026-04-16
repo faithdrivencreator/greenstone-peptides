@@ -2,7 +2,7 @@
 
 export interface SanityImage {
   _type: 'image';
-  asset: { _ref: string; _type: 'reference' };
+  asset: { _ref: string; _type: 'reference'; url?: string };
   hotspot?: { x: number; y: number; height: number; width: number };
   alt?: string;
 }

@@ -3,6 +3,7 @@ import type { GuideGoal } from '@/lib/guide-logic';
 
 export interface SafetyItem {
   text: string;
+  icon: string; // key into SAFETY_ICONS map in SafetyChecklist.tsx
 }
 
 export interface TutorialStep {
@@ -15,7 +16,6 @@ export interface TutorialStep {
 export interface GoalContent {
   goal: GuideGoal;
   label: string;
-  icon: string;
   tagline: string;
   howItWorksTitle: string;
   howItWorksBody: string;
@@ -36,19 +36,18 @@ const INJECTABLE_TUTORIAL_STEPS: TutorialStep[] = [
 ];
 
 const INJECTABLE_SAFETY_ITEMS: SafetyItem[] = [
-  { text: 'Wash hands thoroughly for 20 seconds' },
-  { text: 'Clean injection site with alcohol swab — let dry' },
-  { text: 'Inspect the vial: no particles or discoloration' },
-  { text: 'Use a new syringe every single time' },
-  { text: 'Rotate injection sites: abdomen, thigh, upper arm' },
-  { text: 'Dispose of needles in a sharps container' },
+  { text: 'Wash hands thoroughly for 20 seconds', icon: 'hands' },
+  { text: 'Clean injection site with alcohol swab — let dry', icon: 'swab' },
+  { text: 'Inspect the vial: no particles or discoloration', icon: 'inspect' },
+  { text: 'Use a new syringe every single time', icon: 'syringe' },
+  { text: 'Rotate injection sites: abdomen, thigh, upper arm', icon: 'rotate' },
+  { text: 'Dispose of needles in a sharps container', icon: 'dispose' },
 ];
 
 export const GOAL_CONTENT: Record<GuideGoal, GoalContent> = {
   'lose-weight': {
     goal: 'lose-weight',
     label: 'Lose Weight',
-    icon: '⚡',
     tagline: 'GLP-1 peptides that work with your body',
     howItWorksTitle: 'How GLP-1 Peptides Work',
     howItWorksBody:
@@ -60,26 +59,24 @@ export const GOAL_CONTENT: Record<GuideGoal, GoalContent> = {
   'build-recover': {
     goal: 'build-recover',
     label: 'Build & Recover',
-    icon: '💪',
     tagline: 'Peptides that accelerate tissue repair',
     howItWorksTitle: 'How Recovery Peptides Work',
     howItWorksBody:
       'BPC-157 and TB-500 are among the most studied recovery peptides. BPC-157 promotes blood vessel formation and accelerates tendon, ligament, and muscle healing. TB-500 regulates actin — a protein essential for cell movement — helping damaged tissue rebuild faster and more completely.',
     howItWorksMechanism: 'Peptide → Growth factors → Accelerated tissue repair',
     safetyItems: [
-      { text: 'Wash hands thoroughly for 20 seconds' },
-      { text: 'Clean injection site with alcohol swab — let dry' },
-      { text: 'Inspect the vial: no particles or discoloration' },
-      { text: 'Use a new syringe every single time' },
-      { text: 'Rotate injection sites: near injury site or subcutaneous abdomen' },
-      { text: 'Dispose of needles in a sharps container' },
+      { text: 'Wash hands thoroughly for 20 seconds', icon: 'hands' },
+      { text: 'Clean injection site with alcohol swab — let dry', icon: 'swab' },
+      { text: 'Inspect the vial: no particles or discoloration', icon: 'inspect' },
+      { text: 'Use a new syringe every single time', icon: 'syringe' },
+      { text: 'Rotate injection sites: near injury site or subcutaneous abdomen', icon: 'rotate' },
+      { text: 'Dispose of needles in a sharps container', icon: 'dispose' },
     ],
     tutorialSteps: INJECTABLE_TUTORIAL_STEPS,
   },
   'anti-aging': {
     goal: 'anti-aging',
     label: 'Anti-Aging & Longevity',
-    icon: '🌿',
     tagline: 'Cellular renewal from the inside out',
     howItWorksTitle: 'How Longevity Peptides Work',
     howItWorksBody:
@@ -91,7 +88,6 @@ export const GOAL_CONTENT: Record<GuideGoal, GoalContent> = {
   'energy-metabolism': {
     goal: 'energy-metabolism',
     label: 'Energy & Metabolism',
-    icon: '🔋',
     tagline: 'Fuel your mitochondria',
     howItWorksTitle: 'How Metabolic Peptides Work',
     howItWorksBody:
@@ -103,18 +99,17 @@ export const GOAL_CONTENT: Record<GuideGoal, GoalContent> = {
   'mens-health': {
     goal: 'mens-health',
     label: "Men's Health",
-    icon: '🛡️',
     tagline: 'Performance and vitality support',
     howItWorksTitle: "How Men's Health Peptides Work",
     howItWorksBody:
       "Sildenafil and Tadalafil are FDA-approved PDE5 inhibitors that increase blood flow by relaxing smooth muscle tissue. In ODT (oral disintegrating tablet) form, they absorb faster than standard tablets. Sermorelin and Tesamorelin support natural growth hormone production — which affects energy, body composition, and sexual function in men over 35.",
     howItWorksMechanism: 'PDE5 inhibition → Vasodilation → Improved blood flow',
     safetyItems: [
-      { text: 'Take ODT tablets on an empty stomach for best absorption' },
-      { text: 'Place tablet under tongue — do not swallow whole' },
-      { text: 'Do not eat or drink for 10 minutes after taking' },
-      { text: 'Do not combine with nitrate medications' },
-      { text: 'Store in a cool, dry place away from light' },
+      { text: 'Take ODT tablets on an empty stomach for best absorption', icon: 'clock' },
+      { text: 'Place tablet under tongue — do not swallow whole', icon: 'pill' },
+      { text: 'Do not eat or drink for 10 minutes after taking', icon: 'no-food' },
+      { text: 'Do not combine with nitrate medications', icon: 'alert' },
+      { text: 'Store in a cool, dry place away from light', icon: 'store' },
     ],
     tutorialSteps: [],
     oralInstructions:
