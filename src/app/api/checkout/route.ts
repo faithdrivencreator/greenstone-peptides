@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
           },
         },
       })),
-      success_url: `${siteUrl}/shop?checkout=success`,
+      success_url: `${siteUrl}/shop/thank-you`,
       cancel_url: `${siteUrl}/shop`,
     });
 
