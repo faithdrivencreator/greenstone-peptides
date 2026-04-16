@@ -74,17 +74,26 @@ export function ExitIntentPopup() {
     try { localStorage.setItem(STORAGE_KEY, Date.now().toString()); } catch {}
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
     setLoading(true);
-    // In production: POST to email service (Klaviyo/Mailchimp)
-    setTimeout(() => {
+    const formData = new FormData(e.target as HTMLFormElement);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      });
       setLoading(false);
       setSubmitted(true);
       try { localStorage.setItem(STORAGE_KEY, Date.now().toString()); } catch {}
-    }, 800);
-  }
+    } catch {
+      setLoading(false);
+      setSubmitted(true); // Still show success — popup dismisses either way
+      try { localStorage.setItem(STORAGE_KEY, Date.now().toString()); } catch {}
+    }
+  };
 
   if (!visible) return null;
 
@@ -143,7 +152,7 @@ export function ExitIntentPopup() {
               <>
                 {/* Eyebrow */}
                 <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-3">
-                  New Patient Welcome
+                  Welcome Offer
                 </p>
 
                 <h2 className="font-cormorant text-3xl md:text-4xl text-white leading-tight">
@@ -158,9 +167,19 @@ export function ExitIntentPopup() {
                   one email a month.
                 </p>
 
-                <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+                <form
+                  name="exit-intent-email"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="mt-6 space-y-3"
+                >
+                  <input type="hidden" name="form-name" value="exit-intent-email" />
+                  <input type="hidden" name="bot-field" />
                   <input
                     type="email"
+                    name="email"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -185,7 +204,7 @@ export function ExitIntentPopup() {
 
                 <p className="mt-4 text-[0.65rem] text-cream-dim/40 font-jetbrains text-center">
                   <Lock size={9} className="inline mr-1" />
-                  No spam. Unsubscribe anytime. HIPAA-compliant data handling.
+                  We respect your privacy. Unsubscribe anytime.
                 </p>
 
                 <button
