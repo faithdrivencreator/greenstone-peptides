@@ -18,11 +18,10 @@ export default function SafetyPage() {
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">Full Disclaimer</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            Compounded medications are not FDA-approved. A prescription from a licensed
-            healthcare provider is required to obtain any compounded medication from Greenstone
-            Rx. Greenstone Peptides is a managed services organization (MSO) that facilitates
-            prescription fulfillment through licensed compounding pharmacy partners. Greenstone
-            Rx is not a pharmacy and does not manufacture, compound, dispense, or ship
+            Compounded medications are not FDA-approved. Greenstone Peptides facilitates access
+            to USA-compounded peptide formulations through licensed pharmacy partners. Compounded
+            medications are prepared by licensed compounding pharmacies and are not FDA-approved.
+            Greenstone Rx is not a pharmacy and does not manufacture, compound, dispense, or ship
             medications directly.
           </p>
         </div>

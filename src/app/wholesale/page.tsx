@@ -220,7 +220,7 @@ export default function WholesalePage() {
               Submit Wholesale Inquiry
             </Link>
             <p className="text-xs text-cream-dim/50 text-center font-jetbrains">
-              Wholesale access is subject to review and approval. Prescription facilitation required.
+              Wholesale access is subject to review and approval.
             </p>
           </form>
         </div>

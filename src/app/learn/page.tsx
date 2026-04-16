@@ -21,7 +21,7 @@ export default async function LearnPage() {
           <p className="eyebrow">Learn</p>
           <h1>Research & Protocols</h1>
           <p className="mt-4 mx-auto">
-            Clinical research, dosing protocols, and physician insights.
+            Research, dosing protocols, and expert insights on peptide therapy.
           </p>
         </header>
 

@@ -28,7 +28,7 @@ export interface GoalContent {
 
 const INJECTABLE_TUTORIAL_STEPS: TutorialStep[] = [
   { step: 1, title: 'Gather Your Supplies', description: 'Vial, syringe, alcohol swab, sharps container', imagePath: '/images/guide/inject-step-1.png' },
-  { step: 2, title: 'Draw the Dose', description: 'Pull back the plunger to your prescribed dose marking', imagePath: '/images/guide/inject-step-2.png' },
+  { step: 2, title: 'Draw the Dose', description: 'Pull back the plunger to your indicated dose marking', imagePath: '/images/guide/inject-step-2.png' },
   { step: 3, title: 'Clean the Site', description: 'Wipe with alcohol swab in a circular motion. Wait 10 seconds.', imagePath: '/images/guide/inject-step-3.png' },
   { step: 4, title: 'Pinch the Skin', description: 'Gently pinch 1–2 inches of skin between thumb and finger', imagePath: '/images/guide/inject-step-4.png' },
   { step: 5, title: 'Insert & Inject Slowly', description: 'Insert at 45–90° angle, push plunger slowly and steadily', imagePath: '/images/guide/inject-step-5.png' },

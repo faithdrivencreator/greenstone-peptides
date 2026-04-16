@@ -4,7 +4,7 @@ import { ProviderSignupForm } from './ProviderSignupForm';
 export const metadata: Metadata = {
   title: 'Provider Portal',
   description:
-    'Licensed healthcare providers — partner with Greenstone Peptides for streamlined prescription routing to USA-licensed compounding pharmacies.',
+    'Clinics, medspas, and healthcare professionals — partner with Greenstone Peptides to offer compounded peptide therapy to your patients.',
 };
 
 export default function ProviderPage() {
@@ -12,22 +12,22 @@ export default function ProviderPage() {
     <>
       <section className="section-py">
         <div className="container-gr max-w-4xl">
-          <p className="eyebrow">For Licensed Providers</p>
+          <p className="eyebrow">For Clinics & Healthcare Professionals</p>
           <h1>Partner with Greenstone Peptides.</h1>
           <p className="mt-8 text-lg text-cream-dim">
-            Streamline prescription routing to USA-licensed compounding pharmacies. Our provider
-            portal offers direct e-prescribing, patient tracking, and clinical support from our
-            pharmacist team.
+            Offer your patients access to USA-compounded peptide therapy backed by licensed
+            pharmacy partners. Designed for clinics, medspas, and healthcare professionals who
+            want to expand their treatment offerings without the pharmacy overhead.
           </p>
 
           <ul className="mt-12 grid gap-4 md:grid-cols-2">
             {[
-              'Direct e-prescribe to partner pharmacies',
-              'Patient tracking dashboard',
-              'Clinical support from PharmD team',
-              'Automated shipping and refill workflows',
-              'Cold-chain logistics for every order',
-              'Dedicated account management',
+              'Wholesale pricing for qualified partners',
+              'Dedicated account representative',
+              'Product and protocol training',
+              'Marketing support and patient education materials',
+              'Priority fulfillment and cold-chain logistics',
+              'Custom formulations available',
             ].map((item) => (
               <li key={item} className="flex gap-3 text-cream-dim">
                 <span className="text-gold mt-1">→</span>

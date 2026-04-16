@@ -24,8 +24,8 @@ export default function ContactPage() {
             <div className="card-glass">
               <h4 className="font-cormorant text-xl text-white">Patient Inquiries</h4>
               <p className="text-sm text-cream-dim mt-2">
-                Questions about products, pricing, how to get started, or how to work with
-                a prescribing provider. Use the form and we'll connect you with the right resource.
+                Questions about products, pricing, or how to get started with your order.
+                Use the form and we'll connect you with the right resource.
               </p>
             </div>
             <div className="card-glass">

@@ -9,7 +9,7 @@ export function ProviderSignupForm() {
     return (
       <div className="card-glass text-center">
         <p className="mono">Received</p>
-        <h3 className="font-cormorant text-2xl text-gold mt-2">Thank you, doctor.</h3>
+        <h3 className="font-cormorant text-2xl text-gold mt-2">Thank you for your interest.</h3>
         <p className="text-cream-dim mt-3">
           A member of our provider team will reach out within one business day to verify your
           credentials and activate portal access.
