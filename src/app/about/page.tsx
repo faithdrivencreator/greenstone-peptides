@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About',
-  description:
-    'Greenstone Peptides — USA-synthesized, physician-facilitated peptide therapy. 25 years of pharmaceutical experience. Not all peptides are equal.',
+  title: 'About Greenstone Peptides | USA-Compounded Quality',
+  description: 'Why Greenstone Peptides: 25+ years of pharmaceutical care, USP 797 sterile compounding, third-party tested, 100% USA-compounded. Learn what makes our peptides different.',
 };
 
 export default function AboutPage() {
@@ -14,34 +13,35 @@ export default function AboutPage() {
       <section className="section-py">
         <div className="container-gr max-w-4xl">
           <p className="eyebrow">Our Story</p>
-          <h1>Not all peptides are created equal.</h1>
+          <h1>Not All Peptides Are Created Equal</h1>
           <p className="mt-8 text-lg text-cream-dim">
-            Walk through any corner of the internet and you'll find peptides sold cheap —
-            vials shipped from overseas, synthesized in facilities with no oversight, no
-            testing, and no accountability. The prices look appealing. The results rarely match.
+            Over 70% of peptides sold online are synthesized overseas — in facilities with no
+            meaningful oversight, no independent testing, and no accountability. The prices look
+            appealing. The purity rarely matches what's on the label.
           </p>
           <p className="mt-6 text-lg text-cream-dim">
-            Greenstone Peptides was built on a different premise: that the people who use these
-            compounds deserve pharmaceutical-grade quality, domestic synthesis, and the oversight
-            of real clinical infrastructure. We've spent 25 years building exactly that.
+            Greenstone Peptides was built on a different premise: that people who use these
+            compounds deserve pharmaceutical-grade quality, domestic compounding, and the
+            accountability that comes with real USA-licensed pharmacy infrastructure. We've
+            spent 25 years building exactly that.
           </p>
         </div>
       </section>
 
-      {/* USA Synthesis — the differentiator */}
+      {/* USA Compounding — the differentiator */}
       <section className="section-py bg-obsidian-mid/40 border-y border-emerald/20">
         <div className="container-gr max-w-4xl">
           <p className="eyebrow text-emerald">The Difference</p>
-          <h2>Synthesized in the United States. <br className="hidden md:block" />That matters more than you think.</h2>
+          <h2>Compounded in the United States. <br className="hidden md:block" />That matters more than you think.</h2>
           <p className="mt-6 text-lg text-cream-dim">
             The vast majority of peptides sold online — regardless of what the label says —
-            originate from bulk synthesis facilities in China. The raw material arrives, gets
+            originate from bulk synthesis facilities overseas. The raw material arrives, gets
             repackaged, and ships to your door with a domestic address on the label. The
             peptide itself was never made here.
           </p>
           <p className="mt-6 text-lg text-cream-dim">
-            Every compound we facilitate is synthesized and formulated by licensed USA-based
-            compounding pharmacies operating under <strong className="text-cream">USP 795 &amp; 797</strong> standards —
+            Every compound we carry is formulated by licensed USA-based compounding pharmacies
+            operating under <strong className="text-cream">USP 797</strong> sterile standards —
             the same federal guidelines that govern hospital pharmacies. That means independent
             potency testing, sterility verification, and full chain-of-custody documentation
             before anything ships.
@@ -51,8 +51,8 @@ export default function AboutPage() {
             {[
               {
                 stat: '100%',
-                label: 'USA Synthesized',
-                detail: 'Every formulation compounded domestically. No overseas bulk imports.',
+                label: 'USA Compounded',
+                detail: 'Every formulation compounded domestically by licensed pharmacy partners. No overseas bulk imports.',
               },
               {
                 stat: 'USP 797',
@@ -62,7 +62,7 @@ export default function AboutPage() {
               {
                 stat: '25 yrs',
                 label: 'Pharmaceutical Experience',
-                detail: 'Two decades of clinical compounding operations behind every vial.',
+                detail: 'Two decades of pharmaceutical compounding operations behind every vial.',
               },
             ].map((item) => (
               <div key={item.stat} className="card-glass border-emerald/20 text-center p-8">
@@ -92,11 +92,11 @@ export default function AboutPage() {
               },
               {
                 t: 'Consistent Results',
-                b: 'Pharmaceutical-grade synthesis means consistent potency from vial to vial. Inconsistent raw material leads to inconsistent outcomes — and no way to know which is which.',
+                b: 'Pharmaceutical-grade compounding means consistent potency from vial to vial. Inconsistent raw material leads to inconsistent outcomes — and no way to know which is which.',
               },
               {
-                t: 'Clinical Oversight',
-                b: 'Our network includes licensed pharmacists available 24/7 for clinical questions, drug interaction screening, and dosing guidance — something no overseas vendor offers.',
+                t: 'Batch Accountability',
+                b: 'Our pharmacy partners maintain full chain-of-custody documentation and Certificates of Analysis for every formulation — available on request. No overseas vendor offers that.',
               },
             ].map((c) => (
               <div key={c.t} className="card-glass">
@@ -116,28 +116,28 @@ export default function AboutPage() {
           <ul className="mt-12 grid gap-6 md:grid-cols-2">
             {[
               {
-                t: 'Independent Potency Testing',
-                b: 'Every batch tested for purity and concentration before it ships. Results available on request.',
+                t: 'USA Compounding',
+                b: 'Every formulation compounded domestically by licensed pharmacy partners. No overseas bulk imports. Ever.',
               },
               {
-                t: 'Licensed USA Pharmacies Only',
-                b: 'We work exclusively with state-licensed compounding pharmacies. No gray-market suppliers. Ever.',
+                t: 'USP 797 Compliance',
+                b: 'Sterile compounding standards verified at every partner facility — the same bar required of hospital pharmacies.',
               },
               {
-                t: 'Cold-Chain Logistics',
-                b: 'Temperature-controlled packaging and real-time tracking from compounding to your door.',
+                t: 'Third-Party Testing',
+                b: 'Every batch independently tested for purity and concentration before it ships. Results available on request.',
               },
               {
-                t: '24/7 Pharmacist Access',
-                b: 'A licensed pharmacist is reachable around the clock for clinical questions and safety concerns.',
+                t: 'Batch Traceability',
+                b: 'Certificates of Analysis for every formulation. Full chain-of-custody documentation from compounding to delivery.',
               },
               {
-                t: 'USP 795 & 797 Compliance',
-                b: 'Both non-sterile and sterile compounding standards verified at every partner facility.',
+                t: 'Temperature-Controlled Shipping',
+                b: 'Cold-chain packaging and real-time tracking from the compounding facility to your door.',
               },
               {
-                t: 'Physician Facilitation',
-                b: 'Every prescription is written by a licensed provider through a proper clinical consultation.',
+                t: '25+ Years Experience',
+                b: 'Over two decades of pharmaceutical compounding operations. The infrastructure behind every vial we carry.',
               },
             ].map((c) => (
               <li key={c.t} className="card-glass">
@@ -156,11 +156,11 @@ export default function AboutPage() {
           <h2>Ready to do this right?</h2>
           <p className="mt-4 mx-auto text-cream-dim">
             Browse the catalog, learn about the science, or reach out to our team.
-            We're here to help you find the right protocol — with real clinical support behind it.
+            We're here to help you find the right protocol.
           </p>
           <div className="flex gap-4 justify-center mt-8 flex-wrap">
             <Link href="/shop" className="btn btn-primary">
-              Browse Products
+              Shop All Products
             </Link>
             <Link href="/contact" className="btn btn-ghost">
               Contact Us
