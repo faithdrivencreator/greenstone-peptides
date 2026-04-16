@@ -7,9 +7,9 @@ import { SchemaOrg } from '@/components/SchemaOrg';
 import { ShieldCheck, FlaskConical, Thermometer, Clock, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Physician-Prescribed Peptide Therapy',
+  title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
   description:
-    'USA-compounded peptides through licensed pharmacy partners. 25 years of pharmaceutical experience, USP 795 & 797 compliance, temperature-controlled shipping.',
+    'Premium peptide formulations compounded in the USA under USP 797 sterile standards. Third-party tested for potency and purity. Shop semaglutide, tirzepatide, BPC-157, NAD+, and more.',
 };
 
 export const revalidate = 300;
@@ -64,7 +64,7 @@ export default async function HomePage() {
         <div className="container-gr relative z-10 grid gap-12 lg:grid-cols-[1.1fr_1fr] items-center">
           {/* Left: compressed, conversion-focused copy */}
           <div>
-            <p className="eyebrow text-emerald">USA-Compounded · Physician-Prescribed</p>
+            <p className="eyebrow text-emerald">USA-Compounded · Third-Party Tested</p>
             <h1 className="font-cormorant">
               Pharmaceutical-grade
               <br />
@@ -72,8 +72,8 @@ export default async function HomePage() {
               <em className="italic text-gold">Delivered.</em>
             </h1>
             <p className="mt-5 text-base text-cream-dim max-w-lg leading-relaxed">
-              Every formulation synthesized inside a licensed USA compounding pharmacy.
-              USP 797 sterile standard. Prescription-facilitated — clinically verified
+              Every formulation compounded to order inside a licensed USA pharmacy.
+              USP 797 sterile standard. Third-party tested for potency and purity —
               from synthesis to your door.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -86,7 +86,7 @@ export default async function HomePage() {
             </div>
             {/* Micro trust row */}
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
-              {['USP 797 Certified', 'USA Synthesized', '25-yr Pharmacy Partner', 'Rx Facilitated'].map((t) => (
+              {['USP 797 Compliant', 'Third-Party Tested', 'Temperature-Controlled Shipping', '25+ Years Pharmaceutical Care'].map((t) => (
                 <span key={t} className="flex items-center gap-1.5 text-xs text-cream-dim/70 font-jetbrains tracking-wide">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald flex-shrink-0" />
                   {t}
@@ -159,12 +159,10 @@ export default async function HomePage() {
         <div className="container-gr">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
             {[
+              'USA Compounded',
               'USP 797 Sterile Standard',
-              '100% USA Compounded',
-              'Prescription Facilitated',
+              'Third-Party Tested',
               'Cold-Chain Shipping',
-              '25 Years Pharmacy Experience',
-              '24/7 Pharmacist Access',
             ].map((label) => (
               <span key={label} className="flex items-center gap-2 font-jetbrains text-[0.6rem] tracking-widest uppercase text-cream-dim/80">
                 <span className="text-emerald font-bold text-xs">✓</span>
@@ -183,7 +181,7 @@ export default async function HomePage() {
               <p className="eyebrow text-emerald">Most Popular</p>
               <h2>Top-Ordered Products</h2>
               <p className="mt-3 text-sm text-cream-dim/70 font-jetbrains tracking-wide">
-                All formulations physician-prescribed · Ships within 48 hours of prescription approval
+                All formulations USA-compounded under USP 797 standards · Ships within 48 hours
               </p>
             </header>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -193,7 +191,7 @@ export default async function HomePage() {
             </div>
             <div className="text-center mt-10">
               <Link href="/shop" className="inline-flex items-center gap-2 btn btn-primary">
-                View Full Catalog of 53 Products <ArrowRight size={14} />
+                View Full Catalog of 48 Products <ArrowRight size={14} />
               </Link>
             </div>
           </div>
@@ -398,9 +396,9 @@ export default async function HomePage() {
                   purity, and contaminant testing — verifiable, not theatrical.
                 </li>
                 <li className="pl-4 border-l border-gold/30">
-                  <strong className="text-cream block mb-1">Prescription-based dispensing</strong>
-                  A licensed provider writes the script. A licensed pharmacist fills it. The
-                  chain of custody is documented at every step.
+                  <strong className="text-cream block mb-1">Third-party verified potency</strong>
+                  Every batch independently tested by accredited labs. The chain of
+                  custody is documented from raw material to finished vial.
                 </li>
               </ul>
             </div>
@@ -421,11 +419,12 @@ export default async function HomePage() {
             <p className="eyebrow text-emerald">Process</p>
             <h2>How it works</h2>
           </header>
-          <ol className="grid gap-8 md:grid-cols-3">
+          <ol className="grid gap-8 md:grid-cols-4">
             {[
-              { n: '01', t: 'Consult', b: 'Speak with a licensed provider about your goals and medical history.' },
-              { n: '02', t: 'Prescribe', b: 'Your provider writes a prescription routed to our pharmacy partner.' },
-              { n: '03', t: 'Deliver', b: 'Your compounded medication ships cold-chain to your door.' },
+              { n: '01', t: 'Browse', b: 'Explore our full catalog of USA-compounded peptide formulations.' },
+              { n: '02', t: 'Order', b: 'Add to cart and check out securely through our encrypted checkout.' },
+              { n: '03', t: 'Compounded', b: 'Your order is compounded to order by our USA pharmacy partners under USP 797 sterile standards.' },
+              { n: '04', t: 'Delivered', b: 'Temperature-controlled shipping direct to your door.' },
             ].map((s) => (
               <li key={s.n} className="card-glass border-emerald/20 hover:border-emerald/40">
                 <span className="mono !text-emerald">{s.n}</span>
@@ -461,7 +460,7 @@ export default async function HomePage() {
             <p className="eyebrow">Candidacy Check</p>
             <h2 className="font-cormorant">Is GLP-1 therapy right for you?</h2>
             <p className="text-cream-dim mt-4 mx-auto">
-              Take our 2-minute candidacy quiz. Results are reviewed by a licensed provider.
+              Take our 2-minute candidacy quiz to find the right formulation for your goals.
             </p>
             <Link href="/contact" className="btn btn-primary mt-6 inline-flex">
               Start Quiz
@@ -480,8 +479,8 @@ export default async function HomePage() {
           </div>
           <h2 className="font-cormorant">$30 off your first order.</h2>
           <p className="text-cream-dim mt-4 mx-auto">
-            Join the Greenstone clinical community. Receive code <strong className="text-cream">CLINICAL30</strong> instantly —
-            plus new protocol alerts and clinical research, one email a month.
+            Join the Greenstone community. Receive code <strong className="text-cream">CLINICAL30</strong> instantly —
+            plus new protocol alerts and product updates, one email a month.
           </p>
           <form className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
