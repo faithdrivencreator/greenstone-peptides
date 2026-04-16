@@ -123,17 +123,18 @@ export default async function HomePage() {
       </section>
 
       {/* ---------- NEW TO PEPTIDES CTA ---------- */}
-      <section className="py-12 px-4 bg-[#1A9E6E]/5 border-y border-[#1A9E6E]/20">
+      <section className="py-12 px-4 bg-emerald/[0.05] border-y border-gold/15">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="text-2xl font-bold text-white">New to peptides?</h2>
-            <p className="text-white/60 mt-1">
+            <p className="eyebrow text-emerald" style={{ paddingLeft: 0 }}>Personalized Protocol</p>
+            <h2 className="font-cormorant text-2xl text-white">New to peptides?</h2>
+            <p className="text-cream-dim mt-1 text-sm">
               Answer 3 quick questions. We&apos;ll build your personalized protocol.
             </p>
           </div>
           <Link
             href="/guide"
-            className="shrink-0 px-8 py-3 bg-[#1A9E6E] text-white font-semibold rounded-full hover:bg-[#1A9E6E]/90 transition-colors whitespace-nowrap"
+            className="btn btn-primary shrink-0 whitespace-nowrap"
           >
             Find My Protocol →
           </Link>

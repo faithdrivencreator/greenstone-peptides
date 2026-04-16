@@ -1,5 +1,6 @@
 'use client';
 
+import { BookOpen } from 'lucide-react';
 import type { GuideExperience } from '@/lib/guide-logic';
 
 interface StepExperienceProps {
@@ -28,27 +29,30 @@ const OPTIONS: { value: GuideExperience; label: string; description: string }[] 
 export function StepExperience({ onSelect, onBack }: StepExperienceProps) {
   return (
     <div className="flex flex-col items-center">
-      <h2 className="text-3xl font-bold text-white mb-2 text-center">
+      <div className="w-14 h-14 bg-emerald/10 border border-emerald/30 flex items-center justify-center mb-6" style={{ borderRadius: '8px' }}>
+        <BookOpen className="w-7 h-7 text-emerald" />
+      </div>
+      <h2 className="font-cormorant text-3xl sm:text-4xl text-white mb-3 text-center" style={{ fontWeight: 400 }}>
         How familiar are you with peptides?
       </h2>
-      <p className="text-white/60 mb-10 text-center">
-        This helps us recommend the right starting point for you.
+      <p className="text-cream-dim mb-10 text-center max-w-md">
+        Honest answer is best — we tailor the education to where you are, not where you think you should be.
       </p>
-      <div className="flex flex-col gap-4 w-full max-w-lg">
+      <div className="flex flex-col gap-3 w-full max-w-lg">
         {OPTIONS.map((opt) => (
           <button
             key={opt.value}
             onClick={() => onSelect(opt.value)}
-            className="flex flex-col items-start p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-[#1A9E6E]/60 hover:bg-[#1A9E6E]/10 transition-all duration-200 text-left"
+            className="card-glass flex flex-col items-start !p-6 text-left group hover:!border-gold/40 transition-all duration-200"
           >
-            <div className="text-white font-semibold text-lg">{opt.label}</div>
-            <div className="text-white/50 text-sm mt-1">{opt.description}</div>
+            <div className="font-cormorant text-xl text-white group-hover:text-gold transition-colors">{opt.label}</div>
+            <div className="text-cream-dim text-sm mt-1">{opt.description}</div>
           </button>
         ))}
       </div>
       <button
         onClick={onBack}
-        className="mt-8 text-white/40 hover:text-white/70 text-sm transition-colors"
+        className="mt-8 text-cream-dim/50 hover:text-gold text-sm transition-colors"
       >
         ← Back
       </button>

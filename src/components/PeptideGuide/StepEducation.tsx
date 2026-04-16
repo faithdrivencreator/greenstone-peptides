@@ -20,7 +20,7 @@ export function StepEducation({ goal, onComplete, onBack }: StepEducationProps) 
   const content = GOAL_CONTENT[goal];
 
   if (panel === 'how-it-works') {
-    return <HowItWorks content={content} onNext={() => setPanel('safety')} />;
+    return <HowItWorks goal={goal} content={content} onNext={() => setPanel('safety')} />;
   }
 
   if (panel === 'safety') {

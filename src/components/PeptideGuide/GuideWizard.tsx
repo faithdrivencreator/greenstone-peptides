@@ -6,6 +6,7 @@ import type { Product } from '@/types';
 import type { GuideGoal, GuideExperience, GuideBudget } from '@/lib/guide-logic';
 import { getRecommendedSlugs } from '@/lib/guide-logic';
 import { ProgressBar } from './ProgressBar';
+import { StepWelcome } from './StepWelcome';
 import { StepGoal } from './StepGoal';
 import { StepExperience } from './StepExperience';
 import { StepBudget } from './StepBudget';
@@ -16,16 +17,16 @@ interface GuideWizardProps {
   allProducts: Product[];
 }
 
-type Step = 1 | 2 | 3 | 4 | 5;
+type Step = 0 | 1 | 2 | 3 | 4 | 5;
 
 const slideVariants = {
-  enter: { opacity: 0, y: 20 },
-  center: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
+  enter: { opacity: 0, y: 32, scale: 0.98 },
+  center: { opacity: 1, y: 0, scale: 1 },
+  exit: { opacity: 0, y: -24, scale: 0.98 },
 };
 
 export function GuideWizard({ allProducts }: GuideWizardProps) {
-  const [step, setStep] = useState<Step>(1);
+  const [step, setStep] = useState<Step>(0);
   const [goal, setGoal] = useState<GuideGoal | null>(null);
   const [experience, setExperience] = useState<GuideExperience | null>(null);
   const [budget, setBudget] = useState<GuideBudget | null>(null);
@@ -40,9 +41,9 @@ export function GuideWizard({ allProducts }: GuideWizardProps) {
   }, [goal, experience, budget, step, allProducts]);
 
   return (
-    <div className="min-h-screen bg-[#0a0f1a] px-4 py-16">
+    <div className="min-h-screen px-4 py-16">
       <div className="max-w-4xl mx-auto">
-        <ProgressBar currentStep={step} totalSteps={5} />
+        {step > 0 && <ProgressBar currentStep={step} totalSteps={5} />}
 
         <AnimatePresence mode="wait">
           <motion.div
@@ -51,8 +52,11 @@ export function GuideWizard({ allProducts }: GuideWizardProps) {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.3 }}
+            transition={{ type: 'spring', stiffness: 260, damping: 28 }}
           >
+            {step === 0 && (
+              <StepWelcome onStart={() => setStep(1)} />
+            )}
             {step === 1 && (
               <StepGoal
                 onSelect={(g) => {

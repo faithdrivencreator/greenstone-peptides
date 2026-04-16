@@ -333,6 +333,10 @@
 }
 
 /* ---------- Animations ---------- */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 @keyframes fadeUp {
   0% {
     opacity: 0;

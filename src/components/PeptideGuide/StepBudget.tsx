@@ -1,5 +1,6 @@
 'use client';
 
+import { Wallet } from 'lucide-react';
 import type { GuideBudget } from '@/lib/guide-logic';
 
 interface StepBudgetProps {
@@ -28,27 +29,30 @@ const OPTIONS: { value: GuideBudget; label: string; description: string }[] = [
 export function StepBudget({ onSelect, onBack }: StepBudgetProps) {
   return (
     <div className="flex flex-col items-center">
-      <h2 className="text-3xl font-bold text-white mb-2 text-center">
+      <div className="w-14 h-14 bg-gold/10 border border-gold/30 flex items-center justify-center mb-6" style={{ borderRadius: '8px' }}>
+        <Wallet className="w-7 h-7 text-gold" />
+      </div>
+      <h2 className="font-cormorant text-3xl sm:text-4xl text-white mb-3 text-center" style={{ fontWeight: 400 }}>
         What&apos;s your monthly budget?
       </h2>
-      <p className="text-white/60 mb-10 text-center">
-        We&apos;ll match you to the right protocol at the right price.
+      <p className="text-cream-dim mb-10 text-center max-w-md">
+        Every tier delivers real results. More budget simply means a more complete stack.
       </p>
-      <div className="flex flex-col gap-4 w-full max-w-lg">
+      <div className="flex flex-col gap-3 w-full max-w-lg">
         {OPTIONS.map((opt) => (
           <button
             key={opt.value}
             onClick={() => onSelect(opt.value)}
-            className="flex flex-col items-start p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-[#C9A96E]/60 hover:bg-[#C9A96E]/10 transition-all duration-200 text-left"
+            className="card-glass flex flex-col items-start !p-6 text-left hover:!border-gold/40 transition-all duration-200"
           >
-            <div className="text-[#C9A96E] font-bold text-xl">{opt.label}</div>
-            <div className="text-white/50 text-sm mt-1">{opt.description}</div>
+            <div className="font-cormorant text-gold text-2xl">{opt.label}</div>
+            <div className="text-cream-dim text-sm mt-1">{opt.description}</div>
           </button>
         ))}
       </div>
       <button
         onClick={onBack}
-        className="mt-8 text-white/40 hover:text-white/70 text-sm transition-colors"
+        className="mt-8 text-cream-dim/50 hover:text-gold text-sm transition-colors"
       >
         ← Back
       </button>
