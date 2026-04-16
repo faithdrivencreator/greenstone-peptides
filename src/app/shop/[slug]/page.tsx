@@ -7,6 +7,7 @@ import { getAllProducts, getProductBySlug } from '@/lib/queries';
 import { urlFor } from '@/lib/sanity';
 import { ProductCard } from '@/components/ProductCard';
 import { SchemaOrg } from '@/components/SchemaOrg';
+import AddToCartButton from '@/components/AddToCartButton';
 
 interface PageProps {
   params: { slug: string };
@@ -92,9 +93,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
             <div>
               <div className="flex flex-wrap gap-2 mb-4">
-                {product.prescriptionRequired && (
-                  <span className="badge badge-rx">Rx Required</span>
-                )}
                 {product.usaCompounded && <span className="badge badge-usa">USA Compounded</span>}
                 {product.format && <span className="badge badge-injectable">{product.format}</span>}
               </div>
@@ -132,20 +130,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               </dl>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                {product.stripePaymentLink ? (
-                  <a
-                    href={product.stripePaymentLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary"
-                  >
-                    Order Now
-                  </a>
-                ) : (
-                  <Link href="/contact" className="btn btn-primary">
-                    Contact for Order
-                  </Link>
-                )}
+                <AddToCartButton product={product} />
                 <Link href="/contact" className="btn btn-ghost">
                   Ask a Pharmacist →
                 </Link>

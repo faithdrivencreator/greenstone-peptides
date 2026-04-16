@@ -210,7 +210,7 @@ export function CartDrawer() {
             </button>
 
             <p className="text-[0.65rem] text-cream-dim/50 leading-relaxed text-center font-jetbrains">
-              Prescription required. A licensed provider will review your order before fulfillment.
+              Compounded to order under USP 797 sterile standards by our USA pharmacy partners.
             </p>
           </div>
         )}

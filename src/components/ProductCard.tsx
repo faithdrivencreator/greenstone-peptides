@@ -53,7 +53,6 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Badges overlay */}
         <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
           <div className="flex flex-wrap gap-1.5">
-            {product.prescriptionRequired && <span className="badge badge-rx">Rx Required</span>}
             {product.format && (
               <span
                 className={clsx('badge', product.format === 'injectable' ? 'badge-injectable' : 'badge-odt')}
