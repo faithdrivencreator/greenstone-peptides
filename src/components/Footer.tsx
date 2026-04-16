@@ -36,8 +36,7 @@ export function Footer() {
             </span>
           </div>
           <p className="text-sm text-cream-dim leading-relaxed max-w-xs">
-            A managed services organization facilitating physician-prescribed peptide therapy
-            through licensed compounding pharmacy partners. 25 years of pharmaceutical experience.
+            USA-compounded peptide therapy. Third-party tested under USP 797 sterile standards by licensed pharmacy partners with 25+ years of pharmaceutical care.
           </p>
           <div className="text-sm text-cream-dim space-y-1 pt-2">
             <p>Miami, Florida</p>
@@ -95,13 +94,7 @@ export function Footer() {
       {/* Full disclaimer */}
       <div className="container-gr mt-16 pt-8 border-t border-gold/10">
         <p className="text-xs text-cream-dim/80 leading-relaxed max-w-4xl">
-          <strong className="text-cream">Important:</strong> Compounded medications are not
-          FDA-approved. Prescription required. Greenstone Peptides is a managed services organization
-          that facilitates prescription fulfillment through licensed compounding pharmacy
-          partners. We are not a pharmacy. Products and information on this site are intended
-          for educational purposes only and do not constitute medical advice. Consult a licensed
-          healthcare provider before starting any therapy. Not all products are available in all
-          states.
+          <strong className="text-cream">Important:</strong> Compounded medications are not FDA-approved and are prepared by licensed compounding pharmacies. These statements have not been evaluated by the FDA. Products are not intended to diagnose, treat, cure, or prevent any disease. Greenstone Peptides facilitates access to USA-compounded formulations through licensed pharmacy partners.
         </p>
         <p className="text-xs text-cream-dim/60 mt-8">
           &copy; {new Date().getFullYear()} Greenstone Peptides. All rights reserved.

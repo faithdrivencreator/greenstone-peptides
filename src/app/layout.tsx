@@ -35,11 +35,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonepeptides
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Greenstone Peptides | Physician-Prescribed Peptide Therapy',
+    default: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
     template: 'Greenstone Peptides | %s',
   },
   description:
-    'Greenstone Peptides is a managed services organization facilitating physician-prescribed, USA-compounded peptide therapy through licensed pharmacy partners. Miami, FL.',
+    'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested for potency, sterility, and purity. Temperature-controlled shipping.',
   keywords: [
     'peptide therapy',
     'GLP-1',
@@ -54,15 +54,15 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: SITE_URL,
     siteName: 'Greenstone Peptides',
-    title: 'Greenstone Peptides | Physician-Prescribed Peptide Therapy',
+    title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
     description:
-      'USA-compounded, physician-prescribed peptide therapy. 25 years of pharmaceutical experience. USP 795 & 797 compliant.',
+      'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Temperature-controlled shipping.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Greenstone Peptides | Physician-Prescribed Peptide Therapy',
+    title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
     description:
-      'USA-compounded, physician-prescribed peptide therapy. 25 years of pharmaceutical experience.',
+      'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Temperature-controlled shipping.',
   },
   robots: { index: true, follow: true },
 };
@@ -74,7 +74,7 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   description:
-    'Managed services organization facilitating physician-prescribed peptide therapy through licensed compounding pharmacy partners.',
+    'Premium peptide therapy compounded in the USA under USP 797 sterile standards by licensed pharmacy partners with 25+ years of pharmaceutical care.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Miami',

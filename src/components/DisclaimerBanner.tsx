@@ -29,10 +29,7 @@ export function DisclaimerBanner() {
     >
       <div className="container-gr flex items-start gap-4 py-3">
         <p className="flex-1 text-[11px] leading-relaxed text-cream-dim">
-          <span className="text-gold font-medium">Important:</span> Compounded medications are
-          not FDA-approved. Prescription required. Greenstone Peptides is a managed services
-          organization that facilitates prescription fulfillment through licensed compounding
-          pharmacy partners.{' '}
+          Compounded medications are not FDA-approved. These products are compounded by licensed USA pharmacies under USP 797 sterile standards.{' '}
           <Link href="/safety" className="text-gold underline hover:text-gold-light">
             Read full disclaimer
           </Link>
