@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { TrendingDown, Dumbbell, Leaf, Zap, Shield, ArrowRight } from 'lucide-react';
+import { TrendingDown, Dumbbell, Leaf, Zap, Shield, Heart, ArrowRight } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import type { GoalContent } from '@/data/guide-content';
 import type { GuideGoal } from '@/lib/guide-logic';
@@ -19,6 +19,7 @@ const GOAL_ICONS: Record<GuideGoal, LucideIcon> = {
   'anti-aging': Leaf,
   'energy-metabolism': Zap,
   'mens-health': Shield,
+  'womens-health': Heart,
 };
 
 const GOAL_STATS: Record<GuideGoal, { stat: string; label: string; color: string; bg: string }> = {
@@ -27,6 +28,7 @@ const GOAL_STATS: Record<GuideGoal, { stat: string; label: string; color: string
   'anti-aging':       { stat: '50%',    label: 'decline in NAD+ between ages 40 and 60',            color: 'text-teal-400',    bg: 'from-teal-900/30 to-transparent' },
   'energy-metabolism':{ stat: '37%',    label: 'improvement in mitochondrial efficiency with NAD+ therapy', color: 'text-amber-400', bg: 'from-amber-900/30 to-transparent' },
   'mens-health':      { stat: '82%',    label: 'of men report improved performance with PDE5 inhibitor therapy', color: 'text-violet-400', bg: 'from-violet-900/30 to-transparent' },
+  'womens-health':    { stat: '40%',    label: 'of women over 35 report fatigue and metabolic changes tied to hormonal decline', color: 'text-pink-400', bg: 'from-pink-900/30 to-transparent' },
 };
 
 const GOAL_FACTS: Record<GuideGoal, { keyword: string; detail: string }[]> = {
@@ -54,6 +56,11 @@ const GOAL_FACTS: Record<GuideGoal, { keyword: string; detail: string }[]> = {
     { keyword: 'FDA-approved, fast-acting', detail: 'Sildenafil and Tadalafil have decades of safety data. In ODT form, they dissolve under the tongue for faster absorption than standard tablets.' },
     { keyword: 'Addresses the hormonal root cause', detail: 'Sexual function in men over 35 tracks closely with declining growth hormone. Sermorelin and Tesamorelin restore the hormonal foundation.' },
     { keyword: 'More energy, better body composition', detail: 'Growth hormone support affects energy levels, lean muscle mass, and recovery — benefits that compound well beyond sexual health.' },
+  ],
+  'womens-health': [
+    { keyword: 'Restores hormonal balance naturally', detail: 'Sermorelin stimulates your pituitary gland to produce growth hormone on its natural schedule — supporting body composition, skin elasticity, and deep sleep without synthetic hormone replacement.' },
+    { keyword: 'Fights fatigue at the cellular level', detail: 'NAD+ is the coenzyme every cell uses for energy production. Restoring declining NAD+ levels directly addresses the brain fog, low energy, and slow recovery that women experience after 35.' },
+    { keyword: 'Metabolic support through perimenopause', detail: 'MOTS-c improves insulin sensitivity and activates AMPK — helping your body maintain metabolic flexibility during the hormonal shifts of perimenopause and beyond.' },
   ],
 };
 

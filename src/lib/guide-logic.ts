@@ -5,7 +5,8 @@ export type GuideGoal =
   | 'build-recover'
   | 'anti-aging'
   | 'energy-metabolism'
-  | 'mens-health';
+  | 'mens-health'
+  | 'womens-health';
 
 export type GuideExperience = 'newcomer' | 'some' | 'experienced';
 
@@ -46,6 +47,11 @@ const RECOMMENDATION_MAP: Record<
     'under-100': ['sildenafil-tadalafil-55-22mg-odt'],
     '100-200': ['sildenafil-tadalafil-55-22mg-odt', 'sermorelin-4mg'],
     '200-plus': ['sermorelin-4mg', 'tesamorelin-5mg', 'sildenafil-tadalafil-55-22mg-odt'],
+  },
+  'womens-health': {
+    'under-100': ['sermorelin-4mg'],
+    '100-200': ['sermorelin-4mg', 'nad-plus-50mg'],
+    '200-plus': ['sermorelin-4mg', 'nad-plus-200mg-ml', 'mots-c-20mg'],
   },
 };
 

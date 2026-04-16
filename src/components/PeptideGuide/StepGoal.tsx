@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { TrendingDown, Dumbbell, Leaf, Zap, Shield } from 'lucide-react';
+import { TrendingDown, Dumbbell, Leaf, Zap, Shield, Heart } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import type { GuideGoal } from '@/lib/guide-logic';
 import { GOAL_CONTENT } from '@/data/guide-content';
@@ -17,6 +17,7 @@ const GOALS: GuideGoal[] = [
   'anti-aging',
   'energy-metabolism',
   'mens-health',
+  'womens-health',
 ];
 
 const GOAL_ICONS: Record<GuideGoal, LucideIcon> = {
@@ -25,6 +26,7 @@ const GOAL_ICONS: Record<GuideGoal, LucideIcon> = {
   'anti-aging': Leaf,
   'energy-metabolism': Zap,
   'mens-health': Shield,
+  'womens-health': Heart,
 };
 
 const GOAL_GLOW: Record<GuideGoal, string> = {
@@ -33,6 +35,7 @@ const GOAL_GLOW: Record<GuideGoal, string> = {
   'anti-aging': 'rgba(20,184,166,0.12)',
   'energy-metabolism': 'rgba(245,158,11,0.12)',
   'mens-health': 'rgba(139,92,246,0.12)',
+  'womens-health': 'rgba(244,114,182,0.12)',
 };
 
 const stagger = {

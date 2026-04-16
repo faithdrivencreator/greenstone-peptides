@@ -115,4 +115,15 @@ export const GOAL_CONTENT: Record<GuideGoal, GoalContent> = {
     oralInstructions:
       'Place tablet under your tongue. Let it dissolve completely — about 60–90 seconds. Do not eat or drink for 10 minutes. Do not swallow the tablet whole.',
   },
+  'womens-health': {
+    goal: 'womens-health',
+    label: "Women's Health",
+    tagline: 'Hormone balance, energy, and vitality',
+    howItWorksTitle: "How Women's Health Peptides Work",
+    howItWorksBody:
+      "Women's hormonal health shifts significantly after 30 — declining growth hormone, slower metabolism, reduced collagen production, and disrupted sleep patterns. Sermorelin restores natural growth hormone pulsatility, which directly supports body composition, skin quality, sleep depth, and energy. NAD+ addresses the cellular energy decline that drives fatigue, brain fog, and accelerated aging. MOTS-c improves insulin sensitivity and metabolic flexibility — particularly important for women navigating perimenopause and beyond.",
+    howItWorksMechanism: 'Sermorelin → GH restoration → Metabolism + skin + sleep + energy',
+    safetyItems: INJECTABLE_SAFETY_ITEMS,
+    tutorialSteps: INJECTABLE_TUTORIAL_STEPS,
+  },
 };
