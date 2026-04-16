@@ -132,7 +132,7 @@ export default async function HomePage() {
         />
         <div className="container-gr relative z-10">
           <div className="card-glass !border-emerald/30 max-w-4xl mx-auto text-center !py-14 !px-8 sm:!px-16">
-            <p className="mono text-emerald mb-4">// Personalized Protocol</p>
+            <p className="font-jetbrains text-emerald text-sm tracking-[0.2em] uppercase mb-5 mx-auto max-w-none">// Personalized Protocol</p>
             <h2 className="font-cormorant text-display-md text-white mb-4">
               New to peptides?<br />
               <em className="italic text-gold">We&apos;ll guide you.</em>
@@ -147,7 +147,7 @@ export default async function HomePage() {
             >
               Find My Protocol →
             </Link>
-            <p className="font-jetbrains text-cream-dim/70 text-xs tracking-wider mt-6">
+            <p className="font-jetbrains text-cream-dim/70 text-xs tracking-wider mt-6 mx-auto max-w-none">
               Takes 3 minutes · No account required · Clinician-reviewed protocols
             </p>
           </div>
