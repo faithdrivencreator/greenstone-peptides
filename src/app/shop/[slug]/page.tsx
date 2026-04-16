@@ -47,6 +47,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     name: product.name,
     description: product.shortDescription || product.seoDescription,
     image: imageUrl || undefined,
+    brand: { '@type': 'Brand', name: 'Greenstone Peptides' },
     offers: {
       '@type': 'Offer',
       price: product.price,

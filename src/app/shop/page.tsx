@@ -5,7 +5,7 @@ import { ProductFilters } from '@/components/ProductFilters';
 export const metadata: Metadata = {
   title: 'Peptide Catalog',
   description:
-    'Browse physician-prescribed, USA-compounded peptides. Filter by category, format, and price.',
+    'Browse USA-compounded peptide formulations. Semaglutide, tirzepatide, BPC-157, NAD+, and more. Third-party tested under USP 797 sterile standards.',
 };
 
 export const revalidate = 300;
@@ -20,7 +20,7 @@ export default async function ShopPage() {
           <p className="eyebrow">Catalog</p>
           <h1>Peptide Catalog</h1>
           <p className="mt-4 mx-auto">
-            Every product is physician-prescribed and compounded in USA-licensed pharmacies.
+            Every formulation is compounded in the USA under USP 797 sterile standards and third-party tested for potency and purity.
           </p>
         </header>
 
