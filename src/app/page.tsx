@@ -147,7 +147,7 @@ export default async function HomePage() {
             >
               Find My Protocol →
             </Link>
-            <p className="font-jetbrains text-cream-dim/40 text-[0.6rem] tracking-widest mt-5">
+            <p className="font-jetbrains text-cream-dim/70 text-xs tracking-wider mt-6">
               Takes 3 minutes · No account required · Clinician-reviewed protocols
             </p>
           </div>
