@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /studio
+Disallow: /api/
+Disallow: /wholesale/login
+
+Sitemap: https://greenstonepeptides.com/sitemap.xml

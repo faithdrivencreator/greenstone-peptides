@@ -1,0 +1,24 @@
+# Greenstone Peptides
+
+> USA-compounded peptide therapy. Third-party tested under USP 797 sterile standards.
+
+## About
+Greenstone Peptides provides premium peptide formulations compounded in the USA by licensed pharmacy partners with 25+ years of pharmaceutical care. All products are third-party tested for potency, sterility, and endotoxin.
+
+## Products
+- Semaglutide (injectable and ODT) — GLP-1 weight management
+- Tirzepatide (injectable and ODT) — dual GIP/GLP-1 weight management
+- Retatrutide (injectable) — triple agonist weight management
+- BPC-157 (injectable) — recovery and repair
+- TB-500 (injectable) — recovery and tissue repair
+- NAD+ (injectable and nasal spray) — anti-aging and cellular energy
+- GHK-Cu (injectable) — anti-aging copper peptide
+- MOTS-c (injectable) — metabolic optimization
+- Sermorelin (injectable) — growth hormone support
+- Tesamorelin (injectable) — growth hormone support
+
+## Links
+- Shop: /shop
+- Learn: /learn
+- About: /about
+- Contact: /contact
