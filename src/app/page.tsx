@@ -123,21 +123,34 @@ export default async function HomePage() {
       </section>
 
       {/* ---------- NEW TO PEPTIDES CTA ---------- */}
-      <section className="py-12 px-4 bg-emerald/[0.05] border-y border-gold/15">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="eyebrow text-emerald" style={{ paddingLeft: 0 }}>Personalized Protocol</p>
-            <h2 className="font-cormorant text-2xl text-white">New to peptides?</h2>
-            <p className="text-cream-dim mt-1 text-sm">
-              Answer 3 quick questions. We&apos;ll build your personalized protocol.
+      <section className="section-py bg-emerald/[0.08] border-y border-emerald/25 relative overflow-hidden">
+        {/* Subtle emerald glow */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse 60% 80% at 50% 50%, rgba(26,158,110,0.10), transparent 70%)' }}
+          aria-hidden
+        />
+        <div className="container-gr relative z-10">
+          <div className="card-glass !border-emerald/30 max-w-4xl mx-auto text-center !py-14 !px-8 sm:!px-16">
+            <p className="mono text-emerald mb-4">// Personalized Protocol</p>
+            <h2 className="font-cormorant text-display-md text-white mb-4">
+              New to peptides?<br />
+              <em className="italic text-gold">We&apos;ll guide you.</em>
+            </h2>
+            <p className="text-cream-dim text-base leading-relaxed max-w-xl mx-auto mb-8">
+              Answer 3 quick questions about your goals, experience, and budget.
+              We&apos;ll match you to the right protocol — with education on how to use it safely.
+            </p>
+            <Link
+              href="/guide"
+              className="btn btn-solid !text-base !px-10 !py-4 animate-pulse-gold"
+            >
+              Find My Protocol →
+            </Link>
+            <p className="font-jetbrains text-cream-dim/40 text-[0.6rem] tracking-widest mt-5">
+              Takes 3 minutes · No account required · Clinician-reviewed protocols
             </p>
           </div>
-          <Link
-            href="/guide"
-            className="btn btn-primary shrink-0 whitespace-nowrap"
-          >
-            Find My Protocol →
-          </Link>
         </div>
       </section>
 
