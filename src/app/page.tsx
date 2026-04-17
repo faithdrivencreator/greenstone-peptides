@@ -158,7 +158,7 @@ export default async function HomePage() {
               Find My Protocol →
             </Link>
             <p className="font-jetbrains text-cream-dim/70 text-xs tracking-wider mt-6 mx-auto max-w-none">
-              Takes 3 minutes · No account required · Clinician-reviewed protocols
+              Takes 3 minutes · No account required · Third-party tested formulations
             </p>
           </div>
         </div>

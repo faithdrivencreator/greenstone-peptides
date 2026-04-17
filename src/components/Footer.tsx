@@ -20,7 +20,6 @@ const LEGAL_LINKS = [
   { href: '/safety', label: 'Safety Information' },
   { href: '/privacy', label: 'Privacy Policy' },
   { href: '/terms', label: 'Terms of Service' },
-  { href: '/hipaa', label: 'HIPAA Notice' },
 ];
 
 export function Footer() {
@@ -36,7 +35,7 @@ export function Footer() {
             </span>
           </div>
           <p className="text-sm text-cream-dim leading-relaxed max-w-xs">
-            USA-compounded peptide therapy. Third-party tested under USP 797 sterile standards by licensed pharmacy partners with 25+ years of pharmaceutical care.
+            USA-made peptide formulations. Third-party tested. Shipped direct to your door.
           </p>
           <div className="text-sm text-cream-dim space-y-1 pt-2">
             <p>Miami, Florida</p>
@@ -94,7 +93,7 @@ export function Footer() {
       {/* Full disclaimer */}
       <div className="container-gr mt-16 pt-8 border-t border-gold/10">
         <p className="text-xs text-cream-dim/80 leading-relaxed max-w-4xl">
-          <strong className="text-cream">Important:</strong> Compounded medications are not FDA-approved and are prepared by licensed compounding pharmacies. These statements have not been evaluated by the FDA. Products are not intended to diagnose, treat, cure, or prevent any disease. Greenstone Peptides facilitates access to USA-compounded formulations through licensed pharmacy partners.
+          <strong className="text-cream">Important:</strong> Compounded medications are not FDA-approved and are prepared by licensed compounding pharmacies. These statements have not been evaluated by the FDA. Products are not intended to diagnose, treat, cure, or prevent any disease. Greenstone Peptides facilitates access to USA-compounded formulations.
         </p>
         <p className="text-xs text-cream-dim/60 mt-8">
           &copy; {new Date().getFullYear()} Greenstone Peptides. All rights reserved.
