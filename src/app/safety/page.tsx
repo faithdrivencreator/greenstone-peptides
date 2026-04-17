@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Safety Information',
+  title: 'Safety & Storage | Greenstone Peptides',
   description:
-    'Full safety information, legal disclaimers, and state availability notices for Greenstone Peptides compounded peptide therapy.',
+    'Product safety information, storage guidelines, and important notices for Greenstone Peptides.',
 };
 
 export default function SafetyPage() {
@@ -11,48 +11,45 @@ export default function SafetyPage() {
     <section className="section-py">
       <div className="container-gr max-w-3xl space-y-10">
         <header>
-          <p className="eyebrow">Important Information</p>
-          <h1>Safety & Disclaimers</h1>
+          <p className="eyebrow">Product Information</p>
+          <h1>Safety & Storage</h1>
         </header>
 
         <div className="card-glass">
-          <h2 className="font-cormorant text-2xl text-white mb-4">Full Disclaimer</h2>
+          <h2 className="font-cormorant text-2xl text-white mb-4">Product Safety</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            Compounded medications are not FDA-approved. Greenstone Peptides facilitates access
-            to USA-compounded peptide formulations through licensed pharmacy partners. Compounded
-            medications are prepared by licensed compounding pharmacies and are not FDA-approved.
-            Greenstone Rx is not a pharmacy and does not manufacture, compound, dispense, or ship
-            medications directly.
+            All Greenstone Peptides products are compounded in the USA under USP 797 sterile
+            standards and third-party tested for potency, sterility, and purity. We recommend
+            consulting with a healthcare professional before starting any new supplement or
+            peptide regimen. Individual results may vary.
           </p>
         </div>
 
         <div className="card-glass">
-          <h2 className="font-cormorant text-2xl text-white mb-4">Educational Purpose</h2>
+          <h2 className="font-cormorant text-2xl text-white mb-4">Storage Guidelines</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            The content on this website is intended for educational and informational purposes
-            only. Nothing on this site constitutes medical advice, diagnosis, or treatment.
-            Always consult a licensed healthcare provider before starting, stopping, or
-            modifying any therapy. Individual results may vary.
+            Most peptide formulations should be stored refrigerated at 2-8°C (36-46°F) and
+            protected from direct light. Once reconstituted, use within the timeframe noted
+            on your product label. Do not freeze unless specifically directed. Keep all
+            products out of reach of children.
           </p>
         </div>
 
         <div className="card-glass">
-          <h2 className="font-cormorant text-2xl text-white mb-4">State Availability</h2>
+          <h2 className="font-cormorant text-2xl text-white mb-4">Shipping & Handling</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            Not all compounded products are available in all U.S. states. Availability is
-            subject to state pharmacy board regulations and the licensing of our partner
-            pharmacies. If a product is not available in your state, your provider will be
-            notified during prescription review.
+            All orders are shipped with temperature-controlled packaging to maintain product
+            integrity during transit. If your package arrives damaged or the cold pack is
+            fully thawed, contact us for a replacement.
           </p>
         </div>
 
         <div className="card-glass">
-          <h2 className="font-cormorant text-2xl text-white mb-4">Reporting Adverse Events</h2>
+          <h2 className="font-cormorant text-2xl text-white mb-4">Educational Content</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            If you experience an adverse event while using any product facilitated through
-            Greenstone Peptides, contact your prescribing provider immediately. You may also report
-            adverse events to the FDA MedWatch program at fda.gov/medwatch or by calling
-            1-800-FDA-1088.
+            The information on this website is for educational purposes only and is not
+            intended as medical advice. Always consult your healthcare provider with questions
+            about your health or before making changes to your wellness routine.
           </p>
         </div>
       </div>
