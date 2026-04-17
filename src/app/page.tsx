@@ -164,17 +164,17 @@ export default async function HomePage() {
       </section>
 
       {/* ---------- TRUST BAR ---------- */}
-      <section className="bg-obsidian-mid/90 border-y border-emerald/25 py-5">
+      <section className="bg-obsidian-mid/90 border-y border-emerald/25 py-8 md:py-10">
         <div className="container-gr">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-4">
             {[
               'USA Compounded',
               'USP 797 Sterile Standard',
               'Third-Party Tested',
               'Cold-Chain Shipping',
             ].map((label) => (
-              <span key={label} className="flex items-center gap-2 font-jetbrains text-[0.6rem] tracking-widest uppercase text-cream-dim/80">
-                <span className="text-emerald font-bold text-xs">✓</span>
+              <span key={label} className="flex items-center gap-3 font-jetbrains text-xs md:text-sm tracking-widest uppercase text-cream/90">
+                <span className="text-emerald font-bold text-base md:text-lg">✓</span>
                 {label}
               </span>
             ))}
@@ -189,7 +189,7 @@ export default async function HomePage() {
             <header className="text-center mb-12">
               <p className="eyebrow text-emerald">Most Popular</p>
               <h2>Top-Ordered Products</h2>
-              <p className="mt-3 text-sm text-cream-dim/70 font-jetbrains tracking-wide">
+              <p className="mt-4 text-base md:text-lg text-cream-dim/80 font-jetbrains tracking-wide text-center mx-auto">
                 All formulations USA-compounded under USP 797 standards · Ships within 48 hours
               </p>
             </header>
