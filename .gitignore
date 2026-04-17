@@ -40,3 +40,7 @@ dist/
 
 # Local Netlify folder
 .netlify
+
+# Generated images (uploaded to Sanity CDN)
+nanobanana-output/
+public/images/products/
