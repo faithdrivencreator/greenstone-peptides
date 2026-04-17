@@ -414,7 +414,7 @@ export default async function HomePage() {
           </div>
 
           <div className="mt-16 text-center">
-            <Link href="/learn/why-source-matters" className="btn btn-ghost">
+            <Link href="/about" className="btn btn-ghost">
               Read the full quality protocol →
             </Link>
           </div>
@@ -471,7 +471,7 @@ export default async function HomePage() {
             <p className="text-cream-dim mt-4 mx-auto">
               Take our 2-minute candidacy quiz to find the right formulation for your goals.
             </p>
-            <Link href="/contact" className="btn btn-primary mt-6 inline-flex">
+            <Link href="/guide" className="btn btn-primary mt-6 inline-flex">
               Start Quiz
             </Link>
           </div>
