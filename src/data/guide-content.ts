@@ -27,12 +27,42 @@ export interface GoalContent {
 }
 
 const INJECTABLE_TUTORIAL_STEPS: TutorialStep[] = [
-  { step: 1, title: 'Gather Your Supplies', description: 'Vial, syringe, alcohol swab, sharps container', imagePath: '/images/guide/inject-step-1.png' },
-  { step: 2, title: 'Draw the Dose', description: 'Pull back the plunger to your indicated dose marking', imagePath: '/images/guide/inject-step-2.png' },
-  { step: 3, title: 'Clean the Site', description: 'Wipe with alcohol swab in a circular motion. Wait 10 seconds.', imagePath: '/images/guide/inject-step-3.png' },
-  { step: 4, title: 'Pinch the Skin', description: 'Gently pinch 1–2 inches of skin between thumb and finger', imagePath: '/images/guide/inject-step-4.png' },
-  { step: 5, title: 'Insert & Inject Slowly', description: 'Insert at 45–90° angle, push plunger slowly and steadily', imagePath: '/images/guide/inject-step-5.png' },
-  { step: 6, title: 'Dispose Safely', description: 'Place needle in sharps container immediately. Never recap.', imagePath: '/images/guide/inject-step-6.png' },
+  {
+    step: 1,
+    title: 'Gather Your Supplies',
+    description: 'Before you begin, lay out everything on a clean, flat surface: your peptide vial, a new sealed syringe (typically 29–31 gauge insulin syringe), an alcohol prep pad, and a sharps disposal container. Make sure the vial has been stored properly in the refrigerator and check the expiration date. Wash your hands thoroughly with soap and warm water for at least 20 seconds and dry with a clean towel.',
+    imagePath: '/images/guide/inject-step-1.png',
+  },
+  {
+    step: 2,
+    title: 'Draw the Dose',
+    description: 'Remove the cap from a new syringe. Pull back the plunger to draw in a small amount of air equal to your dose volume — this makes it easier to withdraw the liquid. Clean the rubber stopper on top of the vial with an alcohol swab and let it dry. Insert the needle through the rubber stopper, push the air into the vial, then turn the vial upside down. Slowly pull back the plunger to your indicated dose marking. Tap the syringe gently to move any air bubbles to the top, then push the plunger slightly to expel them.',
+    imagePath: '/images/guide/inject-step-2.png',
+  },
+  {
+    step: 3,
+    title: 'Clean the Injection Site',
+    description: 'Choose your injection site — the most common areas are the lower abdomen (at least 2 inches from the belly button), the front of the thigh, or the back of the upper arm. Rotate sites with each injection to prevent tissue irritation. Open a new alcohol prep pad and wipe the area in a circular motion, starting from the center and moving outward. Let the skin air dry completely — do not blow on it or fan it. Injecting into wet skin can sting.',
+    imagePath: '/images/guide/inject-step-3.png',
+  },
+  {
+    step: 4,
+    title: 'Pinch the Skin',
+    description: 'Using your non-dominant hand, gently pinch a fold of skin about 1 to 2 inches wide between your thumb and index finger. This lifts the subcutaneous fat layer away from the muscle beneath, ensuring the peptide is delivered into the fatty tissue where it absorbs properly. Hold the pinch throughout the injection — do not let go until the needle is removed. Keep the skin relaxed, not tense.',
+    imagePath: '/images/guide/inject-step-4.png',
+  },
+  {
+    step: 5,
+    title: 'Insert & Inject Slowly',
+    description: 'With the skin still pinched, hold the syringe like a pencil and insert the needle at a 45 to 90 degree angle in one smooth, quick motion. A 45-degree angle is better if you have less body fat at the injection site; 90 degrees works well for areas with more tissue. Once the needle is in, release the skin pinch and slowly push the plunger all the way down over 5 to 10 seconds. Injecting too fast can cause discomfort or bruising. After the plunger is fully depressed, wait 5 seconds before withdrawing the needle to ensure the full dose is delivered.',
+    imagePath: '/images/guide/inject-step-5.png',
+  },
+  {
+    step: 6,
+    title: 'Dispose Safely',
+    description: 'Pull the needle straight out at the same angle it went in. If there is a small drop of blood, apply gentle pressure with a clean cotton ball or gauze — do not rub the site, as this can push the peptide out or cause bruising. Place the used syringe directly into a sharps disposal container immediately. Never recap a used needle, bend it, or throw it in the regular trash. If you do not have a sharps container, a thick plastic laundry detergent bottle with a screw cap works as a temporary alternative. Store your peptide vial back in the refrigerator.',
+    imagePath: '/images/guide/inject-step-6.png',
+  },
 ];
 
 const INJECTABLE_SAFETY_ITEMS: SafetyItem[] = [
