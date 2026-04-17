@@ -5,6 +5,7 @@ import { ProductCard } from '@/components/ProductCard';
 import { BlogCard } from '@/components/BlogCard';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { ShieldCheck, FlaskConical, Thermometer, Clock, ArrowRight } from 'lucide-react';
+import { urlFor } from '@/lib/sanity';
 
 export const metadata: Metadata = {
   title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
@@ -109,7 +110,15 @@ export default async function HomePage() {
                 className="card-glass border-emerald/20 hover:border-emerald/50 p-4 group transition-all duration-300 hover:-translate-y-1 block"
               >
                 <div className="w-full aspect-square mb-3 bg-obsidian-light border border-emerald/10 flex items-center justify-center overflow-hidden">
-                  <span className="font-cormorant text-3xl text-emerald/30 group-hover:text-emerald/50 transition-colors">Rx</span>
+                  {(p as any).image ? (
+                    <img
+                      src={urlFor((p as any).image).width(400).height(400).url()}
+                      alt={(p as any).image?.alt || p.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <span className="font-cormorant text-3xl text-emerald/30 group-hover:text-emerald/50 transition-colors">Rx</span>
+                  )}
                 </div>
                 <p className="font-cormorant text-base text-white leading-tight">{p.name}</p>
                 {p.category?.title && (
