@@ -5,7 +5,7 @@ import { Lock, CheckCircle } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Wholesale & Distribution',
   description:
-    'Greenstone Peptides wholesale and distribution program. Partner with us to offer physician-prescribed, USA-compounded peptides to your clinical network.',
+    'Greenstone Peptides wholesale and distribution program. Partner with us to offer USA-compounded peptides to your clinical network.',
 };
 
 const BENEFITS = [
