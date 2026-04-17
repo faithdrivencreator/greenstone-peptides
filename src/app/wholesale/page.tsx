@@ -27,7 +27,7 @@ const BENEFITS = [
   },
   {
     t: 'Clinical Training',
-    b: 'Access to our pharmacist-led clinical training library for your team. Protocol support and drug interaction resources included.',
+    b: 'Access to our product training library for your team. Protocol information and product resources included.',
   },
   {
     t: 'Compliance Documentation',

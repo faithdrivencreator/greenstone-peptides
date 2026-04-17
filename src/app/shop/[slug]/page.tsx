@@ -133,7 +133,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               <div className="mt-8 flex flex-wrap gap-4">
                 <AddToCartButton product={product} />
                 <Link href="/contact" className="btn btn-ghost">
-                  Ask a Pharmacist →
+                  Questions? Contact Us →
                 </Link>
               </div>
             </div>

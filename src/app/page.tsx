@@ -288,7 +288,7 @@ export default async function HomePage() {
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: ShieldCheck, title: 'USP Compliant', body: 'Every compound meets USP 795 & 797 standards.' },
-              { icon: FlaskConical, title: 'Pharmacist-Led', body: 'Clinical oversight at every step.' },
+              { icon: FlaskConical, title: 'Quality Assured', body: 'Every batch tested for potency and purity.' },
               { icon: Thermometer, title: 'Cold-Chain', body: 'Temperature-controlled shipping nationwide.' },
               { icon: Clock, title: '25 Years', body: 'Deep pharmaceutical expertise.' },
             ].map(({ icon: Icon, title, body }) => (
@@ -383,7 +383,7 @@ export default async function HomePage() {
                 <li className="pl-4 border-l border-gold/30">
                   <strong className="text-cream block mb-1">USA compounding pharmacies only</strong>
                   Every formulation is produced inside a state-licensed compounding pharmacy,
-                  not a chemical supplier. Pharmacists, not traders.
+                  not a chemical supplier. Quality, not shortcuts.
                 </li>
                 <li className="pl-4 border-l border-gold/30">
                   <strong className="text-cream block mb-1">USP 797 sterile compounding</strong>

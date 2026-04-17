@@ -4,7 +4,7 @@ import { ContactForm } from './ContactForm';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Reach the Greenstone Peptides team for clinical questions, provider onboarding, and patient inquiries. Licensed pharmacists on staff 24/7.',
+    'Reach the Greenstone Peptides team for product questions, provider onboarding, and wholesale inquiries.',
 };
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
           <p className="mt-6 text-lg text-cream-dim">
             Whether you're a patient exploring your options, a provider looking to partner, or
             a clinician with a protocol question — our team responds within one business day.
-            Licensed pharmacists are available 24/7 for urgent clinical inquiries.
+            Our team is available to answer product questions and help you get started.
           </p>
 
           <div className="mt-12 space-y-8">
@@ -39,7 +39,7 @@ export default function ContactPage() {
               <h4 className="font-cormorant text-xl text-white">Clinical & Safety Questions</h4>
               <p className="text-sm text-cream-dim mt-2">
                 Protocol questions, drug interaction concerns, or safety information.
-                Our pharmacist team is on call 24/7.
+                We respond to inquiries within 24 hours.
               </p>
             </div>
           </div>

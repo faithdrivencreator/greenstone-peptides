@@ -52,11 +52,7 @@ export default function SafetyPage() {
             If you experience an adverse event while using any product facilitated through
             Greenstone Peptides, contact your prescribing provider immediately. You may also report
             adverse events to the FDA MedWatch program at fda.gov/medwatch or by calling
-            1-800-FDA-1088. For urgent clinical support, call our 24/7 pharmacist line at{' '}
-            <a href="tel:+18556257588" className="text-gold">
-              (855) 625-7588
-            </a>
-            .
+            1-800-FDA-1088.
           </p>
         </div>
       </div>
