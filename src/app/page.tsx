@@ -488,8 +488,8 @@ export default async function HomePage() {
           </div>
           <h2 className="font-cormorant">$30 off your first order.</h2>
           <p className="text-cream-dim mt-4 mx-auto">
-            Join the Greenstone community. Receive code <strong className="text-cream">CLINICAL30</strong> instantly —
-            plus new protocol alerts and product updates, one email a month.
+            Join the Greenstone community to unlock your exclusive discount code —
+            plus new product alerts and updates, one email a month.
           </p>
           <form
             name="homepage-email"
