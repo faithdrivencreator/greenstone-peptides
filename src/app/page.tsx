@@ -35,9 +35,9 @@ export default async function HomePage() {
 
       {/* ---------- ANNOUNCEMENT BANNER ---------- */}
       <div className="bg-emerald text-obsidian py-2.5 text-center font-jetbrains text-[0.65rem] tracking-[0.15em] uppercase">
-        New: Tirzepatide Triple Agonist formulations now available —{' '}
+        New: Retatrutide — the first triple agonist peptide for weight management{' '}
         <Link href="/shop?category=weight-loss" className="ml-1 underline underline-offset-2 font-bold hover:opacity-80 transition-opacity">
-          View formulations →
+          Shop Weight Loss →
         </Link>
       </div>
 
