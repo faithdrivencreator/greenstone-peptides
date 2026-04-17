@@ -25,6 +25,14 @@ export async function subscribeToKlaviyo(
                 },
               },
             },
+            relationships: {
+              list: {
+                data: {
+                  type: 'list',
+                  id: 'RvW5qV',
+                },
+              },
+            },
           },
         }),
       }
