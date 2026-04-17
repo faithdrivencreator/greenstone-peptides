@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { X, Lock } from 'lucide-react';
+import { subscribeToKlaviyo } from '@/lib/klaviyo';
 
 const STORAGE_KEY = 'grx-exit-popup-dismissed';
 const DISMISS_DAYS = 7;
@@ -78,19 +79,11 @@ export function ExitIntentPopup() {
     e.preventDefault();
     if (!email) return;
     setLoading(true);
-    const formData = new FormData(e.target as HTMLFormElement);
     try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
-      });
+      await subscribeToKlaviyo(email, 'Exit Intent Popup');
+    } finally {
       setLoading(false);
       setSubmitted(true);
-      try { localStorage.setItem(STORAGE_KEY, Date.now().toString()); } catch {}
-    } catch {
-      setLoading(false);
-      setSubmitted(true); // Still show success — popup dismisses either way
       try { localStorage.setItem(STORAGE_KEY, Date.now().toString()); } catch {}
     }
   };
@@ -168,15 +161,9 @@ export function ExitIntentPopup() {
                 </p>
 
                 <form
-                  name="exit-intent-email"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
                   className="mt-6 space-y-3"
                 >
-                  <input type="hidden" name="form-name" value="exit-intent-email" />
-                  <input type="hidden" name="bot-field" />
                   <input
                     type="email"
                     name="email"

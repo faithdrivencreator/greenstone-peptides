@@ -6,6 +6,7 @@ import { BlogCard } from '@/components/BlogCard';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { ShieldCheck, FlaskConical, Thermometer, Clock, ArrowRight } from 'lucide-react';
 import { urlFor } from '@/lib/sanity';
+import EmailCapture from '@/components/EmailCapture';
 
 export const metadata: Metadata = {
   title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
@@ -491,30 +492,7 @@ export default async function HomePage() {
             Join the Greenstone community to unlock your exclusive discount code —
             plus new product alerts and updates, one email a month.
           </p>
-          <form
-            name="homepage-email"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            action="/shop?subscribed=true"
-            className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          >
-            <input type="hidden" name="form-name" value="homepage-email" />
-            <input type="hidden" name="bot-field" />
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="your@email.com"
-              className="flex-1 bg-obsidian-light border border-gold/20 px-4 py-3 text-cream focus:border-emerald/60 outline-none transition-colors"
-            />
-            <button type="submit" className="btn btn-primary whitespace-nowrap">
-              Claim $30 Off
-            </button>
-          </form>
-          <p className="mt-4 text-[0.65rem] text-cream-dim/40 font-jetbrains tracking-wide text-center">
-            Code delivered instantly · Valid 14 days · One use per customer · No spam
-          </p>
+          <EmailCapture />
         </div>
       </section>
     </>

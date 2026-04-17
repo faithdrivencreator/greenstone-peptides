@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, DM_Sans, JetBrains_Mono } from 'next/font/google';
+import Script from 'next/script';
 import '@/styles/globals.css';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
@@ -93,6 +94,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${jetbrains.variable}`}>
       <body className="bg-obsidian text-cream min-h-screen antialiased">
+        <Script
+          src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=pk_ec707a288a01d41d1b31745bb1ce1c0a0f"
+          strategy="afterInteractive"
+        />
         <SchemaOrg schema={organizationSchema} />
         <CartProvider>
           <Navigation />
