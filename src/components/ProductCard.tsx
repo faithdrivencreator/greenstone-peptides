@@ -34,58 +34,64 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <article className="card-glass group flex flex-col !p-0 overflow-hidden">
-      {/* Image */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-obsidian-light">
-        {imageUrl ? (
-          <Image
-            src={imageUrl}
-            alt={product.image?.alt || product.name}
-            fill
-            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="object-cover transition-transform duration-[600ms] ease-smooth group-hover:scale-[1.04]"
-          />
-        ) : (
-          <div className="absolute inset-0 grid place-items-center text-gold/40 font-cormorant text-5xl">
-            Rx
-          </div>
-        )}
+      {/* Clickable area: image + product info */}
+      <Link href={`/shop/${product.slug.current}`} className="block">
+        {/* Image */}
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-obsidian-light">
+          {imageUrl ? (
+            <Image
+              src={imageUrl}
+              alt={product.image?.alt || product.name}
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover transition-transform duration-[600ms] ease-smooth group-hover:scale-[1.04]"
+            />
+          ) : (
+            <div className="absolute inset-0 grid place-items-center text-gold/40 font-cormorant text-5xl">
+              Rx
+            </div>
+          )}
 
-        {/* Badges overlay */}
-        <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
-          <div className="flex flex-wrap gap-1.5">
-            {product.format && (
-              <span
-                className={clsx('badge', product.format === 'injectable' ? 'badge-injectable' : 'badge-odt')}
-              >
-                {FORMAT_LABEL[product.format] || product.format}
-              </span>
+          {/* Badges overlay */}
+          <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
+            <div className="flex flex-wrap gap-1.5">
+              {product.format && (
+                <span
+                  className={clsx('badge', product.format === 'injectable' ? 'badge-injectable' : 'badge-odt')}
+                >
+                  {FORMAT_LABEL[product.format] || product.format}
+                </span>
+              )}
+            </div>
+            {product.usaCompounded && (
+              <span className="badge badge-usa flex-shrink-0">USA Compounded</span>
             )}
           </div>
-          {product.usaCompounded && (
-            <span className="badge badge-usa flex-shrink-0">USA Compounded</span>
+        </div>
+
+        {/* Product info */}
+        <div className="flex flex-col gap-4 p-6 pb-4">
+          <div>
+            <h3 className="font-cormorant text-2xl text-white leading-tight">{product.name}</h3>
+            {product.category?.title && (
+              <p className="mono mt-2 !text-cream-dim/80">{product.category.title}</p>
+            )}
+          </div>
+
+          {product.shortDescription && (
+            <p className="text-sm text-cream-dim line-clamp-3">{product.shortDescription}</p>
           )}
+
+          <div className="flex items-center gap-4 text-sm text-cream-dim/80 pt-1">
+            {product.strength && <span>{product.strength}</span>}
+            {product.strength && product.size && <span className="text-gold/40">/</span>}
+            {product.size && <span>{product.size}</span>}
+          </div>
         </div>
-      </div>
+      </Link>
 
-      {/* Body */}
-      <div className="flex flex-1 flex-col gap-4 p-6">
-        <div>
-          <h3 className="font-cormorant text-2xl text-white leading-tight">{product.name}</h3>
-          {product.category?.title && (
-            <p className="mono mt-2 !text-cream-dim/80">{product.category.title}</p>
-          )}
-        </div>
-
-        {product.shortDescription && (
-          <p className="text-sm text-cream-dim line-clamp-3">{product.shortDescription}</p>
-        )}
-
-        <div className="flex items-center gap-4 text-sm text-cream-dim/80 pt-1">
-          {product.strength && <span>{product.strength}</span>}
-          {product.strength && product.size && <span className="text-gold/40">/</span>}
-          {product.size && <span>{product.size}</span>}
-        </div>
-
+      {/* Action bar — not part of the link */}
+      <div className="flex flex-1 flex-col p-6 pt-0">
         <div className="mt-auto flex items-end justify-between pt-4 border-t border-gold/10">
           <div>
             <p className="mono !text-cream-dim">Starting at</p>
