@@ -8,3 +8,18 @@
 [build.environment]
   NEXT_TELEMETRY_DISABLED = "1"
   NODE_VERSION = "20"
+
+# ─── Bare-slug redirects ─────────────────────────────────────────────────────
+# Marketing content links to bare /shop/<compound-name> slugs, but Sanity
+# stores products with concentration-size slugs (e.g. retatrutide-20mg-ml-5ml).
+# These 301s resolve bare slugs to the canonical "best value" SKU.
+
+[[redirects]]
+  from   = "/shop/retatrutide"
+  to     = "/shop/retatrutide-20mg-ml-5ml"
+  status = 301
+
+[[redirects]]
+  from   = "/shop/ghk-cu"
+  to     = "/shop/ghk-cu-50mg"
+  status = 301
