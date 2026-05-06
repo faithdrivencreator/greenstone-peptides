@@ -1,0 +1,351 @@
+{
+  "topics": [
+    {
+      "slug": "semaglutide-vs-tirzepatide-vs-retatrutide-glp1-comparison",
+      "title": "Semaglutide vs Tirzepatide vs Retatrutide: The GLP-1 Generation Gap",
+      "keywords": [
+        "semaglutide vs tirzepatide",
+        "retatrutide triple agonist",
+        "GLP-1 comparison"
+      ],
+      "angle": "Head-to-head comparison of the three leading GLP-1 receptor agonists — mechanism differences (single, dual, triple hormone receptors), published trial weight-loss percentages, and what each generation signals about where obesity medicine is heading.",
+      "status": "published",
+      "publishedAt": "2026-04-25T02:23:34.822Z"
+    },
+    {
+      "slug": "compounded-semaglutide-cost-breakdown",
+      "title": "Why Compounded Semaglutide Costs What It Costs",
+      "keywords": [
+        "compounded semaglutide cost",
+        "semaglutide price",
+        "503A compounding"
+      ],
+      "angle": "Transparent breakdown of what goes into the retail price of compounded semaglutide — USP 797 sterile compounding overhead, active ingredient sourcing, third-party testing, cold-chain shipping — and why the cheapest option is almost never the safest.",
+      "status": "published",
+      "publishedAt": "2026-04-27T11:10:00.000Z"
+    },
+    {
+      "slug": "tirzepatide-dosing-guide-beginner",
+      "title": "The Tirzepatide Dosing Ladder: A Beginner Reference",
+      "keywords": [
+        "tirzepatide dosing",
+        "tirzepatide titration",
+        "Mounjaro schedule"
+      ],
+      "angle": "Plain-language walkthrough of the standard tirzepatide titration schedule (2.5mg → 15mg), why slow escalation matters for GI tolerance, and what published trial data shows at each step.",
+      "status": "published",
+      "publishedAt": "2026-04-29T11:11:18.048Z"
+    },
+    {
+      "slug": "glp1-plateau-what-to-do",
+      "title": "Hit a Weight Loss Plateau on GLP-1s? What the Research Says",
+      "keywords": [
+        "GLP-1 plateau",
+        "semaglutide plateau",
+        "weight loss plateau peptide"
+      ],
+      "angle": "Common reasons weight loss stalls around month 4-6 on GLP-1 therapy, what STEP and SURMOUNT extension trials show about long-term response curves, and lifestyle levers that show up in the data.",
+      "status": "published",
+      "publishedAt": "2026-05-01T11:15:47.000Z"
+    },
+    {
+      "slug": "bpc-157-tendon-repair-research",
+      "title": "BPC-157 and Tendon Repair: What the Research Actually Shows",
+      "keywords": [
+        "BPC-157 tendon repair",
+        "BPC-157 research",
+        "tendon healing peptide"
+      ],
+      "angle": "Summary of the preclinical evidence for BPC-157 in tendon and ligament healing — angiogenesis mechanism via VEGFR2/Akt-eNOS, rodent model outcomes, and the current regulatory status.",
+      "status": "published",
+      "publishedAt": "2026-05-04T11:10:00.000Z"
+    },
+    {
+      "slug": "tb-500-vs-bpc-157-recovery-peptides",
+      "title": "TB-500 vs BPC-157: Two Recovery Peptides, Two Different Jobs",
+      "keywords": [
+        "TB-500 vs BPC-157",
+        "recovery peptides comparison",
+        "thymosin beta 4"
+      ],
+      "angle": "Side-by-side on the two most-searched recovery peptides — TB-500 (thymosin beta-4 fragment) for cell migration and angiogenesis, BPC-157 for gut and connective tissue. Mechanisms, research base, and why some users stack them.",
+      "status": "published",
+      "publishedAt": "2026-05-06T11:05:13.000Z"
+    },
+    {
+      "slug": "ghk-cu-copper-peptide-skin-science",
+      "title": "GHK-Cu: The Copper Peptide Backed by 40 Years of Skin Research",
+      "keywords": [
+        "GHK-Cu",
+        "copper peptide skin",
+        "GHK-Cu anti-aging"
+      ],
+      "angle": "The unusually long research history of GHK-Cu, Pickart's foundational work on tissue remodeling, and what the published data shows for skin barrier, wound healing, and hair follicle signaling.",
+      "status": "pending"
+    },
+    {
+      "slug": "nad-injection-vs-nasal-spray",
+      "title": "NAD+ Injection vs Nasal Spray: Route of Delivery Explained",
+      "keywords": [
+        "NAD+ injection",
+        "NAD+ nasal spray",
+        "NAD+ bioavailability"
+      ],
+      "angle": "Why NAD+ is delivered via injection or intranasal spray instead of oral — bioavailability data, onset and duration differences, and what each route is typically used for.",
+      "status": "pending"
+    },
+    {
+      "slug": "mots-c-mitochondrial-peptide-research",
+      "title": "MOTS-c: The Mitochondrial Peptide Everyone's Researching",
+      "keywords": [
+        "MOTS-c peptide",
+        "mitochondrial peptide",
+        "MOTS-c longevity"
+      ],
+      "angle": "Mitochondrial-derived peptide biology in plain language — how MOTS-c was discovered, what the metabolic research shows, and why longevity researchers are paying attention.",
+      "status": "pending"
+    },
+    {
+      "slug": "sermorelin-vs-hgh-replacement",
+      "title": "Sermorelin vs HGH Replacement: Why the Pathway Matters",
+      "keywords": [
+        "sermorelin vs HGH",
+        "growth hormone releasing hormone",
+        "sermorelin benefits"
+      ],
+      "angle": "GHRH analog vs recombinant HGH — how sermorelin prompts the body's own pulsatile release, what that means for the feedback loop, and what published studies show on adult GH insufficiency.",
+      "status": "pending"
+    },
+    {
+      "slug": "tesamorelin-visceral-fat-research",
+      "title": "Tesamorelin and Visceral Fat: What the Clinical Data Shows",
+      "keywords": [
+        "tesamorelin visceral fat",
+        "tesamorelin body composition",
+        "Egrifta research"
+      ],
+      "angle": "The clinical trial base for tesamorelin in reducing visceral adipose tissue, the FDA-approved use, and what the off-label research conversation looks like.",
+      "status": "pending"
+    },
+    {
+      "slug": "how-to-reconstitute-peptides-guide",
+      "title": "How to Reconstitute Peptides: The Step-by-Step Reference",
+      "keywords": [
+        "reconstitute peptides",
+        "bacteriostatic water peptides",
+        "mixing peptides"
+      ],
+      "angle": "A careful reference on reconstitution — bacteriostatic water vs sterile water, gentle mixing vs shaking, dosage math for common concentrations, and common mistakes to avoid.",
+      "status": "pending"
+    },
+    {
+      "slug": "peptide-storage-temperature-guide",
+      "title": "Storing Peptides at Home: Temperature, Light, and Shelf Life",
+      "keywords": [
+        "peptide storage",
+        "how to store peptides",
+        "peptide shelf life"
+      ],
+      "angle": "USP-aligned storage guidance for reconstituted and lyophilized peptides — refrigeration ranges, freezer considerations, light exposure, and how long common products stay stable after mixing.",
+      "status": "pending"
+    },
+    {
+      "slug": "subcutaneous-injection-technique-peptides",
+      "title": "Subcutaneous Injection Technique for Peptides",
+      "keywords": [
+        "subcutaneous injection",
+        "peptide injection technique",
+        "SC injection sites"
+      ],
+      "angle": "Reference on clean SC injection technique — site rotation, needle gauge selection, pinch vs no-pinch, and disposal. Strictly educational reference content.",
+      "status": "pending"
+    },
+    {
+      "slug": "counterfeit-peptides-how-to-spot",
+      "title": "How to Spot Counterfeit Peptides: A Consumer Reference",
+      "keywords": [
+        "counterfeit peptides",
+        "fake peptides",
+        "peptide quality testing"
+      ],
+      "angle": "Red flags for counterfeit or research-grade peptides being sold for human use — no COA, no USP-compliant sterile compounding, overseas-only shipping, prices that undercut legitimate compounders by 80%+.",
+      "status": "pending"
+    },
+    {
+      "slug": "what-is-a-certificate-of-analysis-peptides",
+      "title": "What a Peptide Certificate of Analysis Actually Tells You",
+      "keywords": [
+        "peptide COA",
+        "certificate of analysis",
+        "peptide purity testing"
+      ],
+      "angle": "Reading a real COA — HPLC purity, mass spec identity confirmation, endotoxin testing, and sterility. What to look for and what to question.",
+      "status": "pending"
+    },
+    {
+      "slug": "usp-797-sterile-compounding-explained",
+      "title": "USP 797 Explained: The Standard Behind Sterile Peptide Compounding",
+      "keywords": [
+        "USP 797",
+        "sterile compounding",
+        "peptide compounding standard"
+      ],
+      "angle": "The USP 797 chapter in accessible terms — why it exists, what cleanroom classifications mean, and why it matters for anyone buying injectable peptides.",
+      "status": "pending"
+    },
+    {
+      "slug": "503a-vs-503b-compounding-explained",
+      "title": "503A vs 503B: The Two Lanes of US Compounding",
+      "keywords": [
+        "503A vs 503B",
+        "compounding pharmacy types",
+        "FDA compounding rules"
+      ],
+      "angle": "The regulatory difference between 503A (traditional compounding on prescription) and 503B (outsourcing facility) — what each is designed for and where peptide products typically live.",
+      "status": "pending"
+    },
+    {
+      "slug": "glp-1-side-effects-what-to-expect",
+      "title": "GLP-1 Side Effects: What the Trial Data Shows",
+      "keywords": [
+        "GLP-1 side effects",
+        "semaglutide nausea",
+        "tirzepatide GI effects"
+      ],
+      "angle": "What published phase 3 trial data reports on GI side effects with GLP-1 therapy, how titration affects the curve, and the research on tolerance over time.",
+      "status": "pending"
+    },
+    {
+      "slug": "peptide-stacking-reference-overview",
+      "title": "Peptide Stacking: An Educational Reference Overview",
+      "keywords": [
+        "peptide stacking",
+        "peptide combinations",
+        "peptide stack guide"
+      ],
+      "angle": "An educational look at why people discuss combining peptides — examples like GHK-Cu with BPC-157, NAD+ with sermorelin, or GLP-1 with glycine — and what the research conversation actually supports.",
+      "status": "pending"
+    },
+    {
+      "slug": "glp1-glycine-combination-background",
+      "title": "Tirzepatide plus Glycine: The Research Context",
+      "keywords": [
+        "tirzepatide glycine",
+        "GLP-1 glycine combination",
+        "glycine metabolic"
+      ],
+      "angle": "Background on why glycine is being paired with GLP-1 products in some compounded formulations — glycine's metabolic research, sleep and glucose data, and what the combination is trying to address.",
+      "status": "pending"
+    },
+    {
+      "slug": "semaglutide-nad-combination-background",
+      "title": "Semaglutide plus NAD+: What the Combined Formulation Aims For",
+      "keywords": [
+        "semaglutide NAD",
+        "GLP-1 NAD combination",
+        "NAD metabolic"
+      ],
+      "angle": "The research rationale behind combining semaglutide with NAD+ in a single compounded formulation — metabolic support during weight loss, mitochondrial biology, and what the published data does and does not say.",
+      "status": "pending"
+    },
+    {
+      "slug": "peptide-therapy-beginners-reference",
+      "title": "Peptide Therapy: A Beginner Reference Guide",
+      "keywords": [
+        "peptide therapy beginner",
+        "what are peptides",
+        "peptide guide"
+      ],
+      "angle": "Entry-level reference for someone brand new to peptide therapy — what peptides are chemically, how they differ from small-molecule drugs, and how the current US compounding landscape works.",
+      "status": "pending"
+    },
+    {
+      "slug": "retatrutide-phase-3-what-to-watch",
+      "title": "Retatrutide Phase 3: What to Watch as the Triple Agonist Advances",
+      "keywords": [
+        "retatrutide phase 3",
+        "retatrutide FDA",
+        "triple hormone agonist"
+      ],
+      "angle": "Where retatrutide is in the FDA pipeline, what the phase 2 NEJM data showed on weight loss percentage, and what signals to watch in the ongoing phase 3 program.",
+      "status": "pending"
+    },
+    {
+      "slug": "oral-dissolving-tablets-men-health",
+      "title": "Oral Dissolving Tablets for Men's Health: Why the Format Matters",
+      "keywords": [
+        "sildenafil tadalafil ODT",
+        "ODT men's health",
+        "combination ED medication"
+      ],
+      "angle": "Why oral dissolving tablet formulations exist for sildenafil and tadalafil, what the bioavailability research shows vs standard tablets, and where combination formulations fit.",
+      "status": "pending"
+    },
+    {
+      "slug": "bacteriostatic-water-explained",
+      "title": "Bacteriostatic Water: What It Is and Why It's Used",
+      "keywords": [
+        "bacteriostatic water",
+        "benzyl alcohol water",
+        "peptide mixing water"
+      ],
+      "angle": "The chemistry of bacteriostatic water (0.9% benzyl alcohol), why it's the default reconstitution solvent for multi-dose peptide vials, and how it differs from sterile water for injection.",
+      "status": "pending"
+    },
+    {
+      "slug": "insulin-syringe-peptide-injection-reference",
+      "title": "Insulin Syringes for Peptide Injection: A Reference",
+      "keywords": [
+        "insulin syringe peptide",
+        "U-100 syringe",
+        "peptide syringe size"
+      ],
+      "angle": "Why U-100 insulin syringes are the standard for most SC peptide use, the math connecting units to mg, and choosing between 0.3 / 0.5 / 1 mL barrels.",
+      "status": "pending"
+    },
+    {
+      "slug": "fda-peptide-regulatory-landscape-2026",
+      "title": "The 2026 FDA Peptide Regulatory Landscape at a Glance",
+      "keywords": [
+        "FDA peptide regulation 2026",
+        "peptide compounding rules",
+        "PCAC peptides"
+      ],
+      "angle": "Quick-reference overview of where US peptide regulation stands — which peptides are on the FDA 503A bulks list, what the Pharmacy Compounding Advisory Committee is reviewing, and what's changed in the past 12 months.",
+      "status": "pending"
+    },
+    {
+      "slug": "peptide-cold-chain-shipping-explained",
+      "title": "Cold-Chain Shipping for Peptides: What Happens Before the Vial Reaches You",
+      "keywords": [
+        "peptide cold chain",
+        "peptide shipping temperature",
+        "lyophilized shipping"
+      ],
+      "angle": "What cold-chain shipping means for temperature-sensitive peptide products — ice packs vs gel, transit-time design, summer logistics, and why lyophilized (freeze-dried) product is more forgiving than reconstituted.",
+      "status": "pending"
+    },
+    {
+      "slug": "lyophilized-vs-reconstituted-peptides",
+      "title": "Lyophilized vs Reconstituted Peptides: Why the Powder Form Matters",
+      "keywords": [
+        "lyophilized peptides",
+        "freeze dried peptides",
+        "peptide powder vs liquid"
+      ],
+      "angle": "Why most peptides ship as lyophilized powder — stability shelf life, shipping logistics, storage flexibility — and what happens chemically during reconstitution.",
+      "status": "pending"
+    },
+    {
+      "slug": "peptide-research-glossary",
+      "title": "A Peptide Research Glossary for First-Time Readers",
+      "keywords": [
+        "peptide glossary",
+        "peptide terminology",
+        "peptide science terms"
+      ],
+      "angle": "Plain-language definitions for the terms that show up in every peptide research paper — amino acid, receptor agonist, pharmacokinetics, half-life, bioavailability, angiogenesis, and more.",
+      "status": "pending"
+    }
+  ]
+}

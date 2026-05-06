@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Lock, CheckCircle } from 'lucide-react';
+import { WholesaleForm } from '@/components/WholesaleForm';
 
 export const metadata: Metadata = {
   title: 'Wholesale & Distribution',
   description:
     'Greenstone Peptides wholesale and distribution program. Partner with us to offer USA-compounded peptides to your clinical network.',
+  alternates: { canonical: '/wholesale' },
 };
 
 const BENEFITS = [
@@ -153,76 +155,7 @@ export default function WholesalePage() {
             </p>
           </header>
 
-          <form className="space-y-6 card-glass border-emerald/20">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div>
-                <label className="mono block mb-2">First Name</label>
-                <input
-                  type="text"
-                  className="w-full bg-obsidian-light border border-gold/20 focus:border-emerald/60 px-4 py-3 text-cream outline-none transition-colors"
-                  placeholder="Dr. Jane"
-                />
-              </div>
-              <div>
-                <label className="mono block mb-2">Last Name</label>
-                <input
-                  type="text"
-                  className="w-full bg-obsidian-light border border-gold/20 focus:border-emerald/60 px-4 py-3 text-cream outline-none transition-colors"
-                  placeholder="Smith"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="mono block mb-2">Business / Practice Name</label>
-              <input
-                type="text"
-                className="w-full bg-obsidian-light border border-gold/20 focus:border-emerald/60 px-4 py-3 text-cream outline-none transition-colors"
-                placeholder="Advanced Wellness Clinic"
-              />
-            </div>
-            <div>
-              <label className="mono block mb-2">Business Email</label>
-              <input
-                type="email"
-                className="w-full bg-obsidian-light border border-gold/20 focus:border-emerald/60 px-4 py-3 text-cream outline-none transition-colors"
-                placeholder="orders@yourclinic.com"
-              />
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div>
-                <label className="mono block mb-2">State</label>
-                <input
-                  type="text"
-                  className="w-full bg-obsidian-light border border-gold/20 focus:border-emerald/60 px-4 py-3 text-cream outline-none transition-colors"
-                  placeholder="Florida"
-                />
-              </div>
-              <div>
-                <label className="mono block mb-2">Estimated Monthly Volume</label>
-                <select className="w-full bg-obsidian-light border border-gold/20 focus:border-emerald/60 px-4 py-3 text-cream outline-none transition-colors appearance-none">
-                  <option value="">Select range</option>
-                  <option>Under $5,000 / mo</option>
-                  <option>$5,000 – $15,000 / mo</option>
-                  <option>$15,000 – $50,000 / mo</option>
-                  <option>Over $50,000 / mo</option>
-                </select>
-              </div>
-            </div>
-            <div>
-              <label className="mono block mb-2">Additional Notes</label>
-              <textarea
-                rows={4}
-                className="w-full bg-obsidian-light border border-gold/20 focus:border-emerald/60 px-4 py-3 text-cream outline-none transition-colors resize-none"
-                placeholder="Tell us about your practice and what you're looking for..."
-              />
-            </div>
-            <Link href="/contact" className="btn btn-primary w-full justify-center">
-              Submit Wholesale Inquiry
-            </Link>
-            <p className="text-xs text-cream-dim/50 text-center font-jetbrains">
-              Wholesale access is subject to review and approval.
-            </p>
-          </form>
+          <WholesaleForm />
         </div>
       </section>
     </>

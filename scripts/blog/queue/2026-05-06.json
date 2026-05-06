@@ -1,0 +1,771 @@
+{
+  "id": "post-2026-05-06-tb500-vs-bpc157",
+  "title": "TB-500 vs BPC-157: Two Recovery Peptides, Two Different Jobs",
+  "slug": "tb-500-vs-bpc-157-recovery-peptides",
+  "excerpt": "TB-500 and BPC-157 are the two most-searched recovery peptides in the research community. They target overlapping goals — tissue repair, angiogenesis, reduced inflammation — but through distinct mechanisms and with meaningfully different research profiles. Here is a clear-eyed breakdown.",
+  "seoTitle": "TB-500 vs BPC-157: Recovery Peptides Compared",
+  "seoDescription": "A clinical comparison of TB-500 and BPC-157 — mechanisms, research base, tissue affinities, and why some researchers use both together.",
+  "tags": [
+    "TB-500",
+    "BPC-157",
+    "recovery peptides",
+    "thymosin beta-4",
+    "peptide comparison",
+    "angiogenesis",
+    "tissue repair"
+  ],
+  "readingTime": 7,
+  "featured": false,
+  "publishedAt": "2026-05-06T11:05:13.000Z",
+  "body": [
+    {
+      "_type": "block",
+      "_key": "intro1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro1s",
+          "text": "TB-500 and BPC-157 are the two most-searched recovery peptides in the research community — and for good reason. They address overlapping goals — tissue repair, faster recovery, reduced inflammation — but they get there through distinct biological pathways, with meaningfully different research profiles. Understanding how they differ matters before any clinical conversation about either one.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "intro2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro2s",
+          "text": "This reference covers the mechanism of each peptide, the tissue systems where preclinical research is strongest, what the research base actually shows, and why some users stack the two compounds.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-tb500",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2-tb500s",
+          "text": "What Is TB-500?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "tb500-p1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "tb500-p1s",
+          "text": "TB-500 is a synthetic peptide derived from thymosin beta-4 (Tβ4), a naturally occurring 43-amino-acid protein found in virtually every nucleated cell in the body. Thymosin beta-4 plays a foundational role in cytoskeletal dynamics — specifically in regulating how actin polymerizes and how cells organize their internal architecture during movement, division, and repair.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "tb500-p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "tb500-p2s",
+          "text": "TB-500 corresponds to the central active region of Tβ4 — a 17-amino-acid fragment (positions 17–23 of the parent protein, anchored by the LKKTET motif) that retains much of the parent molecule's biological activity in preclinical testing. Because it is a smaller fragment, TB-500 has somewhat different solubility and distribution characteristics compared to the full Tβ4 molecule.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h3-tb500-mech",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h3-tb500-mechs",
+          "text": "Mechanism: Actin Sequestration and Cell Migration",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "tb500-mech-p1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "tb500-mech-p1s",
+          "text": "The core mechanism of TB-500 centers on G-actin (globular actin) binding. By sequestering unpolymerized actin monomers, TB-500 modulates cytoskeletal organization — the internal scaffolding that cells use to change shape, migrate, and divide. This upstream effect on actin dynamics drives several downstream outcomes that are relevant in tissue repair contexts:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "tb500-li1",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "tb500-li1s",
+          "text": "Endothelial and smooth muscle cell migration into damaged tissue",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "tb500-li2",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "tb500-li2s",
+          "text": "Angiogenesis — formation of new capillary networks into ischemic or injured areas",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "tb500-li3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "tb500-li3s",
+          "text": "Anti-inflammatory signaling, partly via downstream effects on NF-κB regulation",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "tb500-li4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "tb500-li4s",
+          "text": "Satellite cell activation in skeletal muscle injury models",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "tb500-mech-p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "tb500-mech-p2s",
+          "text": "In rodent models, thymosin beta-4 and its active fragments have shown the most consistent results in cardiac tissue following myocardial infarction — improving vascularization, reducing infarct size, and limiting fibrosis. Skeletal muscle repair and wound healing are secondary areas of active research. The systemic distribution of TB-500 in preclinical models reflects its role in circulating cell biology, not just local tissue signaling.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-bpc157",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2-bpc157s",
+          "text": "What Is BPC-157?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "bpc157-p1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bpc157-p1s",
+          "text": "BPC-157 stands for Body Protective Compound-157. It is a synthetic 15-amino-acid pentadecapeptide derived from a sequence identified in human gastric juice protein. Unlike TB-500 — which is a fragment of an endogenous human protein with extensively mapped biology — BPC-157 was designed as a stable research compound based on a gastric protein sequence. The \"157\" designates its position in that parent sequence.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "bpc157-p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bpc157-p2s",
+          "text": "BPC-157 is notable for its stability in aqueous solution — it does not require the same protective formulation conditions as some other peptides, and it retains activity when administered both systemically and locally. Much of the preclinical research comes from a single research group in Zagreb (Sikiric et al.), which has published extensively in rodent models over three decades.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h3-bpc157-mech",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h3-bpc157-mechs",
+          "text": "Mechanism: VEGFR2/Akt-eNOS and Nitric Oxide Synthesis",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "bpc157-mech-p1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bpc157-mech-p1s",
+          "text": "BPC-157's primary published mechanism involves vascular endothelial growth factor receptor 2 (VEGFR2) and downstream Akt/eNOS signaling. This pathway drives nitric oxide synthesis in healing vascular beds — promoting local vasodilation, blood flow restoration, and endothelial cell proliferation. Additional mechanisms documented in preclinical literature include:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "bpc157-li1",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bpc157-li1s",
+          "text": "Fibroblast migration and collagen deposition in tendon and ligament tissue",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "bpc157-li2",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bpc157-li2s",
+          "text": "Gastrointestinal mucosal healing — studied in ulceration, IBD models, and NSAID-induced gut damage",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "bpc157-li3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bpc157-li3s",
+          "text": "Gut motility restoration in animal models of dysmotility",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "bpc157-li4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bpc157-li4s",
+          "text": "Some neurotrophic effects observed in rodent dopamine and CNS research",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "bpc157-mech-p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bpc157-mech-p2s",
+          "text": "The GI research base for BPC-157 is notably deeper than what exists for TB-500. This reflects its origin — a gastric protein fragment isolated from a system the body uses to protect and repair its own gut mucosa. The consistent GI findings across multiple model types (ulceration, fistula, anastomosis healing) are among the most reproducible results in the BPC-157 literature.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-comparison",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2-comparisons",
+          "text": "Where the Two Peptides Diverge",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "comp-p1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "comp-p1s",
+          "text": "Both TB-500 and BPC-157 engage angiogenesis through VEGFR2-linked signaling. But they arrive there via different upstream mechanisms and show distinct tissue affinities based on their research profiles.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "comp-p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "comp-p2s",
+          "text": "TB-500 is more upstream — it acts on actin dynamics, which affects how cells move and organize at a fundamental level. This positions it as a broadly systemic agent: its effect on migrating endothelial cells and progenitor populations isn't limited to a specific tissue type. Cardiac repair, skeletal muscle, and systemic wound healing are all areas where the preclinical evidence is active.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "comp-p3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "comp-p3s",
+          "text": "BPC-157 is more local and site-specific in its documented effects — particularly in GI tissue, tendons, and ligaments. Its mechanism via eNOS and nitric oxide is more directly tied to vascular bed restoration in a specific injured area, rather than systemic cell migration. This site-specificity is one reason it is commonly discussed in the context of tendon injuries and gut problems specifically, rather than as a general recovery agent.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "comp-p4",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "comp-p4s",
+          "text": "In short: TB-500 is the broader, more systemic of the two. BPC-157 is more targeted, with the deepest evidence in GI and connective tissue. They share a common downstream goal — improved vascular supply and faster tissue healing — but the pathways and tissue affinities are different enough to make them genuinely complementary rather than redundant.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-research",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2-researchs",
+          "text": "What the Research Base Actually Shows",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "research-p1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "research-p1s",
+          "text": "Both peptides are almost entirely preclinical at this stage. The vast majority of published data comes from rodent models — predominantly rats — in controlled injury settings: surgically induced tendon tears, chemically induced GI ulceration, myocardial infarction models, and similar experimental contexts.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "research-p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "research-p2s",
+          "text": "A few points worth holding clearly:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "research-li1",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "research-li1s",
+          "text": "No phase 2 or phase 3 human clinical trials have been published for either TB-500 or BPC-157 in the context of musculoskeletal injury recovery.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "research-li2",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "research-li2s",
+          "text": "Thymosin beta-4 (the parent of TB-500) has been studied in a limited number of human trials for dry eye syndrome and cardiac repair — not general injury recovery.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "research-li3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "research-li3s",
+          "text": "BPC-157 has entered early human trial exploration in GI indications, but published human clinical data remains limited.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "research-li4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "research-li4s",
+          "text": "The BPC-157 preclinical literature is dominated by a single Croatian research group. Independently replicated findings are less common, which is a standard scientific concern when evaluating the breadth of the evidence base.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "research-p3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "research-p3s",
+          "text": "The rodent data for both compounds is mechanistically consistent and has generated genuine scientific interest. The gap between rodent model outcomes and human clinical efficacy is a well-documented challenge across peptide research broadly — not a reason to dismiss the preclinical work, but a reason to hold it carefully.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-stacking",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2-stackings",
+          "text": "Why Some Researchers Stack TB-500 and BPC-157",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "stack-p1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "stack-p1s",
+          "text": "The rationale for using both compounds together centers on their complementary mechanisms. The hypothesis is that they address different layers of the repair process rather than duplicating the same signal:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "stack-li1",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "stack-li1s",
+          "text": "TB-500 may provide the systemic substrate — new vascular supply and migrating progenitor cells arriving at the site of injury",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "stack-li2",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "stack-li2s",
+          "text": "BPC-157 may support the local tissue-level assembly — collagen deposition, fibroblast activity, and mucosal integrity where the repair is happening",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "stack-li3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "stack-li3s",
+          "text": "Their upstream mechanisms (actin dynamics vs. VEGFR2/eNOS) don't create obvious redundancy at the pathway level",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "stack-p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "stack-p2s",
+          "text": "This is a mechanistic hypothesis, not a tested combination. No published stacking trials exist for TB-500 and BPC-157. No published data suggests antagonism between them, but the absence of conflict data isn't the same as evidence of benefit from combination use. Any stacking discussion belongs in a conversation with a qualified healthcare provider.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-regulatory",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2-regulatorys",
+          "text": "Regulatory Status in the United States",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "reg-p1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "reg-p1s",
+          "text": "Neither TB-500 nor BPC-157 is FDA-approved for any therapeutic use in humans.",
+          "marks": ["strong"]
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "reg-p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "reg-p2s",
+          "text": "BPC-157 has an active regulatory history in the US compounding space. It was reviewed by the Pharmacy Compounding Advisory Committee (PCAC) for potential inclusion on the 503A bulk drug substances list — the framework that allows traditional compounding pharmacies to prepare patient-specific compounds. As of early 2026, BPC-157 remains in category 2 (not recommended for the bulks list), meaning it cannot be used in 503A compounding under current FDA guidance. The regulatory conversation continues and may evolve.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "reg-p3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "reg-p3s",
+          "text": "TB-500 does not currently appear on any FDA-cleared compounding list for human therapeutic use.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "reg-p4",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "reg-p4s",
+          "text": "Both compounds are available as research chemicals, which is the context in which they are most commonly sourced and discussed. Anyone considering either peptide in a clinical context should work with a licensed provider who can speak to the current regulatory environment and any applicable prescribing limitations.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-conclusion",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2-conclusions",
+          "text": "The Bottom Line",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "concl-p1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "concl-p1s",
+          "text": "TB-500 and BPC-157 are often lumped together in recovery discussions because they share a surface-level goal — faster tissue healing. But their mechanisms are meaningfully different, their research bases have different strengths, and their tissue affinities point to different primary use cases.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "concl-p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "concl-p2s",
+          "text": "TB-500 is the more systemic of the two — acting on actin dynamics and cell migration broadly, with its strongest preclinical evidence in cardiac and vascular repair. BPC-157 is more site-specific, with the deepest research in GI mucosa, tendons, and ligaments, driven by a well-characterized VEGFR2/eNOS pathway. Both remain preclinical compounds without approved human indications, and both carry regulatory considerations that any informed clinical conversation should include.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "concl-p3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "concl-p3s",
+          "text": "The interest in combining them is mechanistically coherent. Whether the combination produces additive benefit in humans remains an open question — one that the current published literature cannot definitively answer.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "disclaimer",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "disclaimers",
+          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "marks": []
+        }
+      ]
+    }
+  ],
+  "relatedProducts": ["tb500-5mg", "tb500-10mg", "bpc157-5mg", "bpc157-10mg"],
+  "mainImage": {
+    "assetId": "image-ffd409ba44318dbbac39196e521d5090916a44d8-2752x1536-png",
+    "alt": "Split-frame visual comparison for TB-500 vs BPC-157: Two Recovery Peptides, Two Different Jobs"
+  }
+}

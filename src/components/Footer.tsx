@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Instagram } from 'lucide-react';
 
 const SHOP_LINKS = [
   { href: '/shop?category=weight-management', label: 'Weight Management' },
@@ -44,6 +45,18 @@ export function Footer() {
                 Contact Us →
               </a>
             </p>
+          </div>
+          <div className="pt-2">
+            <a
+              href="https://instagram.com/greenstone.wellness"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Greenstone Peptides on Instagram"
+              className="inline-flex items-center gap-2 text-sm text-cream-dim hover:text-gold transition-colors"
+            >
+              <Instagram size={18} />
+              <span>@greenstone.wellness</span>
+            </a>
           </div>
         </div>
 
@@ -92,9 +105,17 @@ export function Footer() {
 
       {/* Full disclaimer */}
       <div className="container-gr mt-16 pt-8 border-t border-gold/10">
-        <p className="text-xs text-cream-dim/80 leading-relaxed max-w-4xl">
-          <strong className="text-cream">Important:</strong> Compounded medications are not FDA-approved and are prepared by licensed compounding pharmacies. These statements have not been evaluated by the FDA. Products are not intended to diagnose, treat, cure, or prevent any disease. Greenstone Peptides facilitates access to USA-compounded formulations.
-        </p>
+        <div className="max-w-4xl">
+          <p className="text-xs font-semibold text-cream-dim/80 leading-relaxed tracking-wide mb-3">
+            ALL PRODUCTS AND INFORMATION PROVIDED ON THIS WEBSITE ARE FOR INFORMATIONAL AND EDUCATIONAL PURPOSES ONLY.
+          </p>
+          <p className="text-xs text-cream-dim/80 leading-relaxed mb-3">
+            The products offered on this website are furnished for in-vitro studies and research purposes only. In-vitro studies (Latin: in glass) are performed outside of the body. These products are not medicines or drugs and have not been approved by the FDA to prevent, treat, cure, or diagnose any medical condition, ailment, or disease. Bodily introduction of any kind into humans or animals is strictly forbidden by law.
+          </p>
+          <p className="text-xs text-cream-dim/80 leading-relaxed">
+            Products are compounded by licensed USA pharmacies under USP 797 sterile standards. Greenstone Peptides facilitates access to compounded formulations and does not practice medicine. Must be 18 years or older to purchase.
+          </p>
+        </div>
         <p className="text-xs text-cream-dim/60 mt-8">
           &copy; {new Date().getFullYear()} Greenstone Peptides. All rights reserved.
         </p>

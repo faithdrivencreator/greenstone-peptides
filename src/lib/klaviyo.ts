@@ -44,6 +44,102 @@ export async function subscribeToKlaviyo(
   }
 }
 
+export async function trackWholesaleInquiry(payload: {
+  email: string
+  firstName: string
+  lastName: string
+  businessName: string
+  state: string
+  monthlyVolume: string
+  notes: string
+}): Promise<boolean> {
+  try {
+    // Track on the inquirer's profile
+    const response = await fetch(
+      `https://a.klaviyo.com/client/events/?company_id=${KLAVIYO_COMPANY_ID}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          revision: '2024-10-15',
+        },
+        body: JSON.stringify({
+          data: {
+            type: 'event',
+            attributes: {
+              properties: {
+                business_name: payload.businessName,
+                state: payload.state,
+                monthly_volume: payload.monthlyVolume,
+                notes: payload.notes,
+              },
+              metric: {
+                data: {
+                  type: 'metric',
+                  attributes: { name: 'Wholesale Inquiry Submitted' },
+                },
+              },
+              profile: {
+                data: {
+                  type: 'profile',
+                  attributes: {
+                    email: payload.email,
+                    first_name: payload.firstName || undefined,
+                    last_name: payload.lastName || undefined,
+                  },
+                },
+              },
+            },
+          },
+        }),
+      }
+    )
+
+    // Also notify Pete
+    await fetch(
+      `https://a.klaviyo.com/client/events/?company_id=${KLAVIYO_COMPANY_ID}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          revision: '2024-10-15',
+        },
+        body: JSON.stringify({
+          data: {
+            type: 'event',
+            attributes: {
+              properties: {
+                inquirer_email: payload.email,
+                inquirer_name: `${payload.firstName} ${payload.lastName}`.trim(),
+                business_name: payload.businessName,
+                state: payload.state,
+                monthly_volume: payload.monthlyVolume,
+                notes: payload.notes,
+              },
+              metric: {
+                data: {
+                  type: 'metric',
+                  attributes: { name: 'New Wholesale Inquiry' },
+                },
+              },
+              profile: {
+                data: {
+                  type: 'profile',
+                  attributes: { email: 'pete@fluidfaithsolutions.com' },
+                },
+              },
+            },
+          },
+        }),
+      }
+    )
+
+    return response.ok
+  } catch {
+    return false
+  }
+}
+
 export async function trackContactSubmission(payload: {
   email: string
   name: string

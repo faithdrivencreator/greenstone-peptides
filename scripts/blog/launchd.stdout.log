@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-04-26T11:00:05.983Z",
+  "weekday": "Sunday",
+  "track": "skip",
+  "dryRun": false,
+  "ok": true,
+  "reason": "sunday-skip",
+  "finishedAt": "2026-04-26T11:00:06.016Z"
+}
+{
+  "startedAt": "2026-04-27T11:00:04.387Z",
+  "weekday": "Monday",
+  "track": "evergreen",
+  "dryRun": false,
+  "finishedAt": "2026-04-27T11:00:04.418Z",
+  "result": {
+    "ok": false,
+    "error": "ANTHROPIC_API_KEY not set",
+    "stack": "Error: ANTHROPIC_API_KEY not set\n    at draftWithAnthropic (file:///Users/pedrofluriach/Desktop/FFS/02-The-Lab/greenstone-rx/greenstone-rx/scripts/blog-evergreen-generate.mjs:147:11)\n    at runEvergreen (file:///Users/pedrofluriach/Desktop/FFS/02-The-Lab/greenstone-rx/greenstone-rx/scripts/blog-evergreen-generate.mjs:219:25)\n    at main (file:///Users/pedrofluriach/Desktop/FFS/02-The-Lab/greenstone-rx/greenstone-rx/scripts/blog-daily.mjs:81:22)\n    at file:///Users/pedrofluriach/Desktop/FFS/02-The-Lab/greenstone-rx/greenstone-rx/scripts/blog-daily.mjs:97:3\n    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+  }
+}

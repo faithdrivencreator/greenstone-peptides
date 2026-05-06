@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'About Greenstone Peptides | USA-Compounded Quality',
   description: 'Why Greenstone Peptides: 25+ years of pharmaceutical care, USP 797 sterile compounding, third-party tested, 100% USA-compounded. Learn what makes our peptides different.',
+  alternates: { canonical: '/about' },
 };
 
 export default function AboutPage() {

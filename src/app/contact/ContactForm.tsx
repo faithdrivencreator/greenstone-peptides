@@ -18,11 +18,19 @@ export function ContactForm() {
     setLoading(true);
     setError(false);
     try {
-      const [subOk, eventOk] = await Promise.all([
+      const emailRes = await fetch('/api/contact-inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, topic, message }),
+      });
+
+      // Fire Klaviyo tracking in parallel — don't block submission on it
+      void Promise.all([
         subscribeToKlaviyo(email, `Contact - ${topic}`),
         trackContactSubmission({ email, name, phone, topic, message }),
-      ]);
-      if (!subOk && !eventOk) {
+      ]).catch(() => {});
+
+      if (!emailRes.ok) {
         setError(true);
       } else {
         setSubmitted(true);

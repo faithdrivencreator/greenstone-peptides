@@ -1,0 +1,398 @@
+{
+  "id": "post-2026-04-28-tb500-5mg-spotlight",
+  "title": "TB-500 5mg: What the Research Shows on Thymosin Beta-4",
+  "slug": "tb-500-5mg-product-spotlight",
+  "excerpt": "A close look at Greenstone's TB-500 5mg vial — what thymosin beta-4 is, what the published preclinical research actually shows, and how 503A compounding standards, USA-sourced raw material, and third-party testing shape the quality of every vial.",
+  "seoTitle": "TB-500 5mg: Thymosin Beta-4 Research & Quality Standards",
+  "seoDescription": "Inside Greenstone's TB-500 5mg vial — the science behind thymosin beta-4, preclinical research findings, and what 503A compounding and third-party testing mean.",
+  "tags": [
+    "tb-500",
+    "thymosin-beta-4",
+    "recovery",
+    "peptides",
+    "product-spotlight",
+    "503a-compounding"
+  ],
+  "readingTime": 4,
+  "featured": false,
+  "publishedAt": "2026-04-28T13:00:00.000Z",
+  "body": [
+    {
+      "_type": "block",
+      "_key": "intro1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro1s",
+          "text": "TB-500 is a synthetic peptide fragment derived from thymosin beta-4, a naturally occurring protein found in virtually every human cell. It has attracted attention in research settings for its role in cell migration, angiogenesis, and tissue remodeling — specifically in the context of muscle, tendon, and cardiac tissue. The molecule is not new: thymosin beta-4 has been studied since the 1960s, and the TB-500 fragment (amino acids 17–23 of the parent protein) has been the subject of ongoing preclinical investigation for decades.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "intro2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro2s",
+          "text": "This spotlight covers what the research actually shows, how the Greenstone TB-500 5mg vial is made, and what differentiates a quality-controlled compounded peptide from one that isn't.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2a",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2as",
+          "text": "What Thymosin Beta-4 Does — and Where TB-500 Fits",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_mechanism1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_mechanism1s",
+          "text": "Thymosin beta-4 is a 43-amino-acid protein that functions primarily as an actin-sequestering agent — it binds G-actin monomers and plays a central role in cytoskeletal organization. Because actin dynamics underlie cell migration, wound healing, and angiogenesis, thymosin beta-4 has been studied across a range of tissue contexts. The TB-500 fragment is the biologically active segment responsible for many of the parent protein's observed effects on cell movement and vascular formation.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_mechanism2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_mechanism2s",
+          "text": "In preclinical models, thymosin beta-4 and its fragments have been shown to promote the migration of keratinocytes and endothelial cells, stimulate new blood vessel formation, and reduce inflammation in damaged tissue. The molecule has also been studied for its role in cardiac muscle repair following ischemia — an area that has attracted significant funding and research interest, particularly following early animal studies published in journals like Nature.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2b",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2bs",
+          "text": "What the Preclinical Research Shows",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_research1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_research1s",
+          "text": "The published evidence base for TB-500 / thymosin beta-4 is primarily preclinical — animal models, in vitro cell culture, and some ex vivo cardiac studies. The body of work is more substantial than most peptides in this space, but it remains largely at the preclinical stage for most indications. Highlights from the published literature include:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_research1",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li_research1s",
+          "text": "Wound healing — multiple rodent studies have shown accelerated wound closure and collagen deposition in topical and systemic applications.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_research2",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li_research2s",
+          "text": "Cardiac repair — in myocardial infarction models, thymosin beta-4 has been associated with reduced scar tissue and promoted migration of epicardial progenitor cells.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_research3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li_research3s",
+          "text": "Tendon and muscle — equine studies (relevant because horse tendon injury is a well-validated injury model) have shown improvements in tissue repair outcomes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_research4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li_research4s",
+          "text": "Anti-inflammatory effects — reduction of NF-κB pathway activity and pro-inflammatory cytokine expression has been documented in several in vitro and animal models.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_research_caveat",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_research_caveats",
+          "text": "It is worth being direct: the jump from animal models to human outcomes is not automatic, and much of the TB-500 conversation in research communities runs well ahead of what the clinical evidence can currently support. That does not make the preclinical research uninteresting — it means interpretation should be calibrated to the evidence level.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2c",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2cs",
+          "text": "What's in the 5mg Vial",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_vial1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_vial1s",
+          "text": "Greenstone's TB-500 5mg vial is lyophilized — freeze-dried to a powder that is reconstituted with bacteriostatic water before use. The lyophilization process preserves peptide stability significantly better than liquid formulations for long-term storage and shipping. Each vial contains 5mg of TB-500 (the thymosin beta-4 fragment, amino acids 17–23), compounded in a US-based 503A facility.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_vial2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_vial2s",
+          "text": "The 5mg vial is the standard entry point for researchers working with TB-500. It offers a manageable total quantity for establishing a research protocol without committing to a larger volume, and the reconstitution math is straightforward for standard syringe sizes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2d",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2ds",
+          "text": "503A Compounding, USA-Sourced, Third-Party Tested",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_503a1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_503a1s",
+          "text": "Every peptide in the Greenstone catalog is compounded in a US-based 503A facility. The 503A designation refers to the section of the Federal Food, Drug, and Cosmetic Act that governs traditional pharmacy compounding — it establishes the environmental controls, sterile preparation standards, and pharmacist oversight that a compliant facility must maintain. It is not a guarantee of any particular outcome, but it is a meaningful quality floor that separates properly compounded peptides from unregulated chemical suppliers.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_503a2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_503a2s",
+          "text": "USA-sourced raw material and third-party purity testing add two more layers to that quality posture. Sourcing domestically reduces the supply-chain opacity that is common with offshore peptide precursors. Third-party certificates of analysis create an independent audit of purity and identity — the kind of documentation that a researcher or clinician can actually verify rather than take on faith.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2e",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2es",
+          "text": "Reconstitution and Storage",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_storage1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_storage1s",
+          "text": "Lyophilized TB-500 should be stored refrigerated and away from direct light prior to reconstitution. Once reconstituted with bacteriostatic water, the working solution should be kept refrigerated and used within the timeframe specified on the product documentation. Standard precautions apply: avoid freeze-thaw cycles after reconstitution, minimize light exposure, and use a clean technique when drawing doses to prevent contamination of the remaining vial.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_storage2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_storage2s",
+          "text": "These are not TB-500-specific rules — they apply broadly to lyophilized peptides and reflect the general sensitivity of peptide bonds to heat, moisture, and oxidation over time.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2f",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2fs",
+          "text": "TB-500 vs BPC-157: Different Peptides, Different Mechanisms",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_compare",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_compares",
+          "text": "TB-500 and BPC-157 are frequently discussed together in recovery-focused research circles, and the comparison is worth clarifying. They are structurally unrelated and work through distinct mechanisms. BPC-157 acts primarily through VEGFR2 and nitric oxide pathways with a strong focus on gastrointestinal and local connective tissue effects. TB-500 operates through actin-binding and cell migration pathways with a broader tissue distribution and documented cardiac research interest. Some researchers use both simultaneously on the basis that the mechanisms are additive rather than redundant — but that remains a user-level hypothesis, not a conclusion supported by controlled human trial data.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2g",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2gs",
+          "text": "Bottom Line",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_bottom",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_bottoms",
+          "text": "TB-500 5mg is Greenstone's standard-entry format for one of the most researched peptide fragments in the recovery and tissue-remodeling space. The preclinical literature is substantive, the mechanism is well-characterized at the molecular level, and the open questions are honest ones about translation to human outcomes. The vial is compounded to 503A standards, sourced from US raw material, and backed by third-party purity testing — the quality baseline the Greenstone catalog is built on.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_disclaimer",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_disclaimers",
+          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "marks": []
+        }
+      ]
+    }
+  ],
+  "relatedProducts": ["tb500-5mg", "tb500-10mg"],
+  "mainImage": {
+    "assetId": "image-59c1325fb9ae32849746200755bf66b52bc96ee6-2752x1536-jpg",
+    "alt": "Contextual clinical photograph for TB-500 5mg: What the Research Shows on Thymosin Beta-4"
+  }
+}

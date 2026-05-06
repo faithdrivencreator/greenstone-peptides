@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Provider Portal',
   description:
     'Clinics, medspas, and healthcare professionals — partner with Greenstone Peptides to offer compounded peptide therapy to your patients.',
+  alternates: { canonical: '/provider' },
 };
 
 export default function ProviderPage() {

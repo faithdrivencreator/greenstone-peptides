@@ -29,7 +29,7 @@ export function DisclaimerBanner() {
     >
       <div className="container-gr flex items-start gap-4 py-3">
         <p className="flex-1 text-[11px] leading-relaxed text-cream-dim">
-          Compounded medications are not FDA-approved. These products are compounded by licensed USA pharmacies under USP 797 sterile standards.{' '}
+          All products are for research and educational purposes only. Not intended for human consumption. Compounded by licensed USA pharmacies under USP 797 sterile standards.{' '}
           <Link href="/safety" className="text-gold underline hover:text-gold-light">
             Read full disclaimer
           </Link>

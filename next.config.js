@@ -14,7 +14,7 @@ const nextConfig = {
   },
   env: {
     NEXT_PUBLIC_SITE_URL:
-      process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonerx.com',
+      process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store',
   },
 };
 

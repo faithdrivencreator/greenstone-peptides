@@ -1,0 +1,652 @@
+{
+  "id": "post-2026-05-05-nad-200mg-spotlight",
+  "title": "NAD+ 200mg/mL: Inside Greenstone's High-Concentration Vial",
+  "slug": "nad-plus-200mg-product-spotlight",
+  "excerpt": "NAD+ is the coenzyme every cell uses to make energy and repair DNA \u2014 and levels decline with age. Inside Greenstone's 200mg/mL vial: the research on cellular metabolism, why injectable formats exist, and how high-concentration NAD+ compares to oral precursors like NMN and NR.",
+  "seoTitle": "NAD+ 200mg/mL Spotlight: Inside the High-Concentration Vial",
+  "seoDescription": "Inside Greenstone's NAD+ 200mg/mL \u2014 the science of nicotinamide adenine dinucleotide, why high-concentration matters, and the 503A compounding standards.",
+  "tags": [
+    "nad-plus",
+    "nad-injectable",
+    "longevity-peptide",
+    "cellular-energy",
+    "product-spotlight",
+    "503a-compounding"
+  ],
+  "readingTime": 5,
+  "featured": false,
+  "publishedAt": "2026-05-05T11:10:00.000Z",
+  "relatedProducts": [
+    "nad-200mg"
+  ],
+  "body": [
+    {
+      "_type": "block",
+      "_key": "b2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s1",
+          "text": "NAD+ \u2014 nicotinamide adenine dinucleotide \u2014 is one of the most studied molecules in human biology. It is a coenzyme present in every living cell, central to how the body produces energy, repairs DNA, and regulates the proteins that govern cellular aging. The research base is nearly a century deep: NAD+ was first isolated in 1906 and won a Nobel Prize in 1929 for its role in cellular respiration. What changed in the last decade is the volume of clinical and translational research connecting NAD+ status to metabolic health, neurological function, and aging biology.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b4",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s3",
+          "text": "This spotlight covers what NAD+ actually does at the cellular level, why injectable formats exist alongside oral precursors, what is inside Greenstone's high-concentration 200mg/mL vial, and how this format compares to the other NAD+ options in the catalog.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b6",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s5",
+          "text": "What NAD+ Actually Does Inside the Cell",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b8",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s7",
+          "text": "NAD+ has three primary jobs at the cellular level. Each one underlies a different conversation in modern wellness and longevity research.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b10",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s9",
+          "text": "First, NAD+ is the central electron carrier in mitochondrial energy production. Every time a cell converts food into ATP, NAD+ shuttles electrons through the electron transport chain. When NAD+ availability drops, mitochondrial output drops with it \u2014 which is why low NAD+ status is repeatedly associated with fatigue and metabolic dysfunction in the published literature.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b12",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s11",
+          "text": "Second, NAD+ is the required substrate for sirtuins (SIRT1 through SIRT7), a family of enzymes that regulate gene expression, mitochondrial biogenesis, and the cellular stress response. When sirtuins activate, they consume NAD+. Low NAD+ means low sirtuin activity. The Sinclair lab at Harvard has spent more than two decades documenting this relationship in model organisms.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b14",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s13",
+          "text": "Third, NAD+ is consumed by PARP enzymes during DNA repair. Every double-strand break triggers PARP activation, which depletes NAD+ locally. In tissues under high oxidative stress \u2014 heart, brain, skeletal muscle \u2014 PARP demand can drain NAD+ faster than the cell can resynthesize it.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b16",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s15",
+          "text": "Why NAD+ Declines With Age",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b18",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s17",
+          "text": "A 2015 study from the Verdin lab quantified what clinicians had been observing: NAD+ levels in human skin and skeletal muscle decline roughly 50% between ages 40 and 60. The cause is not a single mechanism but a compounding set of changes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b20",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s19",
+          "text": "CD38, an enzyme that degrades NAD+, rises with age and chronic inflammation.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b22",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s21",
+          "text": "Mitochondrial efficiency declines, increasing redox demand on the existing NAD+ pool.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b24",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s23",
+          "text": "Cumulative DNA damage raises baseline PARP activity, draining NAD+ during repair.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b26",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s25",
+          "text": "The salvage pathway \u2014 the cellular machinery that recycles NAD+ from its breakdown products \u2014 loses capacity.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b28",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s27",
+          "text": "The net result is what longevity researchers now describe as a chronic NAD+ deficit. Restoring NAD+ status is the focal point of much of the translational research published in this space over the last decade.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b30",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s29",
+          "text": "Why Injectable NAD+ Exists at All",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b32",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s31",
+          "text": "NAD+ itself is poorly absorbed when taken orally. The intact molecule is broken down by glycohydrolases in the gut before it can reach systemic circulation in usable form. This is why most oral longevity supplements contain NAD+ precursors \u2014 nicotinamide riboside (NR) or nicotinamide mononucleotide (NMN) \u2014 rather than NAD+ itself. The cell then has to rebuild NAD+ from those precursors using its own salvage pathway capacity, which is exactly the capacity that declines with age.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b34",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s33",
+          "text": "Injectable NAD+ bypasses the gut entirely. Subcutaneous and intramuscular administration deliver intact NAD+ to the bloodstream, where dedicated transporters move it into cells. The trade-off is that injectable peptides require sterile compounding, refrigerated handling, and a prescriber relationship. The bioavailability advantage is what makes the trade-off worth it for many clinical protocols.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b36",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s35",
+          "text": "Inside Greenstone's NAD+ 200mg/mL Vial",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b38",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s37",
+          "text": "Strength: 200mg/mL \u2014 the high-concentration format.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b40",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s39",
+          "text": "Volume: 5mL vial, totaling 1,000mg of NAD+ per vial.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b42",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s41",
+          "text": "Format: sterile injectable solution for subcutaneous or intramuscular administration.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b44",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s43",
+          "text": "Active ingredient: USA-sourced pharmaceutical-grade NAD+.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b46",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s45",
+          "text": "Compounding: 503A pharmacy operating under USP 797 sterile standards.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b48",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s47",
+          "text": "Testing: third-party verification for identity, potency, sterility, and endotoxins.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b50",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s49",
+          "text": "Storage: refrigerated at 2\u20138\u00b0C; protected from light.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b52",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s51",
+          "text": "The 200mg/mL concentration matters for one very practical reason: dose volume. A 100mg dose at 200mg/mL is 0.5mL \u2014 small enough for a comfortable subcutaneous injection. Lower-concentration formats require two to four times the injection volume to deliver the same dose. For patients on longer protocols, that volume difference adds up across weeks of administration.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b54",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s53",
+          "text": "How the 200mg/mL Format Compares to Greenstone's Other NAD+ Options",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b56",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s55",
+          "text": "Greenstone's NAD+ catalog is built around three formats. Each one suits a different protocol shape and a different patient profile.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b58",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s57",
+          "text": "NAD+ 50mg injectable \u2014 the entry-level injectable format, smaller per-vial commitment, well suited to early-stage protocols or shorter treatment cycles.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b60",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s59",
+          "text": "NAD+ 200mg/mL injectable \u2014 the high-concentration option, designed for longer cycles, higher per-dose targets, and reduced injection volume per administration.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b62",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s61",
+          "text": "NAD+ Nasal Spray 300mg/mL \u2014 intranasal delivery via the olfactory and respiratory mucosa, often selected for cognitive-support protocols where the route of administration is part of the clinical rationale.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b64",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s63",
+          "text": "There is no abstract \"best\" NAD+ format. The right choice is a clinical decision that depends on the protocol, dosing schedule, route preference, and the recommendation of a licensed prescriber.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b66",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s65",
+          "text": "The Compounding Standards Behind the Vial",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b68",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s67",
+          "text": "Greenstone's NAD+ 200mg/mL is compounded in a 503A pharmacy under USP 797 sterile compounding standards. Every batch is tested by an independent third-party laboratory for four endpoints:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b70",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s69",
+          "text": "Identity \u2014 confirming the molecule in the vial is the molecule on the label.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b72",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s71",
+          "text": "Potency \u2014 confirming concentration matches the label within USP tolerance.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b74",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s73",
+          "text": "Sterility \u2014 confirming the absence of microbial contamination.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b76",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s75",
+          "text": "Endotoxin levels \u2014 confirming the product falls within injectable safety thresholds.",
+          "marks": []
+        }
+      ],
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_type": "block",
+      "_key": "b78",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s77",
+          "text": "These are the same baseline standards applied across the full Greenstone injectable catalog. The 200mg/mL format adds genuine complexity to the compounding process \u2014 high-concentration solutions are harder to keep stable \u2014 which is precisely why third-party verification matters more, not less, at this concentration.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b80",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s79",
+          "text": "Where the 200mg/mL Format Fits",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b82",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s81",
+          "text": "For protocols built around longer treatment cycles, higher per-dose targets, or smaller injection volumes, the 200mg/mL vial consolidates the workflow into a more efficient format. For clinicians and patients earlier in their NAD+ exploration, the 50mg injectable or the nasal spray may be more appropriate starting points. The molecule is the same \u2014 the format is the variable.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b84",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s83",
+          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "marks": []
+        }
+      ]
+    }
+  ],
+  "mainImage": {
+    "assetId": "image-d5a5b0f0353d0ad99e0a1e85b28eeb69b8003f4d-2752x1536-jpg",
+    "alt": "Clinical product photograph for NAD+ 200mg/mL: Inside Greenstone's High-Concentration Vial"
+  }
+}

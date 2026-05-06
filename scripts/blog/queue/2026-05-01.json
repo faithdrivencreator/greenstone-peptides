@@ -1,0 +1,299 @@
+{
+  "id": "post-2026-05-01-glp1-plateau",
+  "title": "Hit a Weight Loss Plateau on GLP-1s? What the Research Says",
+  "slug": "glp1-plateau-what-to-do",
+  "excerpt": "Weight loss on GLP-1 medications stalls for most patients somewhere between month four and twelve. Here is what the STEP and SURMOUNT extension trials show about the plateau, why the curve bends, and the lifestyle levers that consistently show up in the data.",
+  "seoTitle": "GLP-1 Plateau: What STEP & SURMOUNT Trials Show",
+  "seoDescription": "Why weight loss stalls around month 4-12 on GLP-1 therapy, what STEP and SURMOUNT extension trials show about long-term response, and the lifestyle levers.",
+  "tags": ["GLP-1", "GLP-1 plateau", "semaglutide plateau", "tirzepatide plateau", "STEP trial", "SURMOUNT trial", "weight management"],
+  "readingTime": 7,
+  "featured": false,
+  "publishedAt": "2026-05-01T11:15:47.000Z",
+  "relatedProducts": ["sema-odt-05-30"],
+  "body": [
+    {
+      "_type": "block",
+      "_key": "intro1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "intro1s", "text": "For many people on GLP-1 therapy, weight loss feels almost effortless for the first several months and then quietly stalls. The scale stops moving. Hunger creeps back in. The medication seems to stop working. This is one of the most common patterns reported on GLP-1 receptor agonists like semaglutide and tirzepatide, and in most cases it is not a sign that the medication has failed. It is a sign that the body has adapted. The published trial data describes this plateau in detail, and the picture it paints is more reassuring than the experience often feels.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-meaning",
+      "style": "h2",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h2-meanings", "text": "What a Plateau Actually Means in the Data", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "meaning1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "meaning1s", "text": "In clinical trials, weight loss on GLP-1 medications follows a predictable shape. The curve descends steeply for the first several months, then bends and flattens. Researchers refer to the lowest point of the curve as the weight nadir — the deepest reduction reached before the curve stabilizes. In most participants, the nadir arrives somewhere between months six and twelve, depending on the medication, the maintenance dose, and the individual. The flattening is not failure. It is the new equilibrium the body has reached at a substantially lower weight.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "meaning2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "meaning2s", "text": "The distinction matters. A plateau on therapy looks very different from regaining weight off therapy. In the published extension and withdrawal trials — STEP 4, STEP 5, SURMOUNT-4 — patients who continue the medication retain most of their loss for as long as the trial follows them. Patients who stop the medication regain. That contrast is the central data point for understanding the plateau.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-step",
+      "style": "h2",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h2-steps", "text": "What the STEP Trials Show for Semaglutide", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "step1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "step1s", "text": "The STEP program is the pivotal series of clinical trials behind semaglutide's approval for chronic weight management at the 2.4 mg weekly dose. STEP 1, the foundational trial, followed adults with overweight or obesity for 68 weeks. Mean body weight loss reached approximately 14.9 percent, and the curve visibly began to flatten around week 56 to 60. By the time the trial ended, weight had stabilized at the new lower setpoint.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "step2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "step2s", "text": "STEP 5 extended the observation window to 104 weeks. The result: weight loss was largely sustained, with a mean reduction of roughly 15.2 percent at the end of year two among participants who continued therapy. STEP 4, a withdrawal study, took participants who had reached the maintenance dose at week 20 and randomized them to either continue semaglutide or switch to placebo. Those who continued kept losing slowly and held the loss. Those who switched to placebo regained roughly two-thirds of what they had lost within the next year. The plateau, in other words, is conditional on the medication.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-surmount",
+      "style": "h2",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h2-surmounts", "text": "What the SURMOUNT Trials Show for Tirzepatide", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "surmount1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "surmount1s", "text": "The SURMOUNT program tells a similar story with a steeper curve. SURMOUNT-1, the pivotal trial for tirzepatide in chronic weight management, reported approximately 22.5 percent mean body weight reduction at the highest 15 mg dose by week 72. The curve descends more aggressively than the STEP semaglutide curve and reaches its plateau later — most participants on the maximum dose continued losing weight through roughly weeks 60 to 72 before the curve flattened.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "surmount2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "surmount2s", "text": "SURMOUNT-4, the withdrawal trial, paralleled STEP 4: those who continued tirzepatide retained their loss; those who stopped regained substantially. The same conditional plateau pattern. What SURMOUNT adds to the literature is a deeper trough — and that depth is the practical reason the dual-agonist class, which acts on the GLP-1 receptor and the GIP receptor simultaneously, is currently the most-prescribed in obesity medicine.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-when",
+      "style": "h2",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h2-whens", "text": "When to Expect the Plateau", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "when1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "when1s", "text": "The first thing to recognize is that the descent is not linear. On a 16-week titration to the maintenance dose, the steepest weight loss usually occurs after the patient reaches the full therapeutic dose, not before it. That alone shifts the practical experience: many patients who feel they have hit a plateau at month four are still in their descent phase and have not yet reached the maintenance dose at all.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "when2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "when2s", "text": "Once at the maintenance dose, the trial data converges on a familiar pattern. For semaglutide at 2.4 mg weekly, the curve typically begins to flatten somewhere between weeks 56 and 68 in the published data. For tirzepatide at 15 mg, the descent is steeper and longer, with most participants reaching their nadir between weeks 60 and 72. Individual variation around these averages is wide. A six-month assessment is too early; a twelve-month assessment is closer to the right horizon for evaluating response.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-why",
+      "style": "h2",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h2-whys", "text": "Why the Curve Bends: Four Mechanisms", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "why-intro",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "why-intros", "text": "The published research describes several overlapping reasons weight loss flattens. None of them are unique to GLP-1 therapy. They are the same biological adaptations that show up in every well-studied weight-loss intervention, from caloric restriction to bariatric surgery.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h3-metabolic",
+      "style": "h3",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h3-metabolics", "text": "Metabolic adaptation", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "metabolic1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "metabolic1s", "text": "As body weight decreases, total daily energy expenditure decreases by more than the simple math of less mass moving would predict. Resting metabolic rate drops slightly more than expected for the new size, and the body becomes incrementally more efficient. This is well documented across diet, surgery, and pharmacotherapy literature. It is the single strongest contributor to the plateau.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h3-setpoint",
+      "style": "h3",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h3-setpoints", "text": "A new set point for hunger and satiety", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "setpoint1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "setpoint1s", "text": "GLP-1 receptor agonists work in part by lowering the brain's defended weight set point. The set point does not vanish — it relocates. Once weight has fallen to the new defended level, hunger signaling normalizes around that level rather than continuing to push weight down.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h3-lean",
+      "style": "h3",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h3-leans", "text": "Lean mass loss", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "lean1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "lean1s", "text": "Some portion of weight loss on any caloric-deficit intervention comes from lean mass. Lean mass is metabolically expensive tissue. Loss of skeletal muscle reduces total energy expenditure further, accelerating the plateau. The published data shows this is mitigated, though not eliminated, by resistance training and adequate protein intake.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h3-drift",
+      "style": "h3",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h3-drifts", "text": "Caloric drift", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "drift1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "drift1s", "text": "As appetite suppression stabilizes at the new set point, real-world caloric intake often drifts upward. Patients are typically not aware of it. Studies that compare self-reported intake to measured energy expenditure consistently find this gap. It is human, not failure.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-levers",
+      "style": "h2",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h2-leverss", "text": "Lifestyle Levers That Show Up in the Data", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "levers-intro",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "levers-intros", "text": "Across the published literature, four lifestyle inputs have repeatedly correlated with a deeper nadir, a longer descent phase, or better long-term maintenance on GLP-1 therapy:", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "lever-li1",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "lever-li1a", "text": "Resistance training.", "marks": ["strong"] },
+        { "_type": "span", "_key": "lever-li1b", "text": " Multiple studies on weight loss with and without GLP-1 medications show that resistance training preserves lean mass and resting energy expenditure during caloric deficit. It is the single most consistent input associated with deeper, more sustained loss.", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "lever-li2",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "lever-li2a", "text": "Protein intake.", "marks": ["strong"] },
+        { "_type": "span", "_key": "lever-li2b", "text": " Trials and meta-analyses on weight loss support a target of roughly 1.2 to 1.6 grams of protein per kilogram of target body weight to preserve lean mass during a deficit. GLP-1 therapy reduces appetite enough that protein intake can fall below this without the patient noticing.", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "lever-li3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "lever-li3a", "text": "Sleep.", "marks": ["strong"] },
+        { "_type": "span", "_key": "lever-li3b", "text": " Short sleep duration is associated with elevated hunger-signaling hormones and reduced weight loss in observational data. Seven hours is the most commonly cited floor.", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "lever-li4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "lever-li4a", "text": "Alcohol.", "marks": ["strong"] },
+        { "_type": "span", "_key": "lever-li4b", "text": " Alcohol calories displace food intake, blunt satiety signaling, and disrupt sleep. The aggregate effect on the plateau is larger than the calorie count alone.", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "levers-out",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "levers-outs", "text": "None of these are dramatic interventions. Compounding small inputs in the same direction is what the data rewards.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-signal",
+      "style": "h2",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h2-signals", "text": "When the Plateau Is a Signal to Talk to Your Provider", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "signal1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "signal1s", "text": "A flattening curve is expected. A reversing curve — sustained weight regain on therapy — is worth a conversation. So is intolerable side-effect burden, dose-related concerns, or a new clinical condition. Dose optimization, changes to the lifestyle inputs above, or a transition to a different therapy are options that fall under a clinician's judgment, not a self-directed adjustment.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "signal2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "signal2s", "text": "This is also the right moment to verify the source of the medication. Compounded GLP-1 products in the United States are most reliably sourced from licensed 503A compounding pharmacies operating under USP 797 sterile compounding standards, with USA-sourced active ingredients and third-party potency and sterility testing on every lot. The plateau is a normal physiologic event; ambiguity about the medication itself should not be a variable in the conversation.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-frame",
+      "style": "h2",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "h2-frames", "text": "A More Useful Frame Than Stuck", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "frame1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "frame1s", "text": "The published trial data treats the GLP-1 weight loss curve as having two distinct phases: an active descent phase, followed by a maintenance phase at a new defended weight. Both phases are part of the therapy working. The maintenance phase is the harder one to talk about — there is no scale satisfaction, just the quiet daily fact of holding the new weight — but it is the phase the trials show is sustained while therapy continues.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "frame2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "frame2s", "text": "For most patients, the right reframe is not that the medication stopped working but that the medication finished its first job and is now doing its second one. That second job — defending the new lower weight — is the one obesity medicine has historically struggled to do at all.", "marks": [] }]
+    },
+    {
+      "_type": "block",
+      "_key": "disclaimer",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [{ "_type": "span", "_key": "disclaimers", "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies and prescription weight-management medications should be discussed with a licensed healthcare provider.", "marks": [] }]
+    }
+  ],
+  "mainImage": {
+    "assetId": "image-ae985cb05c7b646d3453e93d142d979a941515be-2688x1520-png",
+    "alt": "Bold data visualization for Hit a Weight Loss Plateau on GLP-1s? What the Research Says",
+    "treatment": "bold-infographic"
+  }
+}

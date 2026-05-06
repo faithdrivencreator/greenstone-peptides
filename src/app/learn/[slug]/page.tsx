@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.seoTitle || post.title,
     description: post.seoDescription || post.excerpt || undefined,
+    alternates: { canonical: `/learn/${params.slug}` },
     openGraph: {
       type: 'article',
       title: post.seoTitle || post.title,

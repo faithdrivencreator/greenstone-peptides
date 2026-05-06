@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Learn Center',
   description:
     'Clinical research, peptide protocols, and physician insights from the Greenstone Peptides team.',
+  alternates: { canonical: '/learn' },
 };
 
 export const revalidate = 300;

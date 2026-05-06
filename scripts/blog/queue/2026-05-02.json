@@ -1,0 +1,386 @@
+{
+  "id": "post-2026-05-02-tesamorelin-5mg-spotlight",
+  "title": "Tesamorelin 5mg: Inside Greenstone's GHRH Analog Vial",
+  "slug": "tesamorelin-5mg-product-spotlight",
+  "excerpt": "Tesamorelin is one of the few peptides with a phase III trial program behind it. Inside Greenstone's 5mg vial — what the GHRH analog research shows on visceral fat, how the molecule works at the pituitary, and the quality standards behind the compounded format.",
+  "seoTitle": "Tesamorelin 5mg Spotlight: GHRH Peptide & Visceral Fat Data",
+  "seoDescription": "Inside Greenstone's Tesamorelin 5mg vial — what the GHRH analog research shows on visceral fat and IGF-1 response, plus 503A compounding details.",
+  "tags": [
+    "tesamorelin",
+    "ghrh-analog",
+    "visceral-fat",
+    "peptides",
+    "product-spotlight",
+    "503a-compounding"
+  ],
+  "readingTime": 4,
+  "featured": false,
+  "publishedAt": "2026-05-02T11:10:00.000Z",
+  "relatedProducts": [
+    "tesamorelin-5mg"
+  ],
+  "body": [
+    {
+      "_type": "block",
+      "_key": "intro1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro1s",
+          "text": "Tesamorelin is one of the few peptides in the modern wellness conversation with a true drug-grade research history. The molecule is a synthetic analog of growth hormone-releasing hormone (GHRH) and reached FDA approval in 2010 under the brand name Egrifta for a specific clinical indication — HIV-associated lipodystrophy. The phase III trial program behind that approval is what most peptide users are actually referencing, even when they don't realize it, whenever they discuss tesamorelin and visceral fat.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "intro2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro2s",
+          "text": "This spotlight covers what the GHRH analog research actually shows on tesamorelin, what's in Greenstone's 5mg vial, and the quality standards behind the compounded format.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2a",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2as",
+          "text": "The Mechanism: A GHRH Analog That Outlives Native GHRH",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p3s",
+          "text": "Tesamorelin is a 44-amino-acid peptide modeled on native GHRH(1-44) with a single trans-3-hexenoyl modification at the N-terminus. That modification matters: it protects the molecule from rapid breakdown by dipeptidyl peptidase-4, the same enzyme family that limits the half-life of natural GHRH. The result is a longer, more reliable signal at the pituitary's GHRH receptor, which then triggers the body's own pulsatile release of growth hormone — and downstream, IGF-1 — through the established physiological pathway.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p3b",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p3bs",
+          "text": "Mechanistically, this is the distinction between a secretagogue and exogenous growth hormone. Tesamorelin doesn't add GH from outside the body; it asks the pituitary to release more of its own. That difference is part of why the compound was developed for an indication where preserving normal GH pulsatility was clinically important.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2b",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2bs",
+          "text": "What the Research Shows",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p4",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p4s",
+          "text": "The published tesamorelin literature is centered on visceral fat and is unusually robust by peptide standards. The strongest signals appear in the following areas:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li1",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li1s",
+          "text": "Visceral adipose tissue reduction — phase III trials in HIV-associated lipodystrophy demonstrated statistically significant decreases in visceral fat over 26 weeks of daily subcutaneous use, with effects measured by CT imaging.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li2",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li2s",
+          "text": "IGF-1 response — tesamorelin reliably raises IGF-1 levels into the upper end of the normal physiological range, consistent with its mechanism, and these increases reverse on discontinuation.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li3s",
+          "text": "Liver fat — follow-on research has examined tesamorelin in the context of nonalcoholic fatty liver disease, with reductions in hepatic fat fraction reported in controlled studies.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li4s",
+          "text": "Lean mass and physical function — secondary endpoints in the original trial program documented preservation of lean tissue alongside the visceral fat changes.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p5",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p5s",
+          "text": "It is worth being direct about scope: the strongest controlled human data sits in the HIV lipodystrophy population. Use of compounded tesamorelin outside that label is not equivalent to FDA-approved use of the brand product, and the research conversation should be read with that distinction in mind.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2c",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2cs",
+          "text": "What's in the 5mg Vial",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p6",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p6s",
+          "text": "Greenstone's tesamorelin 5mg vial is lyophilized — the peptide is freeze-dried into a solid powder, which extends shelf life and protects molecular integrity during shipping. Reconstitution with bacteriostatic water is standard before any research use.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p7",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p7s",
+          "text": "The 5mg total mass per vial is a deliberate format. It gives researchers enough working material for sustained protocols without forcing oversized aliquots, and it aligns with the dose ranges referenced across the published GHRH analog literature.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2d",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2ds",
+          "text": "503A Compounding, USA-Sourced, Third-Party Tested",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p8",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p8s",
+          "text": "Every peptide in the Greenstone catalog is compounded in a US-based 503A facility. The 503A designation refers to the section of the Federal Food, Drug, and Cosmetic Act that governs traditional compounding pharmacies — facilities that operate under state board of pharmacy oversight and prepare patient-specific preparations to USP 795 and USP 797 sterile compounding standards.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p9",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p9s",
+          "text": "USA-sourced active pharmaceutical ingredient and third-party purity testing are the additional layers. With longer-chain peptides like tesamorelin specifically, sourcing matters — purity, peptide content, and the integrity of the trans-3-hexenoyl modification are quality markers that vary widely across overseas suppliers and are difficult to verify without independent analytical testing.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2e",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2es",
+          "text": "Reconstitution and Storage",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p10",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p10s",
+          "text": "Lyophilized tesamorelin should be stored refrigerated and away from direct light prior to reconstitution. Once reconstituted with bacteriostatic water, the solution should remain refrigerated and is generally considered stable for a limited window at refrigerated temperatures. Excessive heat, light or repeated freeze-thaw cycles can degrade the peptide and reduce biological activity.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2f",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2fs",
+          "text": "Where Tesamorelin Sits in the Peptide Landscape",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p11",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p11s",
+          "text": "Tesamorelin occupies a different category from the recovery and tissue peptides like BPC-157 and TB-500, and from the metabolic GLP-1 family. Where those compounds act on injury repair or appetite regulation, tesamorelin works through the GHRH-pituitary axis to influence the body's own growth hormone release. That mechanism is why it is typically positioned as a separate tool in the catalog rather than an alternative to anything else — and why it is frequently grouped with sermorelin and other GHRH-class peptides in clinical conversations.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2g",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2gs",
+          "text": "Bottom Line",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p12",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p12s",
+          "text": "Tesamorelin 5mg is Greenstone's standard format for one of the most clinically validated GHRH analogs in modern peptide pharmacology — a molecule with a phase III trial program behind its visceral fat data and a clear mechanistic story at the pituitary. The Greenstone version is 503A-compounded in the US, made with US-sourced active ingredient, and third-party purity tested. For anyone evaluating tesamorelin options on the market, those are the quality markers that distinguish a serious product from a commodity vial.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "disc",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "discs",
+          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "marks": []
+        }
+      ]
+    }
+  ],
+  "mainImage": {
+    "assetId": "image-c490bb834d49310e36799598244ef978a126c4e5-2752x1536-jpg",
+    "alt": "Extreme macro photograph illustrating Tesamorelin 5mg: Inside Greenstone's GHRH Analog Vial"
+  }
+}

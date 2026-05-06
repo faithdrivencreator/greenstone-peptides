@@ -8,6 +8,7 @@ import { urlFor } from '@/lib/sanity';
 import { ProductCard } from '@/components/ProductCard';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import AddToCartButton from '@/components/AddToCartButton';
+import ViewItemTracker from '@/components/ViewItemTracker';
 
 interface PageProps {
   params: { slug: string };
@@ -24,6 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: product.seoTitle || product.name,
     description: product.seoDescription || product.shortDescription || undefined,
+    alternates: { canonical: `/shop/${params.slug}` },
     openGraph: {
       title: product.seoTitle || product.name,
       description: product.seoDescription || product.shortDescription || undefined,
@@ -58,14 +60,36 @@ export default async function ProductDetailPage({ params }: PageProps) {
     },
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://greenstonewellness.store/' },
+      { '@type': 'ListItem', position: 2, name: 'Shop', item: 'https://greenstonewellness.store/shop' },
+      { '@type': 'ListItem', position: 3, name: product.name, item: `https://greenstonewellness.store/shop/${params.slug}` },
+    ],
+  };
+
   return (
     <>
       <SchemaOrg schema={productSchema} />
+      <SchemaOrg schema={breadcrumbSchema} />
+      <ViewItemTracker
+        _id={product._id}
+        name={product.name}
+        price={product.price}
+        strength={product.strength}
+        format={product.format}
+      />
 
       <section className="section-py">
         <div className="container-gr">
           {/* Breadcrumbs */}
           <nav className="mono mb-8" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-gold">
+              Home
+            </Link>
+            <span className="mx-2 text-gold/40">/</span>
             <Link href="/shop" className="hover:text-gold">
               Shop
             </Link>
@@ -135,6 +159,17 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 <Link href="/contact" className="btn btn-ghost">
                   Questions? Contact Us →
                 </Link>
+              </div>
+
+              <div className="mt-6 p-4 border border-gold/10 rounded-lg bg-obsidian-light/40">
+                <p className="text-[11px] leading-relaxed text-cream-dim">
+                  These products are intended for research and educational purposes only. They have
+                  not been evaluated by the FDA and are not intended to diagnose, treat, cure, or
+                  prevent any disease. Not for human consumption.{' '}
+                  <Link href="/safety" className="text-gold underline hover:text-gold-light">
+                    Read full disclaimer
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
