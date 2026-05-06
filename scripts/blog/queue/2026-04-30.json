@@ -1,0 +1,372 @@
+{
+  "id": "post-2026-04-30-ghkcu-50mg-spotlight",
+  "title": "GHK-Cu 50mg: The Copper Peptide Backed by Decades of Research",
+  "slug": "ghk-cu-50mg-product-spotlight",
+  "excerpt": "GHK-Cu has the longest research history of any peptide in the modern wellness conversation. Inside Greenstone's 50mg vial \u2014 what the published data shows for skin, hair and tissue, and how the product is made.",
+  "seoTitle": "GHK-Cu 50mg Copper Peptide: Research & Quality Spotlight",
+  "seoDescription": "Inside Greenstone's GHK-Cu 50mg vial \u2014 what decades of copper peptide research show for skin, hair and tissue, plus 503A compounding and testing details.",
+  "tags": [
+    "ghk-cu",
+    "copper-peptide",
+    "skin-research",
+    "peptides",
+    "product-spotlight",
+    "503a-compounding"
+  ],
+  "readingTime": 4,
+  "featured": false,
+  "publishedAt": "2026-04-30T13:00:00.000Z",
+  "relatedProducts": [
+    "ghkcu-50mg"
+  ],
+  "body": [
+    {
+      "_type": "block",
+      "_key": "intro1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro1s",
+          "text": "GHK-Cu \u2014 a tripeptide of glycine, histidine and lysine bound to a copper(II) ion \u2014 has the longest published research history of any peptide in today's wellness conversation. The molecule was first isolated from human plasma in 1973 and has been studied continuously since. That kind of paper trail is unusual in the peptide space and worth understanding before evaluating any product on the market.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "intro2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro2s",
+          "text": "This spotlight covers what the research actually shows on GHK-Cu, what's in Greenstone's 50mg vial, and the quality standards behind the product.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2a",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2as",
+          "text": "The Discovery: A Peptide That Tracks With Age",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p3s",
+          "text": "GHK-Cu was identified by Loren Pickart, who observed that plasma from younger donors caused liver tissue from older animals to behave more like younger tissue in culture. The active fraction was eventually narrowed to this single tripeptide-copper complex. Plasma levels of GHK have been documented to decline meaningfully with age \u2014 roughly a 60 percent drop between the 20s and the 60s in published surveys \u2014 which is part of why the molecule attracted decades of follow-on research.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2b",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2bs",
+          "text": "What the Research Shows",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p4",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p4s",
+          "text": "The published GHK-Cu literature spans skin, hair, wound, and gene-expression research. The strongest signals appear in the following areas:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li1",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li1s",
+          "text": "Skin remodeling \u2014 multiple studies have documented increased collagen, elastin and glycosaminoglycan synthesis in dermal fibroblast cultures and human skin samples treated with GHK-Cu.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li2",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li2s",
+          "text": "Wound healing \u2014 GHK-Cu has been associated with improved wound contraction, reduced inflammation, and better tissue quality in rodent and porcine models, and was historically formulated into experimental wound-care products.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li3s",
+          "text": "Hair follicle signaling \u2014 preclinical work has shown enlargement of dermal papilla cells and upregulation of growth-related genes in follicle-derived cells exposed to GHK-Cu.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li4s",
+          "text": "Gene-expression effects \u2014 a frequently cited 2010 microarray analysis reported that GHK shifted the activity of more than 4,000 human genes, predominantly in directions associated with younger tissue patterns.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p5",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p5s",
+          "text": "It is worth being direct about scope: most of the controlled human work on GHK-Cu sits in the topical cosmetic literature. Injectable use is researched, but the human evidence base is thinner there than the topical evidence base. That distinction matters when reading marketing copy on the open market.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2c",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2cs",
+          "text": "What's in the 50mg Vial",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p6",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p6s",
+          "text": "Greenstone's GHK-Cu 50mg vial is lyophilized \u2014 the peptide-copper complex is freeze-dried into a solid powder, which extends shelf life and protects molecular integrity during shipping. Reconstitution with bacteriostatic water is standard before any research use.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p7",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p7s",
+          "text": "The 50mg total mass per vial is a deliberate format. It gives researchers enough working material for sustained protocols without forcing oversized aliquots, and it aligns with the dose ranges most commonly described in the GHK-Cu literature.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2d",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2ds",
+          "text": "503A Compounding, USA-Sourced, Third-Party Tested",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p8",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p8s",
+          "text": "Every peptide in the Greenstone catalog is compounded in a US-based 503A facility. The 503A designation refers to the section of the Federal Food, Drug, and Cosmetic Act that governs traditional compounding pharmacies \u2014 facilities that operate under state board of pharmacy oversight and prepare patient-specific preparations to USP 795 and USP 797 sterile compounding standards.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p9",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p9s",
+          "text": "USA-sourced active pharmaceutical ingredient and third-party purity testing are the additional layers. With copper peptides specifically, sourcing matters \u2014 the ratio of copper to tripeptide and the absence of free metal contaminants are quality markers that vary widely across overseas suppliers and are difficult to verify without independent testing.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2e",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2es",
+          "text": "Reconstitution and Storage",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p10",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p10s",
+          "text": "Lyophilized GHK-Cu should be stored refrigerated and away from direct light prior to reconstitution. Once reconstituted with bacteriostatic water, the solution should remain refrigerated. The blue tint visible in solution is normal \u2014 it reflects the copper(II) coordination at the heart of the molecule, not a contaminant. Excessive heat, light or repeated freeze-thaw cycles can degrade the peptide or destabilize the copper coordination over time.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2f",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2fs",
+          "text": "Where GHK-Cu Sits in the Peptide Landscape",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p11",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p11s",
+          "text": "GHK-Cu occupies a different category from the recovery and metabolic peptides that dominate most peptide marketing. Where BPC-157 and TB-500 are studied largely for connective-tissue and wound contexts, and the GLP-1 family targets metabolic receptors, GHK-Cu's research base is centered on tissue remodeling, gene expression, and skin and hair biology. That difference in mechanism is the reason it tends to be positioned as a separate tool rather than an alternative to anything else in the catalog.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2g",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2gs",
+          "text": "Bottom Line",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p12",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p12s",
+          "text": "GHK-Cu 50mg is Greenstone's standard format for one of the most-researched peptides in modern biology \u2014 a molecule with a publication record that spans five decades of skin, wound, hair and gene-expression work. The Greenstone version is 503A-compounded in the US, made with US-sourced active ingredient, and third-party purity tested. For anyone evaluating copper peptide options on the market, those are the quality markers that distinguish a serious product from a commodity vial.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "disc",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "discs",
+          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "marks": []
+        }
+      ]
+    }
+  ],
+  "mainImage": {
+    "assetId": "image-664bd19e716fcc24bb2521968f98319c1309efa9-2752x1536-jpg",
+    "alt": "Anatomical illustration for GHK-Cu 50mg: The Copper Peptide Backed by Decades of Research"
+  }
+}

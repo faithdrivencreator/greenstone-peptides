@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Peptide Catalog',
   description:
     'Browse USA-compounded peptide formulations. Semaglutide, tirzepatide, BPC-157, NAD+, and more. Third-party tested under USP 797 sterile standards.',
+  alternates: { canonical: '/shop' },
 };
 
 export const revalidate = 300;

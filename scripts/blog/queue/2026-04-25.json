@@ -1,0 +1,358 @@
+{
+  "id": "post-2026-04-25-bpc157-10mg-spotlight",
+  "title": "BPC-157 10mg/mL: Inside Greenstone's High-Concentration Vial",
+  "slug": "bpc-157-10mg-ml-product-spotlight",
+  "excerpt": "A closer look at Greenstone's BPC-157 10mg/mL vial — why a higher-concentration option exists, how it differs from the 5mg vial, and what 503A compounding, USA-sourcing, and third-party testing actually mean for the product on your shelf.",
+  "seoTitle": "BPC-157 10mg/mL: Greenstone's High-Concentration Vial",
+  "seoDescription": "Inside Greenstone's BPC-157 10mg/mL vial — why higher concentration matters, how it compares to the 5mg, and what 503A compounding standards mean.",
+  "tags": [
+    "bpc-157",
+    "recovery",
+    "peptides",
+    "product-spotlight",
+    "503a-compounding",
+    "research-peptides"
+  ],
+  "readingTime": 4,
+  "featured": false,
+  "publishedAt": "2026-04-25T13:00:00.000Z",
+  "body": [
+    {
+      "_type": "block",
+      "_key": "intro1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro1s",
+          "text": "BPC-157 has become one of the most discussed peptides in the recovery and connective-tissue research conversation. The molecule itself — a stable pentadecapeptide originally isolated from a fragment of human gastric juice protein — is the same across vendors. What changes from product to product is everything around it: the concentration, the carrier, the compounding standard, the sourcing of raw material, and the quality testing applied before it leaves the facility. Greenstone's BPC-157 10mg/mL vial sits at the higher end of the concentration spectrum, and it exists for specific, practical reasons.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "intro2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro2s",
+          "text": "This spotlight breaks down what the 10mg/mL vial is, how it differs from the 5mg option, and the standards behind it.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2a",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2as",
+          "text": "What BPC-157 Is, Briefly",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_about",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_abouts",
+          "text": "BPC-157 (Body Protection Compound-157) is a synthetic 15-amino-acid peptide that has been studied primarily in preclinical animal models for its effects on tendon, ligament, gastrointestinal, and vascular tissue. The published literature is interesting and growing, but it is largely preclinical — robust human clinical trials in regulated settings are still limited. Anything beyond that observation is speculation, and reputable sources keep that distinction front and center.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2b",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2bs",
+          "text": "Why the 10mg/mL Vial Exists",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_why1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_why1s",
+          "text": "Concentration is a packaging decision, not a potency decision. A higher-concentration vial delivers more peptide per milliliter of carrier, which means smaller injection volumes for the same total dose, fewer reconstitutions across a research cycle, and a longer working duration per vial in studies that require larger total amounts. For users running extended protocols, this is operationally simpler and reduces handling — every reconstitution introduces a small risk of contamination or measurement error.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_why2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_why2s",
+          "text": "The 10mg/mL format is also more economical on a per-milligram basis for protocols that justify the higher total amount. It is not, however, a beginner-friendly vial. Higher concentration narrows the margin for error in measurement, and it presumes the end user already understands reconstitution math, syringe selection, and storage discipline.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2c",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2cs",
+          "text": "How the 10mg/mL Differs From the 5mg Vial",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_diff1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_diff1s",
+          "text": "The active ingredient is identical. The differences are practical:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li1",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li1s",
+          "text": "Total content per vial — the 10mg/mL vial holds twice the peptide of the 5mg option once reconstituted to the same volume.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li2",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li2s",
+          "text": "Injection volume — for the same total dose, the 10mg/mL vial requires roughly half the volume per draw.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li3s",
+          "text": "Cost efficiency — typically lower cost per milligram for users with established protocols.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li4s",
+          "text": "Measurement precision required — narrower margin for error when drawing small fractions of a milliliter.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li5",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li5s",
+          "text": "Best-fit user — a researcher already familiar with the 5mg format who has converged on a stable protocol.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2d",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2ds",
+          "text": "503A Compounding, USA-Sourced, Third-Party Tested",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_503a",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_503as",
+          "text": "Greenstone's BPC-157 is compounded in a US-based 503A facility. In plain terms, 503A is the FDA framework that governs traditional pharmacy compounding for individual prescriptions — the standards that dictate sterile preparation, environmental controls, and operator training. Pairing 503A compounding with USA-sourced raw material and third-party purity testing is the difference between a peptide product you can audit and one you cannot. We publish certificates of analysis and welcome the question — that posture is the entire point of the brand.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2e",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2es",
+          "text": "Reconstitution and Storage, In Practical Terms",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_storage",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_storages",
+          "text": "Lyophilized BPC-157 is shelf-stable when kept refrigerated and protected from light prior to reconstitution. After reconstitution with bacteriostatic water, the working solution should be refrigerated and used within the window indicated on the product documentation. Avoid temperature swings, freeze-thaw cycles, and prolonged light exposure — these are the most common sources of degradation in any peptide product, regardless of vendor.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2f",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2fs",
+          "text": "Who the 10mg/mL Vial Tends to Make Sense For",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_who",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_whos",
+          "text": "The higher-concentration option fits researchers who have already worked through the 5mg vial, settled on a protocol, and want to reduce the operational tax of frequent reconstitutions. It is not the format we point a first-time user toward. For a first vial, the 5mg is the more forgiving introduction — the larger working volume per dose makes measurement easier and gives a wider margin for the inevitable learning curve.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2g",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2gs",
+          "text": "Bottom Line",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_bottom",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_bottoms",
+          "text": "BPC-157 10mg/mL is the operational upgrade — same molecule, higher concentration, smaller injection volumes, fewer reconstitutions across a research cycle. It is built on the same 503A compounding standard, the same USA-sourced raw material, and the same third-party purity testing that anchors the rest of the Greenstone catalog. For experienced users, it is the simpler path. For everyone else, the 5mg vial remains the better starting point.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_disclaimer",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_disclaimers",
+          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "marks": []
+        }
+      ]
+    }
+  ],
+  "relatedProducts": ["bpc157-10mg", "bpc157-5mg"],
+  "mainImage": {
+    "assetId": "image-6254e6ebcfa5d7f66636bba0c805a73be6f13850-2752x1536-jpg",
+    "alt": "Stylized editorial anatomical illustration of tendon fibers being bridged by a peptide chain — visual analogue for BPC-157's role in connective tissue research"
+  }
+}

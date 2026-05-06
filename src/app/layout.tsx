@@ -9,6 +9,8 @@ import { SchemaOrg } from '@/components/SchemaOrg';
 import { CartProvider } from '@/context/CartContext';
 import { CartDrawer } from '@/components/CartDrawer';
 import { ExitIntentPopup } from '@/components/ExitIntentPopup';
+import { AgeGate } from '@/components/AgeGate';
+import { ChatWidget } from '@/components/ChatWidget';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -31,7 +33,7 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonepeptides.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -58,14 +60,28 @@ export const metadata: Metadata = {
     title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
     description:
       'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Temperature-controlled shipping.',
+    images: [
+      {
+        url: '/images/hero-lab.png',
+        width: 1376,
+        height: 768,
+        alt: 'Greenstone Peptides — USA-Compounded Peptide Therapy',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
     description:
       'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Temperature-controlled shipping.',
+    images: ['/images/hero-lab.png'],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 const organizationSchema = {
@@ -94,6 +110,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${jetbrains.variable}`}>
       <body className="bg-obsidian text-cream min-h-screen antialiased">
+        <AgeGate />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-FDR59PG52C"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FDR59PG52C');
+          `}
+        </Script>
         <Script
           src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=pk_ec707a288a01d41d1b31745bb1ce1c0a0f"
           strategy="afterInteractive"
@@ -104,6 +133,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <CartDrawer />
           <ExitIntentPopup />
           <main className="relative z-10 pt-24">{children}</main>
+          <ChatWidget />
           <Footer />
           <DisclaimerBanner />
         </CartProvider>

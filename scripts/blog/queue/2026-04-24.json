@@ -1,0 +1,677 @@
+{
+  "id": "post-2026-04-24-glp1-generation-gap",
+  "title": "Semaglutide vs Tirzepatide vs Retatrutide Compared",
+  "slug": "semaglutide-vs-tirzepatide-vs-retatrutide-glp1-comparison",
+  "excerpt": "Semaglutide, tirzepatide, and retatrutide each represent a different generation of GLP-1 medicine — single, dual, and triple receptor agonists. Here is how they compare on mechanism, published trial weight loss, and where the field is heading.",
+  "seoTitle": "Semaglutide vs Tirzepatide vs Retatrutide: 2026 GLP-1 Comparison",
+  "seoDescription": "Compare semaglutide, tirzepatide, and retatrutide — mechanisms, published weight-loss data, and what each generation of GLP-1 therapy signals next.",
+  "tags": [
+    "semaglutide",
+    "tirzepatide",
+    "retatrutide",
+    "glp-1",
+    "weight-loss",
+    "peptide-comparison"
+  ],
+  "readingTime": 7,
+  "featured": false,
+  "publishedAt": "2026-04-25T02:23:22.957Z",
+  "body": [
+    {
+      "_type": "block",
+      "_key": "b2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b1",
+          "text": "The conversation around weight-loss medicine has accelerated faster than most people realized. In a span of about five years, the field has moved from a single approved GLP-1 agent for obesity to three distinct molecules — each engaging more hormone receptors than the last, and each posting larger weight-loss numbers in the published literature. Semaglutide, tirzepatide, and retatrutide are not just three names on a menu. They are three generations of obesity pharmacology, and the differences between them are clinically meaningful.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b4",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b3",
+          "text": "Understanding the mechanism behind each molecule explains why the trial outcomes move the way they do — and what to watch for as the next wave of agents reaches the clinic.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b5",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b6",
+          "text": "A Three-Generation Story, In One Paragraph",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b8",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b7",
+          "text": "At the molecular level the trajectory is simple: more receptors engaged, more metabolic levers pulled. Semaglutide is a single receptor agonist (GLP-1). Tirzepatide is a dual receptor agonist (GLP-1 and GIP). Retatrutide is a triple receptor agonist (GLP-1, GIP, and glucagon). Each addition recruits a different metabolic pathway, and the published trial data — while not perfectly linear — reflects that escalation in receptor engagement.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b9",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b10",
+          "text": "Semaglutide: The Single GLP-1 Agonist",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b12",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b11",
+          "text": "Semaglutide was the molecule that turned GLP-1 therapy from a niche diabetes tool into a household conversation. It binds the GLP-1 receptor, which is expressed in pancreatic beta cells, the gut, and central nervous system regions involved in appetite regulation. The downstream effects most patients notice are slower gastric emptying, reduced appetite signaling, and improved glucose-dependent insulin release.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b14",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b13",
+          "text": "In the published STEP trial program, weekly subcutaneous semaglutide at 2.4 mg produced average weight loss in the range of about 14 to 15 percent of baseline body weight over 68 weeks in adults with obesity but without diabetes. STEP 5 extended that data and showed weight loss was sustained out to two years among patients who stayed on therapy. The molecule earned FDA approval for chronic weight management in 2021 under the brand name Wegovy, and remains the most prescribed GLP-1 agent for obesity globally.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b16",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b15",
+          "text": "In compounding terms, semaglutide is the molecule the public knows best — and the one most often misrepresented online. Off the FDA shortage list since early 2025, it can no longer be mass-compounded for general weight-management use; legitimate compounded preparations require patient-specific clinical justification and a licensed prescriber relationship.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b17",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b18",
+          "text": "Tirzepatide: Dual Receptor, A Step-Change in Outcomes",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b20",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b19",
+          "text": "Tirzepatide engages both the GLP-1 receptor and the GIP (glucose-dependent insulinotropic polypeptide) receptor. GIP is a separate incretin hormone that, in concert with GLP-1, modulates insulin secretion, lipid metabolism, and energy expenditure. The dual mechanism is what most analysts now point to as the explanation for tirzepatide producing larger weight-loss numbers in head-to-head trial data.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b22",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b21",
+          "text": "The SURMOUNT-1 trial, published in the New England Journal of Medicine in 2022, reported average weight loss of approximately 20.9 percent at the 15 mg dose over 72 weeks in adults with obesity. That is a meaningful step above the semaglutide numbers in similar populations, though the trials were not direct head-to-head. SURPASS-2, which did compare tirzepatide and semaglutide directly in patients with type 2 diabetes, showed tirzepatide produced greater A1C reduction and greater weight loss across all dose comparisons.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b24",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b23",
+          "text": "Tirzepatide carries dual FDA approvals: Mounjaro for type 2 diabetes (2022) and Zepbound for chronic weight management (2023). Both came off the FDA shortage list in late 2024, narrowing the legitimate compounding pathway in much the same way semaglutide did.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b25",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b26",
+          "text": "Why GIP Matters",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b28",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b27",
+          "text": "A reasonable question: if GIP is a separate incretin, why was it not pursued earlier? The answer is that GIP-only agonists historically did not produce meaningful weight loss on their own. The clinical surprise with tirzepatide was that combining GIP with GLP-1 in a single molecule produced effects greater than the sum of the parts, both on glycemic control and on body composition. That combinatorial logic is the conceptual scaffolding under retatrutide and the next generation of agents.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b29",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b30",
+          "text": "Retatrutide: Triple Agonist, Phase 3 In Progress",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b32",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b31",
+          "text": "Retatrutide is the next molecule in the line. It is a triple receptor agonist that engages GLP-1, GIP, and the glucagon receptor. Adding glucagon receptor agonism is the conceptually interesting move: glucagon is typically thought of as the hormone that opposes insulin, but at the right dose and ratio, glucagon agonism appears to increase energy expenditure and lipolysis without producing the offsetting hyperglycemia a clinician might expect.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b34",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b33",
+          "text": "The phase 2 retatrutide trial, published in NEJM in 2023, reported average weight loss of approximately 24.2 percent at the 12 mg dose over 48 weeks in adults with obesity. That trial was relatively small, but the magnitude of the result drew immediate attention — partly because the weight-loss curve had not visibly plateaued at the trial endpoint. Plain reading: the effect could plausibly be larger with longer follow-up.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b36",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b35",
+          "text": "Retatrutide is currently in phase 3 under the TRIUMPH program. It is not yet FDA-approved and is not commercially available in any legitimate channel. The realistic earliest timeline for FDA approval is 2026 to 2027, dependent on data readouts and the standard review window. Anything advertised as \"compounded retatrutide\" today should be treated as a serious red flag.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b37",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b38",
+          "text": "How the Three Compare on Published Weight Loss",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b40",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b39",
+          "text": "A side-by-side, with the caveat that these are not all from head-to-head trials and the patient populations vary:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b41",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b42",
+          "text": "Semaglutide 2.4 mg weekly (STEP 1, 68 weeks): approximately 14.9 percent average weight loss in adults with obesity.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b43",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b44",
+          "text": "Tirzepatide 15 mg weekly (SURMOUNT-1, 72 weeks): approximately 20.9 percent average weight loss in adults with obesity.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b45",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b46",
+          "text": "Retatrutide 12 mg weekly (Phase 2, 48 weeks): approximately 24.2 percent average weight loss in adults with obesity.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b48",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b47",
+          "text": "The escalation tracks receptor engagement. It also tracks the side-effect profile to a degree — GI tolerability is broadly similar across the class, with nausea, constipation, and occasional vomiting the most consistent reports across the trials. Dose escalation schedules vary by molecule and matter for tolerability; no agent in this class is meant to be started at the maintenance dose.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b49",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b50",
+          "text": "What the Generation Gap Signals",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b52",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b51",
+          "text": "Three observations stand out from the trajectory.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b55",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b53",
+          "text": "First, the field is still moving. ",
+          "marks": [
+            "strong"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "b54",
+          "text": "Each molecule represents a measurable step forward in absolute weight-loss percentages. The trial conversation about what is possible has shifted considerably in just a few years, and the next reading is unlikely to be the last.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b58",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b56",
+          "text": "Second, mechanism complexity is increasing. ",
+          "marks": [
+            "strong"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "b57",
+          "text": "The shift from one receptor to two to three suggests the next wave will be even more pleiotropic. Programs targeting amylin agonism, leptin sensitization, growth hormone secretagogues, and other combinations are already in the published research conversation.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b61",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b59",
+          "text": "Third, what counts as standard care is moving with it. ",
+          "marks": [
+            "strong"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "b60",
+          "text": "A patient prescribed semaglutide in 2021 was on the most advanced obesity agent available. By 2024 tirzepatide had taken that position. By the time retatrutide is approved, both earlier molecules will still be in clinical use — but the conversation about first-line therapy will have shifted again.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b62",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b63",
+          "text": "The generation gap between these three molecules is not a marketing story. It is a real shift in what obesity medicine can do — and a useful reminder that pharmacology in this category is still in active development.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b64",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b65",
+          "text": "For US Patients in 2026: The Compounded Picture",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b67",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b66",
+          "text": "The branded versions of semaglutide (Wegovy, Ozempic) and tirzepatide (Zepbound, Mounjaro) are off the FDA shortage list as of late 2024 and early 2025. That ended the broad regulatory window for mass-market 503A compounding of those molecules without patient-specific clinical justification. Patients pursuing legitimate compounded versions today should be working with a licensed prescriber who has documented the clinical rationale, and a 503A compounding pharmacy that operates under USP 797 sterile compounding standards.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b69",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b68",
+          "text": "Retatrutide, because it remains in the clinical pipeline, is not commercially compounded by any legitimate US pharmacy. Any source claiming to sell compounded retatrutide is operating outside both the FDA pipeline and the 503A framework, and should be treated accordingly.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b70",
+      "style": "h3",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b71",
+          "text": "Baseline Questions for Any Compounded Peptide Product",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b72",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b73",
+          "text": "Is the pharmacy USA-based and operating as a 503A facility?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b74",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b75",
+          "text": "Do they comply with USP 797 sterile compounding standards?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b76",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b77",
+          "text": "Is a third-party Certificate of Analysis available on request?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b78",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b79",
+          "text": "Is a licensed prescriber actively involved in the clinical workflow?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b80",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b81",
+          "text": "Is the price plausible relative to the cost of legitimate sterile compounding?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b83",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b82",
+          "text": "A price that is dramatically below other 503A pharmacies for the same product is rarely a discount. It is far more often a signal that one or more of the questions above has been answered the wrong way.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b84",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b85",
+          "text": "Bottom Line",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b87",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b86",
+          "text": "Semaglutide, tirzepatide, and retatrutide are best understood not as competing options at a single moment in time, but as three points along an active pharmacology curve. Each engages more receptors than the one before. Each, in the published literature, has produced larger average weight loss than the one before. And each has carried the obesity-medicine conversation a step forward — first into mainstream clinical use, then into step-change outcomes, and now toward results that would have been considered implausible only a decade ago.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b89",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b88",
+          "text": "The next molecule in this lineage will arrive. The questions worth holding onto are the same ones that have applied at every step: what does the published data actually show, what are the regulatory and quality standards behind any product on the market, and what does a licensed clinician advise for an individual patient.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "b90",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b91",
+          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "marks": []
+        }
+      ]
+    }
+  ]
+}

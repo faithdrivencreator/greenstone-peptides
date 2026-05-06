@@ -1,0 +1,391 @@
+{
+  "id": "post-2026-05-03-tb500-faq",
+  "title": "TB-500 FAQ: Common Questions Answered with Research",
+  "slug": "tb-500-faq-common-questions",
+  "excerpt": "A clinical, citation-friendly FAQ on TB-500 — what it is, how thymosin beta-4 fits in, what the published research supports, how 503A compounding applies, storage context, and how athletes should think about it. Clear answers, no hype.",
+  "seoTitle": "TB-500 FAQ: Common Questions Answered with Research",
+  "seoDescription": "A clinical FAQ on TB-500 — what it is, how it's studied, how 503A compounding applies, storage and reconstitution, and what the research shows.",
+  "tags": [
+    "tb-500",
+    "thymosin-beta-4",
+    "faq",
+    "peptide-faq",
+    "recovery",
+    "research-peptides",
+    "503a-compounding"
+  ],
+  "readingTime": 4,
+  "featured": false,
+  "publishedAt": "2026-05-03T11:10:00.000Z",
+  "body": [
+    {
+      "_type": "block",
+      "_key": "intro1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro1s",
+          "text": "TB-500 is one of the most asked-about peptides in the recovery and tissue-repair conversation, and most of what circulates online is anecdotal. This FAQ collects the questions people actually search for and answers them in plain language — grounded in the published research, the chemistry of thymosin beta-4, and how 503A compounding pharmacies actually handle the product.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "intro2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro2s",
+          "text": "Greenstone Peptides supplies TB-500 through licensed U.S. 503A compounding pharmacies, sterile-filled and third-party tested. The notes below are educational and intended to help you ask better questions of your prescribing clinician — not a substitute for that conversation.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_1",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2_1s",
+          "text": "What is TB-500?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a1s",
+          "text": "TB-500 is a synthetic peptide fragment derived from thymosin beta-4, a 43-amino-acid protein found in nearly every human cell. The fragment reproduces a key bioactive sequence of the parent molecule — the region most associated in the literature with actin binding and cell migration. It is typically supplied as a lyophilized (freeze-dried) powder for reconstitution and subcutaneous injection in research settings.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_2",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2_2s",
+          "text": "Is TB-500 the same as thymosin beta-4?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a2s",
+          "text": "Not quite. Thymosin beta-4 is the full 43-amino-acid native protein. TB-500 is a synthetic fragment that contains a key active region of that protein. In research papers the two are often discussed together because their proposed mechanisms — actin sequestration, cell migration, and angiogenesis — overlap. Most products marketed in the U.S. as TB-500 are the fragment, supplied lyophilized for stability.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_3",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2_3s",
+          "text": "What does the research actually show?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a3s",
+          "text": "The published evidence base for TB-500 / thymosin beta-4 is primarily preclinical — animal models and in vitro work. Studies have explored wound healing, post-infarction cardiac repair, equine tendon and muscle injury, corneal healing, and neurological repair, with consistent reports of accelerated cell migration, angiogenesis, and reduced inflammatory signaling.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a3b",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a3bs",
+          "text": "Human clinical trial data is far more limited than the animal-model literature, and that distinction matters. Outcomes from rodent or equine models should not be presented as proven human outcomes — they are signals, not endpoints.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_4",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2_4s",
+          "text": "How is TB-500 different from BPC-157?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a4",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a4s",
+          "text": "TB-500 and BPC-157 are frequently grouped as \"recovery peptides,\" but they are mechanistically distinct. TB-500 is associated primarily with actin binding, cell migration, and angiogenesis derived from thymosin beta-4 biology. BPC-157 is a 15-amino-acid peptide derived from a gastric protective protein and is most heavily studied in gastrointestinal mucosa, tendon, and ligament models. Some users discuss stacking the two; the published literature does not clearly establish a synergy beyond what each shows individually.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_5",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2_5s",
+          "text": "How is TB-500 stored and reconstituted?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a5",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a5s",
+          "text": "Lyophilized TB-500 is stored refrigerated and away from direct light prior to reconstitution. After reconstitution with bacteriostatic water (0.9% benzyl alcohol), the solution is generally kept refrigerated and used within a defined window — commonly several weeks, depending on the formulation. These are general best practices for lyophilized peptides; the specific dilution volume and storage window should be confirmed with the prescribing pharmacy.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_6",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2_6s",
+          "text": "What is 503A compounding, and how does it apply to TB-500?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a6",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a6s",
+          "text": "503A refers to the section of the Federal Food, Drug, and Cosmetic Act that governs traditional compounding pharmacies — facilities that prepare individualized prescriptions for specific patients. Greenstone's TB-500 is compounded in U.S. 503A facilities, sterile-filled under USP 797 conditions, and paired with third-party purity testing. The 503A pathway is the legitimate U.S. framework for prescription peptide products that are not commercially available as FDA-approved drugs.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_7",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2_7s",
+          "text": "Is TB-500 FDA-approved?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a7",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a7s",
+          "text": "TB-500 is not an FDA-approved drug. It is a research peptide dispensed in the U.S. through 503A compounding pharmacies on patient-specific prescriptions. That is a distinct regulatory category from FDA-approved pharmaceutical products and should be understood as such when evaluating any source.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_8",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2_8s",
+          "text": "Can competitive athletes use TB-500?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a8",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a8s",
+          "text": "TB-500 / thymosin beta-4 is listed by the World Anti-Doping Agency (WADA) as a prohibited substance, both in and out of competition. Athletes subject to WADA-aligned testing programs — Olympic, NCAA, and most professional leagues that defer to WADA standards — should treat it as banned and confirm specifics with their governing body before any decision.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_9",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2_9s",
+          "text": "How is TB-500 typically dosed in research?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a9",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a9s",
+          "text": "Greenstone does not publish dosing protocols. The literature uses a wide range of dosing schedules across animal models, and human dosing — where it is discussed — is highly individualized. Any dosing decision should be made with a licensed clinician who can weigh the research base, the individual's clinical context, and the regulatory environment.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_10",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2_10s",
+          "text": "How can I tell if a TB-500 source is legitimate?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "a10",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a10s",
+          "text": "A legitimate U.S. source will operate through a licensed 503A compounding pharmacy, require a valid prescription, and provide third-party testing documentation. Domestic sourcing of the active pharmaceutical ingredient, sterile-fill in ISO-classified cleanrooms, and clear shipping protocols (cold-chain where appropriate) are additional quality signals. Vendors selling \"research only\" peptides without prescription oversight, lab work, or pharmacy licensure sit outside that framework — and the gap shows up in quality.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "outro_h",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "outro_hs",
+          "text": "Bottom Line",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "outro1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "outro1s",
+          "text": "TB-500 is a research peptide with a deep preclinical literature, a more limited human dataset, and a clear regulatory home in 503A compounding. Treated with that framing — and discussed with a clinician — it is a substance you can evaluate carefully rather than chase on hype.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "disclaimer",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "discs",
+          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "marks": []
+        }
+      ]
+    }
+  ],
+  "relatedProducts": ["tb500-5mg", "tb500-10mg"],
+  "mainImage": {
+    "assetId": "image-b4701389f63150a69080e93f0c3c8d7efb189e0d-2752x1536-jpg",
+    "alt": "Bold editorial graphic for TB-500 FAQ: Common Questions Answered with Research"
+  }
+}

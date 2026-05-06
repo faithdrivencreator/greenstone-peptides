@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import type { Product } from '@/types';
+import { trackAddToCart } from '@/lib/gtag';
 
 export interface CartItem {
   productId: string;
@@ -69,6 +70,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
           slug: product.slug.current,
         },
       ];
+    });
+    trackAddToCart({
+      productId: product._id,
+      name: product.name,
+      price: product.price,
+      strength: product.strength,
+      size: product.size,
+      format: product.format,
     });
     setIsOpen(true);
   }, []);

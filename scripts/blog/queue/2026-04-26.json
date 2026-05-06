@@ -1,0 +1,470 @@
+{
+  "id": "post-2026-04-26-bpc157-faq",
+  "title": "BPC-157 FAQ: Common Questions Answered with Research",
+  "slug": "bpc-157-faq-common-questions",
+  "excerpt": "A clinical, citation-friendly FAQ on BPC-157 — what it is, how it's actually studied, how 503A compounding works, what the published research supports, dosing and storage context, and how to evaluate whether a peptide source is legitimate. Clear answers, no hype.",
+  "seoTitle": "BPC-157 FAQ: Common Questions Answered with Research",
+  "seoDescription": "A clinical FAQ on BPC-157 — what it is, how it's studied, how it's compounded, dosing context, and what the published research actually shows.",
+  "tags": [
+    "bpc-157",
+    "faq",
+    "peptide-faq",
+    "recovery",
+    "research-peptides",
+    "503a-compounding"
+  ],
+  "readingTime": 3,
+  "featured": false,
+  "publishedAt": "2026-04-26T13:00:00.000Z",
+  "body": [
+    {
+      "_type": "block",
+      "_key": "intro1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro1s",
+          "text": "BPC-157 is one of the most asked-about research peptides in recovery and connective-tissue science. Most online conversations are loud, anecdotal, and missing the clinical context. This FAQ collects the questions people actually search for and answers them in plain language — grounded in what the published research supports, what 503A compounding looks like, and what is still open.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "intro2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro2s",
+          "text": "Greenstone Peptides supplies BPC-157 through licensed U.S. 503A compounding pharmacies, sterile-filled and third-party tested. The notes below are educational and intended to help you ask better questions of your prescribing clinician.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_1",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_1s", "text": "What is BPC-157?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_1s",
+          "text": "BPC-157 — short for Body Protection Compound-157 — is a synthetic 15-amino-acid peptide derived from a sequence identified in human gastric juice. It has been studied for more than two decades, primarily in animal models, for effects on tissue repair, vascular activity, and gastrointestinal protection.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_2",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_2s", "text": "Is BPC-157 FDA-approved?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_2s",
+          "text": "No. BPC-157 is not FDA-approved as a finished pharmaceutical drug. In the United States it is available through 503A compounding pharmacies for individualized prescriptions, and it is also widely sold and labeled as a research peptide. It is not an over-the-counter supplement.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_3",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_3s", "text": "How is BPC-157 typically administered?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_3s",
+          "text": "Published research has used multiple routes of administration:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_3a",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_3as", "text": "Subcutaneous injection (most common in clinical contexts)", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_3b",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_3bs", "text": "Intramuscular injection", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_3c",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_3cs", "text": "Oral routes (primarily in animal studies)", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_3b",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_3bs",
+          "text": "Greenstone supplies sterile, lyophilized vials in 5mg and 10mg/mL concentrations for use under a clinician's direction.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_4",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_4s", "text": "What does the research actually show?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_4",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_4s",
+          "text": "The bulk of BPC-157 evidence is preclinical — primarily rodent studies. Reported effects include:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_4a",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_4as", "text": "Tendon-to-bone and ligament healing in injury models", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_4b",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_4bs", "text": "Wound and gastric ulcer recovery", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_4c",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_4cs", "text": "Reduction of inflammatory markers in gut tissue", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_4d",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_4ds", "text": "Vascular and angiogenic activity in damaged tissue models", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_4b",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_4bs",
+          "text": "Human clinical trial data remains limited. Anecdotal user reports are widespread but should not be conflated with published efficacy data.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_5",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_5s", "text": "Are there any human clinical trials?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_5",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_5s",
+          "text": "A small number of early-phase clinical investigations have been registered, including studies on inflammatory bowel conditions. The published human evidence base is still thin compared to the preclinical literature. When evaluating claims, look at study type, sample size, and whether outcomes were measured in humans or animals.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_6",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_6s", "text": "What does \"503A compounded\" mean?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_6",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_6s",
+          "text": "Section 503A of the U.S. Food, Drug, and Cosmetic Act allows licensed pharmacies to compound individualized medications based on a valid prescription. Greenstone partners with U.S. 503A pharmacies that operate under state board oversight, follow USP standards for sterile preparations, and use third-party potency and sterility testing. This is a different regulatory pathway than mass-manufactured pharmaceuticals — it is purpose-built for patient-specific prescriptions.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_7",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_7s", "text": "What is the difference between BPC-157 5mg and 10mg/mL?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_7",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_7s",
+          "text": "The 5mg label refers to the total peptide content per vial. The 10mg/mL label refers to concentration after reconstitution. A higher concentration means a smaller injection volume per dose — useful for protocols requiring frequent dosing or larger total amounts. Both formats serve different research and clinical preferences and are dispensed against an active prescription.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_8",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_8s", "text": "Are there reported side effects?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_8",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_8s",
+          "text": "Reported adverse effects in published research are minimal at the doses studied, though long-term human safety data is incomplete. Patient-reported responses most often involve mild, transient injection site reactions. Any therapy decision should be made with a licensed clinician who can review your individual history, current medications, and clinical goals.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_9",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_9s", "text": "How should BPC-157 be stored?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_9",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_9s",
+          "text": "Lyophilized vials are typically stored at controlled room temperature, away from direct light, until reconstitution. Once reconstituted with bacteriostatic water, vials are stored refrigerated between 2 and 8 degrees Celsius and used within the timeframe specified by the dispensing pharmacy or prescribing provider. Always follow the labeled storage instructions on the vial you receive.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_10",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_10s", "text": "How can I tell whether a peptide source is legitimate?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_10",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_10s",
+          "text": "A few markers separate clinical-grade sources from gray-market suppliers:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_10a",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_10as", "text": "Dispensed against a valid prescription through a licensed U.S. 503A pharmacy", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_10b",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_10bs", "text": "Third-party potency and sterility testing available on request", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_10c",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_10cs", "text": "Clear labeling, batch numbers, and expiration dating", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li_10d",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "li_10ds", "text": "Sterile presentation in tamper-evident vials, not loose powder", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2_11",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2_11s", "text": "Where can I learn more?", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p_11",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p_11s",
+          "text": "The Greenstone Learn library covers peptide science, formulation standards, and the clinical context behind each compound we carry. For protocol- or dose-specific questions, work directly with a prescribing physician familiar with your case.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "disclaimer",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "disclaimers",
+          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "marks": ["em"]
+        }
+      ]
+    }
+  ],
+  "relatedProducts": ["bpc157-5mg", "bpc157-10mg"],
+  "mainImage": {
+    "assetId": "image-7f34d3d26c10f651f5702e991e2fbb64c2768e4c-2752x1536-jpg",
+    "alt": "Editorial concept image representing common BPC-157 research questions and clinical context"
+  }
+}

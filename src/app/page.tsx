@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
   description:
     'Premium peptide formulations compounded in the USA under USP 797 sterile standards. Third-party tested for potency and purity. Shop semaglutide, tirzepatide, BPC-157, NAD+, and more.',
+  alternates: { canonical: '/' },
 };
 
 export const revalidate = 300;
@@ -37,8 +38,8 @@ export default async function HomePage() {
       {/* ---------- ANNOUNCEMENT BANNER ---------- */}
       <div className="bg-emerald text-obsidian py-2.5 text-center font-jetbrains text-[0.65rem] tracking-[0.15em] uppercase">
         New: Retatrutide — the first triple agonist peptide for weight management{' '}
-        <Link href="/shop?category=weight-loss" className="ml-1 underline underline-offset-2 font-bold hover:opacity-80 transition-opacity">
-          Shop Weight Loss →
+        <Link href="/shop/retatrutide-20mg-ml-3ml" className="ml-1 underline underline-offset-2 font-bold hover:opacity-80 transition-opacity">
+          Shop Retatrutide →
         </Link>
       </div>
 

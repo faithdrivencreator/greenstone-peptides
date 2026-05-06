@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
@@ -19,8 +19,26 @@ const NAV_LINKS = [
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
   const pathname = usePathname();
   const { totalItems, openCart } = useCart();
+
+  function handleTouchStart(e: React.TouchEvent) {
+    touchStartRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  }
+
+  function handleTouchEnd(e: React.TouchEvent) {
+    if (!touchStartRef.current) return;
+    const dx = e.changedTouches[0].clientX - touchStartRef.current.x;
+    const dy = e.changedTouches[0].clientY - touchStartRef.current.y;
+    // Swipe up >60px OR swipe right >60px closes the drawer
+    if (dy < -60 || dx > 60) setMobileOpen(false);
+    touchStartRef.current = null;
+  }
+
+  function handleBackgroundClick(e: React.MouseEvent) {
+    if (e.target === e.currentTarget) setMobileOpen(false);
+  }
 
   // Sticky nav scroll listener — add .scrolled class after 20px
   useEffect(() => {
@@ -145,30 +163,37 @@ export function Navigation() {
       {/* Mobile drawer */}
       <div
         className={clsx(
-          'fixed inset-0 z-40 lg:hidden flex flex-col items-center justify-center gap-8 bg-obsidian transition-transform duration-[400ms] ease-smooth',
+          'fixed inset-0 z-[55] lg:hidden bg-obsidian overflow-y-auto overscroll-contain transition-transform duration-[400ms] ease-smooth',
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         )}
         aria-hidden={!mobileOpen}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
-        {NAV_LINKS.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="font-cormorant text-3xl text-cream hover:text-gold transition-colors"
-          >
-            {link.label}
-          </Link>
-        ))}
-        <Link href="/contact" className="btn btn-primary mt-4">
-          Get Started
-        </Link>
-        <Link
-          href="/wholesale/login"
-          className="inline-flex items-center gap-2 font-jetbrains text-xs tracking-widest uppercase text-emerald hover:text-emerald-light transition-colors"
+        <div
+          onClick={handleBackgroundClick}
+          className="min-h-full flex flex-col items-center gap-7 px-6 pt-24 pb-40"
         >
-          <Lock size={11} />
-          Distributor Login
-        </Link>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="font-cormorant text-3xl text-cream hover:text-gold transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link href="/contact" className="btn btn-primary mt-2">
+            Get Started
+          </Link>
+          <Link
+            href="/wholesale/login"
+            className="inline-flex items-center gap-2 font-jetbrains text-xs tracking-widest uppercase text-emerald hover:text-emerald-light transition-colors"
+          >
+            <Lock size={11} />
+            Distributor Login
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { X, Minus, Plus, ShoppingCart } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
+import { trackBeginCheckout } from '@/lib/gtag';
 
 export function CartDrawer() {
   const { items, isOpen, closeCart, removeItem, updateQty, subtotal, totalItems } = useCart();
@@ -11,6 +12,7 @@ export function CartDrawer() {
   const [error, setError] = useState<string | null>(null);
   const [coupon, setCoupon] = useState('');
   const [couponApplied, setCouponApplied] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
 
   // Trap focus and close on Escape
@@ -32,6 +34,16 @@ export function CartDrawer() {
   async function handleCheckout() {
     setChecking(true);
     setError(null);
+    trackBeginCheckout(
+      items.map((i) => ({
+        item_id: i.productId,
+        item_name: i.name,
+        price: i.price,
+        quantity: i.qty,
+        item_variant: [i.strength, i.size, i.format].filter(Boolean).join(' · ') || undefined,
+      })),
+      subtotal,
+    );
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
@@ -201,16 +213,36 @@ export function CartDrawer() {
               <p className="text-xs text-error font-jetbrains">{error}</p>
             )}
 
+            <label className="flex items-start gap-3 cursor-pointer group">
+              <input
+                type="checkbox"
+                checked={termsAccepted}
+                onChange={(e) => setTermsAccepted(e.target.checked)}
+                className="mt-0.5 h-4 w-4 shrink-0 appearance-none border border-gold/30 bg-obsidian-light checked:bg-emerald checked:border-emerald cursor-pointer transition-colors"
+              />
+              <span className="text-xs text-cream-dim leading-relaxed">
+                I confirm I am 18 years or older and agree to the{' '}
+                <Link
+                  href="/terms"
+                  onClick={closeCart}
+                  className="text-gold hover:text-gold-light transition-colors underline underline-offset-2"
+                >
+                  Terms of Service
+                </Link>
+                .
+              </span>
+            </label>
+
             <button
               onClick={handleCheckout}
-              disabled={checking}
+              disabled={checking || !termsAccepted}
               className="btn btn-primary w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {checking ? 'Processing...' : 'Proceed to Checkout'}
             </button>
 
             <p className="text-[0.65rem] text-cream-dim/50 leading-relaxed text-center font-jetbrains">
-              Compounded to order under USP 797 sterile standards by our USA pharmacy partners.
+              For research use only. Compounded under USP 797 sterile standards by USA pharmacy partners.
             </p>
           </div>
         )}

@@ -1,0 +1,40 @@
+{
+  "id": "post-dryrun-test-do-not-publish",
+  "title": "Dry-Run Test Post — Do Not Publish",
+  "slug": "dryrun-test-do-not-publish",
+  "excerpt": "This is a synthetic post used to verify that scripts/blog-publish.mjs loads env, validates, and constructs a Sanity document correctly. Should never be sent live.",
+  "seoTitle": "Dry-Run Test Post",
+  "seoDescription": "Synthetic post to verify the daily publisher script wiring. Not for production.",
+  "tags": ["test", "dryrun"],
+  "readingTime": 1,
+  "featured": false,
+  "body": [
+    {
+      "_type": "block",
+      "_key": "p1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "p1s", "text": "This is a dry-run validation post.", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2-1",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "h2-1s", "text": "Section header", "marks": [] }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        { "_type": "span", "_key": "p2s", "text": "If this prints in dry-run output, the publisher pipeline works end-to-end.", "marks": [] }
+      ]
+    }
+  ]
+}

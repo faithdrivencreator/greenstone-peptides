@@ -15,6 +15,11 @@ export function ExitIntentPopup() {
   const triggered = useRef(false);
 
   useEffect(() => {
+    // Never show popup until age gate is verified
+    try {
+      if (localStorage.getItem('gr_age_verified_v1') !== 'true') return;
+    } catch {}
+
     // Check if dismissed within suppression window
     try {
       const stored = localStorage.getItem(STORAGE_KEY);

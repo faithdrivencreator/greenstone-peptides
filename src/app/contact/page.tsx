@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Contact',
   description:
     'Contact Greenstone Peptides for product questions, wholesale inquiries, or general support.',
+  alternates: { canonical: '/contact' },
 };
 
 export default function ContactPage() {
