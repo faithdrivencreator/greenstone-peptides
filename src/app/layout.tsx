@@ -112,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-obsidian text-cream min-h-screen antialiased">
         <AgeGate />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-FDR59PG52C"
+          src="https://www.googletagmanager.com/gtag/js?id=G-WP0ECFJPB8"
           strategy="afterInteractive"
         />
         <Script id="ga4-init" strategy="afterInteractive">
@@ -120,7 +120,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-FDR59PG52C');
+            gtag('config', 'G-WP0ECFJPB8');
           `}
         </Script>
         <Script
