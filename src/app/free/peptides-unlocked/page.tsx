@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { EbookCaptureForm } from '@/components/EbookCaptureForm';
 import { SchemaOrg } from '@/components/SchemaOrg';
 
@@ -16,11 +17,20 @@ export const metadata: Metadata = {
       'Your 48-hour blueprint for safe, research-backed results. Sent to your inbox in 60 seconds.',
     url: `${SITE_URL}/free/peptides-unlocked`,
     type: 'website',
+    images: [
+      {
+        url: '/images/ebook-covers/peptides-unlocked-cover.jpg',
+        width: 1200,
+        height: 1608,
+        alt: 'Peptides Unlocked — Volume II free guide cover',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Peptides Unlocked — Free Guide (Volume II)',
     description: 'Your 48-hour blueprint for safe, research-backed results.',
+    images: ['/images/ebook-covers/peptides-unlocked-cover.jpg'],
   },
 };
 
@@ -88,7 +98,7 @@ export default function PeptidesUnlockedPage() {
           aria-hidden
         />
         <div className="container-gr relative z-10 grid gap-12 lg:grid-cols-[1.05fr_1fr] items-center">
-          {/* LEFT */}
+          {/* LEFT — real cover */}
           <div>
             <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-gold mb-4">
               Free Guide · Lead Magnet 02 · Volume II
@@ -102,62 +112,15 @@ export default function PeptidesUnlockedPage() {
               Your 48-hour blueprint for safe, research-backed results.
             </p>
 
-            {/* Book cover */}
-            <div className="mt-10 max-w-sm">
-              <div
-                className="relative aspect-[3/4] bg-obsidian-mid border border-gold/40 shadow-2xl overflow-hidden"
-                style={{ background: 'linear-gradient(160deg, #1E2738 0%, #0D1117 60%, #161C26 100%)' }}
-              >
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gold" />
-                <div className="absolute inset-0 flex flex-col justify-between p-7">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <p className="font-jetbrains text-[0.55rem] tracking-[0.25em] uppercase text-gold/80">
-                        Greenstone Peptides
-                      </p>
-                      <div className="w-10 h-px bg-gold/60 mt-3" />
-                    </div>
-                    <p className="font-jetbrains text-[0.55rem] tracking-[0.25em] uppercase text-gold/70">
-                      Vol. II
-                    </p>
-                  </div>
-
-                  <div className="flex-1 flex items-center justify-center">
-                    <svg
-                      viewBox="0 0 120 120"
-                      className="w-32 h-32 opacity-80"
-                      aria-hidden
-                    >
-                      <g fill="none" stroke="#C9A96E" strokeWidth="1.2">
-                        <circle cx="60" cy="20" r="6" />
-                        <circle cx="22" cy="40" r="6" />
-                        <circle cx="98" cy="40" r="6" />
-                        <circle cx="22" cy="80" r="6" />
-                        <circle cx="98" cy="80" r="6" />
-                        <circle cx="60" cy="100" r="6" />
-                        <circle cx="60" cy="60" r="8" stroke="#26C98A" />
-                        <line x1="60" y1="20" x2="60" y2="60" />
-                        <line x1="22" y1="40" x2="60" y2="60" />
-                        <line x1="98" y1="40" x2="60" y2="60" />
-                        <line x1="60" y1="60" x2="22" y2="80" />
-                        <line x1="60" y1="60" x2="98" y2="80" />
-                        <line x1="60" y1="60" x2="60" y2="100" />
-                      </g>
-                    </svg>
-                  </div>
-
-                  <div>
-                    <h2 className="font-cormorant text-3xl text-cream leading-tight">
-                      Peptides
-                      <br />
-                      <em className="italic text-gold">Unlocked</em>
-                    </h2>
-                    <p className="mt-2 font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-cream-dim/70">
-                      Volume II · The 48-hour blueprint
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="mt-10 w-full max-w-md shadow-[0_20px_60px_-15px_rgba(26,158,110,0.25)]">
+              <Image
+                src="/images/ebook-covers/peptides-unlocked-cover.webp"
+                alt="Peptides Unlocked — Volume II free guide cover"
+                width={600}
+                height={800}
+                priority
+                className="w-full h-auto"
+              />
             </div>
           </div>
 

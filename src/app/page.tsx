@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getFeaturedProducts, getRecentBlogPosts, getAllCategories } from '@/lib/queries';
 import { ProductCard } from '@/components/ProductCard';
@@ -198,57 +199,43 @@ export default async function HomePage() {
             {[
               {
                 href: '/free/peptides-made-easy',
-                eyebrow: 'Volume I',
-                title: 'Peptides Made Easy',
-                sub: 'The first 72 hours',
-                body: 'A plain-language primer for anyone new to peptides. What they are, how to start safely, and what to expect.',
+                cover: '/images/ebook-covers/peptides-made-easy-cover.webp',
+                alt: 'Peptides Made Easy — Volume I free guide cover',
+                caption: '18 pages · Beginner-friendly',
+                shadow:
+                  'shadow-[0_20px_60px_-15px_rgba(201,169,110,0.25)] hover:shadow-[0_30px_80px_-15px_rgba(201,169,110,0.4)]',
               },
               {
                 href: '/free/peptides-unlocked',
-                eyebrow: 'Volume II',
-                title: 'Peptides Unlocked',
-                sub: 'The 48-hour blueprint',
-                body: 'Match peptides to your goals. A real sourcing checklist, plus a 48-hour research framework.',
+                cover: '/images/ebook-covers/peptides-unlocked-cover.webp',
+                alt: 'Peptides Unlocked — Volume II free guide cover',
+                caption: '23 pages · Build your protocol',
+                shadow:
+                  'shadow-[0_20px_60px_-15px_rgba(26,158,110,0.25)] hover:shadow-[0_30px_80px_-15px_rgba(26,158,110,0.4)]',
               },
             ].map((guide) => (
               <Link
                 key={guide.href}
                 href={guide.href}
-                className="card-glass border-gold/20 hover:border-gold/40 transition-colors group/g flex gap-5 items-stretch !p-5"
+                className="card-glass border-gold/20 hover:border-gold/40 transition-all duration-300 group/g flex gap-5 items-center !p-5 hover:-translate-y-1"
               >
-                {/* Mini cover */}
-                <div
-                  className="relative w-24 sm:w-28 flex-shrink-0 aspect-[3/4] border border-gold/30 overflow-hidden"
-                  style={{ background: 'linear-gradient(160deg, #161C26 0%, #0D1117 60%, #161C26 100%)' }}
-                  aria-hidden
-                >
-                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-gold" />
-                  <div className="absolute inset-0 flex flex-col justify-between p-3">
-                    <p className="font-jetbrains text-[0.5rem] tracking-[0.2em] uppercase text-gold/80">
-                      Greenstone
-                    </p>
-                    <div>
-                      <p className="font-cormorant text-sm text-cream leading-tight">
-                        {guide.title.split(' ')[0]}
-                      </p>
-                      <p className="font-cormorant text-sm italic text-gold leading-tight">
-                        {guide.title.split(' ').slice(1).join(' ')}
-                      </p>
-                    </div>
-                  </div>
+                {/* Real cover */}
+                <div className={`relative w-28 sm:w-32 flex-shrink-0 transition-transform duration-300 group-hover/g:scale-[1.02] ${guide.shadow}`}>
+                  <Image
+                    src={guide.cover}
+                    alt={guide.alt}
+                    width={400}
+                    height={534}
+                    priority={false}
+                    className="w-full h-auto rounded-sm"
+                  />
                 </div>
                 {/* Body */}
                 <div className="flex flex-col justify-between flex-1 min-w-0">
-                  <div>
-                    <p className="font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-gold/80 mb-1.5">
-                      {guide.eyebrow} · {guide.sub}
-                    </p>
-                    <h3 className="font-cormorant text-2xl text-cream leading-tight">
-                      {guide.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-cream-dim leading-relaxed">{guide.body}</p>
-                  </div>
-                  <p className="mt-4 font-jetbrains text-[0.7rem] tracking-[0.15em] uppercase text-emerald group-hover/g:text-emerald-light transition-colors">
+                  <p className="font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-gold/80 mb-2">
+                    {guide.caption}
+                  </p>
+                  <p className="font-jetbrains text-[0.7rem] tracking-[0.15em] uppercase text-emerald group-hover/g:text-emerald-light transition-colors">
                     Read free &rarr;
                   </p>
                 </div>

@@ -22,6 +22,7 @@ interface EbookConfig {
   intro: string;
   discountCode: string;
   discountLabel: string;
+  coverImage: string;
 }
 
 const EBOOKS: Record<Ebook, EbookConfig> = {
@@ -33,6 +34,7 @@ const EBOOKS: Record<Ebook, EbookConfig> = {
       "Welcome — and thank you for downloading <em>Peptides Made Easy</em>. This is the same plain-language explainer we share with first-time customers and curious researchers who want a clear, honest starting point.",
     discountCode: 'WELCOME10',
     discountLabel: '10% off your first order',
+    coverImage: '/images/ebook-covers/peptides-made-easy-cover.jpg',
   },
   unlocked: {
     filename: 'greenstone-peptides-unlocked.pdf',
@@ -42,6 +44,7 @@ const EBOOKS: Record<Ebook, EbookConfig> = {
       "Welcome to Volume II. <em>Peptides Unlocked</em> goes deeper — matching peptide families to research goals, and walking through the quality and sourcing checks worth running before any protocol.",
     discountCode: 'RESEARCH15',
     discountLabel: '15% off your next order',
+    coverImage: '/images/ebook-covers/peptides-unlocked-cover.jpg',
   },
 };
 
@@ -63,6 +66,7 @@ function siteUrl(): string {
 
 function buildEmailHtml(config: EbookConfig, firstName: string | undefined, downloadUrl: string): string {
   const greeting = firstName ? `Hi ${escapeHtml(firstName)},` : 'Hi there,';
+  const coverUrl = `${siteUrl()}${config.coverImage}`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,7 +88,12 @@ function buildEmailHtml(config: EbookConfig, firstName: string | undefined, down
             </td>
           </tr>
           <tr>
-            <td style="padding:8px 32px 0 32px;text-align:center;">
+            <td style="padding:24px 32px 0 32px;text-align:center;">
+              <img src="${coverUrl}" alt="${escapeHtml(config.title)} cover" width="200" style="display:inline-block;width:200px;max-width:60%;height:auto;border:0;outline:none;text-decoration:none;" />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:24px 32px 0 32px;text-align:center;">
               <h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:32px;line-height:1.2;color:#F5F1EB;font-weight:normal;">
                 Your guide is ready.
               </h1>
