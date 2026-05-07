@@ -184,6 +184,80 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ---------- FREE GUIDES STRIP ---------- */}
+      <section className="section-py">
+        <div className="container-gr">
+          <header className="text-center mb-10 max-w-2xl mx-auto">
+            <p className="eyebrow text-gold">Free Guides</p>
+            <h2 className="font-cormorant">Two short reads to start with confidence</h2>
+            <p className="mt-3 text-sm text-cream-dim">
+              Plain language. No fluff. Sent to your inbox in 60 seconds.
+            </p>
+          </header>
+          <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+            {[
+              {
+                href: '/free/peptides-made-easy',
+                eyebrow: 'Volume I',
+                title: 'Peptides Made Easy',
+                sub: 'The first 72 hours',
+                body: 'A plain-language primer for anyone new to peptides. What they are, how to start safely, and what to expect.',
+              },
+              {
+                href: '/free/peptides-unlocked',
+                eyebrow: 'Volume II',
+                title: 'Peptides Unlocked',
+                sub: 'The 48-hour blueprint',
+                body: 'Match peptides to your goals. A real sourcing checklist, plus a 48-hour research framework.',
+              },
+            ].map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="card-glass border-gold/20 hover:border-gold/40 transition-colors group/g flex gap-5 items-stretch !p-5"
+              >
+                {/* Mini cover */}
+                <div
+                  className="relative w-24 sm:w-28 flex-shrink-0 aspect-[3/4] border border-gold/30 overflow-hidden"
+                  style={{ background: 'linear-gradient(160deg, #161C26 0%, #0D1117 60%, #161C26 100%)' }}
+                  aria-hidden
+                >
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-gold" />
+                  <div className="absolute inset-0 flex flex-col justify-between p-3">
+                    <p className="font-jetbrains text-[0.5rem] tracking-[0.2em] uppercase text-gold/80">
+                      Greenstone
+                    </p>
+                    <div>
+                      <p className="font-cormorant text-sm text-cream leading-tight">
+                        {guide.title.split(' ')[0]}
+                      </p>
+                      <p className="font-cormorant text-sm italic text-gold leading-tight">
+                        {guide.title.split(' ').slice(1).join(' ')}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* Body */}
+                <div className="flex flex-col justify-between flex-1 min-w-0">
+                  <div>
+                    <p className="font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-gold/80 mb-1.5">
+                      {guide.eyebrow} · {guide.sub}
+                    </p>
+                    <h3 className="font-cormorant text-2xl text-cream leading-tight">
+                      {guide.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-cream-dim leading-relaxed">{guide.body}</p>
+                  </div>
+                  <p className="mt-4 font-jetbrains text-[0.7rem] tracking-[0.15em] uppercase text-emerald group-hover/g:text-emerald-light transition-colors">
+                    Read free &rarr;
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ---------- FEATURED PRODUCTS (moved above fold) ---------- */}
       {featured.length > 0 && (
         <section className="section-py">

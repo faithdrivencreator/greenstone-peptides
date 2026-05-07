@@ -31,6 +31,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: '/safety', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/provider', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/wholesale', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/free/peptides-made-easy', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/free/peptides-unlocked', priority: 0.8, changeFrequency: 'monthly' as const },
   ];
 
   const [productSlugs, blogSlugs] = await Promise.all([

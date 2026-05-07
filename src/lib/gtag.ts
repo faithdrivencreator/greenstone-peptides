@@ -86,3 +86,10 @@ export function trackPurchase(params: {
     items: params.items,
   });
 }
+
+export function trackLeadCapture(params: { ebook: 'made-easy' | 'unlocked'; method?: string }) {
+  track('generate_lead', {
+    method: params.method || 'ebook_landing',
+    ebook: params.ebook,
+  });
+}
