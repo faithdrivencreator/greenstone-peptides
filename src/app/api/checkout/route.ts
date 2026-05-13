@@ -31,6 +31,9 @@ export async function POST(req: NextRequest) {
       return `${label} x${item.qty}`;
     });
     const metadata: Record<string, string> = {
+      source_site: 'greenstonewellness.store',
+      brand: 'greenstone-peptides',
+      revenue_type: 'product_sale',
       item_count: String(items.reduce((sum, i) => sum + i.qty, 0)),
       // Stripe metadata values max 500 chars — truncate if cart is very large
       items_summary: metadataItems.join(' | ').slice(0, 500),
@@ -39,7 +42,12 @@ export async function POST(req: NextRequest) {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_intent_data: {
-        statement_descriptor: 'GREENSTONE PEPTIDE',
+        statement_descriptor: 'GREENSTONE WELLNESS',
+        metadata: {
+          source_site: 'greenstonewellness.store',
+          brand: 'greenstone-peptides',
+          revenue_type: 'product_sale',
+        },
       },
       allow_promotion_codes: !discounts, // show promo code field if no code pre-applied
       ...(discounts ? { discounts } : {}),
