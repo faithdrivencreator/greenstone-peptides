@@ -20,6 +20,50 @@ const ORDERS_FROM = 'Greenstone Peptides <orders@greenstonewellness.store>';
 const SUPPORT_EMAIL = 'support@greenstonewellness.store';
 const SITE_URL = 'https://greenstonewellness.store';
 
+// ─── Per-customer single-use promo codes ─────────────────────────────────────
+
+function shortCodeSuffix(): string {
+  // Crockford-style alphabet: no 0/O/1/I to avoid customer typing mistakes
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let s = '';
+  for (let i = 0; i < 5; i++) s += chars[Math.floor(Math.random() * chars.length)];
+  return s;
+}
+
+async function createPersonalPromoCode({
+  baseCoupon,
+  daysValid,
+}: {
+  baseCoupon: string;
+  daysValid: number;
+}): Promise<string> {
+  const sk = process.env.STRIPE_SECRET_KEY;
+  if (!sk) throw new Error('STRIPE_SECRET_KEY not set');
+  const code = `${baseCoupon}-${shortCodeSuffix()}`;
+  const expiresAt = Math.floor(Date.now() / 1000) + daysValid * 86400;
+  const body = new URLSearchParams({
+    coupon: baseCoupon,
+    code,
+    active: 'true',
+    max_redemptions: '1',
+    expires_at: String(expiresAt),
+  }).toString();
+  const res = await fetch('https://api.stripe.com/v1/promotion_codes', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${sk}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Stripe-Version': '2024-06-20',
+    },
+    body,
+  });
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`Stripe promo create failed: ${res.status} ${errText}`);
+  }
+  return code;
+}
+
 // ─── Customer audience helpers ────────────────────────────────────────────────
 
 async function isReturningCustomer(email: string): Promise<boolean> {
@@ -33,6 +77,45 @@ async function isReturningCustomer(email: string): Promise<boolean> {
   } catch {
     return false;
   }
+}
+
+// ─── Branded email shell (Greenstone brand tokens) ───────────────────────────
+
+function renderEmailShell({ preheader, body }: { preheader: string; body: string }): string {
+  return `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Greenstone</title></head>
+<body style="margin:0;padding:0;background:#0D1117;color:#F5F1EB">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all">${preheader}</div>
+<div style="background:#0D1117;padding:40px 16px">
+  <div style="max-width:600px;margin:0 auto;background:#161C26;padding:48px 36px;border:1px solid #1E2738">
+    <div style="text-align:center;padding-bottom:32px;border-bottom:1px solid #1E2738;margin-bottom:36px">
+      <a href="${SITE_URL}" style="text-decoration:none">
+        <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:400;letter-spacing:0.18em;color:#F5F1EB;margin:0 0 6px">GREENSTONE</h1>
+        <p style="color:#C9A96E;font-family:'DM Sans',-apple-system,sans-serif;font-size:10px;letter-spacing:0.4em;margin:0">PEPTIDES &middot; WELLNESS</p>
+      </a>
+    </div>
+
+    ${body}
+
+    <p style="color:#8A6E3E;font-size:11px;line-height:1.6;margin:48px 0 0;font-family:'DM Sans',-apple-system,sans-serif;font-style:italic">Research peptides for laboratory and research use. Not for human consumption.</p>
+
+    <hr style="border:none;border-top:1px solid #1E2738;margin:32px 0 20px">
+    <p style="text-align:center;color:#8A6E3E;font-size:10px;letter-spacing:0.25em;margin:0;font-family:'DM Sans',-apple-system,sans-serif">
+      <a href="${SITE_URL}" style="color:#8A6E3E;text-decoration:none">GREENSTONEWELLNESS.STORE</a>
+    </p>
+  </div>
+</div>
+</body></html>`;
+}
+
+function renderCodeBlock({ code, label, meta }: { code: string; label: string; meta: string }): string {
+  return `
+    <div style="background:#0D1117;border:1px solid #C9A96E;padding:32px 24px;text-align:center;margin:24px 0">
+      <p style="margin:0 0 8px;color:#8A6E3E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">YOUR CODE</p>
+      <p style="margin:0;font-family:'JetBrains Mono','SF Mono',Consolas,monospace;font-size:34px;letter-spacing:0.25em;font-weight:600;color:#C9A96E">${code}</p>
+      <p style="margin:12px 0 0;color:#F5F1EB;font-size:13px;font-family:'DM Sans',-apple-system,sans-serif">${label}</p>
+      <p style="margin:4px 0 0;color:#8A6E3E;font-size:11px;font-family:'DM Sans',-apple-system,sans-serif">${meta}</p>
+    </div>
+  `;
 }
 
 async function addToCustomersAudience(email: string, firstName: string | null) {
@@ -184,7 +267,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       const customerItemRows = order.lineItems
         .map(
           (i) =>
-            `<tr><td style="padding:12px 8px;border-bottom:1px solid #e8e2d4;font-family:Georgia,serif">${i.name}</td><td style="padding:12px 8px;border-bottom:1px solid #e8e2d4;text-align:center">${i.quantity}</td><td style="padding:12px 8px;border-bottom:1px solid #e8e2d4;text-align:right">$${i.subtotal.toFixed(2)}</td></tr>`,
+            `<tr><td style="padding:14px 8px;border-bottom:1px solid #1E2738;font-family:'DM Sans',-apple-system,sans-serif;color:#F5F1EB">${i.name}</td><td style="padding:14px 8px;border-bottom:1px solid #1E2738;text-align:center;color:#F5F1EB">${i.quantity}</td><td style="padding:14px 8px;border-bottom:1px solid #1E2738;text-align:right;color:#C9A96E;font-weight:600">$${i.subtotal.toFixed(2)}</td></tr>`,
         )
         .join('');
 
@@ -194,41 +277,31 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           to: order.customerEmail,
           replyTo: SUPPORT_EMAIL,
           subject: `Your Greenstone order is confirmed — #${orderRef}`,
-          html: `
-            <div style="font-family:Georgia,serif;background:#f4efe6;padding:32px 16px">
-              <div style="max-width:600px;margin:0 auto;background:#fff;padding:40px 32px;border:1px solid #e8e2d4">
-                <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:300;letter-spacing:0.15em;color:#1a3d2e;margin:0 0 4px;text-align:center">GREENSTONE</h1>
-                <p style="text-align:center;color:#7a8175;font-size:11px;letter-spacing:0.3em;margin:0 0 32px">PEPTIDES &middot; WELLNESS</p>
+          html: renderEmailShell({
+            preheader: `Order #${orderRef} confirmed. We'll send tracking when it ships.`,
+            body: `
+              <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;color:#F5F1EB;font-weight:400;margin:0 0 12px">Thank you${customerFirstName ? `, ${customerFirstName}` : ''}.</h2>
+              <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">We've received your order and will begin preparing it for shipment. You'll get a tracking email the moment it leaves our facility.</p>
 
-                <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;color:#1a3d2e;font-weight:400;margin:0 0 8px">Thank you${customerFirstName ? `, ${customerFirstName}` : ''}.</h2>
-                <p style="color:#444;line-height:1.6;margin:0 0 24px">We've received your order and will begin preparing it for shipment. You'll get a tracking email the moment it leaves our facility.</p>
+              <table style="width:100%;margin:24px 0;font-family:'DM Sans',-apple-system,sans-serif;border-collapse:collapse">
+                <tr><td style="color:#8A6E3E;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 0">Order</td><td style="text-align:right;color:#F5F1EB;font-weight:500">#${orderRef}</td></tr>
+                <tr><td style="color:#8A6E3E;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 0">Total</td><td style="text-align:right;color:#C9A96E;font-weight:600;font-size:20px;font-family:'Cormorant Garamond',Georgia,serif">$${order.amountTotal.toFixed(2)} ${order.currency}</td></tr>
+                <tr><td style="color:#8A6E3E;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 0">Shipping</td><td style="text-align:right;color:#1A9E6E;font-weight:500">Free &middot; US Priority</td></tr>
+              </table>
 
-                <table style="width:100%;margin:24px 0;font-family:Arial,sans-serif">
-                  <tr><td style="color:#888;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;padding:4px 0">Order</td><td style="text-align:right;color:#1a3d2e;font-weight:600">#${orderRef}</td></tr>
-                  <tr><td style="color:#888;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;padding:4px 0">Total</td><td style="text-align:right;color:#1a3d2e;font-weight:600;font-size:18px">$${order.amountTotal.toFixed(2)} ${order.currency}</td></tr>
-                  <tr><td style="color:#888;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;padding:4px 0">Shipping</td><td style="text-align:right;color:#1a3d2e">Free &middot; US Priority</td></tr>
-                </table>
+              <table style="width:100%;border-collapse:collapse;margin:28px 0;font-family:'DM Sans',-apple-system,sans-serif">
+                <tr style="background:#1E2738;border-top:1px solid #C9A96E;border-bottom:1px solid #C9A96E"><th style="padding:14px 8px;text-align:left;font-weight:500;letter-spacing:0.15em;font-size:10px;color:#C9A96E">PRODUCT</th><th style="padding:14px 8px;text-align:center;font-weight:500;letter-spacing:0.15em;font-size:10px;color:#C9A96E">QTY</th><th style="padding:14px 8px;text-align:right;font-weight:500;letter-spacing:0.15em;font-size:10px;color:#C9A96E">AMOUNT</th></tr>
+                ${customerItemRows}
+              </table>
 
-                <table style="width:100%;border-collapse:collapse;margin:24px 0;font-family:Arial,sans-serif">
-                  <tr style="background:#1a3d2e;color:#f4efe6"><th style="padding:12px 8px;text-align:left;font-weight:400;letter-spacing:0.1em;font-size:11px">PRODUCT</th><th style="padding:12px 8px;text-align:center;font-weight:400;letter-spacing:0.1em;font-size:11px">QTY</th><th style="padding:12px 8px;text-align:right;font-weight:400;letter-spacing:0.1em;font-size:11px">AMOUNT</th></tr>
-                  ${customerItemRows}
-                </table>
-
-                <div style="background:#f4efe6;padding:20px;margin:24px 0;border-left:3px solid #1a3d2e">
-                  <p style="margin:0 0 4px;color:#888;font-size:11px;letter-spacing:0.15em;text-transform:uppercase">Shipping to</p>
-                  <p style="margin:0;color:#1a3d2e;line-height:1.5">${customerShipping}</p>
-                </div>
-
-                <p style="color:#444;line-height:1.6;margin:32px 0 8px">Questions about your order? Reply to this email or write us at <a href="mailto:${SUPPORT_EMAIL}" style="color:#1a3d2e">${SUPPORT_EMAIL}</a>.</p>
-                <p style="color:#7a8175;font-size:13px;line-height:1.6;margin:24px 0 0">Research peptides for laboratory and research use. Not for human consumption.</p>
-
-                <hr style="border:none;border-top:1px solid #e8e2d4;margin:32px 0 16px">
-                <p style="text-align:center;color:#7a8175;font-size:11px;letter-spacing:0.2em;margin:0">
-                  <a href="${SITE_URL}" style="color:#7a8175;text-decoration:none">GREENSTONEWELLNESS.STORE</a>
-                </p>
+              <div style="background:#1E2738;padding:20px 24px;margin:28px 0;border-left:3px solid #C9A96E">
+                <p style="margin:0 0 6px;color:#8A6E3E;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',-apple-system,sans-serif">Shipping to</p>
+                <p style="margin:0;color:#F5F1EB;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif">${customerShipping}</p>
               </div>
-            </div>
-          `,
+
+              <p style="color:#B8B2A8;line-height:1.7;margin:36px 0 8px;font-family:'DM Sans',-apple-system,sans-serif">Questions about your order? Reply to this email or write us at <a href="mailto:${SUPPORT_EMAIL}" style="color:#C9A96E;text-decoration:none;border-bottom:1px solid #8A6E3E">${SUPPORT_EMAIL}</a>.</p>
+            `,
+          }),
         });
         console.log('[Webhook] Customer confirmation sent to', order.customerEmail);
       } catch (err) {
@@ -239,57 +312,124 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         await addToCustomersAudience(order.customerEmail, customerFirstName);
 
         const welcomeAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
+        const reviewAt = new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString();
 
+        // Generate unique per-customer codes (single-use, explicit expiration)
+        let thanksCode = 'THANKS15';
+        let reviewCode = 'REVIEW10';
+        try {
+          thanksCode = await createPersonalPromoCode({ baseCoupon: 'THANKS15', daysValid: 60 });
+          console.log('[Webhook] Personal THANKS code:', thanksCode);
+        } catch (err) {
+          console.error('[Webhook] THANKS code create failed, using shared fallback:', err);
+        }
+        try {
+          reviewCode = await createPersonalPromoCode({ baseCoupon: 'REVIEW10', daysValid: 90 });
+          console.log('[Webhook] Personal REVIEW code:', reviewCode);
+        } catch (err) {
+          console.error('[Webhook] REVIEW code create failed, using shared fallback:', err);
+        }
+
+        // Welcome email +24h
         try {
           await resend.emails.send({
             from: ORDERS_FROM,
             to: order.customerEmail,
             replyTo: SUPPORT_EMAIL,
             scheduledAt: welcomeAt,
-            subject: 'Welcome to Greenstone — a small gift for next time',
-            html: `
-              <div style="font-family:Georgia,serif;background:#f4efe6;padding:32px 16px">
-                <div style="max-width:600px;margin:0 auto;background:#fff;padding:40px 32px;border:1px solid #e8e2d4">
-                  <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:300;letter-spacing:0.15em;color:#1a3d2e;margin:0 0 4px;text-align:center">GREENSTONE</h1>
-                  <p style="text-align:center;color:#7a8175;font-size:11px;letter-spacing:0.3em;margin:0 0 32px">PEPTIDES &middot; WELLNESS</p>
+            subject: 'Welcome to Greenstone — a thank-you, and where to start',
+            html: renderEmailShell({
+              preheader: `Your THANKS15 code for next order, plus two free guides while you wait.`,
+              body: `
+                <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;color:#F5F1EB;font-weight:400;margin:0 0 16px">Welcome${customerFirstName ? `, ${customerFirstName}` : ''}.</h2>
+                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 16px;font-family:'DM Sans',-apple-system,sans-serif">Thank you for trusting Greenstone with your first order. Every peptide we ship is <span style="color:#1A9E6E;font-weight:500">compounded in the USA under USP 797 standards</span> and <span style="color:#1A9E6E;font-weight:500">third-party tested</span> for potency, sterility, and purity.</p>
+                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">A small thank-you below — and two free guides we publish for the community.</p>
 
-                  <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;color:#1a3d2e;font-weight:400;margin:0 0 16px">Welcome${customerFirstName ? `, ${customerFirstName}` : ''}.</h2>
-                  <p style="color:#444;line-height:1.7;margin:0 0 16px">Thank you for trusting Greenstone with your first order. We source every peptide through US-based compounding partners and ship in temperature-controlled packaging.</p>
-                  <p style="color:#444;line-height:1.7;margin:0 0 24px">As a thank-you, here's <strong>15% off</strong> your next order. Valid for 60 days.</p>
+                ${renderCodeBlock({ code: thanksCode, label: '15% off your next order', meta: 'reserved for you · one use · expires in 60 days' })}
 
-                  <div style="background:#1a3d2e;color:#f4efe6;padding:28px;text-align:center;margin:24px 0">
-                    <p style="margin:0 0 6px;font-size:11px;letter-spacing:0.3em">YOUR CODE</p>
-                    <p style="margin:0;font-family:Courier,monospace;font-size:32px;letter-spacing:0.2em;font-weight:600">THANKS15</p>
-                    <p style="margin:8px 0 0;font-size:12px;color:#a8b2a4">15% off &middot; one use &middot; expires in 60 days</p>
-                  </div>
+                <p style="text-align:center;margin:28px 0 40px">
+                  <a href="${SITE_URL}/shop" style="display:inline-block;background:#C9A96E;color:#0D1117;padding:14px 36px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">SHOP AGAIN</a>
+                </p>
 
-                  <p style="text-align:center;margin:32px 0">
-                    <a href="${SITE_URL}/shop" style="display:inline-block;background:#1a3d2e;color:#f4efe6;padding:14px 32px;text-decoration:none;letter-spacing:0.15em;font-size:13px;font-family:Arial,sans-serif">SHOP AGAIN</a>
-                  </p>
+                <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#F5F1EB;font-weight:400;margin:40px 0 8px">Free guides for the community</h3>
+                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 20px;font-family:'DM Sans',-apple-system,sans-serif">No fluff. Clinical-grade reading material for anyone serious about peptide research.</p>
 
-                  <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;color:#1a3d2e;font-weight:400;margin:32px 0 12px">A few things to know</h3>
-                  <ul style="color:#444;line-height:1.7;padding-left:20px;margin:0 0 16px">
-                    <li>All orders ship free via US Priority Mail.</li>
-                    <li>Track every order from your confirmation email.</li>
-                    <li>Questions? Write us at <a href="mailto:${SUPPORT_EMAIL}" style="color:#1a3d2e">${SUPPORT_EMAIL}</a>.</li>
-                  </ul>
+                <table style="width:100%;border-collapse:collapse;margin:0 0 32px">
+                  <tr>
+                    <td style="padding:18px 20px;border:1px solid #1E2738;background:#161C26;width:50%;vertical-align:top">
+                      <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',-apple-system,sans-serif">Volume I</p>
+                      <p style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px">Peptides Made Easy</p>
+                      <p style="margin:0 0 14px;color:#B8B2A8;font-size:13px;line-height:1.5;font-family:'DM Sans',-apple-system,sans-serif">A primer for newcomers — what peptides are, how they're researched, where to start.</p>
+                      <a href="${SITE_URL}/free/peptides-made-easy" style="color:#1A9E6E;font-size:12px;letter-spacing:0.15em;text-decoration:none;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">DOWNLOAD →</a>
+                    </td>
+                    <td style="width:8px"></td>
+                    <td style="padding:18px 20px;border:1px solid #1E2738;background:#161C26;width:50%;vertical-align:top">
+                      <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',-apple-system,sans-serif">Volume II</p>
+                      <p style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px">Peptides Unlocked</p>
+                      <p style="margin:0 0 14px;color:#B8B2A8;font-size:13px;line-height:1.5;font-family:'DM Sans',-apple-system,sans-serif">Match peptides to research goals, quality and sourcing checklist, 48-hour framework.</p>
+                      <a href="${SITE_URL}/free/peptides-unlocked" style="color:#1A9E6E;font-size:12px;letter-spacing:0.15em;text-decoration:none;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">DOWNLOAD →</a>
+                    </td>
+                  </tr>
+                </table>
 
-                  <p style="color:#7a8175;font-size:13px;line-height:1.6;margin:24px 0 0">Research peptides for laboratory and research use. Not for human consumption.</p>
-
-                  <hr style="border:none;border-top:1px solid #e8e2d4;margin:32px 0 16px">
-                  <p style="text-align:center;color:#7a8175;font-size:11px;letter-spacing:0.2em;margin:0">
-                    <a href="${SITE_URL}" style="color:#7a8175;text-decoration:none">GREENSTONEWELLNESS.STORE</a>
-                  </p>
-                </div>
-              </div>
-            `,
+                <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;color:#F5F1EB;font-weight:400;margin:40px 0 16px">A few things to know</h3>
+                <table style="width:100%;border-collapse:collapse;font-family:'DM Sans',-apple-system,sans-serif">
+                  <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">All orders ship free via US Priority Mail.</td></tr>
+                  <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Tracking is included in every order confirmation.</td></tr>
+                  <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Questions? <a href="mailto:${SUPPORT_EMAIL}" style="color:#C9A96E;text-decoration:none;border-bottom:1px solid #8A6E3E">${SUPPORT_EMAIL}</a></td></tr>
+                </table>
+              `,
+            }),
           });
           console.log('[Webhook] Welcome email scheduled for', welcomeAt);
         } catch (err) {
           console.error('[Webhook] Failed to schedule welcome email:', err);
         }
+
+        // Review request email +60d
+        try {
+          await resend.emails.send({
+            from: ORDERS_FROM,
+            to: order.customerEmail,
+            replyTo: SUPPORT_EMAIL,
+            scheduledAt: reviewAt,
+            subject: 'How is your Greenstone research going?',
+            html: renderEmailShell({
+              preheader: `It's been 60 days. We'd love to hear how things are going — and a thank-you code inside.`,
+              body: `
+                <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;color:#F5F1EB;font-weight:400;margin:0 0 16px">How is it going${customerFirstName ? `, ${customerFirstName}` : ''}?</h2>
+                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 16px;font-family:'DM Sans',-apple-system,sans-serif">You ordered from Greenstone about two months ago. By now you've had real time to observe what's working and what isn't.</p>
+                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">We're building Greenstone with the help of the people using our products. Would you take <span style="color:#1A9E6E;font-weight:500">60 seconds</span> to tell us how it went? Your feedback shapes what we stock and how we ship.</p>
+
+                <p style="text-align:center;margin:28px 0">
+                  <a href="mailto:${SUPPORT_EMAIL}?subject=My%20Greenstone%20experience" style="display:inline-block;background:#C9A96E;color:#0D1117;padding:14px 36px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">SHARE YOUR EXPERIENCE</a>
+                </p>
+
+                <p style="color:#B8B2A8;line-height:1.7;margin:28px 0 24px;font-family:'DM Sans',-apple-system,sans-serif;text-align:center;font-size:14px"><em>One reply. One paragraph. That's all we need.</em></p>
+
+                <div style="text-align:center;margin:36px 0">
+                  <span style="display:inline-block;width:60px;height:1px;background:#1A9E6E;vertical-align:middle"></span>
+                  <span style="display:inline-block;color:#1A9E6E;font-size:8px;letter-spacing:0.4em;margin:0 16px;vertical-align:middle;font-family:'DM Sans',-apple-system,sans-serif">&#9670;</span>
+                  <span style="display:inline-block;width:60px;height:1px;background:#1A9E6E;vertical-align:middle"></span>
+                </div>
+
+                <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#F5F1EB;font-weight:400;margin:0 0 8px;text-align:center">A thank-you, either way.</h3>
+                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 20px;font-family:'DM Sans',-apple-system,sans-serif;text-align:center">Here's <span style="color:#1A9E6E;font-weight:500">10% off</span> your next order — for being part of the early Greenstone community.</p>
+
+                ${renderCodeBlock({ code: reviewCode, label: '10% off your next order', meta: 'reserved for you · one use · expires in 90 days' })}
+
+                <p style="text-align:center;margin:28px 0 0">
+                  <a href="${SITE_URL}/shop" style="display:inline-block;background:transparent;color:#1A9E6E;padding:12px 28px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600;border:1px solid #1A9E6E">BROWSE THE CATALOG</a>
+                </p>
+              `,
+            }),
+          });
+          console.log('[Webhook] Review email scheduled for', reviewAt);
+        } catch (err) {
+          console.error('[Webhook] Failed to schedule review email:', err);
+        }
       } else {
-        console.log('[Webhook] Returning customer — skipping welcome email');
+        console.log('[Webhook] Returning customer — skipping welcome + review emails');
       }
     }
   } catch (err) {
