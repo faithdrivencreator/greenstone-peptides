@@ -81,7 +81,8 @@
         "GHK-Cu anti-aging"
       ],
       "angle": "The unusually long research history of GHK-Cu, Pickart's foundational work on tissue remodeling, and what the published data shows for skin barrier, wound healing, and hair follicle signaling.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-05-08T11:00:00.000Z"
     },
     {
       "slug": "nad-injection-vs-nasal-spray",
@@ -92,7 +93,8 @@
         "NAD+ bioavailability"
       ],
       "angle": "Why NAD+ is delivered via injection or intranasal spray instead of oral — bioavailability data, onset and duration differences, and what each route is typically used for.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-05-09T11:00:00.000Z"
     },
     {
       "slug": "mots-c-mitochondrial-peptide-research",
@@ -103,7 +105,8 @@
         "MOTS-c longevity"
       ],
       "angle": "Mitochondrial-derived peptide biology in plain language — how MOTS-c was discovered, what the metabolic research shows, and why longevity researchers are paying attention.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-05-11T11:16:20.734Z"
     },
     {
       "slug": "sermorelin-vs-hgh-replacement",

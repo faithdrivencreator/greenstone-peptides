@@ -161,6 +161,21 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 </Link>
               </div>
 
+              <ul className="mt-6 space-y-2 text-sm text-cream-dim">
+                <li className="flex items-start gap-2">
+                  <span className="text-gold leading-tight">✓</span>
+                  <span><strong className="text-cream">Free Priority shipping</strong> on all US orders</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold leading-tight">✓</span>
+                  <span><strong className="text-cream">Temperature-controlled</strong> packaging direct from US compounders</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold leading-tight">✓</span>
+                  <span><strong className="text-cream">Third-party tested</strong> for potency, sterility, and purity</span>
+                </li>
+              </ul>
+
               <div className="mt-6 p-4 border border-gold/10 rounded-lg bg-obsidian-light/40">
                 <p className="text-[11px] leading-relaxed text-cream-dim">
                   These products are intended for research and educational purposes only. They have

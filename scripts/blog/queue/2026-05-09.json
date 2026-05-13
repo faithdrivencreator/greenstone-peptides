@@ -1,0 +1,403 @@
+{
+  "id": "post-2026-05-09-nad-injection-vs-nasal-spray",
+  "title": "NAD+ Injection vs Nasal Spray: Route of Delivery Explained",
+  "slug": "nad-injection-vs-nasal-spray",
+  "excerpt": "NAD+ can't survive oral digestion in useful amounts — injectable and intranasal routes bypass that barrier entirely. This reference breaks down the pharmacokinetics, onset profiles, and use cases behind each delivery method so you can evaluate the research with clarity.",
+  "seoTitle": "NAD+ Injection vs Nasal Spray: Bioavailability Explained",
+  "seoDescription": "Compare NAD+ injection and nasal spray delivery — bioavailability data, onset differences, and what each route is typically used for. Educational reference.",
+  "tags": ["NAD+", "NAD+ injection", "NAD+ nasal spray", "NAD+ bioavailability", "longevity", "peptide delivery", "intranasal NAD"],
+  "readingTime": 9,
+  "featured": false,
+  "publishedAt": "2026-05-09T11:00:00.000Z",
+  "relatedProducts": ["nad-200mg"],
+  "mainImage": {
+    "assetId": "image-bdd77e12cd819998619e75cc900e0ddeead92033-2752x1536-png",
+    "alt": "Split-frame editorial comparison of NAD+ injection and nasal spray delivery routes — NAD+ bioavailability",
+    "treatment": "comparative-split"
+  },
+  "body": [
+    {
+      "_type": "block", "_key": "h2-open", "style": "h2", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h2-opens", "text": "What Every Researcher Needs to Know About NAD+ Delivery Routes", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-intro1", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-intro1s", "text": "NAD+ (nicotinamide adenine dinucleotide) is a coenzyme present in every living cell — central to energy metabolism, DNA repair, and the sirtuin proteins most associated with longevity research. The challenge isn't finding it; it's getting meaningful quantities into systemic circulation. Oral supplementation faces a well-documented barrier: the gut and liver degrade most NAD+ before it ever reaches the bloodstream, making injectable and intranasal delivery the dominant formats in clinical and research settings.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-intro2", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-intro2s", "text": "Key delivery formats currently in research and clinical use:", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-sc", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-scs", "text": "Subcutaneous (SC) injection — direct tissue absorption, bypasses gut entirely, home-administration viable", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-iv", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-ivs", "text": "Intravenous (IV) infusion — highest bioavailability; clinic-administered, immediate onset", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-in", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-ins", "text": "Intranasal spray — mucosal absorption via olfactory epithelium; needle-free, possible CNS-proximate delivery", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-im", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-ims", "text": "Intramuscular (IM) injection — deeper tissue uptake, less common for NAD+ given volume requirements", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-lipo", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-lipos", "text": "Liposomal oral — encapsulated to partially resist gut degradation; limited bioavailability versus injectable", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-consider-intro", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-consider-intros", "text": "Core considerations before choosing a delivery route:", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-c1", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-c1s", "text": "Bioavailability — what fraction of the administered dose reaches systemic circulation intact", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-c2", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-c2s", "text": "Speed of onset — how quickly plasma NAD+ levels respond after administration", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-c3", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-c3s", "text": "Target tissue — whether the goal is systemic cellular elevation or CNS-proximate delivery", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-c4", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-c4s", "text": "Administration logistics — storage requirements, reconstitution, frequency, and home-use feasibility", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-c5", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-c5s", "text": "Sourcing and compounding standards — sterility, purity testing, and cold-chain integrity", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-payoff", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-payoffs", "text": "By the end of this reference, the pharmacokinetic differences between injectable and intranasal NAD+ will be clear enough to evaluate the published literature with precision — and to ask the right questions before committing to a protocol.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-brand", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-brands", "text": "Greenstone Peptides provides NAD+ formulations sourced from USA-origin raw materials, compounded to USP 797 sterile standards, and third-party tested for purity and identity — so researchers can evaluate the pharmacokinetic data with confidence in the underlying material.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h2-s1", "style": "h2", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h2-s1s", "text": "The Main Delivery Routes for NAD+", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-s1-1", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-s1-1s", "text": "The foundational principle is straightforward: NAD+ administered orally is largely consumed before it reaches the tissues that need it. The gut expresses significant NMN and NAD+ hydrolysis activity, and first-pass hepatic metabolism degrades a large fraction of what does absorb. This is why, across the clinical literature, injectable formats consistently outperform oral NAD+ when systemic blood NAD+ elevation is the measured outcome.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-s1-2", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-s1-2s", "text": "Research published in 2025 has continued to refine understanding of how different routes compare in both plasma kinetics and tissue penetration. The emerging picture is not that one route is categorically better — it's that each route is optimized for a different research question, and choosing incorrectly means studying the wrong variable.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h3-injectable", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-injectables", "text": "Injectable NAD+ — Subcutaneous and IV", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-inj-1", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-inj-1s", "text": "Injectable formats deliver NAD+ directly into tissue or circulation, bypassing the gastrointestinal barrier entirely. The difference between subcutaneous and intravenous routes is primarily one of speed and clinical setting — both achieve meaningfully higher systemic NAD+ than oral supplementation.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-inj1", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-inj1s", "text": "Subcutaneous (SC): Consistent, slow absorption from the subcutaneous fat layer into the bloodstream. Peak plasma levels typically arrive 30–90 minutes post-injection. Practical for home administration with proper training. The standard format for outpatient NAD+ protocols.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-inj2", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-inj2s", "text": "Intravenous (IV): Near-complete bioavailability with immediate onset. Used in clinical settings for rapid repletion or loading phases. Infusion rate matters — too fast can produce transient flushing, nausea, or chest tightness, which is why IV NAD+ is administered slowly over 1–3 hours.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-inj3", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-inj3s", "text": "Storage sensitivity: Injectable NAD+ degrades with heat, light, and freeze-thaw cycling. Lyophilized (freeze-dried) powder is more stable during shipping; reconstituted solutions should be used within 7–14 days when refrigerated.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-inj-close", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-inj-closes", "text": "For researchers focused on systemic NAD+ elevation — tracking blood NAD+ levels, mitochondrial output, or DNA repair markers — SC injection represents the practical gold standard for outpatient use. It delivers consistent results without requiring a clinical setting, and its absorption profile is predictable enough to build reproducible protocols around.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h3-intranasal", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-intranasals", "text": "Intranasal NAD+ — The Needle-Free Route", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-in-1", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-in-1s", "text": "Intranasal delivery works through the mucosal lining of the nasal cavity, with a specific anatomical advantage: the upper nasal passage contains the olfactory epithelium, which sits adjacent to olfactory nerves and provides a pathway that bypasses the blood-brain barrier to some degree. This makes intranasal administration a distinct delivery vector — not just a variation on systemic routes, but a route with a different target tissue profile.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-in-2", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-in-2s", "text": "Interest in intranasal NAD+ has grown significantly in 2025 and into 2026, with several preclinical papers specifically examining olfactory epithelium transport and brain tissue NAD+ uptake following intranasal administration. The data from animal models is encouraging, though direct translation to humans requires the same caution applied to any preclinical finding.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-in-3", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-in-3s", "text": "The practical trade-off with intranasal delivery is that systemic blood NAD+ elevation is less pronounced than with SC or IV injection. The route is not optimized for global cellular repletion — it's optimized for CNS-proximate delivery. Researchers who prioritize neurological or cognitive applications are the primary population for whom intranasal formats carry distinct research relevance.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h2-s2", "style": "h2", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h2-s2s", "text": "How to Choose the Right NAD+ Delivery Route", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-s2-intro", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-s2-intros", "text": "The decision between delivery routes is not purely about preference — it's about matching the pharmacokinetic profile to the research question. Here is a structured comparison of the main options:", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h3-compare", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-compares", "text": "Route Comparison at a Glance", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-cmp1", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [
+        {"_type": "span", "_key": "li-cmp1a", "text": "IV Infusion — ", "marks": ["strong"]},
+        {"_type": "span", "_key": "li-cmp1b", "text": "Mechanism: direct bloodstream delivery. Onset: immediate. Bioavailability: ~100%. Primary use: rapid repletion, clinical loading phases. Setting: clinic-only.", "marks": []}
+      ]
+    },
+    {
+      "_type": "block", "_key": "li-cmp2", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [
+        {"_type": "span", "_key": "li-cmp2a", "text": "SC Injection — ", "marks": ["strong"]},
+        {"_type": "span", "_key": "li-cmp2b", "text": "Mechanism: subcutaneous tissue absorption. Onset: 30–90 min. Bioavailability: high. Primary use: home/outpatient protocols, sustained systemic elevation. Setting: home-viable with training.", "marks": []}
+      ]
+    },
+    {
+      "_type": "block", "_key": "li-cmp3", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [
+        {"_type": "span", "_key": "li-cmp3a", "text": "Intranasal — ", "marks": ["strong"]},
+        {"_type": "span", "_key": "li-cmp3b", "text": "Mechanism: mucosal and olfactory epithelium absorption. Onset: 15–45 min. Bioavailability: moderate systemic, possible CNS-proximate access. Primary use: neurological research focus, needle-averse adjunct protocols. Setting: home-viable.", "marks": []}
+      ]
+    },
+    {
+      "_type": "block", "_key": "li-cmp4", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [
+        {"_type": "span", "_key": "li-cmp4a", "text": "Liposomal Oral — ", "marks": ["strong"]},
+        {"_type": "span", "_key": "li-cmp4b", "text": "Mechanism: encapsulated GI absorption. Onset: 60–120 min. Bioavailability: low to moderate. Primary use: convenience supplementation. Not appropriate for repletion contexts where systemic elevation is the measured outcome.", "marks": []}
+      ]
+    },
+    {
+      "_type": "block", "_key": "p-expert-tip", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-expert-tips", "text": "The single most important factor in route selection is defining the target tissue before choosing the delivery method. Researchers pursuing systemic metabolic outcomes — ATP production, PBMC NAD+ levels, sirtuin activation markers — should default to injectable formats where the evidence base is strongest. Researchers investigating neurological or cognitive applications have a specific and defensible reason to prioritize intranasal delivery, but should not assume it provides equivalent systemic coverage to injection.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h3-tips", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-tipss", "text": "Getting the Protocol Right — Practical Tips", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-tips-intro", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-tips-intros", "text": "First-time researchers often underestimate the operational variables that affect outcome consistency. These four considerations are grounded in the published literature:", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-t1", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-t1s", "text": "Start conservatively with IV. Even at modest concentrations, IV NAD+ can produce transient chest tightness or nausea if infused too quickly. The research-aligned approach is slow infusion over 1–3 hours at a clinical facility, not rapid bolus administration.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-t2", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-t2s", "text": "Use SC injection for home protocols. The absorption profile is slower than IV but highly predictable — a meaningful advantage when tracking biomarkers over weeks or months. Standard insulin syringes (28–31 gauge, 0.5 mL barrel) are the reference-standard format for SC NAD+ administration.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-t3", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-t3s", "text": "Treat reconstituted solutions as time-limited. Lyophilized NAD+ has meaningful shelf stability when kept refrigerated and away from light. Once reconstituted with bacteriostatic water, use within 7–14 days and discard if clarity or color changes. Stability windows are not indefinite.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-t4", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-t4s", "text": "Consider intranasal as a complementary tool, not a replacement. Some 2025 clinical protocols pair less-frequent IV or SC sessions with daily intranasal administration — leveraging each route's distinct pharmacokinetic profile rather than forcing a single format to serve all research goals.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-link1", "style": "normal",
+      "markDefs": [{"_type": "link", "_key": "lnk-nad200", "href": "/learn/nad-plus-200mg-product-spotlight"}],
+      "children": [
+        {"_type": "span", "_key": "p-link1a", "text": "For a deeper look at how concentration affects injection volume and protocol design, see ", "marks": []},
+        {"_type": "span", "_key": "p-link1b", "text": "Greenstone's NAD+ 200mg/mL product reference", "marks": ["lnk-nad200"]},
+        {"_type": "span", "_key": "p-link1c", "text": ".", "marks": []}
+      ]
+    },
+    {
+      "_type": "block", "_key": "h3-diff", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-diffs", "text": "Injectable vs Intranasal — Understanding the Core Difference", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-diff1", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-diff1s", "text": "The most fundamental distinction is what each route is optimized to do. Injectable formats — SC, IM, and IV — are designed for measurable systemic NAD+ elevation. They have decades of supporting pharmacokinetic data and represent the standard in clinical NAD+ research. Intranasal delivery is optimized for a different objective: mucosal delivery with potential CNS access via the olfactory pathway, at a lower systemic payload.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-diff2", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-diff2s", "text": "A researcher's priorities should drive the choice from the outset. If the goal is raising whole-body cellular NAD+, injectable formats are the correct starting point. If the goal is exploring neurological applications or adding a needle-free adjunct to an established injectable protocol, intranasal formats offer a distinct and justifiable rationale.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h2-s3", "style": "h2", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h2-s3s", "text": "NAD+ Delivery for Every Research Context", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-s3-intro", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-s3-intros", "text": "The right delivery format depends on the research question being asked. Three distinct contexts illustrate how route selection plays out in practice:", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-ctx1", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-ctx1s", "text": "First-time researcher exploring NAD+ biology: SC injection provides the clearest entry point. The absorption profile is predictable, reference ranges for blood NAD+ response exist for SC dosing in the published literature, and the format can be learned with a standard insulin syringe protocol. Starting here establishes a baseline before layering additional variables.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-ctx2", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-ctx2s", "text": "Researcher focused on neurological or cognitive applications: Intranasal delivery warrants serious consideration. The olfactory pathway provides CNS-proximate access that standard systemic routes don't replicate, and 2025 preclinical data supports meaningful brain tissue NAD+ uptake via intranasal administration in animal models. This does not mean systemic levels are equivalently elevated — but for CNS-targeted research, the route is mechanistically justified.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-ctx3", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-ctx3s", "text": "Participant in an established NAD+ protocol: The IV repletion plus SC or intranasal maintenance combination is increasingly documented in longevity-focused clinical settings. IV is used periodically for deep repletion; SC or intranasal covers more frequent, lower-dose maintenance between sessions.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h3-tiers", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-tierss", "text": "Clinical vs Self-Research Approaches", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-tiers-intro", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-tiers-intros", "text": "NAD+ research spans a spectrum from supervised clinical protocols to structured individual research — and the appropriate route differs meaningfully across that range:", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-tier1", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-tier1s", "text": "Entry-level: SC injection with a compounded lyophilized NAD+ formulation. Requires learning proper injection technique and sterile handling. Insulin syringes at 28–31 gauge are the standard. The format is reproducible, home-viable, and produces measurable systemic responses in the published literature.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-tier2", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-tier2s", "text": "Established protocol: SC injection on a defined frequency paired with intranasal supplementation for CNS-proximate coverage. This layered approach uses each route's distinct pharmacokinetic profile rather than asking one format to serve all purposes.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-tier3", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-tier3s", "text": "Clinical supervision: IV infusion at a licensed provider's facility for periodic deep repletion, with SC or intranasal for maintenance between sessions. Appropriate for individuals with documented NAD+ depletion or specific clinical indications being managed by a healthcare provider.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h3-personal", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-personals", "text": "Personalization and Protocol Considerations", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-personal1", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-personal1s", "text": "A notable shift in the longevity research space in 2025 and 2026 has been the move toward biomarker-guided protocol design. Rather than applying fixed frequency schedules, practitioners increasingly use PBMC (peripheral blood mononuclear cell) NAD+ assays to establish individual baseline levels and calibrate delivery route and frequency to measured response — rather than to theoretical population averages.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-p1", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-p1s", "text": "Baseline blood NAD+ testing before starting a protocol gives a reference point for measuring response. Without it, evaluating whether a route is producing measurable change is guesswork.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-p2", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-p2s", "text": "Lifestyle logistics — travel schedule, needle access, cold-chain storage capacity — influence which route is practically sustainable over a multi-month protocol. Intranasal offers meaningful advantages in travel contexts where injectable storage is impractical.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-p3", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-p3s", "text": "Primary research focus — systemic metabolic, neurological, or both — should define route selection from the start rather than being retrofitted after a protocol is underway and results are ambiguous.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h2-s4", "style": "h2", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h2-s4s", "text": "Why Sourcing and Compounding Standards Matter for NAD+ Delivery", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-s4-empathy", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-s4-empathys", "text": "The NAD+ market includes a wide range of products — from research-grade powders without sterility testing to properly compounded injectable formulations from licensed 503A pharmacies. For injectable formats especially, the quality gap between compliant and non-compliant products is not marginal. A purity percentage on a label is only as meaningful as the testing methodology behind it. HPLC quantifies impurities and confirms the compound is what it claims to be. Mass spectrometry confirms molecular identity. Endotoxin testing — frequently skipped by non-compliant suppliers — is critical for any injectable format, where endotoxins introduced into the body can trigger a significant inflammatory response.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-q1", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-q1s", "text": "USA-sourced raw materials: Domestic sourcing provides traceability and reduces contamination risk compared to overseas API with unverified handling history.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-q2", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-q2s", "text": "USP 797 sterile compounding: Required for any injectable formulation. Ensures proper cleanroom classification, validated aseptic technique, and sterility testing — not optional for NAD+ intended for injection.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-q3", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-q3s", "text": "Third-party testing: HPLC purity, mass spectrometry identity confirmation, and endotoxin testing should accompany every batch in a certificate of analysis that is available before purchase.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-q4", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-q4s", "text": "Cold-chain shipping: NAD+ is temperature-sensitive. Proper cold-chain packaging at dispatch — not just adequate packaging — is a non-negotiable quality indicator for any injectable product.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h3-maxout", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-maxouts", "text": "Getting the Most Out of NAD+ Research", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-m1", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-m1s", "text": "Establish a baseline before starting. Blood NAD+ testing (PBMC assay, available through functional medicine labs) gives a reference point to measure response against. Without it, you cannot isolate whether a protocol is producing meaningful change.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-m2", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-m2s", "text": "Track variables one at a time. Changing delivery route, dose, and frequency simultaneously makes it impossible to identify which change produced a given outcome. Structured protocols change one variable at a time across measurable intervals.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-m3", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-m3s", "text": "Respect reconstitution timelines. Prepared NAD+ solutions degrade — refrigerated storage slows but does not stop the process. Treat a reconstituted vial as having a defined useful window, not indefinite stability. Use the bacteriostatic water math to prepare only what you'll use in the near term.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-m4", "style": "normal", "listItem": "number", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-m4s", "text": "Cross-reference the certificate of analysis. A COA should accompany every batch from a reputable compounder. Verify that HPLC purity, mass spec identity, and endotoxin results are present — not just a summary percentage with no methodology disclosed.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-link2", "style": "normal",
+      "markDefs": [{"_type": "link", "_key": "lnk-store", "href": "/store"}],
+      "children": [
+        {"_type": "span", "_key": "p-link2a", "text": "Greenstone's compounded NAD+ formulations — including the high-concentration 200mg/mL injectable — are available with full batch COAs at the ", "marks": []},
+        {"_type": "span", "_key": "p-link2b", "text": "Greenstone store", "marks": ["lnk-store"]},
+        {"_type": "span", "_key": "p-link2c", "text": ".", "marks": []}
+      ]
+    },
+    {
+      "_type": "block", "_key": "h2-faq", "style": "h2", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h2-faqs", "text": "Frequently Asked Questions About NAD+ Injection and Nasal Spray", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h3-faq1", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-faq1s", "text": "Can I use intranasal NAD+ spray instead of injectable if I want to avoid needles?", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-faq1", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-faq1s", "text": "You can — but the trade-off is important to understand clearly before making that choice. Intranasal NAD+ provides mucosal and potentially CNS-proximate delivery, but does not reliably elevate systemic blood NAD+ to the same degree as SC or IV injection. For researchers whose primary interest is systemic cellular energy, metabolic markers, or whole-body NAD+ repletion, intranasal alone is unlikely to produce the measurable outcomes that injectable routes demonstrate in the peer-reviewed literature. For neurological applications or as a complement to an existing injectable protocol, intranasal is a well-justified option.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h3-faq2", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-faq2s", "text": "How often should NAD+ injections be administered?", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-faq2-intro", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-faq2-intros", "text": "There is no universal standard — frequency varies by protocol design, individual baseline, and clinical context. Published approaches vary considerably:", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-faq2-1", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-faq2-1s", "text": "IV protocols: typically weekly to monthly for maintenance, with more frequent loading phases in repletion contexts", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-faq2-2", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-faq2-2s", "text": "SC injection protocols: often structured as daily or every-other-day at lower doses, calibrated to baseline blood levels when testing is available", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-faq2-3", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-faq2-3s", "text": "Intranasal: used as a daily or twice-daily adjunct in some protocols, given lower per-dose systemic payload", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "li-faq2-4", "style": "normal", "listItem": "bullet", "level": 1, "markDefs": [],
+      "children": [{"_type": "span", "_key": "li-faq2-4s", "text": "All frequency decisions should involve a licensed healthcare provider familiar with the individual's health history, baseline levels, and research goals", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h3-faq3", "style": "h3", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h3-faq3s", "text": "Does intranasal NAD+ actually reach the brain?", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-faq3", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-faq3s", "text": "Preclinical data supports meaningful brain tissue NAD+ uptake via intranasal delivery in animal models — particularly through the olfactory epithelium pathway, which runs adjacent to olfactory nerves and provides a route that partially bypasses the blood-brain barrier. Several 2025 studies specifically tracked brain tissue NAD+ following intranasal administration and found detectable uptake above systemic baseline. However, direct translation from animal models to humans requires caution, and robust human data remains limited. The current research supports intranasal delivery as a CNS-proximate option with a credible mechanistic basis, not a fully established human clinical standard.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "h2-conclusion", "style": "h2", "markDefs": [],
+      "children": [{"_type": "span", "_key": "h2-conclusions", "text": "Conclusion", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-conc1", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-conc1s", "text": "The route of NAD+ delivery is not a minor logistical footnote — it determines what the compound does in the body, at what speed, to which tissues, and how reproducibly. Injectable formats remain the most evidence-backed approach for systemic NAD+ elevation, with IV infusion offering peak bioavailability and SC injection offering the practical precision needed for outpatient and home-based protocols. Intranasal delivery occupies a distinct and legitimate niche: lower systemic payload, faster mucosal onset, and growing preclinical evidence for CNS access via the olfactory pathway. Understanding these differences turns NAD+ research from a guessing exercise into a measurable, repeatable protocol.", "marks": []}]
+    },
+    {
+      "_type": "block", "_key": "p-conc2", "style": "normal",
+      "markDefs": [{"_type": "link", "_key": "lnk-store2", "href": "/store"}],
+      "children": [
+        {"_type": "span", "_key": "p-conc2a", "text": "Whether you're evaluating delivery options for the first time or refining an established approach, the next step is to explore Greenstone's compounded NAD+ formulations — including full batch certificates of analysis — at the ", "marks": []},
+        {"_type": "span", "_key": "p-conc2b", "text": "Greenstone store", "marks": ["lnk-store2"]},
+        {"_type": "span", "_key": "p-conc2c", "text": ".", "marks": []}
+      ]
+    },
+    {
+      "_type": "block", "_key": "p-disclaimer", "style": "normal", "markDefs": [],
+      "children": [{"_type": "span", "_key": "p-disclaimers", "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.", "marks": ["em"]}]
+    }
+  ]
+}

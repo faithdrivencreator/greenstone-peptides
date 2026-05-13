@@ -1,0 +1,417 @@
+{
+  "id": "post-2026-05-07-tb500-10mg-spotlight",
+  "title": "TB-500 10mg/mL: Inside Greenstone's High-Concentration Vial",
+  "slug": "tb-500-10mg-product-spotlight",
+  "excerpt": "TB-500 at 10mg/mL delivers twice the concentration of the standard formulation — built for precision research. Here's what's inside the vial, how it's compounded, and what the literature actually shows about thymosin beta-4.",
+  "seoTitle": "TB-500 10mg/mL Product Spotlight | Greenstone Peptides",
+  "seoDescription": "Greenstone's TB-500 10mg/mL: 503A-compounded, USA-sourced thymosin beta-4. What's inside the vial, what the literature shows, and why concentration matters.",
+  "tags": [
+    "tb-500",
+    "thymosin-beta-4",
+    "peptide",
+    "recovery",
+    "muscle-repair",
+    "product-spotlight",
+    "compounding"
+  ],
+  "readingTime": 3,
+  "featured": false,
+  "publishedAt": "2026-05-07T11:00:00.000Z",
+  "relatedProducts": [
+    "tb500-10mg"
+  ],
+  "body": [
+    {
+      "_type": "block",
+      "_key": "intro1",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "intro1s",
+          "text": "TB-500 is the synthetic analog of Thymosin Beta-4, a naturally occurring peptide found in virtually every human and animal cell. Greenstone Peptides offers it at 10mg/mL — a higher-concentration formulation designed for research contexts where precision and volume efficiency matter. This post covers what's inside the vial, why concentration matters in peptide research, and what the published literature shows about TB-500's mechanisms.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2a",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2as",
+          "text": "What Is TB-500?",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p2",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p2s",
+          "text": "Thymosin Beta-4 (Tβ4) is a 43-amino-acid peptide encoded by the TMSB4X gene. It plays a central regulatory role in actin dynamics — the cellular machinery that governs how tissues grow, migrate, and repair. TB-500 is the synthetic form of the active fragment of this peptide, and it has become one of the most studied compounds in regenerative biology research over the past two decades.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p3",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p3s",
+          "text": "Preclinical research has focused primarily on its role in several interconnected areas:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li1",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li1s",
+          "text": "Wound healing and tissue repair",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li2",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li2s",
+          "text": "Angiogenesis — the formation of new blood vessels",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li3s",
+          "text": "Inflammation modulation during the repair process",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li4s",
+          "text": "Muscle fiber recruitment and recovery signaling",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2b",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2bs",
+          "text": "Why 10mg/mL? The Case for Higher Concentration",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p4",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p4s",
+          "text": "Standard TB-500 formulations are typically available as lyophilized powder at 5mg, or in solution at lower concentration profiles. Greenstone's 10mg/mL vial delivers twice the peptide content per milliliter compared to the standard 5mg/mL offering — same volume footprint, significantly higher precision ceiling.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p5",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p5s",
+          "text": "For research purposes, this has practical implications:",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li5",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li5s1",
+          "text": "Precision: ",
+          "marks": [
+            "strong"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "li5s2",
+          "text": "Higher concentration means smaller volumes per measured amount, which reduces measurement variability in experimental protocols.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li6",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li6s1",
+          "text": "Efficiency: ",
+          "marks": [
+            "strong"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "li6s2",
+          "text": "Researchers working with consistent administration windows can use less carrier volume while maintaining equivalent peptide content.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "li7",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li7s1",
+          "text": "Stability: ",
+          "marks": [
+            "strong"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "li7s2",
+          "text": "When properly stored at 2–8°C and shielded from light, concentrated TB-500 solutions maintain structural integrity across their labeled shelf life.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p6",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p6s",
+          "text": "The 10mg/mL formulation is not intended to encourage higher-dose protocols. It's engineered for precision and flexibility within existing research parameters.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2c",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2cs",
+          "text": "Greenstone's Sourcing and Quality Standards",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p7",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p7s",
+          "text": "Every vial in the Greenstone catalog is compounded under 503A standards using USA-sourced active pharmaceutical ingredients. TB-500 10mg/mL is no exception. The 10mg/mL formulation undergoes third-party testing for peptide purity via HPLC, sterility and endotoxin levels, and pH and osmolality verification. Certificates of Analysis are available on request.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p8",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p8s",
+          "text": "Greenstone does not source from overseas bulk suppliers with unverified supply chains. The compounding environment is controlled, documented, and aligned with the standards serious researchers expect from a USA-based 503A pharmacy.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2d",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2ds",
+          "text": "What the Research Shows",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p9",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p9s",
+          "text": "The bulk of published TB-500 research has investigated its role in tissue regeneration — specifically cardiac tissue, tendon repair, and wound healing models. A 2010 study in the Journal of Molecular Medicine found that Tβ4 promoted cardiac repair following myocardial infarction in animal models by stimulating cardiomyocyte and endothelial progenitor cell migration. Research published in the Annals of the New York Academy of Sciences highlighted Tβ4's role in corneal and skin wound repair, noting accelerated healing timelines in treated subjects.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p10",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p10s",
+          "text": "Multiple preclinical studies have documented its effect on reducing local inflammation while preserving regenerative signaling — a mechanism distinct from conventional anti-inflammatory approaches. It's worth noting that most of this body of research is preclinical. Human trials remain limited, and no approved therapeutic uses currently exist in the United States for TB-500.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "h2e",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "h2es",
+          "text": "What's Inside the Vial",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p11",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p11s",
+          "text": "Greenstone's TB-500 10mg/mL contains the synthetic Thymosin Beta-4 fragment at 10mg per mL, with bacteriostatic water as the carrier. No preservatives, fillers, or undisclosed excipients. Each vial is lot-traced and third-party verified before it leaves the pharmacy.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "p12",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p12s",
+          "text": "Vials are sealed with a pharmaceutical-grade stopper and aluminum crimp cap. Proper storage is 2–8°C, protected from light and away from agitation. Shelf life and lot information are printed on each vial label.",
+          "marks": []
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "disc1",
+      "style": "blockquote",
+      "markDefs": [],
+      "children": [
+        {
+          "_type": "span",
+          "_key": "disc1s",
+          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "marks": []
+        }
+      ]
+    }
+  ],
+  "mainImage": {
+    "assetId": "image-4becd2d0133416d4956ce7b6a118868753874158-5504x3072-png",
+    "alt": "Cinematic dark studio photograph for TB-500 10mg/mL: Inside Greenstone's High-Concentration Recovery Vial"
+  }
+}
