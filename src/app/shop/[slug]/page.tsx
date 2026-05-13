@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PortableText } from '@portabletext/react';
 import { getAllProducts, getProductBySlug } from '@/lib/queries';
 import { urlFor } from '@/lib/sanity';
 import { ProductCard } from '@/components/ProductCard';
@@ -33,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export const revalidate = 300;
+export const revalidate = false; // fully static
 
 export default async function ProductDetailPage({ params }: PageProps) {
   const product = await getProductBySlug(params.slug);
@@ -196,9 +195,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 <summary className="font-cormorant text-2xl text-white cursor-pointer">
                   Description
                 </summary>
-                <div className="mt-4 text-cream-dim space-y-3 prose-sm">
-                  <PortableText value={product.description} />
-                </div>
+                <div
+                  className="mt-4 text-cream-dim space-y-3 prose-sm"
+                  dangerouslySetInnerHTML={{ __html: product.description }}
+                />
               </details>
             )}
             {product.storageInstructions && (

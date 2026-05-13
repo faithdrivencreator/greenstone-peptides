@@ -1,148 +1,175 @@
-import { groq } from 'next-sanity';
-import { sanityClient } from './sanity';
-import type { Product, Category, BlogPost, SiteSettings } from '@/types';
+/**
+ * Greenstone Peptides — Data queries (static file edition)
+ * All data served from src/data/*.ts — no Sanity dependency.
+ */
+import type { Product, Category, BlogPost } from '@/types';
+import { staticProducts } from '@/data/products';
+import { staticCategories } from '@/data/categories';
+import { staticBlogPosts } from '@/data/blog-posts';
 
-// ------------------------------------------------------------------
-// Reusable projections
-// ------------------------------------------------------------------
-const productProjection = groq`
-  _id,
-  _type,
-  name,
-  slug,
-  shortDescription,
-  description,
-  format,
-  strength,
-  size,
-  price,
-  stripePaymentLink,
-  prescriptionRequired,
-  usaCompounded,
-  storageInstructions,
-  safetyNotes,
-  seoTitle,
-  seoDescription,
-  image,
-  featured,
-  active,
-  "category": category->{_id, title, slug, icon}
-`;
+// ── Adapters: static shape → component-compatible shape ──────────────────────
 
-const blogPostProjection = groq`
-  _id,
-  _type,
-  title,
-  slug,
-  publishedAt,
-  excerpt,
-  body,
-  mainImage,
-  readingTime,
-  featured,
-  seoTitle,
-  seoDescription,
-  tags,
-  "author": author->{_id, name, slug, image, credentials, title},
-  "categories": categories[]->{_id, title, slug}
-`;
+function adaptCategory(c: (typeof staticCategories)[number]): Category {
+  return {
+    _id: c.id,
+    _type: 'category',
+    title: c.title,
+    slug: { _type: 'slug', current: c.slug },
+    description: c.description ?? undefined,
+    icon: c.icon ?? undefined,
+    order: c.order,
+    seoTitle: c.seoTitle ?? undefined,
+    seoDescription: c.seoDescription ?? undefined,
+  };
+}
 
-// ------------------------------------------------------------------
-// Product queries
-// ------------------------------------------------------------------
+function adaptProduct(
+  p: (typeof staticProducts)[number],
+  allCats: Category[],
+  allProds?: (typeof staticProducts)[number][],
+): Product {
+  const category = allCats.find(c => c._id === p.categoryId);
+  return {
+    _id: p.id,
+    _type: 'product',
+    name: p.name,
+    slug: { _type: 'slug', current: p.slug },
+    category,
+    shortDescription: p.shortDescription ?? undefined,
+    description: p.description as unknown as string, // HTML string
+    format: p.format as Product['format'],
+    strength: p.strength ?? undefined,
+    size: p.size ?? undefined,
+    price: p.price,
+    stripePaymentLink: p.stripePaymentLink ?? undefined,
+    prescriptionRequired: p.prescriptionRequired,
+    usaCompounded: p.usaCompounded,
+    storageInstructions: p.storageInstructions ?? undefined,
+    safetyNotes: p.safetyNotes ?? undefined,
+    seoTitle: p.seoTitle ?? undefined,
+    seoDescription: p.seoDescription ?? undefined,
+    image: p.imageUrl
+      ? { _type: 'image', asset: { _ref: '', _type: 'reference', url: p.imageUrl }, alt: p.imageAlt }
+      : undefined,
+    featured: p.featured,
+    active: p.active,
+    relatedProducts: allProds
+      ? ([] as Product[]) // resolved separately in getProductBySlug
+      : undefined,
+  };
+}
+
+function adaptPost(
+  p: (typeof staticBlogPosts)[number],
+  allProds?: Product[],
+): BlogPost {
+  const relatedProducts = allProds
+    ? p.relatedProductIds
+        .map(id => allProds.find(prod => prod._id === id))
+        .filter((x): x is Product => Boolean(x))
+    : undefined;
+
+  return {
+    _id: p.id,
+    _type: 'blogPost',
+    title: p.title,
+    slug: { _type: 'slug', current: p.slug },
+    publishedAt: p.publishedAt,
+    excerpt: p.excerpt ?? undefined,
+    body: p.content as unknown as string, // HTML string
+    mainImage: p.heroImage
+      ? { _type: 'image', asset: { _ref: '', _type: 'reference', url: p.heroImage }, alt: p.heroAlt }
+      : undefined,
+    readingTime: p.readingTime ?? undefined,
+    featured: p.featured,
+    seoTitle: p.seoTitle ?? undefined,
+    seoDescription: p.seoDescription ?? undefined,
+    tags: [...p.tags] as string[],
+    relatedProducts,
+  };
+}
+
+// ── Category queries ──────────────────────────────────────────────────────────
+
+export async function getAllCategories(): Promise<Category[]> {
+  return staticCategories
+    .slice()
+    .sort((a, b) => (a.order ?? 99) - (b.order ?? 99))
+    .map(adaptCategory);
+}
+
+// ── Product queries ───────────────────────────────────────────────────────────
+
 export async function getAllProducts(): Promise<Product[]> {
-  return sanityClient.fetch(
-    groq`*[_type == "product" && active == true] | order(featured desc, name asc) {
-      ${productProjection}
-    }`
-  );
+  const cats = await getAllCategories();
+  return staticProducts
+    .filter(p => p.active)
+    .sort((a, b) => {
+      if (a.featured && !b.featured) return -1;
+      if (!a.featured && b.featured) return 1;
+      return a.name.localeCompare(b.name);
+    })
+    .map(p => adaptProduct(p, cats));
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {
-  return sanityClient.fetch(
-    groq`*[_type == "product" && slug.current == $slug][0] {
-      ${productProjection},
-      "relatedProducts": relatedProducts[]->{ ${productProjection} }
-    }`,
-    { slug }
-  );
+  const raw = staticProducts.find(p => p.slug === slug);
+  if (!raw) return null;
+  const cats = await getAllCategories();
+  const allProds = staticProducts.map(p => adaptProduct(p, cats));
+  const product = adaptProduct(raw, cats);
+  // Products don't carry related IDs in static data; return empty
+  product.relatedProducts = [];
+  return product;
 }
 
 export async function getProductsByCategory(categorySlug: string): Promise<Product[]> {
-  return sanityClient.fetch(
-    groq`*[_type == "product" && active == true && category->slug.current == $categorySlug] | order(name asc) {
-      ${productProjection}
-    }`,
-    { categorySlug }
-  );
+  const cats = await getAllCategories();
+  return staticProducts
+    .filter(p => p.active && p.categorySlug === categorySlug)
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map(p => adaptProduct(p, cats));
 }
 
 export async function getFeaturedProducts(): Promise<Product[]> {
-  return sanityClient.fetch(
-    groq`*[_type == "product" && active == true && featured == true] | order(name asc) {
-      ${productProjection}
-    }`
-  );
+  const cats = await getAllCategories();
+  return staticProducts
+    .filter(p => p.active && p.featured)
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map(p => adaptProduct(p, cats));
 }
 
-// ------------------------------------------------------------------
-// Category queries
-// ------------------------------------------------------------------
-export async function getAllCategories(): Promise<Category[]> {
-  return sanityClient.fetch(
-    groq`*[_type == "category"] | order(order asc, title asc) {
-      _id, _type, title, slug, description, icon, order, image, seoTitle, seoDescription
-    }`
-  );
-}
+// ── Blog post queries ─────────────────────────────────────────────────────────
 
-// ------------------------------------------------------------------
-// Blog queries
-// ------------------------------------------------------------------
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  return sanityClient.fetch(
-    groq`*[_type == "blogPost" && defined(publishedAt)] | order(publishedAt desc) {
-      ${blogPostProjection}
-    }`
-  );
+  return staticBlogPosts
+    .slice()
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .map(p => adaptPost(p));
 }
 
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
-  return sanityClient.fetch(
-    groq`*[_type == "blogPost" && slug.current == $slug][0] {
-      ${blogPostProjection},
-      "relatedProducts": relatedProducts[]->{ ${productProjection} }
-    }`,
-    { slug }
-  );
-}
-
-export async function getBlogPostsByCategory(categorySlug: string): Promise<BlogPost[]> {
-  return sanityClient.fetch(
-    groq`*[_type == "blogPost" && defined(publishedAt) && $categorySlug in categories[]->slug.current] | order(publishedAt desc) {
-      ${blogPostProjection}
-    }`,
-    { categorySlug }
-  );
+  const raw = staticBlogPosts.find(p => p.slug === slug);
+  if (!raw) return null;
+  const cats = await getAllCategories();
+  const allProds = staticProducts.map(p => adaptProduct(p, cats));
+  return adaptPost(raw, allProds);
 }
 
 export async function getRecentBlogPosts(limit = 3): Promise<BlogPost[]> {
-  return sanityClient.fetch(
-    groq`*[_type == "blogPost" && defined(publishedAt)] | order(publishedAt desc) [0...$limit] {
-      ${blogPostProjection}
-    }`,
-    { limit }
-  );
+  return staticBlogPosts
+    .slice()
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, limit)
+    .map(p => adaptPost(p));
 }
 
-// ------------------------------------------------------------------
-// Site settings (singleton)
-// ------------------------------------------------------------------
-export async function getSiteSettings(): Promise<SiteSettings | null> {
-  return sanityClient.fetch(
-    groq`*[_type == "siteSettings"][0]{
-      _id, _type, siteTitle, siteDescription, disclaimer, mainNav, footerNav,
-      socialLinks, phoneNumber, address, email
-    }`
-  );
+export async function getBlogPostsByCategory(): Promise<BlogPost[]> {
+  // Category filtering removed; all posts returned sorted by date
+  return getAllBlogPosts();
+}
+
+// Site settings no longer in Sanity — return null
+export async function getSiteSettings() {
+  return null;
 }

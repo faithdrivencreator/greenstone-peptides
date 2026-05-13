@@ -1,26 +1,12 @@
 import type { MetadataRoute } from 'next';
-import { groq } from 'next-sanity';
-import { sanityClient } from '@/lib/sanity';
+import { staticProducts } from '@/data/products';
+import { staticBlogPosts } from '@/data/blog-posts';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
 
-export const revalidate = 3600;
+export const revalidate = false; // static
 
-async function getProductSlugs(): Promise<string[]> {
-  const slugs = await sanityClient.fetch<{ slug: string }[]>(
-    groq`*[_type == "product" && active == true && defined(slug.current)]{ "slug": slug.current }`
-  );
-  return slugs.map((s) => s.slug);
-}
-
-async function getBlogSlugs(): Promise<string[]> {
-  const slugs = await sanityClient.fetch<{ slug: string }[]>(
-    groq`*[_type == "blogPost" && defined(publishedAt) && defined(slug.current)]{ "slug": slug.current }`
-  );
-  return slugs.map((s) => s.slug);
-}
-
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
     { path: '/shop', priority: 0.9, changeFrequency: 'daily' as const },
@@ -36,11 +22,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: '/free/peptides-unlocked', priority: 0.8, changeFrequency: 'monthly' as const },
   ];
 
-  const [productSlugs, blogSlugs] = await Promise.all([
-    getProductSlugs(),
-    getBlogSlugs(),
-  ]);
-
   const staticEntries: MetadataRoute.Sitemap = staticPages.map(({ path, priority, changeFrequency }) => ({
     url: `${SITE_URL}${path}`,
     lastModified: new Date(),
@@ -48,17 +29,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority,
   }));
 
-  const productEntries: MetadataRoute.Sitemap = productSlugs.map((slug) => ({
-    url: `${SITE_URL}/shop/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }));
+  const productEntries: MetadataRoute.Sitemap = staticProducts
+    .filter(p => p.active)
+    .map(p => ({
+      url: `${SITE_URL}/shop/${p.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }));
 
-  const blogEntries: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
-    url: `${SITE_URL}/learn/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
+  const blogEntries: MetadataRoute.Sitemap = staticBlogPosts.map(p => ({
+    url: `${SITE_URL}/learn/${p.slug}`,
+    lastModified: new Date(p.publishedAt),
+    changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
 

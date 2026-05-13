@@ -1,9 +1,8 @@
-// Greenstone Peptides — core TypeScript types (mirror of Sanity schemas)
+// Greenstone Peptides — core TypeScript types
 
 export interface SanityImage {
-  _type: 'image';
-  asset: { _ref: string; _type: 'reference'; url?: string };
-  hotspot?: { x: number; y: number; height: number; width: number };
+  _type?: 'image';
+  asset: { _ref?: string; _type?: 'reference'; url?: string };
   alt?: string;
 }
 
@@ -34,7 +33,7 @@ export interface Product {
   slug: Slug;
   category?: Category;
   shortDescription?: string;
-  description?: any[]; // PortableText blocks
+  description?: string; // HTML string
   format?: ProductFormat;
   strength?: string;
   size?: string;
@@ -45,6 +44,7 @@ export interface Product {
   storageInstructions?: string;
   safetyNotes?: string;
   relatedProducts?: Product[];
+  relatedProductIds?: string[];
   seoTitle?: string;
   seoDescription?: string;
   image?: SanityImage;
@@ -72,7 +72,7 @@ export interface BlogPost {
   publishedAt: string;
   categories?: Category[];
   excerpt?: string;
-  body?: any[]; // PortableText
+  body?: string; // HTML string
   mainImage?: SanityImage;
   relatedProducts?: Product[];
   readingTime?: number;
