@@ -38,7 +38,11 @@ async function extractOrderDetails(session: Stripe.Checkout.Session) {
     amountTotal: (session.amount_total ?? 0) / 100,
     currency: session.currency?.toUpperCase() ?? 'USD',
     lineItems,
-    shippingAddress: session.shipping_details?.address ?? null,
+    shippingAddress:
+      (session as unknown as { collected_information?: { shipping_details?: { address?: Stripe.Address } } })
+        .collected_information?.shipping_details?.address ??
+      session.shipping_details?.address ??
+      null,
     stripeSessionId: session.id,
     paymentIntent:
       typeof session.payment_intent === 'string'
