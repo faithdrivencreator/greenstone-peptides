@@ -200,6 +200,19 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   const session = event.data.object as Stripe.Checkout.Session;
 
+  // Multi-brand guard: this Stripe account is shared across FFS storefronts
+  // (Greenstone, AO Strength Team) and client billing (FFS manual invoices).
+  // Each storefront's checkout stamps metadata.source_site so its own webhook
+  // fires only on its own events. Cross-brand events get a 200 and exit.
+  if (session.metadata?.source_site !== 'greenstonewellness.store') {
+    console.log(
+      '[Webhook] Ignored — source_site=',
+      session.metadata?.source_site ?? '(missing)',
+      'session=', session.id,
+    );
+    return NextResponse.json({ received: true, ignored: 'cross-brand' });
+  }
+
   console.log('[Webhook] checkout.session.completed:', {
     sessionId: session.id,
     customerEmail: session.customer_details?.email,
