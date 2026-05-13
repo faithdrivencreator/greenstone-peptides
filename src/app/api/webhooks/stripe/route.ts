@@ -312,22 +312,17 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         await addToCustomersAudience(order.customerEmail, customerFirstName);
 
         const welcomeAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
-        const reviewAt = new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString();
 
-        // Generate unique per-customer codes (single-use, explicit expiration)
+        // Generate unique per-customer THANKS15 code for the +24h welcome email.
+        // The +60d REVIEW email is fired by the daily cron (netlify/functions/
+        // greenstone-review-cron) which generates its own per-customer code at
+        // send time — Resend caps scheduled sends at 30 days so we can't wait.
         let thanksCode = 'THANKS15';
-        let reviewCode = 'REVIEW10';
         try {
           thanksCode = await createPersonalPromoCode({ baseCoupon: 'THANKS15', daysValid: 60 });
           console.log('[Webhook] Personal THANKS code:', thanksCode);
         } catch (err) {
           console.error('[Webhook] THANKS code create failed, using shared fallback:', err);
-        }
-        try {
-          reviewCode = await createPersonalPromoCode({ baseCoupon: 'REVIEW10', daysValid: 90 });
-          console.log('[Webhook] Personal REVIEW code:', reviewCode);
-        } catch (err) {
-          console.error('[Webhook] REVIEW code create failed, using shared fallback:', err);
         }
 
         // Welcome email +24h
@@ -386,50 +381,10 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           console.error('[Webhook] Failed to schedule welcome email:', err);
         }
 
-        // Review request email +60d
-        try {
-          await resend.emails.send({
-            from: ORDERS_FROM,
-            to: order.customerEmail,
-            replyTo: SUPPORT_EMAIL,
-            scheduledAt: reviewAt,
-            subject: 'How is your Greenstone research going?',
-            html: renderEmailShell({
-              preheader: `It's been 60 days. We'd love to hear how things are going — and a thank-you code inside.`,
-              body: `
-                <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;color:#F5F1EB;font-weight:400;margin:0 0 16px">How is it going${customerFirstName ? `, ${customerFirstName}` : ''}?</h2>
-                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 16px;font-family:'DM Sans',-apple-system,sans-serif">You ordered from Greenstone about two months ago. By now you've had real time to observe what's working and what isn't.</p>
-                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">We're building Greenstone with the help of the people using our products. Would you take <span style="color:#1A9E6E;font-weight:500">60 seconds</span> to tell us how it went? Your feedback shapes what we stock and how we ship.</p>
-
-                <p style="text-align:center;margin:28px 0">
-                  <a href="mailto:${SUPPORT_EMAIL}?subject=My%20Greenstone%20experience" style="display:inline-block;background:#C9A96E;color:#0D1117;padding:14px 36px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">SHARE YOUR EXPERIENCE</a>
-                </p>
-
-                <p style="color:#B8B2A8;line-height:1.7;margin:28px 0 24px;font-family:'DM Sans',-apple-system,sans-serif;text-align:center;font-size:14px"><em>One reply. One paragraph. That's all we need.</em></p>
-
-                <div style="text-align:center;margin:36px 0">
-                  <span style="display:inline-block;width:60px;height:1px;background:#1A9E6E;vertical-align:middle"></span>
-                  <span style="display:inline-block;color:#1A9E6E;font-size:8px;letter-spacing:0.4em;margin:0 16px;vertical-align:middle;font-family:'DM Sans',-apple-system,sans-serif">&#9670;</span>
-                  <span style="display:inline-block;width:60px;height:1px;background:#1A9E6E;vertical-align:middle"></span>
-                </div>
-
-                <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#F5F1EB;font-weight:400;margin:0 0 8px;text-align:center">A thank-you, either way.</h3>
-                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 20px;font-family:'DM Sans',-apple-system,sans-serif;text-align:center">Here's <span style="color:#1A9E6E;font-weight:500">10% off</span> your next order — for being part of the early Greenstone community.</p>
-
-                ${renderCodeBlock({ code: reviewCode, label: '10% off your next order', meta: 'reserved for you · one use · expires in 90 days' })}
-
-                <p style="text-align:center;margin:28px 0 0">
-                  <a href="${SITE_URL}/shop" style="display:inline-block;background:transparent;color:#1A9E6E;padding:12px 28px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600;border:1px solid #1A9E6E">BROWSE THE CATALOG</a>
-                </p>
-              `,
-            }),
-          });
-          console.log('[Webhook] Review email scheduled for', reviewAt);
-        } catch (err) {
-          console.error('[Webhook] Failed to schedule review email:', err);
-        }
+        // Note: the +60d REVIEW email is fired by the daily scheduled function
+        // at netlify/functions/greenstone-review-cron.mts, not from this webhook.
       } else {
-        console.log('[Webhook] Returning customer — skipping welcome + review emails');
+        console.log('[Webhook] Returning customer — skipping welcome email');
       }
     }
   } catch (err) {
