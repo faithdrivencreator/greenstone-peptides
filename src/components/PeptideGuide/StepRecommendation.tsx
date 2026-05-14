@@ -19,6 +19,35 @@ export function StepRecommendation({ products, onBack }: StepRecommendationProps
     openCart();
   }
 
+  function handleStartProtocol() {
+    products.forEach((p) => addItem(p));
+    openCart();
+  }
+
+  if (products.length === 0) {
+    return (
+      <div className="flex flex-col items-center max-w-2xl mx-auto text-center">
+        <div className="w-16 h-16 bg-emerald/10 border border-emerald/30 flex items-center justify-center mb-5" style={{ borderRadius: '8px' }}>
+          <FlaskConical className="w-8 h-8 text-emerald" />
+        </div>
+        <h2 className="font-cormorant text-3xl sm:text-4xl text-white mb-3" style={{ fontWeight: 400 }}>
+          No exact match yet
+        </h2>
+        <p className="text-cream-dim mb-8 max-w-lg">
+          We don&apos;t have a product that fits this exact goal-and-budget combination right now. Browse the full shop or revise your answers and we&apos;ll try again.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <Link href="/shop" className="btn btn-solid !px-8 !py-3">
+            Browse all products
+          </Link>
+          <button onClick={onBack} className="btn btn-primary !px-8 !py-3">
+            Revise my answers
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col items-center max-w-3xl mx-auto">
       <div className="w-16 h-16 bg-emerald/10 border border-emerald/30 flex items-center justify-center mb-5" style={{ borderRadius: '8px' }}>
@@ -100,13 +129,14 @@ export function StepRecommendation({ products, onBack }: StepRecommendationProps
         </Link>
       </p>
 
-      <Link
-        href="/cart"
+      <button
+        type="button"
+        onClick={handleStartProtocol}
         className="btn btn-solid group flex items-center gap-3 !px-10 !py-4 !text-lg hover:gap-4 transition-[gap] duration-200"
       >
         Start My Protocol
         <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-      </Link>
+      </button>
 
       <button onClick={onBack} className="mt-6 text-cream-dim/50 hover:text-gold text-sm transition-colors">
         ← Revise my answers
