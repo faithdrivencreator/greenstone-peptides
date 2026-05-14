@@ -24,7 +24,7 @@ export function ContactForm() {
         body: JSON.stringify({ name, email, phone, topic, message }),
       });
 
-      // Fire Klaviyo tracking in parallel — don't block submission on it
+      // Fire Klaviyo tracking in parallel, don't block submission on it
       void Promise.all([
         subscribeToKlaviyo(email, `Contact - ${topic}`),
         trackContactSubmission({ email, name, phone, topic, message }),

@@ -1,5 +1,5 @@
 /**
- * Stripe Webhook Handler — Greenstone Wellness
+ * Stripe Webhook Handler, Greenstone Wellness
  *
  * SETUP (one-time):
  * 1. Stripe Dashboard → Developers → Webhooks → Add endpoint
@@ -206,7 +206,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   // fires only on its own events. Cross-brand events get a 200 and exit.
   if (session.metadata?.source_site !== 'greenstonewellness.store') {
     console.log(
-      '[Webhook] Ignored — source_site=',
+      '[Webhook] Ignored, source_site=',
       session.metadata?.source_site ?? '(missing)',
       'session=', session.id,
     );
@@ -239,7 +239,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     await resend.emails.send({
       from: 'Greenstone Orders <orders@greenstonewellness.store>',
       to: PETE_EMAIL,
-      subject: `💰 New Order — $${order.amountTotal.toFixed(2)} from ${order.customerName || order.customerEmail}`,
+      subject: `💰 New Order, $${order.amountTotal.toFixed(2)} from ${order.customerName || order.customerEmail}`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
           <h2 style="color:#0a0f1a;border-bottom:2px solid #1a9e6e;padding-bottom:8px">New Greenstone Order</h2>
@@ -289,7 +289,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           from: ORDERS_FROM,
           to: order.customerEmail,
           replyTo: SUPPORT_EMAIL,
-          subject: `Your Greenstone order is confirmed — #${orderRef}`,
+          subject: `Your Greenstone order is confirmed, #${orderRef}`,
           html: renderEmailShell({
             preheader: `Order #${orderRef} confirmed. We'll send tracking when it ships.`,
             body: `
@@ -329,7 +329,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         // Generate unique per-customer THANKS15 code for the +24h welcome email.
         // The +60d REVIEW email is fired by the daily cron (netlify/functions/
         // greenstone-review-cron) which generates its own per-customer code at
-        // send time — Resend caps scheduled sends at 30 days so we can't wait.
+        // send time, Resend caps scheduled sends at 30 days so we can't wait.
         let thanksCode = 'THANKS15';
         try {
           thanksCode = await createPersonalPromoCode({ baseCoupon: 'THANKS15', daysValid: 60 });
@@ -345,13 +345,13 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             to: order.customerEmail,
             replyTo: SUPPORT_EMAIL,
             scheduledAt: welcomeAt,
-            subject: 'Welcome to Greenstone — a thank-you, and where to start',
+            subject: 'Welcome to Greenstone, a thank-you, and where to start',
             html: renderEmailShell({
               preheader: `Your THANKS15 code for next order, plus two free guides while you wait.`,
               body: `
                 <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;color:#F5F1EB;font-weight:400;margin:0 0 16px">Welcome${customerFirstName ? `, ${customerFirstName}` : ''}.</h2>
                 <p style="color:#B8B2A8;line-height:1.7;margin:0 0 16px;font-family:'DM Sans',-apple-system,sans-serif">Thank you for trusting Greenstone with your first order. Every peptide we ship is <span style="color:#1A9E6E;font-weight:500">compounded in the USA under USP 797 standards</span> and <span style="color:#1A9E6E;font-weight:500">third-party tested</span> for potency, sterility, and purity.</p>
-                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">A small thank-you below — and two free guides we publish for the community.</p>
+                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">A small thank-you below, and two free guides we publish for the community.</p>
 
                 ${renderCodeBlock({ code: thanksCode, label: '15% off your next order', meta: 'reserved for you · one use · expires in 60 days' })}
 
@@ -367,7 +367,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
                     <td style="padding:18px 20px;border:1px solid #1E2738;background:#161C26;width:50%;vertical-align:top">
                       <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',-apple-system,sans-serif">Volume I</p>
                       <p style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px">Peptides Made Easy</p>
-                      <p style="margin:0 0 14px;color:#B8B2A8;font-size:13px;line-height:1.5;font-family:'DM Sans',-apple-system,sans-serif">A primer for newcomers — what peptides are, how they're researched, where to start.</p>
+                      <p style="margin:0 0 14px;color:#B8B2A8;font-size:13px;line-height:1.5;font-family:'DM Sans',-apple-system,sans-serif">A primer for newcomers, what peptides are, how they're researched, where to start.</p>
                       <a href="${SITE_URL}/free/peptides-made-easy" style="color:#1A9E6E;font-size:12px;letter-spacing:0.15em;text-decoration:none;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">DOWNLOAD →</a>
                     </td>
                     <td style="width:8px"></td>
@@ -397,7 +397,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         // Note: the +60d REVIEW email is fired by the daily scheduled function
         // at netlify/functions/greenstone-review-cron.mts, not from this webhook.
       } else {
-        console.log('[Webhook] Returning customer — skipping welcome email');
+        console.log('[Webhook] Returning customer, skipping welcome email');
       }
     }
   } catch (err) {

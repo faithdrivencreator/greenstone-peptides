@@ -15,7 +15,7 @@ export default function EmailCapture() {
     try {
       await subscribeToKlaviyo(email, 'Homepage Email Capture')
     } finally {
-      // Always show success — even for already-subscribed addresses
+      // Always show success, even for already-subscribed addresses
       setLoading(false)
       setSubmitted(true)
     }

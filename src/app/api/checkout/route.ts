@@ -14,18 +14,18 @@ export async function POST(req: NextRequest) {
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
 
-    // Resolve coupon — validate it exists in Stripe before passing
+    // Resolve coupon, validate it exists in Stripe before passing
     let discounts: Stripe.Checkout.SessionCreateParams['discounts'] | undefined;
     if (couponCode) {
       try {
         await stripe.coupons.retrieve(couponCode.toUpperCase());
         discounts = [{ coupon: couponCode.toUpperCase() }];
       } catch {
-        // Invalid coupon — proceed without it (don't block checkout)
+        // Invalid coupon, proceed without it (don't block checkout)
       }
     }
 
-    // Build metadata: product names and quantities — available in webhook payload
+    // Build metadata: product names and quantities, available in webhook payload
     const metadataItems = items.map((item) => {
       const label = [item.name, item.strength, item.size].filter(Boolean).join(' · ');
       return `${label} x${item.qty}`;
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
       brand: 'greenstone-peptides',
       revenue_type: 'product_sale',
       item_count: String(items.reduce((sum, i) => sum + i.qty, 0)),
-      // Stripe metadata values max 500 chars — truncate if cart is very large
+      // Stripe metadata values max 500 chars, truncate if cart is very large
       items_summary: metadataItems.join(' | ').slice(0, 500),
     };
 

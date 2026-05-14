@@ -1,5 +1,5 @@
 /**
- * Sanity removed — this stub keeps urlFor() backward-compatible with all
+ * Sanity removed, this stub keeps urlFor() backward-compatible with all
  * components that call urlFor(image).width(n).height(n).url().
  * All data now comes from src/data/*.ts static files.
  */

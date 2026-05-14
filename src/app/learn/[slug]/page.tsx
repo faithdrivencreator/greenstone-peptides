@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export const revalidate = false; // fully static — rebuild on deploy
+export const revalidate = false; // fully static, rebuild on deploy
 
 export default async function BlogPostPage({ params }: PageProps) {
   const post = await getBlogPostBySlug(params.slug);

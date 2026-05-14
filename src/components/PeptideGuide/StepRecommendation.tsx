@@ -29,7 +29,7 @@ export function StepRecommendation({ products, onBack }: StepRecommendationProps
       </h2>
       <p className="text-cream-dim mb-10 text-center max-w-lg">
         Based on your goal and budget, here&apos;s exactly what we recommend to start with.
-        Add it to cart and your protocol ships in 2–3 business days.
+        Add it to cart and your protocol ships in 2-3 business days.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-10">

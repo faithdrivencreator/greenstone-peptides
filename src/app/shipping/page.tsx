@@ -27,8 +27,8 @@ export default function ShippingPage() {
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">How orders ship</h2>
           <ul className="space-y-3 text-sm leading-relaxed text-cream-dim">
-            <li className="flex gap-3"><span className="text-gold">•</span><span><strong className="text-cream">Processing time:</strong> orders placed Monday–Friday before 2pm ET ship the same business day. Orders placed after 2pm or on weekends ship the next business day.</span></li>
-            <li className="flex gap-3"><span className="text-gold">•</span><span><strong className="text-cream">Carrier:</strong> US Priority Mail (USPS). Most US orders arrive in 2–4 business days.</span></li>
+            <li className="flex gap-3"><span className="text-gold">•</span><span><strong className="text-cream">Processing time:</strong> orders placed Monday-Friday before 2pm ET ship the same business day. Orders placed after 2pm or on weekends ship the next business day.</span></li>
+            <li className="flex gap-3"><span className="text-gold">•</span><span><strong className="text-cream">Carrier:</strong> US Priority Mail (USPS). Most US orders arrive in 2-4 business days.</span></li>
             <li className="flex gap-3"><span className="text-gold">•</span><span><strong className="text-cream">Tracking:</strong> you'll receive a tracking email the moment your order leaves our facility.</span></li>
             <li className="flex gap-3"><span className="text-gold">•</span><span><strong className="text-cream">Packaging:</strong> temperature-controlled, insulated mailers with cold packs when required by product stability. Discreet outer packaging.</span></li>
             <li className="flex gap-3"><span className="text-gold">•</span><span><strong className="text-cream">Delivery area:</strong> United States only. We do not ship internationally at this time.</span></li>
@@ -39,8 +39,8 @@ export default function ShippingPage() {
           <h2 className="font-cormorant text-2xl text-white mb-4">Lost, damaged, or delayed orders</h2>
           <p className="text-cream-dim text-sm leading-relaxed mb-3">
             If your order is delayed more than 5 business days past the expected delivery window,
-            arrives damaged, or doesn't arrive at all, contact us and we'll make it right —
-            either replace the order at no charge or issue a full refund.
+            arrives damaged, or doesn't arrive at all, contact us and we'll make it right.
+            We'll either replace the order at no charge or issue a full refund.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed">
             Please reach out within 14 days of the shipping date so we can file a claim with the
@@ -54,7 +54,7 @@ export default function ShippingPage() {
             Because our products are temperature-sensitive and intended for research use, we
             cannot accept returns of opened or unsealed items. Sealed, unopened products may be
             returned within 14 days of delivery for a full refund minus the original shipping
-            cost — please contact us before sending anything back so we can authorize the return.
+            cost, please contact us before sending anything back so we can authorize the return.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed">
             Defective or incorrectly shipped products are eligible for replacement or full refund
@@ -66,7 +66,7 @@ export default function ShippingPage() {
           <h2 className="font-cormorant text-2xl text-white mb-4">Order changes &amp; cancellations</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
             Need to change a shipping address, cancel an order, or adjust quantities? Contact us
-            within 1 hour of placing the order — most orders ship within hours, so the sooner you
+            within 1 hour of placing the order, most orders ship within hours, so the sooner you
             reach out the better.
           </p>
         </div>

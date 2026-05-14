@@ -40,7 +40,7 @@ export function Navigation() {
     if (e.target === e.currentTarget) setMobileOpen(false);
   }
 
-  // Sticky nav scroll listener — add .scrolled class after 20px
+  // Sticky nav scroll listener, add .scrolled class after 20px
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
@@ -105,7 +105,7 @@ export function Navigation() {
             })}
           </ul>
 
-          {/* Cart icon — desktop */}
+          {/* Cart icon, desktop */}
           <button
             onClick={openCart}
             className="hidden lg:inline-flex relative p-2 text-cream-dim hover:text-gold transition-colors"
@@ -119,7 +119,7 @@ export function Navigation() {
             )}
           </button>
 
-          {/* Wholesale login — desktop */}
+          {/* Wholesale login, desktop */}
           <Link
             href="/wholesale/login"
             className="hidden lg:inline-flex items-center gap-1.5 font-jetbrains text-[0.65rem] tracking-widest uppercase text-emerald hover:text-emerald-light border border-emerald/30 hover:border-emerald/60 px-3 py-2 transition-colors"
@@ -133,7 +133,7 @@ export function Navigation() {
             Get Started
           </Link>
 
-          {/* Cart icon — mobile */}
+          {/* Cart icon, mobile */}
           <button
             onClick={openCart}
             className="relative p-2 text-cream-dim hover:text-gold transition-colors lg:hidden"

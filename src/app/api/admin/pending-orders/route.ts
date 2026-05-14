@@ -1,5 +1,5 @@
 /**
- * Returns Greenstone orders waiting to ship — i.e., succeeded payments
+ * Returns Greenstone orders waiting to ship, i.e., succeeded payments
  * with `metadata.source_site=greenstonewellness.store` that don't yet
  * have a `metadata.shipped_at` timestamp set.
  *
@@ -80,7 +80,7 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
 
   // Also include orders BEFORE the `source_site` metadata convention existed
   // (older Greenstone orders like Azam's, placed before today's webhook upgrade).
-  // We fetch two queries and merge — one for tagged orders, one for older
+  // We fetch two queries and merge, one for tagged orders, one for older
   // untagged orders by statement_descriptor.
   const queries = [
     `status:'succeeded' AND created>${thirtyDaysAgo} AND metadata['source_site']:'greenstonewellness.store'`,
@@ -102,7 +102,7 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
       }
       const data = await res.json();
       for (const pi of data.data) {
-        // For the broad query, only include if it's Greenstone — use
+        // For the broad query, only include if it's Greenstone, use
         // statement_descriptor as a backup signal for pre-metadata orders.
         const isGreenstone =
           pi.metadata?.source_site === 'greenstonewellness.store' ||

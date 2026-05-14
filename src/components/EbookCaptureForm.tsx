@@ -141,7 +141,7 @@ export function EbookCaptureForm({ ebook, source, redirectUrl, ctaLabel }: Ebook
           <span className="text-red-300">{errorMessage}</span>
         )}
         {status === 'success' && (
-          <span className="text-emerald">Sent — redirecting you now…</span>
+          <span className="text-emerald">Sent, redirecting you now…</span>
         )}
       </p>
     </form>

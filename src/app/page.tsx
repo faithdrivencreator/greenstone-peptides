@@ -38,7 +38,7 @@ export default async function HomePage() {
 
       {/* ---------- ANNOUNCEMENT BANNER ---------- */}
       <div className="bg-emerald text-obsidian py-2.5 text-center font-jetbrains text-[0.65rem] tracking-[0.15em] uppercase">
-        New: Retatrutide — the first triple agonist peptide for weight management{' '}
+        New: Retatrutide, the first triple agonist peptide for weight management{' '}
         <Link href="/shop/retatrutide-20mg-ml-3ml" className="ml-1 underline underline-offset-2 font-bold hover:opacity-80 transition-opacity">
           Shop Retatrutide →
         </Link>
@@ -52,7 +52,7 @@ export default async function HomePage() {
           style={{ backgroundImage: 'url(/images/hero-lab.png)' }}
           aria-hidden
         />
-        {/* Dark overlay — keeps text readable, adds brand depth */}
+        {/* Dark overlay, keeps text readable, adds brand depth */}
         <div
           className="absolute inset-0"
           style={{ background: 'linear-gradient(105deg, rgba(13,17,23,0.92) 0%, rgba(13,17,23,0.75) 50%, rgba(13,17,23,0.55) 100%)' }}
@@ -77,7 +77,7 @@ export default async function HomePage() {
             </h1>
             <p className="mt-5 text-base text-cream-dim max-w-lg leading-relaxed">
               Every formulation compounded to order inside a licensed USA pharmacy.
-              USP 797 sterile standard. Third-party tested for potency and purity —
+              USP 797 sterile standard. Third-party tested for potency and purity,
               from synthesis to your door.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -151,7 +151,7 @@ export default async function HomePage() {
             </h2>
             <p className="text-cream-dim text-base leading-relaxed max-w-xl mx-auto mb-8">
               Answer 3 quick questions about your goals, experience, and budget.
-              We&apos;ll match you to the right protocol — with education on how to use it safely.
+              We&apos;ll match you to the right protocol, with education on how to use it safely.
             </p>
             <Link
               href="/guide"
@@ -200,7 +200,7 @@ export default async function HomePage() {
               {
                 href: '/free/peptides-made-easy',
                 cover: '/images/ebook-covers/peptides-made-easy-cover.webp',
-                alt: 'Peptides Made Easy — Volume I free guide cover',
+                alt: 'Peptides Made Easy, Volume I free guide cover',
                 caption: '18 pages · Beginner-friendly',
                 shadow:
                   'shadow-[0_20px_60px_-15px_rgba(201,169,110,0.25)] hover:shadow-[0_30px_80px_-15px_rgba(201,169,110,0.4)]',
@@ -208,7 +208,7 @@ export default async function HomePage() {
               {
                 href: '/free/peptides-unlocked',
                 cover: '/images/ebook-covers/peptides-unlocked-cover.webp',
-                alt: 'Peptides Unlocked — Volume II free guide cover',
+                alt: 'Peptides Unlocked, Volume II free guide cover',
                 caption: '23 pages · Build your protocol',
                 shadow:
                   'shadow-[0_20px_60px_-15px_rgba(26,158,110,0.25)] hover:shadow-[0_30px_80px_-15px_rgba(26,158,110,0.4)]',
@@ -280,7 +280,7 @@ export default async function HomePage() {
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                quote: 'After 12 weeks on a tirzepatide protocol, I am down 34 pounds. My provider monitored every step. This is not a shortcut — it is medicine done right.',
+                quote: 'After 12 weeks on a tirzepatide protocol, I am down 34 pounds. My provider monitored every step. This is not a shortcut, it is medicine done right.',
                 name: 'M. Rivera',
                 detail: 'Miami, FL · Weight Management Protocol',
                 stars: 5,
@@ -394,11 +394,11 @@ export default async function HomePage() {
           <div className="grid gap-6 md:grid-cols-3 mb-16">
             {[
               {
-                stat: '70–90%',
+                stat: '70-90%',
                 label: 'Of peptides sold online originate from bulk Chinese synthesis facilities with zero independent oversight.',
               },
               {
-                stat: '1% – 100%',
+                stat: '1% - 100%',
                 label: 'Purity range found in independent lab testing of research-grade peptides. The vial may contain almost none of the listed compound.',
               },
               {
@@ -442,7 +442,7 @@ export default async function HomePage() {
                   <strong className="text-cream block mb-1">Regulatory collapse</strong>
                   The FDA&rsquo;s March 2026 enforcement action gave non-compliant research
                   peptide sellers 15 days to cease shipments. Buyers lose their supplier
-                  overnight — with no recourse.
+                  overnight, with no recourse.
                 </li>
               </ul>
             </div>
@@ -465,7 +465,7 @@ export default async function HomePage() {
                 <li className="pl-4 border-l border-gold/30">
                   <strong className="text-cream block mb-1">Batch-specific Certificate of Analysis</strong>
                   Real CoA from accredited labs, tied to the lot number on your vial. Potency,
-                  purity, and contaminant testing — verifiable, not theatrical.
+                  purity, and contaminant testing, verifiable, not theatrical.
                 </li>
                 <li className="pl-4 border-l border-gold/30">
                   <strong className="text-cream block mb-1">Third-party verified potency</strong>
@@ -551,7 +551,7 @@ export default async function HomePage() {
           </div>
           <h2 className="font-cormorant">$30 off your first order.</h2>
           <p className="text-cream-dim mt-4 mx-auto">
-            Join the Greenstone community to unlock your exclusive discount code —
+            Join the Greenstone community to unlock your exclusive discount code,
             plus new product alerts and updates, one email a month.
           </p>
           <EmailCapture />

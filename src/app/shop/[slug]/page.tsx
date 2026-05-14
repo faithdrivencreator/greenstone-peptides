@@ -175,16 +175,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 </li>
               </ul>
 
-              <div className="mt-6 p-4 border border-gold/10 rounded-lg bg-obsidian-light/40">
-                <p className="text-[11px] leading-relaxed text-cream-dim">
-                  These products are intended for research and educational purposes only. They have
-                  not been evaluated by the FDA and are not intended to diagnose, treat, cure, or
-                  prevent any disease. Not for human consumption.{' '}
-                  <Link href="/safety" className="text-gold underline hover:text-gold-light">
-                    Read full disclaimer
-                  </Link>
-                </p>
-              </div>
             </div>
           </div>
 

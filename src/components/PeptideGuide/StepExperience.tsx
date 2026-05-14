@@ -22,7 +22,7 @@ const OPTIONS: { value: GuideExperience; label: string; description: string }[] 
   {
     value: 'experienced',
     label: 'Experienced',
-    description: 'I know the basics — help me optimize',
+    description: 'I know the basics, help me optimize',
   },
 ];
 
@@ -36,7 +36,7 @@ export function StepExperience({ onSelect, onBack }: StepExperienceProps) {
         How familiar are you with peptides?
       </h2>
       <p className="text-cream-dim mb-10 text-center max-w-md">
-        Honest answer is best — we tailor the education to where you are, not where you think you should be.
+        Honest answer is best, we tailor the education to where you are, not where you think you should be.
       </p>
       <div className="flex flex-col gap-3 w-full max-w-lg">
         {OPTIONS.map((opt) => (

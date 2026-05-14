@@ -34,11 +34,11 @@ export function renderShippingEmail(input: ShippingEmailInput): { subject: strin
   const greetingName = input.customerFirstName ? `, ${input.customerFirstName}` : '';
   const trackingUrl = buildTrackingUrl(input.carrier, input.trackingNumber);
 
-  const subject = `Your Greenstone order has shipped — #${input.orderRef}`;
+  const subject = `Your Greenstone order has shipped, #${input.orderRef}`;
 
   const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Greenstone</title></head>
 <body style="margin:0;padding:0;background:#0D1117;color:#F5F1EB">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0">Your Greenstone order is on its way — tracking inside.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0">Your Greenstone order is on its way, tracking inside.</div>
 <div style="background:#0D1117;padding:40px 16px">
   <div style="max-width:600px;margin:0 auto;background:#161C26;padding:48px 36px;border:1px solid #1E2738">
     <div style="text-align:center;padding-bottom:32px;border-bottom:1px solid #1E2738;margin-bottom:36px">
@@ -75,7 +75,7 @@ export function renderShippingEmail(input: ShippingEmailInput): { subject: strin
     <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;color:#F5F1EB;font-weight:400;margin:40px 0 12px">What to do when it arrives</h3>
     <table style="width:100%;border-collapse:collapse;font-family:'DM Sans',-apple-system,sans-serif">
       <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Refrigerate temperature-sensitive peptides immediately on arrival.</td></tr>
-      <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Inspect the package and contents — let us know within 24 hours if anything looks wrong.</td></tr>
+      <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Inspect the package and contents, let us know within 24 hours if anything looks wrong.</td></tr>
       <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Questions about reconstitution or storage? <a href="${SITE_URL}/safety" style="color:#C9A96E;text-decoration:none;border-bottom:1px solid #8A6E3E">Safety guide</a></td></tr>
     </table>
 

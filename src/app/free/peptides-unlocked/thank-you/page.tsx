@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { LeadCaptureTracker } from '../../_components/LeadCaptureTracker';
 
 export const metadata: Metadata = {
-  title: 'Your guide is on its way — Peptides Unlocked | Greenstone',
+  title: 'Your guide is on its way, Peptides Unlocked | Greenstone',
   description: 'Your free Greenstone Volume II guide is being delivered to your inbox.',
   robots: { index: false, follow: false },
   alternates: { canonical: '/free/peptides-unlocked/thank-you' },
@@ -15,14 +15,14 @@ const nextSteps = [
   {
     eyebrow: 'Browse',
     title: 'See the catalog',
-    body: 'Explore the full Greenstone library — 48 third-party tested formulations, USA-compounded under USP 797 standards.',
+    body: 'Explore the full Greenstone library, 48 third-party tested formulations, USA-compounded under USP 797 standards.',
     href: '/shop',
     cta: 'Shop all products',
   },
   {
     eyebrow: 'Volume I',
     title: 'Peptides Made Easy',
-    body: 'Haven’t read the primer? Volume I covers the basics in plain language — what peptides are, how to start, and your first 72 hours.',
+    body: 'Haven’t read the primer? Volume I covers the basics in plain language, what peptides are, how to start, and your first 72 hours.',
     href: '/free/peptides-made-easy',
     cta: 'Read Volume I',
   },
@@ -63,7 +63,7 @@ export default function PeptidesUnlockedThankYouPage() {
             <em className="italic text-gold">on its way.</em>
           </h1>
           <p className="mt-6 text-base md:text-lg text-cream-dim max-w-xl mx-auto leading-relaxed">
-            Check your inbox in the next 60 seconds. Didn&rsquo;t see it? Check spam — sometimes
+            Check your inbox in the next 60 seconds. Didn&rsquo;t see it? Check spam, sometimes
             <span className="text-cream"> hello@greenstonewellness.store </span>
             lands there on first contact.
           </p>

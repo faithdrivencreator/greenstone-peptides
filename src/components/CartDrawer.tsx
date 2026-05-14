@@ -90,7 +90,7 @@ export function CartDrawer() {
             <h2 className="font-cormorant text-2xl text-white">Your Cart</h2>
             {totalItems > 0 && (
               <p className="font-jetbrains text-[0.65rem] tracking-widest uppercase text-cream-dim/60 mt-0.5">
-                — {totalItems} {totalItems === 1 ? 'item' : 'items'}
+                {totalItems} {totalItems === 1 ? 'item' : 'items'}
               </p>
             )}
           </div>
@@ -242,7 +242,7 @@ export function CartDrawer() {
             </button>
 
             <p className="text-[0.65rem] text-cream-dim/50 leading-relaxed text-center font-jetbrains">
-              For research use only. Compounded under USP 797 sterile standards by USA pharmacy partners.
+              Compounded under USP 797 sterile standards by USA pharmacy partners.
             </p>
           </div>
         )}

@@ -10,7 +10,7 @@ interface StepWelcomeProps {
 
 const STATS = [
   { value: '7,000+', label: 'Naturally occurring peptides identified in the human body' },
-  { value: '15–20%', label: 'Average body weight reduction seen in GLP-1 clinical trials' },
+  { value: '15-20%', label: 'Average body weight reduction seen in GLP-1 clinical trials' },
   { value: '50+', label: 'FDA-approved peptide-based medications currently on the market' },
 ];
 
@@ -37,7 +37,7 @@ export function StepWelcome({ onStart }: StepWelcomeProps) {
       </h1>
 
       <p className="text-cream-dim text-lg leading-relaxed mb-8 max-w-2xl">
-        Peptides are short chains of amino acids — the same building blocks your body already produces naturally.
+        Peptides are short chains of amino acids, the same building blocks your body already produces naturally.
         They work by signaling your cells to do what they already know how to do, just better.
         No synthetics forcing reactions. No stimulants overriding your biology. Just precise, targeted support.
       </p>

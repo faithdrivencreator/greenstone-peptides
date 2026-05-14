@@ -112,8 +112,8 @@ export function WholesaleForm() {
           <select id="monthly-volume" name="monthly-volume" className="w-full bg-obsidian-light border border-gold/20 focus:border-emerald/60 px-4 py-3 text-cream outline-none transition-colors appearance-none">
             <option value="">Select range</option>
             <option>Under $5,000 / mo</option>
-            <option>$5,000 – $15,000 / mo</option>
-            <option>$15,000 – $50,000 / mo</option>
+            <option>$5,000 - $15,000 / mo</option>
+            <option>$15,000 - $50,000 / mo</option>
             <option>Over $50,000 / mo</option>
           </select>
         </div>

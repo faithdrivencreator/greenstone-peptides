@@ -161,7 +161,7 @@ export function ExitIntentPopup() {
 
                 <p className="mt-4 text-sm text-cream-dim leading-relaxed">
                   Join the Greenstone clinical community. Receive your discount code
-                  instantly — plus new protocol alerts and clinical research updates,
+                  instantly, plus new protocol alerts and clinical research updates,
                   one email a month.
                 </p>
 

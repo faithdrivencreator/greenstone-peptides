@@ -38,7 +38,7 @@ const BENEFITS = [
 ];
 
 const STEPS = [
-  { n: '01', t: 'Apply', b: 'Submit your practice information and wholesale inquiry via the form below. Review takes 2–3 business days.' },
+  { n: '01', t: 'Apply', b: 'Submit your practice information and wholesale inquiry via the form below. Review takes 2-3 business days.' },
   { n: '02', t: 'Review', b: 'Our team evaluates your facility, volume projections, and prescribing infrastructure before approval.' },
   { n: '03', t: 'Onboard', b: 'Approved partners receive portal credentials, pricing schedules, and a kickoff call with your account manager.' },
   { n: '04', t: 'Order', b: 'Place and track orders directly through the distributor portal. Cold-chain fulfilled to your facility.' },
@@ -64,7 +64,7 @@ export default function WholesalePage() {
           <p className="mt-8 text-lg text-cream-dim max-w-2xl leading-relaxed">
             Greenstone Peptides offers a structured wholesale program for medspas, integrative
             clinics, physician groups, and vetted distributors. Bring pharmaceutical-grade,
-            USA-compounded peptides to your patient network — backed by our clinical and
+            USA-compounded peptides to your patient network, backed by our clinical and
             logistics infrastructure.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">

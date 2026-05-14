@@ -33,34 +33,34 @@ const GOAL_STATS: Record<GuideGoal, { stat: string; label: string; color: string
 
 const GOAL_FACTS: Record<GuideGoal, { keyword: string; detail: string }[]> = {
   'lose-weight': [
-    { keyword: 'Burns fat without stimulants', detail: 'GLP-1 peptides work with your hormones — not against your body — to reduce hunger and shift your metabolism toward stored fat.' },
+    { keyword: 'Burns fat without stimulants', detail: 'GLP-1 peptides work with your hormones, not against your body, to reduce hunger and shift your metabolism toward stored fat.' },
     { keyword: 'Stabilizes blood sugar', detail: 'Slower gastric emptying blunts the spikes that drive cravings and fat storage. You naturally eat less, feel fuller longer.' },
-    { keyword: 'Preserves lean muscle', detail: 'Unlike crash diets, GLP-1 agonists like Semaglutide protect muscle mass while targeting fat — so the weight you lose stays off.' },
+    { keyword: 'Preserves lean muscle', detail: 'Unlike crash diets, GLP-1 agonists like Semaglutide protect muscle mass while targeting fat, so the weight you lose stays off.' },
   ],
   'build-recover': [
-    { keyword: 'Heals muscle, tendons & ligaments', detail: 'BPC-157 promotes new blood vessel formation in injured tissue — even in areas with poor circulation that would otherwise heal slowly.' },
+    { keyword: 'Heals muscle, tendons & ligaments', detail: 'BPC-157 promotes new blood vessel formation in injured tissue, even in areas with poor circulation that would otherwise heal slowly.' },
     { keyword: 'Rebuilds at the cellular level', detail: 'TB-500 regulates actin, the protein that lets damaged cells migrate to injury sites. More actin activity = faster, more complete repair.' },
     { keyword: 'Naturally derived compounds', detail: 'BPC-157 is isolated from gastric juice; TB-500 mirrors a protein your body already uses in wound healing. Nothing synthetic.' },
   ],
   'anti-aging': [
     { keyword: 'Restores cellular energy', detail: 'NAD+ is the coenzyme every cell uses for DNA repair and energy production. Restoring it is one of the most direct levers for reversing biological age.' },
-    { keyword: 'Rebuilds growth hormone naturally', detail: 'Sermorelin tells your pituitary to produce more growth hormone on its own — supporting skin thickness, muscle tone, and fat distribution.' },
-    { keyword: 'Better sleep, sharper mind', detail: 'Growth hormone secreted during deep sleep drives skin regeneration, cognitive sharpness, and body composition — all of which improve when GH is restored.' },
+    { keyword: 'Rebuilds growth hormone naturally', detail: 'Sermorelin tells your pituitary to produce more growth hormone on its own, supporting skin thickness, muscle tone, and fat distribution.' },
+    { keyword: 'Better sleep, sharper mind', detail: 'Growth hormone secreted during deep sleep drives skin regeneration, cognitive sharpness, and body composition, all of which improve when GH is restored.' },
   ],
   'energy-metabolism': [
     { keyword: 'Powers your mitochondria', detail: 'NAD+ is the fuel your mitochondria run on. When levels drop with age, so does every system that depends on cellular energy.' },
-    { keyword: 'Activates your fat-burning switch', detail: 'MOTS-c activates AMPK — the master metabolic enzyme that signals cells to burn fat for fuel and improve insulin sensitivity.' },
+    { keyword: 'Activates your fat-burning switch', detail: 'MOTS-c activates AMPK, the master metabolic enzyme that signals cells to burn fat for fuel and improve insulin sensitivity.' },
     { keyword: 'Fights metabolic decline', detail: 'MOTS-c is encoded in mitochondrial DNA, making it one of the most naturally aligned metabolic compounds available.' },
   ],
   'mens-health': [
     { keyword: 'FDA-approved, fast-acting', detail: 'Sildenafil and Tadalafil have decades of safety data. In ODT form, they dissolve under the tongue for faster absorption than standard tablets.' },
     { keyword: 'Addresses the hormonal root cause', detail: 'Sexual function in men over 35 tracks closely with declining growth hormone. Sermorelin and Tesamorelin restore the hormonal foundation.' },
-    { keyword: 'More energy, better body composition', detail: 'Growth hormone support affects energy levels, lean muscle mass, and recovery — benefits that compound well beyond sexual health.' },
+    { keyword: 'More energy, better body composition', detail: 'Growth hormone support affects energy levels, lean muscle mass, and recovery, benefits that compound well beyond sexual health.' },
   ],
   'womens-health': [
-    { keyword: 'Restores hormonal balance naturally', detail: 'Sermorelin stimulates your pituitary gland to produce growth hormone on its natural schedule — supporting body composition, skin elasticity, and deep sleep without synthetic hormone replacement.' },
+    { keyword: 'Restores hormonal balance naturally', detail: 'Sermorelin stimulates your pituitary gland to produce growth hormone on its natural schedule, supporting body composition, skin elasticity, and deep sleep without synthetic hormone replacement.' },
     { keyword: 'Fights fatigue at the cellular level', detail: 'NAD+ is the coenzyme every cell uses for energy production. Restoring declining NAD+ levels directly addresses the brain fog, low energy, and slow recovery that women experience after 35.' },
-    { keyword: 'Metabolic support through perimenopause', detail: 'MOTS-c improves insulin sensitivity and activates AMPK — helping your body maintain metabolic flexibility during the hormonal shifts of perimenopause and beyond.' },
+    { keyword: 'Metabolic support through perimenopause', detail: 'MOTS-c improves insulin sensitivity and activates AMPK, helping your body maintain metabolic flexibility during the hormonal shifts of perimenopause and beyond.' },
   ],
 };
 
@@ -126,7 +126,7 @@ export function HowItWorks({ goal, content, onNext }: HowItWorksProps) {
         <p className="text-white font-semibold text-base">{content.howItWorksMechanism}</p>
       </motion.div>
 
-      {/* Keyword-forward fact cards — staggered */}
+      {/* Keyword-forward fact cards, staggered */}
       <motion.div
         variants={stagger.container}
         initial="initial"

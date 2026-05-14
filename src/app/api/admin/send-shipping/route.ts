@@ -1,5 +1,5 @@
 /**
- * Admin endpoint — fires the branded shipping notification to a customer.
+ * Admin endpoint, fires the branded shipping notification to a customer.
  *
  * Auth: HTTP header `Authorization: Bearer <ADMIN_PASSWORD>` OR `password` field in body.
  * Both Pete-facing UIs use the body field; the header is for curl/Postman.
@@ -22,7 +22,7 @@ interface ShippingPayload {
   carrier: CarrierName;
   expectedDelivery?: string;
   customNote?: string;
-  stripePaymentIntent?: string; // optional — used to mark Stripe PI metadata
+  stripePaymentIntent?: string; // optional, used to mark Stripe PI metadata
 }
 
 function authorize(req: NextRequest, body: ShippingPayload): boolean {

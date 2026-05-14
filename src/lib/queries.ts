@@ -1,6 +1,6 @@
 /**
- * Greenstone Peptides — Data queries (static file edition)
- * All data served from src/data/*.ts — no Sanity dependency.
+ * Greenstone Peptides, Data queries (static file edition)
+ * All data served from src/data/*.ts, no Sanity dependency.
  */
 import type { Product, Category, BlogPost } from '@/types';
 import { staticProducts } from '@/data/products';
@@ -169,7 +169,7 @@ export async function getBlogPostsByCategory(): Promise<BlogPost[]> {
   return getAllBlogPosts();
 }
 
-// Site settings no longer in Sanity — return null
+// Site settings no longer in Sanity, return null
 export async function getSiteSettings() {
   return null;
 }

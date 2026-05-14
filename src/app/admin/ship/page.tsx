@@ -95,7 +95,7 @@ export default function AdminShipPage() {
         setTrackingNumber('');
         setExpectedDelivery('');
         setCustomNote('');
-        // Refresh pending list — this order should no longer appear
+        // Refresh pending list, this order should no longer appear
         await fetchPending(password);
       } else {
         setStatus({ type: 'error', msg: data.error || 'Send failed' });
@@ -120,7 +120,7 @@ export default function AdminShipPage() {
           <h1>Ship an Order</h1>
           <p className="text-cream-dim mt-3 text-sm leading-relaxed">
             Pick a pending order, drop the tracking number, pick the carrier, hit send. Everything else
-            is auto-filled from Stripe — customer email, shipping address, order #.
+            is auto-filled from Stripe, customer email, shipping address, order #.
           </p>
         </header>
 
@@ -255,7 +255,7 @@ export default function AdminShipPage() {
                         value={expectedDelivery}
                         onChange={(e) => setExpectedDelivery(e.target.value)}
                         className="w-full bg-obsidian-light/40 border border-gold/15 px-4 py-3 text-cream rounded"
-                        placeholder="Tuesday, May 20 (or '2–4 business days')"
+                        placeholder="Tuesday, May 20 (or '2-4 business days')"
                       />
                     </div>
                     <div>
@@ -265,7 +265,7 @@ export default function AdminShipPage() {
                         onChange={(e) => setCustomNote(e.target.value)}
                         rows={2}
                         className="w-full bg-obsidian-light/40 border border-gold/15 px-4 py-3 text-cream rounded resize-y"
-                        placeholder="Shipped with cold pack — refrigerate immediately on arrival."
+                        placeholder="Shipped with cold pack, refrigerate immediately on arrival."
                       />
                     </div>
                   </div>

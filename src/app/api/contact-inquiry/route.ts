@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: 'Greenstone Contact <contact@greenstonewellness.store>',
       to: PETE_EMAIL,
-      subject: `Contact Form — ${topic} — ${name}`,
+      subject: `Contact Form, ${topic}, ${name}`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
           <h2 style="color:#0a0f1a;border-bottom:2px solid #1a9e6e;padding-bottom:8px">New Contact Form Submission</h2>

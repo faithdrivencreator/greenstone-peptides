@@ -4,7 +4,6 @@ import Script from 'next/script';
 import '@/styles/globals.css';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
-import { DisclaimerBanner } from '@/components/DisclaimerBanner';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { CartProvider } from '@/context/CartContext';
 import { CartDrawer } from '@/components/CartDrawer';
@@ -65,7 +64,7 @@ export const metadata: Metadata = {
         url: '/images/hero-lab.png',
         width: 1376,
         height: 768,
-        alt: 'Greenstone Peptides — USA-Compounded Peptide Therapy',
+        alt: 'Greenstone Peptides, USA-Compounded Peptide Therapy',
       },
     ],
   },
@@ -135,7 +134,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="relative z-10 pt-24">{children}</main>
           <ChatWidget />
           <Footer />
-          <DisclaimerBanner />
         </CartProvider>
       </body>
     </html>

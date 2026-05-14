@@ -18,7 +18,7 @@ export default function ClearCart() {
       return
     }
 
-    // Idempotency — Stripe success page can be reloaded; only fire once per session_id
+    // Idempotency, Stripe success page can be reloaded; only fire once per session_id
     const alreadyFired = sessionStorage.getItem(FIRED_KEY) === sessionId
     if (alreadyFired) {
       clearCart()

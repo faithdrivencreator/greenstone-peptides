@@ -9,7 +9,7 @@ interface LeadCaptureTrackerProps {
 
 /**
  * Fires the GA4 `generate_lead` event once when a thank-you page mounts.
- * Idempotent within a single browser tab — guards against React strict-mode
+ * Idempotent within a single browser tab, guards against React strict-mode
  * double-invocation in development.
  */
 export function LeadCaptureTracker({ ebook }: LeadCaptureTrackerProps) {

@@ -16,8 +16,8 @@ const OPTIONS: { value: GuideBudget; label: string; description: string }[] = [
   },
   {
     value: '100-200',
-    label: '$100 – $200',
-    description: 'Targeted protocol, 1–2 products',
+    label: '$100 - $200',
+    description: 'Targeted protocol, 1-2 products',
   },
   {
     value: '200-plus',

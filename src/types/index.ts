@@ -1,4 +1,4 @@
-// Greenstone Peptides — core TypeScript types
+// Greenstone Peptides, core TypeScript types
 
 export interface SanityImage {
   _type?: 'image';

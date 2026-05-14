@@ -3,14 +3,14 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 /**
- * AgeConfirmBanner — soft single-click 18+ confirmation.
+ * AgeConfirmBanner, soft single-click 18+ confirmation.
  *
  * Replaces the previous full-screen DOB modal with a low-friction
  * bottom-anchored banner. Page content is visible behind a 50% dimmer
- * (pointer-events: none — the user can scroll/look around). One click
+ * (pointer-events: none, the user can scroll/look around). One click
  * dismisses; "Leave site" redirects to google.com.
  *
- * Storage shape (DO NOT change — ExitIntentPopup reads `=== 'true'`):
+ * Storage shape (DO NOT change, ExitIntentPopup reads `=== 'true'`):
  *   localStorage['gr_age_verified_v1'] = 'true'
  *
  * Exported as `AgeGate` to keep layout.tsx imports stable.
@@ -30,7 +30,7 @@ export function AgeGate() {
     try {
       isVerified = localStorage.getItem('gr_age_verified_v1') === 'true';
     } catch {
-      // SSR / privacy mode — fail open and show the banner
+      // SSR / privacy mode, fail open and show the banner
       isVerified = false;
     }
     setVerified(isVerified);
@@ -55,7 +55,7 @@ export function AgeGate() {
     try {
       localStorage.setItem('gr_age_verified_v1', 'true');
     } catch {
-      // localStorage blocked — proceed anyway, banner dismisses for this session
+      // localStorage blocked, proceed anyway, banner dismisses for this session
     }
     setExiting(true);
     setVisible(false);
@@ -67,7 +67,7 @@ export function AgeGate() {
     window.location.href = 'https://www.google.com';
   }, []);
 
-  // ESC = "yes, I'm 18+" (treat as confirm — it's a soft banner)
+  // ESC = "yes, I'm 18+" (treat as confirm, it's a soft banner)
   useEffect(() => {
     if (verified !== false) return;
     function onKey(e: KeyboardEvent) {
@@ -86,7 +86,7 @@ export function AgeGate() {
 
   return (
     <>
-      {/* Backdrop dimmer — visual only. pointer-events: none so the page
+      {/* Backdrop dimmer, visual only. pointer-events: none so the page
           beneath stays interactive (scroll, hover); only the banner itself
           captures clicks. This is a soft banner, not a hard modal. */}
       <div
@@ -109,7 +109,7 @@ export function AgeGate() {
             : 'translate-y-full opacity-0 duration-[250ms] ease-in',
         ].join(' ')}
       >
-        {/* Thin gold rule — brand accent above the banner */}
+        {/* Thin gold rule, brand accent above the banner */}
         <div className="h-px w-full bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
 
         <div className="bg-obsidian-mid/95 backdrop-blur-md border-t border-gold/20">
@@ -119,9 +119,6 @@ export function AgeGate() {
               <div className="flex-1 min-w-0">
                 <p className="font-cormorant italic text-lg md:text-xl text-cream leading-snug">
                   Confirm you&rsquo;re 18 or older to continue.
-                </p>
-                <p className="mt-1.5 font-jetbrains text-[0.65rem] tracking-[0.15em] uppercase text-cream-dim/70 leading-relaxed">
-                  Greenstone products are for research and educational use only.
                 </p>
               </div>
 

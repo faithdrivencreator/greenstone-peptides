@@ -7,12 +7,12 @@ import { SchemaOrg } from '@/components/SchemaOrg';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
 
 export const metadata: Metadata = {
-  title: 'Free Peptide Guide — Peptides Made Easy | Greenstone',
+  title: 'Free Peptide Guide, Peptides Made Easy | Greenstone',
   description:
     "Free 14-page beginner's guide. Learn what peptides are and how to start safely. Sent to your inbox in 60 seconds.",
   alternates: { canonical: '/free/peptides-made-easy' },
   openGraph: {
-    title: 'Peptides Made Easy — Free Guide',
+    title: 'Peptides Made Easy, Free Guide',
     description:
       "Your first 72 hours: a safe, simple, research-backed start. Sent to your inbox in 60 seconds.",
     url: `${SITE_URL}/free/peptides-made-easy`,
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
         url: '/images/ebook-covers/peptides-made-easy-cover.jpg',
         width: 1200,
         height: 1608,
-        alt: 'Peptides Made Easy — Volume I free guide cover',
+        alt: 'Peptides Made Easy, Volume I free guide cover',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Peptides Made Easy — Free Guide',
+    title: 'Peptides Made Easy, Free Guide',
     description: 'Your first 72 hours: a safe, simple, research-backed start.',
     images: ['/images/ebook-covers/peptides-made-easy-cover.jpg'],
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const insideCards = [
   {
     title: 'What peptides actually are',
-    body: 'A plain-language primer on the chemistry — without the jargon. By the time you finish chapter one you can explain a peptide to a friend.',
+    body: 'A plain-language primer on the chemistry, without the jargon. By the time you finish chapter one you can explain a peptide to a friend.',
   },
   {
     title: 'How to start safely',
@@ -52,15 +52,15 @@ const insideCards = [
 const faqs = [
   {
     q: 'Is this really free?',
-    a: 'Yes — completely free, no credit card, no trial. The PDF lands in your inbox seconds after you submit your email. We wrote it because most peptide content online is either fearmongering or sales copy. We wanted something honest in between.',
+    a: 'Yes, completely free, no credit card, no trial. The PDF lands in your inbox seconds after you submit your email. We wrote it because most peptide content online is either fearmongering or sales copy. We wanted something honest in between.',
   },
   {
     q: 'Will you spam me?',
-    a: 'No. After we send the guide, you might hear from us once a month with new educational content or a sourcing update. Unsubscribe anytime — one click, no friction. Your email stays inside Resend; we do not sell or rent lists.',
+    a: 'No. After we send the guide, you might hear from us once a month with new educational content or a sourcing update. Unsubscribe anytime, one click, no friction. Your email stays inside Resend; we do not sell or rent lists.',
   },
   {
     q: 'Are these products for human use?',
-    a: 'Greenstone formulations are dispensed by a USA-licensed compounding pharmacy. The guide itself is for research and educational purposes — it does not replace consultation with a licensed medical provider, and nothing in it should be read as a medical recommendation.',
+    a: 'Greenstone formulations are dispensed by a USA-licensed compounding pharmacy. The guide itself is for research and educational purposes, it does not replace consultation with a licensed medical provider, and nothing in it should be read as a medical recommendation.',
   },
 ];
 
@@ -75,7 +75,7 @@ export default function PeptidesMadeEasyPage() {
           bookFormat: 'EBook',
           inLanguage: 'en',
           description:
-            "A 14-page beginner's guide to peptides — what they are, how to start safely, and what to look for in your first 72 hours.",
+            "A 14-page beginner's guide to peptides, what they are, how to start safely, and what to look for in your first 72 hours.",
           publisher: {
             '@type': 'Organization',
             name: 'Greenstone Peptides',
@@ -98,7 +98,7 @@ export default function PeptidesMadeEasyPage() {
           aria-hidden
         />
         <div className="container-gr relative z-10 grid gap-12 lg:grid-cols-[1.05fr_1fr] items-center">
-          {/* LEFT — real cover */}
+          {/* LEFT, real cover */}
           <div>
             <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-gold mb-4">
               Free Guide · Lead Magnet 01
@@ -115,7 +115,7 @@ export default function PeptidesMadeEasyPage() {
             <div className="mt-10 w-full max-w-md shadow-[0_20px_60px_-15px_rgba(201,169,110,0.25)]">
               <Image
                 src="/images/ebook-covers/peptides-made-easy-cover.webp"
-                alt="Peptides Made Easy — Volume I free guide cover"
+                alt="Peptides Made Easy, Volume I free guide cover"
                 width={600}
                 height={800}
                 priority
@@ -124,7 +124,7 @@ export default function PeptidesMadeEasyPage() {
             </div>
           </div>
 
-          {/* RIGHT — capture form */}
+          {/* RIGHT, capture form */}
           <div className="card-glass border-emerald/30 !p-8 md:!p-10">
             <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-3">
               Send to my inbox
@@ -145,7 +145,7 @@ export default function PeptidesMadeEasyPage() {
             </div>
 
             <p className="mt-5 text-[0.7rem] text-cream-dim/60 leading-relaxed font-dm-sans">
-              No spam. Unsubscribe anytime. Your email is private — we use Resend, never Klaviyo.
+              No spam. Unsubscribe anytime. Your email is private, we use Resend, never Klaviyo.
             </p>
           </div>
         </div>
@@ -237,7 +237,7 @@ export default function PeptidesMadeEasyPage() {
               />
             </div>
             <p className="mt-5 text-[0.7rem] text-cream-dim/60 font-dm-sans">
-              No spam. Unsubscribe anytime. Your email is private — we use Resend, never Klaviyo.
+              No spam. Unsubscribe anytime. Your email is private, we use Resend, never Klaviyo.
             </p>
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function PeptidesMadeEasyPage() {
             href="/free/peptides-unlocked"
             className="font-cormorant text-2xl text-cream hover:text-gold transition-colors"
           >
-            Read Volume II — Peptides Unlocked &rarr;
+            Read Volume II, Peptides Unlocked &rarr;
           </Link>
         </div>
       </section>

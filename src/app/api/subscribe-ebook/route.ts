@@ -29,9 +29,9 @@ const EBOOKS: Record<Ebook, EbookConfig> = {
   'made-easy': {
     filename: 'greenstone-peptides-made-easy.pdf',
     title: 'Peptides Made Easy',
-    subject: 'Your free Greenstone guide is here — Peptides Made Easy',
+    subject: 'Your free Greenstone guide is here, Peptides Made Easy',
     intro:
-      "Welcome — and thank you for downloading <em>Peptides Made Easy</em>. This is the same plain-language explainer we share with first-time customers and curious researchers who want a clear, honest starting point.",
+      "Welcome, and thank you for downloading <em>Peptides Made Easy</em>. This is the same plain-language explainer we share with first-time customers and curious researchers who want a clear, honest starting point.",
     discountCode: 'WELCOME10',
     discountLabel: '10% off your first order',
     coverImage: '/images/ebook-covers/peptides-made-easy-cover.jpg',
@@ -39,9 +39,9 @@ const EBOOKS: Record<Ebook, EbookConfig> = {
   unlocked: {
     filename: 'greenstone-peptides-unlocked.pdf',
     title: 'Peptides Unlocked',
-    subject: 'Your Greenstone Volume II guide is ready — Peptides Unlocked',
+    subject: 'Your Greenstone Volume II guide is ready, Peptides Unlocked',
     intro:
-      "Welcome to Volume II. <em>Peptides Unlocked</em> goes deeper — matching peptide families to research goals, and walking through the quality and sourcing checks worth running before any protocol.",
+      "Welcome to Volume II. <em>Peptides Unlocked</em> goes deeper, matching peptide families to research goals, and walking through the quality and sourcing checks worth running before any protocol.",
     discountCode: 'RESEARCH15',
     discountLabel: '15% off your next order',
     coverImage: '/images/ebook-covers/peptides-unlocked-cover.jpg',
@@ -72,7 +72,7 @@ function buildEmailHtml(config: EbookConfig, firstName: string | undefined, down
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>${escapeHtml(config.title)} — Greenstone Peptides</title>
+<title>${escapeHtml(config.title)}, Greenstone Peptides</title>
 </head>
 <body style="margin:0;padding:0;background-color:#0D1117;font-family:Georgia,'Times New Roman',serif;color:#F5F1EB;">
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#0D1117;padding:32px 16px;">
@@ -112,7 +112,7 @@ function buildEmailHtml(config: EbookConfig, firstName: string | undefined, down
                 ${config.intro}
               </p>
               <p style="margin:0 0 16px 0;font-family:Arial,sans-serif;font-size:15px;line-height:1.6;color:#B8B2A8;">
-                Download your copy below. The PDF is yours to keep — read it on any device, print it, share it with someone who's curious. We wrote it for educational and research purposes, in plain language, with the references that matter.
+                Download your copy below. The PDF is yours to keep, read it on any device, print it, share it with someone who's curious. We wrote it for educational and research purposes, in plain language, with the references that matter.
               </p>
               <p style="margin:0 0 24px 0;font-family:Arial,sans-serif;font-size:15px;line-height:1.6;color:#B8B2A8;">
                 If anything in the guide raises a question, just reply to this email. A real person on the Greenstone team will see it.
@@ -138,7 +138,7 @@ function buildEmailHtml(config: EbookConfig, firstName: string | undefined, down
                 <tr>
                   <td style="padding:18px 20px;text-align:center;">
                     <p style="margin:0 0 6px 0;font-family:'Courier New',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#C9A96E;">
-                      P.S. — A small thank-you
+                      P.S., A small thank-you
                     </p>
                     <p style="margin:0 0 8px 0;font-family:Arial,sans-serif;font-size:14px;color:#B8B2A8;">
                       Use code <strong style="color:#26C98A;font-family:'Courier New',monospace;letter-spacing:0.1em;">${escapeHtml(config.discountCode)}</strong> at checkout for ${escapeHtml(config.discountLabel)}.
@@ -154,7 +154,7 @@ function buildEmailHtml(config: EbookConfig, firstName: string | undefined, down
           <tr>
             <td style="padding:0 32px 32px 32px;">
               <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:15px;color:#F5F1EB;font-style:italic;">
-                — The Greenstone Team
+                The Greenstone Team
               </p>
             </td>
           </tr>
@@ -187,9 +187,9 @@ function buildEmailText(config: EbookConfig, firstName: string | undefined, down
     '',
     `P.S. Use code ${config.discountCode} at checkout for ${config.discountLabel}. Valid for 30 days.`,
     '',
-    '— The Greenstone Team',
+    'The Greenstone Team',
     '',
-    'Greenstone Peptides — USA-compounded, third-party verified.',
+    'Greenstone Peptides, USA-compounded, third-party verified.',
     'For research and educational purposes only. Not medical advice.',
   ].join('\n');
 }
@@ -206,7 +206,7 @@ function escapeHtml(value: string): string {
 async function addToAudience(email: string, firstName: string | undefined): Promise<void> {
   const audienceId = process.env.RESEND_AUDIENCE_ID;
   if (!audienceId) {
-    console.warn('[subscribe-ebook] RESEND_AUDIENCE_ID not set — skipping audience add');
+    console.warn('[subscribe-ebook] RESEND_AUDIENCE_ID not set, skipping audience add');
     return;
   }
   try {
@@ -219,7 +219,7 @@ async function addToAudience(email: string, firstName: string | undefined): Prom
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     if (/already|exists|duplicate/i.test(message)) {
-      // Idempotent — contact already in audience, continue.
+      // Idempotent, contact already in audience, continue.
       return;
     }
     // Log non-fatal and continue with email send. We don't want a contacts API hiccup

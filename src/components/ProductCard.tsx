@@ -57,7 +57,12 @@ export function ProductCard({ product }: ProductCardProps) {
             <div className="flex flex-wrap gap-1.5">
               {product.format && (
                 <span
-                  className={clsx('badge', product.format === 'injectable' ? 'badge-injectable' : 'badge-odt')}
+                  className={clsx(
+                    'badge',
+                    product.format === 'injectable' && 'badge-injectable',
+                    product.format === 'odt' && 'badge-odt',
+                    product.format === 'nasal-spray' && 'badge-nasal',
+                  )}
                 >
                   {FORMAT_LABEL[product.format] || product.format}
                 </span>
@@ -90,7 +95,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
       </Link>
 
-      {/* Action bar — not part of the link */}
+      {/* Action bar, not part of the link */}
       <div className="flex flex-1 flex-col p-6 pt-0">
         <div className="mt-auto flex items-end justify-between pt-4 border-t border-gold/10">
           <div>

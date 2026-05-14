@@ -7,12 +7,12 @@ import { SchemaOrg } from '@/components/SchemaOrg';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
 
 export const metadata: Metadata = {
-  title: 'Free Peptide Guide — Peptides Unlocked (Volume II) | Greenstone',
+  title: 'Free Peptide Guide, Peptides Unlocked (Volume II) | Greenstone',
   description:
     'Free advanced guide. Match peptides to your goals, run a real quality and sourcing checklist, and use a 48-hour research framework. Sent to your inbox in 60 seconds.',
   alternates: { canonical: '/free/peptides-unlocked' },
   openGraph: {
-    title: 'Peptides Unlocked — Free Guide (Volume II)',
+    title: 'Peptides Unlocked, Free Guide (Volume II)',
     description:
       'Your 48-hour blueprint for safe, research-backed results. Sent to your inbox in 60 seconds.',
     url: `${SITE_URL}/free/peptides-unlocked`,
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
         url: '/images/ebook-covers/peptides-unlocked-cover.jpg',
         width: 1200,
         height: 1608,
-        alt: 'Peptides Unlocked — Volume II free guide cover',
+        alt: 'Peptides Unlocked, Volume II free guide cover',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Peptides Unlocked — Free Guide (Volume II)',
+    title: 'Peptides Unlocked, Free Guide (Volume II)',
     description: 'Your 48-hour blueprint for safe, research-backed results.',
     images: ['/images/ebook-covers/peptides-unlocked-cover.jpg'],
   },
@@ -45,7 +45,7 @@ const insideCards = [
   },
   {
     title: '48-hour research framework',
-    body: 'A structured approach to evaluating, logging, and observing in your first 48 hours of any new protocol — designed to surface signal early, before noise accumulates.',
+    body: 'A structured approach to evaluating, logging, and observing in your first 48 hours of any new protocol, designed to surface signal early, before noise accumulates.',
   },
 ];
 
@@ -56,11 +56,11 @@ const faqs = [
   },
   {
     q: 'Will you spam me?',
-    a: 'No. After the guide arrives, expect us to land in your inbox at most once a month — research updates, sourcing notes, and the occasional protocol primer. One-click unsubscribe at the bottom of every email.',
+    a: 'No. After the guide arrives, expect us to land in your inbox at most once a month, research updates, sourcing notes, and the occasional protocol primer. One-click unsubscribe at the bottom of every email.',
   },
   {
     q: 'Are these products for human use?',
-    a: 'Greenstone formulations are dispensed by a USA-licensed compounding pharmacy. The guide itself is for research and educational purposes — it does not replace medical advice from a licensed provider, and nothing in it should be read as a clinical recommendation.',
+    a: 'Greenstone formulations are dispensed by a USA-licensed compounding pharmacy. The guide itself is for research and educational purposes, it does not replace medical advice from a licensed provider, and nothing in it should be read as a clinical recommendation.',
   },
 ];
 
@@ -98,7 +98,7 @@ export default function PeptidesUnlockedPage() {
           aria-hidden
         />
         <div className="container-gr relative z-10 grid gap-12 lg:grid-cols-[1.05fr_1fr] items-center">
-          {/* LEFT — real cover */}
+          {/* LEFT, real cover */}
           <div>
             <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-gold mb-4">
               Free Guide · Lead Magnet 02 · Volume II
@@ -115,7 +115,7 @@ export default function PeptidesUnlockedPage() {
             <div className="mt-10 w-full max-w-md shadow-[0_20px_60px_-15px_rgba(26,158,110,0.25)]">
               <Image
                 src="/images/ebook-covers/peptides-unlocked-cover.webp"
-                alt="Peptides Unlocked — Volume II free guide cover"
+                alt="Peptides Unlocked, Volume II free guide cover"
                 width={600}
                 height={800}
                 priority
@@ -124,7 +124,7 @@ export default function PeptidesUnlockedPage() {
             </div>
           </div>
 
-          {/* RIGHT — form */}
+          {/* RIGHT, form */}
           <div className="card-glass border-emerald/30 !p-8 md:!p-10">
             <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-3">
               Send to my inbox
@@ -145,7 +145,7 @@ export default function PeptidesUnlockedPage() {
             </div>
 
             <p className="mt-5 text-[0.7rem] text-cream-dim/60 leading-relaxed font-dm-sans">
-              No spam. Unsubscribe anytime. Your email is private — we use Resend, never Klaviyo.
+              No spam. Unsubscribe anytime. Your email is private, we use Resend, never Klaviyo.
             </p>
           </div>
         </div>
@@ -256,7 +256,7 @@ export default function PeptidesUnlockedPage() {
               />
             </div>
             <p className="mt-5 text-[0.7rem] text-cream-dim/60 font-dm-sans">
-              No spam. Unsubscribe anytime. Your email is private — we use Resend, never Klaviyo.
+              No spam. Unsubscribe anytime. Your email is private, we use Resend, never Klaviyo.
             </p>
           </div>
         </div>

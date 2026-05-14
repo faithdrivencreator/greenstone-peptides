@@ -16,9 +16,9 @@ const config: Config = {
           light: '#1E2738',
         },
         gold: {
-          DEFAULT: '#C9A96E',
-          light: '#E8C98A',
-          dim: '#8A6E3E',
+          DEFAULT: '#6FA8DC',
+          light: '#9DC4E8',
+          dim: '#3D6FA8',
         },
         sage: {
           DEFAULT: '#7A9E87',
@@ -85,9 +85,9 @@ const config: Config = {
       },
       backgroundImage: {
         'obsidian-gradient':
-          'radial-gradient(ellipse 80% 50% at 20% 100%, rgba(201, 169, 110, 0.08), transparent 60%), radial-gradient(ellipse 60% 40% at 80% 0%, rgba(26, 158, 110, 0.07), transparent 60%), radial-gradient(ellipse 40% 30% at 50% 50%, rgba(26, 158, 110, 0.03), transparent 70%)',
+          'radial-gradient(ellipse 80% 50% at 20% 100%, rgba(111, 168, 220, 0.08), transparent 60%), radial-gradient(ellipse 60% 40% at 80% 0%, rgba(26, 158, 110, 0.07), transparent 60%), radial-gradient(ellipse 40% 30% at 50% 50%, rgba(26, 158, 110, 0.03), transparent 70%)',
         'gold-shimmer':
-          'linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.15), transparent)',
+          'linear-gradient(90deg, transparent, rgba(111, 168, 220, 0.18), transparent)',
       },
     },
   },

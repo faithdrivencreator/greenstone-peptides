@@ -16,7 +16,7 @@ export default function AboutPage() {
           <p className="eyebrow">Our Story</p>
           <h1>Not All Peptides Are Created Equal</h1>
           <p className="mt-8 text-lg text-cream-dim">
-            Over 70% of peptides sold online are synthesized overseas — in facilities with no
+            Over 70% of peptides sold online are synthesized overseas, in facilities with no
             meaningful oversight, no independent testing, and no accountability. The prices look
             appealing. The purity rarely matches what's on the label.
           </p>
@@ -29,20 +29,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* USA Compounding — the differentiator */}
+      {/* USA Compounding, the differentiator */}
       <section className="section-py bg-obsidian-mid/40 border-y border-emerald/20">
         <div className="container-gr max-w-4xl">
           <p className="eyebrow text-emerald">The Difference</p>
           <h2>Compounded in the United States. <br className="hidden md:block" />That matters more than you think.</h2>
           <p className="mt-6 text-lg text-cream-dim">
-            The vast majority of peptides sold online — regardless of what the label says —
+            The vast majority of peptides sold online, regardless of what the label says,
             originate from bulk synthesis facilities overseas. The raw material arrives, gets
             repackaged, and ships to your door with a domestic address on the label. The
             peptide itself was never made here.
           </p>
           <p className="mt-6 text-lg text-cream-dim">
             Every compound we carry is formulated by licensed USA-based compounding pharmacies
-            operating under <strong className="text-cream">USP 797</strong> sterile standards —
+            operating under <strong className="text-cream">USP 797</strong> sterile standards,
             the same federal guidelines that govern hospital pharmacies. That means independent
             potency testing, sterility verification, and full chain-of-custody documentation
             before anything ships.
@@ -93,11 +93,11 @@ export default function AboutPage() {
               },
               {
                 t: 'Consistent Results',
-                b: 'Pharmaceutical-grade compounding means consistent potency from vial to vial. Inconsistent raw material leads to inconsistent outcomes — and no way to know which is which.',
+                b: 'Pharmaceutical-grade compounding means consistent potency from vial to vial. Inconsistent raw material leads to inconsistent outcomes, and no way to know which is which.',
               },
               {
                 t: 'Batch Accountability',
-                b: 'Our pharmacy partners maintain full chain-of-custody documentation and Certificates of Analysis for every formulation — available on request. No overseas vendor offers that.',
+                b: 'Our pharmacy partners maintain full chain-of-custody documentation and Certificates of Analysis for every formulation, available on request. No overseas vendor offers that.',
               },
             ].map((c) => (
               <div key={c.t} className="card-glass">
@@ -122,7 +122,7 @@ export default function AboutPage() {
               },
               {
                 t: 'USP 797 Compliance',
-                b: 'Sterile compounding standards verified at every partner facility — the same bar required of hospital pharmacies.',
+                b: 'Sterile compounding standards verified at every partner facility, the same bar required of hospital pharmacies.',
               },
               {
                 t: 'Third-Party Testing',

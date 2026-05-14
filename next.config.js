@@ -3,7 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: false,
   images: {
-    remotePatterns: [],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'cdn.sanity.io' },
+    ],
   },
   env: {
     NEXT_PUBLIC_SITE_URL:

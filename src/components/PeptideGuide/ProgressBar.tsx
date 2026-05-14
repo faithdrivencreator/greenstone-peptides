@@ -1,7 +1,7 @@
 'use client';
 
 interface ProgressBarProps {
-  currentStep: number; // 1–5
+  currentStep: number; // 1-5
   totalSteps: number;
 }
 
@@ -11,7 +11,7 @@ export function ProgressBar({ currentStep, totalSteps }: ProgressBarProps) {
   return (
     <div className="w-full max-w-2xl mx-auto mb-10">
       <div className="relative">
-        {/* Connector line — sits at circle center height (top-4 = 16px = center of w-8/h-8 circles) */}
+        {/* Connector line, sits at circle center height (top-4 = 16px = center of w-8/h-8 circles) */}
         {/* left-4/right-4 = 16px inset so line runs center-to-center of first and last circle */}
         <div className="absolute top-4 left-4 right-4 h-0.5 bg-white/10">
           <div
@@ -20,7 +20,7 @@ export function ProgressBar({ currentStep, totalSteps }: ProgressBarProps) {
           />
         </div>
 
-        {/* Step circles — z-10 so they render above the line */}
+        {/* Step circles, z-10 so they render above the line */}
         <div className="relative flex items-start justify-between">
           {STEP_LABELS.map((label, i) => {
             const stepNum = i + 1;

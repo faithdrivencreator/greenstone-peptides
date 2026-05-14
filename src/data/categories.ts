@@ -1,4 +1,4 @@
-// AUTO-GENERATED — do not edit by hand. Run scripts/generate-static-data.mjs to regenerate.
+// AUTO-GENERATED, do not edit by hand. Run scripts/generate-static-data.mjs to regenerate.
 // Last generated: 2026-05-13T13:22:36.430Z
 
 export type StaticCategory = (typeof staticCategories)[number];

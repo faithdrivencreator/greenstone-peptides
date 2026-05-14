@@ -1,6 +1,6 @@
 // LEGAL NOTICE: This is a placeholder Terms of Service for launch purposes.
 // Pete should have a licensed attorney review and approve this document
-// before relying on it for legal protection. — FFS Lab, April 2026
+// before relying on it for legal protection., FFS Lab, April 2026
 
 import type { Metadata } from 'next';
 
@@ -43,7 +43,7 @@ export default function TermsPage() {
 
         <div className="card-glass border-red-500/30">
           <h2 className="font-cormorant text-2xl text-white mb-4">
-            2. Research Use Only — Critical Notice
+            2. Research Use Only, Critical Notice
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
             <strong className="text-cream">ALL PRODUCTS SOLD ON THIS SITE ARE STRICTLY
@@ -51,8 +51,8 @@ export default function TermsPage() {
             human or animal consumption, diagnostic use, or therapeutic application of any kind.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
-            The introduction of any product sold on this Site into the human or animal body —
-            by any route including injection, ingestion, inhalation, or topical application —
+            The introduction of any product sold on this Site into the human or animal body,
+            by any route including injection, ingestion, inhalation, or topical application,
             is <strong className="text-cream">strictly prohibited</strong> and constitutes a
             misuse of the product. By placing an order, you represent and warrant that you
             will use all products solely for lawful research and educational purposes.
@@ -107,7 +107,7 @@ export default function TermsPage() {
             Payment is processed securely through{' '}
             <strong className="text-cream">Stripe, Inc.</strong> We accept major credit and
             debit cards. All prices are listed in U.S. dollars. We do not store your payment
-            card information — Stripe handles all payment data in accordance with PCI-DSS
+            card information, Stripe handles all payment data in accordance with PCI-DSS
             standards.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
@@ -142,8 +142,8 @@ export default function TermsPage() {
             7. Returns & Refund Policy
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            Due to the nature of our products — temperature-sensitive, compounded peptide
-            formulations — all sales are final on opened items.
+            Due to the nature of our products, temperature-sensitive, compounded peptide
+            formulations, all sales are final on opened items.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
             We accept returns of <strong className="text-cream">unopened, undamaged items</strong>{' '}
@@ -160,7 +160,7 @@ export default function TermsPage() {
             unless the return is due to our error.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
-            Refunds will be processed to the original payment method within 5–10 business
+            Refunds will be processed to the original payment method within 5-10 business
             days of receiving and inspecting the returned item.
           </p>
         </div>
@@ -190,7 +190,7 @@ export default function TermsPage() {
             TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL GREENSTONE
             PEPTIDES, LLC, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR PHARMACY PARTNERS
             BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
-            DAMAGES — INCLUDING LOSS OF PROFITS, DATA, OR GOODWILL — ARISING OUT OF OR IN
+            DAMAGES, INCLUDING LOSS OF PROFITS, DATA, OR GOODWILL, ARISING OUT OF OR IN
             CONNECTION WITH YOUR USE OF THE SITE OR ANY PRODUCTS PURCHASED THROUGH IT.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
@@ -199,8 +199,8 @@ export default function TermsPage() {
             IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
-            You expressly acknowledge that any misuse of our products — including introduction
-            into the human or animal body — is at your sole risk, and we disclaim all
+            You expressly acknowledge that any misuse of our products, including introduction
+            into the human or animal body, is at your sole risk, and we disclaim all
             liability arising from such misuse.
           </p>
         </div>
@@ -210,8 +210,8 @@ export default function TermsPage() {
           <p className="text-cream-dim text-sm leading-relaxed">
             You agree to defend, indemnify, and hold harmless Greenstone Peptides, LLC and
             its affiliates, officers, directors, employees, and agents from and against any
-            claims, liabilities, damages, losses, and expenses — including reasonable
-            attorneys' fees — arising out of or in any way connected with your access to or
+            claims, liabilities, damages, losses, and expenses, including reasonable
+            attorneys' fees, arising out of or in any way connected with your access to or
             use of the Site, your violation of these Terms, or your misuse of any product
             purchased through the Site.
           </p>
@@ -222,8 +222,8 @@ export default function TermsPage() {
             11. Intellectual Property
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            All content on this Site — including text, graphics, logos, product descriptions,
-            images, and software — is the property of Greenstone Peptides, LLC or its content
+            All content on this Site, including text, graphics, logos, product descriptions,
+            images, and software, is the property of Greenstone Peptides, LLC or its content
             suppliers and is protected by applicable intellectual property laws. Unauthorized
             reproduction, distribution, or use of any content is prohibited.
           </p>

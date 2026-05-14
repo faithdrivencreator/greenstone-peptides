@@ -1,6 +1,6 @@
 // LEGAL NOTICE: This is a placeholder Privacy Policy for launch purposes.
 // Pete should have a licensed attorney review and approve this document
-// before relying on it for legal protection. — FFS Lab, April 2026
+// before relying on it for legal protection., FFS Lab, April 2026
 
 import type { Metadata } from 'next';
 
@@ -52,43 +52,43 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-4 space-y-2 text-cream-dim text-sm">
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Identity information:</strong> First name,
                 last name
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Contact information:</strong> Email address,
                 phone number (if provided)
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Shipping information:</strong> Shipping
                 address (street, city, state, ZIP, country)
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Payment information:</strong> Processed
-                securely by Stripe — we do not store your credit card number, CVV, or
+                securely by Stripe, we do not store your credit card number, CVV, or
                 full payment card details on our servers
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Order history:</strong> Products purchased,
                 order dates, amounts
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Communications:</strong> Messages you send
                 us via email or contact forms
@@ -101,14 +101,14 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-4 space-y-2 text-cream-dim text-sm">
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Usage data:</strong> Pages visited, time
                 spent, referring URLs, browser type, device type, IP address
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Cookies and local storage:</strong> Used
                 for age verification (stored in localStorage), shopping cart state, and
@@ -127,31 +127,31 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-4 space-y-2 text-cream-dim text-sm">
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>Process and fulfill your orders, including payment and shipping</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>Send order confirmations, shipping updates, and customer support communications</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
-              <span>Send marketing emails and product updates (only with your consent — you can unsubscribe at any time)</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
+              <span>Send marketing emails and product updates (only with your consent, you can unsubscribe at any time)</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>Enforce age verification (18+) requirements</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>Improve and optimize the Site through analytics</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>Comply with legal obligations and enforce our Terms of Service</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>Detect and prevent fraud</span>
             </li>
           </ul>
@@ -159,7 +159,7 @@ export default function PrivacyPage() {
 
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">
-            4. Payment Processing — Stripe
+            4. Payment Processing, Stripe
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
             All payment processing is handled by{' '}
@@ -185,7 +185,7 @@ export default function PrivacyPage() {
 
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">
-            5. Email Marketing — Klaviyo
+            5. Email Marketing, Klaviyo
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
             We use <strong className="text-cream">Klaviyo</strong> to send marketing
@@ -220,7 +220,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-4 space-y-3 text-cream-dim text-sm">
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <div>
                 <strong className="text-cream">Age Verification (localStorage):</strong>{' '}
                 We store a record of age gate confirmation in your browser's local storage
@@ -228,18 +228,18 @@ export default function PrivacyPage() {
               </div>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <div>
                 <strong className="text-cream">Shopping Cart (localStorage):</strong> Your
                 cart contents are stored locally in your browser to persist between sessions.
               </div>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <div>
                 <strong className="text-cream">Analytics:</strong> We may use third-party
                 analytics tools (such as Google Analytics) that use cookies to collect
-                anonymized data about how visitors use the Site — pages viewed, time on
+                anonymized data about how visitors use the Site, pages viewed, time on
                 page, referral sources. This data is used to improve the Site experience.
               </div>
             </li>
@@ -261,23 +261,23 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-4 space-y-2 text-cream-dim text-sm">
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Service providers:</strong> Stripe (payment
                 processing), Klaviyo (email marketing), shipping carriers, and other
-                vendors who assist us in operating the Site and fulfilling orders — only
+                vendors who assist us in operating the Site and fulfilling orders, only
                 to the extent necessary to perform their services
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Legal compliance:</strong> When required by
                 law, subpoena, court order, or government request
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Business transfers:</strong> In connection
                 with a merger, acquisition, or sale of all or a portion of our assets,
@@ -285,7 +285,7 @@ export default function PrivacyPage() {
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Protection of rights:</strong> To protect
                 the rights, property, or safety of Greenstone Peptides, our customers, or
@@ -318,28 +318,28 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-4 space-y-2 text-cream-dim text-sm">
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Access:</strong> Request a copy of the
                 personal information we hold about you
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Correction:</strong> Request that we correct
                 inaccurate or incomplete information
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Deletion:</strong> Request that we delete
                 your personal information, subject to legal retention requirements
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Opt-out of marketing:</strong> Unsubscribe
                 from marketing emails at any time via the link in any email
@@ -367,25 +367,25 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-4 space-y-2 text-cream-dim text-sm">
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 The right to know what personal information we collect, use, disclose,
                 and sell
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>The right to request deletion of your personal information</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
-                The right to opt out of the sale of your personal information — we do
+                The right to opt out of the sale of your personal information, we do
                 not sell personal information
               </span>
             </li>
             <li className="flex gap-2">
-              <span className="text-emerald mt-0.5 shrink-0">—</span>
+              <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 The right to non-discrimination for exercising your privacy rights
               </span>
