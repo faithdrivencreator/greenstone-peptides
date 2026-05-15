@@ -299,7 +299,7 @@ export const staticProducts = [
     "safetyNotes": "Subcutaneous injection only. Use a sterile syringe and alcohol prep pads for each injection. Rotate injection sites. Dispose of used needles in an FDA-cleared sharps container. Do not use if the solution is cloudy, discolored, or contains particles. Consult a licensed healthcare provider before beginning any peptide protocol.",
     "seoTitle": "Tirzepatide/NAD+ 20mg/200mg Combo Injectable | Greenstone Wellness",
     "seoDescription": "Compounded weight management injectable pairing tirzepatide (GLP-1/GIP dual agonist) with NAD+ for cellular energy support. 100mg tirzepatide + 1,000mg NAD+ per 5mL vial. USA-compounded, USP 797.",
-    "imageUrl": null,
+    "imageUrl": "/images/products/tirzepatide-nad-combo.png",
     "imageAlt": "Tirzepatide/NAD+ 20mg/200mg, Greenstone Wellness",
     "featured": false,
     "active": true

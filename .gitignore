@@ -41,6 +41,6 @@ dist/
 # Local Netlify folder
 .netlify
 
-# Generated images (uploaded to Sanity CDN)
+# Generated images. Sanity removed; product images now ship from the repo
+# (public/images/products/) so Netlify can serve them directly.
 nanobanana-output/
-public/images/products/
