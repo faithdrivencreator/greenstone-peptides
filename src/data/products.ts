@@ -324,7 +324,7 @@ export const staticProducts = [
     "safetyNotes": "Single-use only. Never reuse needles or syringes. Dispose of used syringes in an FDA-cleared sharps container. Keep out of reach of children.",
     "seoTitle": "10-Day Peptide Injection Starter Kit | Greenstone Wellness",
     "seoDescription": "10 sterile insulin-style syringes and 20 alcohol prep pads. Everything you need for safe at-home subcutaneous peptide injection.",
-    "imageUrl": null,
+    "imageUrl": "/images/products/10-day-starter-kit.png",
     "imageAlt": "10-Day Starter Kit, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -349,7 +349,7 @@ export const staticProducts = [
     "safetyNotes": "Single-use only. Never reuse needles or syringes. Dispose of used syringes in an FDA-cleared sharps container. Keep out of reach of children.",
     "seoTitle": "15-Day Peptide Injection Starter Kit | Greenstone Wellness",
     "seoDescription": "15 sterile insulin-style syringes and 30 alcohol prep pads. Everything you need for safe at-home subcutaneous peptide injection.",
-    "imageUrl": null,
+    "imageUrl": "/images/products/15-day-starter-kit.png",
     "imageAlt": "15-Day Starter Kit, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -374,7 +374,7 @@ export const staticProducts = [
     "safetyNotes": "Single-use only. Never reuse needles or syringes. Dispose of used syringes in an FDA-cleared sharps container. Keep out of reach of children.",
     "seoTitle": "20-Day Peptide Injection Starter Kit | Greenstone Wellness",
     "seoDescription": "20 sterile insulin-style syringes and 40 alcohol prep pads. Everything you need for safe at-home subcutaneous peptide injection.",
-    "imageUrl": null,
+    "imageUrl": "/images/products/20-day-starter-kit.png",
     "imageAlt": "20-Day Starter Kit, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -399,7 +399,7 @@ export const staticProducts = [
     "safetyNotes": "Single-use only. Never reuse needles or syringes. Dispose of used syringes in an FDA-cleared sharps container. Keep out of reach of children.",
     "seoTitle": "5-Day Peptide Injection Starter Kit | Greenstone Wellness",
     "seoDescription": "5 sterile insulin-style syringes and 10 alcohol prep pads. Everything you need for safe at-home subcutaneous peptide injection.",
-    "imageUrl": null,
+    "imageUrl": "/images/products/5-day-starter-kit.png",
     "imageAlt": "5-Day Starter Kit, Greenstone Wellness",
     "featured": false,
     "active": true
