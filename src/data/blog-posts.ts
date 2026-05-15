@@ -170,7 +170,17 @@ export const staticBlogPosts = [
 <h2>Conclusion</h2>
 <p>The compounded sildenafil/tadalafil ODT formulation reflects the kind of pharmacokinetic thinking that distinguishes precision medicine from off-the-shelf solutions. Pairing sildenafil's rapid onset with tadalafil's extended duration — in a delivery format that reduces food sensitivity and accelerates absorption — addresses a limitation neither agent resolves alone. For researchers building an evidence base for a provider conversation, or clinicians designing individualized men's health protocols, understanding the pharmacology is the essential first step before any protocol decision.</p>
 <p>If you are ready to explore compounded PDE5 options through a licensed provider, <a href="/store">Greenstone Peptides' men's health formulations</a> are sourced from USA-origin APIs, tested by independent third-party laboratories, and documented with lot-specific certificates of analysis — the standard the research demands.</p>
-<em>Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.</em>`,
+<em>Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.</em>
+<h2>Sources</h2>
+<p style="font-size:0.85rem;color:#8a9bb0;margin-bottom:1rem;">The following sources informed this article. Greenstone Peptides does not endorse any third-party organization; links are provided for research transparency.</p>
+<ol style="font-size:0.85rem;color:#8a9bb0;line-height:1.8;">
+<li><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc998a9c-0770-111b-e053-2a95a90a88a4" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Sildenafil Citrate Tablets — Full Prescribing Information. DailyMed, U.S. National Library of Medicine.</a></li>
+<li><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ebddb745-81f9-4b25-8739-b2886032ed26" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Cialis (Tadalafil) Tablets — Full Prescribing Information. DailyMed, U.S. National Library of Medicine.</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/books/NBK549843/" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Dhaliwal A, Gupta M. "PDE5 Inhibitors." StatPearls. StatPearls Publishing, 2024. NCBI Bookshelf.</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6003652/" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Ückert S, et al. "PDE5 Inhibitors — Pharmacology and Clinical Applications 20 Years After Sildenafil Discovery." British Journal of Pharmacology, 2018. PMC.</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7712969/" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Nagar H, Bhatt G. "Recent Formulation Advances and Therapeutic Usefulness of Orally Disintegrating Tablets (ODTs)." PMC, 2020.</a></li>
+<li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/pharmacy-compounding-human-drug-products-under-section-503a-federal-food-drug-and-cosmetic-act" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food &amp; Drug Administration. "Pharmacy Compounding of Human Drug Products Under Section 503A of the Federal Food, Drug, and Cosmetic Act." FDA Guidance for Industry.</a></li>
+</ol>`,
     heroImage: '/blog/sildenafil-tadalafil-odt-mens-health-hero-20260515.png',
     heroAlt: 'Clinical editorial research still life for compounded sildenafil tadalafil ODT PDE5 inhibitor men health',
     readingTime: 9,
