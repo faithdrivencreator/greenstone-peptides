@@ -38,6 +38,7 @@ export const SUPPLIER_MAPPING: Record<string, SupplierMapping> = {
   // ─── Combos ─────────────────────────────────────────────────────────
   'semaglutide-nad-combo':       { supplierName: 'Semaglutide/NAD+ 2.5/50 mg/mL Injectable 5ml',    supplierCost: 120.00 },
   'tirzepatide-glycine-20mg-5mg':{ supplierName: 'Tirzepatide/Glycine 20mg/5mg Injectable 5ml',     supplierCost: 105.00 },
+  'tirzepatide-nad-combo':       { supplierName: 'Tirzepatide/NAD+ 20mg/200mg Injectable 5ml',      supplierCost: 215.00 },
 
   // ─── Semaglutide ODT ────────────────────────────────────────────────
   'semaglutide-0-5mg-odt-30ct':  { supplierName: 'Semaglutide Oral RDT 0.50mg (30-Tablets)',     supplierCost: 55.00 },
@@ -74,8 +75,9 @@ export const SUPPLIER_MAPPING: Record<string, SupplierMapping> = {
   'tirzepatide-15mg-2ml':        { supplierName: 'Tirzepatide Injectable 15mg/mL (2mL vial)',    supplierCost: 120.00 },
   'tirzepatide-15mg-3ml':        { supplierName: 'Tirzepatide Injectable 15mg/mL (3mL vial)',    supplierCost: 160.00 },
   'tirzepatide-15mg-4ml':        { supplierName: 'Tirzepatide Injectable 15mg/mL (4mL vial)',    supplierCost: 195.00 },
-  // 'tirzepatide-15mg-5ml': ORPHAN — supplier no longer carries 15mg/5mL.
-  //   Action: deactivate on site or contact lab to confirm availability.
+  // 'tirzepatide-15mg-5ml': DEACTIVATED — supplier no longer carries 15mg/5mL
+  //   as of 2026-05-14. Kept in catalog with active=false so historical orders
+  //   still resolve correctly. Re-activate if supplier brings it back.
 
   // ─── Tirzepatide Injectable 20mg/mL ─────────────────────────────────
   'tirzepatide-20mg-1ml':        { supplierName: 'Tirzepatide Injectable 20mg/mL (1mL vial)',    supplierCost: 90.00 },

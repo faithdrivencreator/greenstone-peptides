@@ -280,6 +280,31 @@ export const staticProducts = [
     "active": true
   },
   {
+    "id": "product-tirz-nad-combo",
+    "name": "Tirzepatide/NAD+ 20mg/200mg",
+    "slug": "tirzepatide-nad-combo",
+    "categoryId": "category-weight-loss",
+    "categorySlug": "weight-loss",
+    "categoryTitle": "Weight Loss & GLP-1",
+    "shortDescription": "Tirzepatide paired with NAD+ for weight loss with metabolic and cellular energy support.",
+    "description": "",
+    "format": "injectable",
+    "strength": "20mg/200mg",
+    "size": "5mL",
+    "price": 303,
+    "stripePaymentLink": null,
+    "prescriptionRequired": false,
+    "usaCompounded": true,
+    "storageInstructions": "Refrigerate at 2-8°C. Protect from light.",
+    "safetyNotes": null,
+    "seoTitle": null,
+    "seoDescription": null,
+    "imageUrl": null,
+    "imageAlt": "Tirzepatide/NAD+ 20mg/200mg, Greenstone Wellness",
+    "featured": false,
+    "active": true
+  },
+  {
     "id": "product-kit-10day",
     "name": "10-Day Starter Kit",
     "slug": "10-day-starter-kit",
@@ -1252,7 +1277,7 @@ export const staticProducts = [
     "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/bd4da89006b814e0bbb6246f69cf1a9b38c30479-1408x768.jpg",
     "imageAlt": "Tirzepatide 15mg, 5mL, Greenstone Wellness",
     "featured": false,
-    "active": true
+    "active": false
   },
   {
     "id": "product-tirz-inj-20mg-1ml",
