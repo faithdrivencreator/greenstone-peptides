@@ -34,7 +34,7 @@ const SAFETY_ICONS: Record<string, LucideIcon> = {
 const SAFETY_CONTEXT: Record<string, string> = {
   hands: 'Most contamination happens from unwashed hands. 20 seconds eliminates 99% of harmful bacteria.',
   swab: 'Alcohol needs 10 seconds to evaporate. Injecting through wet skin can drive it into the tissue.',
-  inspect: 'Peptides are temperature-sensitive. Cloudiness or particles means the vial has degraded, do not use.',
+  inspect: 'After reconstitution, peptides are temperature-sensitive. Cloudiness, discoloration, or particles means the vial has degraded, do not use.',
   syringe: 'A used needle dulls instantly and carries contamination risk. Sterile means single-use, always.',
   rotate: 'Repeated injections in the same spot cause scar tissue that affects absorption over time.',
   dispose: 'Recapping needles causes most accidental needle sticks. Into the sharps container immediately.',

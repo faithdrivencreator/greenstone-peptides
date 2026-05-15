@@ -22,7 +22,7 @@ export default function ThankYouPage() {
         </h1>
 
         <p className="text-cream/70 text-lg mb-8 leading-relaxed">
-          Thank you for your order. Your formulation will be compounded to order by our USA pharmacy partners under USP 797 sterile standards and shipped with temperature-controlled packaging. Plan on roughly <span className="text-cream">two weeks total</span> from today to your door.
+          Thank you for your order. Your formulation will be compounded to order by our USA pharmacy partners under USP 797 sterile standards, then sealed and shipped as a lyophilized (freeze-dried) vial. Plan on roughly <span className="text-cream">two weeks total</span> from today to your door.
         </p>
 
         <div className="bg-white/5 border border-gold/10 rounded-xl p-6 mb-8 text-left">
@@ -38,7 +38,7 @@ export default function ThankYouPage() {
             </li>
             <li className="flex gap-3">
               <span className="text-gold font-mono text-sm mt-0.5">03</span>
-              <span><strong className="text-cream">Days 7–12:</strong> Cold-chain shipped via USPS Priority Mail with tracking (3–5 business days in transit).</span>
+              <span><strong className="text-cream">Days 7–12:</strong> Shipped via USPS Priority Mail with tracking (3–5 business days in transit). Discreet outer packaging.</span>
             </li>
           </ol>
         </div>

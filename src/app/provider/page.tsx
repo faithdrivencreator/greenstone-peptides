@@ -27,7 +27,7 @@ export default function ProviderPage() {
               'Dedicated account representative',
               'Product and protocol training',
               'Marketing support and patient education materials',
-              'Priority fulfillment and cold-chain logistics',
+              'Priority fulfillment direct from the compounding pharmacy',
               'Custom formulations available',
             ].map((item) => (
               <li key={item} className="flex gap-3 text-cream-dim">

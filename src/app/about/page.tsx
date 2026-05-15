@@ -133,8 +133,8 @@ export default function AboutPage() {
                 b: 'Certificates of Analysis for every formulation. Full chain-of-custody documentation from compounding to delivery.',
               },
               {
-                t: 'Temperature-Controlled Shipping',
-                b: 'Cold-chain packaging and real-time tracking from the compounding facility to your door.',
+                t: 'Lyophilized for Stability',
+                b: 'Injectables ship as freeze-dried powder in sealed sterile vials, stable at room temperature. Reconstitute with bacteriostatic water when you are ready to use.',
               },
               {
                 t: '25+ Years Experience',

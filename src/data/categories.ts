@@ -12,7 +12,7 @@ export const staticCategories = [
     "icon": null,
     "order": 1,
     "seoTitle": "Compounded GLP-1 Weight Loss Peptides | Greenstone Wellness",
-    "seoDescription": "Physician-prescribed compounded semaglutide, tirzepatide, and retatrutide. USA-formulated, temperature-controlled delivery."
+    "seoDescription": "Physician-prescribed compounded semaglutide, tirzepatide, and retatrutide. USA-formulated, shipped as lyophilized powder in sealed sterile vials."
   },
   {
     "id": "category-recovery",

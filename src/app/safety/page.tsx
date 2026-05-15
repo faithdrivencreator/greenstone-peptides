@@ -48,20 +48,35 @@ export default function SafetyPage() {
 
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">Storage Guidelines</h2>
-          <p className="text-cream-dim text-sm leading-relaxed">
-            Most peptide formulations should be stored refrigerated at 2-8°C (36-46°F) and
-            protected from direct light. Once reconstituted, use within the timeframe noted
-            on your product label. Do not freeze unless specifically directed. Keep all
-            products out of reach of children.
-          </p>
+          <div className="text-cream-dim text-sm leading-relaxed space-y-3">
+            <p>
+              <strong className="text-cream">Before reconstitution:</strong> injectable peptides
+              ship as a lyophilized (freeze-dried) powder sealed inside a sterile glass vial.
+              In this form they are stable at room temperature for weeks and can be stored at
+              normal indoor temperatures until you're ready to mix.
+            </p>
+            <p>
+              <strong className="text-cream">After reconstitution:</strong> once you add
+              bacteriostatic water to the vial, the solution must be refrigerated at 2-8°C
+              (36-46°F) and protected from direct light. Most compounded peptides remain
+              stable for 28-56 days refrigerated after reconstitution, depending on the peptide.
+              Do not freeze. Discard any vial that becomes cloudy, discolored, or contains
+              particles.
+            </p>
+            <p>
+              <strong className="text-cream">ODT tablets and topical creams:</strong> store at
+              room temperature, away from heat and moisture. No refrigeration needed. Keep all
+              products out of reach of children.
+            </p>
+          </div>
         </div>
 
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">Shipping & Handling</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            All orders are shipped with temperature-controlled packaging to maintain product
-            integrity during transit. If your package arrives damaged or the cold pack is
-            fully thawed, contact us for a replacement.
+            Injectable peptides ship as lyophilized powder in sealed sterile vials, which are
+            stable at room temperature in transit. If your package arrives with a broken vial
+            or compromised seal, contact us for a replacement.
           </p>
         </div>
 
