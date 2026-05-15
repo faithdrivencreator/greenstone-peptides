@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getAllBlogPosts, getBlogPostBySlug } from '@/lib/queries';
-import { urlFor } from '@/lib/sanity';
+import { productImageUrl } from '@/lib/product-image';
 import { ProductCard } from '@/components/ProductCard';
 import { SchemaOrg } from '@/components/SchemaOrg';
 
@@ -38,9 +38,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = await getBlogPostBySlug(params.slug);
   if (!post) notFound();
 
-  const heroUrl = post.mainImage
-    ? urlFor(post.mainImage).url()
-    : null;
+  const heroUrl = productImageUrl(post.mainImage);
 
   const articleSchema = {
     '@context': 'https://schema.org',

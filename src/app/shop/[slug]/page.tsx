@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getAllProducts, getProductBySlug } from '@/lib/queries';
-import { urlFor } from '@/lib/sanity';
+import { productImageUrl } from '@/lib/product-image';
 import { ProductCard } from '@/components/ProductCard';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import AddToCartButton from '@/components/AddToCartButton';
@@ -38,9 +38,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const product = await getProductBySlug(params.slug);
   if (!product) notFound();
 
-  const imageUrl = product.image
-    ? urlFor(product.image).width(1200).height(900).url()
-    : null;
+  const imageUrl = productImageUrl(product.image);
 
   const productSchema = {
     '@context': 'https://schema.org',
