@@ -2,14 +2,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Clock } from 'lucide-react';
 import type { BlogPost } from '@/types';
-import { urlFor } from '@/lib/sanity';
+import { productImageUrl } from '@/lib/product-image';
 
 interface BlogCardProps {
   post: BlogPost;
 }
 
 export function BlogCard({ post }: BlogCardProps) {
-  const imageUrl = post.mainImage ? urlFor(post.mainImage).width(800).height(480).url() : null;
+  const imageUrl = productImageUrl(post.mainImage);
   const primaryCategory = post.categories?.[0];
 
   return (

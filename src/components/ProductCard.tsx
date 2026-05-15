@@ -6,7 +6,7 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import { ArrowUpRight, Check } from 'lucide-react';
 import type { Product } from '@/types';
-import { urlFor } from '@/lib/sanity';
+import { productImageUrl } from '@/lib/product-image';
 import { useCart } from '@/context/CartContext';
 
 interface ProductCardProps {
@@ -22,7 +22,7 @@ const FORMAT_LABEL: Record<string, string> = {
 };
 
 export function ProductCard({ product }: ProductCardProps) {
-  const imageUrl = product.image ? urlFor(product.image).width(640).height(480).url() : null;
+  const imageUrl = productImageUrl(product.image);
   const { addItem } = useCart();
   const [added, setAdded] = useState(false);
 
@@ -68,7 +68,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 </span>
               )}
             </div>
-            {product.usaCompounded && (
+            {product.usaCompounded && product.format !== 'kit' && (
               <span className="badge badge-usa flex-shrink-0">USA Compounded</span>
             )}
           </div>
