@@ -899,7 +899,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": null,
+    "imageUrl": "/images/products/sildenafil-tadalafil-55-22mg-odt.png",
     "imageAlt": "Sildenafil/Tadalafil 55/22mg ODT",
     "featured": false,
     "active": true
@@ -974,7 +974,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": null,
+    "imageUrl": "/images/products/tester-cream.png",
     "imageAlt": "Tester Cream",
     "featured": false,
     "active": false
