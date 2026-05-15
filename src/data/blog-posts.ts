@@ -52,18 +52,56 @@ export const staticBlogPosts = [
 <p>A notable area of 2026 research interest is tadalafil's off-target activity at PDE11 — an enzyme found in skeletal muscle and testes — which has attracted attention in discussions of muscle physiology and reproductive biology. This thread is being tracked in several ongoing investigational programs, though clinical significance remains under active study.</p>
 <p>Key pharmacokinetic distinctions relevant to the dual-agent approach: tadalafil's 17.5-hour half-life means a single on-demand dose provides pharmacokinetic coverage extending up to 36 hours. Its absorption is notably less food-sensitive than sildenafil — high-fat meals do not significantly reduce tadalafil bioavailability — which informs the practical design advantage of pairing it with a sildenafil-containing ODT formulation.</p>
 <h2>How to Choose the Right PDE5 Approach for Your Research Goals</h2>
-<table>
+<div style="overflow-x:auto;margin:2rem 0;border-radius:12px;border:1px solid rgba(255,255,255,0.1);">
+<table style="width:100%;border-collapse:collapse;font-size:0.875rem;min-width:600px;">
 <thead>
-<tr><th>Compound</th><th>Mechanism</th><th>Onset</th><th>Duration</th><th>Primary Research Context</th></tr>
+<tr style="background:rgba(45,95,191,0.25);border-bottom:1px solid rgba(45,95,191,0.5);">
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Compound</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Mechanism</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Onset</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Duration</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Primary Research Context</th>
+</tr>
 </thead>
 <tbody>
-<tr><td>Sildenafil 50–100mg (standard tablet)</td><td>PDE5 inhibition</td><td>30–60 min</td><td>4–6 hr</td><td>On-demand men's health, pulmonary vasodilation research</td></tr>
-<tr><td>Tadalafil 10–20mg (standard tablet)</td><td>PDE5 inhibition</td><td>30–60 min</td><td>Up to 36 hr</td><td>On-demand or scheduled men's health, PAH, BPH research</td></tr>
-<tr><td>Daily tadalafil 2.5–5mg</td><td>PDE5 inhibition (sustained)</td><td>Chronic suppression</td><td>24 hr coverage</td><td>Continuous background PDE5 inhibition protocols</td></tr>
-<tr><td>Compounded sildenafil ODT</td><td>PDE5 inhibition</td><td>Accelerated (mucosal)</td><td>4–6 hr</td><td>On-demand with delivery format advantage</td></tr>
-<tr><td>Compounded Sildenafil/Tadalafil 55/22mg ODT</td><td>Dual PDE5 inhibition</td><td>Accelerated (mucosal)</td><td>Extended (dual-agent)</td><td>Combination research: immediate onset + sustained duration</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Sildenafil 50–100mg<br/><span style="font-size:0.78rem;color:#8a9bb0;">Standard tablet</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">PDE5 inhibition</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">30–60 min</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">4–6 hr</td>
+<td style="padding:14px 16px;color:#c8d4e0;">On-demand men's health, pulmonary vasodilation research</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Tadalafil 10–20mg<br/><span style="font-size:0.78rem;color:#8a9bb0;">Standard tablet</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">PDE5 inhibition</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">30–60 min</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Up to 36 hr</td>
+<td style="padding:14px 16px;color:#c8d4e0;">On-demand or scheduled men's health, PAH, BPH research</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Daily tadalafil 2.5–5mg<br/><span style="font-size:0.78rem;color:#8a9bb0;">Standard tablet</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">PDE5 inhibition (sustained)</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Chronic suppression</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">24 hr coverage</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Continuous background PDE5 inhibition protocols</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Compounded sildenafil ODT<br/><span style="font-size:0.78rem;color:#8a9bb0;">503A compounded</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">PDE5 inhibition</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Accelerated (mucosal)</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">4–6 hr</td>
+<td style="padding:14px 16px;color:#c8d4e0;">On-demand with delivery format advantage</td>
+</tr>
+<tr style="background:rgba(0,200,255,0.07);border-top:1px solid rgba(0,200,255,0.25);">
+<td style="padding:14px 16px;font-weight:600;color:#00c8ff;">Sildenafil/Tadalafil 55/22mg ODT<br/><span style="font-size:0.78rem;color:#4f8fff;font-weight:400;">Compounded combination</span></td>
+<td style="padding:14px 16px;color:#e8e0d4;">Dual PDE5 inhibition</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">Accelerated (mucosal)</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">Extended (dual-agent)</td>
+<td style="padding:14px 16px;color:#e8e0d4;">Combination research: immediate onset + sustained duration</td>
+</tr>
 </tbody>
 </table>
+</div>
 <p>The most critical factor in evaluating a PDE5 combination protocol is pharmacokinetic intent. The sildenafil/tadalafil combination is pharmacologically rational precisely because the two agents are <em>complementary rather than redundant</em> — sildenafil provides rapid onset while tadalafil maintains a sustained pharmacokinetic floor. Understanding that intent is essential before any protocol discussion with a healthcare provider.</p>
 <h3>Understanding ODT Delivery — Practical Advantages for Researchers</h3>
 <p>Standard oral tablets dissolve in the stomach and are absorbed through the small intestinal mucosa, undergoing first-pass hepatic metabolism before reaching systemic circulation — with published bioavailability estimates of approximately 40% for sildenafil and 36% for tadalafil. Orally dissolving tablets are designed to dissolve in the oral cavity, with absorption occurring through the buccal or sublingual mucosa — vascular-rich tissue that offers more direct systemic access.</p>
