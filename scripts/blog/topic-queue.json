@@ -123,10 +123,11 @@
     {
       "slug": "sildenafil-tadalafil-odt-mens-health",
       "title": "Sildenafil/Tadalafil 55/22mg ODT: The Science Behind Compounded PDE5 Combinations",
-      "status": "pending",
+      "status": "published",
       "priority": "high",
       "productFocus": "sildenafil-tadalafil-55-22mg-odt",
-      "note": "New product launch \u2014 highlight ODT format, combination advantage, compounded quality, men's health positioning. Feature the product card in the post."
+      "note": "New product launch \u2014 highlight ODT format, combination advantage, compounded quality, men's health positioning. Feature the product card in the post.",
+      "publishedAt": "2026-05-15T11:00:00.000Z"
     },
     {
       "slug": "tesamorelin-visceral-fat-research",
