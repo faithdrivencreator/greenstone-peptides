@@ -78,7 +78,7 @@ export default function PeptidesUnlockedPage() {
             'A research-grade guide to matching peptides to goals, running a sourcing checklist, and structuring the first 48 hours of a new protocol.',
           publisher: {
             '@type': 'Organization',
-            name: 'Greenstone Peptides',
+            name: 'Greenstone Wellness',
             url: SITE_URL,
           },
           isAccessibleForFree: true,
@@ -144,9 +144,6 @@ export default function PeptidesUnlockedPage() {
               />
             </div>
 
-            <p className="mt-5 text-[0.7rem] text-cream-dim/60 leading-relaxed font-dm-sans">
-              No spam. Unsubscribe anytime. Your email is private, we use Resend, never Klaviyo.
-            </p>
           </div>
         </div>
       </section>
@@ -255,9 +252,6 @@ export default function PeptidesUnlockedPage() {
                 redirectUrl="/free/peptides-unlocked/thank-you"
               />
             </div>
-            <p className="mt-5 text-[0.7rem] text-cream-dim/60 font-dm-sans">
-              No spam. Unsubscribe anytime. Your email is private, we use Resend, never Klaviyo.
-            </p>
           </div>
         </div>
       </section>

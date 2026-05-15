@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     q: 'Will you spam me?',
-    a: 'No. After we send the guide, you might hear from us once a month with new educational content or a sourcing update. Unsubscribe anytime, one click, no friction. Your email stays inside Resend; we do not sell or rent lists.',
+    a: 'No. After we send the guide, you might hear from us once a month with new educational content or a sourcing update. Unsubscribe anytime, one click, no friction. We never sell or rent your email.',
   },
   {
     q: 'Are these products for human use?',
@@ -78,7 +78,7 @@ export default function PeptidesMadeEasyPage() {
             "A 14-page beginner's guide to peptides, what they are, how to start safely, and what to look for in your first 72 hours.",
           publisher: {
             '@type': 'Organization',
-            name: 'Greenstone Peptides',
+            name: 'Greenstone Wellness',
             url: SITE_URL,
           },
           isAccessibleForFree: true,
@@ -144,9 +144,6 @@ export default function PeptidesMadeEasyPage() {
               />
             </div>
 
-            <p className="mt-5 text-[0.7rem] text-cream-dim/60 leading-relaxed font-dm-sans">
-              No spam. Unsubscribe anytime. Your email is private, we use Resend, never Klaviyo.
-            </p>
           </div>
         </div>
       </section>
@@ -236,9 +233,6 @@ export default function PeptidesMadeEasyPage() {
                 redirectUrl="/free/peptides-made-easy/thank-you"
               />
             </div>
-            <p className="mt-5 text-[0.7rem] text-cream-dim/60 font-dm-sans">
-              No spam. Unsubscribe anytime. Your email is private, we use Resend, never Klaviyo.
-            </p>
           </div>
         </div>
       </section>
