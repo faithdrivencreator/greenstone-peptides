@@ -112,7 +112,7 @@ export default async function HomePage() {
                 href={p.slug.current ? `/shop/${p.slug.current}` : '/shop'}
                 className="card-glass border-emerald/20 hover:border-emerald/50 p-4 group transition-all duration-300 hover:-translate-y-1 block"
               >
-                <div className="w-full aspect-square mb-3 bg-obsidian-light border border-emerald/10 flex items-center justify-center overflow-hidden">
+                <div className="relative w-full aspect-square mb-3 bg-obsidian-light border border-emerald/10 flex items-center justify-center overflow-hidden">
                   {productImageUrl((p as any).image) ? (
                     <img
                       src={productImageUrl((p as any).image) ?? ''}
@@ -121,6 +121,11 @@ export default async function HomePage() {
                     />
                   ) : (
                     <span className="font-cormorant text-3xl text-emerald/30 group-hover:text-emerald/50 transition-colors">Rx</span>
+                  )}
+                  {(p as any).usaCompounded !== false && (p as any).slug?.current && (
+                    <span className="badge badge-usa absolute top-2 left-2 !text-[0.55rem] !px-2 !py-0.5 !tracking-wider z-10">
+                      USA Compounded
+                    </span>
                   )}
                 </div>
                 <p className="font-cormorant text-base text-white leading-tight">{p.name}</p>
