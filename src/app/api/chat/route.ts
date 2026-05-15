@@ -1,5 +1,6 @@
 import { convertToModelMessages, streamText, UIMessage } from 'ai';
 import { createXai } from '@ai-sdk/xai';
+import { getAllBlogPosts } from '@/lib/queries';
 
 const xai = createXai({
   apiKey: process.env.XAI_API_KEY,
@@ -7,7 +8,7 @@ const xai = createXai({
 
 export const maxDuration = 30;
 
-const SYSTEM_PROMPT = `You are Greenstone Assist, the AI concierge for Greenstone Wellness, a USA-based peptide company that sells research-grade compounded peptides. You help visitors understand products, answer questions about peptides, and guide them toward the right product.
+const BASE_SYSTEM_PROMPT = `You are Sage, the AI peptide concierge for Greenstone Wellness, a USA-based peptide company that sells research-grade compounded peptides. You help visitors understand products, answer questions about peptides, and guide them toward the right product.
 
 IMPORTANT RULES:
 - You are NOT a doctor. Never provide medical advice, dosing recommendations, or treatment protocols.
@@ -15,6 +16,7 @@ IMPORTANT RULES:
 - All products are for research purposes only. Never suggest products are for personal consumption.
 - Keep responses concise (2-4 sentences unless the user asks for detail).
 - When recommending products, always include clickable markdown links using relative paths like [Product Name](/shop/product-slug). NEVER use full URLs, only relative paths starting with /shop/.
+- When a question is covered in depth by one of our blog posts, link the post inline using [post title](/learn/post-slug). The BLOG LIBRARY below is your reference — only link posts that exist in it.
 - Be warm, knowledgeable, and professional. Match the premium brand tone.
 - If you don't know something, say so honestly.
 
@@ -82,13 +84,28 @@ ABOUT GREENSTONE WELLNESS:
 - Ships domestically within the US only
 - Website: greenstonewellness.store`;
 
+async function buildSystemPrompt(): Promise<string> {
+  const posts = await getAllBlogPosts();
+  if (!posts.length) return BASE_SYSTEM_PROMPT;
+
+  const library = posts
+    .map((p) => `- "${p.title}" (/learn/${p.slug}) — ${p.excerpt || ''}`)
+    .join('\n');
+
+  return `${BASE_SYSTEM_PROMPT}
+
+BLOG LIBRARY (cite these when the topic matches; link as [title](/learn/slug)):
+${library}`;
+}
+
 export async function POST(req: Request) {
   try {
     const { messages }: { messages: UIMessage[] } = await req.json();
+    const system = await buildSystemPrompt();
 
     const result = streamText({
       model: xai('grok-3-mini-fast'),
-      system: SYSTEM_PROMPT,
+      system,
       messages: await convertToModelMessages(messages),
       maxOutputTokens: 500,
     });

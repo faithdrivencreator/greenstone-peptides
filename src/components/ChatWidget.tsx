@@ -32,8 +32,11 @@ function renderMarkdownLinks(text: string): ReactNode[] {
   return parts.length > 0 ? parts : [text];
 }
 
+const TEASER_KEY = 'gr-sage-teaser-dismissed-v1';
+
 export function ChatWidget() {
   const [open, setOpen] = useState(false);
+  const [teaserVisible, setTeaserVisible] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const [input, setInput] = useState('');
@@ -56,6 +59,27 @@ export function ChatWidget() {
     }
   }, [open]);
 
+  // Show teaser once per session, ~18s after landing, only if chat isn't open
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem(TEASER_KEY) === '1') return;
+    } catch {}
+    const timer = setTimeout(() => {
+      if (!open) setTeaserVisible(true);
+    }, 45000);
+    return () => clearTimeout(timer);
+  }, [open]);
+
+  function dismissTeaser() {
+    setTeaserVisible(false);
+    try { sessionStorage.setItem(TEASER_KEY, '1'); } catch {}
+  }
+
+  function openChatFromTeaser() {
+    dismissTeaser();
+    setOpen(true);
+  }
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const trimmed = input.trim();
@@ -66,10 +90,37 @@ export function ChatWidget() {
 
   return (
     <>
+      {/* Teaser bubble — appears once per session, above the chat icon */}
+      {!open && teaserVisible && (
+        <div className="fixed bottom-[7.5rem] right-4 sm:bottom-24 sm:right-6 z-30 max-w-[260px] animate-[fadeIn_0.4s_ease-out]">
+          <button
+            onClick={dismissTeaser}
+            aria-label="Dismiss"
+            className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-obsidian-light border border-white/10 text-cream-dim hover:text-cream hover:border-white/30 transition-colors"
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+          <button
+            onClick={openChatFromTeaser}
+            className="block text-left rounded-2xl rounded-br-sm bg-obsidian-mid border border-emerald/30 px-4 py-3 shadow-lg shadow-black/40 hover:border-emerald/60 transition-colors"
+          >
+            <p className="font-jetbrains text-[10px] uppercase tracking-wider text-emerald-light mb-1">
+              Sage · Peptide Concierge
+            </p>
+            <p className="font-dm-sans text-sm text-cream leading-snug">
+              Have a question? I&apos;m Sage — ask me anything about peptides.
+            </p>
+          </button>
+        </div>
+      )}
+
       {/* Chat bubble button */}
       {!open && (
         <button
-          onClick={() => setOpen(true)}
+          onClick={() => { dismissTeaser(); setOpen(true); }}
           aria-label="Open chat"
           className="fixed bottom-24 right-4 sm:bottom-6 sm:right-6 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-emerald shadow-lg shadow-emerald/30 transition-transform hover:scale-105 active:scale-95"
         >
@@ -91,15 +142,15 @@ export function ChatWidget() {
 
       {/* Chat panel */}
       {open && (
-        <div className="fixed bottom-0 right-0 z-50 flex h-[100dvh] w-full flex-col border border-gold/20 bg-obsidian-mid sm:bottom-6 sm:right-6 sm:h-[500px] sm:w-[380px] sm:rounded">
+        <div className="fixed bottom-0 right-0 z-50 flex h-[100dvh] w-full flex-col border border-blue/20 bg-obsidian-mid sm:bottom-6 sm:right-6 sm:h-[500px] sm:w-[380px] sm:rounded">
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-gold/10 bg-obsidian px-4 py-3 sm:rounded-t">
+          <div className="flex items-center justify-between border-b border-blue/10 bg-obsidian px-4 py-3 sm:rounded-t">
             <div>
               <h3 className="font-cormorant text-base font-semibold text-white">
-                Greenstone Assist
+                Sage
               </h3>
-              <p className="font-jetbrains text-[10px] uppercase tracking-wider text-gold">
-                AI Concierge
+              <p className="font-jetbrains text-[10px] uppercase tracking-wider text-emerald-light">
+                Peptide Concierge
               </p>
             </div>
             <button
@@ -126,9 +177,10 @@ export function ChatWidget() {
           {/* Messages */}
           <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
             {messages.length === 0 && (
-              <div className="flex h-full items-center justify-center">
-                <p className="text-center font-dm-sans text-sm text-cream-dim/60">
-                  Ask about our peptides, pricing, or product recommendations.
+              <div className="flex h-full items-center justify-center px-4">
+                <p className="text-center font-dm-sans text-sm text-cream-dim/70 leading-relaxed">
+                  Hi, I&apos;m Sage. Ask me about peptides, products, pricing, or
+                  what to read first.
                 </p>
               </div>
             )}
@@ -178,22 +230,22 @@ export function ChatWidget() {
           {/* Input */}
           <form
             onSubmit={handleSubmit}
-            className="border-t border-gold/10 bg-obsidian px-3 py-3 sm:rounded-b"
+            className="border-t border-blue/10 bg-obsidian px-3 py-3 sm:rounded-b"
           >
             <div className="relative">
               <input
                 ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask about peptides..."
+                placeholder="Ask Sage about peptides..."
                 disabled={isLoading}
-                className="w-full bg-obsidian-light border border-gold/20 pl-3 pr-12 py-2.5 font-jetbrains text-base sm:text-sm text-cream placeholder:text-cream-dim/40 outline-none transition-colors focus:border-gold/40 disabled:opacity-50"
+                className="w-full bg-obsidian-light border border-blue/20 pl-3 pr-12 py-2.5 font-jetbrains text-base sm:text-sm text-cream placeholder:text-cream-dim/40 outline-none transition-colors focus:border-emerald/50 disabled:opacity-50"
               />
               <button
                 type="submit"
                 disabled={isLoading || !input.trim()}
                 aria-label="Send message"
-                className="absolute right-1 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center text-gold transition-colors hover:text-gold-light disabled:opacity-30"
+                className="absolute right-1 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center text-emerald-light transition-colors hover:text-emerald disabled:opacity-30"
               >
                 <svg
                   width="18"
