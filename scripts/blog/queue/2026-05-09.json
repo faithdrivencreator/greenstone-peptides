@@ -78,7 +78,7 @@
     },
     {
       "_type": "block", "_key": "p-brand", "style": "normal", "markDefs": [],
-      "children": [{"_type": "span", "_key": "p-brands", "text": "Greenstone Peptides provides NAD+ formulations sourced from USA-origin raw materials, compounded to USP 797 sterile standards, and third-party tested for purity and identity — so researchers can evaluate the pharmacokinetic data with confidence in the underlying material.", "marks": []}]
+      "children": [{"_type": "span", "_key": "p-brands", "text": "Greenstone Wellness provides NAD+ formulations sourced from USA-origin raw materials, compounded to USP 797 sterile standards, and third-party tested for purity and identity — so researchers can evaluate the pharmacokinetic data with confidence in the underlying material.", "marks": []}]
     },
     {
       "_type": "block", "_key": "h2-s1", "style": "h2", "markDefs": [],
@@ -397,7 +397,7 @@
     },
     {
       "_type": "block", "_key": "p-disclaimer", "style": "normal", "markDefs": [],
-      "children": [{"_type": "span", "_key": "p-disclaimers", "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.", "marks": ["em"]}]
+      "children": [{"_type": "span", "_key": "p-disclaimers", "text": "Greenstone Wellness content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.", "marks": ["em"]}]
     }
   ]
 }

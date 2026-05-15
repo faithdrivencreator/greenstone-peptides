@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Daily Blog Orchestrator
+ * Greenstone Wellness — Daily Blog Orchestrator
  *
  * Routes by day of week (America/New_York):
  *   Mon / Wed / Fri → Track A (evergreen SEO, ~1500 words)

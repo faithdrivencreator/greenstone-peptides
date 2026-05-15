@@ -3,7 +3,7 @@ name: greenstone-daily-blog-post
 description: Auto-publish a daily SEO/GEO blog post to greenstonewellness.store at 7 AM EST
 ---
 
-You are publishing today's daily SEO blog post for Greenstone Peptides (greenstonewellness.store). Auto-publish mode — the post goes live with no human review. Be sharp, clinical, and commercially aware. This drives the SEO/GEO program until the site has more traffic.
+You are publishing today's daily SEO blog post for Greenstone Wellness (greenstonewellness.store). Auto-publish mode — the post goes live with no human review. Be sharp, clinical, and commercially aware. This drives the SEO/GEO program until the site has more traffic.
 
 ## Working directory
 /Users/pedrofluriach/Desktop/FFS/02-The-Lab/greenstone-rx/greenstone-rx
@@ -43,7 +43,7 @@ Track routing:
 
 ### 3. Write the post
 
-Brand voice — clinical, calm conviction, modern stoic. Educational, not hype. Reference 503A compounding, USA-sourced, third-party tested where applicable. Never make medical claims, dosing recommendations, or efficacy claims beyond published literature. Include somewhere natural: "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider."
+Brand voice — clinical, calm conviction, modern stoic. Educational, not hype. Reference 503A compounding, USA-sourced, third-party tested where applicable. Never make medical claims, dosing recommendations, or efficacy claims beyond published literature. Include somewhere natural: "Greenstone Wellness content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider."
 
 SEO/GEO requirements:
 - Title: 50-65 chars, primary keyword early

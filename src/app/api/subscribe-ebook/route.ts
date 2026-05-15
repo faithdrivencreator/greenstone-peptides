@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'hello@greenstonewellness.store';
-const FROM_HEADER = `Greenstone Peptides <${FROM_EMAIL}>`;
+const FROM_HEADER = `Greenstone Wellness <${FROM_EMAIL}>`;
 
 type Ebook = 'made-easy' | 'unlocked';
 
@@ -72,7 +72,7 @@ function buildEmailHtml(config: EbookConfig, firstName: string | undefined, down
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>${escapeHtml(config.title)}, Greenstone Peptides</title>
+<title>${escapeHtml(config.title)}, Greenstone Wellness</title>
 </head>
 <body style="margin:0;padding:0;background-color:#0D1117;font-family:Georgia,'Times New Roman',serif;color:#F5F1EB;">
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#0D1117;padding:32px 16px;">
@@ -84,7 +84,7 @@ function buildEmailHtml(config: EbookConfig, firstName: string | undefined, down
           </tr>
           <tr>
             <td style="padding:32px 32px 8px 32px;text-align:center;">
-              <p style="margin:0;font-family:'Courier New',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#C9A96E;">Greenstone Peptides</p>
+              <p style="margin:0;font-family:'Courier New',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#C9A96E;">Greenstone Wellness</p>
             </td>
           </tr>
           <tr>
@@ -161,7 +161,7 @@ function buildEmailHtml(config: EbookConfig, firstName: string | undefined, down
           <tr>
             <td style="background-color:#0D1117;padding:20px 32px;border-top:1px solid #1E2738;">
               <p style="margin:0 0 8px 0;font-family:Arial,sans-serif;font-size:11px;line-height:1.6;color:#B8B2A8;opacity:0.8;text-align:center;">
-                Greenstone Peptides ships from a USA-licensed compounding pharmacy. Third-party verified for purity. All educational content is for research and educational purposes only and does not constitute medical advice.
+                Greenstone Wellness ships from a USA-licensed compounding pharmacy. Third-party verified for purity. All educational content is for research and educational purposes only and does not constitute medical advice.
               </p>
               <p style="margin:0;font-family:'Courier New',monospace;font-size:10px;letter-spacing:0.05em;color:#B8B2A8;opacity:0.6;text-align:center;">
                 You received this because you requested the ${escapeHtml(config.title)} guide. Reply with "unsubscribe" to stop hearing from us.
@@ -189,7 +189,7 @@ function buildEmailText(config: EbookConfig, firstName: string | undefined, down
     '',
     'The Greenstone Team',
     '',
-    'Greenstone Peptides, USA-compounded, third-party verified.',
+    'Greenstone Wellness, USA-compounded, third-party verified.',
     'For research and educational purposes only. Not medical advice.',
   ].join('\n');
 }

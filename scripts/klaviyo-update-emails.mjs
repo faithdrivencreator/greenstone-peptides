@@ -24,7 +24,7 @@ function welcomeEmailHtml() {
 
 <!-- HEADER -->
 <tr><td style="background:#0D1117;padding:40px 30px;text-align:center;border-bottom:1px solid rgba(201,169,110,0.15)">
-  <h1 style="font-family:Georgia,serif;font-size:26px;color:#F5F1EB;font-weight:400;margin:0">Greenstone Peptides</h1>
+  <h1 style="font-family:Georgia,serif;font-size:26px;color:#F5F1EB;font-weight:400;margin:0">Greenstone Wellness</h1>
   <p style="font-family:monospace;font-size:10px;letter-spacing:3px;color:#C9A96E;margin:10px 0 0;text-transform:uppercase">Peptide Solutions</p>
 </td></tr>
 
@@ -66,7 +66,7 @@ function welcomeEmailHtml() {
 
 <!-- FOOTER -->
 <tr><td style="background:#0D1117;padding:30px;text-align:center;border-top:1px solid rgba(201,169,110,0.1)">
-  <p style="font-size:12px;color:#666;margin:0 0 4px">Greenstone Peptides</p>
+  <p style="font-size:12px;color:#666;margin:0 0 4px">Greenstone Wellness</p>
   <p style="font-size:11px;color:#555;margin:0 0 12px">USA-Compounded Peptide Therapy</p>
   <p style="margin:0 0 16px">
     <a href="https://greenstonewellness.store/shop" style="color:#C9A96E;font-size:11px;text-decoration:none;margin:0 8px">Shop</a>
@@ -97,7 +97,7 @@ function existingCustomerEmailHtml() {
 
 <!-- HEADER -->
 <tr><td style="background:#0D1117;padding:40px 30px;text-align:center;border-bottom:1px solid rgba(201,169,110,0.15)">
-  <h1 style="font-family:Georgia,serif;font-size:26px;color:#F5F1EB;font-weight:400;margin:0">Greenstone Peptides</h1>
+  <h1 style="font-family:Georgia,serif;font-size:26px;color:#F5F1EB;font-weight:400;margin:0">Greenstone Wellness</h1>
   <p style="font-family:monospace;font-size:10px;letter-spacing:3px;color:#C9A96E;margin:10px 0 0;text-transform:uppercase">Peptide Solutions</p>
 </td></tr>
 
@@ -119,7 +119,7 @@ function existingCustomerEmailHtml() {
 
 <!-- FOOTER -->
 <tr><td style="background:#0D1117;padding:30px;text-align:center;border-top:1px solid rgba(201,169,110,0.1)">
-  <p style="font-size:12px;color:#666;margin:0 0 4px">Greenstone Peptides</p>
+  <p style="font-size:12px;color:#666;margin:0 0 4px">Greenstone Wellness</p>
   <p style="font-size:11px;color:#555;margin:0 0 12px">USA-Compounded Peptide Therapy</p>
   <p style="margin:0 0 16px">
     <a href="https://greenstonewellness.store/shop" style="color:#C9A96E;font-size:11px;text-decoration:none;margin:0 8px">Shop</a>
@@ -150,7 +150,7 @@ async function updateEmail(messageId, label, subject, previewText, html) {
             subject,
             preview_text: previewText,
             from_email: '{{ organization.email }}',
-            from_label: 'Greenstone Peptides',
+            from_label: 'Greenstone Wellness',
             html,
           },
         },
@@ -171,7 +171,7 @@ async function main() {
     'V7K6va',
     'Welcome — Your $30 Discount Code',
     'Your $30 discount code is inside',
-    'Welcome to Greenstone Peptides — your code is waiting',
+    'Welcome to Greenstone Wellness — your code is waiting',
     welcomeEmailHtml()
   )
 
@@ -179,7 +179,7 @@ async function main() {
   await updateEmail(
     'Yad5eT',
     'Thanks for Subscribing',
-    'Thanks for subscribing to Greenstone Peptides',
+    'Thanks for subscribing to Greenstone Wellness',
     'Welcome to the Greenstone community',
     existingCustomerEmailHtml()
   )

@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Upload AI-Generated Product Images to Sanity
+ * Greenstone Wellness — Upload AI-Generated Product Images to Sanity
  * Run: node scripts/upload-new-product-images.mjs
  *
  * Uploads 18 unique images from nanobanana-output/ once each,
@@ -188,7 +188,7 @@ function resolveImageKey(product) {
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 
 async function run() {
-  console.log(`\nGreenstone Peptides — Upload AI Product Images`)
+  console.log(`\nGreenstone Wellness — Upload AI Product Images`)
   console.log(`Project: ${projectId} / ${dataset}\n`)
 
   // 1. Fetch all active products
@@ -272,7 +272,7 @@ async function run() {
           image: {
             _type: 'image',
             asset: { _type: 'reference', _ref: assetId },
-            alt:   `${product.name} — Greenstone Peptides`,
+            alt:   `${product.name} — Greenstone Wellness`,
           },
         })
         .commit()

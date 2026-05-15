@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides, Data queries (static file edition)
+ * Greenstone Wellness, Data queries (static file edition)
  * All data served from src/data/*.ts, no Sanity dependency.
  */
 import type { Product, Category, BlogPost } from '@/types';

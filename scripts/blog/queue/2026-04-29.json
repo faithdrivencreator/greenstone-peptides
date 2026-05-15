@@ -430,7 +430,7 @@
       "_key": "compound2",
       "style": "normal",
       "markDefs": [],
-      "children": [{ "_type": "span", "_key": "compound2s", "text": "Greenstone Peptides sources active pharmaceutical ingredients from USA-based suppliers, compounds products under 503A sterile standards, and provides third-party certificate of analysis documentation for each batch — covering identity, purity, and sterility before any product ships.", "marks": [] }]
+      "children": [{ "_type": "span", "_key": "compound2s", "text": "Greenstone Wellness sources active pharmaceutical ingredients from USA-based suppliers, compounds products under 503A sterile standards, and provides third-party certificate of analysis documentation for each batch — covering identity, purity, and sterility before any product ships.", "marks": [] }]
     },
     {
       "_type": "block",
@@ -465,7 +465,7 @@
       "_key": "disclaimer",
       "style": "normal",
       "markDefs": [],
-      "children": [{ "_type": "span", "_key": "disclaimers", "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.", "marks": ["em"] }]
+      "children": [{ "_type": "span", "_key": "disclaimers", "text": "Greenstone Wellness content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.", "marks": ["em"] }]
     }
   ],
   "mainImage": {

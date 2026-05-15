@@ -288,7 +288,7 @@
       "_key": "disclaimer",
       "style": "blockquote",
       "markDefs": [],
-      "children": [{ "_type": "span", "_key": "disclaimers", "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies and prescription weight-management medications should be discussed with a licensed healthcare provider.", "marks": [] }]
+      "children": [{ "_type": "span", "_key": "disclaimers", "text": "Greenstone Wellness content is educational and does not constitute medical advice. Peptide therapies and prescription weight-management medications should be discussed with a licensed healthcare provider.", "marks": [] }]
     }
   ],
   "mainImage": {

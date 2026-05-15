@@ -5,9 +5,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Greenstone Peptides',
+  title: 'Terms of Service | Greenstone Wellness',
   description:
-    'Terms of Service for Greenstone Peptides (DBA Greenstone Wellness). Products are for research and educational purposes only. Not for human consumption.',
+    'Terms of Service for Greenstone Wellness (DBA Greenstone Wellness). Products are for research and educational purposes only. Not for human consumption.',
   alternates: {
     canonical: 'https://greenstonewellness.store/terms',
   },
@@ -31,7 +31,7 @@ export default function TermsPage() {
             These Terms of Service ("Terms") govern your access to and use of the website
             located at <strong className="text-cream">greenstonewellness.store</strong> (the
             "Site") and any purchases made through the Site. The Site is operated by{' '}
-            <strong className="text-cream">Greenstone Peptides, LLC</strong>, doing business
+            <strong className="text-cream">Greenstone Wellness, LLC</strong>, doing business
             as <strong className="text-cream">Greenstone Wellness</strong> ("Company," "we,"
             "us," or "our").
           </p>
@@ -208,7 +208,7 @@ export default function TermsPage() {
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">10. Indemnification</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            You agree to defend, indemnify, and hold harmless Greenstone Peptides, LLC and
+            You agree to defend, indemnify, and hold harmless Greenstone Wellness, LLC and
             its affiliates, officers, directors, employees, and agents from and against any
             claims, liabilities, damages, losses, and expenses, including reasonable
             attorneys' fees, arising out of or in any way connected with your access to or
@@ -223,7 +223,7 @@ export default function TermsPage() {
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
             All content on this Site, including text, graphics, logos, product descriptions,
-            images, and software, is the property of Greenstone Peptides, LLC or its content
+            images, and software, is the property of Greenstone Wellness, LLC or its content
             suppliers and is protected by applicable intellectual property laws. Unauthorized
             reproduction, distribution, or use of any content is prohibited.
           </p>
@@ -263,7 +263,7 @@ export default function TermsPage() {
           </p>
           <div className="mt-4 text-sm text-cream-dim space-y-1">
             <p>
-              <strong className="text-cream">Greenstone Peptides, LLC</strong> (DBA Greenstone
+              <strong className="text-cream">Greenstone Wellness, LLC</strong> (DBA Greenstone
               Wellness)
             </p>
             <p>Miami, Florida</p>

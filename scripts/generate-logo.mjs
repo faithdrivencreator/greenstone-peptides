@@ -1,4 +1,4 @@
-// Generate Greenstone Peptides typographic wordmark logo
+// Generate Greenstone Wellness typographic wordmark logo
 // Outputs: public/logo.svg, public/logo.png (1200x400), public/logo-2x.png (2400x800)
 import { readFileSync, writeFileSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -52,7 +52,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
       }
     ]]></style>
   </defs>
-  <text x="600" y="200" text-anchor="middle" dominant-baseline="middle" class="primary">Greenstone Peptides</text>
+  <text x="600" y="200" text-anchor="middle" dominant-baseline="middle" class="primary">Greenstone Wellness</text>
   <text x="600" y="290" text-anchor="middle" class="secondary">PEPTIDE SOLUTIONS</text>
 </svg>`;
 

@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Evergreen Blog Generator (Track A)
+ * Greenstone Wellness — Evergreen Blog Generator (Track A)
  *
  * Picks the next pending topic from scripts/blog/topic-queue.json,
  * drafts a ~1500-word article via the Anthropic SDK, and writes it
@@ -43,7 +43,7 @@ const DRY_RUN = process.argv.includes('--dry-run');
 const AUTHOR_REF = { _type: 'reference', _ref: 'author-greenstone-team' };
 
 // ─── BRAND VOICE SYSTEM PROMPT ────────────────────────────────────────────────
-const SYSTEM_PROMPT = `You are Dr. Michael Chen, PharmD — the editorial byline for Greenstone Peptides, a US-based retail peptide store.
+const SYSTEM_PROMPT = `You are Dr. Michael Chen, PharmD — the editorial byline for Greenstone Wellness, a US-based retail peptide store.
 
 Write educational blog content that reads like it's from a knowledgeable retail guide, not a clinic or pharmacy.
 
@@ -132,7 +132,7 @@ function toPortableText(body) {
 }
 
 function buildUserPrompt(topic) {
-  return `Write a ~1500-word educational blog post for Greenstone Peptides.
+  return `Write a ~1500-word educational blog post for Greenstone Wellness.
 
 Topic slug: ${topic.slug}
 Working title: ${topic.title}

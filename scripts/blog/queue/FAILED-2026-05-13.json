@@ -133,7 +133,7 @@
       "_key": "p-brand",
       "style": "normal",
       "markDefs": [],
-      "children": [{ "_type": "span", "_key": "p-brand-s", "text": "Greenstone Peptides compounds sermorelin to USP 797 sterile standards, sourced from USA-origin raw materials and third-party tested for purity and identity via HPLC and mass spectrometry — so researchers can evaluate the science with confidence in the quality of the compound they're working with.", "marks": [] }]
+      "children": [{ "_type": "span", "_key": "p-brand-s", "text": "Greenstone Wellness compounds sermorelin to USP 797 sterile standards, sourced from USA-origin raw materials and third-party tested for purity and identity via HPLC and mass spectrometry — so researchers can evaluate the science with confidence in the quality of the compound they're working with.", "marks": [] }]
     },
     {
       "_type": "block",
@@ -696,7 +696,7 @@
       "_key": "p-disclaimer",
       "style": "normal",
       "markDefs": [],
-      "children": [{ "_type": "span", "_key": "p-disclaimer-s", "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.", "marks": ["em"] }]
+      "children": [{ "_type": "span", "_key": "p-disclaimer-s", "text": "Greenstone Wellness content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.", "marks": ["em"] }]
     }
   ],
   "relatedProducts": ["sermorelin"],

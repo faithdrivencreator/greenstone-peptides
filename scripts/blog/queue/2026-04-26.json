@@ -40,7 +40,7 @@
         {
           "_type": "span",
           "_key": "intro2s",
-          "text": "Greenstone Peptides supplies BPC-157 through licensed U.S. 503A compounding pharmacies, sterile-filled and third-party tested. The notes below are educational and intended to help you ask better questions of your prescribing clinician.",
+          "text": "Greenstone Wellness supplies BPC-157 through licensed U.S. 503A compounding pharmacies, sterile-filled and third-party tested. The notes below are educational and intended to help you ask better questions of your prescribing clinician.",
           "marks": []
         }
       ]
@@ -456,7 +456,7 @@
         {
           "_type": "span",
           "_key": "disclaimers",
-          "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
+          "text": "Greenstone Wellness content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.",
           "marks": ["em"]
         }
       ]

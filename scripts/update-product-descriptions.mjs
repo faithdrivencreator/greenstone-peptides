@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Product Description Updater
+ * Greenstone Wellness — Product Description Updater
  * Run: node scripts/update-product-descriptions.mjs
  *
  * Patches the `description` field (PortableText) on every active product in Sanity.
@@ -49,7 +49,7 @@ const h3 = (key, text) => block(key, 'h3', text);
 const qualityBlock = (key, peptideName) =>
   p(
     key,
-    `Every ${peptideName} formulation from Greenstone Peptides is compounded in the USA by licensed pharmacy partners under USP 797 sterile standards. Each batch is third-party tested for potency, sterility, and endotoxin.`
+    `Every ${peptideName} formulation from Greenstone Wellness is compounded in the USA by licensed pharmacy partners under USP 797 sterile standards. Each batch is third-party tested for potency, sterility, and endotoxin.`
   );
 
 // ─── DESCRIPTIONS BY PEPTIDE TYPE ────────────────────────────────────────────
@@ -373,7 +373,7 @@ const descriptions = {
     h2('kit-h2', 'What is Included in a Greenstone Starter Kit?'),
     p(
       'kit-p1',
-      'Greenstone Peptides starter kits are designed for patients beginning injectable peptide therapy. Every kit contains the supplies needed for proper, sterile self-administration: alcohol prep swabs, insulin-style syringes with fine-gauge needles, and clear usage instructions. Kits are available in 5, 10, 15, and 20-day configurations to align with your prescribed protocol length and physician guidance.'
+      'Greenstone Wellness starter kits are designed for patients beginning injectable peptide therapy. Every kit contains the supplies needed for proper, sterile self-administration: alcohol prep swabs, insulin-style syringes with fine-gauge needles, and clear usage instructions. Kits are available in 5, 10, 15, and 20-day configurations to align with your prescribed protocol length and physician guidance.'
     ),
     h3('kit-h3-how', 'How It Works'),
     p(
@@ -424,7 +424,7 @@ function getDescriptionKey(productId) {
 // ─── MAIN ─────────────────────────────────────────────────────────────────────
 
 async function run() {
-  console.log('\nGreenstone Peptides — Product Description Updater');
+  console.log('\nGreenstone Wellness — Product Description Updater');
   console.log(`Project: ${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}`);
   console.log(`Dataset: ${process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'}\n`);
 

@@ -6,7 +6,7 @@ import { WholesaleForm } from '@/components/WholesaleForm';
 export const metadata: Metadata = {
   title: 'Wholesale & Distribution',
   description:
-    'Greenstone Peptides wholesale and distribution program. Partner with us to offer USA-compounded peptides to your clinical network.',
+    'Greenstone Wellness wholesale and distribution program. Partner with us to offer USA-compounded peptides to your clinical network.',
   alternates: { canonical: '/wholesale' },
 };
 
@@ -62,7 +62,7 @@ export default function WholesalePage() {
             <em className="italic text-gold">Opportunities Available.</em>
           </h1>
           <p className="mt-8 text-lg text-cream-dim max-w-2xl leading-relaxed">
-            Greenstone Peptides offers a structured wholesale program for medspas, integrative
+            Greenstone Wellness offers a structured wholesale program for medspas, integrative
             clinics, physician groups, and vetted distributors. Bring pharmaceutical-grade,
             USA-compounded peptides to your patient network, backed by our clinical and
             logistics infrastructure.

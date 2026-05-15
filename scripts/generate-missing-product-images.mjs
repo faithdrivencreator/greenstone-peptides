@@ -80,7 +80,7 @@ function createLabelSvg(name, strength, size, width = LABEL_W, height = LABEL_H)
     <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
       <rect width="${width}" height="${height}" rx="4" fill="white" fill-opacity="0.92"/>
       <rect x="0" y="0" width="${width}" height="3" fill="#1a3a2a"/>
-      <text x="${width / 2}" y="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#1a3a2a" letter-spacing="3">GREENSTONE PEPTIDES</text>
+      <text x="${width / 2}" y="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#1a3a2a" letter-spacing="3">GREENSTONE WELLNESS</text>
       <line x1="40" y1="38" x2="${width - 40}" y2="38" stroke="#c9a96e" stroke-width="1"/>
       <text x="${width / 2}" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1a1a1a">${escapeXml(name)}</text>
       <text x="${width / 2}" y="98" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#555">${escapeXml(strength)}</text>

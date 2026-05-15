@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Sanity Product Seeder
+ * Greenstone Wellness — Sanity Product Seeder
  * Run: node scripts/seed-products.mjs
  *
  * Seeds all 54 products + 8 categories into Sanity.
@@ -39,7 +39,7 @@ const categories = [
     slug: { _type: 'slug', current: 'weight-loss' },
     description: 'Precision-dosed GLP-1 and dual/triple agonist therapies for medically supervised weight management. Includes semaglutide, tirzepatide, and retatrutide formulations.',
     order: 1,
-    seoTitle: 'Compounded GLP-1 Weight Loss Peptides | Greenstone Peptides',
+    seoTitle: 'Compounded GLP-1 Weight Loss Peptides | Greenstone Wellness',
     seoDescription: 'Physician-prescribed compounded semaglutide, tirzepatide, and retatrutide. USA-formulated, temperature-controlled delivery.',
   },
   {
@@ -99,7 +99,7 @@ const categories = [
     slug: { _type: 'slug', current: 'specialty' },
     description: 'Compounded specialty medications including antiparasitic and other therapeutic formulations.',
     order: 7,
-    seoTitle: 'Specialty Compounded Medications | Greenstone Peptides',
+    seoTitle: 'Specialty Compounded Medications | Greenstone Wellness',
     seoDescription: 'Specialty compounded therapeutics including ivermectin ODT. Prescription required. USA-formulated.',
   },
   {
@@ -109,7 +109,7 @@ const categories = [
     slug: { _type: 'slug', current: 'kits' },
     description: 'Pre-packaged starter kits for new patients beginning peptide therapy protocols.',
     order: 8,
-    seoTitle: 'Peptide Starter Kits | Greenstone Peptides',
+    seoTitle: 'Peptide Starter Kits | Greenstone Wellness',
     seoDescription: 'Starter kits for new peptide therapy patients. 5, 10, 15, and 20-day supply options. Prescription required.',
   },
 ];
@@ -1020,7 +1020,7 @@ const products = [
 // ─── SEED ─────────────────────────────────────────────────────────────────────
 
 async function seed() {
-  console.log(`\n🌱 Greenstone Peptides — Sanity Seeder`);
+  console.log(`\n🌱 Greenstone Wellness — Sanity Seeder`);
   console.log(`   Project: ${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}`);
   console.log(`   Dataset: ${process.env.NEXT_PUBLIC_SANITY_DATASET}\n`);
 

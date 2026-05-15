@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Log Treatment Entry
+ * Greenstone Wellness — Log Treatment Entry
  *
  * Appends a treatment entry to scripts/blog/treatment-log.json.
  * Called after a successful Higgs Field image generation so the

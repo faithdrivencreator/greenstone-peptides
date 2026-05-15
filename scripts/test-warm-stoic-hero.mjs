@@ -38,14 +38,14 @@ const GEMINI_MODEL = process.env.GEMINI_IMAGE_MODEL || 'gemini-3-pro-image-previ
 
 // ─── PROMPT — locked warm-stoic spotlight direction ──────────────────────────
 
-const PROMPT = `Editorial product photograph for Greenstone Peptides — a premium 503A-compounded peptide brand. 16:9 horizontal magazine-cover composition.
+const PROMPT = `Editorial product photograph for Greenstone Wellness — a premium 503A-compounded peptide brand. 16:9 horizontal magazine-cover composition.
 
 SUBJECT
 A single clear apothecary glass vial sits upright on a natural travertine stone surface. The vial is filled with a clear, colorless, perfectly clean sterile liquid — water-like in transparency — reaching about three-quarters of the way up the vial, with a small empty headspace beneath the crimp top. The liquid is utterly clear, no particulates, no cloudiness, no tint. Light passes through the liquid and casts a soft refractive highlight on the travertine behind the vial. NO powder, NO cake, NO crystals, NO cracked solid at the bottom — the product is a finished sterile solution.
 
 The vial has a clean minimalist uncoated paper label wrapping the middle of the vial, printed entirely in deep warm charcoal ink. Label content, top to bottom, perfectly spelled and centered:
 
-  Line 1 — Small serif italic in Cormorant Garamond: "Greenstone Peptides"
+  Line 1 — Small serif italic in Cormorant Garamond: "Greenstone Wellness"
   Line 2 — Thin horizontal rule, warm gold ink (#B89B6A), about 60% of label width
   Line 3 — Bold sans-serif small caps, larger: "TESAMORELIN"
   Line 4 — Thin spaced sans-serif: "5 MG / VIAL"
@@ -69,7 +69,7 @@ The vial itself: frosted-clear glass with subtle natural reflections, matte unco
 BRANDED MASTHEAD — top-center to top-left, magazine-cover style
 Place a refined two-line masthead anchored in the upper portion of the cream background, never overlapping the vial:
 
-  Line A (large, primary): "Greenstone Peptides" — set in Cormorant Garamond italic serif, deep warm charcoal #3A2F26, weight 500. Roughly 22% of frame width. Letter spacing slightly open.
+  Line A (large, primary): "Greenstone Wellness" — set in Cormorant Garamond italic serif, deep warm charcoal #3A2F26, weight 500. Roughly 22% of frame width. Letter spacing slightly open.
 
   Line B (smaller, directly below Line A, centered to it): "PEPTIDE SOLUTIONS" — set in DM Sans or similar geometric sans, all caps, generously letter-spaced, in warm gold #B89B6A. Roughly 9% of frame width.
 

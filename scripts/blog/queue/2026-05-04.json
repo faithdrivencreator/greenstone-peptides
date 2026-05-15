@@ -191,7 +191,7 @@
       "_key": "src1",
       "style": "normal",
       "markDefs": [],
-      "children": [{ "_type": "span", "_key": "src1s", "text": "Greenstone Peptides sources BPC-157 from a USA-based licensed compounding pharmacy operating under USP 797 sterile compounding standards. Active ingredient is USA-sourced; every lot is third-party tested for potency, purity, identity, and sterility, with a Certificate of Analysis available on request. The 5 mg vial and the 10 mg per milliliter pre-mixed concentration are the two formulations most commonly selected by clinicians.", "marks": [] }]
+      "children": [{ "_type": "span", "_key": "src1s", "text": "Greenstone Wellness sources BPC-157 from a USA-based licensed compounding pharmacy operating under USP 797 sterile compounding standards. Active ingredient is USA-sourced; every lot is third-party tested for potency, purity, identity, and sterility, with a Certificate of Analysis available on request. The 5 mg vial and the 10 mg per milliliter pre-mixed concentration are the two formulations most commonly selected by clinicians.", "marks": [] }]
     },
     {
       "_type": "block",
@@ -226,7 +226,7 @@
       "_key": "disclaimer",
       "style": "blockquote",
       "markDefs": [],
-      "children": [{ "_type": "span", "_key": "disclaimers", "text": "Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.", "marks": [] }]
+      "children": [{ "_type": "span", "_key": "disclaimers", "text": "Greenstone Wellness content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.", "marks": [] }]
     }
   ],
   "mainImage": {

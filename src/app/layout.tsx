@@ -37,8 +37,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
-    template: 'Greenstone Peptides | %s',
+    default: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
+    template: 'Greenstone Wellness | %s',
   },
   description:
     'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested for potency, sterility, and purity. Temperature-controlled shipping.',
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
-    siteName: 'Greenstone Peptides',
-    title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
+    siteName: 'Greenstone Wellness',
+    title: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
     description:
       'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Temperature-controlled shipping.',
     images: [
@@ -64,13 +64,13 @@ export const metadata: Metadata = {
         url: '/images/hero-lab.png',
         width: 1376,
         height: 768,
-        alt: 'Greenstone Peptides, USA-Compounded Peptide Therapy',
+        alt: 'Greenstone Wellness, USA-Compounded Peptide Therapy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
+    title: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
     description:
       'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Temperature-controlled shipping.',
     images: ['/images/hero-lab.png'],
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Greenstone Peptides',
+  name: 'Greenstone Wellness',
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   description:

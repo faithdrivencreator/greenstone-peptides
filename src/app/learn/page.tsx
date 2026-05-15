@@ -5,7 +5,7 @@ import { BlogCard } from '@/components/BlogCard';
 export const metadata: Metadata = {
   title: 'Learn Center',
   description:
-    'Clinical research, peptide protocols, and physician insights from the Greenstone Peptides team.',
+    'Clinical research, peptide protocols, and physician insights from the Greenstone Wellness team.',
   alternates: { canonical: '/learn' },
 };
 

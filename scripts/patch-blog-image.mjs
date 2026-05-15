@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Patch a published blog post's mainImage
+ * Greenstone Wellness — Patch a published blog post's mainImage
  *
  * Used to swap the hero image on a post that has already been published to
  * Sanity, without re-publishing the entire document.

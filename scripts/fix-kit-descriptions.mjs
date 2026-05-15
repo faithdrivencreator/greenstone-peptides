@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Fix Kit Descriptions
+ * Greenstone Wellness — Fix Kit Descriptions
  * Run: node scripts/fix-kit-descriptions.mjs
  *
  * Patches the `description` field on all kit products (format == "kit").
@@ -53,13 +53,13 @@ const kitDescription = [
   block('kit-h3-sizes', 'h3', "Available Sizes"),
   block('kit-p3', 'normal', "Kits come in 5-day, 10-day, 15-day, and 20-day configurations. Choose the size that matches your protocol length. If you're not sure which size you need, start with a 5-day kit to get comfortable with the process."),
   block('kit-h3-quality', 'h3', "Quality & Sourcing"),
-  block('kit-p4', 'normal', "All supplies in Greenstone Peptides starter kits meet medical-grade standards. Syringes and needles are manufactured under ISO 13485 quality management standards and are individually sealed for sterility."),
+  block('kit-p4', 'normal', "All supplies in Greenstone Wellness starter kits meet medical-grade standards. Syringes and needles are manufactured under ISO 13485 quality management standards and are individually sealed for sterility."),
 ];
 
 // ─── MAIN ─────────────────────────────────────────────────────────────────────
 
 async function run() {
-  console.log('\nGreenstone Peptides — Fix Kit Descriptions');
+  console.log('\nGreenstone Wellness — Fix Kit Descriptions');
   console.log(`Project: ${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}`);
   console.log(`Dataset: ${process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'}\n`);
 

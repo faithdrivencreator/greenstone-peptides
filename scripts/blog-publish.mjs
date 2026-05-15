@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Daily Blog Publisher
+ * Greenstone Wellness — Daily Blog Publisher
  *
  * Reads a post JSON file written by Claude (in Cowork session) and pushes it
  * to Sanity as a PUBLISHED document (not a draft). Idempotent via _id.

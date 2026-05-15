@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Safety & Storage | Greenstone Peptides',
+  title: 'Safety & Storage | Greenstone Wellness',
   description:
-    'Product safety information, storage guidelines, and important notices for Greenstone Peptides.',
+    'Product safety information, storage guidelines, and important notices for Greenstone Wellness.',
   alternates: { canonical: '/safety' },
 };
 
@@ -25,7 +25,7 @@ export default function SafetyPage() {
               diagnose, treat, cure, or prevent any disease.
             </p>
             <p>
-              All products sold by Greenstone Peptides are for <strong className="text-cream">research
+              All products sold by Greenstone Wellness are for <strong className="text-cream">research
               and educational purposes only</strong>. They are not intended for human consumption.
             </p>
             <p>
@@ -39,7 +39,7 @@ export default function SafetyPage() {
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">Product Safety</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            All Greenstone Peptides products are compounded in the USA under USP 797 sterile
+            All Greenstone Wellness products are compounded in the USA under USP 797 sterile
             standards and third-party tested for potency, sterility, and purity. We recommend
             consulting with a healthcare professional before starting any new supplement or
             peptide regimen. Individual results may vary.

@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Daily Blog Hero Image Generator
+ * Greenstone Wellness — Daily Blog Hero Image Generator
  *
  * Two-mode utility for hero image generation:
  *

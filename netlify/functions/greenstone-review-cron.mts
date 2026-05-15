@@ -1,5 +1,5 @@
 /**
- * Daily review-request cron — Greenstone Peptides
+ * Daily review-request cron — Greenstone Wellness
  *
  * Runs once a day at 14:00 UTC (10am ET in EDT, 9am ET in EST).
  *
@@ -21,7 +21,7 @@ import type { Config } from '@netlify/functions';
 
 const SITE_URL = 'https://greenstonewellness.store';
 const SUPPORT_EMAIL = 'support@greenstonewellness.store';
-const ORDERS_FROM = 'Greenstone Peptides <orders@greenstonewellness.store>';
+const ORDERS_FROM = 'Greenstone Wellness <orders@greenstonewellness.store>';
 const STRIPE_API_VERSION = '2024-06-20';
 
 interface StripePaymentIntent {
@@ -81,7 +81,7 @@ function renderReviewEmail(firstName: string | null, reviewCode: string): { subj
     <div style="text-align:center;padding-bottom:32px;border-bottom:1px solid #1E2738;margin-bottom:36px">
       <a href="${SITE_URL}" style="text-decoration:none">
         <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:400;letter-spacing:0.18em;color:#F5F1EB;margin:0 0 6px">GREENSTONE</h1>
-        <p style="color:#C9A96E;font-family:'DM Sans',-apple-system,sans-serif;font-size:10px;letter-spacing:0.4em;margin:0">PEPTIDES &middot; WELLNESS</p>
+        <p style="color:#C9A96E;font-family:'DM Sans',-apple-system,sans-serif;font-size:10px;letter-spacing:0.4em;margin:0">WELLNESS</p>
       </a>
     </div>
 
@@ -114,8 +114,6 @@ function renderReviewEmail(firstName: string | null, reviewCode: string): { subj
     <p style="text-align:center;margin:28px 0 0">
       <a href="${SITE_URL}/shop" style="display:inline-block;background:transparent;color:#1A9E6E;padding:12px 28px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600;border:1px solid #1A9E6E">BROWSE THE CATALOG</a>
     </p>
-
-    <p style="color:#8A6E3E;font-size:11px;line-height:1.6;margin:48px 0 0;font-family:'DM Sans',-apple-system,sans-serif;font-style:italic">Research peptides for laboratory and research use. Not for human consumption.</p>
     <hr style="border:none;border-top:1px solid #1E2738;margin:32px 0 20px">
     <p style="text-align:center;color:#8A6E3E;font-size:10px;letter-spacing:0.25em;margin:0;font-family:'DM Sans',-apple-system,sans-serif">
       <a href="${SITE_URL}" style="color:#8A6E3E;text-decoration:none">GREENSTONEWELLNESS.STORE</a>

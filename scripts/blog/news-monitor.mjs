@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Breaking News Monitor (Track B)
+ * Greenstone Wellness — Breaking News Monitor (Track B)
  *
  * Scrapes a handful of regulatory + scientific news sources via the Firecrawl CLI,
  * filters for items within the last 24h, dedupes against seen-urls.json, and
@@ -56,7 +56,7 @@ const SOURCES = [
 const AUTHOR_REF = { _type: 'reference', _ref: 'author-greenstone-team' };
 
 // ─── BRAND VOICE SYSTEM PROMPT (news flavor) ──────────────────────────────────
-const SYSTEM_PROMPT = `You are Dr. Michael Chen, PharmD — the editorial byline for Greenstone Peptides, a US-based retail peptide store.
+const SYSTEM_PROMPT = `You are Dr. Michael Chen, PharmD — the editorial byline for Greenstone Wellness, a US-based retail peptide store.
 
 You are writing a short news-summary blog post (400-600 words) about a fresh item from a regulatory or scientific source.
 

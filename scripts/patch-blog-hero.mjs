@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Patch Hero Image into an Existing Blog Post
+ * Greenstone Wellness — Patch Hero Image into an Existing Blog Post
  *
  * One-off helper: take an image file + a Sanity post _id, upload the image,
  * and patch the post's mainImage field. Useful for adding heroes to posts
@@ -57,7 +57,7 @@ function arg(name, required = true) {
 
 const postId = arg('post-id');
 const imageArg = arg('image');
-const altText = arg('alt', false) || 'Greenstone Peptides editorial photograph';
+const altText = arg('alt', false) || 'Greenstone Wellness editorial photograph';
 
 const imagePath = isAbsolute(imageArg) ? imageArg : join(ROOT, imageArg);
 if (!existsSync(imagePath)) {

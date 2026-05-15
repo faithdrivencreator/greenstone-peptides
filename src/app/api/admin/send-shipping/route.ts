@@ -10,7 +10,7 @@ import { Resend } from 'resend';
 import { renderShippingEmail, type CarrierName } from '@/lib/shipping-email';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const ORDERS_FROM = 'Greenstone Peptides <orders@greenstonewellness.store>';
+const ORDERS_FROM = 'Greenstone Wellness <orders@greenstonewellness.store>';
 const SUPPORT_EMAIL = 'support@greenstonewellness.store';
 
 interface ShippingPayload {

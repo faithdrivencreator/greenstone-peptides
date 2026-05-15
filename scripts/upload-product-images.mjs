@@ -82,7 +82,7 @@ async function uploadImages() {
           image: {
             _type:  'image',
             asset:  { _type: 'reference', _ref: asset._id },
-            alt:    `${product.name} — Greenstone Peptides`,
+            alt:    `${product.name} — Greenstone Wellness`,
           },
         })
         .commit()

@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Sanity Blog Post Seeder
+ * Greenstone Wellness — Sanity Blog Post Seeder
  * Run: node scripts/seed-blog-posts.mjs
  *
  * Seeds 10 long-form blog posts + 1 author document into Sanity.
@@ -34,10 +34,10 @@ const client = createClient({
 const author = {
   _id: 'author-greenstone-team',
   _type: 'author',
-  name: 'Greenstone Peptides Editorial Team',
+  name: 'Greenstone Wellness Editorial Team',
   slug: { _type: 'slug', current: 'greenstone-editorial' },
   credentials: 'Editorial Team',
-  bio: 'The Greenstone Peptides editorial team researches and writes about peptide science, compounding standards, and the evolving regulatory landscape. All content is educational and does not constitute medical advice.',
+  bio: 'The Greenstone Wellness editorial team researches and writes about peptide science, compounding standards, and the evolving regulatory landscape. All content is educational and does not constitute medical advice.',
 };
 
 // ─── HELPERS ──────────────────────────────────────────────────────────────────
@@ -100,10 +100,10 @@ const posts = [
         'Animal studies have also shown neuroprotective effects in models of traumatic brain injury and spinal cord damage, though human data in this area remains limited. BPC-157 is best thought of as a supportive therapy — it does not replace surgical repair, structured rehabilitation, or conventional medical management. It may, however, shorten the timeline and improve the quality of healing.'),
       h2('b14', 'Administration, Dosing, and Storage'),
       p('b15',
-        'Most USA-compounded BPC-157 is dispensed as a lyophilized powder that is reconstituted with bacteriostatic water before subcutaneous or intramuscular injection. Protocols vary by indication and should always be discussed with a qualified healthcare professional. Once reconstituted, BPC-157 should be refrigerated and used within the stability window documented on the pharmacy&rsquo;s beyond-use date. Greenstone Peptides ships cold-chain to preserve the integrity of every compound.'),
+        'Most USA-compounded BPC-157 is dispensed as a lyophilized powder that is reconstituted with bacteriostatic water before subcutaneous or intramuscular injection. Protocols vary by indication and should always be discussed with a qualified healthcare professional. Once reconstituted, BPC-157 should be refrigerated and used within the stability window documented on the pharmacy&rsquo;s beyond-use date. Greenstone Wellness ships cold-chain to preserve the integrity of every compound.'),
       h2('b16', 'Why USA-Compounded BPC-157 Matters'),
       p('b17',
-        'BPC-157 is one of the most commonly counterfeited peptides on the research market. Independent testing of samples purchased from unregulated online sellers has repeatedly shown purity levels ranging from nearly zero to the labeled concentration, with contamination from bacterial endotoxins, heavy metals, and unidentified synthesis byproducts. Injecting these into the body is a meaningful medical risk. Every BPC-157 vial dispensed through Greenstone Peptides is compounded inside a USP 797 compliant pharmacy, tested by an accredited analytical lab, and shipped with a batch-specific Certificate of Analysis.'),
+        'BPC-157 is one of the most commonly counterfeited peptides on the research market. Independent testing of samples purchased from unregulated online sellers has repeatedly shown purity levels ranging from nearly zero to the labeled concentration, with contamination from bacterial endotoxins, heavy metals, and unidentified synthesis byproducts. Injecting these into the body is a meaningful medical risk. Every BPC-157 vial dispensed through Greenstone Wellness is compounded inside a USP 797 compliant pharmacy, tested by an accredited analytical lab, and shipped with a batch-specific Certificate of Analysis.'),
       h2('b18', 'The Bottom Line'),
       p('b19',
         'BPC-157 is one of the more well-researched recovery peptides available today, with a plausible mechanism of action, decades of animal data, and a growing body of clinical experience. It is not a miracle drug. It is a tool — one that works best when sourced from a verified USA compounding pharmacy and used alongside a real rehabilitation plan. If you are considering BPC-157, the first question to ask is not about dosing. It is about where the vial came from.'),
@@ -201,7 +201,7 @@ const posts = [
         'A legitimate peptide source is a licensed USA compounding pharmacy that operates under state board of pharmacy oversight. It provides real, batch-specific Certificates of Analysis from accredited analytical labs. It ships under cold-chain where stability requires it. It names the pharmacist in charge and maintains full batch traceability. If a website ships peptides without a pharmacy license and without documented third-party testing, it is not a legitimate source regardless of how professional the website looks.'),
       h2('b16', 'The Bottom Line'),
       p('b17',
-        'The overseas peptide market is not a bargain. It is a transfer of risk from the seller to the buyer, disguised as a discount. For peptides injected into the body, the only defensible sourcing model is a licensed USA compounding pharmacy operating under USP 797 standards, with batch-specific testing on every lot and full CoA transparency. Greenstone Peptides was built on that model because we believe it is the only model that belongs in a vial that enters a human being.'),
+        'The overseas peptide market is not a bargain. It is a transfer of risk from the seller to the buyer, disguised as a discount. For peptides injected into the body, the only defensible sourcing model is a licensed USA compounding pharmacy operating under USP 797 standards, with batch-specific testing on every lot and full CoA transparency. Greenstone Wellness was built on that model because we believe it is the only model that belongs in a vial that enters a human being.'),
     ],
   },
 
@@ -242,9 +242,9 @@ const posts = [
       h2('b12', 'Why Non-Compliant Injectables Are Dangerous'),
       p('b13',
         'An injectable compound prepared outside USP 797 standards can fail in three primary ways. It can be contaminated with viable microorganisms, leading to local or systemic infection. It can contain bacterial endotoxins, leading to fever and shock. It can contain the wrong amount of active ingredient, leading to therapeutic failure or toxicity. None of these failure modes are theoretical — all have been documented in cases involving non-compliant sterile compounding.'),
-      h2('b14', 'How Greenstone Peptides Compares'),
+      h2('b14', 'How Greenstone Wellness Compares'),
       p('b15',
-        'Greenstone Peptides partners exclusively with licensed compounding pharmacies that maintain full USP 797 compliance. Every sterile compound is prepared inside an ISO Class 5 environment, subjected to 14-day sterility testing, screened for bacterial endotoxins, and verified for potency by an accredited analytical laboratory. Every lot carries a batch-specific Certificate of Analysis tied to the vial in your hand. This is not a premium feature. It is the legal and ethical baseline for anything injected into a human body.'),
+        'Greenstone Wellness partners exclusively with licensed compounding pharmacies that maintain full USP 797 compliance. Every sterile compound is prepared inside an ISO Class 5 environment, subjected to 14-day sterility testing, screened for bacterial endotoxins, and verified for potency by an accredited analytical laboratory. Every lot carries a batch-specific Certificate of Analysis tied to the vial in your hand. This is not a premium feature. It is the legal and ethical baseline for anything injected into a human body.'),
       h2('b16', 'The Bottom Line'),
       p('b17',
         'USP 797 exists because injectable medications are uniquely dangerous when prepared poorly. The standard is detailed, enforceable, and non-negotiable for legitimate pharmacies. When evaluating any peptide source, the single most important question is whether the preparation occurs inside a USP 797 compliant environment. If the answer is not a clear yes with documentation to back it up, the answer is effectively no.'),
@@ -385,7 +385,7 @@ const posts = [
         'If you are currently using peptides from a research supplier, the practical guidance is straightforward. Evaluate whether the peptide you are using is clinically appropriate for your situation. Have that conversation with a qualified clinician. If it is appropriate, transition to a sourcing pathway that operates through a licensed compounding pharmacy with full USP 797 compliance and batch-specific testing. If it is not appropriate, stop using it. The research peptide era is effectively over for anyone who wants a source that will still exist in six months.'),
       h2('b16', 'The Bottom Line'),
       p('b17',
-        'The FDA&rsquo;s March 2026 enforcement action was not a sudden shift. It was the enforcement of rules that had always existed, finally applied to a segment of the market that had been operating outside them. The legitimate pharmacy model — prescription, compounding, testing, documentation — is not new. It is the standard that has always applied to injectable medications in the United States. Greenstone Peptides was built entirely within that standard because it is the only model with any long-term future.'),
+        'The FDA&rsquo;s March 2026 enforcement action was not a sudden shift. It was the enforcement of rules that had always existed, finally applied to a segment of the market that had been operating outside them. The legitimate pharmacy model — prescription, compounding, testing, documentation — is not new. It is the standard that has always applied to injectable medications in the United States. Greenstone Wellness was built entirely within that standard because it is the only model with any long-term future.'),
     ],
   },
 
@@ -477,7 +477,7 @@ const posts = [
         'Patients sometimes ask whether they should delay starting tirzepatide or semaglutide and wait for retatrutide to become available. In most cases, the answer is no. Tirzepatide and semaglutide are approved, proven, and available now. The correct time to start treatment is when treatment is clinically indicated, not at some hypothetical future moment. When retatrutide is approved and available through legitimate compounding pathways, patients can evaluate whether transitioning is appropriate for their situation at that point.'),
       h2('b16', 'The Bottom Line'),
       p('b17',
-        'Retatrutide represents a genuine advance in the science of metabolic therapy. The triple agonist mechanism is novel, the Phase 3 results are impressive, and the drug will likely become an important clinical option once it is approved and available through legitimate channels. For now, it is a development to follow, not a product to seek out through unregulated sources. Patients who are ready to start treatment have excellent options in semaglutide and tirzepatide today, both available through Greenstone Peptides&rsquo; licensed compounding partners.'),
+        'Retatrutide represents a genuine advance in the science of metabolic therapy. The triple agonist mechanism is novel, the Phase 3 results are impressive, and the drug will likely become an important clinical option once it is approved and available through legitimate channels. For now, it is a development to follow, not a product to seek out through unregulated sources. Patients who are ready to start treatment have excellent options in semaglutide and tirzepatide today, both available through Greenstone Wellness&rsquo; licensed compounding partners.'),
     ],
   },
 
@@ -523,7 +523,7 @@ const posts = [
         'Most of the anti-aging compounds in widespread use — retinoids, vitamin C derivatives, hydroxy acids — work primarily through mechanisms of exfoliation, antioxidation, or forced cell turnover. GHK-Cu works through a fundamentally different mechanism: it communicates with the cell at the gene expression level, effectively telling fibroblasts and related cells to behave more like their younger counterparts. This is not the same category of intervention. It is a signaling molecule that speaks the cell&rsquo;s own language.'),
       h2('b16', 'Sourcing and Quality'),
       p('b17',
-        'Injectable GHK-Cu, like every other compounded peptide, must come from a USP 797 compliant pharmacy with batch-specific testing for potency, sterility, and endotoxins. The copper binding adds additional formulation complexity that makes sourcing quality even more critical — an improperly prepared copper peptide can be either inactive or locally irritating. Greenstone Peptides dispenses GHK-Cu exclusively through licensed pharmacy partners with documented quality controls for every lot.'),
+        'Injectable GHK-Cu, like every other compounded peptide, must come from a USP 797 compliant pharmacy with batch-specific testing for potency, sterility, and endotoxins. The copper binding adds additional formulation complexity that makes sourcing quality even more critical — an improperly prepared copper peptide can be either inactive or locally irritating. Greenstone Wellness dispenses GHK-Cu exclusively through licensed pharmacy partners with documented quality controls for every lot.'),
       h2('b18', 'The Bottom Line'),
       p('b19',
         'GHK-Cu is one of the more interesting molecules in the anti-aging conversation because it works through a genuinely novel mechanism, is supported by decades of research, and produces effects that are measurable rather than merely marketed. It is not a replacement for retinol, vitamin C, or sun protection. It is an addition to the toolkit that addresses the aging process at a level most topical compounds cannot reach. As always, the foundation of any meaningful protocol is sourcing — the most elegant mechanism in the world does not matter if the vial in your hand does not contain what the label claims.'),
@@ -542,7 +542,7 @@ const posts = [
     readingTime: 6,
     featured: true,
     tags: ['quality', 'USA-compounded', 'peptides', 'safety'],
-    seoTitle: 'Why USA-Compounded Peptides Cost More | Greenstone Peptides',
+    seoTitle: 'Why USA-Compounded Peptides Cost More | Greenstone Wellness',
     seoDescription:
       'Over 70% of peptides sold online are synthesized in China. Learn why USA-compounded peptides cost more and why quality matters.',
     body: [
@@ -567,7 +567,7 @@ const posts = [
       p('b12',
         'Many overseas peptide sellers provide a document they call a Certificate of Analysis. The CoA is supposed to be a batch-specific testing report produced by an accredited laboratory and signed by the analyst who performed the work. In practice, overseas CoAs are frequently recycled across batches, fabricated in PDF editors, or sourced from labs with no meaningful accreditation. A PDF is easy to produce. A real, batch-specific CoA tied to a specific lot from an ISO 17025 accredited laboratory is a different document entirely.'),
       p('b13',
-        'Every compound dispensed through Greenstone Peptides carries a genuine batch-specific Certificate of Analysis from an accredited third-party laboratory. That traceability is part of what you are paying for.'),
+        'Every compound dispensed through Greenstone Wellness carries a genuine batch-specific Certificate of Analysis from an accredited third-party laboratory. That traceability is part of what you are paying for.'),
       h2('b14', 'Cold-Chain Distribution'),
       p('b15',
         'Peptides are temperature-sensitive compounds. Many degrade meaningfully when stored above refrigeration temperatures. USA-compounded peptides from licensed pharmacies are shipped cold-chain — packed with ice packs or dry ice, using insulated carriers, with monitoring to ensure the product arrives within the validated temperature range. Overseas peptides are typically shipped at ambient temperature across international logistics chains that may take weeks and may expose the product to conditions that compromise potency before it ever arrives.'),
@@ -590,7 +590,7 @@ const posts = [
     readingTime: 8,
     featured: false,
     tags: ['peptides', 'beginner', 'guide', 'therapy'],
-    seoTitle: "Beginner's Guide to Peptide Therapy | Greenstone Peptides",
+    seoTitle: "Beginner's Guide to Peptide Therapy | Greenstone Wellness",
     seoDescription:
       'New to peptides? Learn what peptide therapy is, how it works, common categories, and how to get started safely.',
     body: [
@@ -628,7 +628,7 @@ const posts = [
       p('b21',
         'The single most important decision in peptide therapy is where the compound comes from. Independent testing has repeatedly documented that peptides sold through unregulated research channels vary wildly in purity, potency, and identity. A vial that is not what the label claims produces unpredictable effects at best and genuine medical risk at worst. USA-compounded peptides from licensed pharmacies operating under USP 797 standards — with documented sterility testing, bacterial endotoxin testing, and potency verification — are the only defensible starting point.'),
       p('b22',
-        'Greenstone Peptides sources exclusively through licensed USA compounding pharmacy partners with full USP 797 compliance and batch-specific Certificates of Analysis on every lot. If you are starting peptide therapy, start with verified material.'),
+        'Greenstone Wellness sources exclusively through licensed USA compounding pharmacy partners with full USP 797 compliance and batch-specific Certificates of Analysis on every lot. If you are starting peptide therapy, start with verified material.'),
     ],
   },
 
@@ -645,7 +645,7 @@ const posts = [
     readingTime: 5,
     featured: false,
     tags: ['storage', 'peptides', 'safety', 'guide'],
-    seoTitle: 'How to Store Peptides Properly | Greenstone Peptides',
+    seoTitle: 'How to Store Peptides Properly | Greenstone Wellness',
     seoDescription:
       'Proper peptide storage is critical for potency. Learn temperature, light, and shelf life requirements for your peptides.',
     body: [
@@ -698,7 +698,7 @@ const posts = [
     readingTime: 5,
     featured: true,
     tags: ['FDA', 'regulation', 'BPC-157', 'peptides', 'news'],
-    seoTitle: 'RFK Jr. Restores Access to 12 Peptides | Greenstone Peptides',
+    seoTitle: 'RFK Jr. Restores Access to 12 Peptides | Greenstone Wellness',
     seoDescription:
       'Secretary Kennedy announces FDA will review 12 peptides including BPC-157 for regulated access. What this means for peptide therapy.',
     body: [
@@ -726,7 +726,7 @@ const posts = [
       p('b14',
         'The Kennedy announcement represents the most significant policy signal toward expanded peptide access in several years. It suggests that at the federal level, there is appetite for a regulatory pathway that distinguishes between uncontrolled overseas research peptides and quality-controlled USA-compounded peptides — which is the distinction that has always mattered from a patient safety standpoint.'),
       p('b15',
-        'Greenstone Peptides operates within the legitimate compounding pharmacy model now and will continue to operate within it under any future regulatory framework. Our interest is in quality and traceability, not in regulatory gray zones. When and if reclassification creates new compounding pathways for BPC-157, TB-500, and other currently restricted peptides, those pathways will be available through our licensed pharmacy partners with the same testing and documentation standards we apply to everything we currently offer.'),
+        'Greenstone Wellness operates within the legitimate compounding pharmacy model now and will continue to operate within it under any future regulatory framework. Our interest is in quality and traceability, not in regulatory gray zones. When and if reclassification creates new compounding pathways for BPC-157, TB-500, and other currently restricted peptides, those pathways will be available through our licensed pharmacy partners with the same testing and documentation standards we apply to everything we currently offer.'),
       h2('b16', 'The Bottom Line'),
       p('b17',
         'RFK Jr.&rsquo;s announcement is a meaningful policy signal, not an enacted change. It suggests regulatory momentum toward expanded compounding access for twelve peptides including BPC-157, TB-500, GHK-Cu, and MOTS-c. Formal reclassification requires a regulatory process that has not yet completed. Until it does, the current rules apply — and the case for sourcing from licensed USA compounding pharmacies with full quality controls remains the only defensible position regardless of where the regulatory landscape moves.'),
@@ -746,7 +746,7 @@ const posts = [
     readingTime: 7,
     featured: false,
     tags: ['TB-500', 'BPC-157', 'recovery', 'comparison'],
-    seoTitle: 'TB-500 vs BPC-157 Comparison | Greenstone Peptides',
+    seoTitle: 'TB-500 vs BPC-157 Comparison | Greenstone Wellness',
     seoDescription:
       'TB-500 and BPC-157 are both recovery peptides but work differently. Compare mechanisms, use cases, and which is right for you.',
     body: [
@@ -779,7 +779,7 @@ const posts = [
       p('b18',
         'The comparison between TB-500 and BPC-157 is only meaningful when both compounds are what they claim to be. Independent testing of research-grade peptides purchased online has shown that purity variance is the rule rather than the exception. A vial of BPC-157 at 3% labeled concentration does not produce BPC-157 results — it produces nothing, or worse. The same applies to TB-500.'),
       p('b19',
-        'Greenstone Peptides offers both BPC-157 and TB-500 compounded by licensed USA pharmacy partners under full USP 797 standards, with batch-specific Certificates of Analysis confirming potency, sterility, and endotoxin levels. Whether you are using one or both, the foundation is verified material.'),
+        'Greenstone Wellness offers both BPC-157 and TB-500 compounded by licensed USA pharmacy partners under full USP 797 standards, with batch-specific Certificates of Analysis confirming potency, sterility, and endotoxin levels. Whether you are using one or both, the foundation is verified material.'),
       h2('b20', 'The Bottom Line'),
       p('b21',
         'BPC-157 and TB-500 are complementary tools, not substitutes. BPC-157 is the more targeted intervention for tendon, ligament, and GI repair. TB-500 is the more systemic tool for broad tissue repair and recovery contexts. Stacking both is mechanistically rational and commonly practiced. The choice depends on the specific injury, the desired scope of effect, and individual response. Both require the same foundation: USA-compounded, verified material from a licensed pharmacy with documented quality controls.'),
@@ -791,7 +791,7 @@ const posts = [
 // ─── SEED ─────────────────────────────────────────────────────────────────────
 
 async function seed() {
-  console.log('Greenstone Peptides — Blog Post Seeder');
+  console.log('Greenstone Wellness — Blog Post Seeder');
   console.log('─────────────────────────────────────');
 
   if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) {

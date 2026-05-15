@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Update Blog Citations & Author
+ * Greenstone Wellness — Update Blog Citations & Author
  * Run: node scripts/update-blog-citations-and-author.mjs
  *
  * 1. Uploads professional headshot and patches author-greenstone-team
@@ -194,7 +194,7 @@ async function appendSourcesToPost(slug, cites) {
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 async function main() {
-  console.log('\n=== Greenstone Peptides — Blog Citations & Author Update ===\n');
+  console.log('\n=== Greenstone Wellness — Blog Citations & Author Update ===\n');
 
   // Upload headshot and patch author
   let imageAssetId;

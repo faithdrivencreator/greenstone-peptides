@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Hero Image Picker (Curated Library)
+ * Greenstone Wellness — Hero Image Picker (Curated Library)
  *
  * Reads images from public/images/blog-heroes/ and picks the best fit
  * for today's post. No API call — uses files Pete batch-generated manually

@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About Greenstone Peptides | USA-Compounded Quality',
-  description: 'Why Greenstone Peptides: 25+ years of pharmaceutical care, USP 797 sterile compounding, third-party tested, 100% USA-compounded. Learn what makes our peptides different.',
+  title: 'About Greenstone Wellness | USA-Compounded Quality',
+  description: 'Why Greenstone Wellness: 25+ years of pharmaceutical care, USP 797 sterile compounding, third-party tested, 100% USA-compounded. Learn what makes our peptides different.',
   alternates: { canonical: '/about' },
 };
 
@@ -21,7 +21,7 @@ export default function AboutPage() {
             appealing. The purity rarely matches what's on the label.
           </p>
           <p className="mt-6 text-lg text-cream-dim">
-            Greenstone Peptides was built on a different premise: that people who use these
+            Greenstone Wellness was built on a different premise: that people who use these
             compounds deserve pharmaceutical-grade quality, domestic compounding, and the
             accountability that comes with real USA-licensed pharmacy infrastructure. We've
             spent 25 years building exactly that.

@@ -5,9 +5,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Greenstone Peptides',
+  title: 'Privacy Policy | Greenstone Wellness',
   description:
-    'Privacy Policy for Greenstone Peptides (DBA Greenstone Wellness). Learn how we collect, use, and protect your personal information.',
+    'Privacy Policy for Greenstone Wellness (DBA Greenstone Wellness). Learn how we collect, use, and protect your personal information.',
   alternates: {
     canonical: 'https://greenstonewellness.store/privacy',
   },
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">1. Overview</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            Greenstone Peptides, LLC (doing business as{' '}
+            Greenstone Wellness, LLC (doing business as{' '}
             <strong className="text-cream">Greenstone Wellness</strong>, "we," "us," or
             "our") operates the website at{' '}
             <strong className="text-cream">greenstonewellness.store</strong>. This Privacy
@@ -288,7 +288,7 @@ export default function PrivacyPage() {
               <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Protection of rights:</strong> To protect
-                the rights, property, or safety of Greenstone Peptides, our customers, or
+                the rights, property, or safety of Greenstone Wellness, our customers, or
                 others
               </span>
             </li>
@@ -459,7 +459,7 @@ export default function PrivacyPage() {
           </p>
           <div className="mt-4 text-sm text-cream-dim space-y-1">
             <p>
-              <strong className="text-cream">Greenstone Peptides, LLC</strong> (DBA Greenstone
+              <strong className="text-cream">Greenstone Wellness, LLC</strong> (DBA Greenstone
               Wellness)
             </p>
             <p>Miami, Florida</p>

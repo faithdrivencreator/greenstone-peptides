@@ -1,5 +1,5 @@
 /**
- * Greenstone Peptides — Sanity → Static Data Converter
+ * Greenstone Wellness — Sanity → Static Data Converter
  * Reads the Sanity export JSON and generates:
  *   src/data/blog-posts.ts
  *   src/data/products.ts

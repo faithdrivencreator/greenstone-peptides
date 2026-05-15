@@ -44,7 +44,7 @@ export function renderShippingEmail(input: ShippingEmailInput): { subject: strin
     <div style="text-align:center;padding-bottom:32px;border-bottom:1px solid #1E2738;margin-bottom:36px">
       <a href="${SITE_URL}" style="text-decoration:none">
         <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:400;letter-spacing:0.18em;color:#F5F1EB;margin:0 0 6px">GREENSTONE</h1>
-        <p style="color:#C9A96E;font-family:'DM Sans',-apple-system,sans-serif;font-size:10px;letter-spacing:0.4em;margin:0">PEPTIDES &middot; WELLNESS</p>
+        <p style="color:#C9A96E;font-family:'DM Sans',-apple-system,sans-serif;font-size:10px;letter-spacing:0.4em;margin:0">WELLNESS</p>
       </a>
     </div>
 
@@ -80,8 +80,6 @@ export function renderShippingEmail(input: ShippingEmailInput): { subject: strin
     </table>
 
     <p style="color:#B8B2A8;line-height:1.7;margin:36px 0 8px;font-family:'DM Sans',-apple-system,sans-serif">Anything unexpected? Reply to this email or write us at <a href="mailto:${SUPPORT_EMAIL}" style="color:#C9A96E;text-decoration:none;border-bottom:1px solid #8A6E3E">${SUPPORT_EMAIL}</a>.</p>
-
-    <p style="color:#8A6E3E;font-size:11px;line-height:1.6;margin:48px 0 0;font-family:'DM Sans',-apple-system,sans-serif;font-style:italic">Research peptides for laboratory and research use. Not for human consumption.</p>
 
     <hr style="border:none;border-top:1px solid #1E2738;margin:32px 0 20px">
     <p style="text-align:center;color:#8A6E3E;font-size:10px;letter-spacing:0.25em;margin:0;font-family:'DM Sans',-apple-system,sans-serif">
