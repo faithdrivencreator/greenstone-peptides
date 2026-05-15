@@ -333,11 +333,14 @@
     background: var(--cream);
   }
   .badge-usa {
-    color: var(--cream);
-    border-color: rgba(245, 241, 235, 0.7);
-    background: rgba(13, 17, 23, 0.85);
+    /* Muted USA palette: dusty navy background, off-red text, cream border */
+    color: #c75450;
+    border-color: rgba(245, 241, 235, 0.85);
+    background: rgba(31, 56, 100, 0.92);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    font-weight: 600;
+    letter-spacing: 0.08em;
   }
 }
 
