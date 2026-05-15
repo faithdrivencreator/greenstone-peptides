@@ -11,7 +11,7 @@ const SHOP_LINKS = [
 
 const RESOURCE_LINKS = [
   { href: '/learn', label: 'Learn Center' },
-  { href: '/about', label: 'About Greenstone Peptides' },
+  { href: '/about', label: 'About Greenstone Wellness' },
   { href: '/provider', label: 'Provider Portal' },
   { href: '/wholesale', label: 'Wholesale & Distribution' },
   { href: '/contact', label: 'Contact' },
@@ -31,10 +31,7 @@ export function Footer() {
         {/* Brand column */}
         <div className="space-y-4">
           <div className="flex flex-col leading-none">
-            <span className="font-cormorant text-2xl font-medium text-white">Greenstone Peptides</span>
-            <span className="font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-gold mt-1">
-              Peptide Solutions
-            </span>
+            <span className="font-cormorant text-2xl font-medium text-white">Greenstone Wellness</span>
           </div>
           <p className="text-sm text-cream-dim leading-relaxed max-w-xs">
             USA-made peptide formulations. Third-party tested. Shipped direct to your door.
@@ -52,7 +49,7 @@ export function Footer() {
               href="https://instagram.com/greenstone.wellness"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Follow Greenstone Peptides on Instagram"
+              aria-label="Follow Greenstone Wellness on Instagram"
               className="inline-flex items-center gap-2 text-sm text-cream-dim hover:text-gold transition-colors"
             >
               <Instagram size={18} />
@@ -114,11 +111,11 @@ export function Footer() {
             The products offered on this website are furnished for in-vitro studies and research purposes only. In-vitro studies (Latin: in glass) are performed outside of the body. These products are not medicines or drugs and have not been approved by the FDA to prevent, treat, cure, or diagnose any medical condition, ailment, or disease. Bodily introduction of any kind into humans or animals is strictly forbidden by law.
           </p>
           <p className="text-xs text-cream-dim/80 leading-relaxed">
-            Products are compounded by licensed USA pharmacies under USP 797 sterile standards. Greenstone Peptides facilitates access to compounded formulations and does not practice medicine. Must be 18 years or older to purchase.
+            Products are compounded by licensed USA pharmacies under USP 797 sterile standards. Greenstone Wellness facilitates access to compounded formulations and does not practice medicine. Must be 18 years or older to purchase.
           </p>
         </div>
         <p className="text-xs text-cream-dim/60 mt-8">
-          &copy; {new Date().getFullYear()} Greenstone Peptides. All rights reserved.
+          &copy; {new Date().getFullYear()} Greenstone Wellness. All rights reserved.
         </p>
       </div>
     </footer>

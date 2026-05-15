@@ -73,12 +73,9 @@ export function Navigation() {
       >
         <div className="container-gr flex items-center justify-between gap-8">
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none" aria-label="Greenstone Peptides home">
+          <Link href="/" className="flex flex-col leading-none" aria-label="Greenstone Wellness home">
             <span className="font-cormorant text-2xl font-medium text-white tracking-tight">
-              Greenstone Peptides
-            </span>
-            <span className="font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-gold mt-1">
-              Peptide Solutions
+              Greenstone Wellness
             </span>
           </Link>
 
