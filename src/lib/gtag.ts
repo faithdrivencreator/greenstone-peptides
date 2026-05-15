@@ -93,3 +93,11 @@ export function trackLeadCapture(params: { ebook: 'made-easy' | 'unlocked'; meth
     ebook: params.ebook,
   });
 }
+
+export function trackIgLinkClick(params: { destination: string; label: string }) {
+  track('ig_link_click', {
+    destination: params.destination,
+    label: params.label,
+    campaign: 'ig_bio',
+  });
+}

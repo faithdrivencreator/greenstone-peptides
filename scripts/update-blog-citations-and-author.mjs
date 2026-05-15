@@ -2,12 +2,12 @@
  * Greenstone Wellness — Update Blog Citations & Author
  * Run: node scripts/update-blog-citations-and-author.mjs
  *
- * 1. Uploads professional headshot and patches author-greenstone-team
+ * 1. Patches author-greenstone-team to the team byline (no individual author)
  * 2. Appends "Sources" section to each of the 15 blog posts
  */
 
 import { createClient } from '@sanity/client';
-import { readFileSync, createReadStream } from 'fs';
+import { readFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -113,39 +113,20 @@ const citations = {
   ],
 };
 
-// ─── STEP 1: UPLOAD HEADSHOT ──────────────────────────────────────────────────
-async function uploadHeadshot() {
-  const headshotPath = resolve(__dirname, '../nanobanana-output/professional_headshot_portrait_o.png');
-  console.log('Uploading headshot...');
-  const stream = createReadStream(headshotPath);
-  const asset = await client.assets.upload('image', stream, {
-    filename: 'dr-michael-chen-headshot.png',
-    contentType: 'image/png',
-  });
-  console.log(`  Headshot uploaded: ${asset._id}`);
-  return asset._id;
-}
-
 // ─── STEP 2: PATCH AUTHOR ────────────────────────────────────────────────────
-async function patchAuthor(imageAssetId) {
-  console.log('Patching author document...');
+async function patchAuthor() {
+  console.log('Patching author document to team byline...');
   await client
     .patch('author-greenstone-team')
     .set({
-      name: 'Dr. Michael Chen, PharmD',
-      credentials: 'Clinical Research Editor',
-      title: 'Clinical Research Editor',
-      bio: 'Dr. Chen reviews published peer-reviewed research and clinical trial data to create accessible educational content. His work focuses on translating complex pharmaceutical science into practical information for the peptide therapy community.',
-      image: {
-        _type: 'image',
-        asset: {
-          _type: 'reference',
-          _ref: imageAssetId,
-        },
-      },
+      name: 'The Greenstone Wellness Team',
+      credentials: 'Editorial Team',
+      title: 'Editorial Team',
+      bio: 'Posts are researched and written by the Greenstone Wellness team. We review peer-reviewed studies, FDA guidance, and clinical trial data, then cite every source inline so readers can verify the science behind what we publish.',
     })
+    .unset(['image'])
     .commit();
-  console.log('  Author patched: Dr. Michael Chen, PharmD');
+  console.log('  Author patched: The Greenstone Wellness Team');
 }
 
 // ─── STEP 3: APPEND SOURCES TO BLOG POSTS ────────────────────────────────────
@@ -196,17 +177,8 @@ async function appendSourcesToPost(slug, cites) {
 async function main() {
   console.log('\n=== Greenstone Wellness — Blog Citations & Author Update ===\n');
 
-  // Upload headshot and patch author
-  let imageAssetId;
   try {
-    imageAssetId = await uploadHeadshot();
-  } catch (err) {
-    console.error('  ERROR uploading headshot:', err.message);
-    process.exit(1);
-  }
-
-  try {
-    await patchAuthor(imageAssetId);
+    await patchAuthor();
   } catch (err) {
     console.error('  ERROR patching author:', err.message);
     process.exit(1);
@@ -235,7 +207,7 @@ async function main() {
   }
 
   console.log('\n=== Summary ===');
-  console.log(`  Author: Dr. Michael Chen, PharmD — patched with headshot`);
+  console.log(`  Author: The Greenstone Wellness Team — patched`);
   console.log(`  Posts updated:  ${updated}`);
   console.log(`  Posts skipped:  ${skipped} (already had sources)`);
   console.log(`  Posts failed:   ${failed}`);

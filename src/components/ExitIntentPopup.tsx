@@ -142,8 +142,8 @@ export function ExitIntentPopup() {
                 </div>
                 <h3 className="font-cormorant text-3xl text-white">Check your inbox.</h3>
                 <p className="text-cream-dim text-sm leading-relaxed">
-                  Your free copy of <em>Peptides Made Easy</em> is on its way, along with a welcome
-                  offer code you can use on your first order.
+                  Your free copy of <em>Peptides Made Easy</em> is on its way, along with your
+                  <strong className="text-emerald-light"> 10% off code</strong> for your first order.
                 </p>
                 <p className="text-xs text-cream-dim/60 font-jetbrains pt-2">
                   Delivered in minutes · Check spam if it doesn&apos;t arrive
@@ -159,19 +159,18 @@ export function ExitIntentPopup() {
               <>
                 {/* Eyebrow */}
                 <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-3">
-                  Free Guide
+                  10% Off + Free Guide
                 </p>
 
                 <h2 className="font-cormorant text-3xl md:text-4xl text-white leading-tight">
                   Peptides,
                   <br />
-                  <em className="italic text-gold">made easy.</em>
+                  <em className="italic text-blue">made easy.</em>
                 </h2>
 
                 <p className="mt-4 text-sm text-cream-dim leading-relaxed">
-                  Get our plain-language peptide primer, the same guide we share with first-time
-                  customers and curious researchers. Comes with a welcome offer code for your
-                  first order. One short email a month after that, never spam.
+                  Drop your email and we&apos;ll send our plain-language peptide primer plus a
+                  <strong className="text-emerald-light"> 10% off code</strong> for your first order.
                 </p>
 
                 <form
@@ -185,7 +184,7 @@ export function ExitIntentPopup() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
-                    className="w-full bg-obsidian-light border border-gold/20 focus:border-emerald/60 px-4 py-3 text-cream outline-none transition-colors"
+                    className="w-full bg-obsidian-light border border-blue/20 focus:border-emerald/60 px-4 py-3 text-cream outline-none transition-colors"
                   />
                   <button
                     type="submit"
@@ -198,21 +197,21 @@ export function ExitIntentPopup() {
                         Sending your guide...
                       </span>
                     ) : (
-                      'Send Me the Free Guide'
+                      'Send the guide + my 10% code'
                     )}
                   </button>
                 </form>
 
-                <p className="mt-4 text-[0.65rem] text-cream-dim/40 font-jetbrains text-center">
+                <p className="mt-4 text-[0.7rem] text-cream-dim/70 font-jetbrains text-center">
                   <Lock size={9} className="inline mr-1" />
-                  We respect your privacy. Unsubscribe anytime.
+                  Email only used to send your guide and code. Unsubscribe anytime.
                 </p>
 
                 <button
                   onClick={dismiss}
-                  className="mt-3 text-[0.65rem] text-cream-dim/40 hover:text-cream-dim/70 transition-colors w-full text-center font-jetbrains tracking-wide uppercase"
+                  className="mt-3 text-[0.7rem] text-cream-dim/70 hover:text-cream transition-colors w-full text-center font-jetbrains tracking-wide uppercase"
                 >
-                  No thanks, I&apos;ll pay full price
+                  No thanks, skip the 10% off
                 </button>
               </>
             )}

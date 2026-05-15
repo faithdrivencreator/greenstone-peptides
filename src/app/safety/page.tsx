@@ -16,26 +16,6 @@ export default function SafetyPage() {
           <h1>Safety & Storage</h1>
         </header>
 
-        <div className="card-glass border-gold/30 bg-obsidian-light/60">
-          <h2 className="font-cormorant text-2xl text-white mb-4">Regulatory Disclaimer</h2>
-          <div className="space-y-3 text-sm leading-relaxed text-cream-dim">
-            <p>
-              <strong className="text-cream">FDA Notice:</strong> These statements have not been
-              evaluated by the Food and Drug Administration. These products are not intended to
-              diagnose, treat, cure, or prevent any disease.
-            </p>
-            <p>
-              All products sold by Greenstone Wellness are for <strong className="text-cream">research
-              and educational purposes only</strong>. They are not intended for human consumption.
-            </p>
-            <p>
-              Bodily introduction of any kind into humans or animals is strictly forbidden by law.
-              By purchasing from this site, you acknowledge and agree that these products are
-              restricted to lawful research and educational use only.
-            </p>
-          </div>
-        </div>
-
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">Product Safety</h2>
           <p className="text-cream-dim text-sm leading-relaxed">

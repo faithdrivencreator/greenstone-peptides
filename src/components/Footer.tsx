@@ -101,20 +101,8 @@ export function Footer() {
         </nav>
       </div>
 
-      {/* Full disclaimer */}
       <div className="container-gr mt-16 pt-8 border-t border-gold/10">
-        <div className="max-w-4xl">
-          <p className="text-xs font-semibold text-cream-dim/80 leading-relaxed tracking-wide mb-3">
-            ALL PRODUCTS AND INFORMATION PROVIDED ON THIS WEBSITE ARE FOR INFORMATIONAL AND EDUCATIONAL PURPOSES ONLY.
-          </p>
-          <p className="text-xs text-cream-dim/80 leading-relaxed mb-3">
-            The products offered on this website are furnished for in-vitro studies and research purposes only. In-vitro studies (Latin: in glass) are performed outside of the body. These products are not medicines or drugs and have not been approved by the FDA to prevent, treat, cure, or diagnose any medical condition, ailment, or disease. Bodily introduction of any kind into humans or animals is strictly forbidden by law.
-          </p>
-          <p className="text-xs text-cream-dim/80 leading-relaxed">
-            Products are compounded by licensed USA pharmacies under USP 797 sterile standards. Greenstone Wellness facilitates access to compounded formulations and does not practice medicine. Must be 18 years or older to purchase.
-          </p>
-        </div>
-        <p className="text-xs text-cream-dim/60 mt-8">
+        <p className="text-xs text-cream-dim/60">
           &copy; {new Date().getFullYear()} Greenstone Wellness. All rights reserved.
         </p>
       </div>
