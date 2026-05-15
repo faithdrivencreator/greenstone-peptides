@@ -149,6 +149,65 @@ async function addToCustomersAudience(email: string, firstName: string | null) {
   }
 }
 
+// ─── GA4 Measurement Protocol (server-side purchase event) ──────────────────
+// Fires the GA4 `purchase` event from the server so revenue is captured even
+// when the customer never lands on the thank-you page (closed browser, ad
+// blocker, mobile redirect failure). This is the authoritative purchase event;
+// the client-side one on /shop/thank-you will overlap when the user does
+// reach the thank-you page (acceptable for now — better to over-track than miss).
+
+async function fireGa4Purchase(order: {
+  amountTotal: number;
+  currency: string;
+  lineItems: Array<{ name: string; quantity: number; subtotal: number; unitAmount: number }>;
+  stripeSessionId: string;
+}): Promise<void> {
+  const measurementId = 'G-WP0ECFJPB8';
+  const apiSecret = process.env.GA4_API_SECRET;
+
+  if (!apiSecret) {
+    console.warn('[Webhook] GA4_API_SECRET not set, skipping server-side purchase event');
+    return;
+  }
+
+  const items = order.lineItems.map((i) => ({
+    item_name: i.name,
+    quantity: i.quantity,
+    price: i.unitAmount,
+  }));
+
+  try {
+    const res = await fetch(
+      `https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`,
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          client_id: order.stripeSessionId,
+          events: [
+            {
+              name: 'purchase',
+              params: {
+                transaction_id: order.stripeSessionId,
+                currency: order.currency,
+                value: order.amountTotal,
+                items,
+              },
+            },
+          ],
+        }),
+      },
+    );
+    if (!res.ok) {
+      const txt = await res.text();
+      console.error('[Webhook] GA4 MP error:', res.status, txt);
+    } else {
+      console.log('[Webhook] GA4 purchase event sent for', order.stripeSessionId);
+    }
+  } catch (err) {
+    console.error('[Webhook] GA4 MP fetch failed:', err);
+  }
+}
+
 // ─── Order detail extraction ──────────────────────────────────────────────────
 
 async function extractOrderDetails(session: Stripe.Checkout.Session) {
@@ -283,6 +342,10 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     });
 
     console.log('[Webhook] Order notification email sent to Pete');
+
+    // Fire server-side GA4 purchase event (captures revenue even if customer
+    // never reached the thank-you page). Awaited so we log success/failure.
+    await fireGa4Purchase(order);
 
     // ─── Customer confirmation + welcome flow ──────────────────────────────
     if (order.customerEmail) {
