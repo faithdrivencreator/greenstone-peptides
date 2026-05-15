@@ -12,11 +12,30 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { stripe } from '@/lib/stripe';
 import { Resend } from 'resend';
+import { staticProducts } from '@/data/products';
+import { getSupplierMapping } from '@/data/supplier-mapping';
+
+// Build a runtime lookup: product display name → slug.
+// Stripe webhook line_items expose the description we passed at checkout
+// (= our product's `name` field). This lets us match back to a slug, then
+// to the supplier mapping for the order-to-Pete email.
+const NAME_TO_SLUG = new Map<string, string>();
+for (const p of staticProducts) {
+  NAME_TO_SLUG.set(p.name, p.slug);
+}
+
+function lookupSupplierByName(displayName: string): { name: string; cost: number } | null {
+  const slug = NAME_TO_SLUG.get(displayName);
+  if (!slug) return null;
+  const mapping = getSupplierMapping(slug);
+  if (!mapping) return null;
+  return { name: mapping.supplierName, cost: mapping.supplierCost };
+}
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const PETE_EMAIL = 'pete@fluidfaithsolutions.com';
 const CUSTOMERS_AUDIENCE_ID = process.env.RESEND_GREENSTONE_CUSTOMERS_AUDIENCE_ID;
-const ORDERS_FROM = 'Greenstone Peptides <orders@greenstonewellness.store>';
+const ORDERS_FROM = 'Greenstone Wellness <orders@greenstonewellness.store>';
 const SUPPORT_EMAIL = 'support@greenstonewellness.store';
 const SITE_URL = 'https://greenstonewellness.store';
 
@@ -90,13 +109,11 @@ function renderEmailShell({ preheader, body }: { preheader: string; body: string
     <div style="text-align:center;padding-bottom:32px;border-bottom:1px solid #1E2738;margin-bottom:36px">
       <a href="${SITE_URL}" style="text-decoration:none">
         <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:400;letter-spacing:0.18em;color:#F5F1EB;margin:0 0 6px">GREENSTONE</h1>
-        <p style="color:#C9A96E;font-family:'DM Sans',-apple-system,sans-serif;font-size:10px;letter-spacing:0.4em;margin:0">PEPTIDES &middot; WELLNESS</p>
+        <p style="color:#C9A96E;font-family:'DM Sans',-apple-system,sans-serif;font-size:10px;letter-spacing:0.4em;margin:0">WELLNESS</p>
       </a>
     </div>
 
     ${body}
-
-    <p style="color:#8A6E3E;font-size:11px;line-height:1.6;margin:48px 0 0;font-family:'DM Sans',-apple-system,sans-serif;font-style:italic">Research peptides for laboratory and research use. Not for human consumption.</p>
 
     <hr style="border:none;border-top:1px solid #1E2738;margin:32px 0 20px">
     <p style="text-align:center;color:#8A6E3E;font-size:10px;letter-spacing:0.25em;margin:0;font-family:'DM Sans',-apple-system,sans-serif">
@@ -225,7 +242,13 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     console.log('[New Order]', JSON.stringify(order, null, 2));
 
     const itemRows = order.lineItems
-      .map((i) => `<tr><td style="padding:8px;border-bottom:1px solid #eee">${i.name}</td><td style="padding:8px;border-bottom:1px solid #eee;text-align:center">${i.quantity}</td><td style="padding:8px;border-bottom:1px solid #eee;text-align:right">$${i.subtotal.toFixed(2)}</td></tr>`)
+      .map((i) => {
+        const supplier = lookupSupplierByName(i.name);
+        const supplierBlock = supplier
+          ? `<div style="margin-top:4px;font-size:11px;color:#0a0f1a;background:#e8f5ee;border-left:3px solid #1a9e6e;padding:6px 8px;border-radius:2px"><strong style="color:#1a9e6e">SUPPLIER:</strong> ${supplier.name} <span style="color:#666">($${supplier.cost.toFixed(2)} cost)</span></div>`
+          : `<div style="margin-top:4px;font-size:11px;color:#a00;background:#fdecec;border-left:3px solid #c00;padding:6px 8px;border-radius:2px"><strong>⚠ NO SUPPLIER MAPPING.</strong> Update src/data/supplier-mapping.ts.</div>`;
+        return `<tr><td style="padding:10px 8px;border-bottom:1px solid #eee;vertical-align:top"><div><strong>${i.name}</strong></div>${supplierBlock}</td><td style="padding:10px 8px;border-bottom:1px solid #eee;text-align:center;vertical-align:top">${i.quantity}</td><td style="padding:10px 8px;border-bottom:1px solid #eee;text-align:right;vertical-align:top">$${i.subtotal.toFixed(2)}</td></tr>`;
+      })
       .join('');
 
     const shippingText = order.shippingAddress
