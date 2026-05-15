@@ -55,7 +55,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Badges overlay */}
           <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
             <div className="flex flex-wrap gap-1.5">
-              {product.format && (
+              {product.format && product.format !== 'kit' && product.format !== 'cream' && (
                 <span
                   className={clsx(
                     'badge',
