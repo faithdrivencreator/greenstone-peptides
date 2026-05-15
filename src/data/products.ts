@@ -24,7 +24,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/b437351dd8ca52539655e8fa266677d19c33f9fb-1408x768.jpg",
+    "imageUrl": "/images/products/bpc-157-5mg.png",
     "imageAlt": "BPC-157 5mg, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -49,7 +49,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/c85437522ed639e2c5110ff62ce6257b7a40415f-1408x768.jpg",
+    "imageUrl": "/images/products/ghk-cu-50mg.png",
     "imageAlt": "GHK-Cu 50mg, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -74,7 +74,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/b9f8fce59a909688c9c82e9d2ff3b90d7daaa75d-1408x768.jpg",
+    "imageUrl": "/images/products/nad-plus-200mg-ml.png",
     "imageAlt": "NAD+ 200mg/mL, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -99,7 +99,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/7a2feae5ccd078baef45ab434414c28d2e9f2124-1408x768.jpg",
+    "imageUrl": "/images/products/nad-plus-nasal-spray.png",
     "imageAlt": "NAD+ Nasal Spray 300mg/mL, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -124,7 +124,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/f258e63af9bda40dd9c313f4a6b5825ca2b943dc-1408x768.jpg",
+    "imageUrl": "/images/products/retatrutide-20mg-ml-1ml.png",
     "imageAlt": "Retatrutide 20mg/mL, 1mL, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -149,7 +149,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/2b8d9d775d32874a5681a64010776ad9637de720-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-1-5mg-odt-30ct.png",
     "imageAlt": "Semaglutide 1.5mg ODT, 30ct, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -174,7 +174,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/80ff228515e0b71e53330c5a852693746c3b7639-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-2-5mg-ml-2ml.png",
     "imageAlt": "Semaglutide 2.5mg/mL, 2mL, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -199,7 +199,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/c9ddd3e200aa24ad9b6ca733c82e066620662642-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-nad-combo.png",
     "imageAlt": "Semaglutide/NAD+ 2.5mg/50mg, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -224,7 +224,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/12700006573a01d93a1a38bd02fa59ed434a3dc2-1408x768.jpg",
+    "imageUrl": "/images/products/tesamorelin-5mg.png",
     "imageAlt": "Tesamorelin 5mg, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -249,7 +249,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/996dc7cb6dfcbadf109d3202947db78a8516a818-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-10mg-3ml.png",
     "imageAlt": "Tirzepatide 10mg, 3mL, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -274,7 +274,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/b1b6203266e4c1152a8ff9f65e21659fc7019638-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-glycine-20mg-5mg.png",
     "imageAlt": "Tirzepatide/Glycine 20mg/5mg, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -424,7 +424,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/b437351dd8ca52539655e8fa266677d19c33f9fb-1408x768.jpg",
+    "imageUrl": "/images/products/bpc-157-10mg-ml.png",
     "imageAlt": "BPC-157 10mg/mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -474,7 +474,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/6331b9a6003702586653c8517d844c7de6d8b7a0-1408x768.jpg",
+    "imageUrl": "/images/products/mots-c-20mg.png",
     "imageAlt": "MOTS-c 20mg, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -499,7 +499,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/b9f8fce59a909688c9c82e9d2ff3b90d7daaa75d-1408x768.jpg",
+    "imageUrl": "/images/products/nad-plus-50mg.png",
     "imageAlt": "NAD+ 50mg, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -524,7 +524,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/f258e63af9bda40dd9c313f4a6b5825ca2b943dc-1408x768.jpg",
+    "imageUrl": "/images/products/retatrutide-20mg-ml-3ml.png",
     "imageAlt": "Retatrutide 20mg/mL, 3mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -549,7 +549,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/f258e63af9bda40dd9c313f4a6b5825ca2b943dc-1408x768.jpg",
+    "imageUrl": "/images/products/retatrutide-20mg-ml-5ml.png",
     "imageAlt": "Retatrutide 20mg/mL, 5mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -574,7 +574,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/2b8d9d775d32874a5681a64010776ad9637de720-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-0-5mg-odt-30ct.png",
     "imageAlt": "Semaglutide 0.5mg ODT, 30ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -599,7 +599,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/2b8d9d775d32874a5681a64010776ad9637de720-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-0-5mg-odt-60ct.png",
     "imageAlt": "Semaglutide 0.5mg ODT, 60ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -624,7 +624,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/2b8d9d775d32874a5681a64010776ad9637de720-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-0-5mg-odt-90ct.png",
     "imageAlt": "Semaglutide 0.5mg ODT, 90ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -649,7 +649,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/2b8d9d775d32874a5681a64010776ad9637de720-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-1-5mg-odt-60ct.png",
     "imageAlt": "Semaglutide 1.5mg ODT, 60ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -674,7 +674,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/2b8d9d775d32874a5681a64010776ad9637de720-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-1-5mg-odt-90ct.png",
     "imageAlt": "Semaglutide 1.5mg ODT, 90ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -699,7 +699,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/d4747ff1ad32121a2b2c62b02c36e9fcc27fe023-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-10mg-ml-5ml.png",
     "imageAlt": "Semaglutide 10mg/mL, 5mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -724,7 +724,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/80ff228515e0b71e53330c5a852693746c3b7639-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-2-5mg-ml-0-5ml.png",
     "imageAlt": "Semaglutide 2.5mg/mL, 0.5mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -749,7 +749,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/80ff228515e0b71e53330c5a852693746c3b7639-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-2-5mg-ml-1ml.png",
     "imageAlt": "Semaglutide 2.5mg/mL, 1mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -774,7 +774,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/80ff228515e0b71e53330c5a852693746c3b7639-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-2-5mg-ml-3ml.png",
     "imageAlt": "Semaglutide 2.5mg/mL, 3mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -799,7 +799,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/80ff228515e0b71e53330c5a852693746c3b7639-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-2-5mg-ml-4ml.png",
     "imageAlt": "Semaglutide 2.5mg/mL, 4mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -824,7 +824,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/80ff228515e0b71e53330c5a852693746c3b7639-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-5mg-2ml.png",
     "imageAlt": "Semaglutide 5mg, 2mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -849,7 +849,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/80ff228515e0b71e53330c5a852693746c3b7639-1408x768.jpg",
+    "imageUrl": "/images/products/semaglutide-5mg-ml-5ml.png",
     "imageAlt": "Semaglutide 5mg/mL, 5mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -874,7 +874,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/aea0b2aff7694f6c9c63b99f970f8af3f859be18-1408x768.jpg",
+    "imageUrl": "/images/products/sermorelin-4mg.png",
     "imageAlt": "Sermorelin 4mg, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -924,7 +924,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/26ab733cd9cc6126fc9ef0f89ac656517d250644-1408x768.jpg",
+    "imageUrl": "/images/products/tb-500-5mg.png",
     "imageAlt": "TB-500 (Thymosin Beta-4) 5mg, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -949,7 +949,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/26ab733cd9cc6126fc9ef0f89ac656517d250644-1408x768.jpg",
+    "imageUrl": "/images/products/tb-500-10mg-ml.png",
     "imageAlt": "TB-500 10mg/mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -999,7 +999,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/d9b72c6533fec6b754e37a0d29051aeaabbce925-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-0-5mg-odt-30ct.png",
     "imageAlt": "Tirzepatide 0.5mg ODT, 30ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1024,7 +1024,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/d9b72c6533fec6b754e37a0d29051aeaabbce925-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-0-5mg-odt-60ct.png",
     "imageAlt": "Tirzepatide 0.5mg ODT, 60ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1049,7 +1049,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/d9b72c6533fec6b754e37a0d29051aeaabbce925-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-0-5mg-odt-90ct.png",
     "imageAlt": "Tirzepatide 0.5mg ODT, 90ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1074,7 +1074,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/996dc7cb6dfcbadf109d3202947db78a8516a818-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-10mg-1ml.png",
     "imageAlt": "Tirzepatide 10mg, 1mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1099,7 +1099,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/996dc7cb6dfcbadf109d3202947db78a8516a818-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-10mg-ml-2ml.png",
     "imageAlt": "Tirzepatide 10mg/mL, 2mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1124,7 +1124,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/996dc7cb6dfcbadf109d3202947db78a8516a818-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-10mg-ml-4ml.png",
     "imageAlt": "Tirzepatide 10mg/mL, 4mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1149,7 +1149,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/996dc7cb6dfcbadf109d3202947db78a8516a818-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-10mg-ml-5ml.png",
     "imageAlt": "Tirzepatide 10mg/mL, 5mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1174,7 +1174,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/bd4da89006b814e0bbb6246f69cf1a9b38c30479-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-15mg-1ml.png",
     "imageAlt": "Tirzepatide 15mg, 1mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1199,7 +1199,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/bd4da89006b814e0bbb6246f69cf1a9b38c30479-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-15mg-2ml.png",
     "imageAlt": "Tirzepatide 15mg, 2mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1224,7 +1224,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/bd4da89006b814e0bbb6246f69cf1a9b38c30479-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-15mg-3ml.png",
     "imageAlt": "Tirzepatide 15mg, 3mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1249,7 +1249,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/bd4da89006b814e0bbb6246f69cf1a9b38c30479-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-15mg-4ml.png",
     "imageAlt": "Tirzepatide 15mg, 4mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1274,7 +1274,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/bd4da89006b814e0bbb6246f69cf1a9b38c30479-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-15mg-5ml.png",
     "imageAlt": "Tirzepatide 15mg, 5mL, Greenstone Wellness",
     "featured": false,
     "active": false
@@ -1299,7 +1299,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/e45f7aba228d78bbb1c4aeed6f5be4cff2b66d55-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-20mg-1ml.png",
     "imageAlt": "Tirzepatide 20mg, 1mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1324,7 +1324,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/e45f7aba228d78bbb1c4aeed6f5be4cff2b66d55-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-20mg-3ml.png",
     "imageAlt": "Tirzepatide 20mg, 3mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1349,7 +1349,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "https://cdn.sanity.io/images/ids3w82d/production/e45f7aba228d78bbb1c4aeed6f5be4cff2b66d55-1408x768.jpg",
+    "imageUrl": "/images/products/tirzepatide-20mg-5ml.png",
     "imageAlt": "Tirzepatide 20mg, 5mL, Greenstone Wellness",
     "featured": false,
     "active": true
