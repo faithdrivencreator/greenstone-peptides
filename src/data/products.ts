@@ -24,7 +24,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/bpc-157-5mg.png",
+    "imageUrl": "/images/products/bpc-157-5mg.jpg",
     "imageAlt": "BPC-157 5mg, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -49,7 +49,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/ghk-cu-50mg.png",
+    "imageUrl": "/images/products/ghk-cu-50mg.jpg",
     "imageAlt": "GHK-Cu 50mg, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -74,7 +74,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/nad-plus-200mg-ml.png",
+    "imageUrl": "/images/products/nad-plus-200mg-ml.jpg",
     "imageAlt": "NAD+ 200mg/mL, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -99,7 +99,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/nad-plus-nasal-spray.png",
+    "imageUrl": "/images/products/nad-plus-nasal-spray.jpg",
     "imageAlt": "NAD+ Nasal Spray 300mg/mL, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -124,7 +124,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/retatrutide-20mg-ml-1ml.png",
+    "imageUrl": "/images/products/retatrutide-20mg-ml-1ml.jpg",
     "imageAlt": "Retatrutide 20mg/mL, 1mL, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -149,7 +149,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-1-5mg-odt-30ct.png",
+    "imageUrl": "/images/products/semaglutide-1-5mg-odt-30ct.jpg",
     "imageAlt": "Semaglutide 1.5mg ODT, 30ct, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -174,7 +174,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-2-5mg-ml-2ml.png",
+    "imageUrl": "/images/products/semaglutide-2-5mg-ml-2ml.jpg",
     "imageAlt": "Semaglutide 2.5mg/mL, 2mL, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -199,7 +199,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-nad-combo.png",
+    "imageUrl": "/images/products/semaglutide-nad-combo.jpg",
     "imageAlt": "Semaglutide/NAD+ 2.5mg/50mg, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -224,7 +224,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tesamorelin-5mg.png",
+    "imageUrl": "/images/products/tesamorelin-5mg.jpg",
     "imageAlt": "Tesamorelin 5mg, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -249,7 +249,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-10mg-3ml.png",
+    "imageUrl": "/images/products/tirzepatide-10mg-3ml.jpg",
     "imageAlt": "Tirzepatide 10mg, 3mL, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -274,7 +274,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-glycine-20mg-5mg.png",
+    "imageUrl": "/images/products/tirzepatide-glycine-20mg-5mg.jpg",
     "imageAlt": "Tirzepatide/Glycine 20mg/5mg, Greenstone Wellness",
     "featured": true,
     "active": true
@@ -424,7 +424,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/bpc-157-10mg-ml.png",
+    "imageUrl": "/images/products/bpc-157-10mg-ml.jpg",
     "imageAlt": "BPC-157 10mg/mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -474,7 +474,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/mots-c-20mg.png",
+    "imageUrl": "/images/products/mots-c-20mg.jpg",
     "imageAlt": "MOTS-c 20mg, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -499,7 +499,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/nad-plus-50mg.png",
+    "imageUrl": "/images/products/nad-plus-50mg.jpg",
     "imageAlt": "NAD+ 50mg, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -524,7 +524,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/retatrutide-20mg-ml-3ml.png",
+    "imageUrl": "/images/products/retatrutide-20mg-ml-3ml.jpg",
     "imageAlt": "Retatrutide 20mg/mL, 3mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -549,7 +549,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/retatrutide-20mg-ml-5ml.png",
+    "imageUrl": "/images/products/retatrutide-20mg-ml-5ml.jpg",
     "imageAlt": "Retatrutide 20mg/mL, 5mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -574,7 +574,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-0-5mg-odt-30ct.png",
+    "imageUrl": "/images/products/semaglutide-0-5mg-odt-30ct.jpg",
     "imageAlt": "Semaglutide 0.5mg ODT, 30ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -599,7 +599,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-0-5mg-odt-60ct.png",
+    "imageUrl": "/images/products/semaglutide-0-5mg-odt-60ct.jpg",
     "imageAlt": "Semaglutide 0.5mg ODT, 60ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -624,7 +624,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-0-5mg-odt-90ct.png",
+    "imageUrl": "/images/products/semaglutide-0-5mg-odt-90ct.jpg",
     "imageAlt": "Semaglutide 0.5mg ODT, 90ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -649,7 +649,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-1-5mg-odt-60ct.png",
+    "imageUrl": "/images/products/semaglutide-1-5mg-odt-60ct.jpg",
     "imageAlt": "Semaglutide 1.5mg ODT, 60ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -674,7 +674,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-1-5mg-odt-90ct.png",
+    "imageUrl": "/images/products/semaglutide-1-5mg-odt-90ct.jpg",
     "imageAlt": "Semaglutide 1.5mg ODT, 90ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -699,7 +699,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-10mg-ml-5ml.png",
+    "imageUrl": "/images/products/semaglutide-10mg-ml-5ml.jpg",
     "imageAlt": "Semaglutide 10mg/mL, 5mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -724,7 +724,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-2-5mg-ml-0-5ml.png",
+    "imageUrl": "/images/products/semaglutide-2-5mg-ml-0-5ml.jpg",
     "imageAlt": "Semaglutide 2.5mg/mL, 0.5mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -749,7 +749,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-2-5mg-ml-1ml.png",
+    "imageUrl": "/images/products/semaglutide-2-5mg-ml-1ml.jpg",
     "imageAlt": "Semaglutide 2.5mg/mL, 1mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -774,7 +774,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-2-5mg-ml-3ml.png",
+    "imageUrl": "/images/products/semaglutide-2-5mg-ml-3ml.jpg",
     "imageAlt": "Semaglutide 2.5mg/mL, 3mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -799,7 +799,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-2-5mg-ml-4ml.png",
+    "imageUrl": "/images/products/semaglutide-2-5mg-ml-4ml.jpg",
     "imageAlt": "Semaglutide 2.5mg/mL, 4mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -824,7 +824,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-5mg-2ml.png",
+    "imageUrl": "/images/products/semaglutide-5mg-2ml.jpg",
     "imageAlt": "Semaglutide 5mg, 2mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -849,7 +849,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/semaglutide-5mg-ml-5ml.png",
+    "imageUrl": "/images/products/semaglutide-5mg-ml-5ml.jpg",
     "imageAlt": "Semaglutide 5mg/mL, 5mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -874,7 +874,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/sermorelin-4mg.png",
+    "imageUrl": "/images/products/sermorelin-4mg.jpg",
     "imageAlt": "Sermorelin 4mg, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -924,7 +924,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tb-500-5mg.png",
+    "imageUrl": "/images/products/tb-500-5mg.jpg",
     "imageAlt": "TB-500 (Thymosin Beta-4) 5mg, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -949,7 +949,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tb-500-10mg-ml.png",
+    "imageUrl": "/images/products/tb-500-10mg-ml.jpg",
     "imageAlt": "TB-500 10mg/mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -999,7 +999,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-0-5mg-odt-30ct.png",
+    "imageUrl": "/images/products/tirzepatide-0-5mg-odt-30ct.jpg",
     "imageAlt": "Tirzepatide 0.5mg ODT, 30ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1024,7 +1024,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-0-5mg-odt-60ct.png",
+    "imageUrl": "/images/products/tirzepatide-0-5mg-odt-60ct.jpg",
     "imageAlt": "Tirzepatide 0.5mg ODT, 60ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1049,7 +1049,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-0-5mg-odt-90ct.png",
+    "imageUrl": "/images/products/tirzepatide-0-5mg-odt-90ct.jpg",
     "imageAlt": "Tirzepatide 0.5mg ODT, 90ct, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1074,7 +1074,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-10mg-1ml.png",
+    "imageUrl": "/images/products/tirzepatide-10mg-1ml.jpg",
     "imageAlt": "Tirzepatide 10mg, 1mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1099,7 +1099,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-10mg-ml-2ml.png",
+    "imageUrl": "/images/products/tirzepatide-10mg-ml-2ml.jpg",
     "imageAlt": "Tirzepatide 10mg/mL, 2mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1124,7 +1124,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-10mg-ml-4ml.png",
+    "imageUrl": "/images/products/tirzepatide-10mg-ml-4ml.jpg",
     "imageAlt": "Tirzepatide 10mg/mL, 4mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1149,7 +1149,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-10mg-ml-5ml.png",
+    "imageUrl": "/images/products/tirzepatide-10mg-ml-5ml.jpg",
     "imageAlt": "Tirzepatide 10mg/mL, 5mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1174,7 +1174,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-15mg-1ml.png",
+    "imageUrl": "/images/products/tirzepatide-15mg-1ml.jpg",
     "imageAlt": "Tirzepatide 15mg, 1mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1199,7 +1199,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-15mg-2ml.png",
+    "imageUrl": "/images/products/tirzepatide-15mg-2ml.jpg",
     "imageAlt": "Tirzepatide 15mg, 2mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1224,7 +1224,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-15mg-3ml.png",
+    "imageUrl": "/images/products/tirzepatide-15mg-3ml.jpg",
     "imageAlt": "Tirzepatide 15mg, 3mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1249,7 +1249,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-15mg-4ml.png",
+    "imageUrl": "/images/products/tirzepatide-15mg-4ml.jpg",
     "imageAlt": "Tirzepatide 15mg, 4mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1274,7 +1274,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-15mg-5ml.png",
+    "imageUrl": "/images/products/tirzepatide-15mg-5ml.jpg",
     "imageAlt": "Tirzepatide 15mg, 5mL, Greenstone Wellness",
     "featured": false,
     "active": false
@@ -1299,7 +1299,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-20mg-1ml.png",
+    "imageUrl": "/images/products/tirzepatide-20mg-1ml.jpg",
     "imageAlt": "Tirzepatide 20mg, 1mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1324,7 +1324,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-20mg-3ml.png",
+    "imageUrl": "/images/products/tirzepatide-20mg-3ml.jpg",
     "imageAlt": "Tirzepatide 20mg, 3mL, Greenstone Wellness",
     "featured": false,
     "active": true
@@ -1349,7 +1349,7 @@ export const staticProducts = [
     "safetyNotes": null,
     "seoTitle": null,
     "seoDescription": null,
-    "imageUrl": "/images/products/tirzepatide-20mg-5ml.png",
+    "imageUrl": "/images/products/tirzepatide-20mg-5ml.jpg",
     "imageAlt": "Tirzepatide 20mg, 5mL, Greenstone Wellness",
     "featured": false,
     "active": true
