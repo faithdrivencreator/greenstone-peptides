@@ -2,7 +2,7 @@ import Link from 'next/link'
 import ClearCart from './ClearCart'
 
 export const metadata = {
-  title: 'Order Confirmed | Greenstone Peptides',
+  title: 'Order Confirmed | Greenstone Wellness',
   description: 'Your order has been placed successfully.',
 }
 
@@ -22,7 +22,7 @@ export default function ThankYouPage() {
         </h1>
 
         <p className="text-cream/70 text-lg mb-8 leading-relaxed">
-          Thank you for your order. Your formulation will be compounded to order by our USA pharmacy partners under USP 797 sterile standards and shipped with temperature-controlled packaging.
+          Thank you for your order. Your formulation will be compounded to order by our USA pharmacy partners under USP 797 sterile standards and shipped with temperature-controlled packaging. Plan on roughly <span className="text-cream">two weeks total</span> from today to your door.
         </p>
 
         <div className="bg-white/5 border border-gold/10 rounded-xl p-6 mb-8 text-left">
@@ -30,15 +30,15 @@ export default function ThankYouPage() {
           <ol className="space-y-3 text-cream/70">
             <li className="flex gap-3">
               <span className="text-gold font-mono text-sm mt-0.5">01</span>
-              <span>Your order is sent to our licensed compounding pharmacy partner.</span>
+              <span><strong className="text-cream">Day 1:</strong> Your order is sent to our licensed compounding pharmacy partner.</span>
             </li>
             <li className="flex gap-3">
               <span className="text-gold font-mono text-sm mt-0.5">02</span>
-              <span>Your formulation is compounded and quality-tested under USP 797 standards.</span>
+              <span><strong className="text-cream">Days 1–7:</strong> Your formulation is compounded and quality-tested under USP 797 standards (5–7 business days).</span>
             </li>
             <li className="flex gap-3">
               <span className="text-gold font-mono text-sm mt-0.5">03</span>
-              <span>Temperature-controlled shipping delivers your order direct to you.</span>
+              <span><strong className="text-cream">Days 7–12:</strong> Cold-chain shipped via USPS Priority Mail with tracking (3–5 business days in transit).</span>
             </li>
           </ol>
         </div>

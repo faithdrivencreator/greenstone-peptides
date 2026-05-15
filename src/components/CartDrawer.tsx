@@ -242,7 +242,7 @@ export function CartDrawer() {
             </button>
 
             <p className="text-[0.65rem] text-cream-dim/50 leading-relaxed text-center font-jetbrains">
-              Compounded under USP 797 sterile standards by USA pharmacy partners.
+              Compounded to order under USP 797 · 5–7 BD compounding + 3–5 BD shipping · $10 flat ship added at checkout
             </p>
           </div>
         )}

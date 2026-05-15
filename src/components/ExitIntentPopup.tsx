@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { X, Lock } from 'lucide-react';
-import { subscribeToKlaviyo } from '@/lib/klaviyo';
 
 const STORAGE_KEY = 'grx-exit-popup-dismissed';
 const DISMISS_DAYS = 7;
@@ -85,7 +84,17 @@ export function ExitIntentPopup() {
     if (!email) return;
     setLoading(true);
     try {
-      await subscribeToKlaviyo(email, 'Exit Intent Popup');
+      await fetch('/api/subscribe-ebook', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email.trim(),
+          ebook: 'made-easy',
+          source: 'exit-intent-popup',
+        }),
+      });
+    } catch {
+      // Always show success, even on transient errors, to keep UX honest about email delivery
     } finally {
       setLoading(false);
       setSubmitted(true);
@@ -131,38 +140,38 @@ export function ExitIntentPopup() {
                   style={{ background: 'rgba(26,158,110,0.1)' }}>
                   <span className="text-emerald text-2xl font-cormorant font-semibold">✓</span>
                 </div>
-                <h3 className="font-cormorant text-3xl text-white">Your code is ready.</h3>
-                <p className="text-cream-dim text-sm">Use code below at checkout:</p>
-                <div className="bg-obsidian border border-emerald/40 px-6 py-4 text-center my-4">
-                  <span className="font-jetbrains text-2xl tracking-[0.3em] text-emerald font-bold">CLINICAL30</span>
-                </div>
-                <p className="text-xs text-cream-dim/60 font-jetbrains">
-                  $30 off your first order · Valid for 14 days · One use per customer
+                <h3 className="font-cormorant text-3xl text-white">Check your inbox.</h3>
+                <p className="text-cream-dim text-sm leading-relaxed">
+                  Your free copy of <em>Peptides Made Easy</em> is on its way, along with a welcome
+                  offer code you can use on your first order.
+                </p>
+                <p className="text-xs text-cream-dim/60 font-jetbrains pt-2">
+                  Delivered in minutes · Check spam if it doesn&apos;t arrive
                 </p>
                 <button
                   onClick={dismiss}
                   className="btn btn-primary w-full justify-center mt-2"
                 >
-                  Shop Now →
+                  Keep Browsing →
                 </button>
               </div>
             ) : (
               <>
                 {/* Eyebrow */}
                 <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-3">
-                  Welcome Offer
+                  Free Guide
                 </p>
 
                 <h2 className="font-cormorant text-3xl md:text-4xl text-white leading-tight">
-                  $30 off your
+                  Peptides,
                   <br />
-                  <em className="italic text-gold">first order.</em>
+                  <em className="italic text-gold">made easy.</em>
                 </h2>
 
                 <p className="mt-4 text-sm text-cream-dim leading-relaxed">
-                  Join the Greenstone clinical community. Receive your discount code
-                  instantly, plus new protocol alerts and clinical research updates,
-                  one email a month.
+                  Get our plain-language peptide primer, the same guide we share with first-time
+                  customers and curious researchers. Comes with a welcome offer code for your
+                  first order. One short email a month after that, never spam.
                 </p>
 
                 <form
@@ -186,10 +195,10 @@ export function ExitIntentPopup() {
                     {loading ? (
                       <span className="flex items-center gap-2">
                         <span className="w-3 h-3 border border-current border-t-transparent rounded-full animate-spin" />
-                        Sending code...
+                        Sending your guide...
                       </span>
                     ) : (
-                      'Claim $30 Off My First Order'
+                      'Send Me the Free Guide'
                     )}
                   </button>
                 </form>

@@ -48,7 +48,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     name: product.name,
     description: product.shortDescription || product.seoDescription,
     image: imageUrl || undefined,
-    brand: { '@type': 'Brand', name: 'Greenstone Peptides' },
+    brand: { '@type': 'Brand', name: 'Greenstone Wellness' },
     offers: {
       '@type': 'Offer',
       price: product.price,
@@ -162,8 +162,12 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
               <ul className="mt-6 space-y-2 text-sm text-cream-dim">
                 <li className="flex items-start gap-2">
+                  <span className="text-gold leading-tight">🧪</span>
+                  <span><strong className="text-cream">Compounded to order</strong> · 5–7 business days in the pharmacy</span>
+                </li>
+                <li className="flex items-start gap-2">
                   <span className="text-gold leading-tight">✓</span>
-                  <span><strong className="text-cream">Free Priority shipping</strong> on all US orders</span>
+                  <span><strong className="text-cream">$10 flat shipping</strong> · USPS Priority Mail, 3–5 business days after compounding</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-gold leading-tight">✓</span>

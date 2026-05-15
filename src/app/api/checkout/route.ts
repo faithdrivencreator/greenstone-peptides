@@ -54,6 +54,22 @@ export async function POST(req: NextRequest) {
       shipping_address_collection: {
         allowed_countries: ['US'],
       },
+      shipping_options: [
+        {
+          shipping_rate_data: {
+            type: 'fixed_amount',
+            fixed_amount: { amount: 1000, currency: 'usd' },
+            display_name: 'USPS Priority Mail',
+            delivery_estimate: {
+              minimum: { unit: 'business_day', value: 8 },
+              maximum: { unit: 'business_day', value: 12 },
+            },
+            metadata: {
+              note: 'Includes 5-7 business days compounding + 3-5 business days shipping',
+            },
+          },
+        },
+      ],
       line_items: items.map((item) => ({
         quantity: item.qty,
         price_data: {

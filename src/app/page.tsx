@@ -10,7 +10,7 @@ import { urlFor } from '@/lib/sanity';
 import EmailCapture from '@/components/EmailCapture';
 
 export const metadata: Metadata = {
-  title: 'Greenstone Peptides | USA-Compounded Peptide Therapy',
+  title: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
   description:
     'Premium peptide formulations compounded in the USA under USP 797 sterile standards. Third-party tested for potency and purity. Shop semaglutide, tirzepatide, BPC-157, NAD+, and more.',
   alternates: { canonical: '/' },
@@ -31,7 +31,7 @@ export default async function HomePage() {
         schema={{
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: 'Greenstone Peptides',
+          name: 'Greenstone Wellness',
           url: process.env.NEXT_PUBLIC_SITE_URL,
         }}
       />
@@ -361,7 +361,7 @@ export default async function HomePage() {
             {[
               { icon: ShieldCheck, title: 'USP Compliant', body: 'Every compound meets USP 795 & 797 standards.' },
               { icon: FlaskConical, title: 'Quality Assured', body: 'Every batch tested for potency and purity.' },
-              { icon: Thermometer, title: 'Cold-Chain', body: 'Temperature-controlled shipping nationwide.' },
+              { icon: Thermometer, title: 'Cold-Chain', body: 'Compounded to order. Cold-chain shipped in ~2 weeks.' },
               { icon: Clock, title: '25 Years', body: 'Deep pharmaceutical expertise.' },
             ].map(({ icon: Icon, title, body }) => (
               <div key={title} className="text-center">
@@ -496,7 +496,7 @@ export default async function HomePage() {
               { n: '01', t: 'Browse', b: 'Explore our full catalog of USA-compounded peptide formulations.' },
               { n: '02', t: 'Order', b: 'Add to cart and check out securely through our encrypted checkout.' },
               { n: '03', t: 'Compounded', b: 'Your order is compounded to order by our USA pharmacy partners under USP 797 sterile standards.' },
-              { n: '04', t: 'Delivered', b: 'Temperature-controlled shipping direct to your door.' },
+              { n: '04', t: 'Delivered', b: 'Cold-chain shipped Priority Mail in 3–5 business days after compounding.' },
             ].map((s) => (
               <li key={s.n} className="card-glass border-emerald/20 hover:border-emerald/40">
                 <span className="mono !text-emerald">{s.n}</span>
@@ -546,13 +546,13 @@ export default async function HomePage() {
         <div className="container-gr max-w-2xl text-center">
           <div className="inline-block bg-emerald/10 border border-emerald/30 px-4 py-1.5 mb-6">
             <span className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald">
-              Subscriber Exclusive
+              Free Guide
             </span>
           </div>
-          <h2 className="font-cormorant">$30 off your first order.</h2>
+          <h2 className="font-cormorant">Peptides, made easy.</h2>
           <p className="text-cream-dim mt-4 mx-auto">
-            Join the Greenstone community to unlock your exclusive discount code,
-            plus new product alerts and updates, one email a month.
+            Our plain-language peptide primer, free. Comes with a welcome offer code for
+            your first order. One short email a month after that, never spam.
           </p>
           <EmailCapture />
         </div>
