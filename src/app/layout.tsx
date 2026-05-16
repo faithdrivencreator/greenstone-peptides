@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, DM_Sans, JetBrains_Mono } from 'next/font/google';
+import { Playfair_Display, DM_Sans, IBM_Plex_Mono } from 'next/font/google';
 import Script from 'next/script';
 import '@/styles/globals.css';
 import { Navigation } from '@/components/Navigation';
@@ -11,23 +11,24 @@ import { ExitIntentPopup } from '@/components/ExitIntentPopup';
 import { AgeGate } from '@/components/AgeGate';
 import { ChatWidget } from '@/components/ChatWidget';
 
-const cormorant = Cormorant_Garamond({
+const cormorant = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['500', '600', '700'],
+  style: ['normal', 'italic'],
   variable: '--font-cormorant',
   display: 'swap',
 });
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-dm-sans',
   display: 'swap',
 });
 
-const jetbrains = JetBrains_Mono({
+const jetbrains = IBM_Plex_Mono({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400', '500'],
   variable: '--font-jetbrains',
   display: 'swap',
 });
