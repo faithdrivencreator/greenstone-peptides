@@ -9,9 +9,9 @@
  *   - does NOT yet have metadata.delivered_email_sent_at
  *
  * Sends the branded "your delivery has arrived — here's how to handle it"
- * email via Resend (reconstitution + storage + sterile technique + a soft
- * reminder that the THANKS15 code from their welcome email is still active),
- * and marks the Stripe PI with delivered_email_sent_at to prevent duplicates.
+ * email via Resend (cold-chain storage + sterile technique + a soft reminder
+ * that the THANKS15 code from their welcome email is still active), and
+ * marks the Stripe PI with delivered_email_sent_at to prevent duplicates.
  *
  * Why heuristic instead of carrier-event-driven: all delivery-tracking APIs
  * with webhook access (AfterShip, EasyPost, Shippo, TrackingMore) moved
@@ -80,7 +80,7 @@ function renderDeliveredEmail(firstName: string | null, carrier: string | null):
     subject: 'Your Greenstone delivery is here — handling guide inside',
     html: `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Greenstone</title></head>
 <body style="margin:0;padding:0;background:#0D1117;color:#F5F1EB">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0">Your delivery should have arrived. Here's how to store, reconstitute, and protect it for research.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0">Your delivery should have arrived. Here's how to store, draw, and protect it for research.</div>
 <div style="background:#0D1117;padding:40px 16px">
   <div style="max-width:600px;margin:0 auto;background:#161C26;padding:48px 36px;border:1px solid #1E2738">
 
@@ -94,55 +94,31 @@ function renderDeliveredEmail(firstName: string | null, carrier: string | null):
 
     <!-- Hook -->
     <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;color:#F5F1EB;font-weight:400;margin:0 0 16px">It's in your hands${greeting}.</h2>
-    <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">${carrierLine} Below is a short field guide to keep what you've received <em>research-grade</em> — temperature, reconstitution, sterile draw, storage after mixing. Bookmark this email; it covers the essentials.</p>
+    <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">${carrierLine} Below is a short field guide to keep what you've received <em>research-grade</em> — cold-chain storage and sterile draw. Bookmark this email; it covers the essentials.</p>
 
     <!-- Section 1: First 30 minutes -->
     <div style="background:#0D1117;border-left:3px solid #1A9E6E;padding:20px 24px;margin:0 0 28px">
       <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">STEP ONE &middot; FIRST 30 MINUTES</p>
       <h3 style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400">Refrigerate the vial immediately.</h3>
-      <p style="margin:0;color:#B8B2A8;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif;font-size:14px">Move the lyophilized (powder) vial to a refrigerator at <strong>36–46°F (2–8°C)</strong>. The powder is stable at room temperature for short windows, but cold storage extends shelf life to 18–24 months. <strong>Do not reconstitute</strong> until you're ready to begin a research cycle within 30 days.</p>
+      <p style="margin:0;color:#B8B2A8;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif;font-size:14px">Your vial shipped cold and is ready to use. As soon as it arrives, move it to a refrigerator at <strong>36–46°F (2–8°C)</strong>. Store it in the <strong>back of the fridge</strong>, away from the door, where the temperature stays the most stable. Keep it in its box — peptides degrade with light exposure. <strong>Never freeze the vial</strong>; ice crystals damage the peptide.</p>
     </div>
 
-    <!-- Section 2: Reconstitution -->
+    <!-- Section 2: Storage timeline -->
     <div style="background:#0D1117;border-left:3px solid #1A9E6E;padding:20px 24px;margin:0 0 28px">
-      <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">STEP TWO &middot; RECONSTITUTION</p>
-      <h3 style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400">Bacteriostatic water, slow and gentle.</h3>
-      <p style="margin:0 0 14px;color:#B8B2A8;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif;font-size:14px">Use sterile <strong>bacteriostatic water</strong> (0.9% benzyl alcohol). Sterile saline works in a pinch but reduces shelf life. Wipe the vial stopper with a fresh alcohol swab. Draw your BAC water into a sterile syringe, then inject it <strong>slowly down the inside wall</strong> of the vial — never directly onto the powder. <strong>Swirl gently to dissolve. Never shake.</strong> Shaking denatures the peptide.</p>
-      <table style="width:100%;border-collapse:collapse;margin:6px 0 0">
-        <tr style="background:#161C26"><td style="padding:8px 12px;color:#1A9E6E;font-size:10px;letter-spacing:0.2em;font-family:'DM Sans',-apple-system,sans-serif;border:1px solid #1E2738">VIAL</td><td style="padding:8px 12px;color:#1A9E6E;font-size:10px;letter-spacing:0.2em;font-family:'DM Sans',-apple-system,sans-serif;border:1px solid #1E2738">BAC WATER</td><td style="padding:8px 12px;color:#1A9E6E;font-size:10px;letter-spacing:0.2em;font-family:'DM Sans',-apple-system,sans-serif;border:1px solid #1E2738">PER 10 IU MARK*</td></tr>
-        <tr><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">5 mg</td><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">2 mL</td><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">0.25 mg</td></tr>
-        <tr><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">10 mg</td><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">2 mL</td><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">0.50 mg</td></tr>
-        <tr><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">15 mg</td><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">3 mL</td><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">0.50 mg</td></tr>
-        <tr><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">20 mg</td><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">2 mL</td><td style="padding:8px 12px;color:#F5F1EB;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;border:1px solid #1E2738">1.00 mg</td></tr>
-      </table>
-      <p style="margin:8px 0 0;color:#8A6E3E;font-size:11px;font-family:'DM Sans',-apple-system,sans-serif;font-style:italic">*Based on a U-100 insulin syringe (1 mL = 100 IU). Your protocol determines your draw volume.</p>
+      <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">STEP TWO &middot; STORAGE TIMELINE</p>
+      <h3 style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400">Refrigerated, dark, used within the label window.</h3>
+      <p style="margin:0;color:#B8B2A8;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif;font-size:14px">Each vial has a use-by window printed on its label — most compounded peptides are stable for <strong>28 days refrigerated</strong>, a few (GHK-Cu, BPC-157) remain stable longer. Keep the vial cold, keep it dark, and discard once you hit the label date.</p>
     </div>
 
-    <!-- Section 3: After reconstitution -->
-    <div style="background:#0D1117;border-left:3px solid #1A9E6E;padding:20px 24px;margin:0 0 28px">
-      <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">STEP THREE &middot; AFTER MIXING</p>
-      <h3 style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400">Refrigerated, dark, and used within 28 days.</h3>
-      <p style="margin:0;color:#B8B2A8;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif;font-size:14px">Store the reconstituted vial in the <strong>back of your refrigerator</strong>, away from the door (temperature swings). Keep it in its box — peptides degrade with light exposure. Most reconstituted peptides are stable for <strong>28 days</strong>. A few (GHK-Cu, BPC-157) remain stable longer. Never freeze a reconstituted vial — ice crystals damage the peptide.</p>
-    </div>
-
-    <!-- Section 4: Sterile draw -->
+    <!-- Section 3: Sterile draw -->
     <div style="background:#0D1117;border-left:3px solid #1A9E6E;padding:20px 24px;margin:0 0 28px">
       <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">EVERY TIME &middot; STERILE DRAW</p>
       <h3 style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400">Fresh swab. Fresh needle. Never shared.</h3>
       <p style="margin:0;color:#B8B2A8;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif;font-size:14px">Alcohol-swab the stopper before every draw. Use a fresh sterile needle each time — never re-cap and reuse. One vial per research subject. Contamination is the single most common cause of a failed research cycle.</p>
     </div>
 
-    <!-- Section 5: What's normal -->
-    <div style="background:#0D1117;border:1px solid #1E2738;padding:20px 24px;margin:0 0 32px">
-      <p style="margin:0 0 12px;color:#C9A96E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">WHAT'S NORMAL &middot; WHAT'S NOT</p>
-      <table style="width:100%;border-collapse:collapse">
-        <tr><td style="padding:6px 0;color:#1A9E6E;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px;width:90px">✓ Normal</td><td style="padding:6px 0;color:#B8B2A8;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px">Frosted or fluffy vial walls. Slight discoloration of powder.</td></tr>
-        <tr><td style="padding:6px 0;color:#1A9E6E;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px">✓ Normal</td><td style="padding:6px 0;color:#B8B2A8;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px">Clear, slightly colored solution after mixing.</td></tr>
-        <tr><td style="padding:6px 0;color:#D14;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px">✗ Not normal</td><td style="padding:6px 0;color:#B8B2A8;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px">Cloudy, particulates, or layer separation after mixing.</td></tr>
-        <tr><td style="padding:6px 0;color:#D14;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px">✗ Not normal</td><td style="padding:6px 0;color:#B8B2A8;font-family:'DM Sans',-apple-system,sans-serif;font-size:13px">Broken vial, cracked stopper, or compromised seal on arrival.</td></tr>
-      </table>
-      <p style="margin:14px 0 0;color:#B8B2A8;font-size:13px;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif">If anything looks off, reply to this email or write <a href="mailto:${SUPPORT_EMAIL}" style="color:#1A9E6E;text-decoration:none">${SUPPORT_EMAIL}</a>. We replace compromised vials, no questions asked.</p>
-    </div>
+    <!-- Soft support nudge -->
+    <p style="margin:0 0 32px;color:#B8B2A8;font-size:14px;line-height:1.7;font-family:'DM Sans',-apple-system,sans-serif">Questions about storage or technique? Reply to this email or write <a href="mailto:${SUPPORT_EMAIL}" style="color:#1A9E6E;text-decoration:none">${SUPPORT_EMAIL}</a>.</p>
 
     <!-- Divider -->
     <div style="text-align:center;margin:36px 0">
@@ -161,6 +137,7 @@ function renderDeliveredEmail(firstName: string | null, carrier: string | null):
 
     <!-- Footer -->
     <hr style="border:none;border-top:1px solid #1E2738;margin:32px 0 20px">
+    <p style="text-align:center;color:#8A6E3E;font-size:10px;line-height:1.6;margin:0 0 12px;font-family:'DM Sans',-apple-system,sans-serif;font-style:italic">Research peptides for laboratory and research use. Not for human consumption.</p>
     <p style="text-align:center;color:#8A6E3E;font-size:10px;letter-spacing:0.25em;margin:0;font-family:'DM Sans',-apple-system,sans-serif">
       <a href="${SITE_URL}" style="color:#8A6E3E;text-decoration:none">GREENSTONEWELLNESS.STORE</a>
     </p>
