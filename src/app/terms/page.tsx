@@ -120,13 +120,13 @@ export default function TermsPage() {
           <h2 className="font-cormorant text-2xl text-white mb-4">6. Shipping</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
             We ship to addresses within the <strong className="text-cream">United States only</strong>.
-            Injectable peptides ship as lyophilized (freeze-dried) powder in sealed sterile vials,
-            which are stable at room temperature in transit. Estimated delivery times are provided
-            at checkout and are not guaranteed.
+            All orders are shipped with temperature-controlled packaging to maintain product
+            integrity during transit. Estimated delivery times are provided at checkout and are
+            not guaranteed.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
             Risk of loss and title for products purchased pass to you upon delivery to the
-            carrier. If your order arrives with a broken vial or compromised seal, contact
+            carrier. If your order arrives damaged or the cold pack is fully thawed, contact
             us within 48 hours at{' '}
             <a
               href="mailto:info@greenstonewellness.store"
@@ -142,14 +142,14 @@ export default function TermsPage() {
             7. Returns & Refund Policy
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            Because our products are compounded to order, all sales are final on opened items
-            or once the vial has been reconstituted.
+            Due to the nature of our products, temperature-sensitive, compounded peptide
+            formulations, all sales are final on opened items.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
             We accept returns of <strong className="text-cream">unopened, undamaged items</strong>{' '}
             within <strong className="text-cream">30 days</strong> of the delivery date,
-            provided the vial seal is intact and the product has been kept out of direct light
-            and heat. To initiate a return, contact us at{' '}
+            provided the product has remained properly stored (refrigerated, out of direct
+            light). To initiate a return, contact us at{' '}
             <a
               href="mailto:info@greenstonewellness.store"
               className="text-emerald hover:underline"

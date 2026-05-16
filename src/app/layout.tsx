@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     template: 'Greenstone Wellness | %s',
   },
   description:
-    'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested for potency, sterility, and purity. Lyophilized vials shipped discreetly.',
+    'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested for potency, sterility, and purity. Temperature-controlled shipping.',
   keywords: [
     'peptide therapy',
     'GLP-1',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     siteName: 'Greenstone Wellness',
     title: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
     description:
-      'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Lyophilized vials shipped discreetly.',
+      'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Temperature-controlled shipping.',
     images: [
       {
         url: '/images/hero-lab.png',
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
     description:
-      'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Lyophilized vials shipped discreetly.',
+      'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Temperature-controlled shipping.',
     images: ['/images/hero-lab.png'],
   },
   robots: { index: true, follow: true },

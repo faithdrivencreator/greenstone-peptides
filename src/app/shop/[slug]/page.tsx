@@ -169,7 +169,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-gold leading-tight">✓</span>
-                  <span><strong className="text-cream">Lyophilized vial</strong> sealed for room-temp transit, reconstitute with bacteriostatic water before use</span>
+                  <span><strong className="text-cream">Temperature-controlled</strong> packaging direct from US compounders</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-gold leading-tight">✓</span>

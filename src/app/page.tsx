@@ -179,7 +179,7 @@ export default async function HomePage() {
               'USA Compounded',
               'USP 797 Sterile Standard',
               'Third-Party Tested',
-              'Discreet Packaging',
+              'Cold-Chain Shipping',
             ].map((label) => (
               <span key={label} className="flex items-center gap-3 font-jetbrains text-xs md:text-sm tracking-widest uppercase text-cream/90">
                 <span className="text-emerald font-bold text-base md:text-lg">✓</span>
@@ -366,7 +366,7 @@ export default async function HomePage() {
             {[
               { icon: ShieldCheck, title: 'USP Compliant', body: 'Every compound meets USP 795 & 797 standards.' },
               { icon: FlaskConical, title: 'Quality Assured', body: 'Every batch tested for potency and purity.' },
-              { icon: Thermometer, title: 'Compounded Fresh', body: 'Lyophilized to order in licensed USA pharmacies. ~2 weeks from order to door.' },
+              { icon: Thermometer, title: 'Cold-Chain', body: 'Compounded to order. Cold-chain shipped in ~2 weeks.' },
               { icon: Clock, title: '25 Years', body: 'Deep pharmaceutical expertise.' },
             ].map(({ icon: Icon, title, body }) => (
               <div key={title} className="text-center">
@@ -501,7 +501,7 @@ export default async function HomePage() {
               { n: '01', t: 'Browse', b: 'Explore our full catalog of USA-compounded peptide formulations.' },
               { n: '02', t: 'Order', b: 'Add to cart and check out securely through our encrypted checkout.' },
               { n: '03', t: 'Compounded', b: 'Your order is compounded to order by our USA pharmacy partners under USP 797 sterile standards.' },
-              { n: '04', t: 'Delivered', b: 'Shipped USPS Priority Mail in 3–5 business days after compounding, in discreet packaging.' },
+              { n: '04', t: 'Delivered', b: 'Cold-chain shipped Priority Mail in 3–5 business days after compounding.' },
             ].map((s) => (
               <li key={s.n} className="card-glass border-emerald/20 hover:border-emerald/40">
                 <span className="mono !text-emerald">{s.n}</span>

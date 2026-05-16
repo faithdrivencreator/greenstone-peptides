@@ -41,7 +41,7 @@ const STEPS = [
   { n: '01', t: 'Apply', b: 'Submit your practice information and wholesale inquiry via the form below. Review takes 2-3 business days.' },
   { n: '02', t: 'Review', b: 'Our team evaluates your facility, volume projections, and prescribing infrastructure before approval.' },
   { n: '03', t: 'Onboard', b: 'Approved partners receive portal credentials, pricing schedules, and a kickoff call with your account manager.' },
-  { n: '04', t: 'Order', b: 'Place and track orders directly through the distributor portal. Lyophilized vials shipped to your facility.' },
+  { n: '04', t: 'Order', b: 'Place and track orders directly through the distributor portal. Cold-chain fulfilled to your facility.' },
 ];
 
 export default function WholesalePage() {

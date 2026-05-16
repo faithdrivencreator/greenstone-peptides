@@ -67,14 +67,12 @@ KITS:
 COMMON QUESTIONS:
 - "mg" = milligrams (amount of active compound), "mL" = milliliters (volume of liquid)
 - "ODT" = Oral Dissolving Tablet, placed under the tongue, no injection needed
-- Injectable peptides ship as lyophilized (freeze-dried) powder in a sealed sterile vial — stable at room temperature in transit
-- Customer reconstitutes the powder vial with bacteriostatic water before the first dose. Once reconstituted, the vial is refrigerated at 2-8°C and is typically stable 28-56 days depending on the peptide
-- ODT tablets and topical creams ship and store at room temperature
+- Injectable peptides require subcutaneous injection and should be stored refrigerated
 - All products are compounded by licensed USA pharmacies under USP 797 sterile standards
 - Third-party tested for potency, sterility, and purity
 - $10 flat-rate USPS Priority Mail shipping on all US orders
 - Every formulation is compounded to order: plan on 5-7 business days for compounding, then 3-5 business days for shipping (~2 weeks total from order to door)
-- Discreet outer packaging, no branding on the box
+- Temperature-controlled cold-chain packaging included
 - The only welcome offer is unlocked by downloading our free Peptides Made Easy guide at /free/peptides-made-easy, the discount code is emailed with the guide. Don't share public discount codes in chat.
 
 ABOUT GREENSTONE WELLNESS:
