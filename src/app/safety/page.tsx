@@ -40,8 +40,8 @@ export default function SafetyPage() {
           <h2 className="font-cormorant text-2xl text-white mb-4">Shipping & Handling</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
             All orders are shipped with temperature-controlled packaging to maintain product
-            integrity during transit. If your package arrives damaged or the cold pack is
-            fully thawed, contact us for a replacement.
+            integrity during transit. If there's any issue with your delivery, reach out to us
+            and we'll take care of it.
           </p>
         </div>
 

@@ -75,7 +75,7 @@ export function renderShippingEmail(input: ShippingEmailInput): { subject: strin
     <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;color:#F5F1EB;font-weight:400;margin:40px 0 12px">What to do when it arrives</h3>
     <table style="width:100%;border-collapse:collapse;font-family:'DM Sans',-apple-system,sans-serif">
       <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Refrigerate temperature-sensitive peptides immediately on arrival.</td></tr>
-      <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Inspect the package and contents, let us know within 24 hours if anything looks wrong.</td></tr>
+      <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Store it properly and reach out if you have any questions.</td></tr>
       <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Questions about storage or handling? <a href="${SITE_URL}/safety" style="color:#C9A96E;text-decoration:none;border-bottom:1px solid #8A6E3E">Safety guide</a></td></tr>
     </table>
 

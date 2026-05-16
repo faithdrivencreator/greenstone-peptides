@@ -126,8 +126,7 @@ export default function TermsPage() {
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
             Risk of loss and title for products purchased pass to you upon delivery to the
-            carrier. If your order arrives damaged or the cold pack is fully thawed, contact
-            us within 48 hours at{' '}
+            carrier. For any concerns about your delivery, contact us at{' '}
             <a
               href="mailto:info@greenstonewellness.store"
               className="text-emerald hover:underline"

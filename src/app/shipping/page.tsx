@@ -43,15 +43,14 @@ export default function ShippingPage() {
         </div>
 
         <div className="card-glass">
-          <h2 className="font-cormorant text-2xl text-white mb-4">Lost, damaged, or delayed orders</h2>
+          <h2 className="font-cormorant text-2xl text-white mb-4">Delivery concerns</h2>
           <p className="text-cream-dim text-sm leading-relaxed mb-3">
-            If your order is delayed more than 5 business days past the expected delivery window,
-            arrives damaged, or doesn't arrive at all, contact us and we'll make it right.
-            We'll either replace the order at no charge or issue a full refund.
+            If your order is delayed more than 5 business days past the expected delivery window
+            or you have any concerns about your shipment, reach out and we'll make it right.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed">
-            Please reach out within 14 days of the shipping date so we can file a claim with the
-            carrier when applicable.
+            Please contact us within 14 days of the shipping date so we can file a claim with
+            the carrier when applicable.
           </p>
         </div>
 
