@@ -54,9 +54,9 @@ const config: Config = {
         success: '#70B090',
       },
       fontFamily: {
-        cormorant: ['var(--font-cormorant)', 'Cormorant Garamond', 'Georgia', 'serif'],
+        cormorant: ['var(--font-cormorant)', 'Playfair Display', 'Georgia', 'serif'],
         'dm-sans': ['var(--font-dm-sans)', 'DM Sans', '-apple-system', 'sans-serif'],
-        jetbrains: ['var(--font-jetbrains)', 'JetBrains Mono', 'Courier New', 'monospace'],
+        jetbrains: ['var(--font-jetbrains)', 'IBM Plex Mono', 'Courier New', 'monospace'],
       },
       fontSize: {
         'display-xl': ['clamp(2.5rem, 6vw, 5rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],

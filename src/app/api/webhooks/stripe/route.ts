@@ -108,7 +108,7 @@ function renderEmailShell({ preheader, body }: { preheader: string; body: string
   <div style="max-width:600px;margin:0 auto;background:#161C26;padding:48px 36px;border:1px solid #1E2738">
     <div style="text-align:center;padding-bottom:32px;border-bottom:1px solid #1E2738;margin-bottom:36px">
       <a href="${SITE_URL}" style="text-decoration:none">
-        <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:400;letter-spacing:0.18em;color:#F5F1EB;margin:0 0 6px">GREENSTONE</h1>
+        <h1 style="font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:400;letter-spacing:0.18em;color:#F5F1EB;margin:0 0 6px">GREENSTONE</h1>
         <p style="color:#C9A96E;font-family:'DM Sans',-apple-system,sans-serif;font-size:10px;letter-spacing:0.4em;margin:0">WELLNESS</p>
       </a>
     </div>
@@ -128,7 +128,7 @@ function renderCodeBlock({ code, label, meta }: { code: string; label: string; m
   return `
     <div style="background:#0D1117;border:1px solid #C9A96E;padding:32px 24px;text-align:center;margin:24px 0">
       <p style="margin:0 0 8px;color:#8A6E3E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">YOUR CODE</p>
-      <p style="margin:0;font-family:'JetBrains Mono','SF Mono',Consolas,monospace;font-size:34px;letter-spacing:0.25em;font-weight:600;color:#C9A96E">${code}</p>
+      <p style="margin:0;font-family:'IBM Plex Mono','SF Mono',Consolas,monospace;font-size:34px;letter-spacing:0.25em;font-weight:600;color:#C9A96E">${code}</p>
       <p style="margin:12px 0 0;color:#F5F1EB;font-size:13px;font-family:'DM Sans',-apple-system,sans-serif">${label}</p>
       <p style="margin:4px 0 0;color:#8A6E3E;font-size:11px;font-family:'DM Sans',-apple-system,sans-serif">${meta}</p>
     </div>
@@ -379,12 +379,12 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           html: renderEmailShell({
             preheader: `Order #${orderRef} confirmed. We'll send tracking when it ships.`,
             body: `
-              <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;color:#F5F1EB;font-weight:400;margin:0 0 12px">Thank you${customerFirstName ? `, ${customerFirstName}` : ''}.</h2>
+              <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:28px;color:#F5F1EB;font-weight:400;margin:0 0 12px">Thank you${customerFirstName ? `, ${customerFirstName}` : ''}.</h2>
               <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">We've received your order and will begin preparing it for shipment. You'll get a tracking email the moment it leaves our facility.</p>
 
               <table style="width:100%;margin:24px 0;font-family:'DM Sans',-apple-system,sans-serif;border-collapse:collapse">
                 <tr><td style="color:#8A6E3E;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 0">Order</td><td style="text-align:right;color:#F5F1EB;font-weight:500">#${orderRef}</td></tr>
-                <tr><td style="color:#8A6E3E;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 0">Total</td><td style="text-align:right;color:#C9A96E;font-weight:600;font-size:20px;font-family:'Cormorant Garamond',Georgia,serif">$${order.amountTotal.toFixed(2)} ${order.currency}</td></tr>
+                <tr><td style="color:#8A6E3E;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 0">Total</td><td style="text-align:right;color:#C9A96E;font-weight:600;font-size:20px;font-family:'Playfair Display',Georgia,serif">$${order.amountTotal.toFixed(2)} ${order.currency}</td></tr>
                 <tr><td style="color:#8A6E3E;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 0">Shipping</td><td style="text-align:right;color:#1A9E6E;font-weight:500">Free &middot; US Priority</td></tr>
               </table>
 
@@ -435,7 +435,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             html: renderEmailShell({
               preheader: `Your THANKS15 code for next order, plus two free guides while you wait.`,
               body: `
-                <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;color:#F5F1EB;font-weight:400;margin:0 0 16px">Welcome${customerFirstName ? `, ${customerFirstName}` : ''}.</h2>
+                <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:30px;color:#F5F1EB;font-weight:400;margin:0 0 16px">Welcome${customerFirstName ? `, ${customerFirstName}` : ''}.</h2>
                 <p style="color:#B8B2A8;line-height:1.7;margin:0 0 16px;font-family:'DM Sans',-apple-system,sans-serif">Thank you for trusting Greenstone with your first order. Every peptide we ship is <span style="color:#1A9E6E;font-weight:500">compounded in the USA under USP 797 standards</span> and <span style="color:#1A9E6E;font-weight:500">third-party tested</span> for potency, sterility, and purity.</p>
                 <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">A small thank-you below, and two free guides we publish for the community.</p>
 
@@ -445,28 +445,28 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
                   <a href="${SITE_URL}/shop" style="display:inline-block;background:#C9A96E;color:#0D1117;padding:14px 36px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">SHOP AGAIN</a>
                 </p>
 
-                <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#F5F1EB;font-weight:400;margin:40px 0 8px">Free guides for the community</h3>
+                <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:22px;color:#F5F1EB;font-weight:400;margin:40px 0 8px">Free guides for the community</h3>
                 <p style="color:#B8B2A8;line-height:1.7;margin:0 0 20px;font-family:'DM Sans',-apple-system,sans-serif">No fluff. Clinical-grade reading material for anyone serious about peptide research.</p>
 
                 <table style="width:100%;border-collapse:collapse;margin:0 0 32px">
                   <tr>
                     <td style="padding:18px 20px;border:1px solid #1E2738;background:#161C26;width:50%;vertical-align:top">
                       <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',-apple-system,sans-serif">Volume I</p>
-                      <p style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px">Peptides Made Easy</p>
+                      <p style="margin:0 0 10px;color:#F5F1EB;font-family:'Playfair Display',Georgia,serif;font-size:20px">Peptides Made Easy</p>
                       <p style="margin:0 0 14px;color:#B8B2A8;font-size:13px;line-height:1.5;font-family:'DM Sans',-apple-system,sans-serif">A primer for newcomers, what peptides are, how they're researched, where to start.</p>
                       <a href="${SITE_URL}/free/peptides-made-easy" style="color:#1A9E6E;font-size:12px;letter-spacing:0.15em;text-decoration:none;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">DOWNLOAD →</a>
                     </td>
                     <td style="width:8px"></td>
                     <td style="padding:18px 20px;border:1px solid #1E2738;background:#161C26;width:50%;vertical-align:top">
                       <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',-apple-system,sans-serif">Volume II</p>
-                      <p style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px">Peptides Unlocked</p>
+                      <p style="margin:0 0 10px;color:#F5F1EB;font-family:'Playfair Display',Georgia,serif;font-size:20px">Peptides Unlocked</p>
                       <p style="margin:0 0 14px;color:#B8B2A8;font-size:13px;line-height:1.5;font-family:'DM Sans',-apple-system,sans-serif">Match peptides to research goals, quality and sourcing checklist, 48-hour framework.</p>
                       <a href="${SITE_URL}/free/peptides-unlocked" style="color:#1A9E6E;font-size:12px;letter-spacing:0.15em;text-decoration:none;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">DOWNLOAD →</a>
                     </td>
                   </tr>
                 </table>
 
-                <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;color:#F5F1EB;font-weight:400;margin:40px 0 16px">A few things to know</h3>
+                <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:20px;color:#F5F1EB;font-weight:400;margin:40px 0 16px">A few things to know</h3>
                 <table style="width:100%;border-collapse:collapse;font-family:'DM Sans',-apple-system,sans-serif">
                   <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">All orders ship free via US Priority Mail.</td></tr>
                   <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Tracking is included in every order confirmation.</td></tr>

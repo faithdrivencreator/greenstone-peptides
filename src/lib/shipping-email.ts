@@ -43,17 +43,17 @@ export function renderShippingEmail(input: ShippingEmailInput): { subject: strin
   <div style="max-width:600px;margin:0 auto;background:#161C26;padding:48px 36px;border:1px solid #1E2738">
     <div style="text-align:center;padding-bottom:32px;border-bottom:1px solid #1E2738;margin-bottom:36px">
       <a href="${SITE_URL}" style="text-decoration:none">
-        <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:400;letter-spacing:0.18em;color:#F5F1EB;margin:0 0 6px">GREENSTONE</h1>
+        <h1 style="font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:400;letter-spacing:0.18em;color:#F5F1EB;margin:0 0 6px">GREENSTONE</h1>
         <p style="color:#C9A96E;font-family:'DM Sans',-apple-system,sans-serif;font-size:10px;letter-spacing:0.4em;margin:0">WELLNESS</p>
       </a>
     </div>
 
-    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;color:#F5F1EB;font-weight:400;margin:0 0 12px">Your order is on its way${greetingName}.</h2>
+    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:28px;color:#F5F1EB;font-weight:400;margin:0 0 12px">Your order is on its way${greetingName}.</h2>
     <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">Order <strong style="color:#C9A96E">#${input.orderRef}</strong> shipped via <strong style="color:#1A9E6E">${input.carrier}</strong>. Tracking details below.</p>
 
     <div style="background:#0D1117;border:1px solid #1A9E6E;padding:28px 24px;margin:24px 0">
       <p style="margin:0 0 8px;color:#8A6E3E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">TRACKING NUMBER</p>
-      <p style="margin:0;font-family:'JetBrains Mono','SF Mono',Consolas,monospace;font-size:22px;letter-spacing:0.1em;color:#F5F1EB;word-break:break-all">${input.trackingNumber}</p>
+      <p style="margin:0;font-family:'IBM Plex Mono','SF Mono',Consolas,monospace;font-size:22px;letter-spacing:0.1em;color:#F5F1EB;word-break:break-all">${input.trackingNumber}</p>
       <p style="margin:8px 0 0;color:#1A9E6E;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif">${input.carrier}</p>
     </div>
 
@@ -72,7 +72,7 @@ export function renderShippingEmail(input: ShippingEmailInput): { subject: strin
       <p style="margin:0;color:#B8B2A8;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif">${input.customNote}</p>
     </div>` : ''}
 
-    <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;color:#F5F1EB;font-weight:400;margin:40px 0 12px">What to do when it arrives</h3>
+    <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:20px;color:#F5F1EB;font-weight:400;margin:40px 0 12px">What to do when it arrives</h3>
     <table style="width:100%;border-collapse:collapse;font-family:'DM Sans',-apple-system,sans-serif">
       <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Refrigerate temperature-sensitive peptides immediately on arrival.</td></tr>
       <tr><td style="color:#1A9E6E;padding:6px 12px 6px 0;vertical-align:top;font-weight:600">✓</td><td style="color:#B8B2A8;padding:6px 0;line-height:1.7">Store it properly and reach out if you have any questions.</td></tr>
