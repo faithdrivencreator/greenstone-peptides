@@ -101,7 +101,14 @@ export function Footer() {
         </nav>
       </div>
 
-      <div className="container-gr mt-16 pt-8 border-t border-gold/10">
+      <div className="container-gr mt-16 pt-8 border-t border-gold/10 space-y-3">
+        <p className="text-[10px] leading-relaxed text-cream-dim/45 max-w-3xl">
+          Statements made on this site have not been evaluated by the Food and Drug Administration. Products sold here are intended for research and educational purposes only and are not intended to diagnose, treat, cure, or prevent any disease. Not for human consumption.{' '}
+          <Link href="/safety" className="underline underline-offset-2 hover:text-cream-dim transition-colors">
+            Read full safety information
+          </Link>
+          .
+        </p>
         <p className="text-xs text-cream-dim/60">
           &copy; {new Date().getFullYear()} Greenstone Wellness. All rights reserved.
         </p>

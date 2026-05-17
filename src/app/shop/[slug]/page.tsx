@@ -177,6 +177,14 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 </li>
               </ul>
 
+              <p className="mt-6 text-[10px] leading-relaxed text-cream-dim/50">
+                For research and educational use only. Not evaluated by the FDA. Not intended to diagnose, treat, cure, or prevent any disease. Not for human consumption.{' '}
+                <Link href="/safety" className="underline underline-offset-2 hover:text-cream-dim transition-colors">
+                  Full disclaimer
+                </Link>
+                .
+              </p>
+
             </div>
           </div>
 

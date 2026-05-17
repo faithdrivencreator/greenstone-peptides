@@ -417,6 +417,9 @@ export function PrescriptionRequestDrawer() {
                 <p className="text-[0.65rem] text-cream-dim/50 text-center font-jetbrains leading-relaxed">
                   A pharmacist replies within 24 hours with a secure payment link.
                 </p>
+                <p className="text-[0.6rem] leading-relaxed text-cream-dim/40 text-center">
+                  For research and educational use only. Not evaluated by the FDA. Not intended for human consumption.
+                </p>
               </div>
             </form>
           )}

@@ -120,6 +120,9 @@ export function AgeGate() {
                 <p className="font-cormorant italic text-lg md:text-xl text-cream leading-snug">
                   Confirm you&rsquo;re 18 or older to continue.
                 </p>
+                <p className="mt-1.5 font-jetbrains text-[0.6rem] tracking-[0.15em] uppercase text-cream-dim/55 leading-relaxed">
+                  Greenstone products are for research and educational use only.
+                </p>
               </div>
 
               {/* Right: buttons. Stack on mobile, side-by-side on md+. */}
