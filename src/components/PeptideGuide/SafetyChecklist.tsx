@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Hand, Droplets, Eye, Pipette, RefreshCw, Trash2,
+  Hand, Droplets, Eye, Pipette, RefreshCw, Trash2, Boxes,
   Clock, Pill, UtensilsCrossed, AlertTriangle, Thermometer,
   ShieldCheck, ArrowRight, CheckCircle2,
 } from 'lucide-react';
@@ -20,6 +20,7 @@ interface SafetyChecklistProps {
 
 const SAFETY_ICONS: Record<string, LucideIcon> = {
   hands: Hand,
+  supplies: Boxes,
   swab: Droplets,
   inspect: Eye,
   syringe: Pipette,
@@ -35,6 +36,7 @@ const SAFETY_ICONS: Record<string, LucideIcon> = {
 // Cinematic action backgrounds (generated via nano_banana_2)
 const SAFETY_BG_IMAGE: Record<string, string> = {
   hands: '/images/guide/safety/hands.webp',
+  supplies: '/images/guide/safety/supplies.webp',
   swab: '/images/guide/safety/swab.webp',
   inspect: '/images/guide/safety/inspect.webp',
   syringe: '/images/guide/safety/syringe.webp',
@@ -50,11 +52,12 @@ const SAFETY_BG_IMAGE: Record<string, string> = {
 // One-line "why this matters" per icon key
 const SAFETY_CONTEXT: Record<string, string> = {
   hands: 'Most contamination happens from unwashed hands. 20 seconds eliminates 99% of harmful bacteria.',
-  swab: 'Alcohol needs 10 seconds to evaporate. Injecting through wet skin can drive it into the tissue.',
-  inspect: 'Peptides are temperature-sensitive. Cloudiness or particles means the vial has degraded, do not use.',
-  syringe: 'A used needle dulls instantly and carries contamination risk. Sterile means single-use, always.',
+  supplies: 'Have it all in reach before you start: vial, fresh syringe, alcohol pad, sharps container. Calm prep means a clean injection.',
+  swab: 'Alcohol needs 10 seconds to evaporate. Injecting through wet skin stings and can drive alcohol into tissue.',
+  inspect: 'Peptides are temperature-sensitive. Cloudiness or particles means the vial has degraded — do not use.',
+  syringe: 'Pinch a 1-inch fold of skin, insert at 45–90°, push slowly over 5–10 seconds, hold 5 seconds before withdrawing. Fast injection bruises.',
   rotate: 'Repeated injections in the same spot cause scar tissue that affects absorption over time.',
-  dispose: 'Recapping needles causes most accidental needle sticks. Into the sharps container immediately.',
+  dispose: 'Recapping needles causes most accidental needle sticks. Straight into the sharps container, never the trash.',
   clock: 'Food reduces sublingual absorption significantly. An empty stomach means faster, fuller onset.',
   pill: 'Swallowing sends the tablet through liver metabolism, cutting bioavailability. Under the tongue only.',
   'no-food': 'Eating or drinking activates saliva flow which washes the dissolving tablet away before absorption.',
@@ -94,14 +97,14 @@ export function SafetyChecklist({ content, onNext, onBack }: SafetyChecklistProp
     <div className="flex flex-col items-center max-w-2xl mx-auto w-full">
       {/* Header */}
       <GuideEyebrow tone="gold" icon={ShieldCheck} className="mb-3">
-        Step 2 · Safety Walkthrough
+        Step 2 · How to Administer Safely
       </GuideEyebrow>
 
       <h2
         className="font-cormorant text-white text-2xl sm:text-3xl text-center mb-6"
         style={{ fontWeight: 400 }}
       >
-        Before you administer
+        The full walkthrough
       </h2>
 
       {/* Step dots */}

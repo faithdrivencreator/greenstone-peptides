@@ -23,11 +23,19 @@ export function StepEducation({ goal, onComplete, onBack }: StepEducationProps) 
     return <HowItWorks goal={goal} content={content} onNext={() => setPanel('safety')} />;
   }
 
+  // Injectable goals merge safety + administration into the single
+  // SafetyChecklist walkthrough — no separate tutorial step. ODT and nasal
+  // routes still get their short tutorial panel because that content is unique.
+  const hasTutorial =
+    content.tutorialSteps.length > 0 ||
+    !!content.oralInstructions ||
+    !!content.nasalInstructions;
+
   if (panel === 'safety') {
     return (
       <SafetyChecklist
         content={content}
-        onNext={() => setPanel('tutorial')}
+        onNext={() => (hasTutorial ? setPanel('tutorial') : onComplete())}
         onBack={() => setPanel('how-it-works')}
       />
     );
