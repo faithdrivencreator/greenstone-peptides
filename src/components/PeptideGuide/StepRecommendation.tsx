@@ -2,9 +2,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FlaskConical, ShoppingCart, ArrowRight, Package } from 'lucide-react';
+import { FlaskConical, FileText, ArrowRight, Package } from 'lucide-react';
 import type { Product } from '@/types';
-import { useCart } from '@/context/CartContext';
 
 interface StepRecommendationProps {
   products: Product[];
@@ -12,17 +11,6 @@ interface StepRecommendationProps {
 }
 
 export function StepRecommendation({ products, onBack }: StepRecommendationProps) {
-  const { addItem, openCart } = useCart();
-
-  function handleAddToCart(product: Product) {
-    addItem(product);
-    openCart();
-  }
-
-  function handleStartProtocol() {
-    products.forEach((p) => addItem(p));
-    openCart();
-  }
 
   if (products.length === 0) {
     return (
@@ -58,7 +46,7 @@ export function StepRecommendation({ products, onBack }: StepRecommendationProps
       </h2>
       <p className="text-cream-dim mb-10 text-center max-w-lg">
         Based on your goal and budget, here&apos;s exactly what we recommend to start with.
-        Every formulation is compounded to order: plan on about two weeks from checkout to your
+        Every formulation is compounded to order: plan on about two weeks from approval to your
         door (5–7 business days in the pharmacy, plus 3–5 business days shipping).
       </p>
 
@@ -109,13 +97,13 @@ export function StepRecommendation({ products, onBack }: StepRecommendationProps
                   <span className="font-cormorant text-gold text-xl">
                     ${product.price?.toFixed(2)}
                   </span>
-                  <button
-                    onClick={() => handleAddToCart(product)}
+                  <Link
+                    href={`/shop/${product.slug.current}`}
                     className="btn btn-primary !py-2 !px-4 !text-xs"
                   >
-                    <ShoppingCart className="w-3.5 h-3.5" />
-                    Add to Cart
-                  </button>
+                    <FileText className="w-3.5 h-3.5" />
+                    Request Rx
+                  </Link>
                 </div>
               </div>
             </div>
@@ -130,14 +118,13 @@ export function StepRecommendation({ products, onBack }: StepRecommendationProps
         </Link>
       </p>
 
-      <button
-        type="button"
-        onClick={handleStartProtocol}
+      <Link
+        href={`/shop/${products[0].slug.current}`}
         className="btn btn-solid group flex items-center gap-3 !px-10 !py-4 !text-lg hover:gap-4 transition-[gap] duration-200"
       >
-        Start My Protocol
+        Request My Protocol
         <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-      </button>
+      </Link>
 
       <button onClick={onBack} className="mt-6 text-cream-dim/50 hover:text-gold text-sm transition-colors">
         ← Revise my answers
