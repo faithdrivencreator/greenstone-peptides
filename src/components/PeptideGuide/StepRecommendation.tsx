@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FlaskConical, FileText, ArrowRight, Package } from 'lucide-react';
+import { FlaskConical, Plus, ArrowRight, Package } from 'lucide-react';
 import type { Product } from '@/types';
+import { useCart } from '@/context/CartContext';
 
 interface StepRecommendationProps {
   products: Product[];
@@ -11,6 +12,16 @@ interface StepRecommendationProps {
 }
 
 export function StepRecommendation({ products, onBack }: StepRecommendationProps) {
+  const { addItem, openCart } = useCart();
+
+  function handleAdd(p: Product) {
+    addItem(p);
+  }
+
+  function handleAddAll() {
+    products.forEach((p) => addItem(p));
+    openCart();
+  }
 
   if (products.length === 0) {
     return (
@@ -97,13 +108,14 @@ export function StepRecommendation({ products, onBack }: StepRecommendationProps
                   <span className="font-cormorant text-gold text-xl">
                     ${product.price?.toFixed(2)}
                   </span>
-                  <Link
-                    href={`/shop/${product.slug.current}`}
+                  <button
+                    type="button"
+                    onClick={() => handleAdd(product)}
                     className="btn btn-primary !py-2 !px-4 !text-xs"
                   >
-                    <FileText className="w-3.5 h-3.5" />
+                    <Plus className="w-3.5 h-3.5" />
                     Request Rx
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -118,13 +130,14 @@ export function StepRecommendation({ products, onBack }: StepRecommendationProps
         </Link>
       </p>
 
-      <Link
-        href={`/shop/${products[0].slug.current}`}
+      <button
+        type="button"
+        onClick={handleAddAll}
         className="btn btn-solid group flex items-center gap-3 !px-10 !py-4 !text-lg hover:gap-4 transition-[gap] duration-200"
       >
         Request My Protocol
         <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-      </Link>
+      </button>
 
       <button onClick={onBack} className="mt-6 text-cream-dim/50 hover:text-gold text-sm transition-colors">
         ← Revise my answers

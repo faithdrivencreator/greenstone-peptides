@@ -6,6 +6,7 @@ import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { CartProvider } from '@/context/CartContext';
+import { PrescriptionRequestDrawer } from '@/components/PrescriptionRequestDrawer';
 import { ExitIntentPopup } from '@/components/ExitIntentPopup';
 import { AgeGate } from '@/components/AgeGate';
 import { ChatWidget } from '@/components/ChatWidget';
@@ -129,6 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SchemaOrg schema={organizationSchema} />
         <CartProvider>
           <Navigation />
+          <PrescriptionRequestDrawer />
           <ExitIntentPopup />
           <main className="relative z-10 pt-24">{children}</main>
           <ChatWidget />

@@ -3,9 +3,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Plus } from 'lucide-react';
 import type { Product } from '@/types';
 import { productImageUrl } from '@/lib/product-image';
+import { useCart } from '@/context/CartContext';
 
 interface ProductCardProps {
   product: Product;
@@ -21,6 +22,7 @@ const FORMAT_LABEL: Record<string, string> = {
 
 export function ProductCard({ product }: ProductCardProps) {
   const imageUrl = productImageUrl(product.image);
+  const { addItem } = useCart();
 
   return (
     <article className="card-glass group flex flex-col !p-0 overflow-hidden">
@@ -99,12 +101,14 @@ export function ProductCard({ product }: ProductCardProps) {
             >
               Details <ArrowUpRight size={12} />
             </Link>
-            <Link
-              href={`/shop/${product.slug.current}`}
-              className="btn btn-primary !py-2 !px-4 !text-xs"
+            <button
+              type="button"
+              onClick={() => addItem(product)}
+              className="btn btn-primary !py-2 !px-4 !text-xs flex items-center gap-1.5"
             >
+              <Plus size={11} />
               Request Rx
-            </Link>
+            </button>
           </div>
         </div>
       </div>

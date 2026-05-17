@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-import { Menu, X, Lock } from 'lucide-react';
+import { Menu, X, Lock, ClipboardList } from 'lucide-react';
+import { useCart } from '@/context/CartContext';
 
 const NAV_LINKS = [
   { href: '/shop', label: 'Shop' },
@@ -20,6 +21,7 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
   const pathname = usePathname();
+  const { totalItems, openCart } = useCart();
 
   function handleTouchStart(e: React.TouchEvent) {
     touchStartRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
@@ -100,6 +102,20 @@ export function Navigation() {
             })}
           </ul>
 
+          {/* Request basket icon, desktop */}
+          <button
+            onClick={openCart}
+            className="hidden lg:inline-flex relative p-2 text-cream-dim hover:text-gold transition-colors"
+            aria-label={`Open prescription request${totalItems > 0 ? `, ${totalItems} items` : ''}`}
+          >
+            <ClipboardList size={20} />
+            {totalItems > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 w-[18px] h-[18px] bg-emerald text-obsidian text-[9px] font-bold rounded-full flex items-center justify-center font-jetbrains leading-none">
+                {totalItems > 9 ? '9+' : totalItems}
+              </span>
+            )}
+          </button>
+
           {/* Wholesale login, desktop */}
           <Link
             href="/wholesale/login"
@@ -113,6 +129,20 @@ export function Navigation() {
           <Link href="/contact" className="hidden lg:inline-flex btn btn-primary">
             Get Started
           </Link>
+
+          {/* Request basket icon, mobile */}
+          <button
+            onClick={openCart}
+            className="relative p-2 text-cream-dim hover:text-gold transition-colors lg:hidden"
+            aria-label={`Open prescription request${totalItems > 0 ? `, ${totalItems} items` : ''}`}
+          >
+            <ClipboardList size={20} />
+            {totalItems > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 w-[18px] h-[18px] bg-emerald text-obsidian text-[9px] font-bold rounded-full flex items-center justify-center font-jetbrains leading-none">
+                {totalItems > 9 ? '9+' : totalItems}
+              </span>
+            )}
+          </button>
 
           {/* Mobile toggle */}
           <button

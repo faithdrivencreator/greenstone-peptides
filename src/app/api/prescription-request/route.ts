@@ -23,11 +23,10 @@ const FDA_DISCLAIMER =
   'Research peptides for laboratory and research use. Not for human consumption.';
 
 function makeRef() {
-  // 8-char uppercase ref, matches the order-ref style used elsewhere
   return Math.random().toString(36).slice(2, 10).toUpperCase();
 }
 
-function escape(s: string) {
+function escape(s: unknown) {
   return String(s ?? '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -36,80 +35,136 @@ function escape(s: string) {
     .replace(/'/g, '&#39;');
 }
 
-interface IncomingBody {
-  name?: string;
-  email?: string;
-  phone?: string;
+interface RequestItem {
+  productId?: string;
   productName?: string;
   productSlug?: string;
   productStrength?: string;
   productSize?: string;
   productFormat?: string;
+  productCategory?: string;
   productPrice?: number;
   quantity?: number;
-  notes?: string;
+  reasonLabel?: string;
+  reasonText?: string;
+}
+
+interface IncomingBody {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  phone?: string;
+  globalNotes?: string;
+  items?: RequestItem[];
 }
 
 export async function POST(req: NextRequest) {
   try {
     const data = (await req.json()) as IncomingBody;
-    const name = (data.name || '').trim();
+
+    const firstName = (data.firstName || '').trim();
+    const lastName = (data.lastName || '').trim();
     const email = (data.email || '').trim();
     const phone = (data.phone || '').trim();
-    const productName = (data.productName || '').trim();
-    const productSlug = (data.productSlug || '').trim();
-    const productStrength = (data.productStrength || '').trim();
-    const productSize = (data.productSize || '').trim();
-    const productFormat = (data.productFormat || '').trim();
-    const productPrice =
-      typeof data.productPrice === 'number' ? data.productPrice : undefined;
-    const quantity = Math.max(1, Math.min(10, Number(data.quantity) || 1));
-    const notes = (data.notes || '').trim();
+    const globalNotes = (data.globalNotes || '').trim();
+    const rawItems = Array.isArray(data.items) ? data.items : [];
 
-    if (!name || !email || !productName) {
+    if (!firstName || !lastName || !email) {
       return NextResponse.json(
-        { error: 'Missing required fields (name, email, product).' },
+        { error: 'Missing required fields (first name, last name, email).' },
+        { status: 400 },
+      );
+    }
+    if (rawItems.length === 0) {
+      return NextResponse.json(
+        { error: 'Add at least one product to the request.' },
         { status: 400 },
       );
     }
 
-    const reference = makeRef();
-    const firstName = name.split(/\s+/)[0] || name;
-    const variantLine = [productStrength, productSize, productFormat]
-      .filter(Boolean)
-      .join(' · ');
+    const items = rawItems.map((i) => ({
+      productName: (i.productName || '').trim() || 'Unknown product',
+      productSlug: (i.productSlug || '').trim(),
+      productStrength: (i.productStrength || '').trim(),
+      productSize: (i.productSize || '').trim(),
+      productFormat: (i.productFormat || '').trim(),
+      productCategory: (i.productCategory || '').trim(),
+      productPrice: typeof i.productPrice === 'number' ? i.productPrice : undefined,
+      quantity: Math.max(1, Math.min(10, Number(i.quantity) || 1)),
+      reasonLabel: (i.reasonLabel || '').trim(),
+      reasonText: (i.reasonText || '').trim(),
+    }));
 
-    // ─── Internal email to Pete ───────────────────────────────────────
+    const reference = makeRef();
+    const fullName = `${firstName} ${lastName}`.trim();
+
+    const subtotal = items.reduce(
+      (sum, i) => sum + (i.productPrice ?? 0) * i.quantity,
+      0,
+    );
+    const subtotalLine = subtotal > 0 ? `$${subtotal.toFixed(0)}` : '';
+
+    function variantOf(i: typeof items[number]) {
+      return [i.productStrength, i.productSize, i.productFormat].filter(Boolean).join(' · ');
+    }
+
+    // ─── Internal — Pete review ───────────────────────────────────────
+    const internalItemsHtml = items
+      .map((i) => {
+        const variant = variantOf(i);
+        const lineTotal =
+          i.productPrice !== undefined
+            ? ` · subtotal $${(i.productPrice * i.quantity).toFixed(0)}`
+            : '';
+        return `
+          <tr>
+            <td style="padding:12px 14px;border-bottom:1px solid ${BORDER_CREAM};vertical-align:top;">
+              <div style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:17px;line-height:1.2;">${escape(i.productName)}</div>
+              ${variant ? `<div style="font-family:${BODY_FONT};color:${MUTED};font-size:12px;margin-top:3px;">${escape(variant)}</div>` : ''}
+              ${i.productCategory ? `<div style="font-family:${BODY_FONT};color:${MUTED};font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">${escape(i.productCategory)}</div>` : ''}
+              ${i.productSlug ? `<div style="font-family:${BODY_FONT};font-size:11px;margin-top:6px;"><a href="https://greenstonewellness.store/shop/${escape(i.productSlug)}" style="color:${DEEP_GREEN};">/shop/${escape(i.productSlug)}</a></div>` : ''}
+            </td>
+            <td style="padding:12px 14px;border-bottom:1px solid ${BORDER_CREAM};vertical-align:top;text-align:right;font-family:${BODY_FONT};color:${BODY};font-size:13px;white-space:nowrap;">
+              <strong>Qty ${i.quantity}</strong>${i.productPrice !== undefined ? `<br/><span style="color:${MUTED};font-size:12px;">$${i.productPrice.toFixed(0)} ea${lineTotal}</span>` : ''}
+            </td>
+          </tr>
+          ${i.reasonLabel || i.reasonText ? `
+          <tr>
+            <td colspan="2" style="padding:0 14px 14px;border-bottom:1px solid ${BORDER_CREAM};background:#fff;">
+              ${i.reasonLabel ? `<div style="font-family:${BODY_FONT};color:${MUTED};font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Reason: ${escape(i.reasonLabel)}</div>` : ''}
+              ${i.reasonText ? `<div style="font-family:${BODY_FONT};color:${BODY};font-size:13px;line-height:1.5;white-space:pre-wrap;">${escape(i.reasonText)}</div>` : ''}
+            </td>
+          </tr>` : ''}
+        `;
+      })
+      .join('');
+
     const internalHtml = `
 <!doctype html>
 <html><body style="margin:0;padding:0;background:${CREAM};font-family:${BODY_FONT};color:${BODY};">
-  <div style="max-width:600px;margin:0 auto;padding:32px 24px;">
+  <div style="max-width:640px;margin:0 auto;padding:32px 24px;">
     <div style="text-align:center;padding-bottom:20px;border-bottom:1px solid ${BORDER_CREAM};">
       <div style="font-family:${HEADER_FONT};font-size:28px;color:${DEEP_GREEN};letter-spacing:0.5px;">Greenstone Wellness</div>
       <div style="font-family:${BODY_FONT};font-size:11px;color:${MUTED};letter-spacing:3px;text-transform:uppercase;margin-top:4px;">New Prescription Request</div>
     </div>
 
-    <h2 style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:22px;margin:24px 0 8px;">${escape(productName)}</h2>
-    <p style="font-family:${BODY_FONT};color:${MUTED};font-size:12px;letter-spacing:1px;text-transform:uppercase;margin:0 0 16px;">Reference #${reference}</p>
+    <h2 style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:22px;margin:24px 0 6px;">${items.length} item${items.length === 1 ? '' : 's'} · ${escape(fullName)}</h2>
+    <p style="font-family:${BODY_FONT};color:${MUTED};font-size:12px;letter-spacing:1px;text-transform:uppercase;margin:0 0 16px;">Reference #${reference}${subtotalLine ? ` · est. ${subtotalLine}` : ''}</p>
 
-    <table style="width:100%;border-collapse:collapse;margin:8px 0 16px;">
-      <tr><td style="padding:8px 0;border-bottom:1px solid ${BORDER_CREAM};color:${MUTED};font-size:13px;">Product</td><td style="padding:8px 0;border-bottom:1px solid ${BORDER_CREAM};text-align:right;color:${BODY};font-size:13px;"><strong>${escape(productName)}</strong></td></tr>
-      ${variantLine ? `<tr><td style="padding:8px 0;border-bottom:1px solid ${BORDER_CREAM};color:${MUTED};font-size:13px;">Variant</td><td style="padding:8px 0;border-bottom:1px solid ${BORDER_CREAM};text-align:right;color:${BODY};font-size:13px;">${escape(variantLine)}</td></tr>` : ''}
-      <tr><td style="padding:8px 0;border-bottom:1px solid ${BORDER_CREAM};color:${MUTED};font-size:13px;">Quantity</td><td style="padding:8px 0;border-bottom:1px solid ${BORDER_CREAM};text-align:right;color:${BODY};font-size:13px;">${quantity}</td></tr>
-      ${productPrice !== undefined ? `<tr><td style="padding:8px 0;border-bottom:1px solid ${BORDER_CREAM};color:${MUTED};font-size:13px;">List price</td><td style="padding:8px 0;border-bottom:1px solid ${BORDER_CREAM};text-align:right;color:${BODY};font-size:13px;">$${productPrice.toFixed(0)} · subtotal $${(productPrice * quantity).toFixed(0)}</td></tr>` : ''}
-      ${productSlug ? `<tr><td style="padding:8px 0;border-bottom:1px solid ${BORDER_CREAM};color:${MUTED};font-size:13px;">PDP</td><td style="padding:8px 0;border-bottom:1px solid ${BORDER_CREAM};text-align:right;font-size:13px;"><a href="https://greenstonewellness.store/shop/${escape(productSlug)}" style="color:${DEEP_GREEN};">/shop/${escape(productSlug)}</a></td></tr>` : ''}
+    <table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid ${BORDER_CREAM};margin:8px 0 24px;">
+      ${internalItemsHtml}
     </table>
 
     <h3 style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:18px;margin:20px 0 6px;">Customer</h3>
     <table style="width:100%;border-collapse:collapse;">
-      <tr><td style="padding:6px 0;color:${MUTED};font-size:13px;width:120px;">Name</td><td style="padding:6px 0;color:${BODY};font-size:13px;"><strong>${escape(name)}</strong></td></tr>
+      <tr><td style="padding:6px 0;color:${MUTED};font-size:13px;width:140px;">Name</td><td style="padding:6px 0;color:${BODY};font-size:13px;"><strong>${escape(fullName)}</strong></td></tr>
       <tr><td style="padding:6px 0;color:${MUTED};font-size:13px;">Email</td><td style="padding:6px 0;font-size:13px;"><a href="mailto:${escape(email)}" style="color:${DEEP_GREEN};">${escape(email)}</a></td></tr>
-      <tr><td style="padding:6px 0;color:${MUTED};font-size:13px;">Phone</td><td style="padding:6px 0;color:${BODY};font-size:13px;">${escape(phone) || '<span style="color:' + MUTED + ';">not provided</span>'}</td></tr>
+      <tr><td style="padding:6px 0;color:${MUTED};font-size:13px;">Phone</td><td style="padding:6px 0;color:${BODY};font-size:13px;">${phone ? escape(phone) : `<span style="color:${MUTED};">not provided</span>`}</td></tr>
     </table>
 
-    ${notes ? `
-    <h3 style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:18px;margin:20px 0 6px;">Notes</h3>
-    <p style="background:#fff;border-left:3px solid ${DEEP_GREEN};padding:12px 14px;margin:0;color:${BODY};font-size:14px;white-space:pre-wrap;">${escape(notes)}</p>
+    ${globalNotes ? `
+    <h3 style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:18px;margin:20px 0 6px;">Notes from customer</h3>
+    <p style="background:#fff;border-left:3px solid ${DEEP_GREEN};padding:12px 14px;margin:0;color:${BODY};font-size:14px;white-space:pre-wrap;">${escape(globalNotes)}</p>
     ` : ''}
 
     <div style="background:${DEEP_GREEN};color:${CREAM};padding:16px 20px;margin-top:24px;text-align:center;font-family:${MONO_FONT};font-size:12px;letter-spacing:2px;text-transform:uppercase;">
@@ -127,6 +182,21 @@ export async function POST(req: NextRequest) {
 </body></html>`;
 
     // ─── Customer confirmation ────────────────────────────────────────
+    const customerItemsHtml = items
+      .map((i) => {
+        const variant = variantOf(i);
+        return `
+          <tr>
+            <td style="padding:12px 14px;border-bottom:1px solid ${BORDER_CREAM};vertical-align:top;">
+              <div style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:17px;line-height:1.2;">${escape(i.productName)}</div>
+              ${variant ? `<div style="font-family:${BODY_FONT};color:${MUTED};font-size:12px;margin-top:3px;">${escape(variant)}</div>` : ''}
+              ${i.reasonLabel ? `<div style="font-family:${BODY_FONT};color:${MUTED};font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-top:6px;">For: ${escape(i.reasonLabel)}</div>` : ''}
+            </td>
+            <td style="padding:12px 14px;border-bottom:1px solid ${BORDER_CREAM};text-align:right;font-family:${BODY_FONT};color:${BODY};font-size:13px;white-space:nowrap;">Qty ${i.quantity}</td>
+          </tr>`;
+      })
+      .join('');
+
     const customerHtml = `
 <!doctype html>
 <html><body style="margin:0;padding:0;background:${CREAM};font-family:${BODY_FONT};color:${BODY};">
@@ -146,12 +216,9 @@ export async function POST(req: NextRequest) {
       A pharmacist will review your request and reply within <strong>24 hours</strong> with confirmation, dosing notes, and a secure payment link to complete your order. Once payment is received, your formulation enters our compounding queue (5&ndash;7 business days) before shipping in temperature-controlled packaging.
     </p>
 
-    <h3 style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:18px;margin:24px 0 8px;">Your request</h3>
+    <h3 style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:18px;margin:24px 0 8px;">Your request <span style="font-family:${MONO_FONT};font-size:13px;color:${MUTED};letter-spacing:1px;">#${reference}</span></h3>
     <table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid ${BORDER_CREAM};">
-      <tr><td style="padding:10px 14px;border-bottom:1px solid ${BORDER_CREAM};color:${MUTED};font-size:13px;">Reference</td><td style="padding:10px 14px;border-bottom:1px solid ${BORDER_CREAM};text-align:right;font-family:${MONO_FONT};color:${DEEP_GREEN};font-size:13px;letter-spacing:1px;">#${reference}</td></tr>
-      <tr><td style="padding:10px 14px;border-bottom:1px solid ${BORDER_CREAM};color:${MUTED};font-size:13px;">Product</td><td style="padding:10px 14px;border-bottom:1px solid ${BORDER_CREAM};text-align:right;color:${BODY};font-size:13px;"><strong>${escape(productName)}</strong></td></tr>
-      ${variantLine ? `<tr><td style="padding:10px 14px;border-bottom:1px solid ${BORDER_CREAM};color:${MUTED};font-size:13px;">Variant</td><td style="padding:10px 14px;border-bottom:1px solid ${BORDER_CREAM};text-align:right;color:${BODY};font-size:13px;">${escape(variantLine)}</td></tr>` : ''}
-      <tr><td style="padding:10px 14px;color:${MUTED};font-size:13px;">Quantity</td><td style="padding:10px 14px;text-align:right;color:${BODY};font-size:13px;">${quantity}</td></tr>
+      ${customerItemsHtml}
     </table>
 
     <h3 style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:18px;margin:24px 0 8px;">What happens next</h3>
@@ -177,12 +244,15 @@ export async function POST(req: NextRequest) {
   </div>
 </body></html>`;
 
-    // Send both in parallel; surface internal failure but don't block customer ack
+    const productNames = items.map((i) => i.productName).join(' + ');
+    const productNamesShort =
+      productNames.length > 80 ? `${items.length} items` : productNames;
+
     const [internalRes, customerRes] = await Promise.allSettled([
       resend.emails.send({
         from: CONTACT_FROM,
         to: PETE_EMAIL,
-        subject: `Prescription request, ${productName}, ${name} (#${reference})`,
+        subject: `Prescription request, ${productNamesShort}, ${fullName} (#${reference})`,
         html: internalHtml,
         replyTo: email,
       }),
@@ -204,7 +274,10 @@ export async function POST(req: NextRequest) {
 
     if (internalRes.status === 'rejected' && customerRes.status === 'rejected') {
       return NextResponse.json(
-        { error: 'Unable to submit your request right now. Please email support@greenstonewellness.store.' },
+        {
+          error:
+            'Unable to submit your request right now. Please email support@greenstonewellness.store.',
+        },
         { status: 502 },
       );
     }

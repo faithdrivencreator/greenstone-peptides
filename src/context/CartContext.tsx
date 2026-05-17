@@ -13,6 +13,7 @@ export interface CartItem {
   size?: string;
   format?: string;
   slug: string;
+  category?: string;
 }
 
 interface CartContextValue {
@@ -68,6 +69,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
           size: product.size,
           format: product.format,
           slug: product.slug.current,
+          category: product.category?.title,
         },
       ];
     });
