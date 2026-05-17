@@ -3,15 +3,16 @@
 import { motion } from 'framer-motion';
 import { Dna, Zap, ShieldCheck, TrendingUp, FlaskConical, ArrowRight } from 'lucide-react';
 import { OdometerNumber } from './OdometerNumber';
+import { GuideEyebrow, GuideHeading } from './GuidePrimitives';
 
 interface StepWelcomeProps {
   onStart: () => void;
 }
 
 const STATS = [
-  { value: '7,000+', label: 'Naturally occurring peptides identified in the human body' },
-  { value: '15-20%', label: 'Average body weight reduction seen in GLP-1 clinical trials' },
-  { value: '50+', label: 'FDA-approved peptide-based medications currently on the market' },
+  { value: '7,000+', label: 'peptides identified in the human body' },
+  { value: '15-20%', label: 'body weight reduction in GLP-1 trials' },
+  { value: '50+', label: 'FDA-approved peptide medications' },
 ];
 
 const BENEFITS = [
@@ -25,63 +26,65 @@ const BENEFITS = [
 export function StepWelcome({ onStart }: StepWelcomeProps) {
   return (
     <div className="flex flex-col items-center max-w-3xl mx-auto text-center">
-      {/* Header */}
-      <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald/10 border border-emerald/30 text-emerald text-sm font-medium tracking-wider uppercase mb-6" style={{ borderRadius: '4px' }}>
-        <Dna className="w-4 h-4" />
+      <GuideEyebrow icon={Dna} className="mb-6">
         Personalized Protocol Builder
-      </div>
+      </GuideEyebrow>
 
-      <h1 className="font-cormorant text-4xl sm:text-5xl text-white mb-4 leading-tight" style={{ fontWeight: 400 }}>
-        Welcome to Your<br />
-        <em className="italic text-gold">Peptide Journey</em>
-      </h1>
+      <GuideHeading
+        title={
+          <>
+            Welcome to Your<br />
+            <em className="italic text-gold">Peptide Journey</em>
+          </>
+        }
+        subtitle="Same building blocks your body already produces — used to signal your cells to do what they already know how to do, just better."
+        className="mb-10"
+      />
 
-      <p className="text-cream-dim text-lg leading-relaxed mb-8 max-w-2xl">
-        Peptides are short chains of amino acids, the same building blocks your body already produces naturally.
-        They work by signaling your cells to do what they already know how to do, just better.
-        No synthetics forcing reactions. No stimulants overriding your biology. Just precise, targeted support.
-      </p>
-
-      {/* Stats with odometer counters */}
+      {/* Stats — centered text inside centered cards (fixes the off-look) */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full mb-10">
         {STATS.map((stat, i) => (
           <motion.div
             key={stat.value}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 + i * 0.1, type: 'spring', stiffness: 260, damping: 24 }}
-            className="card-glass !p-5 text-left"
+            transition={{ delay: 0.2 + i * 0.08, type: 'spring', stiffness: 260, damping: 24 }}
+            className="card-glass !p-5 flex flex-col items-center text-center"
           >
             <OdometerNumber value={stat.value} className="font-cormorant text-3xl text-emerald mb-2" />
-            <p className="text-cream-dim text-sm leading-snug">{stat.label}</p>
+            <p className="text-cream-dim text-xs leading-snug">{stat.label}</p>
           </motion.div>
         ))}
       </div>
 
-      {/* What peptides can support */}
-      <div className="w-full bg-emerald/[0.05] border border-gold/15 p-6 mb-10" style={{ borderRadius: '8px' }}>
-        <p className="font-jetbrains text-gold text-[0.65rem] uppercase tracking-[0.2em] mb-4 text-center">What peptides can support</p>
-        <div className="flex flex-wrap justify-center gap-3">
+      {/* What peptides can support — eyebrow now uses the shared primitive, perfectly centered */}
+      <div
+        className="w-full card-glass !p-6 mb-10 flex flex-col items-center"
+      >
+        <GuideEyebrow tone="gold" className="mb-5">
+          What peptides can support
+        </GuideEyebrow>
+        <div className="flex flex-wrap justify-center gap-2.5">
           {BENEFITS.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-gold/15 text-cream-dim text-sm" style={{ borderRadius: '4px' }}
+              className="flex items-center gap-2 px-3.5 py-2 bg-white/[0.03] border border-gold/15 text-cream-dim text-xs sm:text-sm"
+              style={{ borderRadius: '4px' }}
             >
-              <Icon className="w-4 h-4 text-emerald" />
+              <Icon className="w-3.5 h-3.5 text-emerald" />
               {label}
             </div>
           ))}
         </div>
       </div>
 
-      {/* How this works */}
-      <p className="text-cream-dim/70 text-sm mb-6">
-        Answer 3 quick questions. We match you to your protocol. You learn exactly how to use it safely.
+      <p className="font-jetbrains text-cream-dim/60 text-[0.65rem] tracking-[0.18em] uppercase mb-5">
+        3 questions · 3 minutes · no account
       </p>
 
       <motion.button
         onClick={onStart}
-        whileHover={{ scale: 1.02, boxShadow: '0 0 24px rgba(201, 169, 110, 0.3)' }}
+        whileHover={{ scale: 1.02, boxShadow: '0 0 24px rgba(111,168,220,0.3)' }}
         whileTap={{ scale: 0.98 }}
         transition={{ type: 'spring', stiffness: 400, damping: 20 }}
         className="btn btn-solid group flex items-center gap-3 !px-10 !py-4 !text-lg hover:gap-4 transition-[gap] duration-200"
@@ -89,10 +92,6 @@ export function StepWelcome({ onStart }: StepWelcomeProps) {
         Begin Your Protocol
         <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
       </motion.button>
-
-      <p className="text-cream-dim/40 font-jetbrains text-[0.65rem] tracking-wider mt-4">
-        Takes about 3 minutes. No account required.
-      </p>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Hand, Droplets, Eye, Pipette, RefreshCw, Trash2,
@@ -9,6 +10,7 @@ import {
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import type { GoalContent } from '@/data/guide-content';
+import { GuideEyebrow } from './GuidePrimitives';
 
 interface SafetyChecklistProps {
   content: GoalContent;
@@ -30,6 +32,21 @@ const SAFETY_ICONS: Record<string, LucideIcon> = {
   store: Thermometer,
 };
 
+// Cinematic action backgrounds (generated via nano_banana_2)
+const SAFETY_BG_IMAGE: Record<string, string> = {
+  hands: '/images/guide/safety/hands.webp',
+  swab: '/images/guide/safety/swab.webp',
+  inspect: '/images/guide/safety/inspect.webp',
+  syringe: '/images/guide/safety/syringe.webp',
+  rotate: '/images/guide/safety/rotate.webp',
+  dispose: '/images/guide/safety/dispose.webp',
+  clock: '/images/guide/safety/clock.webp',
+  pill: '/images/guide/safety/pill.webp',
+  'no-food': '/images/guide/safety/no-food.webp',
+  alert: '/images/guide/safety/alert.webp',
+  store: '/images/guide/safety/store.webp',
+};
+
 // One-line "why this matters" per icon key
 const SAFETY_CONTEXT: Record<string, string> = {
   hands: 'Most contamination happens from unwashed hands. 20 seconds eliminates 99% of harmful bacteria.',
@@ -45,20 +62,6 @@ const SAFETY_CONTEXT: Record<string, string> = {
   store: 'Light and heat degrade ODT formulations rapidly. A cool, dark place preserves full potency.',
 };
 
-const CARD_BG: Record<string, string> = {
-  hands: 'from-emerald-900/40 to-[#0a0f1a]',
-  swab: 'from-cyan-900/40 to-[#0a0f1a]',
-  inspect: 'from-blue-900/40 to-[#0a0f1a]',
-  syringe: 'from-teal-900/40 to-[#0a0f1a]',
-  rotate: 'from-indigo-900/40 to-[#0a0f1a]',
-  dispose: 'from-orange-900/30 to-[#0a0f1a]',
-  clock: 'from-amber-900/30 to-[#0a0f1a]',
-  pill: 'from-violet-900/30 to-[#0a0f1a]',
-  'no-food': 'from-red-900/30 to-[#0a0f1a]',
-  alert: 'from-yellow-900/30 to-[#0a0f1a]',
-  store: 'from-sky-900/30 to-[#0a0f1a]',
-};
-
 export function SafetyChecklist({ content, onNext, onBack }: SafetyChecklistProps) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -67,7 +70,7 @@ export function SafetyChecklist({ content, onNext, onBack }: SafetyChecklistProp
   const isLast = current === items.length - 1;
   const Icon = SAFETY_ICONS[item.icon] ?? ShieldCheck;
   const context = SAFETY_CONTEXT[item.icon] ?? '';
-  const bg = CARD_BG[item.icon] ?? 'from-emerald-900/40 to-[#0a0f1a]';
+  const bgImage = SAFETY_BG_IMAGE[item.icon];
 
   function advance() {
     if (isLast) {
@@ -88,17 +91,21 @@ export function SafetyChecklist({ content, onNext, onBack }: SafetyChecklistProp
   }
 
   return (
-    <div className="flex flex-col items-center max-w-xl mx-auto">
+    <div className="flex flex-col items-center max-w-2xl mx-auto w-full">
       {/* Header */}
-      <div className="flex items-center gap-2 mb-6">
-        <ShieldCheck className="w-4 h-4 text-emerald" />
-        <span className="text-emerald text-xs font-semibold uppercase tracking-widest">
-          Safety Walkthrough
-        </span>
-      </div>
+      <GuideEyebrow tone="gold" icon={ShieldCheck} className="mb-3">
+        Step 2 · Safety Walkthrough
+      </GuideEyebrow>
+
+      <h2
+        className="font-cormorant text-white text-2xl sm:text-3xl text-center mb-6"
+        style={{ fontWeight: 400 }}
+      >
+        Before you administer
+      </h2>
 
       {/* Step dots */}
-      <div className="flex gap-2 mb-8">
+      <div className="flex gap-2 mb-6">
         {items.map((_, i) => (
           <div
             key={i}
@@ -113,52 +120,94 @@ export function SafetyChecklist({ content, onNext, onBack }: SafetyChecklistProp
         ))}
       </div>
 
-      {/* Story card */}
-      <div className="w-full relative overflow-hidden rounded-lg" style={{ minHeight: 380 }}>
+      {/* Story card — full-bleed photographic background */}
+      <div className="w-full relative overflow-hidden rounded-lg border border-white/10" style={{ minHeight: 420 }}>
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={current}
             custom={direction}
-            initial={{ opacity: 0, x: direction * 60 }}
+            initial={{ opacity: 0, x: direction * 40 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: direction * -60 }}
+            exit={{ opacity: 0, x: direction * -40 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className={`w-full rounded-lg bg-gradient-to-br ${bg} border border-white/10 p-8 sm:p-10 flex flex-col items-center text-center`}
+            className="relative w-full"
+            style={{ minHeight: 420 }}
           >
-            {/* Step counter */}
-            <span className="text-cream-dim/40 text-xs uppercase tracking-widest mb-6">
-              {current + 1} of {items.length}
-            </span>
+            {/* Background image — full bleed, Ken Burns slow zoom */}
+            {bgImage && (
+              <motion.div
+                key={`bg-${current}`}
+                initial={{ scale: 1.08 }}
+                animate={{ scale: 1.0 }}
+                transition={{ duration: 7, ease: 'easeOut' }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={bgImage}
+                  alt=""
+                  fill
+                  priority
+                  sizes="(min-width: 640px) 640px, 100vw"
+                  className="object-cover"
+                />
+              </motion.div>
+            )}
 
-            {/* Animated icon */}
-            <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 20, delay: 0.1 }}
-              className="w-24 h-24 rounded-lg bg-emerald/15 border border-emerald/30 flex items-center justify-center mb-6"
-            >
-              <Icon className="w-12 h-12 text-emerald" />
-            </motion.div>
+            {/* Dark gradient overlay for legibility — left-to-right + bottom anchor */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  'linear-gradient(90deg, rgba(10,15,26,0.92) 0%, rgba(10,15,26,0.78) 38%, rgba(10,15,26,0.35) 65%, rgba(10,15,26,0.15) 100%), linear-gradient(0deg, rgba(10,15,26,0.65) 0%, rgba(10,15,26,0) 50%)',
+              }}
+            />
 
-            {/* Safety rule */}
-            <motion.h3
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-white font-bold text-2xl sm:text-3xl leading-tight mb-4"
-            >
-              {item.text}
-            </motion.h3>
+            {/* Subtle emerald vignette edge */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                boxShadow: 'inset 0 0 80px 8px rgba(26,158,110,0.15)',
+              }}
+            />
 
-            {/* Why it matters */}
-            <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-cream-dim text-sm sm:text-base leading-relaxed"
-            >
-              {context}
-            </motion.p>
+            {/* Content — anchored bottom-left so it sits on the dark zone */}
+            <div className="relative z-10 flex flex-col items-start justify-end h-full min-h-[420px] p-8 sm:p-10 max-w-md">
+              {/* Step counter */}
+              <span className="font-jetbrains text-emerald text-[0.6rem] tracking-[0.25em] uppercase mb-4">
+                Step {current + 1} of {items.length}
+              </span>
+
+              {/* Icon chip */}
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 20, delay: 0.15 }}
+                className="w-12 h-12 rounded-md bg-emerald/20 backdrop-blur-sm border border-emerald/40 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(26,158,110,0.35)]"
+              >
+                <Icon className="w-6 h-6 text-emerald" />
+              </motion.div>
+
+              {/* Safety rule */}
+              <motion.h3
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="font-cormorant text-white text-2xl sm:text-3xl leading-tight mb-3"
+                style={{ fontWeight: 500 }}
+              >
+                {item.text}
+              </motion.h3>
+
+              {/* Why it matters */}
+              <motion.p
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="text-cream-dim text-sm sm:text-base leading-relaxed"
+              >
+                {context}
+              </motion.p>
+            </div>
           </motion.div>
         </AnimatePresence>
       </div>
@@ -167,9 +216,9 @@ export function SafetyChecklist({ content, onNext, onBack }: SafetyChecklistProp
       <div className="flex flex-col items-center gap-3 mt-6 w-full">
         <motion.button
           onClick={advance}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-          className="flex items-center gap-2 px-8 py-3.5 bg-emerald text-white font-semibold rounded text-base w-full justify-center hover:bg-emerald/90 transition-colors"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          className="btn btn-solid flex items-center justify-center gap-2 w-full !py-3.5"
         >
           {isLast ? (
             <>
