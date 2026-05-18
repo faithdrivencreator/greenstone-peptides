@@ -140,7 +140,7 @@ export default function PrivacyPage() {
             </li>
             <li className="flex gap-2">
               <span className="text-emerald mt-0.5 shrink-0">•</span>
-              <span>Enforce age verification (18+) requirements</span>
+              <span>Enforce age verification (21+) requirements</span>
             </li>
             <li className="flex gap-2">
               <span className="text-emerald mt-0.5 shrink-0">•</span>
@@ -423,10 +423,10 @@ export default function PrivacyPage() {
             12. Children's Privacy
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            Our Site is not intended for individuals under 18 years of age. We do not
-            knowingly collect personal information from minors. If we become aware that
-            we have collected personal information from a person under 18, we will take
-            steps to delete that information promptly.
+            Our Site is not intended for individuals under 21 years of age. We do not
+            knowingly collect personal information from anyone under that age. If we become
+            aware that we have collected personal information from a person under 21, we will
+            take steps to delete that information promptly.
           </p>
         </div>
 

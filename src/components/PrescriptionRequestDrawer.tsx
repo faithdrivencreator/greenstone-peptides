@@ -399,7 +399,7 @@ export function PrescriptionRequestDrawer() {
                 </label>
 
                 <p className="text-[0.65rem] text-cream-dim/60 leading-relaxed">
-                  By submitting, you confirm you are 18+ and understand that any payment link sent in response will need to be completed before compounding begins. Research peptides for laboratory and research use.
+                  By submitting, you confirm you are 21+ and understand that any payment link sent in response will need to be completed before compounding begins. Research peptides for laboratory and research use.
                 </p>
 
                 {error && (

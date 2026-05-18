@@ -67,10 +67,10 @@ export default function TermsPage() {
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">3. Eligibility</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            You must be at least <strong className="text-cream">18 years of age</strong> to
+            You must be at least <strong className="text-cream">21 years of age</strong> to
             purchase from or use this Site. By using the Site, you represent and warrant that
-            you are 18 years of age or older. We reserve the right to refuse service to
-            anyone who cannot confirm their age or who we believe is a minor.
+            you are 21 years of age or older. We reserve the right to refuse service to
+            anyone who cannot confirm their age or who we believe is under 21.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
             Purchases are available to residents of the{' '}
