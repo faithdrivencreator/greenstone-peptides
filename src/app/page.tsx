@@ -275,50 +275,40 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* ---------- SOCIAL PROOF ---------- */}
+      {/* ---------- QUALITY STANDARDS ---------- */}
       <section className="section-py bg-emerald/[0.06] border-y border-emerald/20">
         <div className="container-gr">
           <header className="text-center mb-12">
-            <p className="eyebrow text-emerald">Patient Outcomes</p>
-            <h2>Clinically verified. Patient approved.</h2>
+            <p className="eyebrow text-emerald">Quality Standards</p>
+            <h2>Third-party tested. USP 797 compounded.</h2>
           </header>
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                quote: 'After 12 weeks on a tirzepatide protocol, I am down 34 pounds. My provider monitored every step. This is not a shortcut, it is medicine done right.',
-                name: 'M. Rivera',
-                detail: 'Miami, FL · Weight Management Protocol',
-                stars: 5,
+                label: 'Sterility',
+                title: 'USP 797 compounded',
+                detail: 'Every batch is produced in an ISO Class 5 cleanroom under USP 797 sterile compounding standards by our licensed US pharmacy partner.',
               },
               {
-                quote: 'The quality difference between Greenstone and what I was using before is night and day. You can feel a properly dosed compound. Everything was consistent from the first vial to the last.',
-                name: 'T. Harmon',
-                detail: 'Atlanta, GA · GH Support Protocol',
-                stars: 5,
+                label: 'Purity Testing',
+                title: 'HPLC verified ≥98%',
+                detail: 'Third-party High-Performance Liquid Chromatography confirms purity on every lot before any vial leaves the lab.',
               },
               {
-                quote: 'Knowing my compounding pharmacy is held to the same sterility standard as a hospital IV prep made all the difference. I have peace of mind I never had with research-grade suppliers.',
-                name: 'Dr. K. Osei',
-                detail: 'Houston, TX · Longevity Protocol',
-                stars: 5,
+                label: 'Identity Confirmation',
+                title: 'Mass spectrometry',
+                detail: 'Independent mass spectrometry verifies molecular weight and structure, with lot-specific data available on request.',
               },
-            ].map((t) => (
-              <div key={t.name} className="card-glass border-emerald/15 flex flex-col">
-                <div className="flex gap-0.5 mb-4">
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <span key={i} className="text-gold text-sm">&#9733;</span>
-                  ))}
-                </div>
-                <p className="text-sm text-cream-dim leading-relaxed italic flex-1">&ldquo;{t.quote}&rdquo;</p>
-                <div className="border-t border-gold/10 pt-4 mt-5">
-                  <p className="text-sm text-cream font-medium">{t.name}</p>
-                  <p className="font-jetbrains text-[0.6rem] tracking-wider uppercase text-cream-dim/60 mt-0.5">{t.detail}</p>
-                </div>
+            ].map((card) => (
+              <div key={card.title} className="card-glass border-emerald/15 flex flex-col">
+                <p className="font-jetbrains text-emerald text-[0.6rem] tracking-[0.25em] uppercase mb-3">{card.label}</p>
+                <p className="font-cormorant text-cream text-2xl leading-tight mb-3">{card.title}</p>
+                <p className="text-sm text-cream-dim leading-relaxed flex-1">{card.detail}</p>
               </div>
             ))}
           </div>
           <p className="text-center text-[0.6rem] text-cream-dim/40 mt-8 font-jetbrains tracking-wide uppercase">
-            Patient outcomes vary. Individual results depend on protocol, compliance, and medical history.
+            All products sold for research and educational use only.
           </p>
         </div>
       </section>

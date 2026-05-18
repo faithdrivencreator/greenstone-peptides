@@ -18,6 +18,7 @@ const RESOURCE_LINKS = [
 ];
 
 const LEGAL_LINKS = [
+  { href: '/research-use-only', label: 'Research Use Only Notice' },
   { href: '/safety', label: 'Safety Information' },
   { href: '/shipping', label: 'Shipping & Returns' },
   { href: '/privacy', label: 'Privacy Policy' },

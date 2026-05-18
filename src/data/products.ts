@@ -327,7 +327,7 @@ export const staticProducts = [
     "imageUrl": "/images/products/10-day-starter-kit.png",
     "imageAlt": "10-Day Starter Kit, Greenstone Wellness",
     "featured": false,
-    "active": true
+    "active": false
   },
   {
     "id": "product-kit-15day",
@@ -352,7 +352,7 @@ export const staticProducts = [
     "imageUrl": "/images/products/15-day-starter-kit.png",
     "imageAlt": "15-Day Starter Kit, Greenstone Wellness",
     "featured": false,
-    "active": true
+    "active": false
   },
   {
     "id": "product-kit-20day",
@@ -377,7 +377,7 @@ export const staticProducts = [
     "imageUrl": "/images/products/20-day-starter-kit.png",
     "imageAlt": "20-Day Starter Kit, Greenstone Wellness",
     "featured": false,
-    "active": true
+    "active": false
   },
   {
     "id": "product-kit-5day",
@@ -402,7 +402,7 @@ export const staticProducts = [
     "imageUrl": "/images/products/5-day-starter-kit.png",
     "imageAlt": "5-Day Starter Kit, Greenstone Wellness",
     "featured": false,
-    "active": true
+    "active": false
   },
   {
     "id": "product-bpc157-10mg",
