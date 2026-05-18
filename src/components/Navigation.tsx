@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { Menu, X, Lock, ClipboardList } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
+import { AccountNavLink } from '@/components/AccountNavLink';
 
 const NAV_LINKS = [
   { href: '/shop', label: 'Shop' },
@@ -116,6 +117,9 @@ export function Navigation() {
             )}
           </button>
 
+          {/* Account link, desktop */}
+          <AccountNavLink variant="desktop" />
+
           {/* Wholesale login, desktop */}
           <Link
             href="/wholesale/login"
@@ -183,6 +187,7 @@ export function Navigation() {
           <Link href="/contact" className="btn btn-primary mt-2">
             Get Started
           </Link>
+          <AccountNavLink variant="mobile" />
           <Link
             href="/wholesale/login"
             className="inline-flex items-center gap-2 font-jetbrains text-xs tracking-widest uppercase text-emerald hover:text-emerald-light transition-colors"

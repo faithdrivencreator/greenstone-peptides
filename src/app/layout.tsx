@@ -10,6 +10,7 @@ import { PrescriptionRequestDrawer } from '@/components/PrescriptionRequestDrawe
 import { ExitIntentPopup } from '@/components/ExitIntentPopup';
 import { AgeGate } from '@/components/AgeGate';
 import { ChatWidget } from '@/components/ChatWidget';
+import { SessionProviderWrapper } from '@/components/SessionProviderWrapper';
 
 const cormorant = Playfair_Display({
   subsets: ['latin'],
@@ -128,14 +129,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           strategy="afterInteractive"
         />
         <SchemaOrg schema={organizationSchema} />
-        <CartProvider>
-          <Navigation />
-          <PrescriptionRequestDrawer />
-          <ExitIntentPopup />
-          <main className="relative z-10 pt-24">{children}</main>
-          <ChatWidget />
-          <Footer />
-        </CartProvider>
+        <SessionProviderWrapper>
+          <CartProvider>
+            <Navigation />
+            <PrescriptionRequestDrawer />
+            <ExitIntentPopup />
+            <main className="relative z-10 pt-24">{children}</main>
+            <ChatWidget />
+            <Footer />
+          </CartProvider>
+        </SessionProviderWrapper>
       </body>
     </html>
   );
