@@ -5,10 +5,14 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { signIn } from 'next-auth/react';
 
+const PHARMACY_URL =
+  process.env.NEXT_PUBLIC_PHARMACY_URL || 'https://bloom.greenstonerx.com';
+
 function LoginForm() {
   const router = useRouter();
   const params = useSearchParams();
   const fromParam = params.get('from') || '/account';
+  const nextParam = params.get('next'); // 'pharmacy' = continue to Bloom after login
   const signupOk = params.get('signup') === 'ok';
 
   const [email, setEmail] = useState('');
@@ -33,6 +37,15 @@ function LoginForm() {
       return;
     }
 
+    // If the user arrived via Order Now (next=pharmacy), forward them to the
+    // pharmacy storefront. Same-tab — opening a new tab post-login is blocked
+    // by popup blockers since the navigation isn't a direct user gesture on
+    // the link itself.
+    if (nextParam === 'pharmacy') {
+      window.location.assign(PHARMACY_URL);
+      return;
+    }
+
     router.push(fromParam);
     router.refresh();
   }
@@ -50,7 +63,10 @@ function LoginForm() {
           </h1>
           <p className="text-cream-dim text-sm leading-relaxed mb-7">
             New to Greenstone?{' '}
-            <Link href="/signup" className="text-emerald hover:text-emerald-light underline-offset-2 hover:underline">
+            <Link
+              href={nextParam === 'pharmacy' ? '/signup?next=pharmacy' : '/signup'}
+              className="text-emerald hover:text-emerald-light underline-offset-2 hover:underline"
+            >
               Create an account
             </Link>.
           </p>
@@ -58,6 +74,12 @@ function LoginForm() {
           {signupOk && (
             <div className="bg-emerald/10 border border-emerald/30 text-emerald text-sm px-4 py-3 mb-5">
               Account created. Sign in to continue.
+            </div>
+          )}
+
+          {nextParam === 'pharmacy' && (
+            <div className="bg-gold/10 border border-gold/30 text-gold text-sm px-4 py-3 mb-5">
+              Sign in to continue to the Greenstone Rx pharmacy.
             </div>
           )}
 

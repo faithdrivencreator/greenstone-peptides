@@ -3,12 +3,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { ArrowUpRight, ShoppingBag } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import type { Product } from '@/types';
 import { productImageUrl } from '@/lib/product-image';
-
-const PHARMACY_URL =
-  process.env.NEXT_PUBLIC_PHARMACY_URL || 'https://bloom.greenstonerx.com';
+import { PharmacyButton } from '@/components/PharmacyButton';
 
 interface ProductCardProps {
   product: Product;
@@ -102,17 +100,15 @@ export function ProductCard({ product }: ProductCardProps) {
             >
               Details <ArrowUpRight size={12} />
             </Link>
-            <a
-              href={PHARMACY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-track="product-card-order"
-              className="btn btn-primary !py-2 !px-4 !text-xs flex items-center gap-1.5"
-              aria-label={`Order ${product.name} from the pharmacy`}
-            >
-              <ShoppingBag size={11} />
-              Order
-            </a>
+            <PharmacyButton
+              label="Order"
+              variant="primary"
+              className="!py-2 !px-4 !text-xs"
+              showIcon
+              showArrow={false}
+              trackId="product-card-order"
+              ariaLabel={`Order ${product.name} from the pharmacy`}
+            />
           </div>
         </div>
       </div>

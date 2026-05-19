@@ -27,10 +27,14 @@ const INITIAL: FormState = {
   accepted_liability: false,
 };
 
+const PHARMACY_URL =
+  process.env.NEXT_PUBLIC_PHARMACY_URL || 'https://bloom.greenstonerx.com';
+
 function SignupForm() {
   const router = useRouter();
   const params = useSearchParams();
   const fromParam = params.get('from') || '/shop';
+  const nextParam = params.get('next'); // 'pharmacy' = forward to Bloom post-signup
 
   const [form, setForm] = useState<FormState>(INITIAL);
   const [submitting, setSubmitting] = useState(false);
@@ -101,11 +105,19 @@ function SignupForm() {
       if (result?.error) {
         // Account was created but auto-sign-in failed — bounce to /login
         // with a success banner; user can sign in manually.
-        window.location.assign('/login?signup=ok');
+        const loginUrl =
+          nextParam === 'pharmacy' ? '/login?signup=ok&next=pharmacy' : '/login?signup=ok';
+        window.location.assign(loginUrl);
         return;
       }
 
-      // Success — go to home page with a full reload (Pete's preference).
+      // Success — if user was funneling toward the pharmacy, take them there.
+      if (nextParam === 'pharmacy') {
+        window.location.assign(PHARMACY_URL);
+        return;
+      }
+
+      // Otherwise home page with a full reload (Pete's preference).
       window.location.assign('/');
     } catch (err) {
       console.error(err);
