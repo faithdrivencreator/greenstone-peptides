@@ -12,7 +12,7 @@ Scraped 2026-05-18 via Playwright. This is the authoritative voice and informati
 |---|---|
 | Tagline | **Medicine, _prescribed_ for you.** |
 | Subtext | Each medication in this store has been selected by GreenstoneWellness.Store for our patients. Read about what each one does, how it works, and whether it's right for you — then request a consult. |
-| Trust badges | **Licensed in FL** · **503A pharmacy** · **Free shipping** |
+| Trust badges | **Licensed in FL** · **503A pharmacy** (do NOT claim "Free shipping" — Bloom shows this in their portal but it isn't actually free; confirm real shipping policy with Pete before surfacing any shipping language) |
 | Footer attribution | Powered by Bloom Health · © 2026 GreenstoneWellness.Store |
 
 This is a **licensed compounding pharmacy with a real physician prescriber**, not a research-chemicals supplier. All language about "research use only" / "not for human consumption" is now wrong and must be replaced.
@@ -208,7 +208,7 @@ Most patients lose 5–10% of starting weight in the first 3 months, 15–20% by
 |---|---|
 | "Licensed in FL" | Yes — surface in hero + footer |
 | "503A pharmacy" | Yes — surface in hero + footer + about |
-| "Free shipping" | Yes — already mentioned, keep |
+| ~~"Free shipping"~~ | **DO NOT REPLICATE.** Pete confirmed shipping isn't actually free; Bloom's claim looks incorrect. Confirm real policy before any shipping language goes back on the site. |
 | "Suggestions only — your physician reviews and approves the final protocol before any medication ships." | Use this exact disclaimer wherever dosing/products appear |
 | "Powered by Bloom Health" footer | Add a similar attribution: "Pharmacy & prescribing by Greenstone Rx" |
 

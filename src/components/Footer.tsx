@@ -18,7 +18,7 @@ const RESOURCE_LINKS = [
 ];
 
 const LEGAL_LINKS = [
-  { href: '/research-use-only', label: 'Research Use Only Notice' },
+  { href: '/research-use-only', label: 'How Compounded Medications Work' },
   { href: '/safety', label: 'Safety Information' },
   { href: '/shipping', label: 'Shipping & Returns' },
   { href: '/privacy', label: 'Privacy Policy' },
@@ -35,7 +35,7 @@ export function Footer() {
             <span className="font-cormorant text-2xl font-medium text-white">Greenstone Wellness</span>
           </div>
           <p className="text-sm text-cream-dim leading-relaxed max-w-xs">
-            USA-made peptide formulations. Third-party tested. Shipped direct to your door.
+            Florida-licensed 503A compounding pharmacy. Physician-prescribed GLP-1, peptide, and oral therapy.
           </p>
           <div className="text-sm text-cream-dim space-y-1 pt-2">
             <p>Miami, Florida</p>
@@ -120,7 +120,7 @@ export function Footer() {
           screening completed at checkout.
         </p>
         <p className="text-[10px] leading-relaxed text-cream-dim/45 max-w-3xl">
-          Statements made on this site have not been evaluated by the Food and Drug Administration. Products sold here are intended for research and educational purposes only and are not intended to diagnose, treat, cure, or prevent any disease.{' '}
+          Compounded medications are prepared by a licensed pharmacy for a specific patient pursuant to a valid prescription. They are not FDA-approved drug products. Individual results vary. Speak with the prescribing physician about whether a given medication is appropriate for you.{' '}
           <Link href="/safety" className="underline underline-offset-2 hover:text-cream-dim transition-colors">
             Read full safety information
           </Link>

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { PharmacyButton } from '@/components/PharmacyButton';
 
 export const metadata: Metadata = {
-  title: 'About Greenstone Wellness | USA-Compounded Quality',
-  description: 'Why Greenstone Wellness: 25+ years of pharmaceutical care, USP 797 sterile compounding, third-party tested, 100% USA-compounded. Learn what makes our peptides different.',
+  title: 'About Greenstone Wellness | A Florida Clinic + 503A Pharmacy',
+  description:
+    'Greenstone Wellness is the clinic-side storefront of Greenstone Rx, a Florida-licensed 503A compounding pharmacy. Physician-prescribed GLP-1, peptide, and oral therapy.',
   alternates: { canonical: '/about' },
 };
 
@@ -14,56 +16,57 @@ export default function AboutPage() {
       <section className="section-py">
         <div className="container-gr max-w-4xl">
           <p className="eyebrow">Our Story</p>
-          <h1>Not All Peptides Are Created Equal</h1>
+          <h1>A clinic, a pharmacy, and a real physician on every order.</h1>
           <p className="mt-8 text-lg text-cream-dim">
-            Over 70% of peptides sold online are synthesized overseas, in facilities with no
-            meaningful oversight, no independent testing, and no accountability. The prices look
-            appealing. The purity rarely matches what's on the label.
+            Greenstone Wellness is the patient-facing clinic of{' '}
+            <strong className="text-cream">Greenstone Rx</strong>, a Florida-licensed
+            503A compounding pharmacy. Every medication you see in our formulary has been
+            selected by our clinic, prescribed by a licensed physician after a health
+            screening, and compounded inside the pharmacy under USP 797 sterile standards.
           </p>
           <p className="mt-6 text-lg text-cream-dim">
-            Greenstone Wellness was built on a different premise: that people who use these
-            compounds deserve pharmaceutical-grade quality, domestic compounding, and the
-            accountability that comes with real USA-licensed pharmacy infrastructure. We've
-            spent 25 years building exactly that.
+            The model is straightforward: you browse our medicines, complete a short
+            health screening, our physician reviews it, and if appropriate, the
+            prescription is filled by the pharmacy and shipped to your door in
+            specialized temperature-controlled packaging.
           </p>
         </div>
       </section>
 
-      {/* USA Compounding, the differentiator */}
+      {/* The 503A explanation */}
       <section className="section-py bg-obsidian-mid/40 border-y border-emerald/20">
         <div className="container-gr max-w-4xl">
-          <p className="eyebrow text-emerald">The Difference</p>
-          <h2>Compounded in the United States. <br className="hidden md:block" />That matters more than you think.</h2>
+          <p className="eyebrow text-emerald">503A · The Pharmacy License</p>
+          <h2>What &ldquo;503A&rdquo; actually means.</h2>
           <p className="mt-6 text-lg text-cream-dim">
-            The vast majority of peptides sold online, regardless of what the label says,
-            originate from bulk synthesis facilities overseas. The raw material arrives, gets
-            repackaged, and ships to your door with a domestic address on the label. The
-            peptide itself was never made here.
-          </p>
-          <p className="mt-6 text-lg text-cream-dim">
-            Every compound we carry is formulated by licensed USA-based compounding pharmacies
-            operating under <strong className="text-cream">USP 797</strong> sterile standards,
-            the same federal guidelines that govern hospital pharmacies. That means independent
-            potency testing, sterility verification, and full chain-of-custody documentation
-            before anything ships.
+            A 503A pharmacy is a compounding pharmacy licensed under section 503A of
+            the Federal Food, Drug, and Cosmetic Act. It is allowed to compound a
+            medication for a specific patient with a valid prescription. That&rsquo;s
+            the legal framework that lets us offer customized GLP-1, peptide, and
+            oral therapy with a real physician&rsquo;s prescription, rather than the
+            unregulated &ldquo;research peptide&rdquo; market that the FDA has spent
+            2026 dismantling.
           </p>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               {
-                stat: '100%',
-                label: 'USA Compounded',
-                detail: 'Every formulation compounded domestically by licensed pharmacy partners. No overseas bulk imports.',
+                stat: 'FL',
+                label: 'State Licensed',
+                detail:
+                  'Greenstone Rx holds a Florida pharmacy license and operates within state and federal compounding regulations.',
               },
               {
                 stat: 'USP 797',
                 label: 'Sterile Standard',
-                detail: 'The same sterility standard required of hospital IV preparations.',
+                detail:
+                  'Compounding happens inside an ISO Class 5 cleanroom — the same sterility bar required of hospital pharmacies.',
               },
               {
-                stat: '25 yrs',
-                label: 'Pharmaceutical Experience',
-                detail: 'Two decades of pharmaceutical compounding operations behind every vial.',
+                stat: 'MD',
+                label: 'Physician Prescribed',
+                detail:
+                  'A licensed prescribing physician reviews every health screening before any medication is compounded or shipped.',
               },
             ].map((item) => (
               <div key={item.stat} className="card-glass border-emerald/20 text-center p-8">
@@ -76,28 +79,37 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why it matters */}
+      {/* Why this model */}
       <section className="section-py">
         <div className="container-gr max-w-4xl">
-          <p className="eyebrow">Why It Matters</p>
-          <h2>Cheap peptides cost more than you think.</h2>
-          <div className="mt-8 grid gap-8 md:grid-cols-2">
+          <p className="eyebrow">Why This Model</p>
+          <h2>The research-peptide era is over.</h2>
+          <p className="mt-6 text-lg text-cream-dim">
+            For years, the same molecules sold legitimately by compounding pharmacies
+            also showed up on the gray market as &ldquo;research compounds&rdquo; with
+            no oversight. The FDA spent 2026 sending warning letters to those sellers
+            and shutting them down. We were never going to operate that way. Greenstone
+            Wellness works through a licensed pharmacy and a licensed physician because
+            that&rsquo;s the only model that protects you.
+          </p>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
             {[
               {
                 t: 'Purity & Potency',
-                b: 'Independent testing of overseas peptide products frequently finds underdosing, contamination, or mislabeled compounds. You may be injecting something entirely different from what the label claims.',
+                b: 'Every lot is independently verified by HPLC (≥98%) and mass spectrometry. The Certificate of Analysis tied to your lot number is available on request.',
               },
               {
                 t: 'Sterility',
-                b: 'Injectable compounds require sterile preparation. Without USP 797 compliance, contamination risks are real. Infections from non-sterile injectables are documented and serious.',
+                b: 'Injectable medications are prepared inside an ISO Class 5 cleanroom under USP 797 standards. Sterility and bacterial endotoxin testing are run on every lot.',
               },
               {
-                t: 'Consistent Results',
-                b: 'Pharmaceutical-grade compounding means consistent potency from vial to vial. Inconsistent raw material leads to inconsistent outcomes, and no way to know which is which.',
+                t: 'Physician Oversight',
+                b: 'A licensed prescribing physician reviews your health screening before a prescription is written. Contraindications get flagged before the order ships.',
               },
               {
-                t: 'Batch Accountability',
-                b: 'Our pharmacy partners maintain full chain-of-custody documentation and Certificates of Analysis for every formulation, available on request. No overseas vendor offers that.',
+                t: 'Real Accountability',
+                b: 'You know who compounded your medication, where it was made, and who prescribed it. That is the difference between a regulated pharmacy and an overseas supplier.',
               },
             ].map((c) => (
               <div key={c.t} className="card-glass">
@@ -109,44 +121,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Quality commitments */}
+      {/* What's in the formulary */}
       <section className="section-py bg-obsidian-mid/40 border-y border-gold/10">
         <div className="container-gr max-w-4xl">
-          <p className="eyebrow">Our Standards</p>
-          <h2>What pharmaceutical-grade actually means.</h2>
-          <ul className="mt-12 grid gap-6 md:grid-cols-2">
-            {[
-              {
-                t: 'USA Compounding',
-                b: 'Every formulation compounded domestically by licensed pharmacy partners. No overseas bulk imports. Ever.',
-              },
-              {
-                t: 'USP 797 Compliance',
-                b: 'Sterile compounding standards verified at every partner facility, the same bar required of hospital pharmacies.',
-              },
-              {
-                t: 'Third-Party Testing',
-                b: 'Every batch independently tested for purity and concentration before it ships. Results available on request.',
-              },
-              {
-                t: 'Batch Traceability',
-                b: 'Certificates of Analysis for every formulation. Full chain-of-custody documentation from compounding to delivery.',
-              },
-              {
-                t: 'Temperature-Controlled Shipping',
-                b: 'Cold-chain packaging and real-time tracking from the compounding facility to your door.',
-              },
-              {
-                t: '25+ Years Experience',
-                b: 'Over two decades of pharmaceutical compounding operations. The infrastructure behind every vial we carry.',
-              },
-            ].map((c) => (
-              <li key={c.t} className="card-glass">
-                <h4 className="font-cormorant text-xl text-white">{c.t}</h4>
-                <p className="text-sm text-cream-dim mt-2">{c.b}</p>
-              </li>
-            ))}
-          </ul>
+          <p className="eyebrow">The Formulary</p>
+          <h2>Three areas. Eleven medications. Selected with intent.</h2>
+          <p className="mt-4 text-lg text-cream-dim">
+            We don&rsquo;t carry everything — we carry the medications our clinic and
+            the pharmacy stand behind. The formulary is divided into three treatment
+            areas: GLP-1 and dual-agonist therapies for weight loss, oral PDE5
+            inhibitors for men&rsquo;s health, and peptide therapy for healing, growth
+            hormone support, metabolism, and skin.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <Link href="/shop" className="btn btn-ghost">Browse the formulary →</Link>
+            <PharmacyButton label="Start a Consult" trackId="about-cta" />
+          </div>
         </div>
       </section>
 
@@ -154,18 +144,14 @@ export default function AboutPage() {
       <section className="section-py">
         <div className="container-gr text-center max-w-2xl">
           <p className="eyebrow">Get Started</p>
-          <h2>Ready to do this right?</h2>
+          <h2>Ready when you are.</h2>
           <p className="mt-4 mx-auto text-cream-dim">
-            Browse the catalog, learn about the science, or reach out to our team.
-            We're here to help you find the right protocol.
+            Browse the formulary, read about each medication, or jump straight into a
+            consult. Questions about how the model works? Reach the clinic any time.
           </p>
           <div className="flex gap-4 justify-center mt-8 flex-wrap">
-            <Link href="/shop" className="btn btn-primary">
-              Shop All Products
-            </Link>
-            <Link href="/contact" className="btn btn-ghost">
-              Contact Us
-            </Link>
+            <PharmacyButton label="Start a Consult" trackId="about-bottom" />
+            <Link href="/contact" className="btn btn-ghost">Contact the Clinic</Link>
           </div>
         </div>
       </section>

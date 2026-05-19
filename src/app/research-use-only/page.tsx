@@ -1,95 +1,110 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { PharmacyButton } from '@/components/PharmacyButton';
 
 export const metadata: Metadata = {
-  title: 'Research Use Only Notice | Greenstone Wellness',
+  title: 'How Compounded Medications Work | Greenstone Wellness',
   description:
-    'All Greenstone Wellness products are sold strictly for research and educational use only. Full disclaimer, regulatory notice, and buyer acknowledgment terms.',
+    'How compounded medications work at Greenstone Wellness: a Florida 503A compounding pharmacy, a licensed prescribing physician, and the patient. The legal framework, the standards, and what to expect.',
   alternates: { canonical: 'https://greenstonewellness.store/research-use-only' },
   robots: { index: true, follow: true },
 };
 
-export default function ResearchUseOnlyPage() {
+export default function HowItWorksPage() {
   return (
     <main className="bg-obsidian min-h-screen">
       <section className="section-py">
         <div className="container-gr max-w-3xl">
           <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-4">
-            // Compliance Notice
+            // How Compounded Medications Work
           </p>
           <h1 className="font-cormorant text-cream text-4xl sm:text-5xl leading-tight mb-6" style={{ fontWeight: 400 }}>
-            Research Use Only
+            Compounded, not research.
           </h1>
           <p className="text-cream-dim text-base sm:text-lg leading-relaxed mb-10">
-            All products sold by Greenstone Wellness are research compounds intended
-            for laboratory and educational use only. The information on this site is
-            provided for scientific and informational purposes and does not constitute
-            medical advice.
+            The medications you see on this site are <strong className="text-cream">compounded prescription drugs</strong>,
+            not research chemicals. They are prescribed by a licensed physician,
+            compounded inside a licensed 503A pharmacy, and shipped directly to the
+            patient. This page explains what that means and how the process works.
           </p>
 
           <div className="space-y-10 text-cream-dim text-[0.95rem] leading-relaxed">
             <section>
               <h2 className="font-cormorant text-cream text-2xl mb-3" style={{ fontWeight: 400 }}>
-                Not for human or animal consumption
+                What a 503A compounding pharmacy is
               </h2>
               <p>
-                The compounds offered through this site are not intended for human or
-                veterinary use, ingestion, injection, inhalation, topical application,
-                or any other route of administration involving a living organism. They
-                are not intended to diagnose, treat, cure, or prevent any disease or
-                medical condition.
+                A 503A pharmacy is a state-licensed compounding pharmacy authorized
+                under section 503A of the Federal Food, Drug, and Cosmetic Act. It
+                may compound medications for a specific patient on receipt of a valid
+                prescription from a licensed prescriber. Greenstone Rx is a 503A
+                pharmacy licensed in Florida.
               </p>
             </section>
 
             <section>
               <h2 className="font-cormorant text-cream text-2xl mb-3" style={{ fontWeight: 400 }}>
-                Regulatory status
+                The physician&rsquo;s role
               </h2>
               <p>
-                These compounds have not been evaluated or approved by the U.S. Food
-                and Drug Administration (FDA) for any clinical use. They are not
-                approved drugs, dietary supplements, or food products. Statements
-                concerning research applications are based on third-party scientific
-                literature and do not constitute medical claims.
+                Every medication in our formulary requires a prescription. Before a
+                prescription is written, a licensed physician reviews your health
+                screening &mdash; the same questionnaire and history a telehealth
+                provider would gather in a video consult. If the medication is
+                appropriate and there are no contraindications, the physician writes
+                the prescription. If it isn&rsquo;t, the physician declines and tells
+                you why.
               </p>
             </section>
 
             <section>
               <h2 className="font-cormorant text-cream text-2xl mb-3" style={{ fontWeight: 400 }}>
-                Buyer responsibility and liability
+                Compounding standards
               </h2>
               <p>
-                By purchasing from this site, the buyer represents that they are a
-                qualified researcher, educator, or otherwise authorized purchaser
-                acquiring these materials for legitimate research or educational
-                purposes. The buyer assumes full responsibility for the safe handling,
-                storage, and lawful use of all compounds purchased and agrees to
-                indemnify Greenstone Wellness against any claim arising from use
-                outside of the intended research context.
+                Compounding happens inside an ISO Class 5 cleanroom under USP 797
+                sterile compounding standards. Every lot is independently verified
+                for potency (HPLC &ge; 98%) and identity (mass spectrometry). Sterile
+                lots receive sterility and bacterial endotoxin testing. Lot-specific
+                Certificates of Analysis are available on request.
               </p>
             </section>
 
             <section>
               <h2 className="font-cormorant text-cream text-2xl mb-3" style={{ fontWeight: 400 }}>
-                Quality testing
+                Shipping
               </h2>
               <p>
-                Every lot is third-party tested. High-Performance Liquid Chromatography
-                (HPLC) verifies purity at ≥98% and mass spectrometry confirms molecular
-                identity. Lot-specific Certificates of Analysis are available on
-                request to verified buyers.
+                Prescriptions ship in specialized medical-grade packaging designed
+                to maintain temperature stability through transit. Packaging
+                requirements vary by formulation; your label and pharmacy
+                communication will specify storage on arrival.
               </p>
             </section>
 
             <section>
               <h2 className="font-cormorant text-cream text-2xl mb-3" style={{ fontWeight: 400 }}>
-                Age and access restriction
+                FDA-approved vs. compounded
               </h2>
               <p>
-                Access to this site is restricted to individuals 21 years of age or
-                older. The acknowledgment presented at the entry of this site is a
-                binding affirmation of the terms on this page and is recorded in your
-                browser session.
+                Brand-name GLP-1 medications like Ozempic and Wegovy are FDA-approved
+                products manufactured at scale. Compounded GLP-1 medications use the
+                same active ingredient, prepared inside a licensed compounding
+                pharmacy for a specific patient with a prescription. The legal,
+                clinical, and regulatory frameworks are different from research
+                chemicals, brand-name pharmaceuticals, and supplements &mdash; this
+                is its own category.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-cormorant text-cream text-2xl mb-3" style={{ fontWeight: 400 }}>
+                Age requirement
+              </h2>
+              <p>
+                The Greenstone Wellness formulary is restricted to patients 21 years
+                of age or older. Verification happens at the start of the pharmacy
+                checkout flow.
               </p>
             </section>
 
@@ -98,17 +113,19 @@ export default function ResearchUseOnlyPage() {
                 Contact
               </h2>
               <p>
-                Questions about this notice, COA requests, or institutional account
-                inquiries can be sent to{' '}
+                Questions about how the model works, lot Certificates of Analysis,
+                or your account can be sent to{' '}
                 <a href="mailto:support@greenstonewellness.store" className="text-gold hover:underline">
                   support@greenstonewellness.store
                 </a>
-                .
+                . Clinical questions about a prescription you&rsquo;ve received go
+                through the pharmacy portal so the prescribing physician sees them.
               </p>
             </section>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-cream-dim/10">
+          <div className="mt-12 pt-8 border-t border-cream-dim/10 flex flex-wrap gap-4 items-center">
+            <PharmacyButton label="Start a Consult" trackId="how-it-works-cta" />
             <Link
               href="/"
               className="font-jetbrains text-[0.7rem] tracking-widest uppercase text-emerald hover:text-emerald-light transition-colors"
@@ -116,10 +133,6 @@ export default function ResearchUseOnlyPage() {
               &larr; Back to Home
             </Link>
           </div>
-
-          <p className="mt-10 font-jetbrains text-[0.55rem] tracking-[0.2em] uppercase text-cream-dim/40 text-center">
-            For Research Use Only · Not For Human Consumption
-          </p>
         </div>
       </section>
     </main>

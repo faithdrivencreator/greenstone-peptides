@@ -11,9 +11,9 @@ import EmailCapture from '@/components/EmailCapture';
 import { PharmacyButton } from '@/components/PharmacyButton';
 
 export const metadata: Metadata = {
-  title: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
+  title: 'Greenstone Wellness | Compounded GLP-1, Peptide & Men\'s Therapy',
   description:
-    'Premium peptide formulations compounded in the USA under USP 797 sterile standards. Third-party tested for potency and purity. Shop semaglutide, tirzepatide, BPC-157, NAD+, and more.',
+    'Compounded GLP-1, peptide, and oral therapy prescribed by a licensed physician and dispensed by a 503A pharmacy in Florida. Browse the formulary, then complete a quick health screening to start.',
   alternates: { canonical: '/' },
 };
 
@@ -69,27 +69,27 @@ export default async function HomePage() {
         <div className="container-gr relative z-10 grid gap-12 lg:grid-cols-[1.1fr_1fr] items-center">
           {/* Left: compressed, conversion-focused copy */}
           <div>
-            <p className="eyebrow text-emerald">USA-Compounded · Third-Party Tested</p>
+            <p className="eyebrow text-emerald">Licensed in FL · 503A Compounding Pharmacy</p>
             <h1 className="font-cormorant">
-              Pharmaceutical-grade
+              Medicine,{' '}
+              <em className="italic text-gold">prescribed</em>
               <br />
-              peptides.{' '}
-              <em className="italic text-gold">Delivered.</em>
+              for you.
             </h1>
             <p className="mt-5 text-base text-cream-dim max-w-lg leading-relaxed">
-              Every formulation compounded to order inside a licensed USA pharmacy.
-              USP 797 sterile standard. Third-party tested for potency and purity,
-              from synthesis to your door.
+              GLP-1, peptide, and oral therapies selected by our clinic and compounded
+              by Greenstone Rx, a licensed 503A pharmacy. A real physician reviews your
+              health screening before any medication ships.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <PharmacyButton label="Order Now" trackId="hero-primary" />
+              <PharmacyButton label="Start a Consult" trackId="hero-primary" />
               <Link href="/shop" className="btn btn-ghost">
-                Browse Catalog →
+                Browse Formulary →
               </Link>
             </div>
             {/* Micro trust row */}
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
-              {['USP 797 Compliant', 'Third-Party Tested', 'Temperature-Controlled Shipping', '25+ Years Pharmaceutical Care'].map((t) => (
+              {['Licensed in FL', '503A Pharmacy', 'Physician-prescribed', 'USP 797 Sterile Compounding'].map((t) => (
                 <span key={t} className="flex items-center gap-1.5 text-xs text-cream-dim/70 font-jetbrains tracking-wide">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald flex-shrink-0" />
                   {t}
@@ -175,10 +175,10 @@ export default async function HomePage() {
         <div className="container-gr">
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-4">
             {[
-              'USA Compounded',
-              'USP 797 Sterile Standard',
-              'Third-Party Tested',
-              'Cold-Chain Shipping',
+              'Florida-Licensed',
+              '503A Compounding Pharmacy',
+              'Physician-Prescribed',
+              'USP 797 Sterile',
             ].map((label) => (
               <span key={label} className="flex items-center gap-3 font-jetbrains text-xs md:text-sm tracking-widest uppercase text-cream/90">
                 <span className="text-emerald font-bold text-base md:text-lg">✓</span>
@@ -307,7 +307,7 @@ export default async function HomePage() {
             ))}
           </div>
           <p className="text-center text-[0.6rem] text-cream-dim/40 mt-8 font-jetbrains tracking-wide uppercase">
-            All products sold for research and educational use only.
+            Dispensed by Greenstone Rx · A licensed Florida 503A compounding pharmacy
           </p>
         </div>
       </section>
@@ -353,10 +353,10 @@ export default async function HomePage() {
           </header>
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: ShieldCheck, title: 'USP Compliant', body: 'Every compound meets USP 795 & 797 standards.' },
-              { icon: FlaskConical, title: 'Quality Assured', body: 'Every batch tested for potency and purity.' },
-              { icon: Thermometer, title: 'Cold-Chain', body: 'Compounded to order. Cold-chain shipped in ~2 weeks.' },
-              { icon: Clock, title: '25 Years', body: 'Deep pharmaceutical expertise.' },
+              { icon: ShieldCheck, title: 'USP 797', body: 'Sterile compounding in an ISO Class 5 cleanroom — the standard for hospital pharmacies.' },
+              { icon: FlaskConical, title: 'Lot-Tested', body: 'Every batch verified for potency (HPLC ≥98%) and identity (mass spectrometry).' },
+              { icon: Thermometer, title: 'Specialized Packaging', body: 'Temperature-controlled, medical-grade packaging maintains integrity from the cleanroom to your door.' },
+              { icon: Clock, title: 'Physician Reviewed', body: 'A licensed prescribing physician reviews every order before it ships.' },
             ].map(({ icon: Icon, title, body }) => (
               <div key={title} className="text-center">
                 <Icon size={32} className="text-emerald mx-auto mb-4" aria-hidden />
@@ -397,7 +397,7 @@ export default async function HomePage() {
               },
               {
                 stat: 'March 2026',
-                label: 'FDA issued formal warning letters to research peptide companies. The "research use only" loophole is effectively dead.',
+                label: 'FDA issued formal warning letters to research peptide companies. The "research use only" loophole is effectively dead — which is why we work through a licensed compounding pharmacy.',
               },
             ].map((item) => (
               <div
@@ -487,10 +487,10 @@ export default async function HomePage() {
           </header>
           <ol className="grid gap-8 md:grid-cols-4">
             {[
-              { n: '01', t: 'Browse', b: 'Explore our full catalog of USA-compounded peptide formulations.' },
-              { n: '02', t: 'Order', b: 'Add to cart and check out securely through our encrypted checkout.' },
-              { n: '03', t: 'Compounded', b: 'Your order is compounded to order by our USA pharmacy partners under USP 797 sterile standards.' },
-              { n: '04', t: 'Delivered', b: 'Cold-chain shipped Priority Mail in 3–5 business days after compounding.' },
+              { n: '01', t: 'Browse the Formulary', b: 'Read about each medication, then click Start a Consult to begin.' },
+              { n: '02', t: 'Verify & Screen', b: 'Confirm your phone number, then complete a short health screening built by the pharmacy.' },
+              { n: '03', t: 'Physician Reviews', b: 'A licensed prescriber reviews your screening and writes the prescription if appropriate.' },
+              { n: '04', t: 'Pharmacy Ships', b: 'Greenstone Rx compounds your prescription to order and ships it directly to you.' },
             ].map((s) => (
               <li key={s.n} className="card-glass border-emerald/20 hover:border-emerald/40">
                 <span className="mono !text-emerald">{s.n}</span>

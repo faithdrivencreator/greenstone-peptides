@@ -41,42 +41,43 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
+    default: 'Greenstone Wellness | Physician-Prescribed GLP-1, Peptide & Men\'s Therapy',
     template: 'Greenstone Wellness | %s',
   },
   description:
-    'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested for potency, sterility, and purity. Temperature-controlled shipping.',
+    'Compounded GLP-1, peptide, and oral therapy prescribed by a licensed physician and dispensed by Greenstone Rx, a Florida 503A pharmacy. Physician-reviewed, USP 797 sterile compounded, specialized temperature-controlled packaging.',
   keywords: [
-    'peptide therapy',
-    'GLP-1',
+    'compounded GLP-1',
+    'compounded semaglutide',
+    'compounded tirzepatide',
     'compounded peptides',
-    'semaglutide',
-    'tirzepatide',
+    'telehealth pharmacy',
+    'Florida 503A pharmacy',
     'BPC-157',
-    'Miami pharmacy',
+    'sermorelin',
   ],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
     siteName: 'Greenstone Wellness',
-    title: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
+    title: 'Greenstone Wellness | Physician-Prescribed GLP-1, Peptide & Men\'s Therapy',
     description:
-      'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Temperature-controlled shipping.',
+      'Compounded medication, prescribed by a licensed physician, dispensed by Greenstone Rx — a Florida-licensed 503A compounding pharmacy.',
     images: [
       {
         url: '/images/hero-lab.png',
         width: 1376,
         height: 768,
-        alt: 'Greenstone Wellness, USA-Compounded Peptide Therapy',
+        alt: 'Greenstone Wellness, Florida 503A Compounding Pharmacy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
+    title: 'Greenstone Wellness | Physician-Prescribed GLP-1, Peptide & Men\'s Therapy',
     description:
-      'Premium peptide therapy compounded in the USA under USP 797 sterile standards. Third-party tested. Temperature-controlled shipping.',
+      'Compounded medication, prescribed by a licensed physician, dispensed by Greenstone Rx — a Florida-licensed 503A compounding pharmacy.',
     images: ['/images/hero-lab.png'],
   },
   robots: { index: true, follow: true },
@@ -94,7 +95,7 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   description:
-    'Premium peptide therapy compounded in the USA under USP 797 sterile standards by licensed pharmacy partners with 25+ years of pharmaceutical care.',
+    'Florida-licensed clinic and 503A compounding pharmacy. Physician-prescribed GLP-1, peptide, and oral therapy, compounded under USP 797 sterile standards.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Miami',
