@@ -89,9 +89,10 @@ export function MaintenancePage() {
           className="font-cormorant text-cream text-4xl sm:text-5xl md:text-6xl leading-[1.05] mb-7"
           style={{ fontWeight: 400 }}
         >
-          Something quietly
+          Something{' '}
+          <em className="italic text-gold">remarkable</em>
           <br />
-          <em className="italic text-gold">remarkable</em> is in the works.
+          is in the works.
         </h1>
 
         {/* Body */}
