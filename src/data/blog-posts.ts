@@ -36,11 +36,15 @@ export const staticBlogPosts = [
 
 <p>Greenstone Peptides sources tesamorelin from USA-origin raw materials, compounds under USP 797 sterile standards, and verifies purity and identity through third-party HPLC and mass spectrometry testing on every batch — so readers can engage with this research from a reliable foundation.</p>
 
+<img src="/blog/tesamorelin-visceral-fat-research-img1-20260518.webp" alt="Scientific process overview flat-lay illustrating tesamorelin mechanism and GHRH signaling pathway" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
 <h2>The Research Landscape Behind Tesamorelin and Visceral Fat</h2>
 
 <p>Visceral adipose tissue is metabolically distinct from subcutaneous fat. It is associated with insulin resistance, elevated inflammatory cytokines, and cardiovascular risk in a way that subcutaneous depots are not. This distinction motivated tesamorelin's development: researchers needed a targeted intervention that could reduce VAT specifically without the systemic risks of direct recombinant HGH use.</p>
 
 <p>The phase 3 tesamorelin trials — conducted across multiple centers in North America — enrolled HIV-positive adults with confirmed excess VAT by CT scan. The pivotal results published in the <em>New England Journal of Medicine</em> in 2007 and followed by a 52-week extension study in 2010 remain the foundational evidence for this peptide. A 2026 review of the peptide research landscape consistently identifies tesamorelin as one of the few GHRH analogs with genuine phase 3 human data from a randomized, blinded trial design.</p>
+
+<img src="/blog/tesamorelin-visceral-fat-research-img2-20260518.webp" alt="Dark editorial still life with molecular model and research journal representing tesamorelin clinical research" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
 
 <h3>FDA Approval and the HIV Lipodystrophy Foundation</h3>
 
@@ -54,6 +58,8 @@ export const staticBlogPosts = [
 </ul>
 
 <p>The phase 3 data gave tesamorelin a degree of clinical rigor that most peptides discussed in compounding and wellness contexts do not have. That evidence base is why clinicians and researchers reference it as a benchmark for GHRH-driven body composition work.</p>
+
+<img src="/blog/tesamorelin-visceral-fat-research-img3-20260518.webp" alt="Macro editorial still life with crystalline structure and notebook evoking molecular precision of GHRH peptide research" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
 
 <h3>The Mechanism: GHRH Signaling and GH Pulsatility</h3>
 
@@ -137,6 +143,8 @@ export const staticBlogPosts = [
 
 <h2>Tesamorelin Research Contexts Across Different Situations</h2>
 
+<img src="/blog/tesamorelin-visceral-fat-research-img4-20260518.webp" alt="Warm editorial still life with research notebook and tea representing thoughtful tesamorelin protocol planning" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
 <p>The research conversation around tesamorelin has expanded beyond its original HIV lipodystrophy population. Understanding which contexts have human data versus which are extrapolation helps frame realistic expectations.</p>
 
 <ul>
@@ -166,6 +174,8 @@ export const staticBlogPosts = [
 </ul>
 
 <h2>Why Sourcing and Compounding Standards Matter for Tesamorelin</h2>
+
+<img src="/blog/tesamorelin-visceral-fat-research-img5-20260518.webp" alt="Clean pharmaceutical precision flat-lay with ampule and testing tools representing sterile compounding standards for tesamorelin" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
 
 <p>Tesamorelin is a 44-amino acid synthetic peptide — considerably larger and more structurally complex than most research peptides. Its correct folded conformation and purity directly affect its ability to bind GHRH receptors with expected affinity. This is not a peptide where a 90% HPLC purity profile is an acceptable tradeoff for a lower price point. Structural degradation or impurity profiles that differ from pharmaceutical-grade Egrifta will produce different pharmacokinetic outcomes — and that uncertainty is not what rigorous research requires.</p>
 
