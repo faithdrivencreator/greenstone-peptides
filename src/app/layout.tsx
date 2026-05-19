@@ -6,11 +6,13 @@ import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { CartProvider } from '@/context/CartContext';
-import { PrescriptionRequestDrawer } from '@/components/PrescriptionRequestDrawer';
 import { ExitIntentPopup } from '@/components/ExitIntentPopup';
 import { AgeGate } from '@/components/AgeGate';
 import { ChatWidget } from '@/components/ChatWidget';
 import { SessionProviderWrapper } from '@/components/SessionProviderWrapper';
+// PrescriptionRequestDrawer is intentionally not rendered — all checkout
+// happens on the pharmacy storefront (Bloom). CartProvider stays so any
+// component that still imports useCart compiles, but the drawer UI is dead.
 
 const cormorant = Playfair_Display({
   subsets: ['latin'],
@@ -132,7 +134,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SessionProviderWrapper>
           <CartProvider>
             <Navigation />
-            <PrescriptionRequestDrawer />
             <ExitIntentPopup />
             <main className="relative z-10 pt-24">{children}</main>
             <ChatWidget />

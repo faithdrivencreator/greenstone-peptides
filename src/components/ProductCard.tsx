@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { ArrowUpRight, Plus } from 'lucide-react';
+import { ArrowUpRight, ShoppingBag } from 'lucide-react';
 import type { Product } from '@/types';
 import { productImageUrl } from '@/lib/product-image';
-import { useCart } from '@/context/CartContext';
+
+const PHARMACY_URL =
+  process.env.NEXT_PUBLIC_PHARMACY_URL || 'https://bloom.greenstonerx.com';
 
 interface ProductCardProps {
   product: Product;
@@ -22,7 +24,6 @@ const FORMAT_LABEL: Record<string, string> = {
 
 export function ProductCard({ product }: ProductCardProps) {
   const imageUrl = productImageUrl(product.image);
-  const { addItem } = useCart();
 
   return (
     <article className="card-glass group flex flex-col !p-0 overflow-hidden">
@@ -101,14 +102,17 @@ export function ProductCard({ product }: ProductCardProps) {
             >
               Details <ArrowUpRight size={12} />
             </Link>
-            <button
-              type="button"
-              onClick={() => addItem(product)}
+            <a
+              href={PHARMACY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-track="product-card-order"
               className="btn btn-primary !py-2 !px-4 !text-xs flex items-center gap-1.5"
+              aria-label={`Order ${product.name} from the pharmacy`}
             >
-              <Plus size={11} />
-              Request Rx
-            </button>
+              <ShoppingBag size={11} />
+              Order
+            </a>
           </div>
         </div>
       </div>
