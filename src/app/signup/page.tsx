@@ -89,7 +89,9 @@ function SignupForm() {
         return;
       }
 
-      // Auto sign in
+      // Auto sign in — then HARD navigate so the session cookie is sent on
+      // the next request (router.push doesn't always propagate the cookie
+      // before middleware runs, which causes the form to look stuck).
       const result = await signIn('credentials', {
         email: form.email,
         password: form.password,
@@ -97,13 +99,14 @@ function SignupForm() {
       });
 
       if (result?.error) {
-        // Signup worked but sign-in failed — send them to login
-        router.push('/login?signup=ok');
+        // Account was created but auto-sign-in failed — bounce to /login
+        // with a success banner; user can sign in manually.
+        window.location.assign('/login?signup=ok');
         return;
       }
 
-      router.push(fromParam);
-      router.refresh();
+      // Success — go to home page with a full reload (Pete's preference).
+      window.location.assign('/');
     } catch (err) {
       console.error(err);
       setError('Network error. Please try again.');

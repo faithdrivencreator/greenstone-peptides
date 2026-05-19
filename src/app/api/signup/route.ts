@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import bcrypt from 'bcryptjs';
 import { supabaseAdmin } from '@/lib/db';
-import { sendWelcomeEmail } from '@/lib/auth-emails';
+import { sendWelcomeEmail, sendSignupNotification } from '@/lib/auth-emails';
 
 const SignupSchema = z.object({
   email: z.string().email().max(254),
@@ -93,8 +93,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'signup_failed' }, { status: 500 });
   }
 
-  // Fire welcome email (don't block on it)
+  // Fire welcome email + admin signup notification (don't block on either)
   sendWelcomeEmail({ to: user.email, name: data.full_name }).catch(() => {});
+  sendSignupNotification({
+    email: user.email,
+    fullName: data.full_name,
+    dateOfBirth: data.date_of_birth,
+    ip,
+    userAgent: ua,
+  }).catch(() => {});
 
   return NextResponse.json({ ok: true, email: user.email }, { status: 201 });
 }
