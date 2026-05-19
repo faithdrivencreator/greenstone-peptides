@@ -10,9 +10,12 @@ import { ExitIntentPopup } from '@/components/ExitIntentPopup';
 import { AgeGate } from '@/components/AgeGate';
 import { ChatWidget } from '@/components/ChatWidget';
 import { SessionProviderWrapper } from '@/components/SessionProviderWrapper';
+import { MaintenancePage } from '@/components/MaintenancePage';
 // PrescriptionRequestDrawer is intentionally not rendered — all checkout
 // happens on the pharmacy storefront (Bloom). CartProvider stays so any
 // component that still imports useCart compiles, but the drawer UI is dead.
+
+const MAINTENANCE_MODE = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
 
 const cormorant = Playfair_Display({
   subsets: ['latin'],
@@ -111,6 +114,22 @@ const organizationSchema = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Maintenance takeover — single full-bleed page, no nav/footer/chat/agegate.
+  // Toggle off by setting NEXT_PUBLIC_MAINTENANCE_MODE=false (or removing it)
+  // in Netlify env and redeploying.
+  if (MAINTENANCE_MODE) {
+    return (
+      <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${jetbrains.variable}`}>
+        <head>
+          <meta name="robots" content="noindex,nofollow" />
+        </head>
+        <body className="bg-obsidian text-cream min-h-screen antialiased">
+          <MaintenancePage />
+        </body>
+      </html>
+    );
+  }
+
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${jetbrains.variable}`}>
       <body className="bg-obsidian text-cream min-h-screen antialiased">
