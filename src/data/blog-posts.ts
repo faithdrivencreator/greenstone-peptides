@@ -219,8 +219,8 @@ export const staticBlogPosts = [
 <li><a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/022505s016lbl.pdf" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food and Drug Administration. Egrifta SV (tesamorelin for injection) Prescribing Information. FDA NDA 022505, revised 2023.</a></li>
 <li><a href="https://pubmed.ncbi.nlm.nih.gov/22210745/" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Grunfeld C, et al. "Tesamorelin Produces Sustained Improvements in Body Composition in HIV-Infected Patients at Risk for Cardiovascular Disease." Clin Infect Dis. 2012;55(2):250-259.</a></li>
 </ol>`,
-    heroImage: null,
-    heroAlt: null,
+    heroImage: '/blog/tesamorelin-visceral-fat-research-hero-20260518.webp',
+    heroAlt: 'Clinical editorial still life with research journal and vial illustrating tesamorelin visceral fat research',
     readingTime: 12,
     featured: false,
     seoTitle: "Tesamorelin and Visceral Fat: What the Clinical Data Shows",
