@@ -8,6 +8,7 @@ import { SchemaOrg } from '@/components/SchemaOrg';
 import { ShieldCheck, FlaskConical, Thermometer, Clock, ArrowRight } from 'lucide-react';
 import { productImageUrl } from '@/lib/product-image';
 import EmailCapture from '@/components/EmailCapture';
+import { PharmacyButton } from '@/components/PharmacyButton';
 
 export const metadata: Metadata = {
   title: 'Greenstone Wellness | USA-Compounded Peptide Therapy',
@@ -81,11 +82,9 @@ export default async function HomePage() {
               from synthesis to your door.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/shop" className="btn btn-primary">
-                Shop All Products
-              </Link>
-              <Link href="/about" className="btn btn-ghost">
-                Why Greenstone →
+              <PharmacyButton label="Order Now" trackId="hero-primary" />
+              <Link href="/shop" className="btn btn-ghost">
+                Browse Catalog →
               </Link>
             </div>
             {/* Micro trust row */}

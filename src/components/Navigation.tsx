@@ -7,6 +7,7 @@ import clsx from 'clsx';
 import { Menu, X, Lock, ClipboardList } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { AccountNavLink } from '@/components/AccountNavLink';
+import { PharmacyButton } from '@/components/PharmacyButton';
 
 const NAV_LINKS = [
   { href: '/shop', label: 'Shop' },
@@ -129,10 +130,8 @@ export function Navigation() {
             Distributor Login
           </Link>
 
-          {/* Desktop CTA */}
-          <Link href="/contact" className="hidden lg:inline-flex btn btn-primary">
-            Get Started
-          </Link>
+          {/* Desktop CTA — deep-links to Greenstone Rx Pharmacy (Bloom) */}
+          <PharmacyButton variant="primary" label="Order Now" className="hidden lg:inline-flex" trackId="nav-desktop" />
 
           {/* Request basket icon, mobile */}
           <button
@@ -184,9 +183,7 @@ export function Navigation() {
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn btn-primary mt-2">
-            Get Started
-          </Link>
+          <PharmacyButton variant="primary" label="Order Now" className="mt-2" trackId="nav-mobile" />
           <AccountNavLink variant="mobile" />
           <Link
             href="/wholesale/login"
