@@ -102,30 +102,44 @@ export function Footer() {
         </nav>
       </div>
 
-      <div className="container-gr mt-16 pt-8 border-t border-gold/10 space-y-3">
-        <p className="font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/80">
-          // Powered by{' '}
-          <a
-            href="https://greenstonerx.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-emerald-light transition-colors"
+      <div className="container-gr mt-16 pt-8 border-t border-gold/10 space-y-5">
+        {/* Dense compliance disclaimer — required fine print covering clinic /
+            pharmacy / FDA / trademark / testimonial boundaries. */}
+        <p className="text-[0.65rem] leading-relaxed text-cream-dim/60 max-w-4xl font-jetbrains">
+          The assessment available on Greenstonewellness.store does not create a
+          doctor–patient relationship. Clinical services are provided by
+          Greenstone Rx and partnered networks of U.S.-licensed clinicians who
+          determine prescription eligibility based on medical history and
+          assessment responses. Providers retain full discretion to prescribe or
+          decline compounded medications. Compounded medications offered through
+          Greenstonewellness.store are prepared in 503A licensed compounding
+          pharmacies but are not FDA-approved and have not been evaluated by the
+          FDA for safety, efficacy, or quality. Results may vary and depend on
+          individual adherence, provider guidance, and lifestyle changes.
+          Greenstonewellness.store does not manufacture compounded medications,
+          and product appearance may differ from website images.
+          Greenstonewellness.store partners with licensed U.S. pharmacies to
+          ensure high standards of safety and quality. Ozempic&reg;, Mounjaro&reg;,
+          and Wegovy&reg; are FDA-approved trademarks of their respective owners.
+          All other trademarks are the property of their respective owners.
+          Unless otherwise noted, testimonials reflect similar telehealth brands
+          and patient experiences rather than peer-reviewed clinical studies.{' '}
+          <Link
+            href="/safety"
+            className="underline underline-offset-2 hover:text-cream-dim transition-colors"
           >
-            Greenstone Rx Pharmacy
-          </a>
-        </p>
-        <p className="text-[11px] leading-relaxed text-cream-dim/50 max-w-3xl">
-          All orders are fulfilled by Greenstone Rx, a licensed USA compounding pharmacy.
-          Treatment is prescribed by a licensed physician after a phone-verified health
-          screening completed at checkout.
-        </p>
-        <p className="text-[10px] leading-relaxed text-cream-dim/45 max-w-3xl">
-          Compounded medications are prepared by a licensed pharmacy for a specific patient pursuant to a valid prescription. They are not FDA-approved drug products. Individual results vary. Speak with the prescribing physician about whether a given medication is appropriate for you.{' '}
-          <Link href="/safety" className="underline underline-offset-2 hover:text-cream-dim transition-colors">
             Read full safety information
           </Link>
           .
         </p>
+
+        {/* Co-brand attribution to the pharmacy partner. */}
+        <p className="text-[11px] leading-relaxed text-cream-dim/70">
+          Pharmacy partner:{' '}
+          <strong className="text-emerald font-semibold">Greenstone Rx</strong>{' '}
+          &middot; 503A Compounding Pharmacy &middot; Licensed in Florida
+        </p>
+
         <p className="text-xs text-cream-dim/60">
           &copy; {new Date().getFullYear()} Greenstone Wellness. All rights reserved.
         </p>

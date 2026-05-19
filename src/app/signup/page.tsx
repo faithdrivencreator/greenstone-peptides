@@ -249,8 +249,10 @@ function SignupForm() {
                   className="mt-1 w-4 h-4 accent-emerald cursor-pointer flex-shrink-0"
                 />
                 <span className="text-sm text-cream leading-snug group-hover:text-white transition-colors">
-                  I acknowledge that all products are sold strictly for{' '}
-                  <strong>research and educational use only</strong> — not for human or animal consumption, medical, or veterinary use.
+                  I acknowledge that medications listed here are{' '}
+                  <strong>compounded by a 503A licensed pharmacy</strong> pursuant to a
+                  valid prescription, are not FDA-approved drug products, and require
+                  review by a licensed U.S. clinician before any order is dispensed.
                 </span>
               </label>
 

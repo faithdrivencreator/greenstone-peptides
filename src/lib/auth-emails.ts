@@ -25,7 +25,7 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
         </td></tr>
         <tr><td style="padding:28px 40px;font-size:15px;line-height:1.65;color:#cfc8b3;">
           <p style="margin:0 0 16px 0;">Your account is active. You can now browse the full catalog and submit a prescription request.</p>
-          <p style="margin:0 0 24px 0;">All Greenstone Wellness products are compounded in the USA under USP 797 sterile standards and sold strictly for research and educational use only.</p>
+          <p style="margin:0 0 24px 0;">All medications are compounded in the USA under USP 797 sterile standards by Greenstone Rx, a licensed 503A compounding pharmacy. A licensed clinician reviews every prescription before it ships.</p>
           <p style="margin:0;">
             <a href="${SITE_URL}/shop" style="display:inline-block;background:#5db89a;color:#0a0e0d;text-decoration:none;padding:14px 28px;font-family:'IBM Plex Mono',Menlo,monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;">Browse catalog &rarr;</a>
           </p>

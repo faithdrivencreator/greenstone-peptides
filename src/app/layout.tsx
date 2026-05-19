@@ -3,6 +3,7 @@ import { Playfair_Display, DM_Sans, IBM_Plex_Mono } from 'next/font/google';
 import Script from 'next/script';
 import '@/styles/globals.css';
 import { Navigation } from '@/components/Navigation';
+import { TrustRibbon } from '@/components/TrustRibbon';
 import { Footer } from '@/components/Footer';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { CartProvider } from '@/context/CartContext';
@@ -153,9 +154,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SchemaOrg schema={organizationSchema} />
         <SessionProviderWrapper>
           <CartProvider>
+            <TrustRibbon />
             <Navigation />
             <ExitIntentPopup />
-            <main className="relative z-10 pt-24">{children}</main>
+            <main className="relative z-10 pt-[8.25rem]">{children}</main>
             <ChatWidget />
             <Footer />
           </CartProvider>

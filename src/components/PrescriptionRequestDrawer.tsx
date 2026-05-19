@@ -399,7 +399,7 @@ export function PrescriptionRequestDrawer() {
                 </label>
 
                 <p className="text-[0.65rem] text-cream-dim/60 leading-relaxed">
-                  By submitting, you confirm you are 21+ and understand that any payment link sent in response will need to be completed before compounding begins. Research peptides for laboratory and research use.
+                  By submitting, you confirm you are 21+ and understand that any payment link sent in response will need to be completed before compounding begins. Compounded medications are prepared by a licensed 503A pharmacy pursuant to a valid prescription and are not FDA-approved drug products.
                 </p>
 
                 {error && (
@@ -418,7 +418,7 @@ export function PrescriptionRequestDrawer() {
                   A pharmacist replies within 24 hours with a secure payment link.
                 </p>
                 <p className="text-[0.6rem] leading-relaxed text-cream-dim/40 text-center">
-                  For research and educational use only. Not evaluated by the FDA. Not intended for human consumption.
+                  Compounded by a 503A licensed pharmacy pursuant to a valid prescription. Not an FDA-approved drug. Individual results vary.
                 </p>
               </div>
             </form>

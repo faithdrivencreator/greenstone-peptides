@@ -59,8 +59,8 @@ const faqs = [
     a: 'No. After the guide arrives, expect us to land in your inbox at most once a month, research updates, sourcing notes, and the occasional protocol primer. One-click unsubscribe at the bottom of every email.',
   },
   {
-    q: 'Are these products for human use?',
-    a: 'Greenstone formulations are dispensed by a USA-licensed compounding pharmacy. The guide itself is for research and educational purposes, it does not replace medical advice from a licensed provider, and nothing in it should be read as a clinical recommendation.',
+    q: 'How are these medications prescribed and dispensed?',
+    a: 'Greenstone medications are compounded by a 503A licensed U.S. pharmacy (Greenstone Rx) and prescribed by a licensed U.S. clinician after a health screening. The guide itself is educational content, does not create a doctor-patient relationship, and does not replace medical advice from your own clinician.',
   },
 ];
 

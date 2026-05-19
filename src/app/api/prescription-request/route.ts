@@ -20,7 +20,7 @@ const BODY_FONT = 'Arial, sans-serif';
 const MONO_FONT = 'Courier, monospace';
 
 const FDA_DISCLAIMER =
-  'Research peptides for laboratory and research use. Not for human consumption.';
+  'Compounded medications are prepared by a licensed 503A pharmacy pursuant to a valid prescription. They are not FDA-approved drug products. Individual results may vary.';
 
 function makeRef() {
   return Math.random().toString(36).slice(2, 10).toUpperCase();

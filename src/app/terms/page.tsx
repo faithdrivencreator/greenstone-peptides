@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms of Service | Greenstone Wellness',
   description:
-    'Terms of Service for Greenstone Wellness (DBA Greenstone Wellness). Products are for research and educational purposes only. Not for human consumption.',
+    'Terms of Service for Greenstone Wellness. Compounded medications dispensed by a 503A licensed compounding pharmacy pursuant to a valid prescription from a U.S.-licensed clinician.',
   alternates: {
     canonical: 'https://greenstonewellness.store/terms',
   },
@@ -41,26 +41,31 @@ export default function TermsPage() {
           </p>
         </div>
 
-        <div className="card-glass border-red-500/30">
+        <div className="card-glass border-emerald/30">
           <h2 className="font-cormorant text-2xl text-white mb-4">
-            2. Research Use Only, Critical Notice
+            2. Compounded Medications &amp; Prescription Requirement
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            <strong className="text-cream">ALL PRODUCTS SOLD ON THIS SITE ARE STRICTLY
-            FOR RESEARCH AND EDUCATIONAL PURPOSES ONLY.</strong> They are not intended for
-            human or animal consumption, diagnostic use, or therapeutic application of any kind.
+            Medications listed on this Site are{' '}
+            <strong className="text-cream">compounded by a 503A licensed compounding
+            pharmacy</strong> (Greenstone Rx) for a specific patient pursuant to a valid
+            prescription. A licensed U.S. clinician reviews each patient&apos;s health
+            screening and may prescribe or decline a compounded medication at their sole
+            discretion.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
-            The introduction of any product sold on this Site into the human or animal body,
-            by any route including injection, ingestion, inhalation, or topical application,
-            is <strong className="text-cream">strictly prohibited</strong> and constitutes a
-            misuse of the product. By placing an order, you represent and warrant that you
-            will use all products solely for lawful research and educational purposes.
+            Compounded medications offered through this Site are{' '}
+            <strong className="text-cream">not FDA-approved drug products</strong> and have
+            not been evaluated by the FDA for safety, efficacy, or quality. Individual
+            results vary and depend on adherence, provider guidance, and lifestyle factors.
+            Nothing on this Site is intended to diagnose, treat, cure, or prevent any disease.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
-            These products have not been approved by the U.S. Food and Drug Administration
-            (FDA). They are not intended to diagnose, treat, cure, or prevent any disease or
-            medical condition.
+            The patient assessment available on this Site does not by itself create a
+            doctor–patient relationship. Clinical services are provided by partnered networks
+            of U.S.-licensed clinicians who determine prescription eligibility independently
+            from this Site. Always consult your own healthcare provider before starting,
+            stopping, or changing any medication.
           </p>
         </div>
 
@@ -176,8 +181,8 @@ export default function TermsPage() {
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
             We do not warrant that the Site will be uninterrupted or error-free. We make no
-            warranty regarding the results that may be obtained from the use of our products
-            for research purposes.
+            warranty regarding the clinical results that may be obtained from the use of any
+            compounded medication dispensed through our pharmacy partner.
           </p>
         </div>
 
@@ -198,9 +203,9 @@ export default function TermsPage() {
             IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
-            You expressly acknowledge that any misuse of our products, including introduction
-            into the human or animal body, is at your sole risk, and we disclaim all
-            liability arising from such misuse.
+            You expressly acknowledge that use of any compounded medication outside the
+            prescribing clinician&apos;s directions is at your sole risk, and we disclaim all
+            liability arising from such off-protocol use.
           </p>
         </div>
 

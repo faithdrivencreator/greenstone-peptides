@@ -9,6 +9,8 @@ import { ShieldCheck, FlaskConical, Thermometer, Clock, ArrowRight } from 'lucid
 import { productImageUrl } from '@/lib/product-image';
 import EmailCapture from '@/components/EmailCapture';
 import { PharmacyButton } from '@/components/PharmacyButton';
+import { VerticalsStrip } from '@/components/VerticalsStrip';
+import { TrustGrid } from '@/components/TrustGrid';
 
 export const metadata: Metadata = {
   title: 'Greenstone Wellness | Compounded GLP-1, Peptide & Men\'s Therapy',
@@ -138,6 +140,9 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ---------- FOUR VERTICALS STRIP ---------- */}
+      <VerticalsStrip />
+
       {/* ---------- NEW TO PEPTIDES CTA ---------- */}
       <section className="section-py bg-emerald/[0.08] border-y border-emerald/25 relative overflow-hidden">
         {/* Subtle emerald glow */}
@@ -248,6 +253,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ---------- TELEHEALTH / SHIPPING / QUALITY TRUST GRID ---------- */}
+      <TrustGrid />
 
       {/* ---------- FEATURED PRODUCTS (moved above fold) ---------- */}
       {featured.length > 0 && (
@@ -397,7 +405,7 @@ export default async function HomePage() {
               },
               {
                 stat: 'March 2026',
-                label: 'FDA issued formal warning letters to research peptide companies. The "research use only" loophole is effectively dead — which is why we work through a licensed compounding pharmacy.',
+                label: 'FDA issued formal warning letters to research-peptide companies, ending the gray-market "research use only" workaround. Our model — a licensed 503A compounding pharmacy with a prescribing physician — has always been the regulated path.',
               },
             ].map((item) => (
               <div
