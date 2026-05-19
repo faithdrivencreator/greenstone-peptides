@@ -1,33 +1,29 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
 
 const MAINTENANCE_MODE = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
 
 const PROTECTED_PREFIXES = ['/shop', '/account'];
-
-// Paths that stay reachable during maintenance mode:
-// - Homepage (renders the maintenance takeover)
-// - notify-relaunch API (the email capture endpoint)
 const MAINTENANCE_ALLOWLIST = ['/', '/api/notify-relaunch'];
 
-export default auth((req) => {
+// Maintenance mode handler — plain (no Auth.js wrapper) so it stays light and
+// doesn't load the credentials provider or Supabase admin client in the edge
+// middleware while the site is gated.
+function maintenanceMiddleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
+  const allowed =
+    MAINTENANCE_ALLOWLIST.includes(pathname) ||
+    pathname.startsWith('/api/notify-relaunch');
+  if (allowed) return NextResponse.next();
+  const url = req.nextUrl.clone();
+  url.pathname = '/';
+  url.search = '';
+  return NextResponse.redirect(url);
+}
 
-  // Maintenance mode: rewrite everything not on the allowlist back to /
-  if (MAINTENANCE_MODE) {
-    const allowed =
-      MAINTENANCE_ALLOWLIST.includes(pathname) ||
-      pathname.startsWith('/api/notify-relaunch');
-    if (!allowed) {
-      const url = req.nextUrl.clone();
-      url.pathname = '/';
-      url.search = '';
-      return NextResponse.redirect(url);
-    }
-    return NextResponse.next();
-  }
-
-  // Normal mode: standard /shop + /account gating
+// Normal-mode handler — Auth.js wrapper for the /shop + /account session gate.
+const normalMiddleware = auth((req) => {
+  const { pathname } = req.nextUrl;
   const isProtected = PROTECTED_PREFIXES.some(
     (p) => pathname === p || pathname.startsWith(p + '/'),
   );
@@ -42,7 +38,8 @@ export default auth((req) => {
   return NextResponse.next();
 });
 
+export default MAINTENANCE_MODE ? maintenanceMiddleware : normalMiddleware;
+
 export const config = {
-  // Skip Next.js internals + static assets + the auth API
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|logo.png|robots.txt|sitemap.xml|images|fonts).*)'],
 };
