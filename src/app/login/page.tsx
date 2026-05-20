@@ -4,9 +4,7 @@ import { useState, FormEvent, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { signIn } from 'next-auth/react';
-
-const PHARMACY_URL =
-  process.env.NEXT_PUBLIC_PHARMACY_URL || 'https://bloom.greenstonerx.com';
+import { pharmacyStorefrontUrl } from '@/lib/pharmacy';
 
 function LoginForm() {
   const router = useRouter();
@@ -42,12 +40,12 @@ function LoginForm() {
         return;
       }
 
-      // If the user arrived via Order Now (next=pharmacy), forward them to
-      // the pharmacy storefront. Same-tab — opening a new tab post-login is
-      // blocked by popup blockers since the navigation isn't a direct user
-      // gesture on the link itself.
+      // If the user arrived via "Continue to Pharmacy" (next=pharmacy),
+      // forward them to the full patient storefront URL. Same-tab — opening
+      // a new tab post-login is blocked by popup blockers since the
+      // navigation isn't a direct user gesture on the link itself.
       if (nextParam === 'pharmacy') {
-        window.location.assign(PHARMACY_URL);
+        window.location.assign(pharmacyStorefrontUrl());
         return;
       }
 

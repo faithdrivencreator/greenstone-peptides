@@ -27,8 +27,7 @@ const INITIAL: FormState = {
   accepted_liability: false,
 };
 
-const PHARMACY_URL =
-  process.env.NEXT_PUBLIC_PHARMACY_URL || 'https://bloom.greenstonerx.com';
+import { pharmacyStorefrontUrl } from '@/lib/pharmacy';
 
 function SignupForm() {
   const router = useRouter();
@@ -111,9 +110,11 @@ function SignupForm() {
         return;
       }
 
-      // Success — if user was funneling toward the pharmacy, take them there.
+      // Success — if user was funneling toward the pharmacy, take them
+      // to the full patient storefront URL (NOT the bare Bloom host —
+      // that resolves to the provider portal login).
       if (nextParam === 'pharmacy') {
-        window.location.assign(PHARMACY_URL);
+        window.location.assign(pharmacyStorefrontUrl());
         return;
       }
 

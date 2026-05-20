@@ -2,15 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-
-const PHARMACY_BASE =
-  process.env.NEXT_PUBLIC_PHARMACY_URL || 'https://bloom.greenstonerx.com';
-
-/**
- * Clinic-id for the GreenstoneWellness.Store storefront on Bloom.
- * Mirrored from docs/bloom-storefront-flow.md.
- */
-const BLOOM_CLINIC_ID = '6a0bb254fa53ddc1571c040b';
+import { pharmacyStorefrontUrl } from '@/lib/pharmacy';
 
 type Props = {
   slug: string;
@@ -35,17 +27,21 @@ export function PharmacyDeepLink({ slug }: Props) {
   const { status } = useSession();
   const signedIn = status === 'authenticated';
 
-  const pharmacyUrl = `${PHARMACY_BASE}/dtp/${BLOOM_CLINIC_ID}`;
+  const pharmacyUrl = pharmacyStorefrontUrl();
+  // Signed-out users go to /login?next=pharmacy — the login form sees the
+  // `pharmacy` keyword and resolves the actual storefront URL itself (single
+  // source of truth in src/lib/pharmacy.ts).
+  const loginHref = '/login?next=pharmacy';
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
     if (signedIn) return; // native <a target=_blank> behavior fires
     e.preventDefault();
-    router.push(`/login?next=${encodeURIComponent(pharmacyUrl)}`);
+    router.push(loginHref);
   }
 
   return (
     <a
-      href={signedIn ? pharmacyUrl : `/login?next=${encodeURIComponent(pharmacyUrl)}`}
+      href={signedIn ? pharmacyUrl : loginHref}
       target={signedIn ? '_blank' : undefined}
       rel={signedIn ? 'noopener noreferrer' : undefined}
       onClick={handleClick}
