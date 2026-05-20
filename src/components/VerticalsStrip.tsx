@@ -51,9 +51,10 @@ const VERTICALS: ReadonlyArray<Vertical> = [
 /**
  * VerticalsStrip — the four-vertical browse strip directly under the hero.
  *
- * Each card is a single Link to the gated /shop catalog. Pharmacy deep-links
- * are intentionally absent here — visitors must sign in and select a product
- * before they can deep-link to Greenstone Rx (Bloom).
+ * Each card now links to its `/treatments/<slug>` landing page (the educational
+ * surface that mirrors Bloom's category pages). Visitors read the science
+ * there, browse molecules via the formulary grid, then click into a product
+ * detail page before any pharmacy deep-link surfaces.
  */
 export function VerticalsStrip() {
   return (
@@ -78,10 +79,10 @@ export function VerticalsStrip() {
           {VERTICALS.map((v) => (
             <Link
               key={v.slug}
-              href="/shop"
+              href={`/treatments/${v.slug}`}
               data-track={`vertical-${v.slug}`}
               className="card-glass border-emerald/15 hover:border-emerald/40 transition-colors duration-300 flex flex-col group/vert relative overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald focus-visible:outline-offset-2"
-              aria-label={`Browse ${v.title} formulations`}
+              aria-label={`Learn about ${v.title} treatments`}
             >
               <div className="relative aspect-[4/3] -mx-6 -mt-6 mb-6 overflow-hidden border-b border-emerald/15 bg-obsidian-mid">
                 <Image

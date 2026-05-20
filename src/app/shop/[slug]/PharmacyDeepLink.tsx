@@ -17,63 +17,42 @@ type Props = {
 };
 
 /**
- * Dual CTA on the parent product detail page. Two entry points into the
- * Greenstone Rx (Bloom) storefront:
+ * Single CTA on the parent product detail page. Visitors have already read the
+ * full molecule explainer on our side; this button takes them straight to
+ * Bloom's Lightweight storefront root (`/dtp/<clinic-id>`) so they can add to
+ * cart and run the 4-step intake without going through Bloom's educational
+ * tree again.
  *
- *   1. Continue to Pharmacy → lightweight storefront root. Patient already
- *      decided what they want; we route them straight to checkout.
- *      Bloom's lightweight layout doesn't expose per-product deep URLs,
- *      so this always lands on the root (`/dtp/<clinic-id>`).
+ * The store layout in Bloom MUST be set to Lightweight for this URL to resolve
+ * to the patient catalog. If it's set to Educational, this URL will bounce to
+ * Bloom's provider login. (Pete: flip via dashboard → My Store before unlock.)
  *
- *   2. Use Dose Finder → Bloom's /learn educational hub root. Includes
- *      the BMI calculator and dose-finder sidebar. The /learn root is the
- *      canonical entry — per-molecule paths under /learn aren't reliable.
- *
- * Both are auth-gated through the same /login?next= pattern used in
- * VerticalsStrip. Signed-in users open Bloom in a new tab; everyone else
- * bounces through sign-in first.
+ * Auth-gated via the same /login?next= pattern used elsewhere. Signed-in
+ * users open Bloom in a new tab; signed-out users bounce through sign-in.
  */
 export function PharmacyDeepLink({ slug }: Props) {
   const router = useRouter();
   const { status } = useSession();
   const signedIn = status === 'authenticated';
 
-  const lightweightUrl = `${PHARMACY_BASE}/dtp/${BLOOM_CLINIC_ID}`;
-  const educationalUrl = `${PHARMACY_BASE}/dtp/${BLOOM_CLINIC_ID}/learn`;
+  const pharmacyUrl = `${PHARMACY_BASE}/dtp/${BLOOM_CLINIC_ID}`;
 
-  function makeHandler(href: string) {
-    return (e: React.MouseEvent<HTMLAnchorElement>) => {
-      if (signedIn) return; // native <a target=_blank> behavior fires
-      e.preventDefault();
-      router.push(`/login?next=${encodeURIComponent(href)}`);
-    };
+  function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (signedIn) return; // native <a target=_blank> behavior fires
+    e.preventDefault();
+    router.push(`/login?next=${encodeURIComponent(pharmacyUrl)}`);
   }
 
   return (
-    <div className="flex flex-col sm:flex-row gap-3">
-      {/* Primary — lightweight, direct-to-purchase */}
-      <a
-        href={signedIn ? lightweightUrl : `/login?next=${encodeURIComponent(lightweightUrl)}`}
-        target={signedIn ? '_blank' : undefined}
-        rel={signedIn ? 'noopener noreferrer' : undefined}
-        onClick={makeHandler(lightweightUrl)}
-        data-track={`shop-parent-${slug}-pharmacy-direct`}
-        className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-emerald text-obsidian font-jetbrains text-[0.7rem] tracking-[0.2em] uppercase font-semibold hover:bg-emerald-light transition-colors"
-      >
-        Continue to Pharmacy →
-      </a>
-
-      {/* Secondary — educational, with BMI calc + dose finder */}
-      <a
-        href={signedIn ? educationalUrl : `/login?next=${encodeURIComponent(educationalUrl)}`}
-        target={signedIn ? '_blank' : undefined}
-        rel={signedIn ? 'noopener noreferrer' : undefined}
-        onClick={makeHandler(educationalUrl)}
-        data-track={`shop-parent-${slug}-pharmacy-learn`}
-        className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-emerald/40 text-emerald hover:border-emerald hover:text-emerald-light font-jetbrains text-[0.7rem] tracking-[0.2em] uppercase font-semibold transition-colors"
-      >
-        Use Dose Finder →
-      </a>
-    </div>
+    <a
+      href={signedIn ? pharmacyUrl : `/login?next=${encodeURIComponent(pharmacyUrl)}`}
+      target={signedIn ? '_blank' : undefined}
+      rel={signedIn ? 'noopener noreferrer' : undefined}
+      onClick={handleClick}
+      data-track={`shop-parent-${slug}-pharmacy`}
+      className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald text-obsidian font-jetbrains text-[0.7rem] tracking-[0.2em] uppercase font-semibold hover:bg-emerald-light transition-colors w-full sm:w-auto"
+    >
+      Continue to Pharmacy →
+    </a>
   );
 }

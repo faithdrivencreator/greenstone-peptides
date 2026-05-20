@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { staticProducts } from '@/data/products';
 import { staticBlogPosts } from '@/data/blog-posts';
+import { TREATMENT_AREAS } from '@/data/treatment-areas';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
 
@@ -46,5 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticEntries, ...productEntries, ...blogEntries];
+  const treatmentEntries: MetadataRoute.Sitemap = TREATMENT_AREAS.map((t) => ({
+    url: `${SITE_URL}/treatments/${t.category}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+
+  return [...staticEntries, ...productEntries, ...blogEntries, ...treatmentEntries];
 }

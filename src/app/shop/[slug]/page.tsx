@@ -3,8 +3,14 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SchemaOrg } from '@/components/SchemaOrg';
-import { PARENT_PRODUCTS, getParentBySlug, fromPrice } from '@/data/parent-products';
+import {
+  PARENT_PRODUCTS,
+  getParentBySlug,
+  fromPrice,
+  type ExpectationStage,
+} from '@/data/parent-products';
 import { PharmacyDeepLink } from './PharmacyDeepLink';
+import { FAQAccordion } from '@/components/FAQAccordion';
 
 interface PageProps {
   params: { slug: string };
@@ -22,6 +28,19 @@ export function generateMetadata({ params }: PageProps): Metadata {
     description: product.shortDescription,
     alternates: { canonical: `/shop/${params.slug}` },
   };
+}
+
+const CATEGORY_LABELS: Record<string, string> = {
+  'weight-loss': 'Weight Loss',
+  peptides: 'Peptides',
+  longevity: 'Longevity',
+  'mens-ed': "Men's ED",
+};
+
+function isStageArray(
+  whatToExpect: string | ExpectationStage[],
+): whatToExpect is ExpectationStage[] {
+  return Array.isArray(whatToExpect);
 }
 
 export default function ParentDetailPage({ params }: PageProps) {
@@ -67,12 +86,14 @@ export default function ParentDetailPage({ params }: PageProps) {
           <nav className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-cream-dim/70 mb-10" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-emerald transition-colors">Home</Link>
             <span className="mx-2 text-emerald/30">/</span>
-            <Link href="/shop" className="hover:text-emerald transition-colors">Formulary</Link>
+            <Link href={`/treatments/${product.category}`} className="hover:text-emerald transition-colors">
+              {CATEGORY_LABELS[product.category] ?? product.category}
+            </Link>
             <span className="mx-2 text-emerald/30">/</span>
             <span className="text-cream">{product.name}</span>
           </nav>
 
-          {/* Hero */}
+          {/* ---------- HERO ---------- */}
           <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] items-start">
             <div className="relative aspect-square overflow-hidden bg-obsidian-mid border border-emerald/20">
               <Image
@@ -87,10 +108,12 @@ export default function ParentDetailPage({ params }: PageProps) {
 
             <div>
               <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-3">
-                // {product.category.replace('-', ' ')}
+                // {CATEGORY_LABELS[product.category] ?? product.category}
               </p>
               <h1 className="font-cormorant text-display-lg text-white leading-tight">{product.name}</h1>
-              <p className="mt-5 text-base text-cream-dim leading-relaxed">{product.shortDescription}</p>
+              <p className="mt-5 text-base text-cream-dim leading-relaxed italic">
+                {product.shortDescription}
+              </p>
 
               <p className="mt-6 text-sm text-cream/85 leading-relaxed">{product.longDescription}</p>
 
@@ -102,25 +125,49 @@ export default function ParentDetailPage({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
-
-              {/* Dual CTA — deep links to Greenstone Rx (Bloom).
-                    · "Continue to Pharmacy" → lightweight storefront root for
-                      patients ready to buy.
-                    · "Use Dose Finder" → educational page with BMI calc and
-                      dose-finder sidebar for patients still choosing a dose.
-                  Both routed through the same /login?next= auth gate. */}
-              <div className="mt-10">
-                <PharmacyDeepLink slug={product.slug} />
-                <p className="mt-4 text-xs text-cream-dim/60 leading-relaxed max-w-md">
-                  Already know what you need? <strong className="text-cream">Continue to Pharmacy.</strong>{' '}
-                  Still picking a dose? Use the <strong className="text-cream">Dose Finder</strong> for personalized recommendations.
-                </p>
-              </div>
             </div>
           </div>
 
-          {/* Variant pricing table */}
-          <div className="mt-20 max-w-4xl mx-auto">
+          {/* ---------- EDUCATIONAL CONTENT BLOCKS ---------- */}
+          <div className="mt-24 max-w-3xl mx-auto space-y-14">
+            <ContentBlock heading="How it works" body={product.howItWorks} />
+            <ContentBlock heading="Who it's for" body={product.whoItsFor} />
+
+            {/* What to expect — supports string OR multi-stage array */}
+            <section>
+              <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-3">
+                // What to expect
+              </p>
+              <h2 className="font-cormorant text-3xl text-cream leading-tight mb-5" style={{ fontWeight: 400 }}>
+                Your timeline
+              </h2>
+              {isStageArray(product.whatToExpect) ? (
+                <ol className="space-y-5 border-l border-emerald/30 pl-6">
+                  {product.whatToExpect.map((stage) => (
+                    <li key={stage.phase}>
+                      <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-1.5">
+                        {stage.phase}
+                      </p>
+                      <p className="text-sm text-cream-dim leading-relaxed">
+                        {stage.detail}
+                      </p>
+                    </li>
+                  ))}
+                </ol>
+              ) : (
+                <p className="text-base text-cream-dim leading-relaxed">{product.whatToExpect}</p>
+              )}
+            </section>
+
+            <ContentBlock heading="Who should not take this" body={product.contraindications} />
+            <ContentBlock
+              heading="Typical starting dose"
+              body={product.startingDoseGuidance}
+            />
+          </div>
+
+          {/* ---------- VARIANT PRICING TABLE ---------- */}
+          <div className="mt-24 max-w-4xl mx-auto">
             <header className="mb-6">
               <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-2">
                 // Available options
@@ -161,8 +208,38 @@ export default function ParentDetailPage({ params }: PageProps) {
             </p>
           </div>
 
+          {/* ---------- FAQ ---------- */}
+          {product.faq && product.faq.length > 0 && (
+            <div className="mt-24 max-w-3xl mx-auto">
+              <header className="mb-8">
+                <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-3">
+                  // Common questions
+                </p>
+                <h2 className="font-cormorant text-3xl text-cream" style={{ fontWeight: 400 }}>
+                  Frequently asked
+                </h2>
+              </header>
+              <FAQAccordion items={product.faq} />
+            </div>
+          )}
+
+          {/* ---------- FINAL CTA ---------- */}
+          <div className="mt-24 max-w-3xl mx-auto text-center">
+            <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-4">
+              // Ready when you are
+            </p>
+            <h2 className="font-cormorant text-3xl sm:text-4xl text-cream leading-tight mb-6" style={{ fontWeight: 400 }}>
+              Start your prescription.
+            </h2>
+            <p className="text-sm text-cream-dim leading-relaxed max-w-md mx-auto mb-8">
+              You'll complete a short health screening on the pharmacy storefront.
+              A licensed physician reviews every order before any medication ships.
+            </p>
+            <PharmacyDeepLink slug={product.slug} />
+          </div>
+
           {/* Compliance footer */}
-          <p className="mt-16 text-[10px] leading-relaxed text-cream-dim/50 max-w-3xl mx-auto text-center">
+          <p className="mt-20 text-xs leading-relaxed text-cream-dim/70 max-w-3xl mx-auto text-center">
             Compounded by a 503A licensed pharmacy pursuant to a valid prescription. Not an FDA-approved drug. Not intended to diagnose, treat, cure, or prevent any disease. Individual results vary.{' '}
             <Link href="/safety" className="underline underline-offset-2 hover:text-cream transition-colors">
               Full disclaimer
@@ -172,5 +249,20 @@ export default function ParentDetailPage({ params }: PageProps) {
         </div>
       </section>
     </>
+  );
+}
+
+/** Standard content block used by How it works / Who it's for / Contraindications / Dose guidance. */
+function ContentBlock({ heading, body }: { heading: string; body: string }) {
+  return (
+    <section>
+      <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-3">
+        // {heading}
+      </p>
+      <h2 className="font-cormorant text-3xl text-cream leading-tight mb-5" style={{ fontWeight: 400 }}>
+        {heading}
+      </h2>
+      <p className="text-base text-cream-dim leading-relaxed">{body}</p>
+    </section>
   );
 }

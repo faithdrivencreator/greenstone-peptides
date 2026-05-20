@@ -1,12 +1,15 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-import { Menu, X, Lock } from 'lucide-react';
+import { Menu, X, Lock, ChevronDown } from 'lucide-react';
 import { AccountNavLink } from '@/components/AccountNavLink';
 
+/** Top-level links, in display order. The Shop / Treatments pair both serve
+ *  the catalog but Treatments routes through the explainer landing pages first
+ *  (matches Bloom's funnel structure on our side). */
 const NAV_LINKS = [
   { href: '/shop', label: 'Shop' },
   { href: '/learn', label: 'Learn' },
@@ -14,6 +17,15 @@ const NAV_LINKS = [
   { href: '/safety', label: 'Safety' },
   { href: '/provider', label: 'Provider Portal' },
   { href: '/contact', label: 'Contact' },
+];
+
+/** Treatments sub-links — rendered inline in the desktop dropdown and the
+ *  mobile drawer's expandable section. */
+const TREATMENT_LINKS = [
+  { href: '/treatments/weight-loss', label: 'Weight Loss' },
+  { href: '/treatments/peptides', label: 'Peptides' },
+  { href: '/treatments/longevity', label: 'Longevity' },
+  { href: '/treatments/mens-ed', label: "Men's ED" },
 ];
 
 export function Navigation() {
@@ -82,6 +94,67 @@ export function Navigation() {
           <ul className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href || pathname.startsWith(link.href + '/');
+
+              // Treatments dropdown — inserted right after Shop.
+              if (link.href === '/shop') {
+                return (
+                  <Fragment key={link.href}>
+                    <li>
+                      <Link
+                        href={link.href}
+                        className={clsx(
+                          'relative text-sm tracking-wide transition-colors',
+                          active ? 'text-gold' : 'text-cream-dim hover:text-gold'
+                        )}
+                      >
+                        {link.label}
+                        {active && (
+                          <span className="absolute -bottom-1.5 inset-x-0 h-px bg-gold" aria-hidden />
+                        )}
+                      </Link>
+                    </li>
+                    <li className="relative group/treat">
+                      <button
+                        type="button"
+                        className={clsx(
+                          'inline-flex items-center gap-1 text-sm tracking-wide transition-colors',
+                          pathname.startsWith('/treatments') ? 'text-gold' : 'text-cream-dim hover:text-gold'
+                        )}
+                        aria-haspopup="true"
+                      >
+                        Treatments
+                        <ChevronDown size={13} className="transition-transform group-hover/treat:rotate-180 group-focus-within/treat:rotate-180" />
+                        {pathname.startsWith('/treatments') && (
+                          <span className="absolute -bottom-1.5 inset-x-0 h-px bg-gold" aria-hidden />
+                        )}
+                      </button>
+                      <div
+                        className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover/treat:opacity-100 group-hover/treat:visible group-focus-within/treat:opacity-100 group-focus-within/treat:visible transition-all duration-150"
+                      >
+                        <ul className="bg-obsidian/95 backdrop-blur-xl border border-emerald/25 shadow-2xl min-w-[200px] py-2">
+                          {TREATMENT_LINKS.map((t) => {
+                            const tActive = pathname === t.href;
+                            return (
+                              <li key={t.href}>
+                                <Link
+                                  href={t.href}
+                                  className={clsx(
+                                    'block px-5 py-2.5 text-sm transition-colors',
+                                    tActive ? 'text-gold bg-emerald/10' : 'text-cream-dim hover:text-gold hover:bg-emerald/5'
+                                  )}
+                                >
+                                  {t.label}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </li>
+                  </Fragment>
+                );
+              }
+
               return (
                 <li key={link.href}>
                   <Link
@@ -144,15 +217,50 @@ export function Navigation() {
           onClick={handleBackgroundClick}
           className="min-h-full flex flex-col items-center gap-7 px-6 pt-24 pb-40"
         >
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="font-cormorant text-3xl text-cream hover:text-gold transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            // Insert the Treatments expandable group right after Shop in the
+            // mobile drawer. Uses semantic <details> for collapse — no JS
+            // state, fully accessible by default.
+            if (link.href === '/shop') {
+              return (
+                <Fragment key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="font-cormorant text-3xl text-cream hover:text-gold transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                  <details className="group/m-treat w-full max-w-xs">
+                    <summary className="font-cormorant text-3xl text-cream hover:text-gold transition-colors cursor-pointer list-none flex items-center justify-center gap-2">
+                      Treatments
+                      <ChevronDown size={20} className="text-emerald transition-transform group-open/m-treat:rotate-180" />
+                    </summary>
+                    <ul className="mt-5 flex flex-col items-center gap-4">
+                      {TREATMENT_LINKS.map((t) => (
+                        <li key={t.href}>
+                          <Link
+                            href={t.href}
+                            className="font-jetbrains text-sm tracking-wider uppercase text-cream-dim hover:text-gold transition-colors"
+                          >
+                            {t.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </Fragment>
+              );
+            }
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="font-cormorant text-3xl text-cream hover:text-gold transition-colors"
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <AccountNavLink variant="mobile" />
           <Link
             href="/wholesale/login"

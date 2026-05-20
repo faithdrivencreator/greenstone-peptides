@@ -44,3 +44,7 @@ dist/
 # Generated images. Sanity removed; product images now ship from the repo
 # (public/images/products/) so Netlify can serve them directly.
 nanobanana-output/
+
+# Playwright MCP working dirs (scrape captures, screenshots, console logs)
+.playwright-mcp/
+docs/scrape-tmp/
