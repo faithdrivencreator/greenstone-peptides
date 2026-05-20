@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { getFeaturedProducts, getRecentBlogPosts, getAllCategories } from '@/lib/queries';
-import { ProductCard } from '@/components/ProductCard';
+import { getRecentBlogPosts } from '@/lib/queries';
 import { BlogCard } from '@/components/BlogCard';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { ShieldCheck, FlaskConical, Thermometer, Clock, ArrowRight } from 'lucide-react';
@@ -11,6 +10,7 @@ import { PharmacyButton } from '@/components/PharmacyButton';
 import { VerticalsStrip } from '@/components/VerticalsStrip';
 import { TrustGrid } from '@/components/TrustGrid';
 import { HeroHowItWorks } from '@/components/HeroHowItWorks';
+import { PARENT_PRODUCTS, fromPrice } from '@/data/parent-products';
 
 export const metadata: Metadata = {
   title: 'Greenstone Wellness | Compounded GLP-1, Peptide & Men\'s Therapy',
@@ -21,12 +21,25 @@ export const metadata: Metadata = {
 
 export const revalidate = 300;
 
+// Three hand-picked parents featured on the homepage. Ordered by how Pete
+// wants them to appear left-to-right.
+const FEATURED_SLUGS = ['retatrutide', 'bpc-157', 'nad'] as const;
+
+// Per-card image override — usually the parent's default image, but NAD+
+// surfaces the nasal-spray variant on the homepage to highlight that option.
+const FEATURED_IMAGE_OVERRIDES: Record<string, { image: string; alt: string; subtitle: string }> = {
+  nad: {
+    image: '/images/products/nad-plus-nasal-spray.jpg',
+    alt: 'NAD+ intranasal spray bottle, Greenstone Wellness',
+    subtitle: 'Now available as an intranasal spray',
+  },
+};
+
 export default async function HomePage() {
-  const [featured, recentPosts, categories] = await Promise.all([
-    getFeaturedProducts(),
-    getRecentBlogPosts(3),
-    getAllCategories(),
-  ]);
+  const recentPosts = await getRecentBlogPosts(3);
+  const featured = FEATURED_SLUGS
+    .map((slug) => PARENT_PRODUCTS.find((p) => p.slug === slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <>
@@ -190,25 +203,63 @@ export default async function HomePage() {
       {/* ---------- TELEHEALTH / SHIPPING / QUALITY TRUST GRID ---------- */}
       <TrustGrid />
 
-      {/* ---------- FEATURED PRODUCTS (moved above fold) ---------- */}
+      {/* ---------- FEATURED FORMULATIONS (3 hand-picked parents) ---------- */}
       {featured.length > 0 && (
         <section className="section-py">
           <div className="container-gr">
-            <header className="text-center mb-12">
-              <p className="eyebrow text-emerald">Most Popular</p>
-              <h2>Top-Ordered Products</h2>
-              <p className="mt-4 text-base md:text-lg text-cream-dim/80 font-jetbrains tracking-wide text-center mx-auto">
-                All formulations USA-compounded under USP 797 standards · Ships within 48 hours
+            <header className="text-center mb-12 max-w-2xl mx-auto">
+              <p className="eyebrow text-emerald">// Featured</p>
+              <h2 className="font-cormorant">Three formulations <em className="italic text-gold">worth knowing.</em></h2>
+              <p className="mt-4 text-sm text-cream-dim leading-relaxed">
+                Hand-picked from our 14-medication formulary — what patients ask about most.
+                All compounded by Greenstone Rx under USP 797 sterile standards.
               </p>
             </header>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {featured.map((p) => (
-                <ProductCard key={p._id} product={p} />
-              ))}
+              {featured.map((p) => {
+                const override = FEATURED_IMAGE_OVERRIDES[p.slug];
+                const cardImage = override?.image ?? p.image;
+                const cardAlt = override?.alt ?? p.imageAlt;
+                const subtitle = override?.subtitle;
+                const from = fromPrice(p);
+                return (
+                  <Link
+                    key={p.slug}
+                    href={`/shop/${p.slug}`}
+                    className="card-glass border-emerald/15 hover:border-emerald/40 transition-colors flex flex-col group/feat overflow-hidden"
+                  >
+                    <div className="relative aspect-[4/3] -mx-6 -mt-6 mb-6 bg-obsidian-mid overflow-hidden border-b border-emerald/15">
+                      <Image
+                        src={cardImage}
+                        alt={cardAlt}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover/feat:scale-[1.04]"
+                      />
+                    </div>
+                    <h3 className="font-cormorant text-2xl text-white leading-tight">{p.name}</h3>
+                    {subtitle && (
+                      <p className="mt-1 font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/85">
+                        {subtitle}
+                      </p>
+                    )}
+                    <p className="mt-3 text-sm text-cream-dim leading-relaxed flex-1">{p.shortDescription}</p>
+                    <div className="mt-6 flex items-end justify-between gap-3 pt-4 border-t border-emerald/10">
+                      <div>
+                        <p className="font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/80 mb-0.5">From</p>
+                        <p className="font-cormorant text-2xl text-gold leading-none">${from}</p>
+                      </div>
+                      <span className="inline-flex items-center gap-1 font-jetbrains text-[0.65rem] tracking-[0.18em] uppercase text-emerald group-hover/feat:text-emerald-light transition-colors">
+                        View <ArrowRight size={11} />
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
             <div className="text-center mt-10">
               <Link href="/shop" className="inline-flex items-center gap-2 btn btn-primary">
-                View Full Catalog of 48 Products <ArrowRight size={14} />
+                Browse the Full Formulary <ArrowRight size={14} />
               </Link>
             </div>
           </div>
@@ -256,33 +307,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ---------- FEATURED CATEGORIES ---------- */}
-      {categories.length > 0 && (
-        <section className="section-py">
-          <div className="container-gr">
-            <header className="text-center mb-12">
-              <p className="eyebrow">Browse by Need</p>
-              <h2>Categories</h2>
-            </header>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {categories.slice(0, 4).map((cat) => (
-                <Link
-                  key={cat._id}
-                  href={`/shop?category=${cat.slug.current}`}
-                  className="card-glass text-center group/cat"
-                >
-                  <div className="w-8 h-px bg-emerald mx-auto mb-5 group-hover/cat:w-16 transition-all duration-500" />
-                  <h3 className="font-cormorant text-2xl text-white mb-2">{cat.title}</h3>
-                  {cat.description && (
-                    <p className="text-sm text-cream-dim">{cat.description}</p>
-                  )}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ---------- QUALITY PROMISE ---------- */}
       <section className="section-py bg-emerald/[0.09] border-y border-emerald/25 relative overflow-hidden">
