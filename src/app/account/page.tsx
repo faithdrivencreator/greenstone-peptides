@@ -1,7 +1,8 @@
-import { auth, signOut } from '@/auth';
+import { auth } from '@/auth';
 import { supabaseAdmin } from '@/lib/db';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
+import { SignOutButton } from '@/components/SignOutButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -66,19 +67,7 @@ export default async function AccountPage() {
           </section>
 
           <section className="pt-6 border-t border-cream-dim/10">
-            <form
-              action={async () => {
-                'use server';
-                await signOut({ redirectTo: '/' });
-              }}
-            >
-              <button
-                type="submit"
-                className="px-5 py-2.5 border border-cream-dim/30 text-cream-dim hover:text-cream hover:border-cream-dim/60 font-jetbrains text-[0.65rem] tracking-widest uppercase transition-colors"
-              >
-                Sign out
-              </button>
-            </form>
+            <SignOutButton />
           </section>
         </div>
       </div>
