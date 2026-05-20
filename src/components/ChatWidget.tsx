@@ -108,10 +108,10 @@ export function ChatWidget() {
             className="block text-left rounded-2xl rounded-br-sm bg-obsidian-mid border border-emerald/30 px-4 py-3 shadow-lg shadow-black/40 hover:border-emerald/60 transition-colors"
           >
             <p className="font-jetbrains text-[10px] uppercase tracking-wider text-emerald-light mb-1">
-              Sage · Peptide Concierge
+              Sage · Patient Concierge
             </p>
             <p className="font-dm-sans text-sm text-cream leading-snug">
-              Have a question? I&apos;m Sage — ask me anything about peptides.
+              Have a question? I&apos;m Sage — happy to help you find the right treatment or walk you through what to expect.
             </p>
           </button>
         </div>
@@ -150,7 +150,7 @@ export function ChatWidget() {
                 Sage
               </h3>
               <p className="font-jetbrains text-[10px] uppercase tracking-wider text-emerald-light">
-                Peptide Concierge
+                Patient Concierge
               </p>
             </div>
             <button
@@ -179,8 +179,8 @@ export function ChatWidget() {
             {messages.length === 0 && (
               <div className="flex h-full items-center justify-center px-4">
                 <p className="text-center font-dm-sans text-sm text-cream-dim/70 leading-relaxed">
-                  Hi, I&apos;m Sage. Ask me about peptides, products, pricing, or
-                  what to read first.
+                  Hi, I&apos;m Sage. Ask me about our treatments, pricing, the
+                  consult process, or what to read first.
                 </p>
               </div>
             )}
@@ -237,7 +237,7 @@ export function ChatWidget() {
                 ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask Sage about peptides..."
+                placeholder="Ask Sage anything..."
                 disabled={isLoading}
                 className="w-full bg-obsidian-light border border-blue/20 pl-3 pr-12 py-2.5 font-jetbrains text-base sm:text-sm text-cream placeholder:text-cream-dim/40 outline-none transition-colors focus:border-emerald/50 disabled:opacity-50"
               />
