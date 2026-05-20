@@ -151,6 +151,51 @@ export default function ParentDetailPage({ params }: PageProps) {
             </div>
           </div>
 
+          {/* ---------- VARIANT PRICING TABLE (moved up — sits directly under the hero so visitors see all formulations + prices without scrolling past the science) ---------- */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <header className="mb-6">
+              <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-2">
+                // All formulations
+              </p>
+              <h2 className="font-cormorant text-2xl sm:text-3xl text-white" style={{ fontWeight: 400 }}>
+                {product.variants.length === 1 ? '1 formulation available' : `${product.variants.length} formulations available`}
+              </h2>
+              <p className="mt-2 text-sm text-cream-dim">
+                For orientation only — your physician confirms the final protocol on the pharmacy storefront.
+              </p>
+            </header>
+
+            <div className="overflow-x-auto border border-emerald/20">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-emerald/10 border-b border-emerald/25">
+                    <th className="text-left font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4">Option</th>
+                    <th className="text-left font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4 hidden sm:table-cell">Dose</th>
+                    <th className="text-left font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4">Size</th>
+                    <th className="text-right font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {product.variants.map((v, i) => (
+                    <tr key={`${v.label}-${i}`} className="border-b border-emerald/10 last:border-b-0 hover:bg-emerald/5 transition-colors">
+                      <td className="py-3.5 px-4 text-cream font-medium">{v.label}</td>
+                      <td className="py-3.5 px-4 text-cream-dim hidden sm:table-cell">{v.dose}</td>
+                      <td className="py-3.5 px-4 text-cream-dim">{v.size}</td>
+                      <td className="py-3.5 px-4 text-right font-cormorant text-xl text-gold">${v.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <p className="text-xs font-jetbrains tracking-wider uppercase text-cream-dim/70">
+                Compounded by Greenstone Rx · Florida 503A pharmacy
+              </p>
+              <PharmacyDeepLink slug={product.slug} />
+            </div>
+          </div>
+
           {/* ---------- EDUCATIONAL CONTENT BLOCKS ---------- */}
           <div id="details" className="mt-24 max-w-3xl mx-auto space-y-14 scroll-mt-24">
             <section>
@@ -197,48 +242,6 @@ export default function ParentDetailPage({ params }: PageProps) {
               heading="Typical starting dose"
               body={product.startingDoseGuidance}
             />
-          </div>
-
-          {/* ---------- VARIANT PRICING TABLE ---------- */}
-          <div className="mt-24 max-w-4xl mx-auto">
-            <header className="mb-6">
-              <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-2">
-                // Available options
-              </p>
-              <h2 className="font-cormorant text-3xl text-white">
-                {product.variants.length === 1 ? '1 formulation' : `${product.variants.length} formulations`}
-              </h2>
-              <p className="mt-2 text-sm text-cream-dim">
-                For orientation only — your physician confirms the final protocol on the pharmacy storefront.
-              </p>
-            </header>
-
-            <div className="overflow-x-auto border border-emerald/20">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="bg-emerald/10 border-b border-emerald/25">
-                    <th className="text-left font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4">Option</th>
-                    <th className="text-left font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4 hidden sm:table-cell">Dose</th>
-                    <th className="text-left font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4">Size</th>
-                    <th className="text-right font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {product.variants.map((v, i) => (
-                    <tr key={`${v.label}-${i}`} className="border-b border-emerald/10 last:border-b-0 hover:bg-emerald/5 transition-colors">
-                      <td className="py-3.5 px-4 text-cream font-medium">{v.label}</td>
-                      <td className="py-3.5 px-4 text-cream-dim hidden sm:table-cell">{v.dose}</td>
-                      <td className="py-3.5 px-4 text-cream-dim">{v.size}</td>
-                      <td className="py-3.5 px-4 text-right font-cormorant text-xl text-gold">${v.price}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <p className="mt-6 text-xs font-jetbrains tracking-wider uppercase text-cream-dim/70 text-center">
-              Compounded by Greenstone Rx · Florida 503A pharmacy · USP 797 sterile
-            </p>
           </div>
 
           {/* ---------- FAQ ---------- */}
