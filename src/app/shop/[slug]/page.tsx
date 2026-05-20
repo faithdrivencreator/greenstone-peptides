@@ -124,26 +124,39 @@ export default function ParentDetailPage({ params }: PageProps) {
                 ))}
               </ul>
 
-              {/* ---------- HERO CTA — price + Continue to Pharmacy above the fold ---------- */}
-              <div className="mt-8 pt-7 border-t border-emerald/20">
-                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-1">
-                  <p className="font-jetbrains text-[0.6rem] tracking-[0.25em] uppercase text-cream-dim/70">
-                    Starting from
-                  </p>
-                  <p className="font-cormorant text-4xl text-gold" style={{ fontWeight: 400 }}>
+              {/* ---------- HERO CTA — price block + primary CTA + secondary anchors ---------- */}
+              <div className="mt-10 pt-8 border-t border-emerald/20">
+                {/* Price — vertical hierarchy, eyebrow above price, no jumbled inline mash */}
+                <p className="font-jetbrains text-[0.6rem] tracking-[0.25em] uppercase text-cream-dim/65 mb-2">
+                  Starting from
+                </p>
+                <div className="flex items-baseline gap-5">
+                  <p className="font-cormorant text-5xl sm:text-6xl text-gold leading-none" style={{ fontWeight: 400 }}>
                     ${from}
                   </p>
-                  <p className="font-jetbrains text-[0.6rem] tracking-[0.18em] uppercase text-cream-dim/55">
-                    {product.variants.length === 1 ? '1 option' : `${product.variants.length} options`}
-                  </p>
+                  <a
+                    href="#formulations"
+                    className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald hover:text-emerald-light underline-offset-[6px] hover:underline transition-colors"
+                  >
+                    {product.variants.length === 1
+                      ? 'View formulation ↓'
+                      : `View all ${product.variants.length} formulations ↓`}
+                  </a>
                 </div>
-                <p className="text-xs text-cream-dim/75 mb-5 leading-relaxed">
+
+                <p className="mt-6 text-sm text-cream-dim leading-relaxed">
                   Sign-in required. A licensed physician reviews every prescription before it ships.
                 </p>
-                <PharmacyDeepLink slug={product.slug} />
+
+                {/* Primary CTA — full-width on its own row */}
+                <div className="mt-6">
+                  <PharmacyDeepLink slug={product.slug} />
+                </div>
+
+                {/* Secondary anchor — own row, tertiary visual weight */}
                 <a
                   href="#details"
-                  className="mt-5 inline-flex items-center gap-1.5 font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-cream-dim/70 hover:text-emerald transition-colors"
+                  className="mt-6 inline-flex items-center gap-1.5 font-jetbrains text-[0.6rem] tracking-[0.22em] uppercase text-cream-dim/60 hover:text-emerald transition-colors"
                 >
                   Read the full protocol ↓
                 </a>
@@ -152,7 +165,7 @@ export default function ParentDetailPage({ params }: PageProps) {
           </div>
 
           {/* ---------- VARIANT PRICING TABLE (moved up — sits directly under the hero so visitors see all formulations + prices without scrolling past the science) ---------- */}
-          <div className="mt-16 max-w-4xl mx-auto">
+          <div id="formulations" className="mt-16 max-w-4xl mx-auto scroll-mt-24">
             <header className="mb-6">
               <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-2">
                 // All formulations
