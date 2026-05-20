@@ -3,7 +3,12 @@ import { auth } from '@/auth';
 
 const MAINTENANCE_MODE = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
 
-const PROTECTED_PREFIXES = ['/shop', '/account'];
+// PDPs at /shop/<slug> are public educational pages. The "Continue to
+// Pharmacy" CTA on each PDP gates the Bloom redirect on auth itself, so
+// middleware-level protection on /shop would just block visitors and
+// crawlers from reading the educational content. Only /account remains
+// behind a session gate.
+const PROTECTED_PREFIXES = ['/account'];
 const MAINTENANCE_ALLOWLIST = ['/', '/api/notify-relaunch', '/api/maintenance-bypass'];
 
 // Maintenance mode handler — plain (no Auth.js wrapper) so it stays light and
