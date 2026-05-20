@@ -298,7 +298,7 @@ export default async function HomePage() {
           </div>
           <div className="grid gap-6 md:grid-cols-3 mt-8">
             <div className="hidden md:block" aria-hidden />
-            <p className="text-center text-[0.6rem] text-cream-dim/40 font-jetbrains tracking-wide uppercase">
+            <p className="text-center text-xs text-cream-dim/70 font-jetbrains tracking-wide uppercase">
               Dispensed by Greenstone Rx · A licensed Florida 503A compounding pharmacy
             </p>
             <div className="hidden md:block" aria-hidden />

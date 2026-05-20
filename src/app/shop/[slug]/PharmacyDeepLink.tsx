@@ -13,7 +13,6 @@ const PHARMACY_BASE =
 const BLOOM_CLINIC_ID = '6a0bb254fa53ddc1571c040b';
 
 type Props = {
-  bloomLearn: 'weight-loss' | 'peptides' | 'mens-ed';
   slug: string;
 };
 
@@ -26,21 +25,21 @@ type Props = {
  *      Bloom's lightweight layout doesn't expose per-product deep URLs,
  *      so this always lands on the root (`/dtp/<clinic-id>`).
  *
- *   2. Use Dose Finder → educational page for this molecule. Includes
- *      the BMI calculator and dose-finder sidebar Bloom hosts on /learn.
- *      For patients still picking a dose.
+ *   2. Use Dose Finder → Bloom's /learn educational hub root. Includes
+ *      the BMI calculator and dose-finder sidebar. The /learn root is the
+ *      canonical entry — per-molecule paths under /learn aren't reliable.
  *
  * Both are auth-gated through the same /login?next= pattern used in
  * VerticalsStrip. Signed-in users open Bloom in a new tab; everyone else
  * bounces through sign-in first.
  */
-export function PharmacyDeepLink({ bloomLearn, slug }: Props) {
+export function PharmacyDeepLink({ slug }: Props) {
   const router = useRouter();
   const { status } = useSession();
   const signedIn = status === 'authenticated';
 
   const lightweightUrl = `${PHARMACY_BASE}/dtp/${BLOOM_CLINIC_ID}`;
-  const educationalUrl = `${PHARMACY_BASE}/dtp/${BLOOM_CLINIC_ID}/learn/${bloomLearn}/${slug}`;
+  const educationalUrl = `${PHARMACY_BASE}/dtp/${BLOOM_CLINIC_ID}/learn`;
 
   function makeHandler(href: string) {
     return (e: React.MouseEvent<HTMLAnchorElement>) => {

@@ -55,7 +55,7 @@ export default function ShopPage() {
           </div>
         ))}
 
-        <p className="text-center text-[0.7rem] mt-12 font-jetbrains tracking-[0.2em] uppercase text-cream-dim/40">
+        <p className="text-center text-xs mt-12 font-jetbrains tracking-[0.2em] uppercase text-cream-dim/70">
           Prescription required · Reviewed by a licensed U.S. physician
         </p>
       </div>

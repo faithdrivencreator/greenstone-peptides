@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { BadgeCheck, Stethoscope, Package } from 'lucide-react';
 
 type Step = {
@@ -36,6 +36,7 @@ const STEPS: Step[] = [
 ];
 
 export function HeroHowItWorks() {
+  const prefersReducedMotion = useReducedMotion();
   return (
     <div className="relative" aria-label="How it works">
       {/* Eyebrow above the timeline */}
@@ -62,23 +63,27 @@ export function HeroHowItWorks() {
                 'linear-gradient(to bottom, rgba(26,158,110,0.55) 0%, rgba(26,158,110,0.35) 60%, rgba(26,158,110,0) 100%)',
             }}
           />
-          {/* Scanning emerald gradient that travels down the spine */}
-          <motion.div
-            className="absolute left-0 right-0 h-24"
-            style={{
-              background:
-                'linear-gradient(to bottom, transparent 0%, rgba(38,201,138,0.9) 50%, transparent 100%)',
-              filter: 'blur(1px)',
-            }}
-            initial={{ top: '-25%' }}
-            animate={{ top: '110%' }}
-            transition={{
-              duration: 4.5,
-              ease: 'linear',
-              repeat: Infinity,
-              repeatDelay: 0.5,
-            }}
-          />
+          {/* Scanning emerald gradient that travels down the spine.
+              Gated behind prefers-reduced-motion — continuous looping motion
+              can trigger vestibular issues. */}
+          {!prefersReducedMotion && (
+            <motion.div
+              className="absolute left-0 right-0 h-24"
+              style={{
+                background:
+                  'linear-gradient(to bottom, transparent 0%, rgba(38,201,138,0.9) 50%, transparent 100%)',
+                filter: 'blur(1px)',
+              }}
+              initial={{ top: '-25%' }}
+              animate={{ top: '110%' }}
+              transition={{
+                duration: 4.5,
+                ease: 'linear',
+                repeat: Infinity,
+                repeatDelay: 0.5,
+              }}
+            />
+          )}
         </div>
 
         <ol className="space-y-4">
@@ -116,12 +121,12 @@ export function HeroHowItWorks() {
                           '0 0 0 1px rgba(26,158,110,0.15), 0 0 18px rgba(26,158,110,0.18) inset',
                       }}
                       animate={
-                        isLast
+                        isLast && !prefersReducedMotion
                           ? { opacity: [0.7, 1, 0.7] }
                           : { opacity: 1 }
                       }
                       transition={
-                        isLast
+                        isLast && !prefersReducedMotion
                           ? {
                               duration: 3,
                               repeat: Infinity,

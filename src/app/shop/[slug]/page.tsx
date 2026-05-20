@@ -110,10 +110,7 @@ export default function ParentDetailPage({ params }: PageProps) {
                       dose-finder sidebar for patients still choosing a dose.
                   Both routed through the same /login?next= auth gate. */}
               <div className="mt-10">
-                <PharmacyDeepLink
-                  bloomLearn={product.bloomLearn}
-                  slug={product.slug}
-                />
+                <PharmacyDeepLink slug={product.slug} />
                 <p className="mt-4 text-xs text-cream-dim/60 leading-relaxed max-w-md">
                   Already know what you need? <strong className="text-cream">Continue to Pharmacy.</strong>{' '}
                   Still picking a dose? Use the <strong className="text-cream">Dose Finder</strong> for personalized recommendations.
@@ -159,7 +156,7 @@ export default function ParentDetailPage({ params }: PageProps) {
               </table>
             </div>
 
-            <p className="mt-6 text-[0.65rem] font-jetbrains tracking-wider uppercase text-cream-dim/45 text-center">
+            <p className="mt-6 text-xs font-jetbrains tracking-wider uppercase text-cream-dim/70 text-center">
               Compounded by Greenstone Rx · Florida 503A pharmacy · USP 797 sterile
             </p>
           </div>

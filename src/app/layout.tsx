@@ -134,6 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${jetbrains.variable}`}>
       <body className="bg-obsidian text-cream min-h-screen antialiased">
+        <a href="#main-content" className="skip-to-content">Skip to content</a>
         <AgeGate />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-WP0ECFJPB8"
