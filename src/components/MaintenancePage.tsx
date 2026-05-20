@@ -16,6 +16,37 @@ export function MaintenancePage() {
   const [status, setStatus] = useState<'idle' | 'ok' | 'error'>('idle');
   const [error, setError] = useState<string | null>(null);
 
+  // Discreet password gate for Pete / collaborators to QA the live site
+  // behind this takeover. Hidden behind a small toggle so visitors don't
+  // see it. POSTs to /api/maintenance-bypass which sets an httpOnly cookie.
+  const [bypassOpen, setBypassOpen] = useState(false);
+  const [bypassPassword, setBypassPassword] = useState('');
+  const [bypassSubmitting, setBypassSubmitting] = useState(false);
+  const [bypassError, setBypassError] = useState<string | null>(null);
+
+  async function onBypassSubmit(e: FormEvent) {
+    e.preventDefault();
+    if (!bypassPassword) return;
+    setBypassSubmitting(true);
+    setBypassError(null);
+    try {
+      const res = await fetch('/api/maintenance-bypass', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ password: bypassPassword }),
+      });
+      if (!res.ok) {
+        setBypassError('Incorrect password.');
+        setBypassSubmitting(false);
+        return;
+      }
+      window.location.assign('/');
+    } catch {
+      setBypassError('Network error. Try again.');
+      setBypassSubmitting(false);
+    }
+  }
+
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (!email.includes('@')) return;
@@ -165,6 +196,55 @@ export function MaintenancePage() {
           <p className="font-jetbrains text-[0.55rem] tracking-[0.25em] uppercase text-cream-dim/55">
             Florida · 503A Compounding Pharmacy
           </p>
+        </div>
+
+        {/* Discreet staff bypass — opens an inline password field. The dot is
+            intentionally low-contrast so visitors don't notice it. */}
+        <div className="mt-8 flex justify-center">
+          {!bypassOpen ? (
+            <button
+              type="button"
+              onClick={() => setBypassOpen(true)}
+              aria-label="Staff access"
+              className="font-jetbrains text-[0.5rem] tracking-[0.3em] uppercase text-cream-dim/30 hover:text-cream-dim/60 transition-colors"
+            >
+              · staff ·
+            </button>
+          ) : (
+            <form onSubmit={onBypassSubmit} className="w-full max-w-sm space-y-2">
+              <label
+                htmlFor="bypass-password"
+                className="font-jetbrains text-[0.55rem] tracking-[0.25em] uppercase text-cream-dim/55 block"
+              >
+                Staff access
+              </label>
+              <div className="flex gap-2">
+                <input
+                  id="bypass-password"
+                  type="password"
+                  autoComplete="current-password"
+                  placeholder="Password"
+                  value={bypassPassword}
+                  onChange={(e) => setBypassPassword(e.target.value)}
+                  className="flex-1 bg-obsidian-mid/70 border border-cream-dim/20 focus:border-emerald/60 outline-none px-3 py-2 text-cream text-sm transition-colors"
+                />
+                <button
+                  type="submit"
+                  disabled={bypassSubmitting || !bypassPassword}
+                  className={`px-4 py-2 font-jetbrains text-[0.65rem] tracking-widest uppercase transition-all ${
+                    !bypassSubmitting && bypassPassword
+                      ? 'bg-cream-dim/20 hover:bg-cream-dim/30 text-cream cursor-pointer'
+                      : 'bg-cream-dim/10 text-cream-dim/40 cursor-not-allowed'
+                  }`}
+                >
+                  {bypassSubmitting ? '…' : 'Enter'}
+                </button>
+              </div>
+              {bypassError && (
+                <p className="text-rose-300/80 text-[0.7rem] font-jetbrains tracking-wide">{bypassError}</p>
+              )}
+            </form>
+          )}
         </div>
       </div>
     </main>

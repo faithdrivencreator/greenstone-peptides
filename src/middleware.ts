@@ -4,16 +4,21 @@ import { auth } from '@/auth';
 const MAINTENANCE_MODE = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
 
 const PROTECTED_PREFIXES = ['/shop', '/account'];
-const MAINTENANCE_ALLOWLIST = ['/', '/api/notify-relaunch'];
+const MAINTENANCE_ALLOWLIST = ['/', '/api/notify-relaunch', '/api/maintenance-bypass'];
 
 // Maintenance mode handler — plain (no Auth.js wrapper) so it stays light and
 // doesn't load the credentials provider or Supabase admin client in the edge
-// middleware while the site is gated.
+// middleware while the site is gated. A valid `gs_bypass=ok` cookie (set by
+// /api/maintenance-bypass after correct password) bypasses the takeover so
+// Pete + collaborators can QA the live site behind the public-facing gate.
 function maintenanceMiddleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
+  const bypass = req.cookies.get('gs_bypass')?.value === 'ok';
+  if (bypass) return NextResponse.next();
   const allowed =
     MAINTENANCE_ALLOWLIST.includes(pathname) ||
-    pathname.startsWith('/api/notify-relaunch');
+    pathname.startsWith('/api/notify-relaunch') ||
+    pathname.startsWith('/api/maintenance-bypass');
   if (allowed) return NextResponse.next();
   const url = req.nextUrl.clone();
   url.pathname = '/';

@@ -6,6 +6,7 @@ import { SchemaOrg } from '@/components/SchemaOrg';
 import { CartProvider } from '@/context/CartContext';
 import { AgeGate } from '@/components/AgeGate';
 import { SessionProviderWrapper } from '@/components/SessionProviderWrapper';
+import { cookies } from 'next/headers';
 import { MaintenancePage } from '@/components/MaintenancePage';
 import { SiteChrome } from '@/components/SiteChrome';
 // PrescriptionRequestDrawer is intentionally not rendered — all checkout
@@ -113,8 +114,10 @@ const organizationSchema = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Maintenance takeover — single full-bleed page, no nav/footer/chat/agegate.
   // Toggle off by setting NEXT_PUBLIC_MAINTENANCE_MODE=false (or removing it)
-  // in Netlify env and redeploying.
-  if (MAINTENANCE_MODE) {
+  // in Netlify env and redeploying. A valid gs_bypass cookie (set by
+  // /api/maintenance-bypass after correct password) walks past the takeover.
+  const bypass = cookies().get('gs_bypass')?.value === 'ok';
+  if (MAINTENANCE_MODE && !bypass) {
     return (
       <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${jetbrains.variable}`}>
         <head>
