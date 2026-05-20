@@ -20,8 +20,6 @@ interface EbookConfig {
   title: string;
   subject: string;
   intro: string;
-  discountCode: string;
-  discountLabel: string;
   coverImage: string;
 }
 
@@ -32,8 +30,6 @@ const EBOOKS: Record<Ebook, EbookConfig> = {
     subject: 'Your free Greenstone guide is here, Peptides Made Easy',
     intro:
       "Welcome, and thank you for downloading <em>Peptides Made Easy</em>. This is the same plain-language explainer we share with first-time customers and curious researchers who want a clear, honest starting point.",
-    discountCode: 'WELCOME10',
-    discountLabel: '10% off your first order',
     coverImage: '/images/ebook-covers/peptides-made-easy-cover.jpg',
   },
   unlocked: {
@@ -42,8 +38,6 @@ const EBOOKS: Record<Ebook, EbookConfig> = {
     subject: 'Your Greenstone Volume II guide is ready, Peptides Unlocked',
     intro:
       "Welcome to Volume II. <em>Peptides Unlocked</em> goes deeper, matching peptide families to research goals, and walking through the quality and sourcing checks worth running before any protocol.",
-    discountCode: 'RESEARCH15',
-    discountLabel: '15% off your next order',
     coverImage: '/images/ebook-covers/peptides-unlocked-cover.jpg',
   },
 };
@@ -133,25 +127,6 @@ function buildEmailHtml(config: EbookConfig, firstName: string | undefined, down
             </td>
           </tr>
           <tr>
-            <td style="padding:0 32px 24px 32px;">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#0D1117;border:1px solid #C9A96E;">
-                <tr>
-                  <td style="padding:18px 20px;text-align:center;">
-                    <p style="margin:0 0 6px 0;font-family:'Courier New',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#C9A96E;">
-                      P.S., A small thank-you
-                    </p>
-                    <p style="margin:0 0 8px 0;font-family:Arial,sans-serif;font-size:14px;color:#B8B2A8;">
-                      Use code <strong style="color:#26C98A;font-family:'Courier New',monospace;letter-spacing:0.1em;">${escapeHtml(config.discountCode)}</strong> at checkout for ${escapeHtml(config.discountLabel)}.
-                    </p>
-                    <p style="margin:0;font-family:'Courier New',monospace;font-size:10px;color:#B8B2A8;opacity:0.7;">
-                      Valid for 30 days · One use per customer
-                    </p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
             <td style="padding:0 32px 32px 32px;">
               <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:15px;color:#F5F1EB;font-style:italic;">
                 The Greenstone Team
@@ -184,8 +159,6 @@ function buildEmailText(config: EbookConfig, firstName: string | undefined, down
     `Your guide is ready: ${config.title}`,
     '',
     `Download: ${downloadUrl}`,
-    '',
-    `P.S. Use code ${config.discountCode} at checkout for ${config.discountLabel}. Valid for 30 days.`,
     '',
     'The Greenstone Team',
     '',

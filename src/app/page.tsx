@@ -6,7 +6,6 @@ import { BlogCard } from '@/components/BlogCard';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { ShieldCheck, FlaskConical, Thermometer, Clock, ArrowRight } from 'lucide-react';
 import EmailCapture from '@/components/EmailCapture';
-import { PharmacyButton } from '@/components/PharmacyButton';
 import { VerticalsStrip } from '@/components/VerticalsStrip';
 import { TrustGrid } from '@/components/TrustGrid';
 import { HeroHowItWorks } from '@/components/HeroHowItWorks';
@@ -96,14 +95,13 @@ export default async function HomePage() {
               by Greenstone Rx, a licensed 503A pharmacy. A real physician reviews your
               health screening before any medication ships.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <PharmacyButton label="Start a Consult" trackId="hero-primary" />
-              <Link href="/shop" className="btn btn-ghost">
-                Browse Formulary →
-              </Link>
-            </div>
+            {/* Hero CTAs intentionally removed — visitors should reach the
+                pharmacy only after they create an account and select a product.
+                The Verticals strip and Featured Formulations below funnel into
+                /shop (gated), which is where the journey continues. */}
+
             {/* Micro trust row */}
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
               {['Licensed in FL', '503A Pharmacy', 'Physician-prescribed', 'USP 797 Sterile Compounding'].map((t) => (
                 <span key={t} className="flex items-center gap-1.5 text-xs text-cream-dim/70 font-jetbrains tracking-wide">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald flex-shrink-0" />
@@ -488,7 +486,7 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* ---------- EMAIL CAPTURE / DISCOUNT ---------- */}
+      {/* ---------- EMAIL CAPTURE (FREE GUIDE) ---------- */}
       <section className="section-py border-t border-emerald/15 bg-obsidian-mid/40">
         <div className="container-gr max-w-2xl text-center">
           <div className="inline-block bg-emerald/10 border border-emerald/30 px-4 py-1.5 mb-6">
@@ -498,8 +496,8 @@ export default async function HomePage() {
           </div>
           <h2 className="font-cormorant">Peptides, made easy.</h2>
           <p className="text-cream-dim mt-4 mx-auto">
-            Our plain-language peptide primer, free. Comes with a welcome offer code for
-            your first order. One short email a month after that, never spam.
+            Our plain-language peptide primer, free. One short email a month
+            after that, never spam.
           </p>
           <EmailCapture />
         </div>

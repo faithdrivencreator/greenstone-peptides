@@ -21,9 +21,9 @@ type IgLink = {
 
 const PROMO = {
   href: `/free/peptides-made-easy${UTM}promo_free_guide`,
-  code: '10% OFF',
-  headline: 'Download the free guide, get 10% off',
-  sub: 'Drop your email to unlock the PDF + discount',
+  code: 'FREE GUIDE',
+  headline: 'Peptides, made easy — the free guide',
+  sub: 'Drop your email to unlock the PDF',
   destination: '/free/peptides-made-easy',
   label: 'promo_free_guide',
 };

@@ -35,8 +35,7 @@ export default function EmailCapture() {
         <div className="bg-emerald/10 border border-emerald/30 rounded-lg p-6">
           <p className="text-emerald font-semibold text-lg mb-2">Check your inbox.</p>
           <p className="text-cream/80 text-sm leading-relaxed">
-            Your free copy of <em>Peptides Made Easy</em> is on its way, with a welcome offer
-            code inside.
+            Your free copy of <em>Peptides Made Easy</em> is on its way.
           </p>
           <p className="text-cream-dim/60 text-xs mt-3 font-jetbrains">
             Delivered in minutes · Check spam if you don&apos;t see it
@@ -65,7 +64,7 @@ export default function EmailCapture() {
         </button>
       </form>
       <p className="mt-4 text-[0.65rem] text-cream-dim/40 font-jetbrains tracking-wide text-center">
-        Free PDF + welcome offer code · One short email a month · No spam
+        Free PDF · One short email a month · No spam
       </p>
     </>
   )

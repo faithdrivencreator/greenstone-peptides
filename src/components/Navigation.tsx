@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { Menu, X, Lock } from 'lucide-react';
 import { AccountNavLink } from '@/components/AccountNavLink';
-import { PharmacyButton } from '@/components/PharmacyButton';
 
 const NAV_LINKS = [
   { href: '/shop', label: 'Shop' },
@@ -114,8 +113,9 @@ export function Navigation() {
             Distributor Login
           </Link>
 
-          {/* Desktop CTA — deep-links to Greenstone Rx Pharmacy (Bloom) */}
-          <PharmacyButton variant="primary" label="Order Now" className="hidden lg:inline-flex" trackId="nav-desktop" />
+          {/* Nav-level pharmacy CTA intentionally removed — visitors must
+              create an account and select a product before the pharmacy
+              deep-link surfaces (on the product detail page). */}
 
           {/* Mobile toggle */}
           <button
@@ -153,7 +153,6 @@ export function Navigation() {
               {link.label}
             </Link>
           ))}
-          <PharmacyButton variant="primary" label="Order Now" className="mt-2" trackId="nav-mobile" />
           <AccountNavLink variant="mobile" />
           <Link
             href="/wholesale/login"
