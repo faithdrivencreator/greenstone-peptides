@@ -140,7 +140,7 @@ export const PARENT_PRODUCTS: ParentProduct[] = [
       v('Standard injectable · 3 mL', '2.5 mg/mL', '3 mL vial', 109),
       v('Standard injectable · 4 mL', '2.5 mg/mL', '4 mL vial', 119),
       v('ODT starter · 90 ct', '0.5 mg', '90 tablets', 134),
-      v('Maintenance injectable · 2 mL', '5 mg', '2 mL vial', 134),
+      v('Maintenance injectable · 2 mL', '5 mg/mL', '2 mL vial', 134),
       v('ODT maintenance · 30 ct', '1.5 mg', '30 tablets', 140),
       v('High-concentration · 5 mL', '5 mg/mL', '5 mL vial', 165),
       v('ODT maintenance · 60 ct', '1.5 mg', '60 tablets', 212),
@@ -191,20 +191,21 @@ export const PARENT_PRODUCTS: ParentProduct[] = [
       'A typical starting protocol is 2.5 mg once weekly for the first month, with stepped increases of 2.5 mg every 4 weeks as tolerated. Suggestions only — your physician reviews and approves the final protocol before any medication ships.',
     variants: [
       v('ODT starter · 30 ct', '0.5 mg', '30 tablets', 88),
-      v('Starter injectable · 1 mL', '10 mg', '1 mL vial', 88),
-      v('Mid-dose injectable · 1 mL', '15 mg', '1 mL vial', 103),
+      v('Starter injectable · 1 mL', '10 mg/mL', '1 mL vial', 88),
+      v('Mid-dose injectable · 1 mL', '15 mg/mL', '1 mL vial', 103),
       v('ODT starter · 60 ct', '0.5 mg', '60 tablets', 119),
       v('Standard injectable · 2 mL', '10 mg/mL', '2 mL vial', 119),
-      v('High-dose injectable · 1 mL', '20 mg', '1 mL vial', 119),
+      v('High-dose injectable · 1 mL', '20 mg/mL', '1 mL vial', 119),
       v('ODT starter · 90 ct', '0.5 mg', '90 tablets', 150),
-      v('Standard injectable · 3 mL', '10 mg', '3 mL vial', 155),
-      v('Mid-dose injectable · 2 mL', '15 mg', '2 mL vial', 155),
+      v('Standard injectable · 3 mL', '10 mg/mL', '3 mL vial', 155),
+      v('Mid-dose injectable · 2 mL', '15 mg/mL', '2 mL vial', 155),
       v('Standard injectable · 4 mL', '10 mg/mL', '4 mL vial', 196),
-      v('Mid-dose injectable · 3 mL', '15 mg', '3 mL vial', 201),
+      v('Mid-dose injectable · 3 mL', '15 mg/mL', '3 mL vial', 201),
       v('Standard injectable · 5 mL', '10 mg/mL', '5 mL vial', 227),
-      v('Mid-dose injectable · 4 mL', '15 mg', '4 mL vial', 248),
-      v('High-dose injectable · 3 mL', '20 mg', '3 mL vial', 248),
-      v('High-dose injectable · 5 mL', '20 mg', '5 mL vial', 304),
+      v('Mid-dose injectable · 4 mL', '15 mg/mL', '4 mL vial', 248),
+      v('High-dose injectable · 3 mL', '20 mg/mL', '3 mL vial', 248),
+      v('Mid-dose injectable · 5 mL', '15 mg/mL', '5 mL vial', 277),
+      v('High-dose injectable · 5 mL', '20 mg/mL', '5 mL vial', 304),
     ],
   },
   {
@@ -293,7 +294,7 @@ export const PARENT_PRODUCTS: ParentProduct[] = [
       'Same as tirzepatide alone: medullary thyroid carcinoma history, MEN-2 syndrome, pregnancy, active pancreatitis, severe gallbladder disease. Discuss with provider if on cancer therapy.',
     startingDoseGuidance:
       'A typical starting protocol is one combination injection weekly, dosed to match a tirzepatide starter. Your physician will determine the right starting dose during the screening. Suggestions only — your physician reviews and approves the final protocol before any medication ships.',
-    variants: [v('Combination injectable', '20 mg tirz + 200 mg NAD⁺', '10 mL vial', 303)],
+    variants: [v('Combination injectable', '20 mg tirz + 200 mg NAD⁺', '5 mL vial', 303)],
   },
   {
     slug: 'tirzepatide-glycine',
@@ -351,9 +352,9 @@ export const PARENT_PRODUCTS: ParentProduct[] = [
       'A typical starting protocol is 50 mg subcutaneous injection daily, or an equivalent intranasal dose. Your physician will tailor the route and dose during the screening. Suggestions only — your physician reviews and approves the final protocol before any medication ships.',
     peptideSubArea: 'metabolism',
     variants: [
-      v('Standard injectable', '50 mg', '1 mL vial', 78),
+      v('Standard injectable', '50 mg/mL', '5 mL vial', 78),
       v('High-concentration injectable', '200 mg/mL', '5 mL vial', 119),
-      v('Intranasal spray', '300 mg/mL', '5 mL bottle', 155),
+      v('Intranasal spray', '300 mg/mL', '15 mL bottle', 155),
     ],
   },
   {
@@ -382,7 +383,7 @@ export const PARENT_PRODUCTS: ParentProduct[] = [
     startingDoseGuidance:
       'A typical starting protocol is 2.5 mg subcutaneous injection twice weekly. Your physician will adjust on review. Suggestions only — your physician reviews and approves the final protocol before any medication ships.',
     peptideSubArea: 'metabolism',
-    variants: [v('Standard injectable', '20 mg', '2 mL vial', 140)],
+    variants: [v('Standard injectable', '20 mg/mL', '5 mL vial', 140)],
   },
   {
     slug: 'sermorelin',
@@ -410,7 +411,7 @@ export const PARENT_PRODUCTS: ParentProduct[] = [
     startingDoseGuidance:
       'A typical starting protocol is 300 mcg subcutaneous injection 5 days a week, dosed at bedtime to align with your natural GH pulse. Your physician will adjust based on body weight. Suggestions only — your physician reviews and approves the final protocol before any medication ships.',
     peptideSubArea: 'growth-hormone',
-    variants: [v('Standard injectable', '4 mg', '2 mL vial', 73)],
+    variants: [v('Standard injectable', '4 mg/mL', '5 mL vial', 73)],
   },
   {
     slug: 'tesamorelin',
@@ -438,7 +439,7 @@ export const PARENT_PRODUCTS: ParentProduct[] = [
     startingDoseGuidance:
       'A typical starting protocol is 2 mg subcutaneous injection 5 days a week, dosed at bedtime. Your physician will adjust on review. Suggestions only — your physician reviews and approves the final protocol before any medication ships.',
     peptideSubArea: 'growth-hormone',
-    variants: [v('Standard injectable', '5 mg', '2 mL vial', 109)],
+    variants: [v('Standard injectable', '5 mg/mL', '5 mL vial', 109)],
   },
   {
     slug: 'bpc-157',
