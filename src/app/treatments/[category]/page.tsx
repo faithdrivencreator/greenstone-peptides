@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 import { SchemaOrg } from '@/components/SchemaOrg';
-import { MoleculeCard } from '@/components/MoleculeCard';
 import {
   PARENT_PRODUCTS,
+  fromPrice,
   type ParentProduct,
   type PeptideSubArea,
 } from '@/data/parent-products';
@@ -87,29 +89,46 @@ export default function TreatmentAreaPage({ params }: PageProps) {
             <span className="text-cream">{area.label}</span>
           </nav>
 
-          {/* ---------- HERO ---------- */}
-          <header className="max-w-3xl">
-            <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-5">
-              // {area.eyebrow}
-            </p>
-            <h1 className="font-cormorant text-display-lg text-white leading-[1.05] mb-8" style={{ fontWeight: 400 }}>
-              {area.heroLine1}
-              <br />
-              <em className="text-gold not-italic-fallback italic">{area.heroLine2}</em>
-            </h1>
-            <p className="text-lg text-cream-dim leading-relaxed max-w-2xl">
-              {area.lead}
-            </p>
-          </header>
+          {/* ---------- 2-COL HERO + PRODUCT RAIL ----------
+              Desktop (lg+): hero copy on the left (7 cols), product rail
+              on the right (5 cols, sticky). The rail spans both grid rows
+              so it sits beside the hero AND beside the explainers below
+              it — products are visible above the fold and stay visible
+              while the visitor reads.
 
-          {/* ---------- 4 EXPLAINER BLOCKS ---------- */}
-          <div className="mt-20 max-w-3xl space-y-12">
-            {area.explainers.map((ex) => (
-              <ExplainerBlock key={ex.heading} item={ex} />
-            ))}
+              Mobile: single column. Grid order is: header → product rail
+              → explainers, which is exactly the conversion-first order
+              we want (price + products visible right after the lede). */}
+          <div className="grid gap-10 lg:gap-14 lg:grid-cols-12">
+            <header className="lg:col-span-7 lg:row-start-1">
+              <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-5">
+                // {area.eyebrow}
+              </p>
+              <h1 className="font-cormorant text-display-lg text-white leading-[1.05] mb-8" style={{ fontWeight: 400 }}>
+                {area.heroLine1}
+                <br />
+                <em className="text-gold not-italic-fallback italic">{area.heroLine2}</em>
+              </h1>
+              <p className="text-lg text-cream-dim leading-relaxed max-w-2xl">
+                {area.lead}
+              </p>
+            </header>
+
+            <aside className="lg:col-span-5 lg:row-start-1 lg:row-span-2 lg:sticky lg:top-24 lg:self-start">
+              <ProductRail products={molecules} categoryLabel={area.label} />
+            </aside>
+
+            <div className="lg:col-span-7 lg:row-start-2 mt-4 lg:mt-12 space-y-12">
+              {area.explainers.map((ex) => (
+                <ExplainerBlock key={ex.heading} item={ex} />
+              ))}
+            </div>
           </div>
 
-          {/* ---------- SUB-AREAS (Peptides only) ---------- */}
+          {/* ---------- SUB-AREAS (Peptides only) ----------
+              On peptides, the product rail above shows EVERY peptide. The
+              sub-area sections below give context-rich groupings for
+              visitors who want to drill into a specific use-case. */}
           {area.subAreas && area.subAreas.length > 0 && (
             <div className="mt-28 space-y-24">
               {area.subAreas.map((sub) => (
@@ -125,29 +144,6 @@ export default function TreatmentAreaPage({ params }: PageProps) {
             </div>
           )}
 
-          {/* ---------- FORMULARY GRID (non-peptides categories) ---------- */}
-          {!area.subAreas && molecules.length > 0 && (
-            <div className="mt-24">
-              <header className="mb-10 pb-4 border-b border-emerald/15">
-                <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-2">
-                  // Available in this store
-                </p>
-                <h2 className="font-cormorant text-3xl text-white" style={{ fontWeight: 400 }}>
-                  Greenstone Wellness {area.label.toLowerCase()} formulary
-                </h2>
-              </header>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {molecules.map((m) => (
-                  <MoleculeCard
-                    key={m.slug}
-                    product={m}
-                    categoryLabel={area.label}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* ---------- FOOTER DISCLAIMER ---------- */}
           <p className="mt-24 text-xs leading-relaxed text-cream-dim/70 max-w-3xl mx-auto text-center">
             Prescription required. Reviewed by a licensed U.S. physician. Compounded by Greenstone Rx, a Florida 503A pharmacy.{' '}
@@ -159,6 +155,84 @@ export default function TreatmentAreaPage({ params }: PageProps) {
         </div>
       </section>
     </>
+  );
+}
+
+/**
+ * Compact product rail used in the right column of the treatments hero.
+ * Renders one horizontal row per product — small image + name + "From $X"
+ * + arrow — so visitors see the full category catalog above the fold
+ * without scrolling past educational content.
+ */
+function ProductRail({
+  products,
+  categoryLabel,
+}: {
+  products: ParentProduct[];
+  categoryLabel: string;
+}) {
+  if (products.length === 0) return null;
+
+  return (
+    <div className="bg-obsidian-mid/60 border border-emerald/20 p-5 sm:p-6">
+      <div className="flex items-baseline justify-between mb-5 pb-4 border-b border-emerald/15">
+        <p className="font-jetbrains text-emerald text-[0.6rem] tracking-[0.25em] uppercase">
+          // Shop {categoryLabel.toLowerCase()}
+        </p>
+        <p className="font-jetbrains text-[0.55rem] tracking-[0.2em] uppercase text-cream-dim/55">
+          {products.length} {products.length === 1 ? 'molecule' : 'molecules'}
+        </p>
+      </div>
+
+      <ul className="space-y-1">
+        {products.map((p) => {
+          const from = fromPrice(p);
+          return (
+            <li key={p.slug}>
+              <Link
+                href={`/shop/${p.slug}`}
+                data-track={`rail-${p.slug}`}
+                className="group/rail flex items-center gap-3 p-2 -mx-2 border border-transparent hover:border-emerald/25 hover:bg-emerald/[0.04] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald focus-visible:outline-offset-2"
+              >
+                <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 bg-obsidian overflow-hidden border border-emerald/20">
+                  <Image
+                    src={p.image}
+                    alt={p.imageAlt}
+                    fill
+                    sizes="64px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-cormorant text-lg sm:text-xl text-white leading-tight truncate">
+                    {p.name}
+                  </p>
+                  <p className="text-[0.7rem] sm:text-xs text-cream-dim leading-snug truncate">
+                    {p.shortDescription}
+                  </p>
+                </div>
+                <div className="flex-shrink-0 text-right pr-1">
+                  <p className="font-jetbrains text-[0.55rem] tracking-[0.15em] uppercase text-cream-dim/65 leading-none">
+                    From
+                  </p>
+                  <p className="font-cormorant text-lg text-gold leading-none mt-1" style={{ fontWeight: 400 }}>
+                    ${from}
+                  </p>
+                </div>
+                <ArrowUpRight
+                  size={14}
+                  className="flex-shrink-0 text-cream-dim/40 group-hover/rail:text-emerald group-hover/rail:translate-x-0.5 group-hover/rail:-translate-y-0.5 transition-all"
+                />
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+
+      <p className="mt-5 pt-4 border-t border-emerald/15 text-[0.7rem] text-cream-dim/65 leading-snug">
+        All molecules are compounded by Greenstone Rx, a Florida 503A pharmacy. Prescription required.
+      </p>
+    </div>
   );
 }
 
@@ -188,35 +262,35 @@ function SubAreaSection({
       className="scroll-mt-32"
       aria-labelledby={`sub-${sub.id}-heading`}
     >
-      <header className="max-w-3xl mb-12">
-        <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-5">
-          // {sub.label}
-        </p>
-        <h2
-          id={`sub-${sub.id}-heading`}
-          className="font-cormorant text-4xl sm:text-5xl text-white leading-[1.08] mb-7"
-          style={{ fontWeight: 400 }}
-        >
-          {sub.heroLine1}
-          <br />
-          <em className="text-gold italic">{sub.heroLine2}</em>
-        </h2>
-        <p className="text-base text-cream-dim leading-relaxed">{sub.lead}</p>
-      </header>
+      <div className="grid gap-10 lg:gap-14 lg:grid-cols-12">
+        <header className="lg:col-span-7 lg:row-start-1">
+          <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-5">
+            // {sub.label}
+          </p>
+          <h2
+            id={`sub-${sub.id}-heading`}
+            className="font-cormorant text-3xl sm:text-4xl text-white leading-[1.08] mb-6"
+            style={{ fontWeight: 400 }}
+          >
+            {sub.heroLine1}
+            <br />
+            <em className="text-gold italic">{sub.heroLine2}</em>
+          </h2>
+          <p className="text-base text-cream-dim leading-relaxed">{sub.lead}</p>
+        </header>
 
-      <div className="max-w-3xl space-y-10 mb-14">
-        {sub.explainers.map((ex) => (
-          <ExplainerBlock key={ex.heading} item={ex} />
-        ))}
-      </div>
+        {molecules.length > 0 && (
+          <aside className="lg:col-span-5 lg:row-start-1 lg:row-span-2 lg:self-start">
+            <ProductRail products={molecules} categoryLabel={categoryLabel} />
+          </aside>
+        )}
 
-      {molecules.length > 0 && (
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {molecules.map((m) => (
-            <MoleculeCard key={m.slug} product={m} categoryLabel={categoryLabel} />
+        <div className="lg:col-span-7 lg:row-start-2 mt-2 lg:mt-8 space-y-8">
+          {sub.explainers.map((ex) => (
+            <ExplainerBlock key={ex.heading} item={ex} />
           ))}
         </div>
-      )}
+      </div>
     </section>
   );
 }
