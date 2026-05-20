@@ -24,10 +24,18 @@ function maintenanceMiddleware(req: NextRequest) {
 // Normal-mode handler — Auth.js wrapper for the /shop + /account session gate.
 const normalMiddleware = auth((req) => {
   const { pathname } = req.nextUrl;
+
+  // Stamp the request pathname so server components can branch on the route
+  // if needed. Currently unused but harmless to keep — useful as a hook.
+  const requestHeaders = new Headers(req.headers);
+  requestHeaders.set('x-pathname', pathname);
+
   const isProtected = PROTECTED_PREFIXES.some(
     (p) => pathname === p || pathname.startsWith(p + '/'),
   );
-  if (!isProtected) return NextResponse.next();
+  if (!isProtected) {
+    return NextResponse.next({ request: { headers: requestHeaders } });
+  }
 
   if (!req.auth) {
     const url = req.nextUrl.clone();
@@ -35,7 +43,7 @@ const normalMiddleware = auth((req) => {
     url.searchParams.set('from', pathname);
     return NextResponse.redirect(url);
   }
-  return NextResponse.next();
+  return NextResponse.next({ request: { headers: requestHeaders } });
 });
 
 export default MAINTENANCE_MODE ? maintenanceMiddleware : normalMiddleware;

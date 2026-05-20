@@ -2,16 +2,12 @@ import type { Metadata } from 'next';
 import { Playfair_Display, DM_Sans, IBM_Plex_Mono } from 'next/font/google';
 import Script from 'next/script';
 import '@/styles/globals.css';
-import { Navigation } from '@/components/Navigation';
-import { TrustRibbon } from '@/components/TrustRibbon';
-import { Footer } from '@/components/Footer';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { CartProvider } from '@/context/CartContext';
-import { ExitIntentPopup } from '@/components/ExitIntentPopup';
 import { AgeGate } from '@/components/AgeGate';
-import { ChatWidget } from '@/components/ChatWidget';
 import { SessionProviderWrapper } from '@/components/SessionProviderWrapper';
 import { MaintenancePage } from '@/components/MaintenancePage';
+import { SiteChrome } from '@/components/SiteChrome';
 // PrescriptionRequestDrawer is intentionally not rendered — all checkout
 // happens on the pharmacy storefront (Bloom). CartProvider stays so any
 // component that still imports useCart compiles, but the drawer UI is dead.
@@ -131,6 +127,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     );
   }
 
+  // Single root tree — SiteChrome wraps every page in the dark site chrome
+  // (trust ribbon, nav, exit-intent, chat widget, footer). Kept as its own
+  // component so we can swap shells later without rebuilding the root tree
+  // (e.g. when we ship a real CSS-variable theme refactor for light mode).
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${jetbrains.variable}`}>
       <body className="bg-obsidian text-cream min-h-screen antialiased">
@@ -154,12 +154,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SchemaOrg schema={organizationSchema} />
         <SessionProviderWrapper>
           <CartProvider>
-            <TrustRibbon />
-            <Navigation />
-            <ExitIntentPopup />
-            <main className="relative z-10 pt-[8.25rem]">{children}</main>
-            <ChatWidget />
-            <Footer />
+            <SiteChrome>{children}</SiteChrome>
           </CartProvider>
         </SessionProviderWrapper>
       </body>
