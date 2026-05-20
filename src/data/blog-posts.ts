@@ -5,6 +5,234 @@ export type StaticBlogPost = (typeof staticBlogPosts)[number];
 
 export const staticBlogPosts = [
   {
+    id: 'how-to-reconstitute-peptides-guide',
+    title: "How to Reconstitute Peptides: The Step-by-Step Reference",
+    slug: 'how-to-reconstitute-peptides-guide',
+    publishedAt: '2026-05-20T11:30:00.000Z',
+    excerpt: "Reconstitution is the first critical step in any peptide protocol. This reference covers bacteriostatic water versus sterile water, concentration math for common vial sizes, proper mixing technique, post-reconstitution storage, and the errors that compromise peptide integrity.",
+    content: `<h2>What Every Peptide Researcher Needs to Know About Reconstitution</h2>
+
+<img src="/blog/how-to-reconstitute-peptides-guide-hero-20260520.png" alt="Clinical editorial still life with glass ampoule and vial showing peptide reconstitution setup" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<p>Reconstitution is the process of dissolving a lyophilized (freeze-dried) peptide powder into a liquid solvent to create an injectable solution. Nearly all research-grade and compounded peptides arrive in lyophilized form — reconstitution is therefore the first critical step in any peptide protocol. Done correctly, it preserves peptide integrity and ensures consistent dosing. Done incorrectly, it degrades the compound before the first injection is drawn.</p>
+
+<ul>
+<li><strong>Bacteriostatic water (BW):</strong> The standard solvent for multi-dose protocols — contains 0.9% benzyl alcohol as a preservative</li>
+<li><strong>Sterile water for injection (SWFI):</strong> Preservative-free; appropriate for single-use reconstitution only</li>
+<li><strong>Concentration math:</strong> The mL of solvent added determines mg/mL and directly drives dose accuracy</li>
+<li><strong>Mixing technique:</strong> Gentle swirling — never shaking — to protect peptide structure</li>
+<li><strong>Post-reconstitution storage:</strong> Refrigerated, protected from light, with a clear 28-day clock</li>
+<li><strong>Sterile handling:</strong> Needle-capping, vial swabbing, and single-draw practices that prevent contamination</li>
+</ul>
+
+<ul>
+<li><strong>Solvent compatibility:</strong> Whether your peptide is multi-dose (BW preferred) or single-use (SWFI acceptable)</li>
+<li><strong>Target concentration:</strong> Based on your research protocol dose and the syringe size available</li>
+<li><strong>Vial size:</strong> Common sizes are 2 mg, 5 mg, and 10 mg — each yields different concentration math</li>
+<li><strong>Stability window:</strong> Most reconstituted peptides remain stable for up to 28 days refrigerated</li>
+<li><strong>Batch reconstitution vs. as-needed:</strong> Trade-offs between convenience and stability depend on protocol length</li>
+</ul>
+
+<p>By the end of this reference, you will be able to calculate the correct solvent volume for any target concentration, choose the right reconstitution solvent for your use case, execute a clean reconstitution that preserves peptide structure, and identify the most common errors that compromise product integrity before the first dose.</p>
+
+<p>Greenstone Peptides sources active pharmaceutical ingredients from USA-origin raw materials, compounds under USP 797 sterile standards, and third-party tests every batch for HPLC purity, mass spectrometry identity, and endotoxin — so researchers receive verified-quality product before reconstitution begins.</p>
+
+<img src="/blog/how-to-reconstitute-peptides-guide-img1-20260520.png" alt="Process overview flat-lay showing reconstitution sequence: ampoule, vial, syringe, document for peptide reconstitution guide" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<h2>The Two Solvents Every Peptide Researcher Needs to Understand</h2>
+
+<p>The choice between bacteriostatic water and sterile water for injection is not a cosmetic one — it determines how long your reconstituted peptide remains stable and whether multi-dose protocols are safe. As peptide therapy has expanded through 2025 and into 2026, solvent selection has become one of the most frequently misunderstood elements of the reconstitution process. A clear understanding of both options from first principles eliminates the guesswork.</p>
+
+<img src="/blog/how-to-reconstitute-peptides-guide-img2-20260520.png" alt="Dark editorial still life with molecular model and research journal representing peptide science reconstitution" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<h3>Bacteriostatic Water — The Multi-Dose Standard</h3>
+
+<p>Bacteriostatic water for injection is sterile water containing 0.9% benzyl alcohol (w/v) as an antimicrobial preservative. The benzyl alcohol inhibits microbial growth, which means a vial of bacteriostatic water — once opened — can be used safely for multiple draws over a period of weeks. Without this preservative, each needle entry introduces contamination risk that accumulates with every subsequent draw.</p>
+
+<ul>
+<li><strong>Composition:</strong> Sterile water USP + 0.9% benzyl alcohol — a well-characterized preservative system used across pharmaceutical injectables for decades</li>
+<li><strong>Shelf life after opening:</strong> 28 days per USP guidance when stored at 2–8°C, protected from light</li>
+<li><strong>Ideal use case:</strong> Any research peptide protocol involving multiple draws from the same reconstituted vial over days or weeks — which describes the vast majority of common protocols including BPC-157, TB-500, sermorelin, and CJC-1295</li>
+<li><strong>pH range:</strong> Typically 4.5–7.0 depending on manufacturer; compatible with the stability profiles of most research peptides</li>
+</ul>
+
+<p>For multi-dose peptide research protocols, bacteriostatic water is the evidence-aligned default. The benzyl alcohol concentration is well within established safety parameters for adult research use, and the multi-draw stability it provides is not replicable with any preservative-free solvent.</p>
+
+<h3>Sterile Water for Injection — The Single-Use Option</h3>
+
+<img src="/blog/how-to-reconstitute-peptides-guide-img3-20260520.png" alt="Macro editorial still life with crystalline structure and notebook evoking molecular precision in peptide reconstitution" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<p>Sterile water for injection is pure, pyrogen-free water with no added preservatives. It is appropriate when the entire reconstituted volume will be used in a single injection, or when a specific peptide has a documented incompatibility with benzyl alcohol. Because it contains no antimicrobial agent, any needle entry into a SWFI vial introduces contamination risk — making it effectively a single-use product regardless of remaining volume.</p>
+
+<p>A 2023 review of compounding pharmacy reconstitution guidance documented that improper solvent selection — specifically, using sterile water for injection for multi-dose protocols — remains one of the more prevalent reconstitution errors among researchers new to peptide work. The downstream effect is not just reduced stability: contaminated multi-draw vials represent a genuine sterility risk that bacteriostatic water's benzyl alcohol prevents.</p>
+
+<h2>How to Choose Your Solvent and Calculate Your Concentration</h2>
+
+<div style="overflow-x:auto;margin:2rem 0;border-radius:12px;border:1px solid rgba(255,255,255,0.1);">
+<table style="width:100%;border-collapse:collapse;font-size:0.875rem;min-width:600px;">
+<thead>
+<tr style="background:rgba(45,95,191,0.25);border-bottom:1px solid rgba(45,95,191,0.5);">
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Vial Size</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Solvent Added</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Concentration</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">250 mcg Dose</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">5 mg vial<br/><span style="font-size:0.78rem;color:#8a9bb0;">Standard peptide vial</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">1.0 mL BW</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">5 mg/mL</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">5 units (U-100)</td>
+<td style="padding:14px 16px;color:#c8d4e0;">High-dose protocols; precise small volumes</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">5 mg vial<br/><span style="font-size:0.78rem;color:#8a9bb0;">Standard peptide vial</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">2.0 mL BW</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">2.5 mg/mL</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">10 units (U-100)</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Most common research protocols</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">5 mg vial<br/><span style="font-size:0.78rem;color:#8a9bb0;">Standard peptide vial</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">2.5 mL BW</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">2.0 mg/mL</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">12.5 units (U-100)</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Lower-dose protocols with easier syringe measurement</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">10 mg vial<br/><span style="font-size:0.78rem;color:#8a9bb0;">Larger research vial</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">2.0 mL BW</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">5.0 mg/mL</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">5 units (U-100)</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Extended protocols; minimal injection volume</td>
+</tr>
+<!-- LAST ROW: featured / recommended -->
+<tr style="background:rgba(0,200,255,0.07);border-top:1px solid rgba(0,200,255,0.25);">
+<td style="padding:14px 16px;font-weight:600;color:#00c8ff;">5 mg vial — Recommended<br/><span style="font-size:0.78rem;color:#4f8fff;font-weight:400;">2.0 mL BW (2.5 mg/mL)</span></td>
+<td style="padding:14px 16px;color:#e8e0d4;">2.0 mL bacteriostatic water</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">2.5 mg/mL</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">10 units on U-100</td>
+<td style="padding:14px 16px;color:#e8e0d4;">Best balance of accuracy, convenience, and volume for most research peptides</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>The recommended starting point for most research peptides in a 5 mg vial is 2.0 mL of bacteriostatic water. This produces a 2.5 mg/mL concentration where a 250 mcg dose is exactly 10 units on a standard U-100 insulin syringe — a clean, memorable number that minimizes measurement error across a multi-week protocol.</p>
+
+<h3>The Dosage Math — Practical Tips</h3>
+
+<p>Working through the concentration calculation before touching a vial eliminates the most common reconstitution error. The math is simple when approached systematically:</p>
+
+<ol>
+<li><strong>Determine your target dose first:</strong> Identify the dose for your research protocol in micrograms or milligrams (e.g., 250 mcg BPC-157 per injection) before choosing a concentration.</li>
+<li><strong>Choose your concentration based on your syringe:</strong> For a U-100 syringe, aim for a concentration that puts your dose in the 5–20 unit range. Fewer than 5 units is hard to measure accurately; more than 20 units per injection is a larger volume than necessary for SC use.</li>
+<li><strong>Calculate injection volume:</strong> Divide dose by concentration. Example: 250 mcg ÷ 2,500 mcg/mL = 0.10 mL = 10 units on a U-100 syringe.</li>
+<li><strong>Verify with a reverse calculation:</strong> Multiply your injection units by the concentration to confirm you get back to your intended dose. If the numbers don't reconcile cleanly, recalculate before proceeding.</li>
+</ol>
+
+<p>→ For context on how storage conditions after reconstitution affect stability, see our guide on <a href="/learn/peptide-storage-temperature-guide" style="color:#4f8fff;">peptide storage temperature and shelf life</a>.</p>
+
+<h3>Gentle Swirling vs. Shaking — Understanding the Difference</h3>
+
+<p>Shaking a reconstituted peptide vial is one of the most commonly cited — and most consequential — reconstitution errors. Peptides are chains of amino acids held in specific three-dimensional conformations. High-shear mechanical stress, including vigorous shaking, can fragment peptide bonds or denature the compound's active conformation. The result is a solution that may appear visually clear but contains degraded peptide that does not perform as expected in the research context.</p>
+
+<p>The alternative is simple: after adding solvent, allow the vial to sit undisturbed for 30 seconds, then roll gently between the palms or swirl slowly for 15–30 seconds. If any powder remains, allow the vial to rest at room temperature for an additional 5 minutes before swirling again. Complete dissolution should produce a clear, colorless solution — or very faintly yellow for certain compounds. Any turbidity, cloudiness, or visible particulate is a sign of incomplete dissolution or degradation.</p>
+
+<h2>Reconstituting Peptides Across Different Research Contexts</h2>
+
+<img src="/blog/how-to-reconstitute-peptides-guide-img4-20260520.png" alt="Warm editorial still life with research notebook and tea representing thoughtful peptide research protocol planning" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<p>Reconstitution decisions differ meaningfully depending on the researcher's experience level, the peptide protocol being followed, and the handling environment available. Here is how the approach maps across common situations:</p>
+
+<ul>
+<li><strong>First-time peptide researcher:</strong> Use bacteriostatic water, choose the 2.0 mL / 2.5 mg/mL concentration for a standard 5 mg vial, and practice the full reconstitution sequence — including alcohol swabbing the stopper and slow solvent injection down the vial wall — before working with the actual peptide. Confidence in the process reduces handling errors.</li>
+<li><strong>Experienced researcher on a multi-week protocol:</strong> Use bacteriostatic water, reconstitute in the volume that optimizes dose accuracy for your syringe, and maintain a written or digital log tracking vial reconstitution date, concentration, and expected doses remaining. Discard any vial past 28 days regardless of remaining volume.</li>
+<li><strong>Single-session or one-time use context:</strong> Sterile water for injection is appropriate when the full reconstituted volume will be consumed in a single injection session. This eliminates benzyl alcohol from the equation entirely for researchers who prefer it.</li>
+</ul>
+
+<h3>Beginner vs. Experienced vs. Clinical Reconstitution Approaches</h3>
+
+<p>The progression from first reconstitution to experienced practice is mostly about systematizing what works and removing ambiguity from the process:</p>
+
+<ul>
+<li><strong>Tier 1 — First reconstitution:</strong> One peptide vial, one vial of bacteriostatic water, a U-100 insulin syringe, an alcohol swab, and a clean flat surface covered with a sterile pad. Withdraw 2.0 mL of BW slowly, inject into the peptide vial letting the liquid run down the inner glass wall. Swirl gently for 20 seconds. Label the vial immediately with name, concentration, and today's date.</li>
+<li><strong>Tier 2 — Systematic research protocol:</strong> A defined preparation routine with a research log. Each vial has its own labeled concentration and reconstitution date. Syringe tips are capped between withdrawals. Injection sites are rotated and recorded.</li>
+<li><strong>Tier 3 — Multi-peptide or clinical context:</strong> Each peptide reconstituted in a separate labeled vial with its own dedicated withdrawal syringe. A complete inventory log with lot numbers, reconstitution dates, and anticipated expiry. Pre-reconstitution compatibility research if any compounds will be co-administered.</li>
+</ul>
+
+<h3>Personalization and Protocol Considerations</h3>
+
+<p>As of 2026, multi-peptide research protocols — combining compounds like GHK-Cu with BPC-157, or NAD+ with sermorelin — have increased in discussion across the peptide research community. This makes reconstitution planning more complex:</p>
+
+<ul>
+<li><strong>Compatibility before co-administration:</strong> Confirm that the specific peptides in a stack are compatible before combining reconstituted solutions in a single syringe. pH mismatches and stability conflicts are real, and each compound should be reconstituted and confirmed individually before any combination is attempted.</li>
+<li><strong>Separate vials, separate syringes:</strong> Even if protocols call for co-administration, maintain each peptide in its own reconstituted vial with its own withdrawal syringe. Cross-contamination between vials is one of the most preventable multi-peptide errors.</li>
+<li><strong>Consider lyophilized vs. reconstituted shelf life trade-offs:</strong> For compounds used infrequently, keeping a portion lyophilized and reconstituting smaller batches preserves stability longer than reconstituting a full vial that may not be used within 28 days.</li>
+</ul>
+
+<h2>Why Sourcing and Compounding Standards Matter for Reconstitution</h2>
+
+<img src="/blog/how-to-reconstitute-peptides-guide-img5-20260520.png" alt="Clean precision flat-lay with glass ampule and lab tools representing sterile compounding standards for reconstitute peptides" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<p>Even a technically flawless reconstitution cannot compensate for a lyophilized peptide that arrived with degraded purity, unknown impurities, or improperly characterized contamination. Reconstitution dissolves the compound — it does not purify it. The integrity of what you start with is the most consequential upstream variable in any research protocol, and it is the one most researchers cannot assess themselves without independent testing data.</p>
+
+<ul>
+<li><strong>USA-sourced raw materials</strong> — Active pharmaceutical ingredient sourced domestically from suppliers operating under regulatory oversight, not from unregulated overseas peptide manufacturers whose purity profiles are unverified</li>
+<li><strong>USP 797 sterile compounding</strong> — Manufactured in an ISO-classified cleanroom environment meeting USP Chapter 797 standards for sterile injectables, ensuring endotoxin control at every step before the lyophilized product ships</li>
+<li><strong>Third-party testing</strong> — HPLC purity analysis confirming percent purity, mass spectrometry identity confirmation verifying the peptide sequence, and endotoxin testing on every batch — not selected batches or periodic spot checks</li>
+<li><strong>Cold-chain shipping</strong> — Temperature-controlled dispatch protocols that preserve lyophilized peptide structure from compounding through delivery, so the freeze-dried cake is intact when reconstitution begins</li>
+</ul>
+
+<h3>Getting the Most Out of Your Reconstitution Practice</h3>
+
+<ol>
+<li><strong>Add solvent down the vial wall, not directly onto the powder:</strong> Direct solvent contact with the peptide cake can denature surface peptide molecules through concentration and mechanical shock. Angle the needle tip against the inner glass wall so liquid runs down slowly and reaches the lyophilized cake from below.</li>
+<li><strong>Use the minimum effective solvent volume:</strong> Adding more solvent than necessary dilutes the concentration, increases injection volume, and reduces dose precision. Calculate your target concentration before drawing solvent — not after.</li>
+<li><strong>Confirm visual clarity before drawing a dose:</strong> A properly reconstituted peptide solution is clear and colorless (or faintly yellow for certain peptides). Any turbidity, cloudiness, or particulate matter indicates either incomplete dissolution or degradation — do not proceed with an unclear solution.</li>
+<li><strong>Label every vial before storing it:</strong> Include peptide name, concentration (mg/mL), reconstitution date, and calculated expiry (28 days). An unlabeled vial in a shared or multi-peptide environment creates exactly the ambiguity that leads to protocol errors. → <a href="/store" style="color:#4f8fff;">Explore Greenstone&#39;s compounded peptide catalog</a> — every formulation ships with verified purity documentation so your reconstitution baseline is known before you begin.</li>
+</ol>
+
+<h2>Frequently Asked Questions About Reconstituting Peptides</h2>
+
+<h3>How much bacteriostatic water should I add to a 5 mg peptide vial?</h3>
+<p>The answer depends on your target concentration and available syringe. For most researchers using a U-100 insulin syringe, the 2.0 mL option (producing 2.5 mg/mL) is the recommended starting point — a 250 mcg dose equals exactly 10 units, a clean number that minimizes measurement error. Adding 1.0 mL gives 5.0 mg/mL (250 mcg = 5 units, harder to measure accurately on a standard syringe). Adding 2.5 mL gives 2.0 mg/mL (250 mcg = 12.5 units). Choose based on your dose and the precision your syringe can reliably deliver.</p>
+
+<h3>How long does a reconstituted peptide remain stable, and how should it be stored?</h3>
+<p>Most reconstituted peptide solutions stored in bacteriostatic water at 2–8°C (standard refrigerator temperature) maintain acceptable stability for up to 28 days. This aligns with USP guidance for multi-dose injectable preparations using benzyl alcohol. After 28 days, degradation risk increases meaningfully and the vial should be discarded regardless of remaining volume. Protect the vial from light — store it in the original box or in an opaque container inside the refrigerator. Do not freeze reconstituted peptides; freeze-thaw cycles damage the solution's stability in ways that lyophilized powder tolerates but liquid solutions do not.</p>
+
+<h3>Can I combine two reconstituted peptides in one syringe for co-administration?</h3>
+<p>This is a protocol-specific decision that requires confirming compatibility before attempting. Some peptides are compatible in the same syringe draw; others have pH mismatches or stability conflicts that make co-mixing inadvisable. The general principle is to reconstitute each peptide separately, confirm visual clarity in each vial, then draw the peptides sequentially into the same syringe only if your specific protocol supports it. If you are uncertain about compatibility for a given combination, keeping them in separate injections at different sites is the conservative and protocol-safe approach.</p>
+
+<h2>Conclusion</h2>
+
+<p>Reconstitution is a foundational technical skill that determines the quality of every subsequent step in a peptide research protocol. The variables — solvent selection, concentration math, mixing technique, storage, and labeling — are not details to be improvised. Each one has a documented reason behind it, and each one compounds the others. A protocol built on a correctly reconstituted, properly stored, clearly labeled peptide vial starts from a position of integrity.</p>
+
+<p>The next step is ensuring the lyophilized product you begin with meets the standard the protocol requires. <a href="/store" style="color:#4f8fff;">Explore Greenstone&#39;s compounded peptide formulations</a> — sourced from USA-origin raw materials, compounded to USP 797 sterile standards, and third-party tested for purity and identity on every batch.</p>
+
+<p><em>Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.</em></p>
+
+<h2>Sources</h2>
+<p style="font-size:0.85rem;color:#8a9bb0;margin-bottom:1rem;">The following sources informed this article. Greenstone Peptides does not endorse any third-party organization; links are provided for research transparency.</p>
+<ol style="font-size:0.85rem;color:#8a9bb0;line-height:1.8;">
+<li><a href="https://www.usp.org/sites/default/files/usp/document/our-work/compounding/usp-compounding-expert-committee-797-general-chapter.pdf" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">United States Pharmacopeia. "USP General Chapter &lt;797&gt; Pharmaceutical Compounding — Sterile Preparations." USP, 2023.</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/books/NBK537051/" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Kohler G, et al. "Bacteriostatic Water for Injection." StatPearls. National Library of Medicine / NCBI Bookshelf, 2023.</a></li>
+<li><a href="https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019922" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food &amp; Drug Administration. "Bacteriostatic Water for Injection, USP — FDA Drug Label." FDA, Accessed 2026.</a></li>
+<li><a href="https://www.fda.gov/drugs/pharmaceutical-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food &amp; Drug Administration. "Compounding and the FDA: Questions and Answers." FDA, 2023.</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/17634463/" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Manning MC, et al. "Stability of Protein Pharmaceuticals: An Update." Pharmaceutical Research, 2010. PMID: 17634463.</a></li>
+</ol>`,
+    heroImage: '/blog/how-to-reconstitute-peptides-guide-hero-20260520.png',
+    heroAlt: 'Clinical editorial still life with glass ampoule and vial showing peptide reconstitution setup',
+    readingTime: 9,
+    featured: false,
+    seoTitle: "How to Reconstitute Peptides: Step-by-Step Reference Guide",
+    seoDescription: "A complete reference on peptide reconstitution: bacteriostatic water vs sterile water, concentration math, mixing technique, and storage guidelines.",
+    tags: ["reconstitute peptides", "bacteriostatic water", "peptide mixing", "peptide preparation", "research peptides"],
+    relatedProductIds: [],
+  },
+  {
     id: 'tesamorelin-visceral-fat-research',
     title: "Tesamorelin and Visceral Fat: What the Clinical Data Shows",
     slug: 'tesamorelin-visceral-fat-research',
