@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { PharmacyButton } from '@/components/PharmacyButton';
 
 export const metadata: Metadata = {
   title: 'About Greenstone Wellness | A Florida Clinic + 503A Pharmacy',
@@ -134,8 +133,7 @@ export default function AboutPage() {
             hormone support, metabolism, and skin.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <Link href="/shop" className="btn btn-ghost">Browse the formulary →</Link>
-            <PharmacyButton label="Start a Consult" trackId="about-cta" />
+            <Link href="/shop" className="btn btn-primary">Browse the Formulary →</Link>
           </div>
         </div>
       </section>
@@ -146,11 +144,11 @@ export default function AboutPage() {
           <p className="eyebrow">Get Started</p>
           <h2>Ready when you are.</h2>
           <p className="mt-4 mx-auto text-cream-dim">
-            Browse the formulary, read about each medication, or jump straight into a
-            consult. Questions about how the model works? Reach the clinic any time.
+            Browse the formulary and read about each medication. Questions about
+            how the model works? Reach the clinic any time.
           </p>
           <div className="flex gap-4 justify-center mt-8 flex-wrap">
-            <PharmacyButton label="Start a Consult" trackId="about-bottom" />
+            <Link href="/shop" className="btn btn-primary">Browse the Formulary →</Link>
             <Link href="/contact" className="btn btn-ghost">Contact the Clinic</Link>
           </div>
         </div>

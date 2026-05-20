@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { PharmacyButton } from '@/components/PharmacyButton';
 
 export const metadata: Metadata = {
   title: 'How Compounded Medications Work | Greenstone Wellness',
@@ -125,7 +124,7 @@ export default function HowItWorksPage() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-cream-dim/10 flex flex-wrap gap-4 items-center">
-            <PharmacyButton label="Start a Consult" trackId="how-it-works-cta" />
+            <Link href="/shop" className="btn btn-primary">Browse the Formulary →</Link>
             <Link
               href="/"
               className="font-jetbrains text-[0.7rem] tracking-widest uppercase text-emerald hover:text-emerald-light transition-colors"
