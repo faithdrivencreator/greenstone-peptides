@@ -25,29 +25,46 @@ function LoginForm() {
     setError(null);
     setSubmitting(true);
 
-    const result = await signIn('credentials', {
-      email,
-      password,
-      redirect: false,
-    });
+    try {
+      // 20s safety timeout — if signIn hangs (Lambda cold start, network
+      // hiccup, NextAuth bug), unstick the button instead of leaving the
+      // user staring at "Signing in…" forever.
+      const result = await Promise.race([
+        signIn('credentials', { email, password, redirect: false }),
+        new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error('timeout')), 20000),
+        ),
+      ]);
 
-    if (result?.error) {
-      setError('Email or password is incorrect.');
+      if (result?.error) {
+        setError('Email or password is incorrect.');
+        setSubmitting(false);
+        return;
+      }
+
+      // If the user arrived via Order Now (next=pharmacy), forward them to
+      // the pharmacy storefront. Same-tab — opening a new tab post-login is
+      // blocked by popup blockers since the navigation isn't a direct user
+      // gesture on the link itself.
+      if (nextParam === 'pharmacy') {
+        window.location.assign(PHARMACY_URL);
+        return;
+      }
+
+      router.push(fromParam);
+      router.refresh();
+      // Belt-and-suspenders: if navigation is slow, still clear the spinner
+      // so the form is usable again after a moment.
+      setTimeout(() => setSubmitting(false), 1500);
+    } catch (err) {
+      const isTimeout = err instanceof Error && err.message === 'timeout';
+      setError(
+        isTimeout
+          ? 'Sign-in is taking longer than expected. Please try again.'
+          : 'Something went wrong. Please try again.',
+      );
       setSubmitting(false);
-      return;
     }
-
-    // If the user arrived via Order Now (next=pharmacy), forward them to the
-    // pharmacy storefront. Same-tab — opening a new tab post-login is blocked
-    // by popup blockers since the navigation isn't a direct user gesture on
-    // the link itself.
-    if (nextParam === 'pharmacy') {
-      window.location.assign(PHARMACY_URL);
-      return;
-    }
-
-    router.push(fromParam);
-    router.refresh();
   }
 
   return (
