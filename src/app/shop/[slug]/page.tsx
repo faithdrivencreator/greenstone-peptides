@@ -2,58 +2,47 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getAllProducts, getProductBySlug } from '@/lib/queries';
-import { productImageUrl } from '@/lib/product-image';
-import { ProductCard } from '@/components/ProductCard';
 import { SchemaOrg } from '@/components/SchemaOrg';
-import AddToCartButton from '@/components/AddToCartButton';
-import ViewItemTracker from '@/components/ViewItemTracker';
+import { PARENT_PRODUCTS, getParentBySlug, fromPrice } from '@/data/parent-products';
+import { PharmacyDeepLink } from './PharmacyDeepLink';
 
 interface PageProps {
   params: { slug: string };
 }
 
-export async function generateStaticParams() {
-  const products = await getAllProducts();
-  return products.map((p) => ({ slug: p.slug.current }));
+export function generateStaticParams() {
+  return PARENT_PRODUCTS.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const product = await getProductBySlug(params.slug);
+export function generateMetadata({ params }: PageProps): Metadata {
+  const product = getParentBySlug(params.slug);
   if (!product) return {};
   return {
-    title: product.seoTitle || product.name,
-    description: product.seoDescription || product.shortDescription || undefined,
+    title: `${product.name} · Greenstone Wellness`,
+    description: product.shortDescription,
     alternates: { canonical: `/shop/${params.slug}` },
-    openGraph: {
-      title: product.seoTitle || product.name,
-      description: product.seoDescription || product.shortDescription || undefined,
-    },
   };
 }
 
-export const revalidate = false; // fully static
-
-export default async function ProductDetailPage({ params }: PageProps) {
-  const product = await getProductBySlug(params.slug);
+export default function ParentDetailPage({ params }: PageProps) {
+  const product = getParentBySlug(params.slug);
   if (!product) notFound();
 
-  const imageUrl = productImageUrl(product.image);
+  const from = fromPrice(product);
 
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.name,
-    description: product.shortDescription || product.seoDescription,
-    image: imageUrl || undefined,
+    description: product.shortDescription,
+    image: product.image,
     brand: { '@type': 'Brand', name: 'Greenstone Wellness' },
     offers: {
-      '@type': 'Offer',
-      price: product.price,
+      '@type': 'AggregateOffer',
+      lowPrice: from,
+      highPrice: Math.max(...product.variants.map((v) => v.price)),
       priceCurrency: 'USD',
-      availability: product.active
-        ? 'https://schema.org/InStock'
-        : 'https://schema.org/OutOfStock',
+      offerCount: product.variants.length,
     },
   };
 
@@ -62,7 +51,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://greenstonewellness.store/' },
-      { '@type': 'ListItem', position: 2, name: 'Shop', item: 'https://greenstonewellness.store/shop' },
+      { '@type': 'ListItem', position: 2, name: 'Formulary', item: 'https://greenstonewellness.store/shop' },
       { '@type': 'ListItem', position: 3, name: product.name, item: `https://greenstonewellness.store/shop/${params.slug}` },
     ],
   };
@@ -71,168 +60,118 @@ export default async function ProductDetailPage({ params }: PageProps) {
     <>
       <SchemaOrg schema={productSchema} />
       <SchemaOrg schema={breadcrumbSchema} />
-      <ViewItemTracker
-        _id={product._id}
-        name={product.name}
-        price={product.price}
-        strength={product.strength}
-        format={product.format}
-      />
 
       <section className="section-py">
         <div className="container-gr">
           {/* Breadcrumbs */}
-          <nav className="mono mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-gold">
-              Home
-            </Link>
-            <span className="mx-2 text-gold/40">/</span>
-            <Link href="/shop" className="hover:text-gold">
-              Shop
-            </Link>
-            <span className="mx-2 text-gold/40">/</span>
+          <nav className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-cream-dim/70 mb-10" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-emerald transition-colors">Home</Link>
+            <span className="mx-2 text-emerald/30">/</span>
+            <Link href="/shop" className="hover:text-emerald transition-colors">Formulary</Link>
+            <span className="mx-2 text-emerald/30">/</span>
             <span className="text-cream">{product.name}</span>
           </nav>
 
-          {/* Product hero */}
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="relative aspect-square rounded-lg overflow-hidden bg-obsidian-light border border-gold/15">
-              {imageUrl ? (
-                <Image
-                  src={imageUrl}
-                  alt={product.image?.alt || product.name}
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              ) : (
-                <div className="absolute inset-0 grid place-items-center text-gold/30 font-cormorant text-6xl">
-                  Rx
-                </div>
-              )}
+          {/* Hero */}
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] items-start">
+            <div className="relative aspect-square overflow-hidden bg-obsidian-mid border border-emerald/20">
+              <Image
+                src={product.image}
+                alt={product.imageAlt}
+                fill
+                priority
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover"
+              />
             </div>
 
             <div>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {product.usaCompounded && <span className="badge badge-usa">USA Compounded</span>}
-                {product.format && <span className="badge badge-injectable">{product.format}</span>}
-              </div>
+              <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-3">
+                // {product.category.replace('-', ' ')}
+              </p>
+              <h1 className="font-cormorant text-display-lg text-white leading-tight">{product.name}</h1>
+              <p className="mt-5 text-base text-cream-dim leading-relaxed">{product.shortDescription}</p>
 
-              <h1 className="font-cormorant">{product.name}</h1>
-              {product.shortDescription && (
-                <p className="mt-4 text-lg text-cream-dim">{product.shortDescription}</p>
-              )}
+              <p className="mt-6 text-sm text-cream/85 leading-relaxed">{product.longDescription}</p>
 
-              <dl className="mt-8 grid grid-cols-2 gap-4 p-6 border border-gold/10 rounded-lg">
-                {product.strength && (
-                  <div>
-                    <dt className="mono">Strength</dt>
-                    <dd className="text-cream mt-1">{product.strength}</dd>
-                  </div>
-                )}
-                {product.size && (
-                  <div>
-                    <dt className="mono">Size</dt>
-                    <dd className="text-cream mt-1">{product.size}</dd>
-                  </div>
-                )}
-                {product.format && (
-                  <div>
-                    <dt className="mono">Format</dt>
-                    <dd className="text-cream mt-1 capitalize">{product.format}</dd>
-                  </div>
-                )}
-                <div>
-                  <dt className="mono">Price</dt>
-                  <dd className="font-cormorant text-gold text-3xl mt-1">
-                    ${product.price.toFixed(0)}
-                  </dd>
-                </div>
-              </dl>
-
-              <div className="mt-8 flex flex-wrap gap-4">
-                <AddToCartButton product={product} />
-                <Link href="/contact" className="btn btn-ghost">
-                  Questions? Contact Us →
-                </Link>
-              </div>
-
-              <ul className="mt-6 space-y-2 text-sm text-cream-dim">
-                <li className="flex items-start gap-2">
-                  <span className="text-gold leading-tight">🧪</span>
-                  <span><strong className="text-cream">Compounded to order</strong> · 5–7 business days in the pharmacy</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold leading-tight">✓</span>
-                  <span><strong className="text-cream">$10 flat shipping</strong> · USPS Priority Mail, 3–5 business days after compounding</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold leading-tight">✓</span>
-                  <span><strong className="text-cream">Temperature-controlled</strong> packaging direct from US compounders</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold leading-tight">✓</span>
-                  <span><strong className="text-cream">Third-party tested</strong> for potency, sterility, and purity</span>
-                </li>
+              <ul className="mt-8 space-y-3">
+                {product.highlights.map((h) => (
+                  <li key={h} className="flex items-start gap-3 text-sm text-cream-dim leading-relaxed">
+                    <span className="text-emerald mt-0.5 flex-shrink-0">✓</span>
+                    <span>{h}</span>
+                  </li>
+                ))}
               </ul>
 
-              <p className="mt-6 text-[10px] leading-relaxed text-cream-dim/50">
-                Compounded by a 503A licensed pharmacy pursuant to a valid prescription. Not an FDA-approved drug. Not intended to diagnose, treat, cure, or prevent any disease. Individual results vary.{' '}
-                <Link href="/safety" className="underline underline-offset-2 hover:text-cream-dim transition-colors">
-                  Full disclaimer
-                </Link>
-                .
-              </p>
-
-            </div>
-          </div>
-
-          {/* Clinical info accordion (plain semantic <details>) */}
-          <div className="mt-20 max-w-3xl space-y-4">
-            {product.description && (
-              <details className="card-glass" open>
-                <summary className="font-cormorant text-2xl text-white cursor-pointer">
-                  Description
-                </summary>
-                <div
-                  className="mt-4 text-cream-dim space-y-3 prose-sm"
-                  dangerouslySetInnerHTML={{ __html: product.description }}
+              {/* Dual CTA — deep links to Greenstone Rx (Bloom).
+                    · "Continue to Pharmacy" → lightweight storefront root for
+                      patients ready to buy.
+                    · "Use Dose Finder" → educational page with BMI calc and
+                      dose-finder sidebar for patients still choosing a dose.
+                  Both routed through the same /login?next= auth gate. */}
+              <div className="mt-10">
+                <PharmacyDeepLink
+                  bloomLearn={product.bloomLearn}
+                  slug={product.slug}
                 />
-              </details>
-            )}
-            {product.storageInstructions && (
-              <details className="card-glass">
-                <summary className="font-cormorant text-2xl text-white cursor-pointer">
-                  Storage
-                </summary>
-                <p className="mt-4 text-cream-dim">{product.storageInstructions}</p>
-              </details>
-            )}
-            {product.safetyNotes && (
-              <details className="card-glass">
-                <summary className="font-cormorant text-2xl text-white cursor-pointer">
-                  Safety Notes
-                </summary>
-                <p className="mt-4 text-cream-dim whitespace-pre-line">{product.safetyNotes}</p>
-              </details>
-            )}
-          </div>
-
-          {/* Related */}
-          {product.relatedProducts && product.relatedProducts.length > 0 && (
-            <div className="mt-24">
-              <header className="text-center mb-12">
-                <p className="eyebrow">Related</p>
-                <h2>You may also consider</h2>
-              </header>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {product.relatedProducts.map((rp) => (
-                  <ProductCard key={rp._id} product={rp} />
-                ))}
+                <p className="mt-4 text-xs text-cream-dim/60 leading-relaxed max-w-md">
+                  Already know what you need? <strong className="text-cream">Continue to Pharmacy.</strong>{' '}
+                  Still picking a dose? Use the <strong className="text-cream">Dose Finder</strong> for personalized recommendations.
+                </p>
               </div>
             </div>
-          )}
+          </div>
+
+          {/* Variant pricing table */}
+          <div className="mt-20 max-w-4xl mx-auto">
+            <header className="mb-6">
+              <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-2">
+                // Available options
+              </p>
+              <h2 className="font-cormorant text-3xl text-white">
+                {product.variants.length === 1 ? '1 formulation' : `${product.variants.length} formulations`}
+              </h2>
+              <p className="mt-2 text-sm text-cream-dim">
+                For orientation only — your physician confirms the final protocol on the pharmacy storefront.
+              </p>
+            </header>
+
+            <div className="overflow-x-auto border border-emerald/20">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-emerald/10 border-b border-emerald/25">
+                    <th className="text-left font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4">Option</th>
+                    <th className="text-left font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4 hidden sm:table-cell">Dose</th>
+                    <th className="text-left font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4">Size</th>
+                    <th className="text-right font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-emerald/90 py-3 px-4">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {product.variants.map((v, i) => (
+                    <tr key={`${v.label}-${i}`} className="border-b border-emerald/10 last:border-b-0 hover:bg-emerald/5 transition-colors">
+                      <td className="py-3.5 px-4 text-cream font-medium">{v.label}</td>
+                      <td className="py-3.5 px-4 text-cream-dim hidden sm:table-cell">{v.dose}</td>
+                      <td className="py-3.5 px-4 text-cream-dim">{v.size}</td>
+                      <td className="py-3.5 px-4 text-right font-cormorant text-xl text-gold">${v.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <p className="mt-6 text-[0.65rem] font-jetbrains tracking-wider uppercase text-cream-dim/45 text-center">
+              Compounded by Greenstone Rx · Florida 503A pharmacy · USP 797 sterile
+            </p>
+          </div>
+
+          {/* Compliance footer */}
+          <p className="mt-16 text-[10px] leading-relaxed text-cream-dim/50 max-w-3xl mx-auto text-center">
+            Compounded by a 503A licensed pharmacy pursuant to a valid prescription. Not an FDA-approved drug. Not intended to diagnose, treat, cure, or prevent any disease. Individual results vary.{' '}
+            <Link href="/safety" className="underline underline-offset-2 hover:text-cream transition-colors">
+              Full disclaimer
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </>

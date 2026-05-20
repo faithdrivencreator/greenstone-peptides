@@ -108,38 +108,6 @@ export default async function HomePage() {
       {/* ---------- FOUR VERTICALS STRIP ---------- */}
       <VerticalsStrip />
 
-      {/* ---------- NEW TO PEPTIDES CTA ---------- */}
-      <section className="section-py bg-emerald/[0.08] border-y border-emerald/25 relative overflow-hidden">
-        {/* Subtle emerald glow */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse 60% 80% at 50% 50%, rgba(26,158,110,0.10), transparent 70%)' }}
-          aria-hidden
-        />
-        <div className="container-gr relative z-10">
-          <div className="card-glass !border-emerald/30 max-w-4xl mx-auto text-center !py-14 !px-8 sm:!px-16">
-            <p className="font-jetbrains text-emerald text-sm tracking-[0.2em] uppercase mb-5 mx-auto max-w-none">// Personalized Protocol</p>
-            <h2 className="font-cormorant text-display-md text-white mb-4">
-              New to peptides?<br />
-              <em className="italic text-gold">We&apos;ll guide you.</em>
-            </h2>
-            <p className="text-cream-dim text-base leading-relaxed max-w-xl mx-auto mb-8">
-              Answer 3 quick questions about your goals, experience, and budget.
-              We&apos;ll match you to the right protocol, with education on how to use it safely.
-            </p>
-            <Link
-              href="/guide"
-              className="btn btn-solid !text-base !px-10 !py-4 animate-pulse-gold"
-            >
-              Find My Protocol →
-            </Link>
-            <p className="font-jetbrains text-cream-dim/70 text-xs tracking-wider mt-6 mx-auto max-w-none">
-              Takes 3 minutes · No account required · Third-party tested formulations
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ---------- TRUST BAR ---------- */}
       <section className="bg-obsidian-mid/90 border-y border-emerald/25 py-8 md:py-10">
         <div className="container-gr">
@@ -252,7 +220,7 @@ export default async function HomePage() {
         <div className="container-gr">
           <header className="text-center mb-12">
             <p className="eyebrow text-emerald">Quality Standards</p>
-            <h2>Third-party tested. USP 797 compounded.</h2>
+            <h2>Third-party tested. Pharmacy-grade.</h2>
           </header>
           <div className="grid gap-6 md:grid-cols-3">
             {[
@@ -279,9 +247,13 @@ export default async function HomePage() {
               </div>
             ))}
           </div>
-          <p className="text-center text-[0.6rem] text-cream-dim/40 mt-8 font-jetbrains tracking-wide uppercase">
-            Dispensed by Greenstone Rx · A licensed Florida 503A compounding pharmacy
-          </p>
+          <div className="grid gap-6 md:grid-cols-3 mt-8">
+            <div className="hidden md:block" aria-hidden />
+            <p className="text-center text-[0.6rem] text-cream-dim/40 font-jetbrains tracking-wide uppercase">
+              Dispensed by Greenstone Rx · A licensed Florida 503A compounding pharmacy
+            </p>
+            <div className="hidden md:block" aria-hidden />
+          </div>
         </div>
       </section>
 
@@ -491,22 +463,6 @@ export default async function HomePage() {
           </div>
         </section>
       )}
-
-      {/* ---------- GLP-1 QUIZ CTA ---------- */}
-      <section className="section-py bg-emerald/[0.08] border-y border-emerald/25">
-        <div className="container-gr">
-          <div className="card-glass border-emerald/30 text-center max-w-3xl mx-auto">
-            <p className="eyebrow">Candidacy Check</p>
-            <h2 className="font-cormorant">Is GLP-1 therapy right for you?</h2>
-            <p className="text-cream-dim mt-4 mx-auto">
-              Take our 2-minute candidacy quiz to find the right formulation for your goals.
-            </p>
-            <Link href="/guide" className="btn btn-primary mt-6 inline-flex">
-              Start Quiz
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* ---------- EMAIL CAPTURE / DISCOUNT ---------- */}
       <section className="section-py border-t border-emerald/15 bg-obsidian-mid/40">

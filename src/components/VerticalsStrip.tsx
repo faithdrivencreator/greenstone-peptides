@@ -1,9 +1,9 @@
 'use client';
 
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-import { ArrowRight, Scale, FlaskConical, HeartPulse, Sparkles } from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const PHARMACY_BASE =
   process.env.NEXT_PUBLIC_PHARMACY_URL || 'https://bloom.greenstonerx.com';
@@ -17,15 +17,12 @@ const BLOOM_CLINIC_ID = '6a0bb254fa53ddc1571c040b';
 
 type Vertical = {
   slug: 'weight-loss' | 'peptides' | 'mens-ed' | 'longevity';
-  // Whether Bloom has a dedicated /learn/<slug> page. Longevity rolls up into
-  // Peptides → metabolism on the canonical Bloom storefront, so we send Learn
-  // for that card to the peptides educational page instead of a 404.
   learnSlug: 'weight-loss' | 'peptides' | 'mens-ed';
   title: string;
   eyebrow: string;
   tagline: string;
-  icon: LucideIcon;
-  accent: string;
+  image: string;
+  imageAlt: string;
 };
 
 const VERTICALS: ReadonlyArray<Vertical> = [
@@ -35,8 +32,8 @@ const VERTICALS: ReadonlyArray<Vertical> = [
     title: 'Weight Loss',
     eyebrow: 'GLP-1 · GIP',
     tagline: 'Reset hunger signals — not willpower.',
-    icon: Scale,
-    accent: 'from-emerald/30 via-emerald/5 to-transparent',
+    image: '/images/verticals/weight-loss.webp',
+    imageAlt: 'Woman in a bright kitchen holding a glass of water in the morning light',
   },
   {
     slug: 'peptides',
@@ -45,8 +42,8 @@ const VERTICALS: ReadonlyArray<Vertical> = [
     eyebrow: '7 medications',
     tagline:
       'Targeted signals for healing, growth hormone, metabolism, and collagen.',
-    icon: FlaskConical,
-    accent: 'from-gold/25 via-gold/5 to-transparent',
+    image: '/images/verticals/peptides.webp',
+    imageAlt: 'Man at a sunlit desk reading a printed information booklet',
   },
   {
     slug: 'mens-ed',
@@ -55,20 +52,17 @@ const VERTICALS: ReadonlyArray<Vertical> = [
     eyebrow: 'Oral therapies',
     tagline:
       'Sildenafil, tadalafil, combination orals — discreetly shipped.',
-    icon: HeartPulse,
-    accent: 'from-emerald/25 via-emerald/5 to-transparent',
+    image: '/images/verticals/mens-ed.webp',
+    imageAlt: 'Mature couple sharing a quiet morning coffee at home',
   },
   {
     slug: 'longevity',
-    // No dedicated Bloom /learn/longevity page exists today (per canonical
-    // docs). NAD+ + MOTS-c live inside the Peptides → Metabolism cluster,
-    // so both CTAs route into the peptides educational tree.
     learnSlug: 'peptides',
     title: 'Longevity',
     eyebrow: 'NAD+ · Mitochondria',
     tagline: 'Cellular energy and longevity protocols.',
-    icon: Sparkles,
-    accent: 'from-gold/30 via-gold/5 to-transparent',
+    image: '/images/verticals/longevity.webp',
+    imageAlt: 'Active man hiking a coastal cliff trail at sunrise',
   },
 ];
 
@@ -130,22 +124,24 @@ export function VerticalsStrip() {
           {VERTICALS.map((v) => {
             const productUrl = buildProductUrl();
             const learnUrl = buildLearnUrl(v.learnSlug);
-            const Icon = v.icon;
 
             return (
               <article
                 key={v.slug}
                 className="card-glass border-emerald/15 hover:border-emerald/35 transition-colors duration-300 flex flex-col group/vert relative overflow-hidden"
               >
-                {/* Card art placeholder — gradient wash + brand icon. Real
-                    imagery will be swapped in by the design pass. */}
-                <div
-                  className={`relative aspect-[4/3] -mx-6 -mt-6 mb-6 flex items-center justify-center bg-gradient-to-br ${v.accent} border-b border-emerald/15`}
-                >
-                  <Icon
-                    size={48}
-                    strokeWidth={1}
-                    className="text-cream/85 group-hover/vert:text-gold transition-colors duration-500"
+                <div className="relative aspect-[4/3] -mx-6 -mt-6 mb-6 overflow-hidden border-b border-emerald/15 bg-obsidian-mid">
+                  <Image
+                    src={v.image}
+                    alt={v.imageAlt}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover/vert:scale-[1.04]"
+                  />
+                  {/* Subtle bottom emerald wash for visual cohesion with card body */}
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none"
+                    style={{ background: 'linear-gradient(to bottom, transparent, rgba(8,28,22,0.55))' }}
                     aria-hidden
                   />
                 </div>

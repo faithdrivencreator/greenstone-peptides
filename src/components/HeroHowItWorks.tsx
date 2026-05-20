@@ -41,8 +41,7 @@ export function HeroHowItWorks() {
       {/* Eyebrow above the timeline */}
       <motion.p
         initial={{ opacity: 0, y: 8 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-80px' }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className="font-jetbrains text-[0.65rem] tracking-[0.25em] uppercase text-emerald/80 mb-5 pl-14"
       >
@@ -89,8 +88,7 @@ export function HeroHowItWorks() {
               <motion.li
                 key={step.n}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.6,
                   delay: i * 0.15,
