@@ -150,7 +150,8 @@
         "mixing peptides"
       ],
       "angle": "A careful reference on reconstitution \u2014 bacteriostatic water vs sterile water, gentle mixing vs shaking, dosage math for common concentrations, and common mistakes to avoid.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-05-20T11:30:00.000Z"
     },
     {
       "slug": "peptide-storage-temperature-guide",
