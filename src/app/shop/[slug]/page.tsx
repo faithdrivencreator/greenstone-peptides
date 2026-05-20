@@ -115,9 +115,7 @@ export default function ParentDetailPage({ params }: PageProps) {
                 {product.shortDescription}
               </p>
 
-              <p className="mt-6 text-sm text-cream/85 leading-relaxed">{product.longDescription}</p>
-
-              <ul className="mt-8 space-y-3">
+              <ul className="mt-7 space-y-2.5">
                 {product.highlights.map((h) => (
                   <li key={h} className="flex items-start gap-3 text-sm text-cream-dim leading-relaxed">
                     <span className="text-emerald mt-0.5 flex-shrink-0">✓</span>
@@ -125,11 +123,46 @@ export default function ParentDetailPage({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
+
+              {/* ---------- HERO CTA — price + Continue to Pharmacy above the fold ---------- */}
+              <div className="mt-8 pt-7 border-t border-emerald/20">
+                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-1">
+                  <p className="font-jetbrains text-[0.6rem] tracking-[0.25em] uppercase text-cream-dim/70">
+                    Starting from
+                  </p>
+                  <p className="font-cormorant text-4xl text-gold" style={{ fontWeight: 400 }}>
+                    ${from}
+                  </p>
+                  <p className="font-jetbrains text-[0.6rem] tracking-[0.18em] uppercase text-cream-dim/55">
+                    {product.variants.length === 1 ? '1 option' : `${product.variants.length} options`}
+                  </p>
+                </div>
+                <p className="text-xs text-cream-dim/75 mb-5 leading-relaxed">
+                  Sign-in required. A licensed physician reviews every prescription before it ships.
+                </p>
+                <PharmacyDeepLink slug={product.slug} />
+                <a
+                  href="#details"
+                  className="mt-5 inline-flex items-center gap-1.5 font-jetbrains text-[0.6rem] tracking-[0.2em] uppercase text-cream-dim/70 hover:text-emerald transition-colors"
+                >
+                  Read the full protocol ↓
+                </a>
+              </div>
             </div>
           </div>
 
           {/* ---------- EDUCATIONAL CONTENT BLOCKS ---------- */}
-          <div className="mt-24 max-w-3xl mx-auto space-y-14">
+          <div id="details" className="mt-24 max-w-3xl mx-auto space-y-14 scroll-mt-24">
+            <section>
+              <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-3">
+                // The science
+              </p>
+              <h2 className="font-cormorant text-3xl text-cream leading-tight mb-5" style={{ fontWeight: 400 }}>
+                About {product.name}
+              </h2>
+              <p className="text-base text-cream-dim leading-relaxed">{product.longDescription}</p>
+            </section>
+
             <ContentBlock heading="How it works" body={product.howItWorks} />
             <ContentBlock heading="Who it's for" body={product.whoItsFor} />
 

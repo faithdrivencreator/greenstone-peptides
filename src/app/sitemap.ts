@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { staticProducts } from '@/data/products';
+import { PARENT_PRODUCTS } from '@/data/parent-products';
 import { staticBlogPosts } from '@/data/blog-posts';
 import { TREATMENT_AREAS } from '@/data/treatment-areas';
 
@@ -31,14 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
   }));
 
-  const productEntries: MetadataRoute.Sitemap = staticProducts
-    .filter(p => p.active)
-    .map(p => ({
-      url: `${SITE_URL}/shop/${p.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    }));
+  const productEntries: MetadataRoute.Sitemap = PARENT_PRODUCTS.map((p) => ({
+    url: `${SITE_URL}/shop/${p.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
 
   const blogEntries: MetadataRoute.Sitemap = staticBlogPosts.map(p => ({
     url: `${SITE_URL}/learn/${p.slug}`,

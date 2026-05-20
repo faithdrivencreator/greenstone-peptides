@@ -6,6 +6,23 @@ import type { Product, Category, BlogPost } from '@/types';
 import { staticProducts } from '@/data/products';
 import { staticCategories } from '@/data/categories';
 import { staticBlogPosts } from '@/data/blog-posts';
+import { PARENT_PRODUCTS } from '@/data/parent-products';
+
+/**
+ * Map an old SKU slug (e.g. `bpc-157-5mg`, `ghk-cu-50mg`) to its parent slug
+ * (`bpc-157`, `ghk-cu`). The blog data still references variant-level IDs but
+ * `/shop/<sku>` no longer exists — only `/shop/<parent>` does. Without this
+ * normalizer, the related-products sidebar on blog posts 404s on click.
+ */
+const PARENT_SLUGS = PARENT_PRODUCTS.map((p) => p.slug).sort(
+  (a, b) => b.length - a.length, // longest first so `tirzepatide-nad` wins over `tirzepatide`
+);
+function toParentSlug(skuSlug: string): string {
+  const match = PARENT_SLUGS.find(
+    (parent) => skuSlug === parent || skuSlug.startsWith(parent + '-'),
+  );
+  return match ?? skuSlug;
+}
 
 // ── Adapters: static shape → component-compatible shape ──────────────────────
 
@@ -33,7 +50,9 @@ function adaptProduct(
     _id: p.id,
     _type: 'product',
     name: p.name,
-    slug: { _type: 'slug', current: p.slug },
+    // Rewrite to the parent slug so blog "related products" cards click
+    // through to a real PDP instead of a 404 on the old SKU URL.
+    slug: { _type: 'slug', current: toParentSlug(p.slug) },
     category,
     shortDescription: p.shortDescription ?? undefined,
     description: p.description as unknown as string, // HTML string

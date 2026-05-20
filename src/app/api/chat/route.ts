@@ -69,29 +69,29 @@ This is a 503A compounding pharmacy model — the legal framework that lets a ph
 === TREATMENT AREAS & MEDICATIONS ===
 
 WEIGHT LOSS — GLP-1 and dual-agonist therapies that reset hunger signals at the receptor level.
-- [Semaglutide](/shop/semaglutide-2-5mg-ml-1ml) (from $54) — Once-weekly injection or daily oral tablet, the molecule that started the GLP-1 category. Mimics GLP-1 to slow gastric emptying and dampen appetite.
-- [Tirzepatide](/shop/tirzepatide-10mg-1ml) (from $95) — Dual GLP-1 + GIP agonist. In head-to-head studies, more weight loss on average than GLP-1 alone.
-- [Retatrutide](/shop/retatrutide-20mg-ml-1ml) (from $277) — Triple agonist (GLP-1 + GIP + glucagon). Newer mechanism, strong early data on metabolic-rate effect.
+- [Semaglutide](/shop/semaglutide) (from $54) — Once-weekly injection or daily oral tablet, the molecule that started the GLP-1 category. Mimics GLP-1 to slow gastric emptying and dampen appetite.
+- [Tirzepatide](/shop/tirzepatide) (from $95) — Dual GLP-1 + GIP agonist. In head-to-head studies, more weight loss on average than GLP-1 alone.
+- [Retatrutide](/shop/retatrutide) (from $277) — Triple agonist (GLP-1 + GIP + glucagon). Newer mechanism, strong early data on metabolic-rate effect.
 
 MEN'S ED — PDE5 inhibitor oral therapies for circulation, not desire.
-- [Sildenafil/Tadalafil ODT](/shop/sildenafil-tadalafil-55-22mg-odt) (from $115) — Combined oral dissolving tablet. Sildenafil 30–60 min onset, 4–6 hr duration. Tadalafil up to 36 hr; can be daily-low-dose.
+- [Sildenafil/Tadalafil ODT](/shop/sildenafil-tadalafil) (from $115) — Combined oral dissolving tablet. Sildenafil 30–60 min onset, 4–6 hr duration. Tadalafil up to 36 hr; can be daily-low-dose.
 
 PEPTIDES — Targeted biological signals (healing, growth hormone, metabolism, collagen). Sub-areas:
 
   Healing & Recovery — soft-tissue repair, post-injury, gut lining
-  - [BPC-157](/shop/bpc-157-5mg) (from $115) — Body Protection Compound, studied for tendon/ligament/gut healing.
-  - [TB-500](/shop/tb-500-5mg) (from $149) — Thymosin Beta-4; athletes' staple for soft-tissue recovery.
+  - [BPC-157](/shop/bpc-157) (from $115) — Body Protection Compound, studied for tendon/ligament/gut healing.
+  - [TB-500](/shop/tb-500) (from $149) — Thymosin Beta-4; athletes' staple for soft-tissue recovery.
 
   Growth Hormone Support — pituitary signaling, not replacement
-  - [Sermorelin](/shop/sermorelin-4mg) (from $81) — GHRH analog, daily dose, gentle ramp. Good entry point.
-  - [Tesamorelin](/shop/tesamorelin-5mg) (from $115) — GHRH analog with strong visceral-fat-reduction data.
+  - [Sermorelin](/shop/sermorelin) (from $81) — GHRH analog, daily dose, gentle ramp. Good entry point.
+  - [Tesamorelin](/shop/tesamorelin) (from $115) — GHRH analog with strong visceral-fat-reduction data.
 
   Metabolism & Cellular Energy — mitochondrial signals, not stimulants
-  - [MOTS-c](/shop/mots-c-20mg) (from $149) — Mitochondrial-derived peptide; insulin sensitivity and cellular energy.
-  - [NAD+](/shop/nad-plus-50mg) (from $81) — Cellular coenzyme. Available as injection (fastest), oral, or nasal spray.
+  - [MOTS-c](/shop/mots-c) (from $149) — Mitochondrial-derived peptide; insulin sensitivity and cellular energy.
+  - [NAD+](/shop/nad) (from $81) — Cellular coenzyme. Available as injection (fastest), oral, or nasal spray.
 
   Collagen & Skin — fibroblast signaling
-  - [GHK-Cu](/shop/ghk-cu-50mg) (from $149) — Copper peptide; skin, scalp, wound healing. Topical or injection.
+  - [GHK-Cu](/shop/ghk-cu) (from $149) — Copper peptide; skin, scalp, wound healing. Topical or injection.
 
 (Pricing shown as "from $X" anchors — exact pricing per dose/format is shown at the pharmacy checkout.)
 
