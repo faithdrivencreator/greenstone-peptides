@@ -6,11 +6,11 @@ import { ProductCard } from '@/components/ProductCard';
 import { BlogCard } from '@/components/BlogCard';
 import { SchemaOrg } from '@/components/SchemaOrg';
 import { ShieldCheck, FlaskConical, Thermometer, Clock, ArrowRight } from 'lucide-react';
-import { productImageUrl } from '@/lib/product-image';
 import EmailCapture from '@/components/EmailCapture';
 import { PharmacyButton } from '@/components/PharmacyButton';
 import { VerticalsStrip } from '@/components/VerticalsStrip';
 import { TrustGrid } from '@/components/TrustGrid';
+import { HeroHowItWorks } from '@/components/HeroHowItWorks';
 
 export const metadata: Metadata = {
   title: 'Greenstone Wellness | Compounded GLP-1, Peptide & Men\'s Therapy',
@@ -100,43 +100,8 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Right: live product mini-grid */}
-          <div className="grid grid-cols-2 gap-3">
-            {(featured.length > 0 ? featured.slice(0, 4) : [
-              { _id: 'ph1', name: 'Semaglutide', category: { title: 'Weight Loss' }, price: 299, slug: { current: '' } },
-              { _id: 'ph2', name: 'Tirzepatide', category: { title: 'Weight Loss' }, price: 349, slug: { current: '' } },
-              { _id: 'ph3', name: 'Sermorelin', category: { title: 'GH Support' }, price: 189, slug: { current: '' } },
-              { _id: 'ph4', name: 'NAD+', category: { title: 'Longevity' }, price: 149, slug: { current: '' } },
-            ] as Array<{ _id: string; name: string; category?: { title: string }; price: number; slug: { current: string } }>).map((p) => (
-              <Link
-                key={p._id}
-                href={p.slug.current ? `/shop/${p.slug.current}` : '/shop'}
-                className="card-glass border-emerald/20 hover:border-emerald/50 p-4 group transition-all duration-300 hover:-translate-y-1 block"
-              >
-                <div className="relative w-full aspect-square mb-3 bg-obsidian-light border border-emerald/10 flex items-center justify-center overflow-hidden">
-                  {productImageUrl((p as any).image) ? (
-                    <img
-                      src={productImageUrl((p as any).image) ?? ''}
-                      alt={(p as any).image?.alt || p.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : (
-                    <span className="font-cormorant text-3xl text-emerald/30 group-hover:text-emerald/50 transition-colors">Rx</span>
-                  )}
-                  {(p as any).usaCompounded !== false && (p as any).slug?.current && (
-                    <span className="badge badge-usa absolute top-2 left-2 !text-[0.55rem] !px-2 !py-0.5 !tracking-wider z-10">
-                      USA Compounded
-                    </span>
-                  )}
-                </div>
-                <p className="font-cormorant text-base text-white leading-tight">{p.name}</p>
-                {p.category?.title && (
-                  <p className="font-jetbrains text-[0.6rem] tracking-wider uppercase text-emerald/70 mt-0.5">{p.category.title}</p>
-                )}
-                <p className="font-cormorant text-lg text-gold mt-1">from ${p.price}</p>
-              </Link>
-            ))}
-          </div>
+          {/* Right: animated 3-step "How it works" timeline */}
+          <HeroHowItWorks />
         </div>
       </section>
 
