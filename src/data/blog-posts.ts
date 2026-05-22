@@ -5,6 +5,217 @@ export type StaticBlogPost = (typeof staticBlogPosts)[number];
 
 export const staticBlogPosts = [
   {
+    id: 'peptide-storage-temperature-guide',
+    title: "Storing Peptides at Home: Temperature, Light, and Shelf Life",
+    slug: 'peptide-storage-temperature-guide',
+    publishedAt: '2026-05-22T07:05:00.000Z',
+    excerpt: "Proper peptide storage determines whether a compound retains its integrity from receipt to the final dose. This reference covers refrigeration ranges for lyophilized and reconstituted peptides, the 28-day in-use window, freeze-thaw rules, and discard triggers.",
+    content: `<h2>What Every Peptide Researcher Needs to Know About Storage</h2>
+
+<img src="/blog/peptide-storage-temperature-guide-hero-20260522.png" alt="Clean editorial still life with sealed research vials arranged on refrigerator shelf representing proper peptide cold storage" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<p>Proper storage is not a secondary concern in peptide research — it is the variable that determines whether a compound retains its structural integrity and biological activity from the moment it ships until the final dose is drawn. Lyophilized peptides and reconstituted peptide solutions have fundamentally different stability profiles, and handling them identically is one of the most consequential errors in research practice.</p>
+
+<p>This reference covers the storage requirements for both states — refrigeration temperature ranges, freezer storage considerations for lyophilized peptides, light and humidity exposure, and the practical in-use windows that govern safe protocol design. Whether you are storing an unopened vial of lyophilized compound or managing an active reconstituted preparation through a 28-day protocol window, the guidance here applies across formulations.</p>
+
+<ul>
+<li><strong>Lyophilized (freeze-dried) powder:</strong> The most stable format — designed for extended storage at refrigerator or freezer temperatures before reconstitution</li>
+<li><strong>Reconstituted solution:</strong> Active, in-use state — substantially shorter stability window, strictly refrigerator storage, no freeze-thaw cycles</li>
+<li><strong>Bacteriostatic water for injection (BWI):</strong> The standard reconstitution solvent; its 0.9% benzyl alcohol preservative defines the multi-dose in-use window</li>
+<li><strong>Temperature range:</strong> 2–8°C for both lyophilized and reconstituted; lyophilized may also be stored at –20°C for extended periods</li>
+<li><strong>Light exposure:</strong> UV degradation is a documented stability risk — amber vials and opaque packaging are not decorative</li>
+<li><strong>Freeze-thaw cycles:</strong> Acceptable for unopened lyophilized powder; strictly contraindicated for reconstituted peptide solutions</li>
+</ul>
+
+<ul>
+<li><strong>Temperature excursions:</strong> Even brief room-temperature exposure can initiate degradation in reconstituted solutions — especially relevant during draw and injection preparation</li>
+<li><strong>In-use window compliance:</strong> 28 days from reconstitution is a ceiling, not a target — vials should be discarded at this limit regardless of remaining volume</li>
+<li><strong>Humidity and container integrity:</strong> Moisture ingress into lyophilized vials compromises the powder state before reconstitution begins</li>
+<li><strong>Contamination risk:</strong> Each stopper puncture is a sterility event; storage conditions do not compensate for compromised aseptic technique</li>
+</ul>
+
+<p>Understanding these distinctions before protocol design begins prevents the most common storage-related errors — and the systematic dosing variance and safety risks that follow from them.</p>
+
+<p>Greenstone Peptides ships lyophilized compounds with temperature-controlled cold-chain logistics, verifies purity and identity through third-party HPLC and mass spectrometry on every batch, and provides product-specific storage guidance with each vial — so the compound you receive has been protected from synthesis through delivery before your storage practices take over.</p>
+
+<img src="/blog/peptide-storage-temperature-guide-img1-20260522.png" alt="Scientific flat-lay overview of peptide storage conditions showing refrigerator, vials, and temperature reference tools" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<h2>The Stability Landscape: Why Lyophilized and Reconstituted Peptides Require Different Handling</h2>
+
+<p>The 2025–2026 compounding standard for research-grade peptides is lyophilized powder — a format engineered precisely because it separates the peptide's long-term stability profile from the constraints of an aqueous solution. Lyophilization removes water under vacuum following controlled freezing, leaving a dry cake or powder in which peptide degradation pathways that require water as a medium are effectively suspended. This is why a properly stored lyophilized vial can maintain purity and potency for 12–24 months or longer at refrigerator temperature, and often longer at –20°C, while the same compound in reconstituted solution begins its 28-day in-use countdown the moment the solvent is added.</p>
+
+<img src="/blog/peptide-storage-temperature-guide-img2-20260522.png" alt="Dark editorial close-up of glass laboratory vials on cold surface evoking sterile refrigeration environment for peptide preservation" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<h3>Lyophilized Powder: The Long-Horizon Storage Format</h3>
+
+<p>Lyophilized peptide vials are designed to be stored at refrigerator temperature (2–8°C) as the default condition. At this temperature range, peptide bond hydrolysis, oxidation of susceptible residues, and aggregation kinetics are substantially slowed relative to room temperature. The specific stability window varies by peptide structure — linear peptides, cyclic peptides, and disulfide-containing compounds each have distinct degradation kinetics — but 2–8°C refrigerator storage is the universal baseline for compounded research peptides.</p>
+
+<ul>
+<li><strong>Refrigerator storage (2–8°C):</strong> Standard condition for all lyophilized research peptides — maintains stability through the labeled shelf life when combined with protection from light and humidity</li>
+<li><strong>Freezer storage (–20°C):</strong> Extends the stability window for longer-term stockpiles; acceptable for lyophilized powder that will not be reconstituted immediately — but each freeze-thaw cycle of the vial should be minimized even in powder form</li>
+<li><strong>Light protection:</strong> UV radiation initiates photodegradation in several peptide classes, particularly those containing tryptophan, phenylalanine, or tyrosine residues — amber glass vials and outer packaging exist to address this, not for aesthetics</li>
+<li><strong>Humidity exclusion:</strong> Lyophilized powder is hygroscopic in varying degrees — moisture ingress through a damaged or improperly seated stopper can initiate pre-reconstitution degradation</li>
+</ul>
+
+<h3>Reconstituted Solutions: The 28-Day In-Use Window</h3>
+
+<img src="/blog/peptide-storage-temperature-guide-img3-20260522.png" alt="Macro editorial still life with single glass ampule and precise measurement tools representing careful peptide dosing discipline" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<p>Published stability data for bacteriostatic water reconstituted peptides — supported by FDA labeling for BWI and USP 797 compounding guidelines — establishes 28 days at 2–8°C as the standard beyond-use date for most compounded research peptide preparations. This window is grounded in the antimicrobial effectiveness of 0.9% benzyl alcohol across the use period, combined with the peptide's own aqueous stability profile. The 28-day limit is a discard threshold: vials should be discarded at 28 days from reconstitution date regardless of remaining volume. It is not a target shelf life to be approached — it is the ceiling.</p>
+
+<h2>Choosing the Right Storage Approach for Your Protocol</h2>
+
+<p>Storage decisions in a research context are not uniform — the correct approach depends on how soon the compound will be used, whether multiple vials are being managed simultaneously, and whether cold-chain conditions are available throughout the use period. The following comparison clarifies the key storage states and their requirements:</p>
+
+<div style="overflow-x:auto;margin:2rem 0;border-radius:12px;border:1px solid rgba(255,255,255,0.1);">
+<table style="width:100%;border-collapse:collapse;font-size:0.875rem;min-width:600px;">
+<thead>
+<tr style="background:rgba(45,95,191,0.25);border-bottom:1px solid rgba(45,95,191,0.5);">
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">State</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Temperature</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Freeze-Thaw</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">In-Use Window</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Key Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Lyophilized — active use<br/><span style="font-size:0.78rem;color:#8a9bb0;">Will reconstitute soon</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">2–8°C refrigerator</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Minimize cycles</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Per labeled shelf life</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Moisture / light ingress</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Lyophilized — long-term<br/><span style="font-size:0.78rem;color:#8a9bb0;">Multi-vial stockpile</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">–20°C freezer</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Minimize cycles; warm fully before opening</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Extended — per product data</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Condensation on warming</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Reconstituted — BWI<br/><span style="font-size:0.78rem;color:#8a9bb0;">Multi-dose in-use vial</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">2–8°C refrigerator only</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Strictly prohibited</td>
+<td style="padding:14px 16px;color:#c8d4e0;">28 days from reconstitution</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Freeze-thaw aggregation</td>
+</tr>
+<tr style="background:rgba(0,200,255,0.07);border-top:1px solid rgba(0,200,255,0.25);">
+<td style="padding:14px 16px;font-weight:600;color:#00c8ff;">Reconstituted — SWFI<br/><span style="font-size:0.78rem;color:#4f8fff;font-weight:400;">Single-draw, no preservative</span></td>
+<td style="padding:14px 16px;color:#e8e0d4;">2–8°C — use immediately</td>
+<td style="padding:14px 16px;color:#e8e0d4;">Prohibited</td>
+<td style="padding:14px 16px;color:#e8e0d4;">Single session — discard remainder</td>
+<td style="padding:14px 16px;color:#e8e0d4;">No antimicrobial barrier</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<blockquote style="border-left:3px solid #4f8fff;padding:1rem 1.5rem;margin:2rem 0;background:rgba(45,95,191,0.1);border-radius:0 8px 8px 0;">
+<p style="margin:0;color:#c8d4e0;font-style:italic;">"The most common storage error is treating the 28-day window as an approximation rather than a hard discard threshold. A reconstituted vial at day 29 has an unknown antimicrobial status regardless of how it looks — visual clarity does not confirm preserved sterility."</p>
+<p style="margin:0.5rem 0 0;color:#8a9bb0;font-size:0.85rem;">— Greenstone Wellness Team, compounding protocol reference</p>
+</blockquote>
+
+<h3>Practical Storage Tips for Active Protocols</h3>
+
+<ol>
+<li><strong>Dedicate a specific refrigerator shelf or drawer to research compounds:</strong> Temperature variability is highest near door shelves and at the top of most domestic refrigerators. Interior middle shelves maintain the most stable 2–8°C range. Keep vials away from the freezer compartment wall to avoid accidental freezing of reconstituted solutions.</li>
+<li><strong>Label immediately and consistently:</strong> Write the reconstitution date and concentration in permanent marker directly on the vial within 60 seconds of reconstitution. Unlabeled vials create protocol errors. <a href="/learn/how-to-reconstitute-peptides-guide" style="color:#4f8fff;">Proper reconstitution technique</a> includes labeling as a mandatory step, not an afterthought.</li>
+<li><strong>Keep vials in their original packaging or in an opaque container:</strong> Amber vials protect against UV in the near-UV spectrum, but standard household lighting and incidental sunlight deliver sufficient UV to initiate photodegradation over time. An additional opaque outer container eliminates this variable.</li>
+<li><strong>Do not return vials to the freezer after reconstitution:</strong> Freeze-thaw cycles cause irreversible peptide aggregation in reconstituted solutions. If a reconstituted vial is inadvertently frozen, discard it — there is no recovery step. Lyophilized vials that have been frozen and then warmed are safe to reconstitute provided the warming was slow (refrigerator-temperature equilibration over several hours, not rapid warming at room temperature).</li>
+</ol>
+
+<h2>Storage Across Different Research Contexts</h2>
+
+<img src="/blog/peptide-storage-temperature-guide-img4-20260522.png" alt="Warm lifestyle editorial with morning light and organized research materials evoking disciplined home peptide storage routine" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<p>Storage conditions in research settings vary significantly by context — from clinician-managed preparations to home-based protocols with limited infrastructure. The risks that matter most differ by setting, but the core requirements do not change: 2–8°C for reconstituted solutions, no freeze-thaw cycles, light protection, and strict 28-day discard discipline.</p>
+
+<ul>
+<li><strong>Home-based protocols (patient-directed):</strong> The primary risks are accidental freezing (from proximity to freezer compartment), inconsistent labeling, and failure to discard at 28 days. A dedicated container in the main refrigerator compartment and a written reconstitution log address all three.</li>
+<li><strong>Clinical or supervised research settings:</strong> Controlled refrigeration units (purpose-built pharmaceutical refrigerators) eliminate temperature variability concerns. The documentation discipline required in these settings — reconstitution logs, batch records, discard documentation — is the correct model for home use as well.</li>
+<li><strong>Travel or temperature-controlled transport:</strong> Reconstituted solutions should not travel in conditions that cannot maintain 2–8°C continuously. Insulated pharmaceutical transport pouches with gel ice packs (not dry ice — dry ice risks freezing the solution) are appropriate for short-duration transport. Extended travel requiring air freight should use lyophilized compounds where possible.</li>
+</ul>
+
+<h3>Storage Tiers by Protocol Duration</h3>
+
+<ul>
+<li><strong>Tier 1 — Short protocol (under 14 days):</strong> Single reconstituted vial, refrigerator storage, BWI standard. Primary discipline is temperature consistency and daily visual inspection at each draw. Discard at protocol end or 28 days, whichever comes first.</li>
+<li><strong>Tier 2 — Extended protocol (28–90 days):</strong> Multiple lyophilized vials held in reserve; reconstitute one vial at a time and rotate at 28 days. Keep reserve vials at 2–8°C refrigerator unless extending beyond 90 days, in which case –20°C freezer storage of unopened lyophilized vials is appropriate with documented date-in and date-out.</li>
+<li><strong>Tier 3 — Long-term research or multi-compound protocols:</strong> Organized inventory management is required — each vial labeled with compound, batch/lot, reconstitution date (if applicable), and expiration. Protocol logs should record draw volumes and dates to track remaining volume and confirm discard compliance. <a href="/learn/counterfeit-peptides-how-to-spot" style="color:#4f8fff;">Verifying compound identity and purity</a> before storage protects the integrity of the entire protocol.</li>
+</ul>
+
+<h3>When to Discard — No-Exception Triggers</h3>
+
+<ul>
+<li><strong>28 days from reconstitution date</strong> — regardless of remaining volume, regardless of visual appearance</li>
+<li><strong>Visible particulate matter</strong> — cloudiness, floating particles, or precipitate in a reconstituted solution</li>
+<li><strong>Color change</strong> — any color that differs from the original reconstituted solution (most peptides reconstitute to clear or very slightly amber)</li>
+<li><strong>Known temperature excursion</strong> — if the reconstituted vial reached room temperature for more than 2–3 hours or was inadvertently frozen</li>
+<li><strong>Compromised stopper</strong> — coring (small rubber fragments visible in solution), cracked or damaged vial</li>
+</ul>
+
+<h2>Why Starting Material Quality Defines the Storage Baseline</h2>
+
+<img src="/blog/peptide-storage-temperature-guide-img5-20260522.png" alt="Clean precision editorial flat-lay with testing instruments and lab documentation representing peptide quality verification before storage" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<p>Storage guidelines apply to a compound of known starting quality. A peptide sourced from unverified overseas suppliers, compounded outside USP 797 sterile standards, or shipped without temperature-controlled logistics may have initiated degradation before it reaches the researcher's refrigerator — and no storage protocol corrects for purity that was never there. The storage window begins counting from the moment the material's quality is confirmed, not simply from the date of receipt.</p>
+
+<ul>
+<li><strong>USA-sourced active pharmaceutical ingredients</strong> — Raw materials from verified domestic manufacturers with documented purity and identity, not from overseas bulk suppliers operating outside consistent regulatory frameworks</li>
+<li><strong>USP 797 sterile compounding environment</strong> — Certified cleanroom manufacturing meeting beyond-use dating standards specific to the compound and intended storage conditions</li>
+<li><strong>Third-party batch testing</strong> — HPLC purity, mass spectrometry identity confirmation, and endotoxin testing on every production batch prior to dispatch — not selectively applied to flagged lots</li>
+<li><strong>Cold-chain logistics</strong> — Temperature-controlled shipping that maintains lyophilized powder within appropriate temperature ranges from compounding facility to delivery, with packaging designed to buffer against transit temperature excursions</li>
+</ul>
+
+<h3>Getting the Most From Your Peptide Storage Practices</h3>
+
+<ol>
+<li><strong>Warm frozen lyophilized vials slowly before reconstitution:</strong> Move a vial from –20°C freezer to 2–8°C refrigerator and allow it to equilibrate for several hours before bringing to room temperature for reconstitution. Rapid warming creates condensation that can compromise the stopper seal and introduce moisture into the lyophilized cake.</li>
+<li><strong>Maintain a reconstitution and use log:</strong> A simple written or digital record with compound name, reconstitution date, concentration, and draw dates takes under 30 seconds per entry and eliminates the most common compliance errors — missed 28-day discards and unlabeled vials.</li>
+<li><strong>Do not store reconstituted vials at injection-site temperature between doses:</strong> Some researchers leave a vial at room temperature for the duration of a multi-day travel period to avoid repeated cooling and warming. This introduces a compounding temperature excursion that is not corrected by returning the vial to refrigeration. Each dose should be drawn from a refrigerator-stored vial immediately before injection.</li>
+<li><strong>Inspect visually at every draw:</strong> A 10-second visual inspection before each use — looking for particulate matter, cloudiness, or color change — is the last line of quality confirmation in the use cycle. Reconstituted solutions of pharmaceutical-grade compounds prepared under sterile conditions should remain clear throughout their labeled use window. Any deviation is a discard trigger.</li>
+</ol>
+
+<h2>Frequently Asked Questions About Peptide Storage</h2>
+
+<h3>Can I store reconstituted peptides in the freezer to extend the shelf life?</h3>
+<p>No. Freezing a reconstituted peptide solution causes ice crystal formation that physically disrupts peptide structure and promotes aggregation. Unlike lyophilized powder — which was specifically engineered to withstand controlled freezing and desiccation — a reconstituted solution in aqueous solvent is not stable through freeze-thaw cycles. If a reconstituted vial is accidentally frozen, it should be discarded. The correct approach for extending shelf life beyond the 28-day window is to keep additional vials in lyophilized form and reconstitute one at a time.</p>
+
+<h3>How do I store peptide vials during travel or away from refrigeration?</h3>
+<p>Lyophilized vials tolerate short-duration transport at controlled ambient temperature (typically up to 25°C for brief periods — consult the product-specific storage documentation) but reconstituted solutions require continuous 2–8°C cold-chain maintenance. For travel involving reconstituted vials, a small insulated pharmaceutical pouch with gel ice packs (not dry ice) can maintain appropriate temperatures for several hours. For travel of longer duration or in high-ambient-temperature environments, plan protocols around lyophilized vials reconstituted at destination rather than transporting reconstituted solutions.</p>
+
+<h3>What happens to a peptide if it is left at room temperature briefly before injection?</h3>
+<p>Brief room-temperature exposure (5–15 minutes) while preparing the injection is not a significant stability risk for a reconstituted peptide solution stored correctly at 2–8°C. The degradation kinetics at room temperature are slower than commonly assumed for a single short-exposure event. The risks that accumulate are repeated room-temperature exposure events across many draws and prolonged temperature excursions of several hours or more. The correct practice is to draw the dose from a refrigerator-stored vial, allow 5–10 minutes of passive warming to reduce injection discomfort if needed, and inject — not to hold the vial at room temperature for extended periods before or between draws.</p>
+
+<h2>Conclusion</h2>
+
+<p>Peptide storage is one of the few protocol variables that researchers control completely from receipt through the final draw — and the margin for error is well-defined by the data. Lyophilized vials at 2–8°C, protected from light and humidity. Reconstituted solutions at 2–8°C with no freeze-thaw cycles and a firm 28-day discard discipline. Visual inspection at every draw. These are the requirements that appear in USP 797 guidance, FDA BWI labeling, and the pharmaceutical stability literature because they reflect the actual degradation kinetics of these compounds — not because they are conservative approximations.</p>
+
+<p>For researchers beginning a new protocol, Greenstone's compounded formulations ship with product-specific storage documentation alongside third-party testing records confirming purity and identity at dispatch. <a href="/store" style="color:#4f8fff;">Explore Greenstone Peptides' compounded formulations</a> and start every protocol knowing the material quality and storage requirements from the first day.</p>
+
+<em>Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.</em>
+
+<h2>Sources</h2>
+<p style="font-size:0.85rem;color:#8a9bb0;margin-bottom:1rem;">The following sources informed this article. Greenstone Peptides does not endorse any third-party organization; links are provided for research transparency.</p>
+<ol style="font-size:0.85rem;color:#8a9bb0;line-height:1.8;">
+<li><a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/016977s023lbl.pdf" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food and Drug Administration. "Bacteriostatic Water for Injection, USP." FDA Drug Label NDA 016977. 2009.</a></li>
+<li><a href="https://www.usp.org/compounding/general-chapter-797" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">United States Pharmacopeia. "USP General Chapter &lt;797&gt; Pharmaceutical Compounding — Sterile Preparations." USP–NF.</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/10480023/" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Wang W. "Instability, stabilization, and formulation of liquid protein pharmaceuticals." International Journal of Pharmaceutics. 1999;185(2):129-188.</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/27450431/" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Lam XM, et al. "Replacing succinate with glycolate buffer improves the stability of lyophilized interferon-gamma." International Journal of Pharmaceutics. 1996;142(1):85-95. PMID: 27450431</a></li>
+<li><a href="https://www.fda.gov/drugs/pharmaceutical-compounding/compounding-laws-and-policies" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food and Drug Administration. "Compounding Laws and Policies — 503A Traditional Compounding." FDA.gov.</a></li>
+</ol>
+`,
+    heroImage: '/blog/peptide-storage-temperature-guide-hero-20260522.png',
+    heroAlt: 'Clean editorial still life with sealed research vials arranged on refrigerator shelf representing proper peptide cold storage',
+    readingTime: 11,
+    featured: false,
+    seoTitle: "Peptide Storage Guide: Temperature, Shelf Life, and Handling",
+    seoDescription: "USP-aligned storage reference for reconstituted and lyophilized peptides — temperature ranges, in-use windows, freeze-thaw rules, and discard triggers.",
+    tags: ["peptide storage", "how to store peptides", "peptide shelf life", "bacteriostatic water", "lyophilized peptides", "peptide refrigeration"],
+    relatedProductIds: [],
+  },
+  {
     id: 'how-to-reconstitute-peptides-guide',
     title: "How to Reconstitute Peptides: The Step-by-Step Reference",
     slug: 'how-to-reconstitute-peptides-guide',
