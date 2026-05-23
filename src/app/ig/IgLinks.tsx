@@ -38,10 +38,10 @@ export default function IgLinks({ promo, links }: { promo: Promo; links: IgLink[
               <span className="italic text-emerald-light"> Wellness</span>
             </h1>
             <p className="mt-2.5 font-jetbrains text-[12.5px] uppercase tracking-[2px] text-cream-dim">
-              Research-grade peptides · Miami
+              Prescription compounding pharmacy · Florida
             </p>
             <div className="mt-4 inline-flex flex-wrap justify-center gap-1.5">
-              {['3rd-party tested', 'USA-sourced', 'Free guide'].map((p) => (
+              {['503A Pharmacy', 'Physician-prescribed', 'USP 797 Sterile'].map((p) => (
                 <span
                   key={p}
                   className="font-jetbrains text-[11px] tracking-[0.5px] text-blue-light bg-blue/[0.08] border border-blue/[0.18] rounded-full px-2.5 py-1"

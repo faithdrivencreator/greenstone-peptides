@@ -3,7 +3,7 @@ import IgLinks from './IgLinks';
 
 export const metadata: Metadata = {
   title: 'Greenstone Wellness',
-  description: 'Research-grade peptides, made in the USA. Tap a link to keep exploring.',
+  description: 'Compounded GLP-1, injectable, and oral medications — physician-prescribed in Florida. Tap a link to keep exploring.',
   robots: { index: false, follow: true },
   alternates: { canonical: '/ig' },
 };
@@ -22,7 +22,7 @@ type IgLink = {
 const PROMO = {
   href: `/free/peptides-made-easy${UTM}promo_free_guide`,
   code: 'FREE GUIDE',
-  headline: 'Peptides, made easy — the free guide',
+  headline: 'Compounded therapy, made easy — the free guide',
   sub: 'Drop your email to unlock the PDF',
   destination: '/free/peptides-made-easy',
   label: 'promo_free_guide',
@@ -31,16 +31,16 @@ const PROMO = {
 const LINKS: IgLink[] = [
   {
     href: `/shop${UTM}shop`,
-    title: 'Shop the catalog',
-    sub: 'All peptides · BAC water · accessories',
+    title: 'Browse the formulary',
+    sub: '14 compounded medications · GLP-1, injectable, oral therapies',
     icon: '$',
     destination: '/shop',
     label: 'shop',
   },
   {
     href: `/free/peptides-made-easy${UTM}free_guide`,
-    title: 'Free: Peptides Made Easy',
-    sub: 'PDF guide · reconstitution + dosing basics',
+    title: 'Free: Therapy Made Easy',
+    sub: 'PDF primer · plain-language compounded therapy basics',
     icon: '↓',
     destination: '/free/peptides-made-easy',
     label: 'free_guide',
@@ -48,7 +48,7 @@ const LINKS: IgLink[] = [
   {
     href: `/learn${UTM}blog`,
     title: 'The Journal',
-    sub: 'Research-backed posts with peer-reviewed citations',
+    sub: 'Plain-language guides from the clinic',
     icon: '¶',
     destination: '/learn',
     label: 'blog',
@@ -64,7 +64,7 @@ const LINKS: IgLink[] = [
   {
     href: `/contact${UTM}contact`,
     title: 'Questions?',
-    sub: 'Product Q&A · order help',
+    sub: 'Talk to the clinic · order help',
     icon: '@',
     destination: '/contact',
     label: 'contact',
