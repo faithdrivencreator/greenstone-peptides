@@ -109,11 +109,9 @@ export default function TermsPage() {
             in pricing or product information.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
-            Payment is processed securely through{' '}
-            <strong className="text-cream">Stripe, Inc.</strong> We accept major credit and
-            debit cards. All prices are listed in U.S. dollars. We do not store your payment
-            card information, Stripe handles all payment data in accordance with PCI-DSS
-            standards.
+            Payment is processed securely through our licensed pharmacy partner, Greenstone Rx.
+            All prices are listed in U.S. dollars. We do not store your payment card information
+            on our servers.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
             Prices are subject to change without notice. Applicable sales tax may be added at

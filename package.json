@@ -26,7 +26,6 @@
     "react-is": "^19.2.5",
     "resend": "^6.12.2",
     "sharp": "^0.34.5",
-    "stripe": "^15.5.0",
     "styled-components": "^6.1.8",
     "zod": "^4.4.3"
   },

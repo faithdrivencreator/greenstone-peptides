@@ -38,7 +38,6 @@ export interface Product {
   strength?: string;
   size?: string;
   price: number;
-  stripePaymentLink?: string;
   prescriptionRequired: boolean;
   usaCompounded: boolean;
   storageInstructions?: string;

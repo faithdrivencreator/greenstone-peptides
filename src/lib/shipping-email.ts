@@ -18,7 +18,7 @@ export type CarrierName = 'USPS' | 'UPS' | 'FedEx' | 'DHL' | 'Other';
 export interface ShippingEmailInput {
   customerEmail: string;
   customerFirstName: string | null;
-  orderRef: string; // last-8 of Stripe session ID, uppercase
+  orderRef: string; // order reference ID, uppercase
   trackingNumber: string;
   carrier: CarrierName;
   expectedDelivery?: string; // ISO date string or display text

@@ -102,8 +102,3 @@ export function getSupplierMapping(slug: string): SupplierMapping | null {
   return SUPPLIER_MAPPING[slug] ?? null;
 }
 
-/**
- * Look up by display name (the way Stripe's line_item.description appears in webhooks).
- * The webhook gets a name like "BPC-157 5mg" and needs the supplier mapping.
- * This map is built from the local product catalog at runtime by the webhook.
- */

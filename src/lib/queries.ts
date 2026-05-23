@@ -60,7 +60,6 @@ function adaptProduct(
     strength: p.strength ?? undefined,
     size: p.size ?? undefined,
     price: p.price,
-    stripePaymentLink: p.stripePaymentLink ?? undefined,
     prescriptionRequired: p.prescriptionRequired,
     usaCompounded: p.usaCompounded,
     storageInstructions: p.storageInstructions ?? undefined,

@@ -76,8 +76,8 @@ export default function PrivacyPage() {
               <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Payment information:</strong> Processed
-                securely by Stripe, we do not store your credit card number, CVV, or
-                full payment card details on our servers
+                securely by our payment processor. We do not store your credit card number,
+                CVV, or full payment card details on our servers
               </span>
             </li>
             <li className="flex gap-2">
@@ -159,57 +159,31 @@ export default function PrivacyPage() {
 
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">
-            4. Payment Processing, Stripe
+            4. Payment Processing
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            All payment processing is handled by{' '}
-            <strong className="text-cream">Stripe, Inc.</strong>, a PCI-DSS compliant
-            payment processor. When you enter your payment information at checkout, it
-            is transmitted directly and securely to Stripe. We{' '}
+            All payment processing is handled by our licensed pharmacy partner, Greenstone Rx,
+            via its clinical checkout platform. We{' '}
             <strong className="text-cream">do not store</strong> your credit card number,
             CVV, or full card details on our servers at any time.
-          </p>
-          <p className="text-cream-dim text-sm leading-relaxed mt-3">
-            Stripe may collect and retain your payment information in accordance with
-            their own Privacy Policy, available at{' '}
-            <a
-              href="https://stripe.com/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald hover:underline"
-            >
-              stripe.com/privacy
-            </a>.
           </p>
         </div>
 
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">
-            5. Email Marketing, Klaviyo
+            5. Email Marketing
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            We use <strong className="text-cream">Klaviyo</strong> to send marketing
-            emails, product announcements, and promotional communications. If you opt in
-            to receive marketing emails (for example, by subscribing at checkout or
-            through a sign-up form), your name and email address will be shared with
-            Klaviyo for this purpose.
+            We use <strong className="text-cream">Resend</strong> to send transactional
+            and marketing emails, including order updates, product announcements, and
+            educational content. If you opt in to receive marketing emails, your name and
+            email address will be used for this purpose.
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
             You can <strong className="text-cream">unsubscribe at any time</strong> by
             clicking the "Unsubscribe" link in any marketing email we send. Opting out
             of marketing emails will not affect transactional communications such as
             order confirmations and shipping updates.
-          </p>
-          <p className="text-cream-dim text-sm leading-relaxed mt-3">
-            Klaviyo's privacy practices are governed by their Privacy Policy at{' '}
-            <a
-              href="https://www.klaviyo.com/legal/privacy-policy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald hover:underline"
-            >
-              klaviyo.com/legal/privacy-policy
-            </a>.
           </p>
         </div>
 
@@ -263,10 +237,10 @@ export default function PrivacyPage() {
             <li className="flex gap-2">
               <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
-                <strong className="text-cream">Service providers:</strong> Stripe (payment
-                processing), Klaviyo (email marketing), shipping carriers, and other
-                vendors who assist us in operating the Site and fulfilling orders, only
-                to the extent necessary to perform their services
+                <strong className="text-cream">Service providers:</strong> Greenstone Rx
+                (pharmacy and payment processing), Resend (transactional email), shipping
+                carriers, and other vendors who assist us in operating the Site and
+                fulfilling orders, only to the extent necessary to perform their services
               </span>
             </li>
             <li className="flex gap-2">
@@ -433,9 +407,9 @@ export default function PrivacyPage() {
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">13. External Links</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            The Site may contain links to third-party websites (such as Stripe or
-            Klaviyo). We are not responsible for the privacy practices of those sites
-            and encourage you to review their privacy policies independently.
+            The Site may contain links to third-party websites. We are not responsible
+            for the privacy practices of those sites and encourage you to review their
+            privacy policies independently.
           </p>
         </div>
 

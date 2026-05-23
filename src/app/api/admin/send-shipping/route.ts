@@ -22,7 +22,6 @@ interface ShippingPayload {
   carrier: CarrierName;
   expectedDelivery?: string;
   customNote?: string;
-  stripePaymentIntent?: string; // optional, used to mark Stripe PI metadata
 }
 
 function authorize(req: NextRequest, body: ShippingPayload): boolean {
@@ -80,26 +79,6 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       html,
     });
     console.log('[Admin Shipping] Sent to', body.customerEmail, 'tracking', body.trackingNumber, 'id', sent.data?.id);
-
-    // Best-effort: mark Stripe PI with shipping metadata
-    if (body.stripePaymentIntent && process.env.STRIPE_SECRET_KEY) {
-      try {
-        await fetch(`https://api.stripe.com/v1/payment_intents/${body.stripePaymentIntent}`, {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}`,
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: new URLSearchParams({
-            'metadata[shipped_at]': String(Math.floor(Date.now() / 1000)),
-            'metadata[tracking_number]': body.trackingNumber.trim(),
-            'metadata[carrier]': body.carrier,
-          }).toString(),
-        });
-      } catch (err) {
-        console.error('[Admin Shipping] Stripe PI metadata update failed (non-fatal):', err);
-      }
-    }
 
     return NextResponse.json({ ok: true, emailId: sent.data?.id });
   } catch (err) {

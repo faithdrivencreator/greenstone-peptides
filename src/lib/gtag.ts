@@ -1,12 +1,3 @@
-type GtagItem = {
-  item_id: string;
-  item_name: string;
-  price?: number;
-  quantity?: number;
-  item_variant?: string;
-  item_category?: string;
-};
-
 declare global {
   interface Window {
     gtag?: (command: string, eventName: string, params?: Record<string, unknown>) => void;
@@ -61,29 +52,6 @@ export function trackAddToCart(item: {
         item_variant: [item.strength, item.size, item.format].filter(Boolean).join(' · ') || undefined,
       },
     ],
-  });
-}
-
-export function trackBeginCheckout(items: GtagItem[], value: number) {
-  track('begin_checkout', {
-    currency: 'USD',
-    value,
-    items,
-  });
-}
-
-export function trackPurchase(params: {
-  transactionId: string;
-  value: number;
-  items: GtagItem[];
-  coupon?: string;
-}) {
-  track('purchase', {
-    transaction_id: params.transactionId,
-    currency: 'USD',
-    value: params.value,
-    coupon: params.coupon,
-    items: params.items,
   });
 }
 
