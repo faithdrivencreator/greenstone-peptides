@@ -39,50 +39,6 @@ const ORDERS_FROM = 'Greenstone Wellness <orders@greenstonewellness.store>';
 const SUPPORT_EMAIL = 'support@greenstonewellness.store';
 const SITE_URL = 'https://greenstonewellness.store';
 
-// ─── Per-customer single-use promo codes ─────────────────────────────────────
-
-function shortCodeSuffix(): string {
-  // Crockford-style alphabet: no 0/O/1/I to avoid customer typing mistakes
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  let s = '';
-  for (let i = 0; i < 5; i++) s += chars[Math.floor(Math.random() * chars.length)];
-  return s;
-}
-
-async function createPersonalPromoCode({
-  baseCoupon,
-  daysValid,
-}: {
-  baseCoupon: string;
-  daysValid: number;
-}): Promise<string> {
-  const sk = process.env.STRIPE_SECRET_KEY;
-  if (!sk) throw new Error('STRIPE_SECRET_KEY not set');
-  const code = `${baseCoupon}-${shortCodeSuffix()}`;
-  const expiresAt = Math.floor(Date.now() / 1000) + daysValid * 86400;
-  const body = new URLSearchParams({
-    coupon: baseCoupon,
-    code,
-    active: 'true',
-    max_redemptions: '1',
-    expires_at: String(expiresAt),
-  }).toString();
-  const res = await fetch('https://api.stripe.com/v1/promotion_codes', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${sk}`,
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Stripe-Version': '2024-06-20',
-    },
-    body,
-  });
-  if (!res.ok) {
-    const errText = await res.text();
-    throw new Error(`Stripe promo create failed: ${res.status} ${errText}`);
-  }
-  return code;
-}
-
 // ─── Customer audience helpers ────────────────────────────────────────────────
 
 async function isReturningCustomer(email: string): Promise<boolean> {
@@ -122,17 +78,6 @@ function renderEmailShell({ preheader, body }: { preheader: string; body: string
   </div>
 </div>
 </body></html>`;
-}
-
-function renderCodeBlock({ code, label, meta }: { code: string; label: string; meta: string }): string {
-  return `
-    <div style="background:#0D1117;border:1px solid #C9A96E;padding:32px 24px;text-align:center;margin:24px 0">
-      <p style="margin:0 0 8px;color:#8A6E3E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">YOUR CODE</p>
-      <p style="margin:0;font-family:'IBM Plex Mono','SF Mono',Consolas,monospace;font-size:34px;letter-spacing:0.25em;font-weight:600;color:#C9A96E">${code}</p>
-      <p style="margin:12px 0 0;color:#F5F1EB;font-size:13px;font-family:'DM Sans',-apple-system,sans-serif">${label}</p>
-      <p style="margin:4px 0 0;color:#8A6E3E;font-size:11px;font-family:'DM Sans',-apple-system,sans-serif">${meta}</p>
-    </div>
-  `;
 }
 
 async function addToCustomersAudience(email: string, firstName: string | null) {
@@ -412,18 +357,6 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
         const welcomeAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
 
-        // Generate unique per-customer THANKS15 code for the +24h welcome email.
-        // The +60d REVIEW email is fired by the daily cron (netlify/functions/
-        // greenstone-review-cron) which generates its own per-customer code at
-        // send time, Resend caps scheduled sends at 30 days so we can't wait.
-        let thanksCode = 'THANKS15';
-        try {
-          thanksCode = await createPersonalPromoCode({ baseCoupon: 'THANKS15', daysValid: 60 });
-          console.log('[Webhook] Personal THANKS code:', thanksCode);
-        } catch (err) {
-          console.error('[Webhook] THANKS code create failed, using shared fallback:', err);
-        }
-
         // Welcome email +24h
         try {
           await resend.emails.send({
@@ -431,36 +364,34 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             to: order.customerEmail,
             replyTo: SUPPORT_EMAIL,
             scheduledAt: welcomeAt,
-            subject: 'Welcome to Greenstone, a thank-you, and where to start',
+            subject: 'Welcome to Greenstone — a thank-you, and where to start',
             html: renderEmailShell({
-              preheader: `Your THANKS15 code for next order, plus two free guides while you wait.`,
+              preheader: `Thank you for your first order, plus two free guides while you wait.`,
               body: `
                 <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:30px;color:#F5F1EB;font-weight:400;margin:0 0 16px">Welcome${customerFirstName ? `, ${customerFirstName}` : ''}.</h2>
-                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 16px;font-family:'DM Sans',-apple-system,sans-serif">Thank you for trusting Greenstone with your first order. Every peptide we ship is <span style="color:#1A9E6E;font-weight:500">compounded in the USA under USP 797 standards</span> and <span style="color:#1A9E6E;font-weight:500">third-party tested</span> for potency, sterility, and purity.</p>
-                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">A small thank-you below, and two free guides we publish for the community.</p>
-
-                ${renderCodeBlock({ code: thanksCode, label: '15% off your next order', meta: 'reserved for you · one use · expires in 60 days' })}
+                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 16px;font-family:'DM Sans',-apple-system,sans-serif">Thank you for trusting Greenstone with your first order. Every medication we ship is <span style="color:#1A9E6E;font-weight:500">compounded in our licensed Florida 503A pharmacy under USP 797 sterile standards</span>, <span style="color:#1A9E6E;font-weight:500">physician-prescribed</span>, and <span style="color:#1A9E6E;font-weight:500">third-party tested</span> for potency, sterility, and purity.</p>
+                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">Two free guides we publish for the community, while you wait.</p>
 
                 <p style="text-align:center;margin:28px 0 40px">
-                  <a href="${SITE_URL}/shop" style="display:inline-block;background:#C9A96E;color:#0D1117;padding:14px 36px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">SHOP AGAIN</a>
+                  <a href="${SITE_URL}/shop" style="display:inline-block;background:#C9A96E;color:#0D1117;padding:14px 36px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">BROWSE THE FORMULARY</a>
                 </p>
 
                 <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:22px;color:#F5F1EB;font-weight:400;margin:40px 0 8px">Free guides for the community</h3>
-                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 20px;font-family:'DM Sans',-apple-system,sans-serif">No fluff. Clinical-grade reading material for anyone serious about peptide research.</p>
+                <p style="color:#B8B2A8;line-height:1.7;margin:0 0 20px;font-family:'DM Sans',-apple-system,sans-serif">No fluff. Plain-language reading material on compounded peptide therapy.</p>
 
                 <table style="width:100%;border-collapse:collapse;margin:0 0 32px">
                   <tr>
                     <td style="padding:18px 20px;border:1px solid #1E2738;background:#161C26;width:50%;vertical-align:top">
                       <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',-apple-system,sans-serif">Volume I</p>
                       <p style="margin:0 0 10px;color:#F5F1EB;font-family:'Playfair Display',Georgia,serif;font-size:20px">Peptides Made Easy</p>
-                      <p style="margin:0 0 14px;color:#B8B2A8;font-size:13px;line-height:1.5;font-family:'DM Sans',-apple-system,sans-serif">A primer for newcomers, what peptides are, how they're researched, where to start.</p>
+                      <p style="margin:0 0 14px;color:#B8B2A8;font-size:13px;line-height:1.5;font-family:'DM Sans',-apple-system,sans-serif">A plain-language primer on compounded peptide therapy, what peptides are, and where to start.</p>
                       <a href="${SITE_URL}/free/peptides-made-easy" style="color:#1A9E6E;font-size:12px;letter-spacing:0.15em;text-decoration:none;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">DOWNLOAD →</a>
                     </td>
                     <td style="width:8px"></td>
                     <td style="padding:18px 20px;border:1px solid #1E2738;background:#161C26;width:50%;vertical-align:top">
                       <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Sans',-apple-system,sans-serif">Volume II</p>
                       <p style="margin:0 0 10px;color:#F5F1EB;font-family:'Playfair Display',Georgia,serif;font-size:20px">Peptides Unlocked</p>
-                      <p style="margin:0 0 14px;color:#B8B2A8;font-size:13px;line-height:1.5;font-family:'DM Sans',-apple-system,sans-serif">Match peptides to research goals, quality and sourcing checklist, 48-hour framework.</p>
+                      <p style="margin:0 0 14px;color:#B8B2A8;font-size:13px;line-height:1.5;font-family:'DM Sans',-apple-system,sans-serif">Match peptides to therapy goals, the pharmacy quality checklist, and a 48-hour starter protocol.</p>
                       <a href="${SITE_URL}/free/peptides-unlocked" style="color:#1A9E6E;font-size:12px;letter-spacing:0.15em;text-decoration:none;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">DOWNLOAD →</a>
                     </td>
                   </tr>

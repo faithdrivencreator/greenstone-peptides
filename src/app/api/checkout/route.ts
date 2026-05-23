@@ -6,24 +6,13 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: '2024-04
 
 export async function POST(req: NextRequest) {
   try {
-    const { items, couponCode }: { items: CartItem[]; couponCode?: string } = await req.json();
+    const { items }: { items: CartItem[] } = await req.json();
 
     if (!items?.length) {
       return NextResponse.json({ error: 'Cart is empty' }, { status: 400 });
     }
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
-
-    // Resolve coupon, validate it exists in Stripe before passing
-    let discounts: Stripe.Checkout.SessionCreateParams['discounts'] | undefined;
-    if (couponCode) {
-      try {
-        await stripe.coupons.retrieve(couponCode.toUpperCase());
-        discounts = [{ coupon: couponCode.toUpperCase() }];
-      } catch {
-        // Invalid coupon, proceed without it (don't block checkout)
-      }
-    }
 
     // Build metadata: product names and quantities, available in webhook payload
     const metadataItems = items.map((item) => {
@@ -49,8 +38,7 @@ export async function POST(req: NextRequest) {
           revenue_type: 'product_sale',
         },
       },
-      allow_promotion_codes: !discounts, // show promo code field if no code pre-applied
-      ...(discounts ? { discounts } : {}),
+      allow_promotion_codes: false,
       shipping_address_collection: {
         allowed_countries: ['US'],
       },

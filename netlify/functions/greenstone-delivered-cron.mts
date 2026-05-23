@@ -9,9 +9,9 @@
  *   - does NOT yet have metadata.delivered_email_sent_at
  *
  * Sends the branded "your delivery has arrived — here's how to handle it"
- * email via Resend (cold-chain storage + sterile technique + a soft reminder
- * that the THANKS15 code from their welcome email is still active), and
- * marks the Stripe PI with delivered_email_sent_at to prevent duplicates.
+ * email via Resend (cold-chain storage + sterile technique + a soft
+ * refill nudge), and marks the Stripe PI with delivered_email_sent_at to
+ * prevent duplicates.
  *
  * Why heuristic instead of carrier-event-driven: all delivery-tracking APIs
  * with webhook access (AfterShip, EasyPost, Shippo, TrackingMore) moved
@@ -80,7 +80,7 @@ function renderDeliveredEmail(firstName: string | null, carrier: string | null):
     subject: 'Your Greenstone delivery is here — handling guide inside',
     html: `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Greenstone</title></head>
 <body style="margin:0;padding:0;background:#0D1117;color:#F5F1EB">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0">Your delivery should have arrived. Here's how to store, draw, and protect it for research.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0">Your delivery should have arrived. Here's how to store and handle your compounded medication.</div>
 <div style="background:#0D1117;padding:40px 16px">
   <div style="max-width:600px;margin:0 auto;background:#161C26;padding:48px 36px;border:1px solid #1E2738">
 
@@ -94,7 +94,7 @@ function renderDeliveredEmail(firstName: string | null, carrier: string | null):
 
     <!-- Hook -->
     <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;color:#F5F1EB;font-weight:400;margin:0 0 16px">It's in your hands${greeting}.</h2>
-    <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">${carrierLine} Below is a short field guide to keep what you've received <em>research-grade</em> — cold-chain storage and sterile draw. Bookmark this email; it covers the essentials.</p>
+    <p style="color:#B8B2A8;line-height:1.7;margin:0 0 28px;font-family:'DM Sans',-apple-system,sans-serif">${carrierLine} Below is a short field guide for proper handling of your compounded medication — cold-chain storage and sterile draw. Bookmark this email; it covers the essentials.</p>
 
     <!-- Section 1: First 30 minutes -->
     <div style="background:#0D1117;border-left:3px solid #1A9E6E;padding:20px 24px;margin:0 0 28px">
@@ -114,7 +114,7 @@ function renderDeliveredEmail(firstName: string | null, carrier: string | null):
     <div style="background:#0D1117;border-left:3px solid #1A9E6E;padding:20px 24px;margin:0 0 28px">
       <p style="margin:0 0 6px;color:#1A9E6E;font-size:10px;letter-spacing:0.3em;font-family:'DM Sans',-apple-system,sans-serif">EVERY TIME &middot; STERILE DRAW</p>
       <h3 style="margin:0 0 10px;color:#F5F1EB;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400">Fresh swab. Fresh needle. Never shared.</h3>
-      <p style="margin:0;color:#B8B2A8;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif;font-size:14px">Alcohol-swab the stopper before every draw. Use a fresh sterile needle each time — never re-cap and reuse. One vial per research subject. Contamination is the single most common cause of a failed research cycle.</p>
+      <p style="margin:0;color:#B8B2A8;line-height:1.6;font-family:'DM Sans',-apple-system,sans-serif;font-size:14px">Alcohol-swab the stopper before every draw. Use a fresh sterile needle each time — never re-cap and reuse. Contamination is the single most common cause of a failed therapy cycle.</p>
     </div>
 
     <!-- Soft support nudge -->
@@ -127,17 +127,17 @@ function renderDeliveredEmail(firstName: string | null, carrier: string | null):
       <span style="display:inline-block;width:60px;height:1px;background:#1A9E6E;vertical-align:middle"></span>
     </div>
 
-    <!-- Offer -->
-    <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#F5F1EB;font-weight:400;margin:0 0 8px;text-align:center">When you're ready for the next vial.</h3>
-    <p style="color:#B8B2A8;line-height:1.7;margin:0 0 20px;font-family:'DM Sans',-apple-system,sans-serif;text-align:center">The <span style="color:#C9A96E;font-weight:500">THANKS15</span> code from your welcome email is still active. Build out your stack, or restock what's working.</p>
+    <!-- Refill -->
+    <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#F5F1EB;font-weight:400;margin:0 0 8px;text-align:center">When you're ready for a refill.</h3>
+    <p style="color:#B8B2A8;line-height:1.7;margin:0 0 20px;font-family:'DM Sans',-apple-system,sans-serif;text-align:center">Browse the formulary whenever you're ready. A licensed physician reviews every screening before any medication ships.</p>
 
     <p style="text-align:center;margin:28px 0 0">
-      <a href="${SITE_URL}/shop" style="display:inline-block;background:#C9A96E;color:#0D1117;padding:14px 36px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">BROWSE THE CATALOG</a>
+      <a href="${SITE_URL}/shop" style="display:inline-block;background:#C9A96E;color:#0D1117;padding:14px 36px;text-decoration:none;letter-spacing:0.2em;font-size:12px;font-family:'DM Sans',-apple-system,sans-serif;font-weight:600">BROWSE THE FORMULARY</a>
     </p>
 
     <!-- Footer -->
     <hr style="border:none;border-top:1px solid #1E2738;margin:32px 0 20px">
-    <p style="text-align:center;color:#8A6E3E;font-size:10px;line-height:1.6;margin:0 0 12px;font-family:'DM Sans',-apple-system,sans-serif;font-style:italic">Research peptides for laboratory and research use. Not for human consumption.</p>
+    <p style="text-align:center;color:#8A6E3E;font-size:10px;line-height:1.6;margin:0 0 12px;font-family:'DM Sans',-apple-system,sans-serif;font-style:italic">Compounded medications dispensed by Greenstone Rx, a licensed Florida 503A pharmacy. Physician-prescribed after individual health screening.</p>
     <p style="text-align:center;color:#8A6E3E;font-size:10px;letter-spacing:0.25em;margin:0;font-family:'DM Sans',-apple-system,sans-serif">
       <a href="${SITE_URL}" style="color:#8A6E3E;text-decoration:none">GREENSTONEWELLNESS.STORE</a>
     </p>
