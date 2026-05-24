@@ -1,3 +1,4 @@
+import { AnnouncementBanner } from '@/components/AnnouncementBanner';
 import { TrustRibbon } from '@/components/TrustRibbon';
 import { Navigation } from '@/components/Navigation';
 import { ChatWidget } from '@/components/ChatWidget';
@@ -18,9 +19,10 @@ import { Footer } from '@/components/Footer';
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <AnnouncementBanner />
       <TrustRibbon />
       <Navigation />
-      <main id="main-content" className="relative z-10 pt-[8.25rem]">{children}</main>
+      <main id="main-content" className="relative z-10 pt-[10.5rem]">{children}</main>
       <ChatWidget />
       <Footer />
     </>

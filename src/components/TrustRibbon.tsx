@@ -23,7 +23,7 @@ export function TrustRibbon() {
   // readers only need the content once.
   return (
     <div
-      className="fixed inset-x-0 top-0 z-[60] w-full overflow-hidden bg-obsidian-mid/95 backdrop-blur-md border-b border-emerald/20"
+      className="fixed inset-x-0 top-9 z-[60] w-full overflow-hidden bg-obsidian-mid/95 backdrop-blur-md border-b border-emerald/20"
       role="region"
       aria-label="Greenstone Wellness trust ribbon"
     >
