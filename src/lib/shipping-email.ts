@@ -40,7 +40,13 @@ export function renderShippingEmail(input: ShippingEmailInput): { subject: strin
 <body style="margin:0;padding:0;background:#0D1117;color:#F5F1EB">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0">Your Greenstone order is on its way, tracking inside.</div>
 <div style="background:#0D1117;padding:40px 16px">
-  <div style="max-width:600px;margin:0 auto;background:#161C26;padding:48px 36px;border:1px solid #1E2738">
+  <div style="max-width:600px;margin:0 auto;background:#161C26;border:1px solid #1E2738">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">
+      <tr><td align="center" style="padding:24px 0 16px 0;background:#F5F1EB;">
+        <img src="https://gswellnesspharmacy.com/logo.png" alt="Greenstone Wellness" width="220" style="display:block;width:220px;max-width:220px;height:auto;border:0;outline:none;text-decoration:none;" />
+      </td></tr>
+    </table>
+    <div style="padding:48px 36px">
     <div style="text-align:center;padding-bottom:32px;border-bottom:1px solid #1E2738;margin-bottom:36px">
       <a href="${SITE_URL}" style="text-decoration:none">
         <h1 style="font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:400;letter-spacing:0.18em;color:#F5F1EB;margin:0 0 6px">GREENSTONE</h1>
@@ -83,8 +89,9 @@ export function renderShippingEmail(input: ShippingEmailInput): { subject: strin
 
     <hr style="border:none;border-top:1px solid #1E2738;margin:32px 0 20px">
     <p style="text-align:center;color:#8A6E3E;font-size:10px;letter-spacing:0.25em;margin:0;font-family:'DM Sans',-apple-system,sans-serif">
-      <a href="${SITE_URL}" style="color:#8A6E3E;text-decoration:none">GREENSTONEWELLNESS.STORE</a>
+      <a href="${SITE_URL}" style="color:#8A6E3E;text-decoration:none">GREENSTONE WELLNESS</a>
     </p>
+    </div>
   </div>
 </div>
 </body></html>`;
