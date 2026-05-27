@@ -10,7 +10,7 @@ import {
 } from '@/data/parent-products';
 
 export const metadata: Metadata = {
-  title: 'Formulary · Greenstone Wellness',
+  title: 'Formulary · GS Wellness Pharmacy',
   description:
     'A curated formulary of compounded GLP-1, peptide, and oral therapies — selected by our clinic and prepared by Greenstone Rx, a 503A pharmacy in Florida.',
   alternates: { canonical: '/shop' },

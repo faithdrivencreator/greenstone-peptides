@@ -43,7 +43,7 @@ export function renderShippingEmail(input: ShippingEmailInput): { subject: strin
   <div style="max-width:600px;margin:0 auto;background:#161C26;border:1px solid #1E2738">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">
       <tr><td align="center" style="padding:24px 0 16px 0;background:#F5F1EB;">
-        <img src="https://gswellnesspharmacy.com/logo.png" alt="Greenstone Wellness" width="220" style="display:block;width:220px;max-width:220px;height:auto;border:0;outline:none;text-decoration:none;" />
+        <img src="https://gswellnesspharmacy.com/logo.png" alt="GS Wellness Pharmacy" width="220" style="display:block;width:220px;max-width:220px;height:auto;border:0;outline:none;text-decoration:none;" />
       </td></tr>
     </table>
     <div style="padding:48px 36px">

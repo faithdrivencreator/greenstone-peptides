@@ -4,7 +4,7 @@ import { ContactForm } from './ContactForm';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact Greenstone Wellness for product questions, wholesale inquiries, or general support.',
+    'Contact GS Wellness Pharmacy for product questions, wholesale inquiries, or general support.',
   alternates: { canonical: '/contact' },
 };
 

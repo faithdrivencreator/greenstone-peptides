@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import WholesaleLoginForm from './WholesaleLoginForm';
 
 export const metadata: Metadata = {
-  title: 'Wholesale Login | Greenstone Wellness',
+  title: 'Wholesale Login | GS Wellness Pharmacy',
   description:
-    'Access the Greenstone Wellness wholesale portal for authorized distributors and practitioners.',
+    'Access the GS Wellness Pharmacy wholesale portal for authorized distributors and practitioners.',
   alternates: { canonical: '/wholesale/login' },
 };
 

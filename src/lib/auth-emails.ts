@@ -11,7 +11,7 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
     return;
   }
 
-  const greeting = name ? `Welcome, ${name}.` : 'Welcome to Greenstone Wellness.';
+  const greeting = name ? `Welcome, ${name}.` : 'Welcome to GS Wellness Pharmacy.';
 
   const html = `<!doctype html>
 <html lang="en">
@@ -20,7 +20,7 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
     <tr><td align="center" style="padding:48px 16px;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="560" style="max-width:560px;background:#101714;border:1px solid rgba(196,164,107,0.18);">
         <tr><td align="center" style="padding:24px 0 16px 0;background:#F5F1EB;">
-          <img src="https://gswellnesspharmacy.com/logo.png" alt="Greenstone Wellness" width="220" style="display:block;width:220px;max-width:220px;height:auto;border:0;outline:none;text-decoration:none;" />
+          <img src="https://gswellnesspharmacy.com/logo.png" alt="GS Wellness Pharmacy" width="220" style="display:block;width:220px;max-width:220px;height:auto;border:0;outline:none;text-decoration:none;" />
         </td></tr>
         <tr><td style="padding:40px 40px 24px 40px;border-bottom:1px solid rgba(196,164,107,0.12);">
           <p style="margin:0 0 6px 0;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#5db89a;font-family:'IBM Plex Mono',Menlo,monospace;">// Account confirmed</p>
@@ -34,7 +34,7 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
           </p>
         </td></tr>
         <tr><td style="padding:24px 40px;border-top:1px solid rgba(196,164,107,0.12);font-family:'IBM Plex Mono',Menlo,monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#8d8773;">
-          Greenstone Wellness &middot; ${SITE_URL.replace('https://', '')}
+          GS Wellness Pharmacy &middot; ${SITE_URL.replace('https://', '')}
         </td></tr>
       </table>
     </td></tr>
@@ -44,9 +44,9 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
 
   try {
     await resend.emails.send({
-      from: 'Greenstone Wellness <hello@gswellnesspharmacy.com>',
+      from: 'GS Wellness Pharmacy <hello@gswellnesspharmacy.com>',
       to,
-      subject: 'Welcome to Greenstone Wellness',
+      subject: 'Welcome to GS Wellness Pharmacy',
       html,
       replyTo: 'support@gswellnesspharmacy.com',
     });
@@ -87,7 +87,7 @@ export async function sendSignupNotification(input: SignupNotificationInput) {
     <tr><td align="center" style="padding:32px 16px;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="560" style="max-width:560px;background:#101714;border:1px solid rgba(196,164,107,0.18);">
         <tr><td align="center" style="padding:24px 0 16px 0;background:#F5F1EB;">
-          <img src="https://gswellnesspharmacy.com/logo.png" alt="Greenstone Wellness" width="220" style="display:block;width:220px;max-width:220px;height:auto;border:0;outline:none;text-decoration:none;" />
+          <img src="https://gswellnesspharmacy.com/logo.png" alt="GS Wellness Pharmacy" width="220" style="display:block;width:220px;max-width:220px;height:auto;border:0;outline:none;text-decoration:none;" />
         </td></tr>
         <tr><td style="padding:32px 32px 16px 32px;border-bottom:1px solid rgba(196,164,107,0.12);">
           <p style="margin:0 0 4px 0;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#5db89a;font-family:'IBM Plex Mono',Menlo,monospace;">// New signup</p>
@@ -104,7 +104,7 @@ export async function sendSignupNotification(input: SignupNotificationInput) {
           </table>
         </td></tr>
         <tr><td style="padding:16px 32px;border-top:1px solid rgba(196,164,107,0.12);font-family:'IBM Plex Mono',Menlo,monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#8d8773;">
-          Greenstone Wellness · admin alert
+          GS Wellness Pharmacy · admin alert
         </td></tr>
       </table>
     </td></tr>

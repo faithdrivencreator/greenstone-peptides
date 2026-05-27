@@ -11,7 +11,7 @@ const SHOP_LINKS = [
 
 const RESOURCE_LINKS = [
   { href: '/learn', label: 'Learn Center' },
-  { href: '/about', label: 'About Greenstone Wellness' },
+  { href: '/about', label: 'About GS Wellness Pharmacy' },
   { href: '/provider', label: 'Provider Portal' },
   { href: '/wholesale', label: 'Wholesale & Distribution' },
   { href: '/contact', label: 'Contact' },
@@ -32,7 +32,7 @@ export function Footer() {
         {/* Brand column */}
         <div className="space-y-4">
           <div className="flex flex-col leading-none">
-            <span className="font-cormorant text-2xl font-medium text-white">Greenstone Wellness</span>
+            <span className="font-cormorant text-2xl font-medium text-white">GS Wellness Pharmacy</span>
           </div>
           <p className="text-sm text-cream-dim leading-relaxed max-w-xs">
             Florida-licensed 503A compounding pharmacy. Physician-prescribed GLP-1, peptide, and oral therapy.
@@ -50,7 +50,7 @@ export function Footer() {
               href="https://instagram.com/greenstone.wellness"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Follow Greenstone Wellness on Instagram"
+              aria-label="Follow GS Wellness Pharmacy on Instagram"
               className="inline-flex items-center gap-2 text-sm text-cream-dim hover:text-gold transition-colors"
             >
               <Instagram size={18} />
@@ -106,19 +106,19 @@ export function Footer() {
         {/* Dense compliance disclaimer — required fine print covering clinic /
             pharmacy / FDA / trademark / testimonial boundaries. */}
         <p className="text-[0.65rem] leading-relaxed text-cream-dim/60 max-w-4xl font-jetbrains">
-          The assessment available on Greenstone Wellness does not create a
+          The assessment available on GS Wellness Pharmacy does not create a
           doctor–patient relationship. Clinical services are provided by
           Greenstone Rx and partnered networks of U.S.-licensed clinicians who
           determine prescription eligibility based on medical history and
           assessment responses. Providers retain full discretion to prescribe or
           decline compounded medications. Compounded medications offered through
-          Greenstone Wellness are prepared in 503A licensed compounding
+          GS Wellness Pharmacy are prepared in 503A licensed compounding
           pharmacies but are not FDA-approved and have not been evaluated by the
           FDA for safety, efficacy, or quality. Results may vary and depend on
           individual adherence, provider guidance, and lifestyle changes.
-          Greenstone Wellness does not manufacture compounded medications,
+          GS Wellness Pharmacy does not manufacture compounded medications,
           and product appearance may differ from website images.
-          Greenstone Wellness partners with licensed U.S. pharmacies to
+          GS Wellness Pharmacy partners with licensed U.S. pharmacies to
           ensure high standards of safety and quality. Ozempic&reg;, Mounjaro&reg;,
           and Wegovy&reg; are FDA-approved trademarks of their respective owners.
           All other trademarks are the property of their respective owners.
@@ -141,7 +141,7 @@ export function Footer() {
         </p>
 
         <p className="text-xs text-cream-dim/60">
-          &copy; {new Date().getFullYear()} Greenstone Wellness. All rights reserved.
+          &copy; {new Date().getFullYear()} GS Wellness Pharmacy. All rights reserved.
         </p>
       </div>
     </footer>

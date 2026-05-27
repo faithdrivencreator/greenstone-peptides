@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How Compounded Medications Work | Greenstone Wellness',
+  title: 'How Compounded Medications Work | GS Wellness Pharmacy',
   description:
-    'How compounded medications work at Greenstone Wellness: a Florida 503A compounding pharmacy, a licensed prescribing physician, and the patient. The legal framework, the standards, and what to expect.',
+    'How compounded medications work at GS Wellness Pharmacy: a Florida 503A compounding pharmacy, a licensed prescribing physician, and the patient. The legal framework, the standards, and what to expect.',
   alternates: { canonical: 'https://gswellnesspharmacy.com/research-use-only' },
   robots: { index: true, follow: true },
 };
@@ -101,7 +101,7 @@ export default function HowItWorksPage() {
                 Age requirement
               </h2>
               <p>
-                The Greenstone Wellness formulary is restricted to patients 21 years
+                The GS Wellness Pharmacy formulary is restricted to patients 21 years
                 of age or older. Verification happens at the start of the pharmacy
                 checkout flow.
               </p>

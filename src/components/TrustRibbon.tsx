@@ -25,7 +25,7 @@ export function TrustRibbon() {
     <div
       className="fixed inset-x-0 top-9 z-[60] w-full overflow-hidden bg-obsidian-mid/95 backdrop-blur-md border-b border-emerald/20"
       role="region"
-      aria-label="Greenstone Wellness trust ribbon"
+      aria-label="GS Wellness Pharmacy trust ribbon"
     >
       <div className="trust-ribbon-track flex items-center whitespace-nowrap py-2.5 will-change-transform">
         {[0, 1].map((copy) => (

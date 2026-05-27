@@ -4,7 +4,7 @@ import { ProviderSignupForm } from './ProviderSignupForm';
 export const metadata: Metadata = {
   title: 'Provider Portal',
   description:
-    'Clinics, medspas, and healthcare professionals, partner with Greenstone Wellness to offer compounded peptide therapy to your patients.',
+    'Clinics, medspas, and healthcare professionals, partner with GS Wellness Pharmacy to offer compounded peptide therapy to your patients.',
   alternates: { canonical: '/provider' },
 };
 
@@ -14,7 +14,7 @@ export default function ProviderPage() {
       <section className="section-py">
         <div className="container-gr max-w-4xl">
           <p className="eyebrow">For Clinics & Healthcare Professionals</p>
-          <h1>Partner with Greenstone Wellness.</h1>
+          <h1>Partner with GS Wellness Pharmacy.</h1>
           <p className="mt-8 text-lg text-cream-dim">
             Offer your patients access to USA-compounded peptide therapy backed by licensed
             pharmacy partners. Designed for clinics, medspas, and healthcare professionals who
