@@ -106,19 +106,19 @@ export function Footer() {
         {/* Dense compliance disclaimer — required fine print covering clinic /
             pharmacy / FDA / trademark / testimonial boundaries. */}
         <p className="text-[0.65rem] leading-relaxed text-cream-dim/60 max-w-4xl font-jetbrains">
-          The assessment available on Greenstonewellness.store does not create a
+          The assessment available on Greenstone Wellness does not create a
           doctor–patient relationship. Clinical services are provided by
           Greenstone Rx and partnered networks of U.S.-licensed clinicians who
           determine prescription eligibility based on medical history and
           assessment responses. Providers retain full discretion to prescribe or
           decline compounded medications. Compounded medications offered through
-          Greenstonewellness.store are prepared in 503A licensed compounding
+          Greenstone Wellness are prepared in 503A licensed compounding
           pharmacies but are not FDA-approved and have not been evaluated by the
           FDA for safety, efficacy, or quality. Results may vary and depend on
           individual adherence, provider guidance, and lifestyle changes.
-          Greenstonewellness.store does not manufacture compounded medications,
+          Greenstone Wellness does not manufacture compounded medications,
           and product appearance may differ from website images.
-          Greenstonewellness.store partners with licensed U.S. pharmacies to
+          Greenstone Wellness partners with licensed U.S. pharmacies to
           ensure high standards of safety and quality. Ozempic&reg;, Mounjaro&reg;,
           and Wegovy&reg; are FDA-approved trademarks of their respective owners.
           All other trademarks are the property of their respective owners.
