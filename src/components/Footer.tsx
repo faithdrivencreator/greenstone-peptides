@@ -11,7 +11,7 @@ const SHOP_LINKS = [
 
 const RESOURCE_LINKS = [
   { href: '/learn', label: 'Learn Center' },
-  { href: '/about', label: 'About GS Wellness Pharmacy' },
+  { href: '/about', label: 'About Greenstone Wellness' },
   { href: '/provider', label: 'Provider Portal' },
   { href: '/wholesale', label: 'Wholesale & Distribution' },
   { href: '/contact', label: 'Contact' },
@@ -32,7 +32,7 @@ export function Footer() {
         {/* Brand column */}
         <div className="space-y-4">
           <div className="flex flex-col leading-none">
-            <span className="font-cormorant text-2xl font-medium text-white">GS Wellness Pharmacy</span>
+            <span className="font-cormorant text-2xl font-medium text-white">Greenstone Wellness</span>
           </div>
           <p className="text-sm text-cream-dim leading-relaxed max-w-xs">
             Florida-licensed 503A compounding pharmacy. Physician-prescribed GLP-1, peptide, and oral therapy.
@@ -50,7 +50,7 @@ export function Footer() {
               href="https://instagram.com/greenstone.wellness"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Follow GS Wellness Pharmacy on Instagram"
+              aria-label="Follow Greenstone Wellness on Instagram"
               className="inline-flex items-center gap-2 text-sm text-cream-dim hover:text-gold transition-colors"
             >
               <Instagram size={18} />
@@ -141,7 +141,7 @@ export function Footer() {
         </p>
 
         <p className="text-xs text-cream-dim/60">
-          &copy; {new Date().getFullYear()} GS Wellness Pharmacy. All rights reserved.
+          &copy; {new Date().getFullYear()} Greenstone Wellness. All rights reserved.
         </p>
       </div>
     </footer>

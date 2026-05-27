@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About GS Wellness Pharmacy | A Florida Clinic + 503A Pharmacy',
+  title: 'About Greenstone Wellness | A Florida Clinic + 503A Pharmacy',
   description:
-    'GS Wellness Pharmacy is the clinic-side storefront of Greenstone Rx, a Florida-licensed 503A compounding pharmacy. Physician-prescribed GLP-1, peptide, and oral therapy.',
+    'Greenstone Wellness is the clinic-side storefront of Greenstone Rx, a Florida-licensed 503A compounding pharmacy. Physician-prescribed GLP-1, peptide, and oral therapy.',
   alternates: { canonical: '/about' },
 };
 
@@ -17,7 +17,7 @@ export default function AboutPage() {
           <p className="eyebrow">Our Story</p>
           <h1>A clinic, a pharmacy, and a real physician on every order.</h1>
           <p className="mt-8 text-lg text-cream-dim">
-            GS Wellness Pharmacy is the patient-facing clinic of{' '}
+            Greenstone Wellness is the patient-facing clinic of{' '}
             <strong className="text-cream">Greenstone Rx</strong>, a Florida-licensed
             503A compounding pharmacy. Every medication you see in our formulary has been
             selected by our clinic, prescribed by a licensed physician after a health

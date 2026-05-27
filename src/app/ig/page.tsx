@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import IgLinks from './IgLinks';
 
 export const metadata: Metadata = {
-  title: 'GS Wellness Pharmacy',
+  title: 'Greenstone Wellness',
   description: 'Compounded GLP-1, injectable, and oral medications — physician-prescribed in Florida. Tap a link to keep exploring.',
   robots: { index: false, follow: true },
   alternates: { canonical: '/ig' },

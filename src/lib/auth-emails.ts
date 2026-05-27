@@ -11,7 +11,7 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
     return;
   }
 
-  const greeting = name ? `Welcome, ${name}.` : 'Welcome to GS Wellness Pharmacy.';
+  const greeting = name ? `Welcome, ${name}.` : 'Welcome to Greenstone Wellness.';
 
   const html = `<!doctype html>
 <html lang="en">
@@ -31,7 +31,7 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
           </p>
         </td></tr>
         <tr><td style="padding:24px 40px;border-top:1px solid rgba(196,164,107,0.12);font-family:'IBM Plex Mono',Menlo,monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#8d8773;">
-          GS Wellness Pharmacy &middot; ${SITE_URL.replace('https://', '')}
+          Greenstone Wellness &middot; ${SITE_URL.replace('https://', '')}
         </td></tr>
       </table>
     </td></tr>
@@ -41,9 +41,9 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
 
   try {
     await resend.emails.send({
-      from: 'GS Wellness Pharmacy <hello@gswellnesspharmacy.com>',
+      from: 'Greenstone Wellness <hello@gswellnesspharmacy.com>',
       to,
-      subject: 'Welcome to GS Wellness Pharmacy',
+      subject: 'Welcome to Greenstone Wellness',
       html,
       replyTo: 'support@gswellnesspharmacy.com',
     });
@@ -98,7 +98,7 @@ export async function sendSignupNotification(input: SignupNotificationInput) {
           </table>
         </td></tr>
         <tr><td style="padding:16px 32px;border-top:1px solid rgba(196,164,107,0.12);font-family:'IBM Plex Mono',Menlo,monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#8d8773;">
-          GS Wellness Pharmacy · admin alert
+          Greenstone Wellness · admin alert
         </td></tr>
       </table>
     </td></tr>

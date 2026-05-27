@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Request Received | GS Wellness Pharmacy',
+  title: 'Request Received | Greenstone Wellness',
   description: 'Your prescription request has been received.',
 }
 

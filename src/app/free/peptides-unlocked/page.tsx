@@ -78,7 +78,7 @@ export default function PeptidesUnlockedPage() {
             'A research-grade guide to matching peptides to goals, running a sourcing checklist, and structuring the first 48 hours of a new protocol.',
           publisher: {
             '@type': 'Organization',
-            name: 'GS Wellness Pharmacy',
+            name: 'Greenstone Wellness',
             url: SITE_URL,
           },
           isAccessibleForFree: true,

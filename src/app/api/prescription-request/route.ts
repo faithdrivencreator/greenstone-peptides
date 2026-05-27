@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const PETE_EMAIL = 'pete@fluidfaithsolutions.com';
-const ORDERS_FROM = 'GS Wellness Pharmacy <orders@gswellnesspharmacy.com>';
+const ORDERS_FROM = 'Greenstone Wellness <orders@gswellnesspharmacy.com>';
 const CONTACT_FROM = 'Greenstone Pharmacy <contact@gswellnesspharmacy.com>';
 const SUPPORT_EMAIL = 'support@gswellnesspharmacy.com';
 
@@ -144,7 +144,7 @@ export async function POST(req: NextRequest) {
 <html><body style="margin:0;padding:0;background:${CREAM};font-family:${BODY_FONT};color:${BODY};">
   <div style="max-width:640px;margin:0 auto;padding:32px 24px;">
     <div style="text-align:center;padding-bottom:20px;border-bottom:1px solid ${BORDER_CREAM};">
-      <div style="font-family:${HEADER_FONT};font-size:28px;color:${DEEP_GREEN};letter-spacing:0.5px;">GS Wellness Pharmacy</div>
+      <div style="font-family:${HEADER_FONT};font-size:28px;color:${DEEP_GREEN};letter-spacing:0.5px;">Greenstone Wellness</div>
       <div style="font-family:${BODY_FONT};font-size:11px;color:${MUTED};letter-spacing:3px;text-transform:uppercase;margin-top:4px;">New Prescription Request</div>
     </div>
 
@@ -202,14 +202,14 @@ export async function POST(req: NextRequest) {
 <html><body style="margin:0;padding:0;background:${CREAM};font-family:${BODY_FONT};color:${BODY};">
   <div style="max-width:600px;margin:0 auto;padding:32px 24px;">
     <div style="text-align:center;padding-bottom:24px;border-bottom:1px solid ${BORDER_CREAM};">
-      <div style="font-family:${HEADER_FONT};font-size:32px;color:${DEEP_GREEN};letter-spacing:0.5px;">GS Wellness Pharmacy</div>
+      <div style="font-family:${HEADER_FONT};font-size:32px;color:${DEEP_GREEN};letter-spacing:0.5px;">Greenstone Wellness</div>
       <div style="font-family:${BODY_FONT};font-size:11px;color:${MUTED};letter-spacing:3px;text-transform:uppercase;margin-top:6px;">USA-Compounded Peptide Therapy</div>
     </div>
 
     <h1 style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:26px;margin:28px 0 12px;">We received your request, ${escape(firstName)}.</h1>
 
     <p style="font-family:${BODY_FONT};color:${BODY};font-size:15px;line-height:1.6;margin:0 0 14px;">
-      Thank you for choosing GS Wellness Pharmacy. Your prescription request has been forwarded to our pharmacy team for review.
+      Thank you for choosing Greenstone Wellness. Your prescription request has been forwarded to our pharmacy team for review.
     </p>
 
     <p style="font-family:${BODY_FONT};color:${BODY};font-size:15px;line-height:1.6;margin:0 0 14px;">

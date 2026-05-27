@@ -78,7 +78,7 @@ export default function PeptidesMadeEasyPage() {
             "A 14-page beginner's guide to peptides, what they are, how to start safely, and what to look for in your first 72 hours.",
           publisher: {
             '@type': 'Organization',
-            name: 'GS Wellness Pharmacy',
+            name: 'Greenstone Wellness',
             url: SITE_URL,
           },
           isAccessibleForFree: true,

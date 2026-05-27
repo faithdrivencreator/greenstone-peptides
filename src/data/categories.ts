@@ -11,7 +11,7 @@ export const staticCategories = [
     "description": "Precision-dosed GLP-1 and dual/triple agonist therapies for medically supervised weight management. Includes semaglutide, tirzepatide, and retatrutide formulations.",
     "icon": null,
     "order": 1,
-    "seoTitle": "Compounded GLP-1 Weight Loss Peptides | GS Wellness Pharmacy",
+    "seoTitle": "Compounded GLP-1 Weight Loss Peptides | Greenstone Wellness",
     "seoDescription": "Physician-prescribed compounded semaglutide, tirzepatide, and retatrutide. USA-formulated, temperature-controlled delivery."
   },
   {
@@ -71,7 +71,7 @@ export const staticCategories = [
     "description": "Compounded specialty medications including antiparasitic and other therapeutic formulations.",
     "icon": null,
     "order": 7,
-    "seoTitle": "Specialty Compounded Medications | GS Wellness Pharmacy",
+    "seoTitle": "Specialty Compounded Medications | Greenstone Wellness",
     "seoDescription": "Specialty compounded therapeutics including ivermectin ODT. Prescription required. USA-formulated."
   },
   {
@@ -81,7 +81,7 @@ export const staticCategories = [
     "description": "Pre-packaged starter kits for new patients beginning peptide therapy protocols.",
     "icon": null,
     "order": 8,
-    "seoTitle": "Peptide Starter Kits | GS Wellness Pharmacy",
+    "seoTitle": "Peptide Starter Kits | Greenstone Wellness",
     "seoDescription": "Starter kits for new peptide therapy patients. 5, 10, 15, and 20-day supply options. Prescription required."
   }
 ] as const;

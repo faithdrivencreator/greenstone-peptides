@@ -24,7 +24,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const product = getParentBySlug(params.slug);
   if (!product) return {};
   return {
-    title: `${product.name} · GS Wellness Pharmacy`,
+    title: `${product.name} · Greenstone Wellness`,
     description: product.shortDescription,
     alternates: { canonical: `/shop/${params.slug}` },
   };
@@ -55,7 +55,7 @@ export default function ParentDetailPage({ params }: PageProps) {
     name: product.name,
     description: product.shortDescription,
     image: product.image,
-    brand: { '@type': 'Brand', name: 'GS Wellness Pharmacy' },
+    brand: { '@type': 'Brand', name: 'Greenstone Wellness' },
     offers: {
       '@type': 'AggregateOffer',
       lowPrice: from,

@@ -30,7 +30,7 @@ export function TrustGrid() {
   return (
     <section
       className="section-py bg-obsidian-mid/40 border-y border-emerald/15"
-      aria-label="GS Wellness Pharmacy trust pillars"
+      aria-label="Greenstone Wellness trust pillars"
     >
       <div className="container-gr">
         <div className="grid gap-6 md:grid-cols-3">

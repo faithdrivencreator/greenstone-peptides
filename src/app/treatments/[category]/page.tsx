@@ -31,7 +31,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   );
   if (!area) return {};
   return {
-    title: `${area.label} · GS Wellness Pharmacy`,
+    title: `${area.label} · Greenstone Wellness`,
     description: area.lead,
     alternates: { canonical: `/treatments/${params.category}` },
   };
@@ -69,8 +69,8 @@ export default function TreatmentAreaPage({ params }: PageProps) {
     '@type': 'Article',
     headline: `${area.heroLine1} ${area.heroLine2}`,
     description: area.lead,
-    author: { '@type': 'Organization', name: 'GS Wellness Pharmacy' },
-    publisher: { '@type': 'Organization', name: 'GS Wellness Pharmacy' },
+    author: { '@type': 'Organization', name: 'Greenstone Wellness' },
+    publisher: { '@type': 'Organization', name: 'Greenstone Wellness' },
   };
 
   return (

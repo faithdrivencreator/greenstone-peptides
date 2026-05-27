@@ -84,9 +84,9 @@ export function Navigation() {
       >
         <div className="container-gr flex items-center justify-between gap-8">
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none" aria-label="GS Wellness Pharmacy home">
+          <Link href="/" className="flex flex-col leading-none" aria-label="Greenstone Wellness home">
             <span className="font-cormorant text-2xl font-medium text-white tracking-tight">
-              GS Wellness Pharmacy
+              Greenstone Wellness
             </span>
           </Link>
 

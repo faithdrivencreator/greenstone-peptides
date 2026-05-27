@@ -12,7 +12,7 @@ import { HeroHowItWorks } from '@/components/HeroHowItWorks';
 import { PARENT_PRODUCTS, fromPrice } from '@/data/parent-products';
 
 export const metadata: Metadata = {
-  title: 'GS Wellness Pharmacy | Compounded GLP-1, Peptide & Men\'s Therapy',
+  title: 'Greenstone Wellness | Compounded GLP-1, Peptide & Men\'s Therapy',
   description:
     'Compounded GLP-1, peptide, and oral therapy prescribed by a licensed physician and dispensed by a 503A pharmacy in Florida. Browse the formulary, then complete a quick health screening to start.',
   alternates: { canonical: '/' },
@@ -29,7 +29,7 @@ const FEATURED_SLUGS = ['retatrutide', 'bpc-157', 'nad'] as const;
 const FEATURED_IMAGE_OVERRIDES: Record<string, { image: string; alt: string; subtitle: string }> = {
   nad: {
     image: '/images/products/nad-plus-nasal-spray.jpg',
-    alt: 'NAD+ intranasal spray bottle, GS Wellness Pharmacy',
+    alt: 'NAD+ intranasal spray bottle, Greenstone Wellness',
     subtitle: 'Now available as an intranasal spray',
   },
 };
@@ -46,7 +46,7 @@ export default async function HomePage() {
         schema={{
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: 'GS Wellness Pharmacy',
+          name: 'Greenstone Wellness',
           url: process.env.NEXT_PUBLIC_SITE_URL,
         }}
       />

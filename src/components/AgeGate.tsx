@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 /**
  * 21+ age gate.
  *
- * GS Wellness Pharmacy is a clinic + Florida 503A pharmacy storefront.
+ * Greenstone Wellness is a clinic + Florida 503A pharmacy storefront.
  * The actual phone-verified ID and intake happen on the pharmacy checkout
  * (Bloom Health). This gate is a soft top-of-funnel confirmation that the
  * visitor is at least 21 years old before browsing the formulary.
@@ -115,7 +115,7 @@ export function AgeGate() {
           </h2>
 
           <p className="text-cream-dim text-sm leading-relaxed mb-8">
-            GS Wellness Pharmacy is the storefront of Greenstone Rx, a Florida-licensed
+            Greenstone Wellness is the storefront of Greenstone Rx, a Florida-licensed
             503A compounding pharmacy. The formulary is restricted to patients 21 and over.
             Phone-verified identity and physician health screening happen at checkout.
           </p>

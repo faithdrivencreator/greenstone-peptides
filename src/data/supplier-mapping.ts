@@ -1,4 +1,4 @@
-// Maps each GS Wellness Pharmacy product slug to its exact name in the
+// Maps each Greenstone Wellness product slug to its exact name in the
 // Greenstone Rx supplier catalog (bloom.greenstonerx.com).
 //
 // Purpose: the order-notification email Pete receives needs to show the

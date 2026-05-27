@@ -1,4 +1,4 @@
-// GS Wellness Pharmacy, core TypeScript types
+// Greenstone Wellness, core TypeScript types
 
 export interface SanityImage {
   _type?: 'image';
