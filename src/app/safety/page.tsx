@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Safety & Storage | Greenstone Wellness',
+  title: 'Safety & Storage | GS Wellness Pharmacy',
   description:
-    'How Greenstone Wellness handles safety: physician review, USP 797 sterile compounding, lot testing, specialized temperature-controlled packaging, and storage guidelines for patients.',
+    'How GS Wellness Pharmacy handles safety: physician review, USP 797 sterile compounding, lot testing, specialized temperature-controlled packaging, and storage guidelines for patients.',
   alternates: { canonical: '/safety' },
 };
 

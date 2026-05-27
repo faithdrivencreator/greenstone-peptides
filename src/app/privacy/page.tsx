@@ -5,11 +5,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Greenstone Wellness',
+  title: 'Privacy Policy | GS Wellness Pharmacy',
   description:
-    'Privacy Policy for Greenstone Wellness (DBA Greenstone Wellness). Learn how we collect, use, and protect your personal information.',
+    'Privacy Policy for GS Wellness Pharmacy (DBA GS Wellness Pharmacy). Learn how we collect, use, and protect your personal information.',
   alternates: {
-    canonical: 'https://greenstonewellness.store/privacy',
+    canonical: 'https://gswellnesspharmacy.com/privacy',
   },
 };
 
@@ -28,10 +28,10 @@ export default function PrivacyPage() {
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">1. Overview</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            Greenstone Wellness, LLC (doing business as{' '}
-            <strong className="text-cream">Greenstone Wellness</strong>, "we," "us," or
+            GS Wellness Pharmacy, LLC (doing business as{' '}
+            <strong className="text-cream">GS Wellness Pharmacy</strong>, "we," "us," or
             "our") operates the website at{' '}
-            <strong className="text-cream">greenstonewellness.store</strong>. This Privacy
+            <strong className="text-cream">gswellnesspharmacy.com</strong>. This Privacy
             Policy explains how we collect, use, disclose, and protect your personal
             information when you visit or make a purchase from our Site.
           </p>
@@ -262,7 +262,7 @@ export default function PrivacyPage() {
               <span className="text-emerald mt-0.5 shrink-0">•</span>
               <span>
                 <strong className="text-cream">Protection of rights:</strong> To protect
-                the rights, property, or safety of Greenstone Wellness, our customers, or
+                the rights, property, or safety of GS Wellness Pharmacy, our customers, or
                 others
               </span>
             </li>
@@ -323,10 +323,10 @@ export default function PrivacyPage() {
           <p className="text-cream-dim text-sm leading-relaxed mt-4">
             To exercise any of these rights, contact us at{' '}
             <a
-              href="mailto:info@greenstonewellness.store"
+              href="mailto:info@gswellnesspharmacy.com"
               className="text-emerald hover:underline"
             >
-              info@greenstonewellness.store
+              info@gswellnesspharmacy.com
             </a>. We will respond to verified requests within 30 days.
           </p>
         </div>
@@ -368,10 +368,10 @@ export default function PrivacyPage() {
           <p className="text-cream-dim text-sm leading-relaxed mt-4">
             To submit a CCPA request, email us at{' '}
             <a
-              href="mailto:info@greenstonewellness.store"
+              href="mailto:info@gswellnesspharmacy.com"
               className="text-emerald hover:underline"
             >
-              info@greenstonewellness.store
+              info@gswellnesspharmacy.com
             </a>{' '}
             with the subject line "CCPA Privacy Request."
           </p>
@@ -433,20 +433,20 @@ export default function PrivacyPage() {
           </p>
           <div className="mt-4 text-sm text-cream-dim space-y-1">
             <p>
-              <strong className="text-cream">Greenstone Wellness, LLC</strong> (DBA Greenstone
+              <strong className="text-cream">GS Wellness Pharmacy, LLC</strong> (DBA Greenstone
               Wellness)
             </p>
             <p>Miami, Florida</p>
             <p>
               Email:{' '}
               <a
-                href="mailto:info@greenstonewellness.store"
+                href="mailto:info@gswellnesspharmacy.com"
                 className="text-emerald hover:underline"
               >
-                info@greenstonewellness.store
+                info@gswellnesspharmacy.com
               </a>
             </p>
-            <p>Website: greenstonewellness.store</p>
+            <p>Website: gswellnesspharmacy.com</p>
           </div>
         </div>
       </div>

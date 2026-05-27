@@ -5,11 +5,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Greenstone Wellness',
+  title: 'Terms of Service | GS Wellness Pharmacy',
   description:
-    'Terms of Service for Greenstone Wellness. Compounded medications dispensed by a 503A licensed compounding pharmacy pursuant to a valid prescription from a U.S.-licensed clinician.',
+    'Terms of Service for GS Wellness Pharmacy. Compounded medications dispensed by a 503A licensed compounding pharmacy pursuant to a valid prescription from a U.S.-licensed clinician.',
   alternates: {
-    canonical: 'https://greenstonewellness.store/terms',
+    canonical: 'https://gswellnesspharmacy.com/terms',
   },
 };
 
@@ -29,10 +29,10 @@ export default function TermsPage() {
           <h2 className="font-cormorant text-2xl text-white mb-4">1. Agreement to Terms</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
             These Terms of Service ("Terms") govern your access to and use of the website
-            located at <strong className="text-cream">greenstonewellness.store</strong> (the
+            located at <strong className="text-cream">gswellnesspharmacy.com</strong> (the
             "Site") and any purchases made through the Site. The Site is operated by{' '}
-            <strong className="text-cream">Greenstone Wellness, LLC</strong>, doing business
-            as <strong className="text-cream">Greenstone Wellness</strong> ("Company," "we,"
+            <strong className="text-cream">GS Wellness Pharmacy, LLC</strong>, doing business
+            as <strong className="text-cream">GS Wellness Pharmacy</strong> ("Company," "we,"
             "us," or "our").
           </p>
           <p className="text-cream-dim text-sm leading-relaxed mt-3">
@@ -131,10 +131,10 @@ export default function TermsPage() {
             Risk of loss and title for products purchased pass to you upon delivery to the
             carrier. For any concerns about your delivery, contact us at{' '}
             <a
-              href="mailto:info@greenstonewellness.store"
+              href="mailto:info@gswellnesspharmacy.com"
               className="text-emerald hover:underline"
             >
-              info@greenstonewellness.store
+              info@gswellnesspharmacy.com
             </a>.
           </p>
         </div>
@@ -153,10 +153,10 @@ export default function TermsPage() {
             provided the product has remained properly stored (refrigerated, out of direct
             light). To initiate a return, contact us at{' '}
             <a
-              href="mailto:info@greenstonewellness.store"
+              href="mailto:info@gswellnesspharmacy.com"
               className="text-emerald hover:underline"
             >
-              info@greenstonewellness.store
+              info@gswellnesspharmacy.com
             </a>{' '}
             with your order number. Return shipping costs are the responsibility of the buyer
             unless the return is due to our error.
@@ -210,7 +210,7 @@ export default function TermsPage() {
         <div className="card-glass">
           <h2 className="font-cormorant text-2xl text-white mb-4">10. Indemnification</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
-            You agree to defend, indemnify, and hold harmless Greenstone Wellness, LLC and
+            You agree to defend, indemnify, and hold harmless GS Wellness Pharmacy, LLC and
             its affiliates, officers, directors, employees, and agents from and against any
             claims, liabilities, damages, losses, and expenses, including reasonable
             attorneys' fees, arising out of or in any way connected with your access to or
@@ -225,7 +225,7 @@ export default function TermsPage() {
           </h2>
           <p className="text-cream-dim text-sm leading-relaxed">
             All content on this Site, including text, graphics, logos, product descriptions,
-            images, and software, is the property of Greenstone Wellness, LLC or its content
+            images, and software, is the property of GS Wellness Pharmacy, LLC or its content
             suppliers and is protected by applicable intellectual property laws. Unauthorized
             reproduction, distribution, or use of any content is prohibited.
           </p>
@@ -265,20 +265,20 @@ export default function TermsPage() {
           </p>
           <div className="mt-4 text-sm text-cream-dim space-y-1">
             <p>
-              <strong className="text-cream">Greenstone Wellness, LLC</strong> (DBA Greenstone
+              <strong className="text-cream">GS Wellness Pharmacy, LLC</strong> (DBA Greenstone
               Wellness)
             </p>
             <p>Miami, Florida</p>
             <p>
               Email:{' '}
               <a
-                href="mailto:info@greenstonewellness.store"
+                href="mailto:info@gswellnesspharmacy.com"
                 className="text-emerald hover:underline"
               >
-                info@greenstonewellness.store
+                info@gswellnesspharmacy.com
               </a>
             </p>
-            <p>Website: greenstonewellness.store</p>
+            <p>Website: gswellnesspharmacy.com</p>
           </div>
         </div>
       </div>

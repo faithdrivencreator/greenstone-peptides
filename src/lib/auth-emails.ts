@@ -2,7 +2,7 @@ import { Resend } from 'resend';
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://gswellnesspharmacy.com';
 const ADMIN_NOTIFY_EMAIL = process.env.ADMIN_NOTIFY_EMAIL || 'pete@fluidfaithsolutions.com';
 
 export async function sendWelcomeEmail({ to, name }: { to: string; name?: string | null }) {
@@ -11,7 +11,7 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
     return;
   }
 
-  const greeting = name ? `Welcome, ${name}.` : 'Welcome to Greenstone Wellness.';
+  const greeting = name ? `Welcome, ${name}.` : 'Welcome to GS Wellness Pharmacy.';
 
   const html = `<!doctype html>
 <html lang="en">
@@ -31,7 +31,7 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
           </p>
         </td></tr>
         <tr><td style="padding:24px 40px;border-top:1px solid rgba(196,164,107,0.12);font-family:'IBM Plex Mono',Menlo,monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#8d8773;">
-          Greenstone Wellness &middot; ${SITE_URL.replace('https://', '')}
+          GS Wellness Pharmacy &middot; ${SITE_URL.replace('https://', '')}
         </td></tr>
       </table>
     </td></tr>
@@ -41,11 +41,11 @@ export async function sendWelcomeEmail({ to, name }: { to: string; name?: string
 
   try {
     await resend.emails.send({
-      from: 'Greenstone Wellness <hello@greenstonewellness.store>',
+      from: 'GS Wellness Pharmacy <hello@gswellnesspharmacy.com>',
       to,
-      subject: 'Welcome to Greenstone Wellness',
+      subject: 'Welcome to GS Wellness Pharmacy',
       html,
-      replyTo: 'support@greenstonewellness.store',
+      replyTo: 'support@gswellnesspharmacy.com',
     });
   } catch (err) {
     console.error('[auth-emails] welcome send failed', err);
@@ -98,7 +98,7 @@ export async function sendSignupNotification(input: SignupNotificationInput) {
           </table>
         </td></tr>
         <tr><td style="padding:16px 32px;border-top:1px solid rgba(196,164,107,0.12);font-family:'IBM Plex Mono',Menlo,monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#8d8773;">
-          Greenstone Wellness · admin alert
+          GS Wellness Pharmacy · admin alert
         </td></tr>
       </table>
     </td></tr>
@@ -108,7 +108,7 @@ export async function sendSignupNotification(input: SignupNotificationInput) {
 
   try {
     await resend.emails.send({
-      from: 'Greenstone Signups <hello@greenstonewellness.store>',
+      from: 'Greenstone Signups <hello@gswellnesspharmacy.com>',
       to: ADMIN_NOTIFY_EMAIL,
       subject: `New signup: ${fullName || email}`,
       html,

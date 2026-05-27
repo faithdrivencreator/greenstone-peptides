@@ -3,8 +3,8 @@
  * Called from /api/admin/send-shipping when Pete enters tracking info.
  */
 
-const SITE_URL = 'https://greenstonewellness.store';
-const SUPPORT_EMAIL = 'support@greenstonewellness.store';
+const SITE_URL = 'https://gswellnesspharmacy.com';
+const SUPPORT_EMAIL = 'support@gswellnesspharmacy.com';
 
 const CARRIER_TRACKING_URLS: Record<string, (tracking: string) => string> = {
   USPS: (t) => `https://tools.usps.com/go/TrackConfirmAction?tLabels=${encodeURIComponent(t)}`,

@@ -4,4 +4,4 @@ Disallow: /studio
 Disallow: /api/
 Disallow: /wholesale/login
 
-Sitemap: https://greenstonewellness.store/sitemap.xml
+Sitemap: https://gswellnesspharmacy.com/sitemap.xml

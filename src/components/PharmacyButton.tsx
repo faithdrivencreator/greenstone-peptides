@@ -17,7 +17,7 @@ type Props = {
 };
 
 /**
- * Pharmacy purchase deep-link, GATED on an active Greenstone Wellness account.
+ * Pharmacy purchase deep-link, GATED on an active GS Wellness Pharmacy account.
  *
  * Click behavior:
  *   - Signed in     → open the Greenstone Rx (Bloom) storefront in a new tab.

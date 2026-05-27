@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Shipping & Returns | Greenstone Wellness',
+  title: 'Shipping & Returns | GS Wellness Pharmacy',
   description:
     '$10 flat shipping on all US orders. Compounded to order in 5-7 business days, then shipped Priority Mail in 3-5 business days. Temperature-controlled packaging.',
   alternates: { canonical: '/shipping' },
@@ -82,8 +82,8 @@ export default function ShippingPage() {
           <h2 className="font-cormorant text-2xl text-white mb-4">Contact</h2>
           <p className="text-cream-dim text-sm leading-relaxed">
             Questions about your order or our shipping policies? Email{' '}
-            <a href="mailto:support@greenstonewellness.store" className="text-gold underline hover:text-gold-light">
-              support@greenstonewellness.store
+            <a href="mailto:support@gswellnesspharmacy.com" className="text-gold underline hover:text-gold-light">
+              support@gswellnesspharmacy.com
             </a>{' '}
             and we'll respond within one business day.
           </p>

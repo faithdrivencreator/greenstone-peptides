@@ -31,7 +31,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   );
   if (!area) return {};
   return {
-    title: `${area.label} · Greenstone Wellness`,
+    title: `${area.label} · GS Wellness Pharmacy`,
     description: area.lead,
     alternates: { canonical: `/treatments/${params.category}` },
   };
@@ -58,9 +58,9 @@ export default function TreatmentAreaPage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://greenstonewellness.store/' },
-      { '@type': 'ListItem', position: 2, name: 'Treatments', item: 'https://greenstonewellness.store/treatments' },
-      { '@type': 'ListItem', position: 3, name: area.label, item: `https://greenstonewellness.store/treatments/${params.category}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gswellnesspharmacy.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Treatments', item: 'https://gswellnesspharmacy.com/treatments' },
+      { '@type': 'ListItem', position: 3, name: area.label, item: `https://gswellnesspharmacy.com/treatments/${params.category}` },
     ],
   };
 
@@ -69,8 +69,8 @@ export default function TreatmentAreaPage({ params }: PageProps) {
     '@type': 'Article',
     headline: `${area.heroLine1} ${area.heroLine2}`,
     description: area.lead,
-    author: { '@type': 'Organization', name: 'Greenstone Wellness' },
-    publisher: { '@type': 'Organization', name: 'Greenstone Wellness' },
+    author: { '@type': 'Organization', name: 'GS Wellness Pharmacy' },
+    publisher: { '@type': 'Organization', name: 'GS Wellness Pharmacy' },
   };
 
   return (

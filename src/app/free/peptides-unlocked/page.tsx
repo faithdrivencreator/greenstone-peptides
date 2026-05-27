@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { EbookCaptureForm } from '@/components/EbookCaptureForm';
 import { SchemaOrg } from '@/components/SchemaOrg';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://gswellnesspharmacy.com';
 
 export const metadata: Metadata = {
   title: 'Free Peptide Guide, Peptides Unlocked (Volume II) | Greenstone',
@@ -78,7 +78,7 @@ export default function PeptidesUnlockedPage() {
             'A research-grade guide to matching peptides to goals, running a sourcing checklist, and structuring the first 48 hours of a new protocol.',
           publisher: {
             '@type': 'Organization',
-            name: 'Greenstone Wellness',
+            name: 'GS Wellness Pharmacy',
             url: SITE_URL,
           },
           isAccessibleForFree: true,

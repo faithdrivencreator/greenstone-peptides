@@ -1,6 +1,6 @@
 # Approved Product Images — Live on Site
 
-**Verified:** 2026-04-18 against https://greenstonewellness.store
+**Verified:** 2026-04-18 against https://gswellnesspharmacy.com
 
 Every `.png` in this folder corresponds 1:1 to a product slug on the live shop.
 If it isn't in this list, it shouldn't be here — archive it under

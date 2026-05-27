@@ -4,9 +4,9 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const PETE_EMAIL = 'pete@fluidfaithsolutions.com';
-const ORDERS_FROM = 'Greenstone Wellness <orders@greenstonewellness.store>';
-const CONTACT_FROM = 'Greenstone Pharmacy <contact@greenstonewellness.store>';
-const SUPPORT_EMAIL = 'support@greenstonewellness.store';
+const ORDERS_FROM = 'GS Wellness Pharmacy <orders@gswellnesspharmacy.com>';
+const CONTACT_FROM = 'Greenstone Pharmacy <contact@gswellnesspharmacy.com>';
+const SUPPORT_EMAIL = 'support@gswellnesspharmacy.com';
 
 // Storefront brand tokens (email-design-system.md)
 const DEEP_GREEN = '#1a3d2e';
@@ -122,7 +122,7 @@ export async function POST(req: NextRequest) {
               <div style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:17px;line-height:1.2;">${escape(i.productName)}</div>
               ${variant ? `<div style="font-family:${BODY_FONT};color:${MUTED};font-size:12px;margin-top:3px;">${escape(variant)}</div>` : ''}
               ${i.productCategory ? `<div style="font-family:${BODY_FONT};color:${MUTED};font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-top:4px;">${escape(i.productCategory)}</div>` : ''}
-              ${i.productSlug ? `<div style="font-family:${BODY_FONT};font-size:11px;margin-top:6px;"><a href="https://greenstonewellness.store/shop/${escape(i.productSlug)}" style="color:${DEEP_GREEN};">/shop/${escape(i.productSlug)}</a></div>` : ''}
+              ${i.productSlug ? `<div style="font-family:${BODY_FONT};font-size:11px;margin-top:6px;"><a href="https://gswellnesspharmacy.com/shop/${escape(i.productSlug)}" style="color:${DEEP_GREEN};">/shop/${escape(i.productSlug)}</a></div>` : ''}
             </td>
             <td style="padding:12px 14px;border-bottom:1px solid ${BORDER_CREAM};vertical-align:top;text-align:right;font-family:${BODY_FONT};color:${BODY};font-size:13px;white-space:nowrap;">
               <strong>Qty ${i.quantity}</strong>${i.productPrice !== undefined ? `<br/><span style="color:${MUTED};font-size:12px;">$${i.productPrice.toFixed(0)} ea${lineTotal}</span>` : ''}
@@ -144,7 +144,7 @@ export async function POST(req: NextRequest) {
 <html><body style="margin:0;padding:0;background:${CREAM};font-family:${BODY_FONT};color:${BODY};">
   <div style="max-width:640px;margin:0 auto;padding:32px 24px;">
     <div style="text-align:center;padding-bottom:20px;border-bottom:1px solid ${BORDER_CREAM};">
-      <div style="font-family:${HEADER_FONT};font-size:28px;color:${DEEP_GREEN};letter-spacing:0.5px;">Greenstone Wellness</div>
+      <div style="font-family:${HEADER_FONT};font-size:28px;color:${DEEP_GREEN};letter-spacing:0.5px;">GS Wellness Pharmacy</div>
       <div style="font-family:${BODY_FONT};font-size:11px;color:${MUTED};letter-spacing:3px;text-transform:uppercase;margin-top:4px;">New Prescription Request</div>
     </div>
 
@@ -202,14 +202,14 @@ export async function POST(req: NextRequest) {
 <html><body style="margin:0;padding:0;background:${CREAM};font-family:${BODY_FONT};color:${BODY};">
   <div style="max-width:600px;margin:0 auto;padding:32px 24px;">
     <div style="text-align:center;padding-bottom:24px;border-bottom:1px solid ${BORDER_CREAM};">
-      <div style="font-family:${HEADER_FONT};font-size:32px;color:${DEEP_GREEN};letter-spacing:0.5px;">Greenstone Wellness</div>
+      <div style="font-family:${HEADER_FONT};font-size:32px;color:${DEEP_GREEN};letter-spacing:0.5px;">GS Wellness Pharmacy</div>
       <div style="font-family:${BODY_FONT};font-size:11px;color:${MUTED};letter-spacing:3px;text-transform:uppercase;margin-top:6px;">USA-Compounded Peptide Therapy</div>
     </div>
 
     <h1 style="font-family:${HEADER_FONT};color:${DEEP_GREEN};font-size:26px;margin:28px 0 12px;">We received your request, ${escape(firstName)}.</h1>
 
     <p style="font-family:${BODY_FONT};color:${BODY};font-size:15px;line-height:1.6;margin:0 0 14px;">
-      Thank you for choosing Greenstone Wellness. Your prescription request has been forwarded to our pharmacy team for review.
+      Thank you for choosing GS Wellness Pharmacy. Your prescription request has been forwarded to our pharmacy team for review.
     </p>
 
     <p style="font-family:${BODY_FONT};color:${BODY};font-size:15px;line-height:1.6;margin:0 0 14px;">
@@ -239,7 +239,7 @@ export async function POST(req: NextRequest) {
     </p>
 
     <p style="text-align:center;margin-top:20px;">
-      <a href="https://greenstonewellness.store" style="font-family:${BODY_FONT};color:${MUTED};font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;">greenstonewellness.store</a>
+      <a href="https://gswellnesspharmacy.com" style="font-family:${BODY_FONT};color:${MUTED};font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;">gswellnesspharmacy.com</a>
     </p>
   </div>
 </body></html>`;
@@ -276,7 +276,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         {
           error:
-            'Unable to submit your request right now. Please email support@greenstonewellness.store.',
+            'Unable to submit your request right now. Please email support@gswellnesspharmacy.com.',
         },
         { status: 502 },
       );

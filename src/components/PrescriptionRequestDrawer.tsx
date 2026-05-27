@@ -194,7 +194,7 @@ export function PrescriptionRequestDrawer() {
                 </p>
               )}
               <p className="text-sm text-cream-dim leading-relaxed max-w-sm mx-auto mb-6">
-                A pharmacist will review your request and reply within 24 hours with confirmation and a secure payment link. Check your inbox for a confirmation email from <span className="text-cream">orders@greenstonewellness.store</span>.
+                A pharmacist will review your request and reply within 24 hours with confirmation and a secure payment link. Check your inbox for a confirmation email from <span className="text-cream">orders@gswellnesspharmacy.com</span>.
               </p>
               <Link
                 href="/shop"

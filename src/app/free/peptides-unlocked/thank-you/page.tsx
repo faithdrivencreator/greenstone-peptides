@@ -64,7 +64,7 @@ export default function PeptidesUnlockedThankYouPage() {
           </h1>
           <p className="mt-6 text-base md:text-lg text-cream-dim max-w-xl mx-auto leading-relaxed">
             Check your inbox in the next 60 seconds. Didn&rsquo;t see it? Check spam, sometimes
-            <span className="text-cream"> hello@greenstonewellness.store </span>
+            <span className="text-cream"> hello@gswellnesspharmacy.com </span>
             lands there on first contact.
           </p>
 

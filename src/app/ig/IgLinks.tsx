@@ -96,7 +96,7 @@ export default function IgLinks({ promo, links }: { promo: Promo; links: IgLink[
 
           <footer className="text-center px-5 py-4 border-t border-white/5">
             <div className="font-jetbrains text-[11px] tracking-[1px] text-cream-dim opacity-80">
-              greenstonewellness.store
+              gswellnesspharmacy.com
             </div>
           </footer>
         </div>

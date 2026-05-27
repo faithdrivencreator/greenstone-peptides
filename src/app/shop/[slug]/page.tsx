@@ -24,7 +24,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const product = getParentBySlug(params.slug);
   if (!product) return {};
   return {
-    title: `${product.name} · Greenstone Wellness`,
+    title: `${product.name} · GS Wellness Pharmacy`,
     description: product.shortDescription,
     alternates: { canonical: `/shop/${params.slug}` },
   };
@@ -55,7 +55,7 @@ export default function ParentDetailPage({ params }: PageProps) {
     name: product.name,
     description: product.shortDescription,
     image: product.image,
-    brand: { '@type': 'Brand', name: 'Greenstone Wellness' },
+    brand: { '@type': 'Brand', name: 'GS Wellness Pharmacy' },
     offers: {
       '@type': 'AggregateOffer',
       lowPrice: from,
@@ -69,9 +69,9 @@ export default function ParentDetailPage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://greenstonewellness.store/' },
-      { '@type': 'ListItem', position: 2, name: 'Formulary', item: 'https://greenstonewellness.store/shop' },
-      { '@type': 'ListItem', position: 3, name: product.name, item: `https://greenstonewellness.store/shop/${params.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gswellnesspharmacy.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Formulary', item: 'https://gswellnesspharmacy.com/shop' },
+      { '@type': 'ListItem', position: 3, name: product.name, item: `https://gswellnesspharmacy.com/shop/${params.slug}` },
     ],
   };
 

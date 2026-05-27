@@ -107,7 +107,7 @@ export function MaintenancePage() {
 
         {/* Wordmark */}
         <p className="font-cormorant text-2xl text-cream mb-10 tracking-tight">
-          Greenstone Wellness
+          GS Wellness Pharmacy
         </p>
 
         {/* Eyebrow */}
@@ -128,7 +128,7 @@ export function MaintenancePage() {
 
         {/* Body */}
         <p className="text-cream-dim text-base sm:text-lg leading-relaxed max-w-xl mb-6">
-          Greenstone Wellness is in the middle of an upgrade. Our clinic + 503A pharmacy
+          GS Wellness Pharmacy is in the middle of an upgrade. Our clinic + 503A pharmacy
           platform is being rebuilt to make ordering simpler, safer, and faster — with
           the same licensed physician review and specialized temperature-controlled
           packaging behind every prescription.
@@ -145,7 +145,7 @@ export function MaintenancePage() {
               // You&rsquo;re on the list
             </p>
             <p className="text-cream text-sm leading-relaxed">
-              Thanks. We&rsquo;ll email you the moment Greenstone Wellness is back online.
+              Thanks. We&rsquo;ll email you the moment GS Wellness Pharmacy is back online.
             </p>
           </div>
         ) : (
@@ -191,7 +191,7 @@ export function MaintenancePage() {
         {/* Footer mark */}
         <div className="mt-16 pt-8 border-t border-cream-dim/10 flex items-center justify-between">
           <p className="font-jetbrains text-[0.55rem] tracking-[0.25em] uppercase text-cream-dim/55">
-            Greenstone Wellness
+            GS Wellness Pharmacy
           </p>
           <p className="font-jetbrains text-[0.55rem] tracking-[0.25em] uppercase text-cream-dim/55">
             Florida · 503A Compounding Pharmacy

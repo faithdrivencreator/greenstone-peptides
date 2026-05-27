@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || null;
   resend.emails
     .send({
-      from: 'Greenstone Signups <hello@greenstonewellness.store>',
+      from: 'Greenstone Signups <hello@gswellnesspharmacy.com>',
       to: ADMIN_NOTIFY_EMAIL,
       subject: `Relaunch waitlist signup: ${email}`,
       replyTo: email,

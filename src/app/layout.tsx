@@ -37,13 +37,13 @@ const jetbrains = IBM_Plex_Mono({
   display: 'swap',
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://gswellnesspharmacy.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Greenstone Wellness | Physician-Prescribed GLP-1, Peptide & Men\'s Therapy',
-    template: 'Greenstone Wellness | %s',
+    default: 'GS Wellness Pharmacy | Physician-Prescribed GLP-1, Peptide & Men\'s Therapy',
+    template: 'GS Wellness Pharmacy | %s',
   },
   description:
     'Compounded GLP-1, peptide, and oral therapy prescribed by a licensed physician and dispensed by Greenstone Rx, a Florida 503A pharmacy. Physician-reviewed, USP 797 sterile compounded, specialized temperature-controlled packaging.',
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
-    siteName: 'Greenstone Wellness',
-    title: 'Greenstone Wellness | Physician-Prescribed GLP-1, Peptide & Men\'s Therapy',
+    siteName: 'GS Wellness Pharmacy',
+    title: 'GS Wellness Pharmacy | Physician-Prescribed GLP-1, Peptide & Men\'s Therapy',
     description:
       'Compounded medication, prescribed by a licensed physician, dispensed by Greenstone Rx — a Florida-licensed 503A compounding pharmacy.',
     images: [
@@ -70,13 +70,13 @@ export const metadata: Metadata = {
         url: '/images/hero-lab.png',
         width: 1376,
         height: 768,
-        alt: 'Greenstone Wellness, Florida 503A Compounding Pharmacy',
+        alt: 'GS Wellness Pharmacy, Florida 503A Compounding Pharmacy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Greenstone Wellness | Physician-Prescribed GLP-1, Peptide & Men\'s Therapy',
+    title: 'GS Wellness Pharmacy | Physician-Prescribed GLP-1, Peptide & Men\'s Therapy',
     description:
       'Compounded medication, prescribed by a licensed physician, dispensed by Greenstone Rx — a Florida-licensed 503A compounding pharmacy.',
     images: ['/images/hero-lab.png'],
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Greenstone Wellness',
+  name: 'GS Wellness Pharmacy',
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   description:

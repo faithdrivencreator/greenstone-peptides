@@ -3,7 +3,7 @@ import { PARENT_PRODUCTS } from '@/data/parent-products';
 import { staticBlogPosts } from '@/data/blog-posts';
 import { TREATMENT_AREAS } from '@/data/treatment-areas';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://greenstonewellness.store';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://gswellnesspharmacy.com';
 
 export const revalidate = false; // static
 

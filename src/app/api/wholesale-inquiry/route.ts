@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     }
 
     await resend.emails.send({
-      from: 'Greenstone Wholesale <wholesale@greenstonewellness.store>',
+      from: 'Greenstone Wholesale <wholesale@gswellnesspharmacy.com>',
       to: PETE_EMAIL,
       subject: `Wholesale Inquiry, ${businessName}`,
       html: `
