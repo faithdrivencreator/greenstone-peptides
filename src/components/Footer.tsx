@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram } from 'lucide-react';
 
 const SHOP_LINKS = [
@@ -31,7 +32,14 @@ export function Footer() {
       <div className="container-gr grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         {/* Brand column */}
         <div className="space-y-4">
-          <div className="flex flex-col leading-none">
+          <div className="flex items-center gap-3 leading-none">
+            <Image
+              src="/icon.png"
+              alt=""
+              width={1024}
+              height={1024}
+              className="h-12 w-12 shrink-0"
+            />
             <span className="font-cormorant text-2xl font-medium text-white">GS Wellness Pharmacy</span>
           </div>
           <p className="text-sm text-cream-dim leading-relaxed max-w-xs">

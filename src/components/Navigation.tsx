@@ -2,6 +2,7 @@
 
 import { Fragment, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { Menu, X, Lock, ChevronDown } from 'lucide-react';
@@ -84,8 +85,16 @@ export function Navigation() {
       >
         <div className="container-gr flex items-center justify-between gap-8">
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none" aria-label="GS Wellness Pharmacy home">
-            <span className="font-cormorant text-2xl font-medium text-white tracking-tight">
+          <Link href="/" className="flex items-center gap-3 leading-none" aria-label="GS Wellness Pharmacy home">
+            <Image
+              src="/icon.png"
+              alt=""
+              width={1024}
+              height={1024}
+              priority
+              className="h-11 w-11 shrink-0"
+            />
+            <span className="font-cormorant text-2xl font-medium text-white tracking-tight whitespace-nowrap">
               GS Wellness Pharmacy
             </span>
           </Link>
