@@ -11,3 +11,21 @@
 
 # Bare parent slugs (/shop/retatrutide, /shop/ghk-cu, etc.) are now the
 # canonical product URLs — no per-variant redirects needed.
+
+[[redirects]]
+  from = "https://greenstonewellness.store/*"
+  to = "https://gswellnesspharmacy.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.greenstonewellness.store/*"
+  to = "https://gswellnesspharmacy.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.gswellnesspharmacy.com/*"
+  to = "https://gswellnesspharmacy.com/:splat"
+  status = 301
+  force = true
