@@ -83,24 +83,24 @@ export function Navigation() {
             : 'bg-transparent backdrop-blur-xl py-5 border-b border-transparent'
         )}
       >
-        <div className="container-gr flex items-center justify-between gap-8">
+        <div className="container-gr flex items-center justify-between gap-5">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 leading-none" aria-label="GS Wellness Pharmacy home">
+          <Link href="/" className="flex items-center gap-2.5 leading-none shrink-0" aria-label="GS Wellness Pharmacy home">
             <Image
               src="/icon.png"
               alt=""
               width={1024}
               height={1024}
               priority
-              className="h-11 w-11 shrink-0"
+              className="h-10 w-10 shrink-0"
             />
-            <span className="font-cormorant text-2xl font-medium text-white tracking-tight whitespace-nowrap">
+            <span className="hidden xl:inline font-cormorant text-xl font-medium text-white tracking-tight whitespace-nowrap">
               GS Wellness Pharmacy
             </span>
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden lg:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-6">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href || pathname.startsWith(link.href + '/');
 
@@ -112,7 +112,7 @@ export function Navigation() {
                       <Link
                         href={link.href}
                         className={clsx(
-                          'relative text-sm tracking-wide transition-colors',
+                          'relative text-sm tracking-wide transition-colors whitespace-nowrap',
                           active ? 'text-gold' : 'text-cream-dim hover:text-gold'
                         )}
                       >
@@ -126,7 +126,7 @@ export function Navigation() {
                       <button
                         type="button"
                         className={clsx(
-                          'inline-flex items-center gap-1 text-sm tracking-wide transition-colors',
+                          'inline-flex items-center gap-1 text-sm tracking-wide transition-colors whitespace-nowrap',
                           pathname.startsWith('/treatments') ? 'text-gold' : 'text-cream-dim hover:text-gold'
                         )}
                         aria-haspopup="true"
@@ -169,7 +169,7 @@ export function Navigation() {
                   <Link
                     href={link.href}
                     className={clsx(
-                      'relative text-sm tracking-wide transition-colors',
+                      'relative text-sm tracking-wide transition-colors whitespace-nowrap',
                       active ? 'text-gold' : 'text-cream-dim hover:text-gold'
                     )}
                   >
@@ -189,7 +189,7 @@ export function Navigation() {
           {/* Wholesale login, desktop */}
           <Link
             href="/wholesale/login"
-            className="hidden lg:inline-flex items-center gap-1.5 font-jetbrains text-[0.65rem] tracking-widest uppercase text-emerald hover:text-emerald-light border border-emerald/30 hover:border-emerald/60 px-3 py-2 transition-colors"
+            className="hidden lg:inline-flex shrink-0 items-center gap-1.5 font-jetbrains text-[0.65rem] tracking-widest uppercase whitespace-nowrap text-emerald hover:text-emerald-light border border-emerald/30 hover:border-emerald/60 px-3 py-2 transition-colors"
           >
             <Lock size={10} />
             Distributor Login

@@ -24,7 +24,7 @@ export function AccountNavLink({ variant = 'desktop' }: { variant?: 'desktop' | 
   return (
     <Link
       href={href}
-      className="hidden lg:inline-flex items-center gap-1.5 font-jetbrains text-[0.65rem] tracking-widest uppercase text-cream-dim hover:text-gold border border-cream-dim/25 hover:border-gold/40 px-3 py-2 transition-colors"
+      className="hidden lg:inline-flex shrink-0 items-center gap-1.5 font-jetbrains text-[0.65rem] tracking-widest uppercase whitespace-nowrap text-cream-dim hover:text-gold border border-cream-dim/25 hover:border-gold/40 px-3 py-2 transition-colors"
       aria-label={signedIn ? 'Your account' : 'Sign in'}
     >
       {signedIn ? <UserRound size={10} /> : <LogIn size={10} />}
