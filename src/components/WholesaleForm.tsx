@@ -29,6 +29,7 @@ export function WholesaleForm() {
     } catch {}
 
     setLoading(false);
+    window.scrollTo({ top: 0, behavior: 'auto' });
     setSubmitted(true);
   }
 

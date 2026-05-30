@@ -65,6 +65,7 @@ export function AddressManager({ initialAddresses }: { initialAddresses: Shippin
       }
       setForm(EMPTY);
       setShowForm(false);
+      window.scrollTo({ top: 0, behavior: 'auto' });
       router.refresh();
     } catch (err) {
       console.error(err);

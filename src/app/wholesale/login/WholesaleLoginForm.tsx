@@ -14,6 +14,7 @@ export default function WholesaleLoginForm() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
+      window.scrollTo({ top: 0, behavior: 'auto' });
       setSubmitted(true);
     }, 1200);
   }

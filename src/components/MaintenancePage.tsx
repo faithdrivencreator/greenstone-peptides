@@ -64,6 +64,7 @@ export function MaintenancePage() {
         setStatus('error');
         return;
       }
+      window.scrollTo({ top: 0, behavior: 'auto' });
       setStatus('ok');
       setEmail('');
     } catch {

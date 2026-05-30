@@ -23,6 +23,7 @@ export function ProviderSignupForm() {
       onSubmit={(e) => {
         e.preventDefault();
         // TODO: POST to /api/provider-signup (Phase 2)
+        window.scrollTo({ top: 0, behavior: 'auto' });
         setSubmitted(true);
       }}
       className="card-glass space-y-5"

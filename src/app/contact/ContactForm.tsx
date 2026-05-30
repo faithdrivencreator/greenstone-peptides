@@ -33,6 +33,7 @@ export function ContactForm() {
       if (!emailRes.ok) {
         setError(true);
       } else {
+        window.scrollTo({ top: 0, behavior: 'auto' });
         setSubmitted(true);
       }
     } catch {
