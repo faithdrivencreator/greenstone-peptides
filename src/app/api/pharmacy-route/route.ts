@@ -20,7 +20,11 @@ export const dynamic = 'force-dynamic';
 export async function GET(req: Request) {
   const session = await auth();
   const url = new URL(req.url);
-  const nextParam = url.searchParams.get('next') ?? '/order-out-of-state';
+  // Validate next is a relative path on our origin (defense against open
+  // redirect via `?next=https://evil.com`). Reject anything that doesn't
+  // start with a single forward slash followed by something other than /.
+  const rawNext = url.searchParams.get('next');
+  const nextParam = rawNext && /^\/(?!\/)/.test(rawNext) ? rawNext : '/order-out-of-state';
 
   if (!session?.user?.id) {
     return NextResponse.redirect(new URL('/login?next=pharmacy', url.origin));

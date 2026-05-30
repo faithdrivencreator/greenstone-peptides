@@ -26,11 +26,11 @@ export function WholesaleForm() {
           notes: data.get('notes'),
         }),
       });
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      setSubmitted(true);
     } catch {}
 
     setLoading(false);
-    window.scrollTo({ top: 0, behavior: 'auto' });
-    setSubmitted(true);
   }
 
   if (submitted) {

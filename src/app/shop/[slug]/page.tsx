@@ -165,7 +165,7 @@ export default function ParentDetailPage({ params }: PageProps) {
           </div>
 
           {/* ---------- VARIANT PRICING TABLE (moved up — sits directly under the hero so visitors see all formulations + prices without scrolling past the science) ---------- */}
-          <div id="formulations" className="mt-16 max-w-4xl mx-auto scroll-mt-24">
+          <div id="formulations" className="mt-16 max-w-4xl mx-auto scroll-mt-32">
             <header className="mb-6">
               <p className="font-jetbrains text-[0.65rem] tracking-[0.2em] uppercase text-emerald mb-2">
                 // All formulations
@@ -210,7 +210,7 @@ export default function ParentDetailPage({ params }: PageProps) {
           </div>
 
           {/* ---------- EDUCATIONAL CONTENT BLOCKS ---------- */}
-          <div id="details" className="mt-24 max-w-3xl mx-auto space-y-14 scroll-mt-24">
+          <div id="details" className="mt-24 max-w-3xl mx-auto space-y-14 scroll-mt-32">
             <section>
               <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.25em] uppercase mb-3">
                 // The science

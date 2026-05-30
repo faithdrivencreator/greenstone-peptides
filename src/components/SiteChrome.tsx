@@ -15,7 +15,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
     <>
       <TrustRibbon />
       <Navigation />
-      <main id="main-content" className="relative z-10 pt-[8.25rem]">{children}</main>
+      <main id="main-content" className="relative z-10 pt-[7.25rem]">{children}</main>
       <ChatWidget />
       <Footer />
     </>

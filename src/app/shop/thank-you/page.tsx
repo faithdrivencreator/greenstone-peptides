@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function ThankYouPage() {
   return (
-    <main className="min-h-screen bg-obsidian text-cream pt-32 pb-20">
+    <div className="min-h-screen bg-obsidian text-cream pt-12 pb-20">
       <div className="max-w-2xl mx-auto px-6 text-center">
         <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-sage/20 flex items-center justify-center">
           <svg className="w-8 h-8 text-sage" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -50,6 +50,6 @@ export default function ThankYouPage() {
           </Link>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

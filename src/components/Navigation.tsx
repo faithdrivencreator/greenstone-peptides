@@ -77,7 +77,7 @@ export function Navigation() {
     <>
       <nav
         className={clsx(
-          'fixed inset-x-0 top-[4.5rem] z-50 transition-all duration-200',
+          'fixed inset-x-0 top-9 z-50 transition-all duration-200',
           scrolled
             ? 'bg-obsidian/85 backdrop-blur-xl border-b border-gold/15 py-3'
             : 'bg-transparent backdrop-blur-xl py-5 border-b border-transparent'
@@ -215,7 +215,7 @@ export function Navigation() {
       {/* Mobile drawer */}
       <div
         className={clsx(
-          'fixed inset-0 z-[55] lg:hidden bg-obsidian overflow-y-auto overscroll-contain transition-transform duration-[400ms] ease-smooth',
+          'fixed inset-0 z-[63] lg:hidden bg-obsidian overflow-y-auto overscroll-contain transition-transform duration-[400ms] ease-smooth',
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         )}
         aria-hidden={!mobileOpen}

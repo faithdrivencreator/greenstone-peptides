@@ -113,7 +113,7 @@ export function Footer() {
       <div className="container-gr mt-16 pt-8 border-t border-gold/10 space-y-5">
         {/* Dense compliance disclaimer — required fine print covering clinic /
             pharmacy / FDA / trademark / testimonial boundaries. */}
-        <p className="text-[0.65rem] leading-relaxed text-cream-dim/60 max-w-4xl font-jetbrains">
+        <p className="text-[0.65rem] leading-relaxed text-cream-dim/80 max-w-4xl font-jetbrains">
           The assessment available on GS Wellness Pharmacy does not create a
           doctor–patient relationship. Clinical services are provided by
           Greenstone Rx and partnered networks of U.S.-licensed clinicians who

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
+import { ADMIN_EMAILS } from '@/lib/admin-emails';
 
 const MAINTENANCE_MODE = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
 
@@ -10,8 +11,6 @@ const MAINTENANCE_MODE = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
 // require a session; /admin additionally requires an allowlisted email.
 const PROTECTED_PREFIXES = ['/account', '/admin'];
 const ADMIN_PREFIX = '/admin';
-// Keep this list in sync with src/lib/admin-auth.ts.
-const ADMIN_EMAILS = ['pete@fluidfaithsolutions.com'];
 const MAINTENANCE_ALLOWLIST = ['/', '/api/notify-relaunch', '/api/maintenance-bypass'];
 
 // Maintenance mode handler — plain (no Auth.js wrapper) so it stays light and

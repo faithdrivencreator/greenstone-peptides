@@ -25,7 +25,6 @@ export default function EmailCapture() {
       // Always show success, keeps UX honest about email delivery
     } finally {
       setLoading(false)
-      window.scrollTo({ top: 0, behavior: 'auto' })
       setSubmitted(true)
     }
   }

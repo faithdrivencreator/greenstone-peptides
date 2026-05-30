@@ -8,10 +8,9 @@
 
 import { redirect } from 'next/navigation';
 import { auth } from '@/auth';
+import { ADMIN_EMAILS } from '@/lib/admin-emails';
 
-export const ADMIN_EMAILS: ReadonlyArray<string> = [
-  'pete@fluidfaithsolutions.com',
-];
+export { ADMIN_EMAILS };
 
 export function isAdminEmail(email?: string | null): boolean {
   if (!email) return false;

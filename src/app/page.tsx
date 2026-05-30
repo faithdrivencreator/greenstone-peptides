@@ -83,7 +83,7 @@ export default async function HomePage() {
         <div className="container-gr relative z-10 grid gap-12 lg:grid-cols-[1.1fr_1fr] items-center">
           {/* Left: compressed, conversion-focused copy */}
           <div>
-            <p className="eyebrow text-emerald">Licensed in FL · 503A Compounding Pharmacy</p>
+            <p className="eyebrow text-emerald">Licensed in Florida · Ships to All 50 States</p>
             <h1 className="font-cormorant">
               Medicine,{' '}
               <em className="italic text-gold">prescribed</em>
@@ -102,7 +102,7 @@ export default async function HomePage() {
 
             {/* Micro trust row */}
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
-              {['Licensed in FL', '503A Pharmacy', 'Physician-prescribed', 'USP 797 Sterile Compounding'].map((t) => (
+              {['Licensed in FL', 'Ships to All 50 States', '503A Pharmacy', 'Physician-prescribed', 'USP 797 Sterile Compounding'].map((t) => (
                 <span key={t} className="flex items-center gap-1.5 text-xs text-cream-dim/70 font-jetbrains tracking-wide">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald flex-shrink-0" />
                   {t}

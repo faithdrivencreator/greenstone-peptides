@@ -288,6 +288,15 @@ export default function OrderOutOfStatePage() {
     setErrorMsg('');
 
     // Final validation
+    if (!productName) {
+      setErrorMsg('Please choose a product before placing your order.');
+      return;
+    }
+    // Slug-routed arrivals (the normal flow) must keep a variant selected.
+    if (slug && parentProduct && selectedVariantIdx === null) {
+      setErrorMsg('Please select a dosage option.');
+      return;
+    }
     if (!sex) { setErrorMsg('Please select biological sex.'); return; }
     if (!heightFt || !heightIn) { setErrorMsg('Please enter your height.'); return; }
     if (!weightLbs) { setErrorMsg('Please enter your weight.'); return; }
@@ -403,14 +412,14 @@ export default function OrderOutOfStatePage() {
   // ---- Auth loading / redirect states ------------------------------------
   if (status === 'loading' || status === 'unauthenticated') {
     return (
-      <main className="min-h-screen bg-obsidian text-cream pt-32 pb-24 px-6 grid place-items-center">
+      <div className="min-h-screen bg-obsidian text-cream pt-12 pb-24 px-6 grid place-items-center">
         <div className="flex flex-col items-center gap-4">
           <div className="w-8 h-8 border-2 border-emerald/30 border-t-emerald rounded-full animate-spin" />
           <div className="font-jetbrains text-[0.65rem] tracking-widest uppercase text-cream-dim">
             {status === 'loading' ? 'Loading…' : 'Redirecting to sign in…'}
           </div>
         </div>
-      </main>
+      </div>
     );
   }
 
@@ -418,7 +427,7 @@ export default function OrderOutOfStatePage() {
   if (submitState === 'done') {
     const firstName = (fullName.trim().split(/\s+/)[0]) || 'there';
     return (
-      <main className="min-h-screen bg-obsidian text-cream pt-32 pb-24 px-6">
+      <div className="min-h-screen bg-obsidian text-cream pt-12 pb-24 px-6">
         <div className="max-w-xl mx-auto text-center">
           <div className="font-jetbrains text-[0.65rem] tracking-widest uppercase text-emerald mb-4">Order received</div>
           <h1 className="font-cormorant text-4xl text-cream tracking-tight mb-6">Thank you, {firstName}.</h1>
@@ -436,13 +445,13 @@ export default function OrderOutOfStatePage() {
             </Link>
           </div>
         </div>
-      </main>
+      </div>
     );
   }
 
   // ---- Form ---------------------------------------------------------------
   return (
-    <main className="min-h-screen bg-obsidian text-cream pt-28 pb-24 px-6">
+    <div className="min-h-screen bg-obsidian text-cream pt-8 pb-24 px-6">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_360px] gap-12">
         {/* Left — form */}
         <div>
@@ -457,6 +466,16 @@ export default function OrderOutOfStatePage() {
           </div>
 
           <form onSubmit={onSubmit} className="space-y-14">
+            {/* Invalid-slug guard — visible only if customer arrived from a
+                broken/old link with ?slug= but the molecule no longer exists */}
+            {slug && !parentProduct && (
+              <div className="px-5 py-4 border border-gold/40 bg-gold/10 text-cream text-sm">
+                We couldn&apos;t find that product. Please return to
+                {' '}<Link href="/shop" className="text-emerald underline">the shop</Link>{' '}
+                and choose your formulation again.
+              </div>
+            )}
+
             {/* 00 — PRODUCT (variant picker, only shown when slug-routed) */}
             {parentProduct && (
               <section>
@@ -1001,6 +1020,6 @@ export default function OrderOutOfStatePage() {
           </div>
         </aside>
       </div>
-    </main>
+    </div>
   );
 }

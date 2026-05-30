@@ -9,6 +9,7 @@
  *   - Respects prefers-reduced-motion via the global stylesheet override below.
  */
 const BADGES = [
+  'Licensed in Florida',
   'Ships to All 50 States',
   '503A Compounding Pharmacy',
   'USP 797 Sterile Compounding',
@@ -23,7 +24,7 @@ export function TrustRibbon() {
   // readers only need the content once.
   return (
     <div
-      className="fixed inset-x-0 top-9 z-[60] w-full overflow-hidden bg-obsidian-mid/95 backdrop-blur-md border-b border-emerald/20"
+      className="fixed inset-x-0 top-0 z-[60] w-full overflow-hidden bg-obsidian-mid/95 backdrop-blur-md border-b border-emerald/20"
       role="region"
       aria-label="GS Wellness Pharmacy trust ribbon"
     >

@@ -114,7 +114,7 @@ export default function TreatmentAreaPage({ params }: PageProps) {
               </p>
             </header>
 
-            <aside className="lg:col-span-5 lg:row-start-1 lg:row-span-2 lg:sticky lg:top-24 lg:self-start">
+            <aside className="lg:col-span-5 lg:row-start-1 lg:row-span-2 lg:sticky lg:top-[7.75rem] lg:self-start">
               <ProductRail products={molecules} categoryLabel={area.label} />
             </aside>
 
