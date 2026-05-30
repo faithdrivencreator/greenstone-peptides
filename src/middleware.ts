@@ -6,9 +6,12 @@ const MAINTENANCE_MODE = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
 // PDPs at /shop/<slug> are public educational pages. The "Continue to
 // Pharmacy" CTA on each PDP gates the Bloom redirect on auth itself, so
 // middleware-level protection on /shop would just block visitors and
-// crawlers from reading the educational content. Only /account remains
-// behind a session gate.
-const PROTECTED_PREFIXES = ['/account'];
+// crawlers from reading the educational content. /account and /admin
+// require a session; /admin additionally requires an allowlisted email.
+const PROTECTED_PREFIXES = ['/account', '/admin'];
+const ADMIN_PREFIX = '/admin';
+// Keep this list in sync with src/lib/admin-auth.ts.
+const ADMIN_EMAILS = ['pete@fluidfaithsolutions.com'];
 const MAINTENANCE_ALLOWLIST = ['/', '/api/notify-relaunch', '/api/maintenance-bypass'];
 
 // Maintenance mode handler — plain (no Auth.js wrapper) so it stays light and
@@ -40,6 +43,7 @@ const normalMiddleware = auth((req) => {
   const requestHeaders = new Headers(req.headers);
   requestHeaders.set('x-pathname', pathname);
 
+  const isAdmin = pathname === ADMIN_PREFIX || pathname.startsWith(ADMIN_PREFIX + '/');
   const isProtected = PROTECTED_PREFIXES.some(
     (p) => pathname === p || pathname.startsWith(p + '/'),
   );
@@ -53,6 +57,18 @@ const normalMiddleware = auth((req) => {
     url.searchParams.set('from', pathname);
     return NextResponse.redirect(url);
   }
+
+  // Authenticated but not an admin — bounce admin paths to home.
+  if (isAdmin) {
+    const email = req.auth.user?.email?.toLowerCase().trim() ?? '';
+    if (!ADMIN_EMAILS.includes(email)) {
+      const url = req.nextUrl.clone();
+      url.pathname = '/';
+      url.search = '';
+      return NextResponse.redirect(url);
+    }
+  }
+
   return NextResponse.next({ request: { headers: requestHeaders } });
 });
 

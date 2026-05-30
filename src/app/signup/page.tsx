@@ -5,12 +5,20 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { signIn } from 'next-auth/react';
 
+import { pharmacyStorefrontUrl } from '@/lib/pharmacy';
+import { US_STATES } from '@/lib/us-states';
+
 type FormState = {
   email: string;
   password: string;
   confirm: string;
   full_name: string;
   date_of_birth: string;
+  shipping_state: string;
+  address_line1: string;
+  address_line2: string;
+  city: string;
+  zip: string;
   accepted_age_21: boolean;
   accepted_ruo: boolean;
   accepted_liability: boolean;
@@ -22,12 +30,15 @@ const INITIAL: FormState = {
   confirm: '',
   full_name: '',
   date_of_birth: '',
+  shipping_state: '',
+  address_line1: '',
+  address_line2: '',
+  city: '',
+  zip: '',
   accepted_age_21: false,
   accepted_ruo: false,
   accepted_liability: false,
 };
-
-import { pharmacyStorefrontUrl } from '@/lib/pharmacy';
 
 function SignupForm() {
   const router = useRouter();
@@ -47,7 +58,11 @@ function SignupForm() {
     passwordsMatch &&
     form.email.includes('@') &&
     form.full_name.trim().length > 0 &&
-    form.date_of_birth.length === 10;
+    form.date_of_birth.length === 10 &&
+    form.shipping_state.length === 2 &&
+    form.address_line1.trim().length > 0 &&
+    form.city.trim().length > 0 &&
+    form.zip.length === 5;
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((f) => ({ ...f, [key]: value }));
@@ -69,6 +84,11 @@ function SignupForm() {
           password: form.password,
           full_name: form.full_name,
           date_of_birth: form.date_of_birth,
+          shipping_state: form.shipping_state,
+          address_line1: form.address_line1,
+          address_line2: form.address_line2 || undefined,
+          city: form.city,
+          zip: form.zip,
           accepted_age_21: form.accepted_age_21,
           accepted_ruo: form.accepted_ruo,
           accepted_liability: form.accepted_liability,
@@ -110,11 +130,11 @@ function SignupForm() {
         return;
       }
 
-      // Success — if user was funneling toward the pharmacy, take them
-      // to the full patient storefront URL (NOT the bare Bloom host —
-      // that resolves to the provider portal login).
+      // Success — if user was funneling toward the pharmacy, hand off to the
+      // server-side router which reads their shipping_state and forwards to
+      // Bloom (FL) or our /order-out-of-state form (everyone else).
       if (nextParam === 'pharmacy') {
-        window.location.assign(pharmacyStorefrontUrl());
+        window.location.assign('/api/pharmacy-route');
         return;
       }
 
@@ -191,6 +211,86 @@ function SignupForm() {
               />
               <p className="mt-1 text-[0.7rem] text-cream-dim/60">You must be 21+ to create an account.</p>
             </div>
+
+            <div>
+              <label htmlFor="address_line1" className="font-jetbrains text-[0.65rem] tracking-widest uppercase text-cream-dim block mb-1.5">
+                Street address
+              </label>
+              <input
+                id="address_line1"
+                type="text"
+                required
+                autoComplete="address-line1"
+                value={form.address_line1}
+                onChange={(e) => update('address_line1', e.target.value)}
+                className="w-full bg-obsidian/60 border border-cream-dim/20 focus:border-emerald/60 outline-none px-3 py-2.5 text-cream text-sm transition-colors"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="address_line2" className="font-jetbrains text-[0.65rem] tracking-widest uppercase text-cream-dim block mb-1.5">
+                Apt / Suite <span className="text-cream-dim/50 normal-case tracking-normal">(optional)</span>
+              </label>
+              <input
+                id="address_line2"
+                type="text"
+                autoComplete="address-line2"
+                value={form.address_line2}
+                onChange={(e) => update('address_line2', e.target.value)}
+                className="w-full bg-obsidian/60 border border-cream-dim/20 focus:border-emerald/60 outline-none px-3 py-2.5 text-cream text-sm transition-colors"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="city" className="font-jetbrains text-[0.65rem] tracking-widest uppercase text-cream-dim block mb-1.5">
+                City
+              </label>
+              <input
+                id="city"
+                type="text"
+                required
+                autoComplete="address-level2"
+                value={form.city}
+                onChange={(e) => update('city', e.target.value)}
+                className="w-full bg-obsidian/60 border border-cream-dim/20 focus:border-emerald/60 outline-none px-3 py-2.5 text-cream text-sm transition-colors"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-[1fr_140px] gap-4">
+              <div>
+                <label htmlFor="shipping_state" className="font-jetbrains text-[0.65rem] tracking-widest uppercase text-cream-dim block mb-1.5">
+                  State
+                </label>
+                <select
+                  id="shipping_state"
+                  required
+                  value={form.shipping_state}
+                  onChange={(e) => update('shipping_state', e.target.value)}
+                  className="w-full bg-obsidian/60 border border-cream-dim/20 focus:border-emerald/60 outline-none px-3 py-2.5 text-cream text-sm transition-colors"
+                >
+                  <option value="">Select state…</option>
+                  {US_STATES.map((s) => (
+                    <option key={s.code} value={s.code}>{s.name}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label htmlFor="zip" className="font-jetbrains text-[0.65rem] tracking-widest uppercase text-cream-dim block mb-1.5">
+                  ZIP
+                </label>
+                <input
+                  id="zip"
+                  type="text"
+                  inputMode="numeric"
+                  required
+                  autoComplete="postal-code"
+                  value={form.zip}
+                  onChange={(e) => update('zip', e.target.value.replace(/\D/g, '').slice(0, 5))}
+                  className="w-full bg-obsidian/60 border border-cream-dim/20 focus:border-emerald/60 outline-none px-3 py-2.5 text-cream text-sm transition-colors font-jetbrains"
+                />
+              </div>
+            </div>
+            <p className="mt-1 text-[0.7rem] text-cream-dim/60 -mt-3">Florida customers are routed directly to our pharmacy partner; everyone else uses our managed checkout.</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>

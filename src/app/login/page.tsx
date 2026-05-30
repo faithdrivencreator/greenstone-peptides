@@ -41,11 +41,11 @@ function LoginForm() {
       }
 
       // If the user arrived via "Continue to Pharmacy" (next=pharmacy),
-      // forward them to the full patient storefront URL. Same-tab — opening
-      // a new tab post-login is blocked by popup blockers since the
-      // navigation isn't a direct user gesture on the link itself.
+      // hand off to the server-side router which reads their shipping_state
+      // and forwards to Bloom (FL) or our /order-out-of-state form (everyone
+      // else). Single source of truth in /api/pharmacy-route.
       if (nextParam === 'pharmacy') {
-        window.location.assign(pharmacyStorefrontUrl());
+        window.location.assign('/api/pharmacy-route');
         return;
       }
 
