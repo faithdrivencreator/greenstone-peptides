@@ -192,8 +192,7 @@ export default function OrderOutOfStatePage() {
   const [stateCode, setStateCode] = useState('');
   const [zip, setZip] = useState('');
 
-  // Prefill from session once authenticated. Customer can still edit each
-  // field — they might be shipping to a friend or sending a gift.
+  // Prefill identity fields from session once authenticated.
   useEffect(() => {
     if (!session?.user) return;
     const u = session.user;
@@ -201,18 +200,56 @@ export default function OrderOutOfStatePage() {
     if (u.email && !email) setEmail(u.email);
     if (u.phone && !phone) setPhone(u.phone);
     if (u.dateOfBirth && !dob) setDob(u.dateOfBirth);
-    const a = u.shippingAddress;
-    if (a) {
-      if (a.line1 && !streetAddress) setStreetAddress(a.line1);
-      if (a.line2 && !aptSuite) setAptSuite(a.line2);
-      if (a.city && !city) setCity(a.city);
-      if (a.state && !stateCode) setStateCode(a.state);
-      if (a.zip && !zip) setZip(a.zip);
-    } else if (u.shippingState && !stateCode) {
-      setStateCode(u.shippingState);
-    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session]);
+
+  // Prefill shipping address: prefer the customer's default address from
+  // /account/addresses (multi-address book). Fall back to the singular signup
+  // address on user_profiles only if no saved addresses exist. Pete may have
+  // signed up with a Florida address, then added an Idaho/Ohio shipping
+  // destination later — that's the one he expects to see here.
+  useEffect(() => {
+    if (status !== 'authenticated') return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch('/api/addresses');
+        if (!res.ok) return;
+        const { addresses } = (await res.json()) as {
+          addresses: Array<{
+            line1: string; line2: string | null; city: string;
+            state: string; postal_code: string; is_default: boolean;
+          }>;
+        };
+        if (cancelled) return;
+        const a = addresses.find((x) => x.is_default) ?? addresses[0];
+        if (a) {
+          if (a.line1 && !streetAddress) setStreetAddress(a.line1);
+          if (a.line2 && !aptSuite) setAptSuite(a.line2);
+          if (a.city && !city) setCity(a.city);
+          if (a.state && !stateCode) setStateCode(a.state);
+          if (a.postal_code && !zip) setZip(a.postal_code);
+          return;
+        }
+        // Fallback to legacy single-address fields on user_profiles
+        const u = session?.user;
+        const legacy = u?.shippingAddress;
+        if (legacy) {
+          if (legacy.line1 && !streetAddress) setStreetAddress(legacy.line1);
+          if (legacy.line2 && !aptSuite) setAptSuite(legacy.line2);
+          if (legacy.city && !city) setCity(legacy.city);
+          if (legacy.state && !stateCode) setStateCode(legacy.state);
+          if (legacy.zip && !zip) setZip(legacy.zip);
+        } else if (u?.shippingState && !stateCode) {
+          setStateCode(u.shippingState);
+        }
+      } catch {
+        // Silent — customer can fill manually.
+      }
+    })();
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status]);
 
   // ---- Section 4 — Payment ------------------------------------------------
   const [selectedCardId, setSelectedCardId] = useState<string>(''); // '' = none, 'new' = add new
