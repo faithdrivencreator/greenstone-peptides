@@ -9,7 +9,7 @@
  *   - Respects prefers-reduced-motion via the global stylesheet override below.
  */
 const BADGES = [
-  'Licensed in Florida',
+  'Ships to All 50 States',
   '503A Compounding Pharmacy',
   'USP 797 Sterile Compounding',
   'Physician-Prescribed',
