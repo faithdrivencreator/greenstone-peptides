@@ -3,12 +3,21 @@ import { z } from 'zod';
 import bcrypt from 'bcryptjs';
 import { supabaseAdmin } from '@/lib/db';
 import { sendWelcomeEmail, sendSignupNotification } from '@/lib/auth-emails';
+import { US_STATE_CODES } from '@/lib/us-states';
 
 const SignupSchema = z.object({
   email: z.string().email().max(254),
   password: z.string().min(8).max(128),
   full_name: z.string().min(1).max(120),
   date_of_birth: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'date_of_birth must be YYYY-MM-DD'),
+  shipping_state: z
+    .string()
+    .length(2)
+    .refine((v) => US_STATE_CODES.includes(v.toUpperCase()), 'invalid_state'),
+  address_line1: z.string().min(1).max(200),
+  address_line2: z.string().max(200).optional(),
+  city: z.string().min(1).max(100),
+  zip: z.string().min(5).max(10),
   accepted_age_21: z.literal(true),
   accepted_ruo: z.literal(true),
   accepted_liability: z.literal(true),
@@ -79,6 +88,11 @@ export async function POST(req: NextRequest) {
     user_id: user.id,
     full_name: data.full_name,
     date_of_birth: data.date_of_birth,
+    shipping_state: data.shipping_state.toUpperCase(),
+    address_line1: data.address_line1,
+    address_line2: data.address_line2 ?? null,
+    city: data.city,
+    zip: data.zip,
     accepted_age_21_at: now,
     accepted_ruo_at: now,
     accepted_liability_at: now,
