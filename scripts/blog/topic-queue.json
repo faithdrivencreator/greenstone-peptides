@@ -186,7 +186,8 @@
         "peptide quality testing"
       ],
       "angle": "Red flags for counterfeit or research-grade peptides being sold for human use \u2014 no COA, no USP-compliant sterile compounding, overseas-only shipping, prices that undercut legitimate compounders by 80%+.",
-      "status": "pending"
+      "status": "published",
+      "publishedAt": "2026-06-01T07:10:00.000Z"
     },
     {
       "slug": "what-is-a-certificate-of-analysis-peptides",
