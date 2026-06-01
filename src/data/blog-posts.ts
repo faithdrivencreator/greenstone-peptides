@@ -5,6 +5,249 @@ export type StaticBlogPost = (typeof staticBlogPosts)[number];
 
 export const staticBlogPosts = [
   {
+    id: 'counterfeit-peptides-how-to-spot',
+    title: "How to Spot Counterfeit Peptides: A Consumer Reference",
+    slug: 'counterfeit-peptides-how-to-spot',
+    publishedAt: '2026-06-01T07:10:00.000Z',
+    excerpt: "Counterfeit and research-grade peptides sold for human use are a documented risk. This consumer reference covers the red flags—no certificate of analysis, 'research use only' labels, overseas-only shipping, and prices that undercut legitimate compounders by 80%—and how to verify a real source.",
+    content: `<h2>What Every Consumer Needs to Know About Counterfeit Peptides</h2>
+
+<img src="/blog/counterfeit-peptides-how-to-spot-hero-20260601.png" alt="Editorial clinical still life with a magnifying glass over a certificate of analysis, illustrating how to spot counterfeit peptides" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<p>Counterfeit peptides are products sold for human use that misrepresent what is actually in the vial &mdash; the wrong compound, the wrong dose, undeclared contaminants, or nothing active at all. As demand for GLP-1 and recovery peptides has surged, so has a parallel gray market that borrows the language of pharmacy without meeting any of its standards.</p>
+
+<p>This reference is for anyone evaluating a peptide source and wondering how to tell a legitimate, tested product from a counterfeit or research-grade one repackaged for human injection. It walks through the concrete red flags, the documents that actually prove quality, and the questions a credible supplier should be able to answer in writing.</p>
+
+<ul>
+<li><strong>No certificate of analysis</strong> &mdash; quality claimed, never documented</li>
+<li><strong>"Research use only" labeling</strong> &mdash; sold for injection anyway</li>
+<li><strong>Overseas-only shipping</strong> &mdash; outside U.S. oversight</li>
+<li><strong>Prices that undercut by 80%+</strong> &mdash; too cheap to be sterile</li>
+<li><strong>No sterile compounding</strong> &mdash; no USP 797 process</li>
+<li><strong>No verifiable pharmacy</strong> &mdash; no license, no address</li>
+</ul>
+
+<ul>
+<li><strong>Identity</strong> &mdash; is the labeled compound actually present</li>
+<li><strong>Purity</strong> &mdash; what contaminants or byproducts remain</li>
+<li><strong>Sterility</strong> &mdash; was it compounded in a controlled environment</li>
+<li><strong>Sourcing</strong> &mdash; where the raw active ingredient originated</li>
+<li><strong>Documentation</strong> &mdash; can each claim be independently verified</li>
+<li><strong>Accountability</strong> &mdash; is there a licensed entity to stand behind it</li>
+</ul>
+
+<p>By the end of this reference you will be able to read a product listing, request the right paperwork, and walk away from the warning signs that separate a counterfeit from a legitimately compounded preparation.</p>
+
+<p>Greenstone Peptides supplies research-grade compounds sourced from USA-origin raw materials, compounded to USP 797 sterile standards, and third-party tested for purity and identity &mdash; so readers can evaluate the research with confidence.</p>
+
+<img src="/blog/counterfeit-peptides-how-to-spot-img1-20260601.png" alt="Infographic listing five red flags of counterfeit peptides: no certificate of analysis, research-use-only labels, overseas-only shipping, deep price cuts, and no verifiable pharmacy" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<h2>The Main Categories of Counterfeit and Substandard Peptides</h2>
+
+<p>The World Health Organization draws a useful line between two failure modes. <a href="https://www.who.int/news-room/fact-sheets/detail/substandard-and-falsified-medical-products" target="_blank" rel="noopener noreferrer">Substandard products</a> are made by a real process that simply fails quality specifications, while falsified products deliberately misrepresent their identity, composition, or source to deceive the buyer. Both end up in the same place: a vial that does not contain what the label promises. The WHO estimates at least 1 in 10 medical products in low- and middle-income countries is substandard or falsified, and these products move primarily through online and informal channels &mdash; exactly where most counterfeit peptides are sold.</p>
+
+<p>The scale of the problem became impossible to ignore through 2025. The U.S. Food and Drug Administration <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fda-warns-consumers-not-use-counterfeit-ozempic-semaglutide-found-us-drug-supply-chain" target="_blank" rel="noopener noreferrer">warned consumers</a> after seizing counterfeit semaglutide injections distributed outside the legitimate supply chain, and in September 2025 issued a wave of warning letters to websites marketing unapproved compounded GLP-1 products. By late 2025 the agency had launched a "Green List" initiative to help identify illegally imported drug ingredients entering the country. The takeaway for a 2026 buyer is simple: counterfeit peptides are not a fringe risk, they are a documented presence in the market.</p>
+
+<img src="/blog/counterfeit-peptides-how-to-spot-img2-20260601.png" alt="Macro photograph of a broken red wax seal on paper, a metaphor for tampering and counterfeit peptides" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<h3>Research-Grade Labeling Sold for Human Use</h3>
+
+<p>The most common gray-market tactic is selling a vial labeled "for research use only, not for human consumption" while marketing it, in every other respect, as something to inject. That disclaimer is not a formality &mdash; it signals that the product never passed through the controls that make a compound appropriate for a person.</p>
+
+<ul>
+<li><strong>The disclaimer itself</strong> &mdash; "research use only" means no human-use accountability was ever intended.</li>
+<li><strong>No sterility process</strong> &mdash; research chemicals are not required to be sterile or endotoxin-tested.</li>
+<li><strong>No identity guarantee</strong> &mdash; purity and identity are claimed in marketing, not proven on a per-lot certificate.</li>
+<li><strong>No licensed dispenser</strong> &mdash; no pharmacist or physician stands between the product and the buyer.</li>
+</ul>
+
+<p>For anyone researching peptides intended for human application, that "research only" label is the clearest signal to stop and look elsewhere &mdash; it is the supplier telling you, in writing, that the product was never built to the standard your goal requires.</p>
+
+<h3>Falsified Versus Substandard &mdash; Two Roads to the Same Vial</h3>
+
+<p>Understanding the distinction sharpens what you look for. A falsified peptide is an act of deception: a counterfeiter prints a convincing label, sometimes naming a compounding pharmacy that does not exist, as the FDA has documented with fraudulent semaglutide. A substandard peptide may come from a real operation that cuts corners &mdash; degraded active ingredient, inconsistent fill, no cold chain &mdash; so the molecule breaks down before it reaches you.</p>
+
+<p>A notable 2025 development is how convincingly falsified packaging now mimics legitimate brands. The FDA's seizure of counterfeit Ozempic showed counterfeiters replicating authentic-looking pens, which means appearance alone is no longer a reliable filter. The defense has shifted from "does it look real" to "can its quality be independently verified."</p>
+
+<p>In practice, this is why documentation outranks presentation. A glossy label and a professional website are cheap to produce. A per-lot certificate of analysis from an accredited third-party laboratory, tied to a licensed pharmacy you can confirm, is not &mdash; and that is the asymmetry a careful buyer learns to exploit.</p>
+
+<h2>How to Choose a Legitimate Peptide Source for Human Use</h2>
+
+<p>This is the highest-friction decision, because the marketing across legitimate and illegitimate sources can look nearly identical at a glance. The table below maps the common source types against the criteria that actually matter, so the differences become visible.</p>
+
+<div style="overflow-x:auto;margin:2rem 0;border-radius:12px;border:1px solid rgba(255,255,255,0.1);">
+<table style="width:100%;border-collapse:collapse;font-size:0.875rem;min-width:600px;">
+<thead>
+<tr style="background:rgba(45,95,191,0.25);border-bottom:1px solid rgba(45,95,191,0.5);">
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Source Type</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Per-Lot COA</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Sterility Standard</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Cold-Chain Shipping</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Accountability</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Overseas Reseller<br/><span style="font-size:0.78rem;color:#8a9bb0;">"research use only"</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">Rare or generic</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">None</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">None</td>
+<td style="padding:14px 16px;color:#c8d4e0;">No U.S. recourse</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Gray-Market Seller<br/><span style="font-size:0.78rem;color:#8a9bb0;">social / forum sales</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">Screenshot only</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Unknown</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Inconsistent</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Anonymous</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Unverified "Pharmacy"<br/><span style="font-size:0.78rem;color:#8a9bb0;">no license shown</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">Claimed, not shared</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Unverifiable</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Varies</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Hard to confirm</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Licensed Telehealth<br/><span style="font-size:0.78rem;color:#8a9bb0;">prescriber + pharmacy</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">On request</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">USP 797</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Usually</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Licensed</td>
+</tr>
+<tr style="background:rgba(0,200,255,0.07);border-top:1px solid rgba(0,200,255,0.25);">
+<td style="padding:14px 16px;font-weight:600;color:#00c8ff;">503A Compounding Pharmacy<br/><span style="font-size:0.78rem;color:#4f8fff;font-weight:400;">USA-sourced, tested</span></td>
+<td style="padding:14px 16px;color:#e8e0d4;">Per-lot, third-party</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">USP 797</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">Standard</td>
+<td style="padding:14px 16px;color:#e8e0d4;">Licensed + traceable</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>If you weigh only one factor, weigh the per-lot certificate of analysis. Under <a href="https://www.fda.gov/drugs/human-drug-compounding/section-503a-federal-food-drug-and-cosmetic-act" target="_blank" rel="noopener noreferrer">Section 503A of the FD&amp;C Act</a>, bulk drug substances used in compounding must be accompanied by a valid certificate of analysis and made by an FDA-registered establishment. A supplier that can produce lot-specific testing is operating inside that framework; one that cannot is asking you to take its word for the one thing you most need proven.</p>
+
+<h3>Worried You Can't Tell Real From Fake? &mdash; Practical Tips</h3>
+
+<p>The uncertainty is reasonable &mdash; counterfeiters design their listings to defeat a casual read. These steps shift the burden of proof back where it belongs.</p>
+
+<ol>
+<li><strong>Demand a per-lot COA.</strong> Ask for the certificate of analysis matching your specific lot number, showing identity (often mass spectrometry) and purity (often HPLC) above 98%. A generic or missing COA is a stop sign.</li>
+<li><strong>Verify the pharmacy license.</strong> Confirm the dispensing pharmacy through your state board of pharmacy database before purchasing &mdash; a name with no verifiable license is a name with no accountability.</li>
+<li><strong>Treat 80%-below pricing as a warning, not a deal.</strong> Sterile USP 797 compounding, USA-sourced actives, and cold-chain shipping have real costs; a price that ignores them usually means a process that skipped them. See our <a href="/learn/compounded-semaglutide-cost-breakdown">breakdown of what compounded peptides actually cost</a>.</li>
+<li><strong>Insist on a U.S. address and cold-chain.</strong> A legitimate operation ships from a verifiable U.S. facility with temperature-controlled handling; overseas-only shipping with no cold chain is a recurring counterfeit signature. Compare against a transparent <a href="/store">verified product source</a>.</li>
+</ol>
+
+<h3>Certificate of Analysis Versus Marketing Claims &mdash; Understanding the Difference</h3>
+
+<p>A marketing claim is a sentence; a certificate of analysis is a measurement. "99% pure, third-party tested" printed on a sales page commits the seller to nothing and ties to no specific batch. A genuine COA names the laboratory, the lot, the test methods, and the numerical results &mdash; and a credible supplier shares it without friction.</p>
+
+<p>Your priority should be verifiability over volume of claims. A source making modest, documented statements you can independently confirm is safer than one making sweeping promises backed only by its own website. When the paperwork is specific, lot-tied, and laboratory-signed, the marketing becomes almost irrelevant &mdash; the data speaks for itself.</p>
+
+<h2>Counterfeit Risk for Every Kind of Buyer</h2>
+
+<ul>
+<li><strong>Someone new to peptides</strong> &mdash; the highest-risk group, because the unfamiliar can't yet distinguish normal pricing and packaging from manipulated versions. The right approach is to start only with a source that proves licensing and per-lot testing before anything else.</li>
+<li><strong>The experienced researcher switching suppliers</strong> &mdash; familiarity can breed complacency; a trusted category is exactly where a convincing counterfeit slips in. Re-verify the COA and license for each new vendor, not just the first.</li>
+<li><strong>The cost-driven buyer</strong> &mdash; most exposed to the 80%-below trap. The right framing is total risk, not unit price: a cheap vial of the wrong contents is the most expensive purchase of all.</li>
+</ul>
+
+<h3>Clinical-Grade Versus First-Time Buyer Approaches</h3>
+
+<p>Verification effort should scale with experience and stakes.</p>
+
+<ul>
+<li><strong>Tier 1 &mdash; First-time buyer:</strong> confirm the basics &mdash; a verifiable licensed pharmacy, a per-lot COA, and U.S. cold-chain shipping. Right for anyone making a first purchase, where the goal is simply avoiding obvious counterfeits.</li>
+<li><strong>Tier 2 &mdash; Experienced researcher:</strong> add method-level scrutiny &mdash; reading the COA's actual assay methods (HPLC, mass spec) and endotoxin results rather than just confirming a document exists. Benefits those running repeat or comparative work where consistency matters.</li>
+<li><strong>Tier 3 &mdash; Clinical / protocol context:</strong> full chain-of-custody &mdash; USA-origin raw-material provenance, USP 797 compounding records, and lot traceability. Justified when reproducibility and patient-facing accountability are non-negotiable.</li>
+</ul>
+
+<h3>Personalization and Protocol Considerations</h3>
+
+<p>A real shift across 2025 and into 2026 is that regulators have made verification easier, not harder &mdash; the FDA's enforcement letters and import-screening tools give consumers more public signals to check a source against. That favors buyers who do a little homework.</p>
+
+<ul>
+<li><strong>Match scrutiny to compound</strong> &mdash; sterile injectables warrant stricter sterility and endotoxin verification than topicals.</li>
+<li><strong>Keep your own records</strong> &mdash; archive each lot's COA so you can trace any unexpected result back to a batch.</li>
+<li><strong>Build a relationship with one verified source</strong> &mdash; reducing the number of suppliers reduces the number of chances to be deceived.</li>
+</ul>
+
+<h2>Why Sourcing and Compounding Standards Matter for Peptide Safety</h2>
+
+<img src="/blog/counterfeit-peptides-how-to-spot-img3-20260601.png" alt="Infographic showing a four-step process to verify peptides before buying: request the COA, verify the license, match the lot number, and confirm cold-chain shipping" style="width:100%;border-radius:8px;margin:1.5rem 0;" />
+
+<p>If the volume of warnings and red flags feels overwhelming, that reaction is the point &mdash; the gray market thrives on buyers who give up and guess. The answer is not more anxiety but a clear standard to measure any source against, so the decision becomes a checklist rather than a leap of faith.</p>
+
+<ul>
+<li><strong>USA-sourced raw materials</strong> &mdash; active ingredients from domestic, traceable origins rather than anonymous overseas supply.</li>
+<li><strong>USP 797 sterile compounding</strong> &mdash; prepared under the controls the <a href="https://www.usp.org/compounding/general-chapter-797" target="_blank" rel="noopener noreferrer">USP &lt;797&gt; chapter</a> defines to prevent contamination, endotoxins, and strength variability.</li>
+<li><strong>Third-party testing</strong> &mdash; HPLC purity, mass-spec identity, and endotoxin screening, documented per lot.</li>
+<li><strong>Cold-chain shipping</strong> &mdash; temperature-controlled handling so the compound that left the pharmacy is the compound that arrives.</li>
+</ul>
+
+<h3>Getting the Most Out of Verifying Your Peptide Source</h3>
+
+<p>Verification is a skill, and a few habits make it faster and more reliable each time.</p>
+
+<ol>
+<li><strong>Request the COA before you pay, not after.</strong> A supplier's willingness to share lot-specific testing up front is itself a quality signal &mdash; legitimate operations expect the question.</li>
+<li><strong>Cross-check the lot number.</strong> Confirm the number on the certificate matches the number on the vial you receive; a mismatch means the document doesn't describe your product.</li>
+<li><strong>Confirm the compounding standard in writing.</strong> Ask whether preparation follows USP 797 and where the actives are sourced &mdash; per the <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener noreferrer">FDA's compounding guidance</a>, these are reasonable, answerable questions.</li>
+<li><strong>Start with a transparent source.</strong> Choosing a supplier that publishes its standards openly &mdash; like Greenstone's <a href="/store">tested product line</a> &mdash; removes most of the verification burden before you begin.</li>
+</ol>
+
+<h2>Frequently Asked Questions About Counterfeit Peptides</h2>
+
+<h3>How can I tell if a peptide is counterfeit before I buy it?</h3>
+
+<p>Look for three things the seller should provide without resistance: a per-lot certificate of analysis from an accredited third-party lab, a verifiable licensed pharmacy you can confirm through a state board, and U.S.-based cold-chain shipping. The absence of any one &mdash; especially a "research use only" label paired with injection marketing &mdash; is enough to walk away.</p>
+
+<h3>What should a real certificate of analysis include?</h3>
+
+<p>A legitimate COA is specific and lot-tied. Expect to see:</p>
+
+<ul>
+<li>The specific lot or batch number, matching the vial you receive.</li>
+<li>An identity test (commonly mass spectrometry) confirming the labeled compound.</li>
+<li>A purity result (commonly HPLC), typically above 98%.</li>
+<li>The name of the testing laboratory and the date performed.</li>
+</ul>
+
+<h3>Why are counterfeit peptides usually so much cheaper?</h3>
+
+<p>Because the cost of doing it correctly is real. USA-sourced active ingredients, USP 797 sterile compounding, per-lot third-party testing, and cold-chain logistics all carry expense. A price that undercuts legitimate compounders by 80% or more generally reflects a process that skipped those steps &mdash; which is precisely what makes the product cheaper and riskier at the same time. A low price should raise scrutiny, not lower it.</p>
+
+<h2>Conclusion</h2>
+
+<p>Spotting a counterfeit peptide is less about a trained eye and more about a disciplined question: can every claim on this label be independently verified? Counterfeiters can copy packaging, mimic a brand, and write a confident sales page &mdash; but they cannot easily produce a lot-specific certificate of analysis tied to a licensed pharmacy and a USA-sourced, USP 797 process. That single demand turns an anxious guess into a clear decision.</p>
+
+<p>Explore the difference a transparent, verifiable standard makes, and take the next step toward sourcing with confidence by reviewing a <a href="/store">tested, openly documented peptide line</a> where the paperwork is part of the product, not an afterthought.</p>
+
+<p><em>Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.</em></p>
+
+<h2>Sources</h2>
+<p style="font-size:0.85rem;color:#8a9bb0;margin-bottom:1rem;">The following sources informed this article. Greenstone Peptides does not endorse any third-party organization; links are provided for research transparency.</p>
+<ol style="font-size:0.85rem;color:#8a9bb0;line-height:1.8;">
+<li><a href="https://www.who.int/news-room/fact-sheets/detail/substandard-and-falsified-medical-products" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">World Health Organization. "Substandard and falsified medical products." WHO Fact Sheets, 2024. https://www.who.int/news-room/fact-sheets/detail/substandard-and-falsified-medical-products</a></li>
+<li><a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fda-warns-consumers-not-use-counterfeit-ozempic-semaglutide-found-us-drug-supply-chain" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food and Drug Administration. "FDA warns consumers not to use counterfeit Ozempic (semaglutide) found in U.S. drug supply chain." FDA Drug Alerts and Statements, 2025. https://www.fda.gov/drugs/drug-alerts-and-statements/fda-warns-consumers-not-use-counterfeit-ozempic-semaglutide-found-us-drug-supply-chain</a></li>
+<li><a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food and Drug Administration. "FDA's Concerns with Unapproved GLP-1 Drugs Used for Weight Loss." FDA, 2025. https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss</a></li>
+<li><a href="https://www.fda.gov/drugs/human-drug-compounding/section-503a-federal-food-drug-and-cosmetic-act" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food and Drug Administration. "Section 503A of the Federal Food, Drug, and Cosmetic Act." FDA Human Drug Compounding, 2023. https://www.fda.gov/drugs/human-drug-compounding/section-503a-federal-food-drug-and-cosmetic-act</a></li>
+<li><a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food and Drug Administration. "Compounding and the FDA: Questions and Answers." FDA Human Drug Compounding, 2023. https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers</a></li>
+<li><a href="https://www.usp.org/compounding/general-chapter-797" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">United States Pharmacopeia. "General Chapter &lt;797&gt; Pharmaceutical Compounding&mdash;Sterile Preparations." USP, 2023. https://www.usp.org/compounding/general-chapter-797</a></li>
+<li><a href="https://www.fda.gov/news-events/press-announcements/fda-launches-green-list-protect-americans-illegal-imported-glp-1-drug-ingredients" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food and Drug Administration. "FDA Launches Green List to Protect Americans from Illegal Imported GLP-1 Drug Ingredients." FDA Press Announcements, 2025. https://www.fda.gov/news-events/press-announcements/fda-launches-green-list-protect-americans-illegal-imported-glp-1-drug-ingredients</a></li>
+</ol>
+`,
+    heroImage: '/blog/counterfeit-peptides-how-to-spot-hero-20260601.png',
+    heroAlt: 'Chiaroscuro editorial photograph of a magnifying glass projecting a beam of light onto unlabeled glass ampoules, illustrating how to spot counterfeit peptides',
+    readingTime: 11,
+    featured: false,
+    seoTitle: "How to Spot Counterfeit Peptides: A 2026 Consumer Reference",
+    seoDescription: "Counterfeit peptides are in the U.S. market. Spot the red flags—no COA, 'research use only' labels, overseas-only shipping—and verify a legitimate source.",
+    tags: ["counterfeit peptides", "fake peptides", "peptide quality testing", "certificate of analysis", "USP 797", "peptide safety"],
+    relatedProductIds: [],
+  },
+  {
     id: 'subcutaneous-injection-technique-peptides',
     title: "Subcutaneous Injection Technique: A Researcher's Reference",
     slug: 'subcutaneous-injection-technique-peptides',
