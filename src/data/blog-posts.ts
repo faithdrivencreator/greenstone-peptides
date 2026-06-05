@@ -5,6 +5,206 @@ export type StaticBlogPost = (typeof staticBlogPosts)[number];
 
 export const staticBlogPosts = [
   {
+    id: 'usp-797-sterile-compounding-explained',
+    title: "USP 797: What Sterile Peptide Compounding Really Requires",
+    slug: 'usp-797-sterile-compounding-explained',
+    publishedAt: '2026-06-05T07:10:00-04:00',
+    excerpt: "USP 797 is the US standard that governs how sterile, injectable peptides are compounded, tested, and dated. This reference breaks down its cleanroom classes, the three compounding categories, beyond-use dating, and what it all means for product quality.",
+    content: `<h2>What Every Peptide Buyer Needs to Know About USP 797</h2>
+<p>USP 797 is the United States Pharmacopeia's enforceable standard for how sterile medications — including injectable peptides — are compounded, tested, and dated. It applies to every facility in the country that prepares a drug meant to be injected, infused, or otherwise introduced past the body's natural barriers. For anyone buying compounded peptides, USP 797 is the difference between a product made under controlled, documented sterility and one made on a countertop.</p>
+<p>The standard touches nearly every part of how a sterile peptide is produced:</p>
+<ul>
+<li><strong>Facility design</strong> — classified cleanrooms and airflow</li>
+<li><strong>Personnel competency</strong> — garbing, gloving, aseptic technique</li>
+<li><strong>Environmental monitoring</strong> — air, surface, and fingertip testing</li>
+<li><strong>Beyond-use dating</strong> — how long a preparation stays usable</li>
+<li><strong>Sterility and endotoxin testing</strong> — verifying the final product</li>
+<li><strong>Documentation</strong> — a traceable record for every batch</li>
+</ul>
+<p>As you evaluate a compounded peptide source, these are the core considerations USP 797 forces into the open:</p>
+<ul>
+<li>What compounding category the product falls under</li>
+<li>The cleanroom classification it was made in</li>
+<li>Whether personnel pass ongoing competency testing</li>
+<li>How the beyond-use date was assigned</li>
+<li>Whether sterility and endotoxin testing were performed</li>
+<li>Whether a certificate of analysis backs the claims</li>
+</ul>
+<p>By the end of this reference, you'll be able to read a compounder's quality claims the way a pharmacist does — and tell a USP 797-aligned operation from one borrowing the language without doing the work.</p>
+<p>Greenstone Peptides treats USP 797 as a floor, not a finish line — products are sourced from USA-origin raw materials, compounded to USP 797 sterile standards, and third-party tested for purity and identity, so readers can evaluate the research with confidence.</p>
+
+<img src="/blog/usp-797-sterile-compounding-explained-img1-20260605.png" alt="Flat-lay infographic visualizing the USP 797 sterile peptide compounding process" />
+
+<h2>The Core Components of USP 797</h2>
+<p>USP General Chapter &lt;797&gt; was substantially revised on November 1, 2022, and became official and enforceable on November 1, 2023 — the most significant rewrite of the sterile-compounding standard in more than a decade. The headline change reframed the entire chapter around the <em>environment</em> in which a preparation is made rather than the perceived complexity of the preparation itself, on the logic that the compounding environment carries the greatest potential to introduce contamination. As compounded peptides moved firmly into the mainstream across 2025 and into 2026, USP &lt;795&gt; and &lt;797&gt; became the baseline standards against which a pharmacy's conduct is now judged.</p>
+
+<img src="/blog/usp-797-sterile-compounding-explained-img2-20260605.png" alt="Research journal and molecular model illustrating USP 797 compounding categories" />
+
+<h3>Cleanroom Classification and Air Quality</h3>
+<p>The heart of USP 797 is controlled air. Particles carry microorganisms, so the standard specifies how clean the air must be at each stage of compounding, measured in ISO classifications where a lower number means cleaner air.</p>
+
+<img src="/blog/usp-797-sterile-compounding-explained-img3-20260605.png" alt="Macro still life evoking cleanroom air quality under USP 797 sterile compounding" />
+
+<ul>
+<li><strong>ISO Class 5 (or better)</strong> — required inside the primary engineering control, the hood where the actual sterile manipulation happens.</li>
+<li><strong>ISO Class 7</strong> — the positive-pressure buffer room that houses the hood for higher-category compounding.</li>
+<li><strong>ISO Class 8</strong> — the ante room, where staff garb and the air transitions from the outside world to the buffer.</li>
+<li><strong>Positive pressure</strong> — air flows outward from the cleanest space, so contaminants are pushed away from the product.</li>
+</ul>
+<p>For a peptide buyer, this is the single most concrete signal of legitimacy. A facility making product in a certified cleanroom suite is operating in a measurably different world than one filling vials in ambient air, and that difference is exactly what USP 797 exists to formalize.</p>
+
+<h3>Personnel, Garbing, and Aseptic Technique</h3>
+<p>Even perfect air fails if the people working in it shed contaminants. USP 797 treats personnel as a primary contamination source and requires documented competency before anyone compounds a sterile preparation.</p>
+<p>One of the most telling requirements is gloved fingertip testing. Before processing any compounded sterile preparation, personnel must pass an initial garbing and gloved-fingertip evaluation on at least three separate occasions, with an action limit of zero colony-forming units across both hands. Compounders press their gloved fingertips onto a sterile agar plate, which is then incubated and read for microbial growth. The 2023 revision added a two-stage incubation method for fingertip samples, media fills, and surface testing — a meaningful tightening of the verification process.</p>
+
+<h2>How to Read the Three USP 797 Compounding Categories</h2>
+<p>The clearest practical lens USP 797 gives a buyer is its category system. Each category reflects the environment a preparation was made in and directly determines how long that preparation is allowed to be used — its beyond-use date (BUD). Higher categories demand more rigorous controls and, in exchange, permit longer dating.</p>
+
+<div style="overflow-x:auto;margin:2rem 0;border-radius:12px;border:1px solid rgba(255,255,255,0.1);">
+<table style="width:100%;border-collapse:collapse;font-size:0.875rem;min-width:600px;">
+<thead>
+<tr style="background:rgba(45,95,191,0.25);border-bottom:1px solid rgba(45,95,191,0.5);">
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Environment</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Air Classification</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Max BUD (Room Temp)</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Max BUD (Cold)</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Best Suited For</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Unclassified prep<br/><span style="font-size:0.78rem;color:#8a9bb0;">Non-compliant</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">No classified air</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Not permitted</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Not permitted</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Avoid &mdash; fails USP 797</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Category 1<br/><span style="font-size:0.78rem;color:#8a9bb0;">Segregated area (SCA)</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">ISO 5 hood, unclassified room</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Up to 12 hours</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Up to 24 hours</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Short-window, use-soon preparations</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Category 2<br/><span style="font-size:0.78rem;color:#8a9bb0;">Cleanroom suite</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">ISO 5 hood, ISO 7 buffer, ISO 8 ante</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Up to ~4 days</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">Up to ~10&ndash;45 days*</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Standard compounded sterile products</td>
+</tr>
+<tr style="background:rgba(0,200,255,0.07);border-top:1px solid rgba(0,200,255,0.25);">
+<td style="padding:14px 16px;font-weight:600;color:#00c8ff;">Category 3<br/><span style="font-size:0.78rem;color:#4f8fff;font-weight:400;">Cleanroom + full testing</span></td>
+<td style="padding:14px 16px;color:#e8e0d4;">ISO 5/7/8 + sterility &amp; endotoxin testing</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">Up to 60 days</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">Up to 90&ndash;180 days</td>
+<td style="padding:14px 16px;color:#e8e0d4;">Longest-dated, most rigorously verified products</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:0.8rem;color:#8a9bb0;margin-top:-0.5rem;">*Category 2 dating varies with whether sterility testing was performed and with storage conditions. Values are illustrative of the USP 797 framework, not a substitute for a product's labeled beyond-use date.</p>
+
+<p><strong>The single most useful factor to evaluate is the beyond-use date relative to the category.</strong> A long BUD on a product made in a low-control environment is a contradiction USP 797 is specifically designed to prevent — the longer a sterile preparation sits before use, the more time any contamination has to grow, which is why the standard ties extended dating to the most controlled Category 3 conditions and to passing sterility and endotoxin testing.</p>
+
+<h3>"How do I know the dating is real?" — Practical Tips</h3>
+<p>If a beyond-use date feels generous, treat it as a question to investigate rather than a promise to trust.</p>
+<ol>
+<li>Ask which compounding category the product falls under — Category 1, 2, or 3.</li>
+<li>Match the BUD to the category: a multi-month date should come with Category 3 controls and sterility testing, not a Category 1 environment.</li>
+<li>Request the certificate of analysis and confirm sterility and endotoxin testing were performed on that product. Our guide on <a href="/learn/what-is-a-certificate-of-analysis-peptides">what a peptide certificate of analysis actually tells you</a> walks through exactly what to look for.</li>
+<li>Confirm storage conditions, since refrigerated and frozen dating assume an unbroken cold chain from the moment of dispatch.</li>
+</ol>
+
+<h3>Category 1 vs. Category 3 — Understanding the Difference</h3>
+<p>Category 1 preparations are made in a segregated compounding area with an ISO Class 5 hood but an unclassified surrounding room. They carry the shortest beyond-use dates — measured in hours — because the surrounding environment is the least controlled. Category 3 preparations sit at the opposite end: a fully classified cleanroom suite, the most stringent garbing and testing, and mandatory sterility and endotoxin testing, which together justify the longest permitted dating.</p>
+<p>For the buyer, the priority is alignment. You aren't looking for the longest possible date or the most elaborate facility in the abstract — you're looking for a beyond-use date that honestly matches the environment and testing behind it.</p>
+
+<h2>USP 797 in Context for Every Kind of Peptide Buyer</h2>
+
+<img src="/blog/usp-797-sterile-compounding-explained-img4-20260605.png" alt="Notebook and tea representing evidence-based peptide quality research under USP 797" />
+
+<ul>
+<li><strong>Someone new to peptide therapy</strong> — focus on the basics: a real prescription through a licensed 503A pharmacy, a certificate of analysis, and a beyond-use date that matches the storage instructions on the vial.</li>
+<li><strong>An experienced user comparing sources</strong> — ask directly about compounding category and cleanroom certification. A legitimate operation can answer without hesitation.</li>
+<li><strong>A researcher or clinician evaluating quality</strong> — request the testing documentation and confirm whether sterility, endotoxin, HPLC purity, and mass-spec identity were all performed.</li>
+</ul>
+
+<h3>Clinical-Grade vs. First-Time Approaches</h3>
+<p>How deep you go depends on where you are in the process.</p>
+<ul>
+<li><strong>Tier 1 — First-time buyer:</strong> confirm the pharmacy operates under a valid prescription and provides a COA. This rules out the most obvious red flags and is right for anyone just getting started.</li>
+<li><strong>Tier 2 — Informed comparison:</strong> add cleanroom and category questions to your evaluation. Most useful for someone weighing two or more compounders and trying to tell them apart.</li>
+<li><strong>Tier 3 — Clinical scrutiny:</strong> review full testing panels, beyond-use-date rationale, and environmental monitoring records. This depth is justified for clinicians, formulators, and anyone making a recurring, long-term commitment.</li>
+</ul>
+
+<h3>Personalization and Protocol Considerations</h3>
+<p>The peptide space has changed quickly through 2025 and 2026, with rising demand pushing more products and more sellers into the market — and putting more weight on standards like USP 797 to separate real compounding from repackaged research chemicals. Quality evaluation can be tailored to your situation:</p>
+<ul>
+<li><strong>By delivery format</strong> — lyophilized powder ships and stores more forgivingly than pre-reconstituted liquid, which affects how much the beyond-use date matters to you.</li>
+<li><strong>By frequency</strong> — a one-time research purchase and an ongoing protocol warrant different levels of documentation review.</li>
+<li><strong>By risk tolerance</strong> — injectable products clear the highest bar in USP 797, so the standards matter most precisely where the route of administration is least forgiving.</li>
+</ul>
+
+<h2>Why Sourcing and Compounding Standards Matter for Peptide Quality</h2>
+
+<img src="/blog/usp-797-sterile-compounding-explained-img5-20260605.png" alt="Laboratory quality-assurance tools representing USP 797 sterile compounding standards" />
+
+<p>It's reasonable to feel uncertain about product quality in a market where prices vary wildly and marketing claims often outrun the documentation. The honest answer to that uncertainty isn't a louder claim — it's a verifiable standard. USP 797 gives buyers a shared, enforceable yardstick, and a compounder's willingness to be measured against it is itself a signal.</p>
+<ul>
+<li><strong>USA-sourced raw materials</strong> — traceable origin for every active ingredient.</li>
+<li><strong>USP 797 sterile compounding</strong> — classified cleanroom environments and documented aseptic process.</li>
+<li><strong>Third-party testing</strong> — HPLC purity, mass-spec identity, and endotoxin testing on finished product.</li>
+<li><strong>Cold-chain shipping</strong> — proper storage and temperature control at the point of dispatch.</li>
+</ul>
+
+<h3>Getting the Most Out of a USP 797-Compliant Product</h3>
+<ol>
+<li>Read the beyond-use date against the storage instructions, and don't extend it yourself — the date assumes specific conditions were maintained.</li>
+<li>Keep the cold chain intact on your end; refrigerate on arrival and minimize time at room temperature.</li>
+<li>Save the certificate of analysis with the lot, so you can match documentation to the exact product you received.</li>
+<li>Buy from a source that compounds against the standard rather than around it — you can <a href="/store">see Greenstone's compounded product range</a> as a reference point for how that documentation should look.</li>
+</ol>
+
+<h2>Frequently Asked Questions About USP 797</h2>
+<h3>What does USP 797 actually require for sterile peptides?</h3>
+<p>USP 797 requires that injectable peptides be compounded in classified cleanroom environments by personnel who pass ongoing competency testing, with beyond-use dates assigned according to the compounding category and verified by environmental monitoring. Higher-risk, longer-dated products additionally require sterility and endotoxin testing.</p>
+<h3>How can I verify a compounder follows USP 797?</h3>
+<p>You can't audit a cleanroom yourself, but you can ask the questions the standard is built around:</p>
+<ul>
+<li>Which compounding category does the product fall under?</li>
+<li>Is the facility a 503A pharmacy operating on valid prescriptions?</li>
+<li>Was the product sterility- and endotoxin-tested, and is a certificate of analysis available?</li>
+<li>Does the beyond-use date match the environment and testing behind it?</li>
+</ul>
+<h3>Is USP 797 a law, or just a guideline?</h3>
+<p>USP 797 is a compendial standard published by the United States Pharmacopeia, but it carries legal force through adoption — state boards of pharmacy and other regulators reference it as the enforceable baseline for sterile compounding. In practice, a compounding pharmacy is expected to meet it, and falling short can carry regulatory consequences.</p>
+
+<h2>Conclusion</h2>
+<p>USP 797 can read like a wall of pharmacy jargon, but underneath it is one plain idea: a sterile product is only as trustworthy as the environment, the people, and the testing behind it. That returns you to the question every careful buyer starts with — how do I know this is clean and what it claims to be? The standard turns that question into something you can actually check, category by category and test by test.</p>
+<p>If you want to take the next step, explore how a compounder documents its process before you evaluate any single product — start with our reference on <a href="/learn/counterfeit-peptides-how-to-spot">how to spot counterfeit peptides</a>, then look at how the standards show up in a real product line at the <a href="/store">Greenstone store</a>.</p>
+<p><em>Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.</em></p>
+
+<h2>Sources</h2>
+<p style="font-size:0.85rem;color:#8a9bb0;margin-bottom:1rem;">The following sources informed this article. Greenstone Peptides does not endorse any third-party organization; links are provided for research transparency.</p>
+<ol style="font-size:0.85rem;color:#8a9bb0;line-height:1.8;">
+<li><a href="https://www.usp.org/compounding/general-chapter-797" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">United States Pharmacopeia. "General Chapter &lt;797&gt; Pharmaceutical Compounding — Sterile Preparations." USP, 2023. https://www.usp.org/compounding/general-chapter-797</a></li>
+<li><a href="https://www.drugtopics.com/view/usp-797-updated-guidelines" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Drug Topics. "USP &lt;797&gt; Updated Guidelines." Drug Topics, 2023. https://www.drugtopics.com/view/usp-797-updated-guidelines</a></li>
+<li><a href="https://www.wolterskluwer.com/en/expert-insights/usp-forum-update-beyond-use-dates-buds" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Wolters Kluwer. "Understanding USP 797 Beyond-Use Dates (BUDs) of Compounded Sterile Preparations." Wolters Kluwer, 2023. https://www.wolterskluwer.com/en/expert-insights/usp-forum-update-beyond-use-dates-buds</a></li>
+<li><a href="https://www.pharmacytimes.com/view/as-peptides-go-mainstream-usp-795-and-797-matter-more-than-ever" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Pharmacy Times. "As Peptides Go Mainstream, USP &lt;795&gt; and &lt;797&gt; Matter More Than Ever." Pharmacy Times, 2025. https://www.pharmacytimes.com/view/as-peptides-go-mainstream-usp-795-and-797-matter-more-than-ever</a></li>
+<li><a href="https://www.arlok.com/news/USP797" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">ARL Bio Pharma. "USP 797 — Categories 1 &amp; 2." ARL Bio Pharma, 2023. https://www.arlok.com/news/USP797</a></li>
+</ol>`,
+    heroImage: '/blog/usp-797-sterile-compounding-explained-hero-20260605.png',
+    heroAlt: "Editorial clinical still life representing USP 797 sterile compounding standards",
+    readingTime: 10,
+    featured: false,
+    seoTitle: "USP 797 Explained: The Standard Behind Sterile Peptide Compounding",
+    seoDescription: "USP 797 is the US standard for sterile compounding. See how its cleanroom, testing, and beyond-use dating rules shape injectable peptide quality.",
+    tags: ["USP 797", "sterile compounding", "peptide quality", "503A compounding", "cleanroom standards", "beyond-use dating"],
+    relatedProductIds: [],
+  },
+
+  {
     id: 'what-is-a-certificate-of-analysis-peptides',
     title: "What a Peptide Certificate of Analysis Actually Tells You",
     slug: 'what-is-a-certificate-of-analysis-peptides',
