@@ -5,6 +5,195 @@ export type StaticBlogPost = (typeof staticBlogPosts)[number];
 
 export const staticBlogPosts = [
   {
+    id: '503a-vs-503b-compounding-explained',
+    title: "503A vs 503B: The Two Lanes of US Compounding",
+    slug: '503a-vs-503b-compounding-explained',
+    publishedAt: '2026-06-08T07:15:00-04:00',
+    excerpt: "503A and 503B are the two lanes of US drug compounding, and the difference shapes how every compounded peptide is made and overseen. This reference breaks down patient-specific pharmacies vs. outsourcing facilities, CGMP vs. USP standards, and what each signals about quality.",
+    content: `<h2>What Every Peptide Buyer Needs to Know About 503A vs 503B</h2>
+<p>In US drug compounding, two short numbers decide almost everything about how a medication is made, who oversees it, and how it can reach you: <strong>503A</strong> and <strong>503B</strong>. Both are sections of the Federal Food, Drug, and Cosmetic Act, and both authorize compounding outside the traditional FDA new-drug approval process — but they were built for different jobs, hold facilities to different standards, and matter enormously to anyone researching compounded peptides.</p>
+<p>The two lanes diverge across a handful of core dimensions:</p>
+<ul>
+<li><strong>503A pharmacies</strong> — patient-specific prescriptions</li>
+<li><strong>503B outsourcing facilities</strong> — larger-batch office stock</li>
+<li><strong>Regulatory oversight</strong> — state boards vs. FDA</li>
+<li><strong>Quality standard</strong> — USP chapters vs. full CGMP</li>
+<li><strong>Testing burden</strong> — variable vs. validated</li>
+<li><strong>Bulk substance rules</strong> — different approved lists</li>
+</ul>
+<p>As you evaluate where a compounded peptide actually comes from, these are the considerations the 503A/503B distinction forces into the open:</p>
+<ul>
+<li>Which lane the product was compounded under</li>
+<li>Whether a patient-specific prescription was required</li>
+<li>What quality system governed the facility</li>
+<li>How rigorously the final product was tested</li>
+<li>Whether the active ingredient is even permitted in that lane</li>
+<li>Who has the authority to inspect the operation</li>
+</ul>
+<p>By the end of this reference, you'll be able to read a compounder's regulatory claims the way a pharmacist does — and understand exactly what "503A-compounded" or "503B-sourced" signals about the product in your hand.</p>
+<p>Greenstone Peptides treats this regulatory framework as the starting point of quality, not a marketing afterthought — products are sourced from USA-origin raw materials, compounded to USP 797 sterile standards, and third-party tested for purity and identity, so readers can evaluate the research with confidence.</p>
+
+<h2>The Core Concepts of US Drug Compounding</h2>
+<p>Compounding is the practice of combining, mixing, or altering drug ingredients to create a medication tailored to a need that a mass-manufactured product doesn't meet. Congress formalized two distinct compounding pathways in the Drug Quality and Security Act of 2013, written into the FD&amp;C Act as sections 503A and 503B. The split was a direct response to the 2012 fungal meningitis outbreak traced to a contaminated compounded product — a tragedy that exposed how little federal oversight reached high-volume compounders operating like manufacturers. Across 2025 and into 2026, as compounded peptides and GLP-1 medications moved firmly into the mainstream, these two sections became the framework every serious buyer needs to understand.</p>
+
+<h3>Section 503A — Traditional Patient-Specific Compounding</h3>
+<p>503A is the lane most people picture when they hear "compounding pharmacy." A licensed pharmacist (or physician) prepares a medication in a state-licensed pharmacy in response to a valid prescription for an individual, identified patient. It is the legal home of personalized medicine — a custom strength, a dye-free formulation, a combination a patient can't get commercially.</p>
+<ul>
+<li><strong>Prescription-driven</strong> — compounding generally follows a patient-specific order, not anticipated demand.</li>
+<li><strong>State-regulated</strong> — primary oversight comes from state boards of pharmacy, not the FDA.</li>
+<li><strong>CGMP-exempt</strong> — 503A preparations are exempt from federal Current Good Manufacturing Practice requirements, though they must meet applicable USP standards.</li>
+<li><strong>Limited batching</strong> — these pharmacies are not designed to produce large, manufacturer-scale lots.</li>
+</ul>
+<p>For a peptide buyer, 503A is the lane that makes individualized dosing and tailored formulations possible — the flexibility is the point, and it's why most compounded peptide therapy is dispensed this way.</p>
+
+<h3>Section 503B — Registered Outsourcing Facilities</h3>
+<p>503B created an entirely new category: the outsourcing facility. These operations voluntarily register with the FDA and agree to be held to the same Current Good Manufacturing Practice standards as conventional drug manufacturers. In exchange, they may compound larger batches — with or without patient-specific prescriptions — and sell that stock to clinics and hospitals for in-office use.</p>
+<p>A notable 2025–2026 development sharpened why the lane a peptide travels in matters. The FDA's bulk drug substances lists — the catalogs of active ingredients each lane may compound from — are actively contested. In 2026 the agency proposed leaving high-demand GLP-1 substances such as semaglutide, tirzepatide, and liraglutide off the 503B bulks list, and a May 2026 Federal Register notice updated the broader list of substances deemed to meet a "clinical need" under section 503B. The practical takeaway: an ingredient permitted in one lane is not automatically permitted in the other, and those determinations keep moving.</p>
+<p>In the real world, the two lanes increasingly work together. A clinic might keep 503B-produced stock on hand for in-office administration while relying on a 503A partner for patient-specific prescriptions — two compliance models serving two different needs under one roof.</p>
+
+<h2>How to Choose the Right Compounding Lane for Your Situation</h2>
+<p>Most buyers never explicitly "choose" a lane — but understanding the trade-offs lets you read a product's pedigree correctly and ask better questions. The table below maps the two pathways across the dimensions that actually distinguish them, with the compounded peptide reality highlighted.</p>
+
+<div style="overflow-x:auto;margin:2rem 0;border-radius:12px;border:1px solid rgba(255,255,255,0.1);">
+<table style="width:100%;border-collapse:collapse;font-size:0.875rem;min-width:600px;">
+<thead>
+<tr style="background:rgba(45,95,191,0.25);border-bottom:1px solid rgba(45,95,191,0.5);">
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Dimension</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">503A Pharmacy</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">503B Outsourcing Facility</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Primary Oversight</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Prescription<br/><span style="font-size:0.78rem;color:#8a9bb0;">how it's triggered</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">Patient-specific required</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Not always required</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">State board</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Quality standard<br/><span style="font-size:0.78rem;color:#8a9bb0;">governing rules</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">USP &lt;795&gt;/&lt;797&gt;</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Full CGMP</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">State + USP</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Batch scale<br/><span style="font-size:0.78rem;color:#8a9bb0;">volume model</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">Small, individualized</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Large, anticipatory</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">FDA (CGMP)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Distribution<br/><span style="font-size:0.78rem;color:#8a9bb0;">who receives it</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;">Dispensed to the patient</td>
+<td style="padding:14px 16px;color:#c8d4e0;">Sold to clinics for office use</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">FDA</td>
+</tr>
+<tr style="background:rgba(0,200,255,0.07);border-top:1px solid rgba(0,200,255,0.25);">
+<td style="padding:14px 16px;font-weight:600;color:#00c8ff;">Most compounded peptides<br/><span style="font-size:0.78rem;color:#4f8fff;font-weight:400;">where they live</span></td>
+<td style="padding:14px 16px;color:#e8e0d4;">503A, by prescription</td>
+<td style="padding:14px 16px;color:#e8e0d4;">503B where listed &amp; permitted</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">Verify the COA</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>If you take away one consideration, make it this: the lane is not a ranking of "better" versus "worse." The single most important factor is fit — a 503A pharmacy's exemption from CGMP is not a loophole but a deliberate trade for the individualization that personalized peptide therapy depends on, while a 503B facility's CGMP burden is the right answer for high-volume, prescription-independent office stock. A product made well in the correct lane beats a product made carelessly in the prestigious-sounding one.</p>
+
+<h3>"Is 503B Automatically Safer?" — Practical Tips</h3>
+<p>It's the most common assumption buyers make, and it deserves a careful answer rather than a reflexive yes.</p>
+<ol>
+<li><strong>Read the lane and the lab work together.</strong> CGMP registration is meaningful, but a 503A pharmacy with a current certificate of analysis on every lot can demonstrate real, batch-level quality.</li>
+<li><strong>Confirm the ingredient is permitted.</strong> Check that the active substance is appropriate for the lane — bulk-substance eligibility shifted repeatedly through 2025 and 2026.</li>
+<li><strong>Ask for third-party testing.</strong> Independent HPLC purity and mass-spec identity results carry weight in either lane; their absence is the real red flag.</li>
+<li><strong>Match the lane to your route.</strong> Office-administered stock and patient-specific prescriptions are two different needs — make sure the lane fits yours.</li>
+</ol>
+<p>For a deeper look at how to verify what's actually in a vial, see our reference on <a href="/learn/what-is-a-certificate-of-analysis-peptides">reading a peptide certificate of analysis</a>, or browse current options in the <a href="/store">Greenstone store</a>.</p>
+
+<h3>CGMP vs. USP Standards — Understanding the Difference</h3>
+<p>Current Good Manufacturing Practice (CGMP) is the federal quality system that governs conventional drug manufacturers and 503B outsourcing facilities — a comprehensive framework covering process validation, stability testing across multiple batches, and exhaustive documentation before a product reaches market. USP General Chapters &lt;795&gt; (non-sterile) and &lt;797&gt; (sterile) are the enforceable compendial standards that govern 503A compounding, focused tightly on the conditions under which a preparation is made.</p>
+<p>What should guide your read is the question each system is built to answer. CGMP asks, "Can this process reliably reproduce identical, market-ready batches at scale?" USP &lt;797&gt; asks, "Was this specific sterile preparation made under controlled, contamination-minimizing conditions?" Neither question is trivial, and a credible compounder can answer the one that applies to its lane in detail.</p>
+
+<h2>503A vs 503B for Every Type of Buyer</h2>
+<ul>
+<li><strong>Someone new to peptide therapy</strong> — you'll almost always receive a 503A, patient-specific preparation through a prescriber. The right move is to confirm the pharmacy is state-licensed and provides lot-level testing.</li>
+<li><strong>A clinic or practitioner stocking product</strong> — 503B office stock exists precisely for in-office administration without a name attached to each vial; the lane fits the workflow.</li>
+<li><strong>An individual researching sourcing standards</strong> — the lane tells you which oversight body and quality system applied, but the certificate of analysis tells you what's actually in the vial. Read both.</li>
+</ul>
+
+<h3>CGMP-Scale vs. Patient-Specific Approaches</h3>
+<p>Buyers tend to slot into one of three tiers depending on how the product will be used.</p>
+<ul>
+<li><strong>Tier 1 — Patient-specific (503A):</strong> a personalized prescription compounded for one person. Right for nearly all individual peptide therapy, where tailored strength and formulation matter.</li>
+<li><strong>Tier 2 — Office stock (503B):</strong> CGMP-produced batches a clinic keeps on hand for in-office use. The meaningful step up for practitioners administering at volume.</li>
+<li><strong>Tier 3 — FDA-approved manufactured drug:</strong> where an approved commercial product exists and fits the need, it carries the full weight of the new-drug approval process. The deepest level of regulatory assurance, for those who don't require compounding's flexibility.</li>
+</ul>
+<h3>Personalization and Protocol Considerations</h3>
+<p>The defining shift of 2025–2026 is that compounding is no longer a niche corner of pharmacy — it sits at the center of how millions of people now access peptide and metabolic therapies, which has pushed regulators to keep refining exactly what each lane may do.</p>
+<ul>
+<li><strong>By formulation</strong> — 503A's flexibility allows individualized strengths and excipient-free preparations a manufactured product can't match.</li>
+<li><strong>By route and setting</strong> — office-administered versus self-administered needs map cleanly onto the two lanes.</li>
+<li><strong>By ingredient eligibility</strong> — because bulk-substance lists differ and change, the same peptide may be available in one lane and restricted in the other at any given time.</li>
+</ul>
+
+<h2>Why Sourcing and Compounding Standards Matter for Compounded Peptides</h2>
+<p>The peptide market moves fast, and that speed has a shadow side: a flood of products whose origins are vague, whose testing is unverifiable, and whose sellers lean on regulatory-sounding language without the substance behind it. If you've ever felt uncertain about whether a vial was made under real controls, that instinct is well founded — and it's exactly the uncertainty a transparent, standards-driven compounder is built to resolve.</p>
+<ul>
+<li><strong>USA-sourced raw materials</strong> — active ingredients of known, domestic origin rather than untraceable imports.</li>
+<li><strong>USP 797 sterile compounding</strong> — preparations made under the controlled, classified conditions the sterile standard requires.</li>
+<li><strong>Third-party testing</strong> — independent HPLC purity, mass-spec identity, and endotoxin verification on the final product.</li>
+<li><strong>Cold-chain handling</strong> — proper storage and temperature control at dispatch to protect peptide integrity.</li>
+</ul>
+<h3>Getting the Most Out of Understanding the 503A/503B Distinction</h3>
+<ol>
+<li><strong>Always ask which lane applies</strong> — a compounder that can't or won't tell you is a compounder to walk away from.</li>
+<li><strong>Pair the lane with a current COA</strong> — regulatory category plus batch-level test data is the combination that actually protects you.</li>
+<li><strong>Watch the bulk-substance lists</strong> — eligibility for specific peptides shifted through 2026; what was available last quarter may not be this quarter.</li>
+<li><strong>Verify storage on arrival</strong> — confirm the product shipped cold and reached you intact, regardless of how impeccable its pedigree.</li>
+</ol>
+<p>To see how these standards translate into a finished sterile product, read our breakdown of <a href="/learn/usp-797-sterile-compounding-explained">what USP 797 sterile compounding really requires</a>.</p>
+
+<h2>Frequently Asked Questions About 503A vs 503B</h2>
+<h3>What is the main difference between 503A and 503B?</h3>
+<p>503A covers traditional pharmacy compounding of patient-specific prescriptions under state board oversight, exempt from federal CGMP. 503B covers FDA-registered outsourcing facilities that compound larger batches under full CGMP and sell to clinics for office use. The core split is patient-specific vs. larger-batch, and state oversight vs. FDA oversight.</p>
+<h3>How do I verify which lane my compounded peptide came from?</h3>
+<p>Don't assume — confirm it directly.</p>
+<ul>
+<li>Ask the compounder whether the product was prepared under 503A or 503B.</li>
+<li>For 503A, confirm a valid patient-specific prescription and state pharmacy license.</li>
+<li>For 503B, confirm the facility's FDA outsourcing-facility registration.</li>
+<li>In either lane, request the lot's certificate of analysis as the final check.</li>
+</ul>
+<h3>Are peptides allowed under both 503A and 503B?</h3>
+<p>It depends on the specific peptide and the current bulk drug substances lists, which the FDA maintains separately for each lane and revised repeatedly through 2025 and 2026. A substance permitted in one lane is not automatically permitted in the other, and a 2026 FDA proposal specifically addressed leaving certain high-demand GLP-1 substances off the 503B list. Always confirm current eligibility rather than relying on past availability.</p>
+
+<h2>Conclusion</h2>
+<p>503A and 503B aren't a hierarchy to memorize — they're two deliberate answers to two different questions about how a medication should be made and overseen. Once you can see which lane a compounded peptide traveled, the question you started with — "can I trust where this came from?" — becomes answerable, because you know exactly which oversight body, quality system, and ingredient rules applied to it.</p>
+<p>From here, the next step is to look past the regulatory label to the evidence behind it. Explore current options in the <a href="/store">Greenstone store</a>, where every product is built on USA-sourced materials, USP 797 sterile compounding, and third-party testing — so the standard isn't a claim, it's documented.</p>
+<p><em>Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.</em></p>
+
+<h2>Sources</h2>
+<p style="font-size:0.85rem;color:#8a9bb0;margin-bottom:1rem;">The following sources informed this article. Greenstone Peptides does not endorse any third-party organization; links are provided for research transparency.</p>
+<ol style="font-size:0.85rem;color:#8a9bb0;line-height:1.8;">
+<li><a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food &amp; Drug Administration. "Compounding and the FDA: Questions and Answers." FDA.gov, 2024. https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers</a></li>
+<li><a href="https://www.fda.gov/drugs/human-drug-compounding/fdc-act-provisions-apply-human-drug-compounding" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food &amp; Drug Administration. "FD&amp;C Act Provisions that Apply to Human Drug Compounding." FDA.gov, 2024. https://www.fda.gov/drugs/human-drug-compounding/fdc-act-provisions-apply-human-drug-compounding</a></li>
+<li><a href="https://www.fda.gov/drugs/human-drug-compounding/503b-bulk-drug-substances-list" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food &amp; Drug Administration. "503B Bulk Drug Substances List." FDA.gov, 2026. https://www.fda.gov/drugs/human-drug-compounding/503b-bulk-drug-substances-list</a></li>
+<li><a href="https://www.fda.gov/news-events/press-announcements/fda-proposes-exclude-semaglutide-tirzepatide-and-liraglutide-503b-bulks-list" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food &amp; Drug Administration. "FDA Proposes to Exclude Semaglutide, Tirzepatide, and Liraglutide on 503B Bulks List." FDA.gov, 2026. https://www.fda.gov/news-events/press-announcements/fda-proposes-exclude-semaglutide-tirzepatide-and-liraglutide-503b-bulks-list</a></li>
+<li><a href="https://www.usp.org/compounding/general-chapter-797" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">United States Pharmacopeia. "General Chapter &lt;797&gt; Pharmaceutical Compounding — Sterile Preparations." USP.org, 2023. https://www.usp.org/compounding/general-chapter-797</a></li>
+<li><a href="https://www.fda.gov/drugs/human-drug-compounding/information-outsourcing-facilities" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food &amp; Drug Administration. "Information for Outsourcing Facilities." FDA.gov, 2025. https://www.fda.gov/drugs/human-drug-compounding/information-outsourcing-facilities</a></li>
+</ol>
+`,
+    heroImage: null,
+    heroAlt: null,
+    readingTime: 11,
+    featured: false,
+    seoTitle: "503A vs 503B: The Two Lanes of US Drug Compounding",
+    seoDescription: "503A vs 503B compounding explained: how the two FDA pathways differ in oversight, quality standards, and batch scale, and what it means for peptides.",
+    tags: ["503A vs 503B", "compounding pharmacy", "FDA compounding", "compounded peptides", "USP 797", "peptide quality"],
+    relatedProductIds: [],
+  },
+  {
     id: 'usp-797-sterile-compounding-explained',
     title: "USP 797: What Sterile Peptide Compounding Really Requires",
     slug: 'usp-797-sterile-compounding-explained',
