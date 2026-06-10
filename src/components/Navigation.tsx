@@ -94,7 +94,7 @@ export function Navigation() {
               priority
               className="h-10 w-10 shrink-0"
             />
-            <span className="hidden xl:inline font-cormorant text-xl font-medium text-white tracking-tight whitespace-nowrap">
+            <span className="inline lg:hidden xl:inline font-cormorant text-xl font-medium text-white tracking-tight whitespace-nowrap">
               GS Wellness Pharmacy
             </span>
           </Link>
