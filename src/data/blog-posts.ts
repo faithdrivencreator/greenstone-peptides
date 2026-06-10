@@ -200,6 +200,7 @@ export const staticBlogPosts = [
     publishedAt: '2026-06-08T07:15:00-04:00',
     excerpt: "503A and 503B are the two lanes of US drug compounding, and the difference shapes how every compounded peptide is made and overseen. This reference breaks down patient-specific pharmacies vs. outsourcing facilities, CGMP vs. USP standards, and what each signals about quality.",
     content: `<h2>What Every Peptide Buyer Needs to Know About 503A vs 503B</h2>
+<img src="/blog/503a-vs-503b-compounding-explained-hero-20260610.png" alt="Editorial clinical still life representing US compounding standards and the 503A vs 503B distinction" />
 <p>In US drug compounding, two short numbers decide almost everything about how a medication is made, who oversees it, and how it can reach you: <strong>503A</strong> and <strong>503B</strong>. Both are sections of the Federal Food, Drug, and Cosmetic Act, and both authorize compounding outside the traditional FDA new-drug approval process — but they were built for different jobs, hold facilities to different standards, and matter enormously to anyone researching compounded peptides.</p>
 <p>The two lanes diverge across a handful of core dimensions:</p>
 <ul>
@@ -222,9 +223,11 @@ export const staticBlogPosts = [
 <p>By the end of this reference, you'll be able to read a compounder's regulatory claims the way a pharmacist does — and understand exactly what "503A-compounded" or "503B-sourced" signals about the product in your hand.</p>
 <p>Greenstone Peptides treats this regulatory framework as the starting point of quality, not a marketing afterthought — products are sourced from USA-origin raw materials, compounded to USP 797 sterile standards, and third-party tested for purity and identity, so readers can evaluate the research with confidence.</p>
 
+<img src="/blog/503a-vs-503b-compounding-explained-img1-20260610.png" alt="Overhead infographic-style flat-lay illustrating the two parallel lanes of 503A vs 503B compounding" />
 <h2>The Core Concepts of US Drug Compounding</h2>
 <p>Compounding is the practice of combining, mixing, or altering drug ingredients to create a medication tailored to a need that a mass-manufactured product doesn't meet. Congress formalized two distinct compounding pathways in the Drug Quality and Security Act of 2013, written into the FD&amp;C Act as sections 503A and 503B. The split was a direct response to the 2012 fungal meningitis outbreak traced to a contaminated compounded product — a tragedy that exposed how little federal oversight reached high-volume compounders operating like manufacturers. Across 2025 and into 2026, as compounded peptides and GLP-1 medications moved firmly into the mainstream, these two sections became the framework every serious buyer needs to understand.</p>
 
+<img src="/blog/503a-vs-503b-compounding-explained-img2-20260610.png" alt="Dark editorial still life with molecular model representing 503A vs 503B pharmaceutical compounding" />
 <h3>Section 503A — Traditional Patient-Specific Compounding</h3>
 <p>503A is the lane most people picture when they hear "compounding pharmacy." A licensed pharmacist (or physician) prepares a medication in a state-licensed pharmacy in response to a valid prescription for an individual, identified patient. It is the legal home of personalized medicine — a custom strength, a dye-free formulation, a combination a patient can't get commercially.</p>
 <ul>
@@ -327,6 +330,7 @@ export const staticBlogPosts = [
 </ul>
 
 <h2>Why Sourcing and Compounding Standards Matter for Compounded Peptides</h2>
+<img src="/blog/503a-vs-503b-compounding-explained-img3-20260610.png" alt="Clean flat-lay of quality-assurance tools representing sourcing standards behind 503A vs 503B compounding" />
 <p>The peptide market moves fast, and that speed has a shadow side: a flood of products whose origins are vague, whose testing is unverifiable, and whose sellers lean on regulatory-sounding language without the substance behind it. If you've ever felt uncertain about whether a vial was made under real controls, that instinct is well founded — and it's exactly the uncertainty a transparent, standards-driven compounder is built to resolve.</p>
 <ul>
 <li><strong>USA-sourced raw materials</strong> — active ingredients of known, domestic origin rather than untraceable imports.</li>
@@ -373,8 +377,8 @@ export const staticBlogPosts = [
 <li><a href="https://www.fda.gov/drugs/human-drug-compounding/information-outsourcing-facilities" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food &amp; Drug Administration. "Information for Outsourcing Facilities." FDA.gov, 2025. https://www.fda.gov/drugs/human-drug-compounding/information-outsourcing-facilities</a></li>
 </ol>
 `,
-    heroImage: null,
-    heroAlt: null,
+    heroImage: '/blog/503a-vs-503b-compounding-explained-hero-20260610.png',
+    heroAlt: "Editorial clinical still life representing US compounding standards and the 503A vs 503B distinction",
     readingTime: 11,
     featured: false,
     seoTitle: "503A vs 503B: The Two Lanes of US Drug Compounding",
