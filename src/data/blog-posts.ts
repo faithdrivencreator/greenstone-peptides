@@ -5,6 +5,195 @@ export type StaticBlogPost = (typeof staticBlogPosts)[number];
 
 export const staticBlogPosts = [
   {
+    id: 'glp-1-side-effects-what-to-expect',
+    title: "GLP-1 Side Effects: What the Phase 3 Trial Data Shows",
+    slug: 'glp-1-side-effects-what-to-expect',
+    publishedAt: '2026-06-10T07:15:00-04:00',
+    excerpt: "GLP-1 side effects are common but mostly mild, brief, and front-loaded into the titration weeks. This reference reads the actual phase 3 trial data on nausea, vomiting, and diarrhea for semaglutide and tirzepatide, and explains why cumulative incidence and discontinuation tell different stories.",
+    content: `<h2>What Every GLP-1 Researcher Needs to Know About Side Effects</h2>
+<img src="/blog/glp-1-side-effects-what-to-expect-hero-20260610.png" alt="Editorial clinical still life representing GLP-1 side effects and gastrointestinal tolerability research" />
+<p>GLP-1 receptor agonists like semaglutide and tirzepatide have reshaped obesity and metabolic medicine, but their most common drawback is well documented and almost entirely gastrointestinal. Understanding <strong>GLP-1 side effects</strong> the way the phase 3 trials actually reported them — not the way headlines describe them — is the difference between abandoning therapy in week three and reaching a maintenance dose that works.</p>
+<p>The side-effect profile clusters into a short, predictable list:</p>
+<ul>
+<li><strong>Nausea</strong> — the most frequently reported effect</li>
+<li><strong>Diarrhea</strong> — typically brief and self-limiting</li>
+<li><strong>Vomiting</strong> — concentrated during dose increases</li>
+<li><strong>Constipation</strong> — slowed gastric motility</li>
+<li><strong>Reduced appetite</strong> — often the intended effect, not an adverse one</li>
+</ul>
+<p>As you read the research, a handful of factors shape how any individual experiences these effects:</p>
+<ul>
+<li>How fast the dose is escalated</li>
+<li>Which molecule and dose level is used</li>
+<li>Whether symptoms are measured per-episode or cumulatively</li>
+<li>How long someone has been on therapy</li>
+<li>Individual sensitivity and concurrent medications</li>
+<li>Diet and meal size during titration</li>
+</ul>
+<p>By the end of this reference, you'll be able to read a trial's adverse-event table the way a clinician does — distinguishing a 44% cumulative incidence from a 4% discontinuation rate, and understanding why those two numbers describe very different realities.</p>
+<p>Greenstone Peptides treats this kind of evidence as the starting point of quality, not a marketing afterthought — products are sourced from USA-origin raw materials, compounded to USP 797 sterile standards, and third-party tested for purity and identity, so readers can evaluate the research with confidence.</p>
+<img src="/blog/glp-1-side-effects-what-to-expect-img1-20260610.png" alt="Overhead flat-lay infographic visualizing the GLP-1 side effects research landscape over time" />
+
+<h2>The Core Categories of GLP-1 Side Effects</h2>
+<p>The clinical picture for GLP-1 receptor agonists is unusually consistent across trials: the overwhelming majority of adverse events are gastrointestinal, non-serious, and concentrated in the first weeks of treatment. In the landmark <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183" target="_blank" rel="noopener noreferrer">STEP 1 trial</a> of once-weekly semaglutide 2.4 mg, published in the <em>New England Journal of Medicine</em> in 2021, gastrointestinal events were the dominant adverse-event category — even as participants achieved a mean weight loss of 14.9% versus 2.4% on placebo over 68 weeks. As compounded GLP-1 therapy moved firmly into the mainstream across 2025 and 2026, reading these numbers correctly became essential.</p>
+<img src="/blog/glp-1-side-effects-what-to-expect-img2-20260610.png" alt="Dark editorial still life with molecular model representing GLP-1 side effects clinical research" />
+<h3>Gastrointestinal Effects — The Dominant Category</h3>
+<p>Slowed gastric emptying is part of how GLP-1 agonists work, so it is no surprise that the digestive tract registers the change first. Pooled analysis of the STEP 1 through STEP 3 trials reported the following incidences on semaglutide versus placebo:</p>
+<ul>
+<li><strong>Nausea</strong> — 43.9% on semaglutide vs. 16.1% on placebo, the most common single effect.</li>
+<li><strong>Diarrhea</strong> — 29.7% vs. 15.9%, usually mild and short-lived.</li>
+<li><strong>Vomiting</strong> — 24.5% vs. 6.3%, clustered around dose escalation.</li>
+<li><strong>Constipation</strong> — roughly 24.2%, reflecting reduced gut motility.</li>
+</ul>
+<p>For a researcher, the key is that these are <em>cumulative</em> incidences over a 68-week trial: they count anyone who experienced the effect even once. They do not mean nearly half of patients felt nauseated continuously.</p>
+<h3>Severity, Duration, and Discontinuation</h3>
+<p>This is where the data reframes the headline numbers. According to the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9293236/" target="_blank" rel="noopener noreferrer">gastrointestinal tolerability analysis</a> of semaglutide 2.4 mg published in <em>Diabetes, Obesity and Metabolism</em>, 98.1% of GI adverse events were mild or moderate, and individual episodes were brief — a median of about 8 days for nausea, 3 days for diarrhea, and 2 days for vomiting.</p>
+<img src="/blog/glp-1-side-effects-what-to-expect-img3-20260610.png" alt="Macro still life of a crystalline structure illustrating the molecular precision behind GLP-1 side effects" />
+<p>A notable point that emerged across the 2025 pooled tolerability reviews: despite the high cumulative incidence of nausea, discontinuation specifically due to GI side effects ran around 4.5% in the semaglutide weight-management program. In practical terms, most participants who reported nausea continued therapy and the symptom faded.</p>
+<p>The real-world application is straightforward. A high cumulative incidence is not a high "you will feel sick the whole time" rate. It is a count of brief, mostly mild episodes — most of them in the early weeks — that the majority of patients move past.</p>
+
+<h2>How to Read Side-Effect Rates Across Different GLP-1 Options</h2>
+<p>Side-effect rates are not interchangeable between molecules or doses. The table below maps how the most-studied GLP-1 options reported their gastrointestinal profiles in phase 3 trials, so you can compare like with like rather than relying on a single scary percentage.</p>
+
+<div style="overflow-x:auto;margin:2rem 0;border-radius:12px;border:1px solid rgba(255,255,255,0.1);">
+<table style="width:100%;border-collapse:collapse;font-size:0.875rem;min-width:600px;">
+<thead>
+<tr style="background:rgba(45,95,191,0.25);border-bottom:1px solid rgba(45,95,191,0.5);">
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Therapy</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Nausea</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Diarrhea</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;white-space:nowrap;">Vomiting</th>
+<th style="padding:14px 16px;text-align:left;font-weight:600;color:#4f8fff;letter-spacing:0.03em;">Trial context</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Semaglutide 2.4 mg<br/><span style="font-size:0.78rem;color:#8a9bb0;">weekly, GLP-1 only</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">~44%</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">~30%</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">~25%</td>
+<td style="padding:14px 16px;color:#c8d4e0;">STEP 1–3 pooled (68 wk)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Tirzepatide 5 mg<br/><span style="font-size:0.78rem;color:#8a9bb0;">weekly, GIP/GLP-1</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">24.6%</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">18.7%</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">8.3%</td>
+<td style="padding:14px 16px;color:#c8d4e0;">SURMOUNT-1 (72 wk)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);">
+<td style="padding:14px 16px;color:#e8e0d4;font-weight:500;">Tirzepatide 10 mg<br/><span style="font-size:0.78rem;color:#8a9bb0;">weekly, GIP/GLP-1</span></td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">33.3%</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">21.2%</td>
+<td style="padding:14px 16px;color:#c8d4e0;white-space:nowrap;">10.7%</td>
+<td style="padding:14px 16px;color:#c8d4e0;">SURMOUNT-1 (72 wk)</td>
+</tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(0,200,255,0.07);border-top:1px solid rgba(0,200,255,0.25);">
+<td style="padding:14px 16px;font-weight:600;color:#00c8ff;">Tirzepatide 15 mg<br/><span style="font-size:0.78rem;color:#4f8fff;font-weight:400;">highest studied dose</span></td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">31.0%</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">23.0%</td>
+<td style="padding:14px 16px;color:#e8e0d4;white-space:nowrap;">12.2%</td>
+<td style="padding:14px 16px;color:#e8e0d4;">SURMOUNT-1 (72 wk)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The single most useful thing to evaluate is not the peak percentage but <em>when</em> the events occur. Across both the STEP and <a href="https://investor.lilly.com/news-releases/news-release-details/lillys-surmount-1-results-published-new-england-journal-medicine" target="_blank" rel="noopener noreferrer">SURMOUNT-1</a> programs, gastrointestinal events concentrated during the dose-escalation phase and tapered once a stable dose was reached. That timing is the lever a careful protocol can actually pull.</p>
+<h3>"Will I feel sick the whole time?" — Practical Tips</h3>
+<p>The fear most newcomers carry is that the early-week nausea is permanent. The trial data says otherwise. A few research-grounded considerations:</p>
+<ol>
+<li>Expect symptoms to be front-loaded — most GI events appear within the first 4 to 8 weeks, during titration.</li>
+<li>Track episode duration, not just occurrence — individual nausea episodes ran a median of about 8 days in the semaglutide analysis.</li>
+<li>Note that severe events are uncommon — roughly 98% of GI events in the STEP program were mild or moderate.</li>
+<li>Understand the discontinuation reality — only about 4.5% stopped semaglutide specifically for GI reasons.</li>
+</ol>
+<p>For a closer look at how dose increases are structured, see our <a href="/learn/tirzepatide-dosing-guide-beginner">beginner's tirzepatide dosing guide</a>.</p>
+<h3>Cumulative Incidence vs. Discontinuation — Understanding the Difference</h3>
+<p>These two numbers are constantly confused. <em>Cumulative incidence</em> counts every patient who experienced an effect even once across the entire trial. <em>Discontinuation rate</em> counts only those who stopped because of it. With semaglutide, nausea's cumulative incidence (~44%) was nearly ten times its GI-driven discontinuation rate (~4.5%).</p>
+<p>Which number should guide your reading depends on the question. If you want to know how likely you are to feel a symptom at some point, look at incidence. If you want to know how likely a symptom is to actually derail therapy, look at discontinuation. They tell very different stories.</p>
+
+<h2>GLP-1 Side Effects for Every Stage of Therapy</h2>
+<img src="/blog/glp-1-side-effects-what-to-expect-img4-20260610.png" alt="Warm lifestyle still life representing thoughtful research into GLP-1 side effects across stages of therapy" />
+<p>Side effects do not look the same on day one as they do at month six. Where you are in the journey changes what you should expect:</p>
+<ul>
+<li><strong>Someone new to GLP-1 therapy</strong> — the initiation and early titration weeks carry the highest GI burden; starting at the lowest dose and holding before increasing is the standard approach.</li>
+<li><strong>Someone mid-titration</strong> — each dose step can briefly reintroduce nausea; the research supports pausing at a tolerated dose rather than forcing the next increase on schedule.</li>
+<li><strong>Someone at maintenance</strong> — by the time a stable dose is reached, most GI effects have faded; new or worsening symptoms at this stage warrant a clinical conversation.</li>
+</ul>
+<h3>Early-Stage vs. Maintenance Approaches</h3>
+<p>The tolerance curve is real, and it maps onto distinct phases:</p>
+<ul>
+<li><strong>Initiation</strong> — lowest dose, highest relative GI sensitivity; the goal is adaptation, not weight loss. Right for everyone starting out.</li>
+<li><strong>Titration</strong> — stepwise increases every few weeks; the meaningful next step once the prior dose is tolerated, and where most discontinuations happen if escalation is rushed.</li>
+<li><strong>Maintenance</strong> — a stable therapeutic dose with minimal ongoing GI effects for most; the phase that justifies the patience the earlier weeks demand.</li>
+</ul>
+<h3>Personalization and Protocol Considerations</h3>
+<p>A clear shift across 2025 and into 2026 has been the move away from one-size-fits-all titration toward dose schedules matched to individual tolerability. The published trials increasingly emphasize that preserving efficacy does not require pushing through severe symptoms. Tailoring tends to focus on:</p>
+<ul>
+<li>Adjusting the speed of escalation to the person's GI response rather than a fixed calendar.</li>
+<li>Holding at a tolerated dose when symptoms spike, then resuming when they settle.</li>
+<li>Meal timing and smaller portions during titration to ease the gastric-emptying load.</li>
+</ul>
+<p>If progress stalls at a given dose, our guide on <a href="/learn/glp1-plateau-what-to-do">what to do at a GLP-1 plateau</a> covers the research on adjusting protocols.</p>
+
+<h2>Why Sourcing and Compounding Standards Matter for GLP-1 Therapy</h2>
+<img src="/blog/glp-1-side-effects-what-to-expect-img5-20260610.png" alt="Clean precision flat-lay of quality-assurance tools representing sourcing standards behind GLP-1 therapy" />
+<p>If you've researched compounded GLP-1 options, you've likely felt the uncertainty about what's actually in the vial — and that uncertainty matters here, because impurities and incorrect concentration can complicate the very tolerability picture the trials describe. Verified sourcing and compounding standards are how that uncertainty gets answered.</p>
+<ul>
+<li><strong>USA-sourced raw materials</strong> — traceable origin for every active ingredient.</li>
+<li><strong>USP 797 sterile compounding</strong> — the recognized standard for sterile injectable preparation.</li>
+<li><strong>Third-party testing</strong> — HPLC for purity, mass spectrometry for identity, and endotoxin screening.</li>
+<li><strong>Cold-chain shipping</strong> — proper temperature control and storage guidance at dispatch.</li>
+</ul>
+<h3>Getting the Most Out of GLP-1 Research</h3>
+<p>Reading the literature well is its own skill. A few insider-grade habits:</p>
+<ol>
+<li>Always check whether a percentage is cumulative incidence or point prevalence before reacting to it.</li>
+<li>Note the dose the rate was measured at — tirzepatide's nausea rate at 5 mg and 15 mg differ meaningfully.</li>
+<li>Look for the discontinuation figure; it is the truest signal of real-world tolerability.</li>
+<li>Cross-reference a compounded product's certificate of analysis against the molecule the trial studied.</li>
+</ol>
+<p>To understand what a quality report should contain, see how to read a <a href="/learn/what-is-a-certificate-of-analysis-peptides">peptide certificate of analysis</a>, or explore current options in the <a href="/store">Greenstone store</a>.</p>
+
+<h2>Frequently Asked Questions About GLP-1 Side Effects</h2>
+<h3>How long do GLP-1 side effects last?</h3>
+<p>In the phase 3 trials, most gastrointestinal effects were concentrated in the early titration weeks and individual episodes were brief — a median of roughly 8 days for nausea and 2 to 3 days for vomiting and diarrhea. For most participants, symptoms diminished as the body adapted and a stable dose was reached.</p>
+<h3>What can reduce GLP-1 nausea during dose increases?</h3>
+<p>Published trial designs and prescribing information point to a few consistent levers:</p>
+<ul>
+<li>Slower, stepwise dose escalation — holding each dose about 4 weeks before increasing.</li>
+<li>Pausing at a tolerated dose rather than forcing the next step on schedule.</li>
+<li>Smaller meals and avoiding very high-fat foods during titration.</li>
+<li>Staying hydrated, particularly if diarrhea or vomiting occurs.</li>
+</ul>
+<h3>Are GLP-1 side effects a sign the medication is working?</h3>
+<p>Not directly. GI effects stem from slowed gastric emptying, which is part of the mechanism, but the tolerability analyses did not establish that more nausea predicts more weight loss. Plenty of participants achieved substantial results with minimal symptoms, and severe effects were uncommon — so symptoms are best treated as something to manage, not a scorecard.</p>
+
+<h2>Conclusion</h2>
+<p>The question most people bring to GLP-1 therapy — "how bad will the side effects be?" — has a more reassuring answer in the trial data than in the headlines. Yes, gastrointestinal effects are common when counted cumulatively, but they are overwhelmingly mild, brief, front-loaded into the titration weeks, and rarely a reason people actually stop. Read the numbers in context and the picture becomes manageable rather than alarming.</p>
+<p>If you're weighing your options, take the next step by comparing the molecules side by side in our <a href="/learn/semaglutide-vs-tirzepatide-vs-retatrutide-glp1-comparison">GLP-1 comparison guide</a>, or explore researched, third-party-tested formulations in the <a href="/store">Greenstone store</a>.</p>
+<p><em>Greenstone Peptides content is educational and does not constitute medical advice. Peptide therapies should be discussed with a licensed healthcare provider.</em></p>
+<h2>Sources</h2>
+<p style="font-size:0.85rem;color:#8a9bb0;margin-bottom:1rem;">The following sources informed this article. Greenstone Peptides does not endorse any third-party organization; links are provided for research transparency.</p>
+<ol style="font-size:0.85rem;color:#8a9bb0;line-height:1.8;">
+<li><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Wilding JPH, et al. "Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1)." New England Journal of Medicine, 2021. https://www.nejm.org/doi/full/10.1056/NEJMoa2032183</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9293236/" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Wharton S, et al. "Gastrointestinal tolerability of once-weekly semaglutide 2.4 mg in adults with overweight or obesity." Diabetes, Obesity and Metabolism, 2022. https://pmc.ncbi.nlm.nih.gov/articles/PMC9293236/</a></li>
+<li><a href="https://investor.lilly.com/news-releases/news-release-details/lillys-surmount-1-results-published-new-england-journal-medicine" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Jastreboff AM, et al. "Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1)." New England Journal of Medicine, 2022 (results summary, Eli Lilly). https://investor.lilly.com/news-releases/news-release-details/lillys-surmount-1-results-published-new-england-journal-medicine</a></li>
+<li><a href="https://dom-pubs.onlinelibrary.wiley.com/doi/full/10.1111/dom.16176" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">Rubino D, et al. "Gastrointestinal tolerability and weight reduction associated with tirzepatide in the SURMOUNT-1 to -4 trials." Diabetes, Obesity and Metabolism, 2025. https://dom-pubs.onlinelibrary.wiley.com/doi/full/10.1111/dom.16176</a></li>
+<li><a href="https://www.fda.gov/media/185422/download" target="_blank" rel="noopener noreferrer" style="color:#4f8fff;">U.S. Food and Drug Administration. "Office of Clinical Pharmacology Review — semaglutide (titration and tolerability)." FDA, accessed 2026. https://www.fda.gov/media/185422/download</a></li>
+</ol>
+`,
+    heroImage: '/blog/glp-1-side-effects-what-to-expect-hero-20260610.png',
+    heroAlt: "Editorial clinical still life representing GLP-1 side effects and gastrointestinal tolerability research",
+    readingTime: 9,
+    featured: false,
+    seoTitle: "GLP-1 Side Effects: What the Phase 3 Trial Data Shows",
+    seoDescription: "Phase 3 trial data on GLP-1 side effects: nausea, vomiting and diarrhea rates for semaglutide and tirzepatide, plus how titration shapes them.",
+    tags: ["GLP-1 side effects", "semaglutide nausea", "tirzepatide GI effects", "GLP-1 tolerability", "dose titration", "weight loss medication"],
+    relatedProductIds: [],
+  },
+
+  {
     id: '503a-vs-503b-compounding-explained',
     title: "503A vs 503B: The Two Lanes of US Compounding",
     slug: '503a-vs-503b-compounding-explained',
