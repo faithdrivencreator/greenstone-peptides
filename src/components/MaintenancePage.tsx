@@ -113,7 +113,7 @@ export function MaintenancePage() {
 
         {/* Eyebrow */}
         <p className="font-jetbrains text-emerald text-[0.65rem] tracking-[0.3em] uppercase mb-5">
-          // Under Construction · Back within 24 hours
+          // A Quick Pause · Something Better Ahead
         </p>
 
         {/* Headline */}
@@ -129,14 +129,15 @@ export function MaintenancePage() {
 
         {/* Body */}
         <p className="text-cream-dim text-base sm:text-lg leading-relaxed max-w-xl mb-6">
-          GS Wellness Pharmacy is in the middle of an upgrade. Our clinic + 503A pharmacy
-          platform is being rebuilt to make ordering simpler, safer, and faster — with
-          the same licensed physician review and specialized temperature-controlled
-          packaging behind every prescription.
+          We hit pause on the storefront while we build the next version of GS Wellness
+          Pharmacy. The upgrade touches everything: a smoother ordering experience,
+          clearer product education, and faster support, with the same licensed
+          physician review behind every prescription.
         </p>
         <p className="text-cream-dim text-base sm:text-lg leading-relaxed max-w-xl mb-12">
-          We&rsquo;ll be back online within 24 hours. Drop your email and we&rsquo;ll
-          let you know the moment we&rsquo;re live.
+          Leave your email below and you&rsquo;ll be the first to hear when the doors
+          reopen. We&rsquo;re also lining up something special for the people who wait
+          with us.
         </p>
 
         {/* Email capture */}
